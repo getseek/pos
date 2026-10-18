@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "documents": [
+    {
+      "id": "PP-HOME-001",
+      "path": "index.md",
+      "title": "Premium POS documentation",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-START-001",
+      "path": "getting-started/index.md",
+      "title": "Requirements and launch",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-START-002",
+      "path": "getting-started/workspaces.md",
+      "title": "Real Shop and Demo",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-OPS-001",
+      "path": "operator/index.md",
+      "title": "Daily workflows",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-ADMIN-001",
+      "path": "administration/index.md",
+      "title": "Roles and administration",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-DEV-001",
+      "path": "development/index.md",
+      "title": "Application architecture",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-DOCOPS-001",
+      "path": "operations/index.md",
+      "title": "Documentation operations",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-REF-002",
+      "path": "reference/verification.md",
+      "title": "Verification and limits",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-REF-004",
+      "path": "reference/glossary.md",
+      "title": "Glossary",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-CONTRIB-001",
+      "path": "contributing/index.md",
+      "title": "Authoring and validation",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-RELEASE-001",
+      "path": "release-notes/index.md",
+      "title": "Documentation releases",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-REF-001",
+      "path": "reference/feature-status.md",
+      "title": "Feature evidence",
+      "revision": "1.0",
+      "status": "DRAFT"
+    },
+    {
+      "id": "PP-REF-003",
+      "path": "reference/document-register.md",
+      "title": "Document register",
+      "revision": "1.0",
+      "status": "DRAFT"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Direct dependency. Exact transitive versions and Windows x64 wheel hashes are
+# recorded in requirements.lock; do not regenerate that lock during normal builds.
+zensical==0.0.71

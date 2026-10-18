@@ -1,0 +1,99 @@
+[project]
+site_name = "Premium POS Documentation"
+site_description = "Practical guidance for the people who sell, manage stock, run the shop, and maintain Premium POS."
+site_url = "https://docpremiumpos.getseek.net/"
+docs_dir = "docs"
+site_dir = ".build/site"
+dev_addr = "127.0.0.1:18181"
+use_directory_urls = true
+extra_css = ["assets/stylesheets/premium.css"]
+nav = [
+  { "Start here" = [
+    { "Documentation home" = "index.md" },
+    { "Requirements and launch" = "getting-started/index.md" },
+    { "Real Shop and Demo" = "getting-started/workspaces.md" },
+  ] },
+  { "Run the business" = [
+    { "Daily workflows" = "operator/index.md" },
+    { "Roles and administration" = "administration/index.md" },
+  ] },
+  { "Build and operate" = [
+    { "Application architecture" = "development/index.md" },
+    { "Documentation operations" = "operations/index.md" },
+  ] },
+  { "Reference" = [
+    { "Feature evidence" = "reference/feature-status.md" },
+    { "Verification and limits" = "reference/verification.md" },
+    { "Document register" = "reference/document-register.md" },
+    { "Glossary" = "reference/glossary.md" },
+  ] },
+  { "Maintain the guide" = [
+    { "Authoring and validation" = "contributing/index.md" },
+    { "Documentation releases" = "release-notes/index.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+logo = "assets/brand/premium-mark.svg"
+favicon = "assets/brand/premium-mark.svg"
+font = false
+features = [
+  "content.code.copy",
+  "content.tabs.link",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "indigo"
+accent = "teal"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "indigo"
+accent = "teal"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+def_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+
+[project.validation]
+nav.omitted_files = "warn"
+nav.not_found = "warn"
+nav.absolute_links = "warn"
+links.not_found = "warn"
+links.anchors = "warn"
+links.absolute_links = "warn"
+links.unrecognized_links = "warn"

@@ -1,0 +1,2406 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "read_only_source_root": "F:\\Premium_POS",
+  "source_count": 431,
+  "test_source_count": 144,
+  "projects": [
+    "Software/src/GetSeek.Application/GetSeek.Application.csproj",
+    "Software/src/GetSeek.Contracts/GetSeek.Contracts.csproj",
+    "Software/src/GetSeek.DataService/GetSeek.DataService.csproj",
+    "Software/src/GetSeek.Desktop/GetSeek.Desktop.csproj",
+    "Software/src/GetSeek.Domain/GetSeek.Domain.csproj",
+    "Software/src/GetSeek.Infrastructure/GetSeek.Infrastructure.csproj",
+    "Software/src/GetSeek.Recovery/GetSeek.Recovery.csproj",
+    "Software/src/GetSeek.UI.Components/GetSeek.UI.Components.csproj"
+  ],
+  "migrations": [
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/001_InitialCoreSchema.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/002_AdvancedInventoryAndManufacturing.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/003_CoreLedgerAndStoreConfig.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/004_TransactionSafetyAndBusinessProfile.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/005_DeviceProvisioning.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/006_RestaurantOrdersSchema.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/007_ManualPaymentDisplay.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/008_InventoryReorderAndTrackingPolicy.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/009_UomConversionsLocationsAndSuppliers.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/010_RemoveDefaultSupplierSeed.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/011_CustomerMasterSchema.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/012_CustomerCodeCaseInsensitiveUniqueness.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/013_ItemRelationshipsKitsAndManufacturing.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/014_ShiftZReportSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/015_OutputDevices.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/016_ProductCategoriesAndUomRegistry.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/017_BusinessDateFulfillmentAndTaxRateDecimal.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/018_TraceabilityAllocations.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/019_CategoryTargetTypesAndPartyUserAssociations.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/020_ManufacturingExecutionEnhancements.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/021_CartPromoSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/022_ThirdPartyImportHistoryAndExternalKeys.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/023_UomDimensionsPreferencesAndItemMeasurements.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/024_PricingBatchRuns.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/025_BatchSelectionPreviews.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/026_PricingIncrementRounding.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/027_InventoryProductMaster.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/028_StaleSafeIntakePriceProposals.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/029_PricingCostBasisSource.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/030_ProposalExactCostBasis.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/031_UserPermissionOverrides.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/032_ItemImagePath.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/033_WorkspaceProvenance.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/034_TerminalLockoutState.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/035_LockoutClockHighWater.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/036_LockoutClockHighWaterBackfill.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/037_CashFinancialSettings.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/038_ReceiptDesignAndPrinterCapabilities.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/039_CashReceiptRecoveryAndReporting.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/040_NewWorkspaceRetailDefault.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/041_ResetPermissionsAndDemoSeededUsers.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/042_DemoDatasetState.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/043_PinOnlyUserCredentials.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/044_PricingMassRuns.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/045_PriceOffers.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/046_PendingShelfLabelsAndKitAlerts.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/047_PricingIntegrityAndOfferSemantics.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/048_ExclusiveTaxPolicy.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/049_RemoveItemUomConversions.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/050_ProductPurchaseAndSaleDefaultUnits.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/051_ThirdPartyBarcode.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/052_OptionalItemCoordinates.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/053_StockMovementHistoryIndex.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/054_ItemPriceHistory.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/055_DurablePricingRunScopes.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/056_PricingRunPreviews.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/057_MultiTierPricingRuns.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/058_OfferVersionsAndSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/059_ShelfLabelLifecycle.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/060_CheckoutPriceOverrideAndShelfSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/061_KitPriceAlertLifecycle.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/062_ShelfLabelOutputProfile.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/063_KitAlertProvenance.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/064_ScheduledOfferShelfLabelTransitions.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/065_ReportsExportPermission.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/066_InvoiceCollectionsAndReturns.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/067_LossAndDiscountRegisters.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/068_FinancialFactSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/069_ProductionDraftLotFormula.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/070_InventoryTraceabilityIndexes.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/071_InvoiceFulfillmentAndAccounts.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/072_CommercialDraftsAndReturnShipments.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/073_SupplierReturnsAndRefunds.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/074_ProductionExactCostSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/075_CommercialWorkflowDetails.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/076_SearchUsage.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/077_ProductionCreatedAt.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/078_PeopleAndSalaryAgreements.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/079_SalaryPeriodsAndLedger.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/080_ExpensesAndAttachments.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/081_SalaryStatementSnapshots.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/082_SalaryEligibilityAndExpensePresets.sql",
+    "Software/src/GetSeek.Infrastructure/Persistence/Migrations/083_ZReportSalaryExpensesAndWasteSettings.sql"
+  ],
+  "sources": [
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/CommandEnvelope.cs",
+      "sha256": "fb1c88b9b92e28c2d68526a2cebff7214fa5f2e43cc28f57466d40e06de5478a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/CommandResult.cs",
+      "sha256": "ae12b3e9a17fa234e9dcdb5b74ea1c9aa444d0193ecf6a9393a4e5ab9c40e10b"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/CommercialReadPorts.cs",
+      "sha256": "26c764bca28752f0ef82fd28c9e2c1e888f1d9d7442a21f1a9fc75ee6a9bb08d"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/CommonPorts.cs",
+      "sha256": "91e2c7fdb9f3a59d22a09692e819c124243ad49b9cc4d8a56e1712d37100038f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/ExpenseAttachmentPorts.cs",
+      "sha256": "0e71646a550dc321503f9c8d8d20ccd3aeed0aee10f82e193d8bcd67fe75dc9e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/ExpenseReadPorts.cs",
+      "sha256": "f68a21785bcdde2ae62b83ab1a4a906df2589ea515db9122598f2e105a95b001"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/ICommand.cs",
+      "sha256": "4e74857c9e63ada1e618b2e97786e1a8f496eaba650a824ecdad0820f15cd01e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/IExportService.cs",
+      "sha256": "31faff6b4027a806be66149621ccef756e2fa326af3bf3dd445b59271e500432"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/InvoiceAndRegisterReadPorts.cs",
+      "sha256": "5d44dc77293fa558ae7c1e4b96492e284dcd86a3e0e365cf01b0d5d0ede406d7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/IPersistencePorts.cs",
+      "sha256": "3d89fdc95a5b743620dcb9527f52e7b46937852990102a85fe05c64bdedfc844"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/ManufacturingReadPorts.cs",
+      "sha256": "cd843c476a5c43f93cebaba40683578523cf249985cb4ffc9f527e81c23b736f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/Paging.cs",
+      "sha256": "5d208cf2457cf6de61c27e7bd18b1e5a634c11cfd1e79e89ce0c88c1a180dc78"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/SalaryReadPorts.cs",
+      "sha256": "c0a6ff8d6bf5654f6e9929ad0309de0065f8c84fa926d97247ed79ee83aa2bbb"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs",
+      "sha256": "cd1f8b7437035e56b67640938d15d4f7f9153870934c3590d556d0a3202bc9f4"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/StoreTimeHelper.cs",
+      "sha256": "c4dd90a8971e88975c3f1c065451275618bb2a107e0fa6dfaa4c1d8cafdcb966"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Abstractions/TeamsReadPorts.cs",
+      "sha256": "b1535f0545894643fd5a7271e96d8e295287186231a1633e5c2d5b542f99b530"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
+      "sha256": "e8d5dcf16fc2e5c317fd4e968679777765ff8987f3910e9e767d9c3759dc361b"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Batch/BatchCommands.cs",
+      "sha256": "0554cf67ab3ff722ab7a6bb835bbf2c8ed093ec3508bd417033bde6716c17561"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Batch/BatchPreview.cs",
+      "sha256": "1053ef4233777a81107c51558e6f239da26f88a22f43fcdc317adf2e59decbe7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Cash/AccountPostingService.cs",
+      "sha256": "03064d4c5ca4d335bdb72fb6ca3e30130f7ef48f2ca66204aa18d41666bd30bd"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Cash/CashLossCommandHandler.cs",
+      "sha256": "92cfe63f7cfb11b436e2414a56bcefa7dc628b10b156b2660808ba06341a2225"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Cash/CashLossCommands.cs",
+      "sha256": "dbad627413e62c2491add61b5bcbb8dfb702234c286e87abdefd30dd412c799b"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Cash/ShiftCommandHandler.cs",
+      "sha256": "58a6ae713deb3b81fb89c28cf946c5925e2ebcf7eb9b70d93aabe66795e521b0"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Cash/ShiftCommands.cs",
+      "sha256": "366c3624e2cf4494d9838e6d5ccf0236d4e86961b268d8390b34e6f7a7c56d23"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/CatalogCommandHandler.cs",
+      "sha256": "ba30548fd390ef43a5311fd9bf9b6392e672000db649371947ce4f9c348e483d"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/CatalogCommands.cs",
+      "sha256": "99f641959f60462fa5f8b0c888bd36bd6ec63f6afc094ab30f2d209662d42b4a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/CatalogRegistryCommandHandler.cs",
+      "sha256": "e1e8202a7be8d95f2ec7a11035fdceccdbc963fee91a91b6057e7a2bb8c00314"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/CatalogRegistryCommands.cs",
+      "sha256": "42690348d0448201c5bc1f7e5aed0e8443d56cf31f12ad208d7e02f0c1d12528"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommand.cs",
+      "sha256": "78823fa37330e9a19f1352ab8d472b517ffdd60e5448f5fbacd0da34a45d5930"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
+      "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/StoreUomPreferenceCommandHandler.cs",
+      "sha256": "5da34e84c5e4a8e3e4c3ef0495a73cdfe7e3aa7204355a96e6f7a04b63fafe41"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/StoreUomPreferenceCommands.cs",
+      "sha256": "58c01a8b66cc69c00f0b32f5045304a98742017bd368723df57e7e4a1b0dd569"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/SupplierCommandHandler.cs",
+      "sha256": "3fa3d552a6e86b69d57adc8d10854806699d61fa4814245a004a22b9f5b74aed"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Catalog/SupplierCommands.cs",
+      "sha256": "74c17ec15a17e3b0a423c36c414186a32cb275ef130dc53b45095f83a176c1e9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Customers/CustomerCommandHandler.cs",
+      "sha256": "ce9a0beccc5a6d8db82ef38af396c1b6564a693bc6adc09ace23df83cf471e20"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Customers/CustomerCommands.cs",
+      "sha256": "25fb48a6ab8dfc1fdafbeaf615e3a11575554954a81f22067eed941dc2e639d5"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommandHandler.cs",
+      "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommands.cs",
+      "sha256": "8799ac097ab93c73ce47fb37fb023688c58471b4852f7d091100463c04cb2fe9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Expenses/ExpenseImageValidator.cs",
+      "sha256": "fe6d208814d890c8b8c20a5d0791b0c6e0c0b5c7fe95c2584ddf0c1e4e94c5f7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Expenses/ExpensePaymentCommandHandler.cs",
+      "sha256": "b94af6c76f600e549a8402837b32a63895ffdc1ed92a821373b0c0c2dc577a97"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Expenses/ExpensePaymentCommands.cs",
+      "sha256": "4828aea63448b77b5435af4ef3e486ff08eb317283af73c7fadd3e58dfa90266"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Hardware/ReprintReceiptCommandHandler.cs",
+      "sha256": "386395f77100eb20cd8c527c266dbd0c87dec786591dd7a34a4e482251bdb0ba"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportCommands.cs",
+      "sha256": "ddadf347f0aa02681e099bdfc5f382101a1a549982b3d7245034230e2013599a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs",
+      "sha256": "c6bd829d012536ab1321102cb66c7ebe41052a9576c20036af85fe4a277d2b84"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportPolicy.cs",
+      "sha256": "4996e5537e24feb78b439cb8f3eead27640595173d67e22a989b15c709cdf092"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs",
+      "sha256": "8d52bd9226bba0aeceae6ee4b6ac59e395a52bf56d48ec3fdeadfa31ef21efe5"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
+      "sha256": "7005cf9814dceb88a9516c739ddd08856235a322b347355cb088f4da102a30f9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs",
+      "sha256": "b23e4d1a09f49df023c407731fd965e4dfc113e473710b6c0e7c968c52e55f78"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/IntakeCostProcessor.cs",
+      "sha256": "abe1fab67bed941b8479c4dce46812c3bc01d482506bca743a357975ba21ceef"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
+      "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryCommands.cs",
+      "sha256": "b3225b381ba62b62bdea04be6999f764512e9fdcece09dbe95cc29ec76f32382"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
+      "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommands.cs",
+      "sha256": "2577b19e702b2ae69c60bf7c361977c282fc90d11db66e0678727db6bd67a5e7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryLossWriter.cs",
+      "sha256": "072b507f883d6b0d02c45de05e408165f73d99bb8b9c46a260788a606fe1680c"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryTraceabilityCommands.cs",
+      "sha256": "77d337938bd2bd60b5aced45b211793f8b481a2569c9aad34f63130c2a3c503a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/InventoryTraceabilityState.cs",
+      "sha256": "da6e1498e8c243dc990f2ee831d415bd2bdd3c8c9679724a65c6ee1c761e68f0"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/KitDecompositionEngine.cs",
+      "sha256": "608e6b4fc2ecf70f1454231f2cb4dc5977e21b58a534a0b6edf8e1ce88c69c35"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/LocationCommandHandler.cs",
+      "sha256": "631675c0149a5bcf4197aee026d668adac5406dfc2f5f06dd2c1f8d8a7d970f8"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/LocationCommands.cs",
+      "sha256": "3340048d26eb96854c11bfc4013ab121958d24d737795ee6706fd718f1b89a10"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/PhysicalUnitResolver.cs",
+      "sha256": "d5c22feffb1e3bb30ae99de473d90a95d800ad6d78ebe623c7e770d50e94ad79"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/StockAvailability.cs",
+      "sha256": "1912cc929458ab6d2672624afd213c2ea65facb1a1b8d229a4c8c4232649c588"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/StockBalanceCalculator.cs",
+      "sha256": "dee916615c9109ec1dc960f548a2ab11d94d0ce39081b0aec2873f0e2a772c7f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Inventory/StockLedgerLocations.cs",
+      "sha256": "50971e64f025e4ebfacf009090fd93d9c5059af22fee7e92db020951290b26e7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Manufacturing/CycleDetectionEngine.cs",
+      "sha256": "424312603c04c2a99090f4afafcc1ebb56a09485c7f039416c04d92a2d78d51d"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Manufacturing/ManufacturingCommandHandler.cs",
+      "sha256": "fac2380fe32fea835ce4d709e9590deff87701ad97c8759f34d9fca719c87071"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Manufacturing/ManufacturingCommands.cs",
+      "sha256": "5e221784e575a2e9f28b1768ea5a2f862481572195589fa34dfd7d307921cda9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Manufacturing/ProductionLotFormula.cs",
+      "sha256": "4b767d2857f4e1343b60651b71630a5746b1d64c2cbcf54f25ec0cf4575534b5"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+      "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommands.cs",
+      "sha256": "5fb55ea55b576f7244a0e08231f0ff507e8f8cd45c371f91e7670cfd4c339054"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/PersonCommandHandler.cs",
+      "sha256": "4fe15ca4f38d4d0bfce436450b7b1b54ee23460f936dbfdbd7eabd9e781a4c01"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/PersonCommands.cs",
+      "sha256": "836c8c58d11871b019e6a14bf4e234a7561587d17152fb3d802802a55698c290"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryBalanceFacts.cs",
+      "sha256": "aa264ee1799a2c44086f2d90ba90f96c35998d6ebedea0be780187b792d9cb30"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryDraftValidator.cs",
+      "sha256": "77c6b689e1caff1fdefe3e4d9d72500d940ba4b5ca2e9822042dd1a1bea594e7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryPaymentCommandHandler.cs",
+      "sha256": "8d8b14e58041325dae5fbe3a1cdc4cc49e502bd1bbf31c9100f517d542e3fd40"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryPaymentCommands.cs",
+      "sha256": "92563761fee82a305887e20acee5909b18ae8a42f25147680dd43421fb4e1fb8"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryPeriodCommandHandler.cs",
+      "sha256": "165ee29f1148d4d1e1e6ecb6d82eda4c58f87d0b16df65c5d1c480c7d17c6b18"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Payroll/SalaryPeriodCommands.cs",
+      "sha256": "aac345b4fed8fc1c4a0d2d4341aac6fc60b34c6c3959dc1c607785cae6cd059a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+      "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/ApplyBatchPricingCommandHandler.cs",
+      "sha256": "f541fdb989bcf53a04f3efe2367031ff1e147f401eef9862dc932992dd09c295"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/BatchPricingPreviewCalculator.cs",
+      "sha256": "7605cc7d53137ab2312e29b9d74dde153e38c886bd5f591b0353cc2943713efe"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/CategoryPricingRuleCommandHandler.cs",
+      "sha256": "495e35dee22116e1265d1e22a735a1287b383d5a7b6748774b7a5836661245bd"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/CategoryPricingRuleCommands.cs",
+      "sha256": "e8b7c1b3002e42884ebb0e3c7abe93ca7383407305c6fdda765bcfe44bd00fb3"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/ItemPriceHistoryRecorder.cs",
+      "sha256": "2f10ff7ccb3363b0e2114d5fd10f4038aa819141ebaa0af9995a86558b54f516"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/KitComponentCostCalculator.cs",
+      "sha256": "c204d00b8b484f2b2c9f4f77d35388ff6bebab3ba247e3956e5ecc29209a5b10"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/KitPriceAlertCommands.cs",
+      "sha256": "3f8862e4d1640505b2563acc861175fcbd0333d461243a9c9419d42468174209"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/OfferEvaluationEngine.cs",
+      "sha256": "30a355df24ecf38296ab3579ff19019813dad981014279f2c14e86c1fb579549"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PriceChangeProposalCommands.cs",
+      "sha256": "f42d6fc9c9a101adeb5f338a8d6e5810ae9e03d14de853f9637cd83dd90905d3"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PriceOfferCommands.cs",
+      "sha256": "81a986d433f35dd012db0dbcd9f09caf9a4598add73c1d478abcfacbed6a46c5"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PriceProposalStateFingerprint.cs",
+      "sha256": "3617e6b077dd15e4448d70d84040104bdac29ce185fed8ead2a412f6d825faeb"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PricingCommands.cs",
+      "sha256": "991fe6e42899ef3725918a81f9a3e6f9fe9028fc5a5259a19ea43552bfb0924c"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PricingMassRunCommandHandler.cs",
+      "sha256": "2a4736600e04c98d00dd27881e08522fd2eef70d432adc38c306fa90438ea115"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/PricingProposalGenerator.cs",
+      "sha256": "982e1cd50f8ff603e86e82394a2a887b891c4b7041408c5cc19dd37f6ed8f55b"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/ResolvePriceChangeProposalCommandHandler.cs",
+      "sha256": "0c0fcd1422a1429fa494fab27fefb4f8926193c189f487d37a10ec750b9cc428"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/SaveItemPricingCommandHandler.cs",
+      "sha256": "b4871163c0052ebf5f4af7104aa393b5eaaf90d814df3f48b38618419352827c"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Pricing/ShelfLabelCommands.cs",
+      "sha256": "e55060d631e5fe6c975eb58bf64e85cd7e1dbbd482920a2a70a5a211c235bb76"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ReadServices/LifecycleStatusScope.cs",
+      "sha256": "8dc55cc22a141d525b9f011a487108f0b20ecb961afe990c66fae26fa0e43696"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ReadServices/ReadProjections.cs",
+      "sha256": "84131f55e1788d0fde4b044ef453d62e127b23b5cf396be96cfebfea5de9cbe2"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Reports/GetStockBalanceQuery.cs",
+      "sha256": "30b3bbbe375485bad3e3d1763e080576c78318951ccbe5e3ac9fe9656ce001db"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Reports/GetXReportQuery.cs",
+      "sha256": "c03b934583345c4249f6304477d968030a738cc40119d405aa28271d959d0bfd"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Reports/GetZReportQuery.cs",
+      "sha256": "da581a63e1691503800d6e86ad5136fc98c64c9a399c2a22ead47e843debe578"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CartAllocationCommandHandler.cs",
+      "sha256": "8c128a1d20f86614962771610616802c351afa8664673317d8080934df303b9e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CartCalculationService.cs",
+      "sha256": "d97d82396ed566bc704b0aadba98a5a3fb1e972d7e7867f1dd289d1085bf5dce"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CashFinancialSettings.cs",
+      "sha256": "c2d9cd0820da69ff4587bf05fc070720d0e06a537394e04594cbf28a2111ae50"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CheckoutPriceResolver.cs",
+      "sha256": "3655e47cad764bb6fb24a37194dcdd1824773faeee5565e370a797f3af3fb72e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CommercialDocumentCommands.cs",
+      "sha256": "4119cfe79a5bbe040e7e1817eda3c0ccbe5f036abadcdf947c511caf4cebd2ba"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/CommercialLifecycleCommands.cs",
+      "sha256": "f39908b066705e8d4e12af0001403305fd30ea8d5342d664c0536df30afa5583"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/FinancialReceiptJobs.cs",
+      "sha256": "7605a15eebd3c9bd3aa7a914a3dbf6e475a0b825f95c36b88e0aafbba8ebae26"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/InvoiceCollectionPlanner.cs",
+      "sha256": "21c775760656912d5095b16f63ffbb33ec2080a469a308f65121e989f7d5553f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/InvoiceLedger.cs",
+      "sha256": "e92cea82fe454c820380eacd07b84074ace9e29815179d7cb1c3cbfedbbdc9e9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/InvoiceSettlementCommandHandler.cs",
+      "sha256": "4af241db791be01ac3151c94c4e1b431c38cc1b31a9be57ba30c6a00462f5341"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/InvoiceSettlementCommands.cs",
+      "sha256": "1109054f9d64cf1ea30baa7a9be99f303946848e4674783d4e8102fab4a0fad9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/LegacyReturnAdapter.cs",
+      "sha256": "63cbd548108c3957c25eec502eca52dcd510a3de3522a51d49b4937592800919"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/PurchaseAndMoneyCommands.cs",
+      "sha256": "9b5929036e27a42b7683fd095917de3aea3ea1a851edc04b5e4020cf6114ddbc"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/PurchaseCalculationService.cs",
+      "sha256": "2db56dca423a1c6e222e4cab80f4a4fc1e9de5e20521d7668eca1874eb80da1a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/ReceiptManagementDto.cs",
+      "sha256": "70000d070274596c2610da249d03a41c87e3032e1a7432bfa980bd38359d98b0"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
+      "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleCommands.cs",
+      "sha256": "f7c0a90fa23a0772c60b9f608f652a66c47273088fef173fe907dc2e6c416081"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleDiscountWriter.cs",
+      "sha256": "7fc9d8aed3c34c155453c719403907f5f790da6e81faf7bf36e1594c8bf8eecb"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleReturnCalculationService.cs",
+      "sha256": "9b246922d943bda5ec3d8ce8c4f9df7a4f54cefd8435ce9aa16fe50bd4004de9"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleReturnCommandHandler.cs",
+      "sha256": "400f01b01cefa5e6200deccd975f830e01c02196e2f8621b80ca2c2a383dc0ab"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleReturnCommands.cs",
+      "sha256": "6b5a05ce49d7d0ac0e3ac3d4f518ae186326478099fda1b9838da328c70dc477"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SaleStockAllocationPlanner.cs",
+      "sha256": "d8467506c0d625b76ae34fc47a2efc943a8fcdd38937dc20523ad6b5ae0f1c47"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/ShippingCommands.cs",
+      "sha256": "381096aeae46d7cc0cb308ee6785c4506cca37241e1dcb98459a977471f1077e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/StaleCartPriceReview.cs",
+      "sha256": "2ecd50e4756a0f94f9e76d9b76ec403b4c366e75cc320267e94b24a2bd0222dd"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SupervisorElevationGuard.cs",
+      "sha256": "15e693acc97367f4ef60cad0bd08572acae8579910d29d7325e9d715175ca790"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Sales/SupplierReturnCommands.cs",
+      "sha256": "b22552e1172fbae7971fbb00edb8870e12f02ad64d97076a38fc42d5da6d6c80"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Security/CreateUserWithPersonCommand.cs",
+      "sha256": "387802618d367fe594f1b1c4ce8ab9afc2d5c10179c5af26958ac9d10f8bae50"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Security/IPermissionResolver.cs",
+      "sha256": "3a9a5d74556310a5691cde17f542f17d66c416a2f2d6a45a19da8465b0108a33"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Security/SetUserPermissionOverrideCommands.cs",
+      "sha256": "a1912334f65e60f92657ae9f0b32fac39a622f776ef881368a8b04a0cf239c01"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Security/UserCommandHandler.cs",
+      "sha256": "8adca55977efc077773864641fc14751fe11db9e145ebed6c4ffae57a8e6ce6e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Security/UserCommands.cs",
+      "sha256": "fcccc816be4d323c91d5f1c71426e962bc1267cf27a7c4aa8eecb0c838f821da"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommand.cs",
+      "sha256": "d0388b06310ce5f19ab0a2bb7ff6653504a759a5220be7ac9ff24135e1e65d3f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+      "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/CashFinancialSettingsCommands.cs",
+      "sha256": "6db4a7d90d12c75097b2657d8013d0a6ad34d3b325efe8f39dfe74ef1b3d2274"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/OutputDeviceCommands.cs",
+      "sha256": "38fafa8a9f93272112bf00e21940fb50e8739936d1f30baa1ba24529d6ac5568"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/PriceTierSettingsCommandHandler.cs",
+      "sha256": "34b271356f3076a2c499e7329ba38cfac71d301a7b9e9035355042d80dbec7f7"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/PriceTierSettingsCommands.cs",
+      "sha256": "a65b0e6d8b83e741ce587e794fa6539e6e27f48cc9e69090d29d21af5c3a5bc3"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/ReceiptDesignCommands.cs",
+      "sha256": "b3138e2de340dfcc548139ad25015a06515b2e178b3e3d54b8be722e264eb286"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/ReceiptTemplateSyntax.cs",
+      "sha256": "4f286f4765c6fe055a7dfc61fad926c7ceabd426561cd5f206cfc5b1b80605ee"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Settings/SaveManualPaymentDisplayCommand.cs",
+      "sha256": "d410b6a22032cc68298ea261d567b220af26b810cef62035b38c5005eb728caa"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Teams/TeamCommandHandler.cs",
+      "sha256": "45693e05a5654830110faf71c68b1f4aee432fcfa47700f1e8c7722b673eb11f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Teams/TeamCommands.cs",
+      "sha256": "9be81bbe9db84f6c3b86e387a3fd4cb2c6d4129fb451b986ea7a4947df044be6"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/Teams/TeamPrimitives.cs",
+      "sha256": "9149302fe058c54a5703216867057a6b110af3a03be3bbb6d28f04591436154f"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
+      "sha256": "a02c2ce97ecef3318afc80634533e6ee40f25feba10f833a3d9888b530cdedb3"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommands.cs",
+      "sha256": "995ccca1096216886e0fcb7bec5f6226638fef85dec000b691bafdb4c83e6b42"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyBarcodePolicy.cs",
+      "sha256": "68532aff9edc0b02aad334f249427ba40d8571f06a4c1ef1d80f3ee2917db0ef"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyCommandHandler.cs",
+      "sha256": "57ee3d94fef8d3c291d472952432320962ef53edf936f820aa97c327d5d9c494"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyCommands.cs",
+      "sha256": "f0cbbff7d6af177939e2a0e510359e9c89ae8c3b9170a9983294abc2791d7721"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyFieldPolicy.cs",
+      "sha256": "d80b713af4d90d20992ffffe20f033716d76b4738cff57bd985b3cccec25163c"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyFilterSpecification.cs",
+      "sha256": "053a46dffab90964e079390ec4237b5911c3872b57681574b9f2480a2ef4cb81"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyImportMerge.cs",
+      "sha256": "226a2fc4fed7222d3c8e85a2f75f9530068769860569f19a799714ef44f79d6a"
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ThirdParties/WalkInCustomerIdentity.cs",
+      "sha256": "6d164880e65bd8810a4c0ad36f773beb9ad412204f410791bba8350b1d7046d9"
+    },
+    {
+      "path": "Software/src/GetSeek.Contracts/ServicePipeClient.cs",
+      "sha256": "557f72545114d30b89ae30335f790296f28ece8afe9b434a2da5d862913bff8f"
+    },
+    {
+      "path": "Software/src/GetSeek.Contracts/ServiceProtocol.cs",
+      "sha256": "2fdad33b1e9b9ad2750efa5c8bb13e2619a7c2ff5bcdc774e21b318937cc7141"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
+      "sha256": "6d54b232004d379aade3bc521d254c82eeccedb8197f3c9390d04c7700d30298"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/DataServiceRequestRouter.cs",
+      "sha256": "c8e425288562a1503d996cc59457afe1ea70a6f4c9b7f26266fd766e899018e8"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/Program.cs",
+      "sha256": "66b572e135cb3291e6c5a988de4d21084a7b4e5d951e610bdad03de7a03b16a6"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/ServiceInstallationConfiguration.cs",
+      "sha256": "446dfbd8bc73b21e8262d34795254e10659e270c9c2c41c2b52cce8c114db2f3"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/ServicePipeSecurity.cs",
+      "sha256": "d76a22bde95aba7d1745e12d17d1a5d82667b45c6bad6d39ef8196ab4a05ad49"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/ServicePipeServer.cs",
+      "sha256": "f7b41191153f29acc0a96c8ddf4b00a00f8f598fdda4004df42b24f25ff0d417"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/ServiceSessionAuthority.cs",
+      "sha256": "ca7499ecc2ae8abd66e1015897c291f90ac20aa283c2d40101e1ad4bbd7b532b"
+    },
+    {
+      "path": "Software/src/GetSeek.DataService/ServiceSessionAuthorizer.cs",
+      "sha256": "96963fef86295085d354b835fe858cc55976ab5a38b07c4409148849f6dfbb00"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/App.axaml",
+      "sha256": "fbcb9d4c8bbedcd7ab20df886f595435317e99118d45946f85f9cb14b023ed01"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+      "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Behaviors/ScrollGestureBehavior.cs",
+      "sha256": "da01d0d074ad0536fd9d1fe11c8ea6805ba5cbfd07f1ce2970f43397e6efa161"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+      "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Models/NotificationItem.cs",
+      "sha256": "033ddca9107f891f44b87513d6469e4ce4af1eb941828e5efdb3738c26898536"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Models/UiModels.cs",
+      "sha256": "466c4cedf456348e7d4652455b37eb6a7a8f736423418ab086ddcd68e60a4487"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Program.cs",
+      "sha256": "f0e38492b4a3d3884b150828ff1049dfff4e48d1ce0cf02f4568bfa3e9f9ac35"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Security/SessionUnlockValidator.cs",
+      "sha256": "ff542fac6de28184c40e6bab1c4ac60599f4c71a33803c7f563bdd5b7c709b55"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Services/ErrorReporter.cs",
+      "sha256": "c28ea46f651cf9c7f225ad44ab439180acbc646fd8de0248558b5cf7c222f525"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Services/ErrorSink.cs",
+      "sha256": "ac28f85603a5fa1ac57890e19a8c707d9fe6bc8896a8e4c816ae7a077a630de9"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Services/ModalCoordinator.cs",
+      "sha256": "52380a582313db4a2e2f2082254e3e93a2c2691f6d495894d23ce3e672f7ea60"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
+      "sha256": "e02a9beb3047099c809cc181c18cb0017baa8ab2342c1b091da00006e3b77e1a"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/ItemPricingEditorState.cs",
+      "sha256": "b21590b35e78286b0ced964bda77b31a19e0b5497f93e7af68e45e00999f3b18"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Commercial.cs",
+      "sha256": "071da96d048c0d19e2e0882786bf3785c6c3f5af6d3eb1a40cd14d2d9a6eedb8"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+      "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.DiagnosticsLogs.cs",
+      "sha256": "b9520cdd5940a865491704e16fbb9eb56059cd58492eca1220b58719fdd45c97"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Expenses.cs",
+      "sha256": "09106f06a1a1bcb5e59cf167b56e68a22ab8a629e8a24563594fbdebb3c11077"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
+      "sha256": "ab9c776a7cabe406f307b43ef08bb8960e663824f30b06f38cd1c5dfe5c2d967"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.InventoryTraceability.cs",
+      "sha256": "b09a0d533ed6bacda421abaef00bd2698292410eeac72c6e03811bc629c3d9fb"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Invoices.cs",
+      "sha256": "f3f8479bc3da9cd91a5eb520040ca1d678a641d79619fff9f94b97c2f872498c"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ItemHistory.cs",
+      "sha256": "1d5b134b53c7dfc5f0357caf736655df4056820d96284eeac2c8506cc54e8dfb"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Keyboard.cs",
+      "sha256": "c09ee0b4afcb9f4c84df7a21c84f179e41d994c4522b203f6db604c0f5273002"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.PricingWorkflows.cs",
+      "sha256": "1880b3b80c289340c113ec90558bec07d47bc46fa9c2130d306d5dc9b9262bd3"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ProductionWorkspace.cs",
+      "sha256": "3affdb93d62b64846e52993978138310020f03dcfda43775b46c1e91d54fbcef"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ReceiptManagement.cs",
+      "sha256": "6cdcd7582e12d5ece52f887ce1a09530076e4e365e07cb677e1c481d1aa7042a"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Recipes.cs",
+      "sha256": "a624de1baae659cb08a186c8497c2f8ad66e0a1ee7d11c8dbf6a71f8ad880e7d"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ReturnsAndWaste.cs",
+      "sha256": "7100dbb242728b22504a4c0c6dcbd811e86c38c93a24461c1ebc327cc3c3cfab"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Salary.cs",
+      "sha256": "74dc331417b744b4a100c77e5859949fa86dbb9ce6b8f5a79333d20ce0e18d63"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Search.cs",
+      "sha256": "de7f2f3001ca643f05ee60d403587505eb5e4da78d642b8f6c75069380470f3c"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Tables.cs",
+      "sha256": "29097d7a7d5e164ca15aa2b181f0408ed53a5fd85abe99ae6a03c069dae324ef"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Teams.cs",
+      "sha256": "2165e0876b95527ee215d165c9ef018a57fa0ce332319ca3f0f724ce436877e0"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdParties.cs",
+      "sha256": "3c53552e5e52a963205ba747a1f2ec7dbd048ba490f4b486f74a997588a1c03b"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
+      "sha256": "4e3306a908d0e3fe8bbb2c78f62468fd601cbc5ab1a8896e66e90239e0a262b7"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/PagedTableState.cs",
+      "sha256": "7d37be4286eb4fc0b6937e7bb077b6930e1db59eefb972b5e597ca453ed7f83c"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/ViewModels/SearchState.cs",
+      "sha256": "0e846b72f7515a16ed09ef8287efc0b9607e5d5ed62edfee03800a3be6cc6056"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
+      "sha256": "e7aebe41080a5f191bde24b3c83845e5dd35beb8e89c6d817d94ff3513149867"
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
+      "sha256": "b86a88b9bc5928d11392b80d4234f57a9743c378142fd6f0de97f4f6446c3844"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Cash/CashLossRecord.cs",
+      "sha256": "8af4ee529d223a778367fd4eb5059f45dbc68c1785e7e3aa3b83db0c90506167"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Cash/CashMovement.cs",
+      "sha256": "5874283a3934eaf3c582173e79f4847fb27d580d7d21c607f26695f36fc91514"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Cash/Shift.cs",
+      "sha256": "927587737ae5d3c99647bd2443046a8a746ed3e941158201ab4403891e35efde"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Catalog/Item.cs",
+      "sha256": "aa385f91e85797c90f709753d3b99d248bd60f52c3fc350242ef37b950eb5a99"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Catalog/ItemRelationship.cs",
+      "sha256": "3086bfc2c6e0c2d04efa4e2e953c9c84f5d2f9f08ba3af5b50f14caedd8937ac"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Catalog/Supplier.cs",
+      "sha256": "6490ebb26dfca0c8736fc275a08de7a844a468cd56ebfc8e714b21370f35366f"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Catalog/UnitOfMeasure.cs",
+      "sha256": "6852994dc5a351c00be40878fdf17785591022556ed3ed0fb3bb4d5b32a78f21"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Catalog/UomConversionEngine.cs",
+      "sha256": "1c4030b928a23638ba5370eb3bfb5e7e5963376953ebf77f6bcb058d5e5a6b1d"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Common/Barcode.cs",
+      "sha256": "f539409f76db23e6cda9895bee1833026d8d8b4e7f725e061e4b87ce99d8d6af"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Common/DecimalQuantity.cs",
+      "sha256": "7b46af6e2665a3a1716405519fb3f52a062f4829fa33b20800b4e3f4a7c44352"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Common/Money.cs",
+      "sha256": "5f0ea0b9f1f41f79197b6b36ce5323d54f6e7e3511f438eb75d1d363850c25ab"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Common/MoneyPolicy.cs",
+      "sha256": "1a28ede1f5a4803ebcca3fd445462a1cba53ffa21004cac374589a5d29119dc4"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Common/Quantity.cs",
+      "sha256": "e0baaccb34bcd64c7ff91cbbf452dc52744d72722cde59e421c9486524e703e4"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Customers/Customer.cs",
+      "sha256": "61cfe584675d3a79fa57bdf4bb1ebd6659585a8c874c8d4e513084b15f31947f"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Expenses/ExpenseRecords.cs",
+      "sha256": "f80a597ee1e49880387836532337a34b03cd0aeb85007c8b6260ee634ab4042d"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Inventory/InventoryLossRecord.cs",
+      "sha256": "43db1a1bc7187e6e2eea88ff809851e761e773eafdb2793efc0bcf637da783b3"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Inventory/ItemLocation.cs",
+      "sha256": "6a7618035c126327a24302c01a2374e4daf95ace2fcb3fc7524384c85ea665d7"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Inventory/StockMovement.cs",
+      "sha256": "80bbc115c9c5fd13ef4f48e4eeacef752dc37dcb5ed8022ca5d882e1266d726c"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Licensing/LicenseClaims.cs",
+      "sha256": "9f8207a031cc3630406548b65cc4caceb289b1adf0db0e2d2bbeb7a27450e46c"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Orders/RestaurantOrder.cs",
+      "sha256": "386a7ddd829b5f0d68b68f1e237d149caaea26e271e0b9b37b9722e013e58b05"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Payroll/SalaryCalculation.cs",
+      "sha256": "c19a34363a0444d5021950217660eb977d67443331f2170007169d97171a7594"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Payroll/SalaryRecords.cs",
+      "sha256": "a40bfa2aa90d10bf9b9433c5d70ac5ed91472cdd40e490a112a1ca96b1bd8fb7"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Payroll/SalaryStatementSnapshot.cs",
+      "sha256": "ad06910613b9690e983d610b348a09e98742fbc7c8cf5d804f8cf28980edcfb3"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Pricing/PricingCalculationEngine.cs",
+      "sha256": "96442e99e5a8b7348bf4a3cf388640cf0e15d86993be6740a8190eb3ba5feea1"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/DraftCart.cs",
+      "sha256": "a74ec9c478333949082b400c1253dd08e44ff6c5787bc390f24ae822342b2bff"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/Fulfillment.cs",
+      "sha256": "932a39aab6ac4b696ae2d35030237c08786fc2b44f8b29cc2a55145f51ef6287"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/InvoiceSettlement.cs",
+      "sha256": "5f2a3fa68dc24982fd54f4c7336bd37c8a300863130c3de131040c83df59114e"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/SaleDiscountRecord.cs",
+      "sha256": "40ffc5cac836081bf5fd6e8426beed3293e0105b92d939fb66daab3073003d56"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/SaleReturn.cs",
+      "sha256": "f66594155b93e079e4715209e2da6dce0d112d00a18119ae2d7bebca60e34114"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Sales/SalesInvoice.cs",
+      "sha256": "fb9e8cc504cac6094674d3f8c7fd1ebaac7cfc230fafe3442f885adf5e32d163"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Security/AuditJournalEntry.cs",
+      "sha256": "bc719e297d59dd473d6ec4e979447e28abc87c70bc37b5c5ad794df84f8895eb"
+    },
+    {
+      "path": "Software/src/GetSeek.Domain/Security/User.cs",
+      "sha256": "1de2eb4192d982e04ac0ab519d9fb14daa980aac630285b1fc28972baec47a8b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Backup/SqliteBackupService.cs",
+      "sha256": "69cba2246f74ab8c85007001fd8687af33f356f95f9e3c1f99f3181a55b928ad"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Diagnostics/MeasuredDiagnosticsService.cs",
+      "sha256": "fb6ae4e43eead0d0dc353614d0528e4460f1d95563b62994602505a7cea28bbf"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Diagnostics/OperationalLogger.cs",
+      "sha256": "2c1c52bbf8322f177896c70e0b75be10a2e47913e35ab2c14519f53368dfbb59"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Diagnostics/RuntimeErrorLogger.cs",
+      "sha256": "c4616e55d35d6fe8e8aee9baf8592dd15c23054640d4f8f029c2cc650fc78f1e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Exporting/SqliteExportService.cs",
+      "sha256": "b608048a32eee4a0628480c069ba844098ff19493a73459bd225b7db4df01e20"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Exporting/UnicodePdfRenderer.cs",
+      "sha256": "c467aeb400f83ef4e3145b2e605d3e7edda97420d8055f6725075719338c53e5"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/BarcodeRasterizer.cs",
+      "sha256": "e8350901482460eadadfa80268c576a45e7ea18fae77763d96bd972f27047a6b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/BarcodeScannerWedgeFilter.cs",
+      "sha256": "8fabfd00ba2740aa9f31cf86cc390d7f97912b072ba29445180e4094fb5a1da7"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/EscPosRasterizer.cs",
+      "sha256": "9bb285b8e2465858d5b5d64e753771a69a742f566a3ae019c56644f1185fdc70"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/EscPosReceiptBuilder.cs",
+      "sha256": "0122514f88b4615e97f68da6fa123dfceb39f63bdb851cdd7472d952d73aa0ee"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/FinancialReceiptRenderer.cs",
+      "sha256": "360d28fd56445229b3dcaf3f475eb21de83473ca8bac9d2ee5cdd81ee601bda1"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceSettings.cs",
+      "sha256": "0c82016fc9b1711ea1e525c490a2d860fe4dc676e8231471bba32034b7e31e1e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+      "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/PaperReceiptLayoutEngine.cs",
+      "sha256": "036906ff21b79030c241b91e92450d577aa1ea532cb759490b391045c9502cc1"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/PaperReceiptSpooler.cs",
+      "sha256": "6485af2f0e6f64f4f354d7ac9c192a790d2962be5c5106a17c2362c19c6d7a35"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ReceiptDocumentBuilder.cs",
+      "sha256": "111923c2084096d3d389b532464c8567076d0f199f46eae7f12fa1572608d1b6"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ReceiptReprintService.cs",
+      "sha256": "b8ff84c24c0a42324e02f07bee1655dcdbda67e77d016c617010ff765b9267a8"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ReceiptTemplateEngine.cs",
+      "sha256": "283bb8eb1de432e562deff1b5dd65d66160458308502cb9c466c572eca5fcb00"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ScheduledOfferShelfLabelTransitionProcessor.cs",
+      "sha256": "f76fd4211449b3b38a010b213ec0fe52219227ef63f5fb21f67efe94dbc7d949"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/SerialScaleDriver.cs",
+      "sha256": "194ba3a5199d77ca5c68c50a40be2d72edb138c54a81a2dc76e9a82b02360028"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ShelfLabelRenderer.cs",
+      "sha256": "1aa809f0c9700852fad2e3a1f1f11aef7337e832313f71cca4ca2071d9b4d3c3"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/ThermalReceiptRenderer.cs",
+      "sha256": "66cc3b7effc618b78ffa5d63abf396dc1b0d61dfe8a32e546ff2c05284745eb4"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/UnicodeTypefaceResolver.cs",
+      "sha256": "8fdb94b215fac27cab7af78325e387cb8d6f6e2fb7b0060237000a62c6d40237"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/WindowsPrinterQueueReader.cs",
+      "sha256": "10fc2277f3d550bbf5798583404d87995889683ba26b641dbf26d64163f31438"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Hardware/WindowsRawPrinter.cs",
+      "sha256": "ce1872bbcb4096b887fb420321f06c69a35c5a75cb9852b7ee44cdc01c904e4d"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs",
+      "sha256": "0cd619a940e34266c18726834bd20dea6543eabb76fd781ba25aff1be4131950"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
+      "sha256": "daf77df9b29d98e2fa8d5089d6788be689826fa327c2b575e070709ad08ff798"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs",
+      "sha256": "086d3993a612b9c7caafbf23fa75a7c56eb733c6f10a35371eef0565fa508aff"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs",
+      "sha256": "123acb72aef99420bafee5731c682236c92ecb1bba3d781da887c1d569cbcd8a"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxThirdPartyImportReader.cs",
+      "sha256": "fe777fef293c3857ebc1fa36542ebde3700ffc4bebfc1a6318b04f086f2a8eac"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Licensing/Ed25519LicenseValidator.cs",
+      "sha256": "c8274b5ecfc80b16d2dfbdc0306d93b01cf49fa3d2f89997cdfdb72074f57926"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Licensing/ProductionLicenseService.cs",
+      "sha256": "cf8f252518384dd5abd63e32ef4d22cf644f2570db1778f2c790e5e6ddb0eb73"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Attachments/SqliteExpenseAttachmentService.cs",
+      "sha256": "e3594c7a2960763372c80fbb196c2a89b7b726f674d704915e4dd30c46bd9cff"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/001_InitialCoreSchema.sql",
+      "sha256": "33bd875f4cfff77685e0ac30ba43cfb87062dddc8d334da4ca8a3b33fe9dcda2"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/002_AdvancedInventoryAndManufacturing.sql",
+      "sha256": "010041272611c5adfc3b2b11b4f4fabc6150adeca828619705b0aa4803d28904"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/003_CoreLedgerAndStoreConfig.sql",
+      "sha256": "d2d11bab83bd990132f8893dc94cde775b973b5b901da821c81703a6567f7f52"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/004_TransactionSafetyAndBusinessProfile.sql",
+      "sha256": "26549cd05a72d177a9033c4e89c633cec68f317f314a57e07d159ecea01cf8eb"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/005_DeviceProvisioning.sql",
+      "sha256": "c3b0895018f2abd88d2483c01d28c39bd039fb56ffc300e55ea54af82c0beae6"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/006_RestaurantOrdersSchema.sql",
+      "sha256": "79a0f4754f6ce9ca3032cb697f4cc8ae8bd1f362741fd9df163960f634a48c82"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/007_ManualPaymentDisplay.sql",
+      "sha256": "2b1aaf5fce4edaf0c4a82c59fc2baf60780bdbf27ee10d4c6f153638be4d825e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/008_InventoryReorderAndTrackingPolicy.sql",
+      "sha256": "2ed529ef9ba3ea9ab02e9250c59bc8c7b6dd8e9221b7206914bae584c52be86c"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/009_UomConversionsLocationsAndSuppliers.sql",
+      "sha256": "b562e1eff2c0121f0048a7f9c8332cf1141b05fc5359211d87cf2fb2f8384267"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/010_RemoveDefaultSupplierSeed.sql",
+      "sha256": "d8ed7e1b24164581770f048da7ffbcd39c109e46e895091a43254325830c12e5"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/011_CustomerMasterSchema.sql",
+      "sha256": "3b371cfc391fad471bb287eab43d542018a9f63580640801653d344863f269f2"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/012_CustomerCodeCaseInsensitiveUniqueness.sql",
+      "sha256": "cd25b09de5d8cce3b433ecdf65382c1fd5d1638e34cec41f7bbc1dcf81dba721"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/013_ItemRelationshipsKitsAndManufacturing.sql",
+      "sha256": "0eb58302e11ba11ac17bf3b5af9f208235989ac3eb7c3ab4f2af70c6bd81deed"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/014_ShiftZReportSnapshots.sql",
+      "sha256": "a00b9c07a8f677bb4a4a5a765d9994a97c580d0a083c0261f76d3aaa328fabc7"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/015_OutputDevices.sql",
+      "sha256": "6ac1963a5a8a9688c58817f61ae7e08e07e1beb12d920ba2f94166d1930ba31b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/016_ProductCategoriesAndUomRegistry.sql",
+      "sha256": "0496a6b8e2acf93bcb0ece08bbdf75603e8becd2f3b93db13ca429cdf014d63b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/017_BusinessDateFulfillmentAndTaxRateDecimal.sql",
+      "sha256": "6146b921476b163f573fdae858cc72f8698a8708c94665a9ecc6607ff3978465"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/018_TraceabilityAllocations.sql",
+      "sha256": "d9596cd45f05b81e97dc82cd309b8e0c44d0b8512cf6560a11c87418e89d9480"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/019_CategoryTargetTypesAndPartyUserAssociations.sql",
+      "sha256": "7e39b1beb023f8a1505cfb31a4667cd9d0e5b312f4b810f5dc35742887c6549b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/020_ManufacturingExecutionEnhancements.sql",
+      "sha256": "046b3c58abcfd5579f2970d589703a4675eebcd9dd4197f7bb1a9a7aebc96fd5"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/021_CartPromoSnapshots.sql",
+      "sha256": "b784eb4df1eacccd58ddd98f2f2da528f9909534807be29e4553a71e717a0016"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/022_ThirdPartyImportHistoryAndExternalKeys.sql",
+      "sha256": "dd534f896c8ee26b41487b17d614a917feb4be99dd8c5f3c3d282b36335fdac8"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/023_UomDimensionsPreferencesAndItemMeasurements.sql",
+      "sha256": "1c34bad52f89097f1d73ed068d0302f89c8e9af5ac4d2bb77ce4d1218b6592be"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/024_PricingBatchRuns.sql",
+      "sha256": "fb244c83f4978889f58bb77cf36220c302b87f62db1e1d9f5110c9058ac9e900"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/025_BatchSelectionPreviews.sql",
+      "sha256": "02c81712b68d597af8f1d4890fc0fcdf95e684c270759547608153079e1d3362"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/026_PricingIncrementRounding.sql",
+      "sha256": "64426fab43813c7dc58580ae0cc6bd165d625814b8de5bf2536f1c6590d24a77"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/027_InventoryProductMaster.sql",
+      "sha256": "5780951e5aaf2840b051e0380825d8b3fdc3fc554c139d7402909ca6c9885f71"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/028_StaleSafeIntakePriceProposals.sql",
+      "sha256": "1d6a1139492cde88b343f3c3cb4d80c843c8921269f90e42a60d2875caf5a6d6"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/029_PricingCostBasisSource.sql",
+      "sha256": "ad47e18e41a76e6d1e2a0ce43ed642b26f6594580663273c3752e1bba9e05c9e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/030_ProposalExactCostBasis.sql",
+      "sha256": "c0f3f8e0e92bac50cb96803e0fb6525fbdfb821401582f0dbf90df387ae12963"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/031_UserPermissionOverrides.sql",
+      "sha256": "903897ec7dc0d22949772562d99cc3d84ad308a4d34709cf52e256bce655fe9b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/032_ItemImagePath.sql",
+      "sha256": "bc15319944e1f99febc17639d2b966e590ebe20561738a0d05f299d214841b1c"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/033_WorkspaceProvenance.sql",
+      "sha256": "93318e8e8d86c1c4431a060827a01d8de6bf01ec4c9850833bfbfc70e5708347"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/034_TerminalLockoutState.sql",
+      "sha256": "4bfc77de47d36d2f6399efd9e09cee5219479cdcca39a90273b242028ed303b8"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/035_LockoutClockHighWater.sql",
+      "sha256": "8952fa0569bf3d53761fc491d57810f226edc46059a5efe9d20ccf396b117efa"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/036_LockoutClockHighWaterBackfill.sql",
+      "sha256": "2e63d3e840fcc8dfbc553ab000c95a81872a988d7c6a2649889892892808f430"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/037_CashFinancialSettings.sql",
+      "sha256": "6621ca67afe83b18653579aae7eb3ee1f41cf3ab4395992d3ba73246cd1fc845"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/038_ReceiptDesignAndPrinterCapabilities.sql",
+      "sha256": "0e8a7526ea1d6b9187bc993fe6aab54f28d1a28074800a2679b67c7c26c1fd87"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/039_CashReceiptRecoveryAndReporting.sql",
+      "sha256": "40911184caa009adac53ab435875248e328e04708f924b557b41421c3d9fc794"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/040_NewWorkspaceRetailDefault.sql",
+      "sha256": "87c59cd95b0d61202457b3d0adfa6d1b8bd8ca43261a5d102a8eb596fddbc4a4"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/041_ResetPermissionsAndDemoSeededUsers.sql",
+      "sha256": "5dd4a07f01b1118f87e83d6ddcac494e52e1f175c309837a688184de8d0cc4dc"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/042_DemoDatasetState.sql",
+      "sha256": "5ddec21476cbcc61e266fe75f13be05ca11b394e291a0700c057278dffd1e5fc"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/043_PinOnlyUserCredentials.sql",
+      "sha256": "1a751d41ef5a8f8641492a1bc647ee64b10a921a5b02244cd0ef7148244a98c7"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/044_PricingMassRuns.sql",
+      "sha256": "07e779186f9462704703e0f2a97234875e37bdbb37e56945db3c9f59b6b06547"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/045_PriceOffers.sql",
+      "sha256": "1935bc5b0a782aaa10a3c12641a342663578690dadb617c7cd84eea6d4a082b0"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/046_PendingShelfLabelsAndKitAlerts.sql",
+      "sha256": "40760ae0cae204400b10600dcc8989875ae6b7515cf4587feddb990e880dff17"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/047_PricingIntegrityAndOfferSemantics.sql",
+      "sha256": "06cf386a18c2b576f582646c863f35ea6af8a09805aa959d078b249a8ce4ec40"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/048_ExclusiveTaxPolicy.sql",
+      "sha256": "fd3a02cac0540b8e71c6c9e640a2ec8997166a72d5aa1b294be2d1b50220908e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/049_RemoveItemUomConversions.sql",
+      "sha256": "695855420d5a0a368833ac740d21200dd66605e8bbd3615242d4696c3304841d"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/050_ProductPurchaseAndSaleDefaultUnits.sql",
+      "sha256": "b20a4f3a393a94e80c574102b9fa0016216fb76d68fa2ae9506792682faccf74"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/051_ThirdPartyBarcode.sql",
+      "sha256": "d931e1dfa5d53d7e2eede61880b26f6e7db7dfb1e524ea13c85ec78c126a54a5"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/052_OptionalItemCoordinates.sql",
+      "sha256": "7babd75f74681906ac3f1eb9cf65358ca9f3f72dad7fc79a86421f12162b5314"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/053_StockMovementHistoryIndex.sql",
+      "sha256": "4b6db59fd59fa54d28f60019017430402fc95ebc8da38fd61ed8e08976588474"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/054_ItemPriceHistory.sql",
+      "sha256": "d518d6d733ff174ac6c6d51bb787f8b893722460c283c2b38f951afaddec325b"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/055_DurablePricingRunScopes.sql",
+      "sha256": "e0c24fb36a9a7fe8521d3b8a4bac62d207a1f889e49e2e647ea0de4f05c5ec77"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/056_PricingRunPreviews.sql",
+      "sha256": "e46c17e4f3a4be749a01070210eff8a968e9cdc342780888b275abd2c6453617"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/057_MultiTierPricingRuns.sql",
+      "sha256": "6e0a47dee66cbf0620832df21643dfabc78cc93fdcafe271af3290a33156ceb1"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/058_OfferVersionsAndSnapshots.sql",
+      "sha256": "acb66595f86e72bdbb6208a97ac800eba26acbd888ddc7b73594896c5fe21dfb"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/059_ShelfLabelLifecycle.sql",
+      "sha256": "bf433169700be00576a54c4cb6422428c9e4fa6105fe6053cc9608e608ed2f08"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/060_CheckoutPriceOverrideAndShelfSnapshots.sql",
+      "sha256": "b4fb3ea698c57b5c4e7072cebf17b05da434ce0458a78894de48cf4360bd4f9f"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/061_KitPriceAlertLifecycle.sql",
+      "sha256": "575251fe7be4b1c9aa8c7059410f734bbe0202b89005ec0385ff05ae9d1be64a"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/062_ShelfLabelOutputProfile.sql",
+      "sha256": "a72bfa45abcfe7adbcc6f959949b97f5fa74b7d5d7daae2133339612dfdbac10"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/063_KitAlertProvenance.sql",
+      "sha256": "ef950b647e88c8832c43273db4b9e818b147b15f089e6869a282557f79410f27"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/064_ScheduledOfferShelfLabelTransitions.sql",
+      "sha256": "b92443aa6638db0c8655efa4e7c67b7d35caad92fd3eb835bb39074f5a4bc9b0"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/065_ReportsExportPermission.sql",
+      "sha256": "08904075a14880e64eb305405667dd215c53238f0185382f78bf4962c7a34a24"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/066_InvoiceCollectionsAndReturns.sql",
+      "sha256": "2f8ec1bb49dff368c05f3d3459d2ae94a4314da324b61786c76b7246e7003b31"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/067_LossAndDiscountRegisters.sql",
+      "sha256": "75dfa6c97f17a2a44aea22e0dc1f1e9b0cd9a2af4b95cdf50660961b8b3466f9"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/068_FinancialFactSnapshots.sql",
+      "sha256": "e41e2ddf0852a6b2c90536639d384700bcfc04fa27ae8ba255e7f4cf34721577"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/069_ProductionDraftLotFormula.sql",
+      "sha256": "95449328e95d2c01eee8ad29c2eef13c0dd8ce8f3a3671fd069a649b499063d3"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/070_InventoryTraceabilityIndexes.sql",
+      "sha256": "318fd386a818ecab9dfa8d20baab63debabddcbebb59cda654f5982717c60033"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/071_InvoiceFulfillmentAndAccounts.sql",
+      "sha256": "fe060c06e9309d33e9e27384c963304775e5064db7a1036fe6ade9cedc8e1a8f"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/072_CommercialDraftsAndReturnShipments.sql",
+      "sha256": "af20889d09e90d35b9aacf7556f8e0d9ad5ac36d23857417b127c284772eb4d9"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/073_SupplierReturnsAndRefunds.sql",
+      "sha256": "8cbf19dd5ec2c3e401758fda7f0b43a2dfdd03be2e9aaf445ac0e1aabf26ff37"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/074_ProductionExactCostSnapshots.sql",
+      "sha256": "956a70123e7c950dd321b62dba64b3553f41d05a779a09b03eb4308b5eacea77"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/075_CommercialWorkflowDetails.sql",
+      "sha256": "4d683fcfe85d82d322415bc7aca74ee9a7f8e861b73fa88b85a0c95849dd9c44"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/076_SearchUsage.sql",
+      "sha256": "f7343cdfa36e0891e82f176b1c73bc5dea603068e563b527d4f79f5b5d6a4acb"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/077_ProductionCreatedAt.sql",
+      "sha256": "396ed71a578c7b6f49032e022767a13b6be1280a13a4a0a2d62ca54c7398cf02"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/078_PeopleAndSalaryAgreements.sql",
+      "sha256": "65479cc953acfbc80cdc88e4902763ce8e096d51345f373ee51f62574878d5c6"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/079_SalaryPeriodsAndLedger.sql",
+      "sha256": "ae5f520b1f31c04c18cb7658855f8b490c9c73f5603f893ec6808c9edd2b0f17"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/080_ExpensesAndAttachments.sql",
+      "sha256": "4a64896efd20d3a5beaf836dfab206e1db31538e4c8e6b17498a8e704e307ff5"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/081_SalaryStatementSnapshots.sql",
+      "sha256": "8456fddd22411faf9285a6575aca3e9b30f60ca8218831e1adea1f2043fb03f7"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/082_SalaryEligibilityAndExpensePresets.sql",
+      "sha256": "d4510de15b1c329bb61e503f4da109e2fa51bb0790d801d3bb3b93ff80da01b9"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/083_ZReportSalaryExpensesAndWasteSettings.sql",
+      "sha256": "ae99807f5c1865b115d692d802ebcb90ecd568d1c59eaaae2008f0ef358d96bf"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
+      "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/CommercialInvoiceSql.cs",
+      "sha256": "ad761a71c7333a07f89d840c159c18a33dd97cc5fa534d9700fbcefdefb2f78e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteActivityReader.cs",
+      "sha256": "9741d01a316b58631355b7298a99b1119f7c9b933da42e8de6bbb3ecb4c48394"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteCommercialReader.cs",
+      "sha256": "7950bc9639f959e57ff876ecb65b075d8e1c64202837c3be486b76f8ad9a2ba6"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteCustomerReader.cs",
+      "sha256": "bd9faa9814599346305bda9951d7de30271920f38527cecd065b4bd20a4ca1ff"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteExpenseReader.cs",
+      "sha256": "b85ed81a37c5c4fc3a8e2d902ac8f09802144fc64432af45cdd5f767bd5eb621"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryReader.cs",
+      "sha256": "db5f8f8f63f12bb863705ec8d1a25700438c8d2bdd531d92ffb989428132d61a"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryTraceabilityReader.cs",
+      "sha256": "ee4d7210de8fae6ca55788bca9c01ef7cc4bc28ce21cd392381f98e75022902c"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInvoiceAndRegisterReader.cs",
+      "sha256": "4a9f8575aef1c4feb6a930c49c55f26a65158846048cc788caf3ae177fe3ef21"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteItemPriceHistoryReader.cs",
+      "sha256": "795867e941323aec63547cbffe1e2f3840bd4f16737f52f47e1c258a994bddb0"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteManualPaymentDisplay.cs",
+      "sha256": "ca667002fd835b470c443c07fa254102f9dd427b822758102ad482ae3f21aa48"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteManufacturingReader.cs",
+      "sha256": "d67350397501584d2a185662e8dc18a1aa51cd476831516cc3b87cd18dfca54c"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqlitePricingReader.cs",
+      "sha256": "bd5cd9af314d754bf26ba24186c919b157da4aa60f56fef36753dbc2baa2459a"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
+      "sha256": "e48defcf3d4450bff617f3771024da2dd903704d0d040c47b461c90faaf54a39"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteReceiptReader.cs",
+      "sha256": "61f8012e58f86495465ee171b417b4a52ed56c91edb3132b3166232051b06295"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteRestaurantOrderReader.cs",
+      "sha256": "86e3f9cb455ce2ef5b2f59d215a122c15111cf539db884a85a5aa1f98d53eac9"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteSalaryReader.cs",
+      "sha256": "0f8f55f8c8154824629dc9d489c6a60e3f9acb38871a0453acf4ce71a56db141"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteSearchPatternHelper.cs",
+      "sha256": "157a550f82b716d112642f133bd384226cb0325058032b412e38a28aef09407f"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteSearchSuggestionReader.cs",
+      "sha256": "3e6ada72da0d785270f7da8beab41ac27acf43aa9ce934cf915fd52fabeb7a12"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteStaffReader.cs",
+      "sha256": "6d51a51023026a14d17b8c0b1a6dfe2bd7b774deb23afebabc0812c78e09bffa"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteStockMovementHistoryReader.cs",
+      "sha256": "8838723dc2037d66d441f8abf3901c1df98f75bcd8f180c5535f4764dff22980"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteTeamsReader.cs",
+      "sha256": "55f219394193345b5413bbb353116db9e76a40bec482fdd17ba3f1dfe5bf8991"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteTraceabilityCandidateReader.cs",
+      "sha256": "542866d0a468aac8f8f92301db356e7c0906f08c4d361fee2a2aa9c9739b4d70"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Repositories/SqliteAuditJournalRepository.cs",
+      "sha256": "65a0b4c62bbcafa72dddabddf3075638bc827b8d948fb595bf445a1b1d463d19"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Repositories/SqliteHardwareJobRepository.cs",
+      "sha256": "4f6940a0809d01177d7ee7058ea5ef2371f12e7f3c1c881b2fa73209765c896e"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Repositories/SqliteIdempotencyStore.cs",
+      "sha256": "8982d830eaa0a0d47d365d64d2c9767de9bbeb3627732d8bbf9ddca983a17d36"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Repositories/SqliteSearchUsageStore.cs",
+      "sha256": "4f7dcfefe3adb3cf31ec5a84fa0a0e4de2e9aee43eec5334c2e210fc6b93daf3"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Resetting/SqliteRealWorkspaceResetService.cs",
+      "sha256": "4124e8ec1788677f1c9ad6cfbe58aa34cf1bca19cad78617578f7fb0270a7334"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Seeding/SqliteDemoDataSeeder.cs",
+      "sha256": "5129aad0bd490c93b34fc960b32c68df3585db00e34247b4cddd33b98d0b3546"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionFactory.cs",
+      "sha256": "63b3c615d4efbe33376dd8d28ffbadc3a6818daabac3ae7fedc76b1beb8a63ac"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionPolicy.cs",
+      "sha256": "76dc302ca3ce1fd36096b62179264f03cdb3c90205fdb256be735cdcdbbfa5c0"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteDraftCartService.cs",
+      "sha256": "0f65983d96837ca95981a0c1916304d89b80cb4252f87e6d1d8c1fb8e53ef575"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteUnitOfWork.cs",
+      "sha256": "0057571b1753ef13f61e7c6099d3bae8228d56db8be0c71f2834112c428fc96a"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/SystemInvariantChecker.cs",
+      "sha256": "13ba0ff7b6b79de47aaf8248c8ebe8d673c6db3da9261e9cc6483d28c7c13025"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Security/Argon2idPinHasher.cs",
+      "sha256": "8d606ec78ad044d0956ba64e06d0d808830849b610c308d2bd509ef02dfd8376"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Security/SecuritySessionContext.cs",
+      "sha256": "284a8dcc2ba0ed691879ba419b2e1e53b794d27fee969286ef4903a201c9da96"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Security/SessionUnlockContracts.cs",
+      "sha256": "4d343242b2bd032b99cb29f7d9ab07e9ec947e2201088254c47299eb40d3cae4"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Security/SqlitePermissionResolver.cs",
+      "sha256": "1de50021a9646d445afed9cac6491a4d7c81a2cbcb5fb913f58320cb7ba28447"
+    },
+    {
+      "path": "Software/src/GetSeek.Infrastructure/Security/SqliteSessionUnlockValidator.cs",
+      "sha256": "6df07090aeb0efb42fadf8d34fe5d7904fe126deea48a3d826278ced6c281c13"
+    },
+    {
+      "path": "Software/src/GetSeek.Recovery/Program.cs",
+      "sha256": "9e33f889e8187d1b4c18d6ce2196d5e1cb05353d0991092381b066b16398dee9"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/BatchConfirmationControl.axaml",
+      "sha256": "060fb43277cd5b80c3217631a9979d5c8163d092a9605c276004a42c2f473739"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/BatchConfirmationControl.axaml.cs",
+      "sha256": "bf69cb91253b0e5fdee4af005562ae0dfa8f013cc0d208601dca0566e53f5f76"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/CompactDateField.axaml",
+      "sha256": "93f62fde17714362a5950b183e9666f379676333b68497384397d7f69acea190"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/CompactDateField.axaml.cs",
+      "sha256": "6ffca96cd057cf5cf80e6a7beb206d29bbad9c4fb1e97086349a127de2a4422a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/DataTableContracts.cs",
+      "sha256": "ae22600bad719e26cfee924021d86d732cb0a16a305f640b3a3901b018149656"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/DataTableSelectionToolbar.cs",
+      "sha256": "5a3b05d8bbd05626b40c2cf648295ec0f5c8f25ff12e31977fd32b0c827c0015"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/DataTableWorkspaceFrame.axaml",
+      "sha256": "83160da4d6ad2debb1174eb5d2ffa03ed9a07deeaf677b082ffa2af7747a926c"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/DataTableWorkspaceFrame.axaml.cs",
+      "sha256": "48a8eef16d1b7eaedb0cff6f9661eb6c8f28cb7bf11734d69eabcf3df3290f54"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ModalActionBar.cs",
+      "sha256": "62e2280b2565eaabb58a16408c186a39956c1e66f362ea2d06362627438a2643"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ModalLayers.cs",
+      "sha256": "53278979e63cb2334b8e0856e054d7111d3f33eeab33945c4bb21e55f7932c6d"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ModalShell.axaml",
+      "sha256": "0c63cdcca17dc3370a2e18d2cb671217fa9c740178b5445bbc1a524e9a73811a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ModalShell.axaml.cs",
+      "sha256": "212f999b041591449a9695d33d2ae6bea07c9c16af7f2bc5f17582cd58743234"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/Pager.axaml",
+      "sha256": "ed9f6ffe1f21b8368636f5fe8f8ad4d7946e3a9e09a0116ef8de593894dccf3a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/Pager.axaml.cs",
+      "sha256": "e070f1a7cf3e78cc31250f287233c01151313b57291fd2064bbf19bbce0cc5f3"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/PageSizeSelector.axaml",
+      "sha256": "96988cd514e7625e0807c645b30bd767274bf8657ca34240615299e86e6ce02b"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/PageSizeSelector.axaml.cs",
+      "sha256": "0d49c40f88d2e92f5cabd2e663895bd28120a7c4fca12acdb7e42b5ddda5265a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ResponsiveWorkspaceSplit.axaml",
+      "sha256": "a746cbed81058464dfbabda1722a558d20c0c8d7ece555b5345a5feee4d7fe8e"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ResponsiveWorkspaceSplit.axaml.cs",
+      "sha256": "2b2a66eb4d1b07610e157f2f695d96e54e90df7306be4bd89cfdb271f92c1316"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/SearchOption.cs",
+      "sha256": "b7f9fd845f34e1f62135df2b016799ddb16c46885fcb74076bb1c4cc3e521775"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml",
+      "sha256": "307f130642539c22ceac20569d7e44d9050b1c9f03a37bef2482b2834f85e2f5"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml.cs",
+      "sha256": "336245b2542ff17bcf6d19aa73fe85978bc929d8d7fffd4d710e011ede725589"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ShortcutBadge.axaml",
+      "sha256": "24bff1c25485b66a656ce38c5d69ea428fc71c9681394db314d5cd9f3e327453"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/ShortcutBadge.axaml.cs",
+      "sha256": "386412a6cee9c7b5cb12578471d60679b2ef60944a0394871b105868cbe21440"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/SortableHeader.axaml",
+      "sha256": "e9d9f5546bddce6d826765371598e8d4bd17de257783e19296e1246cd58bc6e0"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/SortableHeader.axaml.cs",
+      "sha256": "8e6bf8f700fdc16f5b32e5cd08842070f6973b96dc048a04dd6e901fc4d245de"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/StatusBadgePill.axaml",
+      "sha256": "53e009da5854f4dd8757f01b47516520fb4b0f58c6df8cd4b9cc187856131ef3"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/StatusBadgePill.axaml.cs",
+      "sha256": "4f0f8a81d46c7e31b0375e7c1b9f1e9e1e6e9062784a038bc74c55266b1437a3"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml",
+      "sha256": "8bafcf84e644ae1953050d33cd3e76511738e651610fb63124c70d09c7f3b14a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml.cs",
+      "sha256": "01d53c33967ec3c1403164cea91257ffb424a8c874acd20cfdd595ca36b2994c"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/TouchKeyboardLayout.cs",
+      "sha256": "33135e9f8c0efc420d62648fe1a71979aafcc46671b33637500c6c9b57a50f8e"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/TouchNumpadControl.axaml",
+      "sha256": "c0881866e933ead04810b89bff3e2020f1ea9a848ebd40c9254bc6b2fa6b5cc3"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/TouchNumpadControl.axaml.cs",
+      "sha256": "5113a0234fc6c24624e104440228f71120be76702d1ff2df1e89c6c66844fc00"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceFilterBar.axaml",
+      "sha256": "689beeb635e1a1bbdf376483e341f8e128196a8b9207f59dab7c7400e262e628"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceFilterBar.axaml.cs",
+      "sha256": "357cda47eac18d09b1a4c073ab86862475ba6d4bd58c2cfa8db5ade2d7ec4c33"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceHeader.axaml",
+      "sha256": "55df680faa48dc352371d5f9092c4bc253d2c6dfdf5594d74945750e38fb788b"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceHeader.axaml.cs",
+      "sha256": "c33a233364ff2d74b0874201aae4607c6e0238e9a626e7602aa34ae9ffafb6e6"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceOverlayHost.cs",
+      "sha256": "1dd81eb4b904a18d8aa071e1e4fecf40fd133156469e4c2c39efdf37c12343ea"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceSearchBox.axaml",
+      "sha256": "e23d4af1f20d5d29a169fe2251c59bf01a75d0e45d360beb97ab28739302cc66"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceSearchBox.axaml.cs",
+      "sha256": "18e61921483b9a25f810b036aa5575d085d887c8e58838aaae1cb15ccd7c874a"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Themes/Buttons.axaml",
+      "sha256": "627786f3ca36a7912cbba1292397fc17ed2f96b88161a90f88daf1e932d84a1d"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Themes/Inputs.axaml",
+      "sha256": "22932bd6f952d749ecbc522ff26673c06e8722b888f91d1e59eb69789090d842"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Themes/OneTheme.Dark.axaml",
+      "sha256": "c3b6959e7049e28e3a60a2d0a746a8929216697586019de029a5c1b616b6aa07"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Themes/OneTheme.Light.axaml",
+      "sha256": "d2422be319785f7c38022c5d3a8af742ecddc47ac6cd3d5b242cb2eb1686dbd5"
+    },
+    {
+      "path": "Software/src/GetSeek.UI.Components/Utilities/UnicodeTextHelper.cs",
+      "sha256": "c9f85fe2bcf4ceb6184f6063282f2c739b2056cedd1ee38ba2c7d250c9024b3b"
+    }
+  ],
+  "test_sources": [
+    {
+      "path": "Software/tests/GetSeek.AcceptanceTests/FullCheckoutWorkflowAcceptanceTests.cs",
+      "sha256": "0cb7582785b1dfe2bd71664623af0039326649f9c3355f1d3a9051a28ff086e2"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/AccountPostingIntegrationTests.cs",
+      "sha256": "79f27b36868172b7d2befb8a7e7c9e459dea0d610a149e4d1ae724ebaca51af0"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Argon2idPasswordHasherTests.cs",
+      "sha256": "38deab56d5e113e2d51b5517170294354e218725c19971948376f5b892b8f208"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/AssemblyInfo.cs",
+      "sha256": "9976d64684080884ef0f0442634d057c3fd2a2c7f74fa7a2062919955ec50a8d"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/AuditJournalSha256ChainTests.cs",
+      "sha256": "fce54fc9695c2298e2d2bfd90ffae50dbc69c6e13d9f97059f3f1f9b2dbde8bf"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/BatchPricingPreviewUiIntegrationTests.cs",
+      "sha256": "e956142ad14915fe5fe1a0685aedd33b596f8237a54bd0f044c3750b4ba980df"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/BomWorkspaceLayoutTests.cs",
+      "sha256": "135c4d71a253fab50d1368eb0c5289d5031fc8d9df36fc0a6f740fe9f471d31f"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CartAllocationIntegrationTests.cs",
+      "sha256": "4d15b80c9c07a605f3225abd4dc91947a344a4b52dadda202cfe05ceddb273ae"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CashReceiptCompletionIntegrationTests.cs",
+      "sha256": "9e859bcf736993cd3891cc20cfc9d5db31d7f8f55b9680b0c88dcb5472e06b88"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CheckoutAndActivityIntegrationTests.cs",
+      "sha256": "1535d9d9234b0f018f2a25fe54817ad8f20ea77176ced888ab36092abc30ec01"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CommercialAndPosPickersIntegrationTests.cs",
+      "sha256": "53f6757bf937152ba0c03a295afe1faaa883896b8b20444d9bb1a08985a9ab7f"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CommercialSearchIntegrationTests.cs",
+      "sha256": "a9906db39cdeb50649f031095a6df8f4c02a0d05b7ceae50e1265b2e1e99d734"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CommercialWorkflowIntegrationTests.cs",
+      "sha256": "ae37612a99ad1a93c29cd93df73024b325ad772a7344b05a56a1af11a808d002"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CompactDateFieldUiTests.cs",
+      "sha256": "1fef8619945fd38be8ef75f48ebc8cf7c742468d9e950a7b73a46c47e764fc65"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CompactDatePopupLayoutTests.cs",
+      "sha256": "20c5f71d3b68f56f10b493de14c5eb7797eac9acf684e3568dc62128c2383ab1"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CompactDescriptorsAndRoutesTests.cs",
+      "sha256": "2a50dacfe264ebba98637fbfdfc1d35df00250602e1f10f0aa3845ec343a72fb"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ConnectedFinancialJourneysIntegrationTests.cs",
+      "sha256": "2ba71e366deafba0c8f5c3705f982427971a836d02418b68f5b629d3b48138e2"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CoreLedgerHardeningTests.cs",
+      "sha256": "f31a76923b5484a1e182a7987b770de92cfd39b2fde7014888b1ee6f4a465911"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CustomerManagementIntegrationTests.cs",
+      "sha256": "9b92c5ed0e6c2077f712f57bcd6bbf5675992028fbe59d3c5d001d101e56eb50"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/CustomerUiIntegrationTests.cs",
+      "sha256": "0cdc86d3a6843c6e822c7f37268cbb4ea46437201f2d1b482ef2ab4ea886507a"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/DatabaseMigrationTests.cs",
+      "sha256": "32b1a9507912007614db8bd077d80cd4e5b7d1ba2edebca601250121b30ff9bd"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/DateConsumerAndFilterBoundaryTests.cs",
+      "sha256": "dae398613a804e5e1e2cd172ab661aef7409a62f01a4fd42aa60d7bfd69e2ed1"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/DesktopProductionBootstrapperTests.cs",
+      "sha256": "499e47bdd72cade7aa34246d2bebc9b8223e88012ca45109ee7b892acccdc52d"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExpenseAttachmentIntegrationTests.cs",
+      "sha256": "6856af0bc41a0c597a9fe8525e77a0a8ba5202697372a0968c9a33050725d4f0"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExpenseCategoryWorkspaceIntegrationTests.cs",
+      "sha256": "9096fab089cc8becf977f60c4624d7f76a6de985eef3af4b8409712276c39c7c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExpensePaymentIntegrationTests.cs",
+      "sha256": "39fa8e69c74cc40c53370bca4f4a382c32cf11248762b3c9b038f3371c808228"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExpenseRecordIntegrationTests.cs",
+      "sha256": "466973515336103cebffffec7dc5ba1399c325d0743e3c4d6bc0c03b67563176"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExpensesUiIntegrationTests.cs",
+      "sha256": "cd08d0d7db1ec5a74885f959de438dbef3135b67f64bef3443212f25633b6fec"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ExportServiceIntegrationTests.cs",
+      "sha256": "f079119b50490da97206be44869fc2e089d174159ee0b4c570a4203d253ea9ab"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ImportDialogsUiIntegrationTests.cs",
+      "sha256": "42bc57debe921ba784d023efa2a146aeb43a0ab48f59fa7be4c7f2617f4e9d15"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InventoryAndThirdPartiesSearchIntegrationTests.cs",
+      "sha256": "fd999a73ea1ad851f7eb1e5a730d3534fcc740dd6790ee2c7977150dc8b3c252"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs",
+      "sha256": "78215d26eb8bdef3dd85a58527d301dd4a26cdea52954190dbf0aa47bc9e21aa"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InventoryIntegrationTests.cs",
+      "sha256": "569556b4052701324a704f1235405e2e85a87aca29f8a2f18b9244890641475c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InventoryPricingNavigationTests.cs",
+      "sha256": "d32cf11c236769797567aef83582ec1c6ae5c140c5924dad79bdb1c7582ff748"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InventoryTraceabilityEditorIntegrationTests.cs",
+      "sha256": "f077e85170e3f554de0f4d0838efa0a82848c4dd473c5cccc7bd48d09cfa4296"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InvoiceSettlementIntegrationTests.cs",
+      "sha256": "3a6b48e57b1d80f70ab6ba1378ce54129d109750ca0047c3e8d86aaef9a0f226"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/InvoiceWorkspaceUiTests.cs",
+      "sha256": "7ca89013b520966211ca295e34af388f251b88cec3a324bbe02fc7234b0cf317"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ItemStockHistoryIntegrationTests.cs",
+      "sha256": "86be21681ed8e8dbd474bee1dff6d7d72ec7cbca882779e08219817b1e217bfd"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/KitAndCheckoutIntegrationTests.cs",
+      "sha256": "212d7ab365576adc6f18399e46e57db4e60d5c95909cced8f3f7c559b5be20d3"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ManufacturingExecutionEnhancementIntegrationTests.cs",
+      "sha256": "1763df25d14e717e7a2dcd9f4c9f3c466054daae2aab20c4f3af46a077e511aa"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ManufacturingIntegrationTests.cs",
+      "sha256": "e1e18e01b6ee727cc5d24054689d93d4b61888b5e7efcb8b5b7d7d57dbb4f749"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ManufacturingUiIntegrationTests.cs",
+      "sha256": "86d4574dffc04dc87ed0eb1b82157c5b581f1aded4a3bf87f4651dabde4b5bf8"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ManufacturingWorkspaceReaderTests.cs",
+      "sha256": "c76c5be0b09b462f401ec2247266e7fead25faaad300628d47cbff4fd06d30ea"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/MasterDataAndInventoryClosureIntegrationTests.cs",
+      "sha256": "00164e2c2148ba64d4e62fb340ea1a6ad97c1c96bb2420f60d749b10c1ffdd6c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/MasterDataOperatorUiIntegrationTests.cs",
+      "sha256": "cd22e9d032f63ed70d3c7dfd9dbfca96e4570e1981a3ec08a5844f1dbc85033e"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ModalActionBarLayoutTests.cs",
+      "sha256": "454b3023a7e221f0e3f00bd17197a67f9c34d7506e501d40bdc759ede5e8976a"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ModalCoordinatorTests.cs",
+      "sha256": "b2e3c6774f18b04a6cee9b9e822c65d05963af093b0a4f4b5466170d6fe6995f"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/NumericInputLayoutTests.cs",
+      "sha256": "4b64b9676f691d24e6d86c152cb2e5260bda3c50eadb0dff1a57fd336146138c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/OperatorProvisioningIntegrationTests.cs",
+      "sha256": "bc6fdf66940363da0139539799be1e917ef6252473d74fc33d2c6e133d4145a0"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PayrollMonthSelectorIntegrationTests.cs",
+      "sha256": "3d89c0ab6320bff4146953aa24ac4554f5b96318ef952d1dbf4913a5b3309ef4"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PeopleSalaryIntegrationTests.cs",
+      "sha256": "9821473a0129a12eb655b861681125527dac484e37ca9fe98daab814280570eb"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PermissionEnforcementTests.cs",
+      "sha256": "cb2063e65898b70db08476b94e7942a118a005dde67803174ee1f212ef313a63"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PopulatedWorkspacesLayoutAndContainmentTests.cs",
+      "sha256": "b3cdfa93c06ae74a10126313eea2e22ae9e69e1a240c8c5d3b3188ee9ebaafab"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PosChromeUiIntegrationTests.cs",
+      "sha256": "ae3a65a6cc63e2ce347a737d00472e066fa3e750adc86a9c166f530738291561"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PriceOfferCommandsIntegrationTests.cs",
+      "sha256": "958759d5814f7c69055763426e1a6c54cbeaf62a2d6bbae230b3209520370c20"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PricingAndActivitySearchIntegrationTests.cs",
+      "sha256": "7527120b957c0f2d850c3420f9dab9f320b98b63c29b04914d3c920cfb90903e"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/PricingMassRunDurabilityIntegrationTests.cs",
+      "sha256": "73326240253c9ba379b3d0fd769ca81d463f3c7d2321bfac81efc19476340444"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ProductionModalModeTests.cs",
+      "sha256": "59557bbce1f3b9873638434a48c2539db42b271970f441c51f3718b39e0140fa"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ProductManagementIntegrationTests.cs",
+      "sha256": "705363502e80d93a70d8de732f451ac1614495f10037a74823d08063e1787c69"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ReceiptAndFinancialRegisterSearchIntegrationTests.cs",
+      "sha256": "e2805ffb9ccea189329cdfbe46b017facc3ea4e17646d16d210a0e46bf8c0a35"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ReceiptDesignPreviewUiIntegrationTests.cs",
+      "sha256": "b521fce968ebe85850c4796355551af737b343d16a2d899c917ea15f8044d453"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ReceiveStockIntakeIntegrationTests.cs",
+      "sha256": "d8eaac2f916d93e1f913e3236efa32eedd3b6ee596649005fdce2da3ba083237"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/RecipeSearchIntegrationTests.cs",
+      "sha256": "f0440be97a5103555165caf9348a508100c3dbda2aad5be0c33dfee5dc490c43"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/RenderUiScreenshots.cs",
+      "sha256": "930fe4c5a7196d92c5ff5c037a898ce0141f8c13fd1a657da43b887490179351"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ReportAndShiftCloseIntegrationTests.cs",
+      "sha256": "7437819a19c062912c328286af00afb4a8d5420bcc46fce029946d5a8085eb2c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/RestaurantOrderLifecycleIntegrationTests.cs",
+      "sha256": "9e148937c8a176241db0a6322e22d86f2e2ed2bfdea3fdf83a5365a958dc86ad"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryEligibilityAndExpensePresetMigrationTests.cs",
+      "sha256": "d793ba7041247c6643b7ff5b717ee947d3154ec107c5f526504c8e9cd7179073"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpenseAuditRegressionTests.cs",
+      "sha256": "fe1c1736f294cfce8f74f63fa32b97bfedc1b013c3b5c0c804ceada68fe1240f"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpenseResetIntegrationTests.cs",
+      "sha256": "8af97e25e5c15239f55f9dfbae7ac15e912257f9662eed75a3ac4958b1ea1e46"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs",
+      "sha256": "a409a6aa49211a5b2d651e515d646a5d0dd92f6dddbff836ec632f8058a89e24"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpensesSearchIntegrationTests.cs",
+      "sha256": "c9a6ba7bc2e8d4357b8ec1e334aa7fed4d503d6daa338731547bb8b43a265dbb"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpensesUiTests.cs",
+      "sha256": "0c00f067b3b648247a9dd1ff21dc2cba67feeebb4ce500a5045cd73a8ae728ea"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryExpenseUiMeasuredLayoutTests.cs",
+      "sha256": "032775c52f8f958ea92b87de292cebb8f5687b790bf82476594cf3ba2ec614b0"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryPaymentIntegrationTests.cs",
+      "sha256": "dbfa9e3f7d171500cb3acfe1cb6cabbd060281b9e7aba6a3d2fd795b28959d4e"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryPeriodIntegrationTests.cs",
+      "sha256": "2f45a3dec2fa2995f7aa1e716192610670e80db0bf8776bf994dff6ed12ea5a1"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SalaryUiIntegrationTests.cs",
+      "sha256": "d6f84b0f73da2c08a35cb99475681f33f41c761829d77d43b2d89ba5705b2e8c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SearchBomAuditRegressionTests.cs",
+      "sha256": "51a6cff30f83d7fe356149deffe670c63d4bfe6d0aa4f1efac4d698438a6e6ec"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SearchBomSchemaTests.cs",
+      "sha256": "d2cb8f1256133d8533bd7c949a0293a8eedc30287d3899453fc43300116c3c94"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SearchRankingIntegrationTests.cs",
+      "sha256": "e64e4af74fe327a4628b2840c70fb8c3b1bdddf8172fa9050e499b6a0fc40af9"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SearchStateIntegrationTests.cs",
+      "sha256": "e5998b74451e1df39fc248c336c37af5214ac1c9656065d0e7362d03010bce70"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ServiceProtocolContractIntegrationTests.cs",
+      "sha256": "fa50c71bb6a6d810c2b3dc63d30594293ff3d80c8b12ce0bb3a46e642dccd97a"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ServiceWorkspaceProvisioningIntegrationTests.cs",
+      "sha256": "1f744f4c61216e823d8de85e8563c22fff976e5e623f8ca40a2092026dd799d4"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SettingsAndTeamsIntegrationTests.cs",
+      "sha256": "0ab5567603f009fc686596492c929c78df1194dae1018b11c04b7a7109530a23"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ShelfLabelOutputIntegrationTests.cs",
+      "sha256": "8d94c100927c4b912608c0d9d54bff5da2c708bac7945d9ff40ca793b8488546"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SimplifiedCafeCheckoutIntegrationTests.cs",
+      "sha256": "47ebc147fada03e56c497f30591d07eacd0909e832dfbb4f3b832b72e0e163d4"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SingleShopBootstrapperIntegrationTests.cs",
+      "sha256": "411e9e086a861a2c9d0d09d07073fc665cde0ba542b10493e8f0273980958b84"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice1CartPromoIntegrationTests.cs",
+      "sha256": "55b86827167c0b6ed2760a0544da0dbd2edb55a87a34527808725307eb61f457"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice2DLockScreenIntegrationTests.cs",
+      "sha256": "f82cd14619f64f6cfcfcb2ab3fffcd6cb3ac55471d8361e815567cb6e9817dee"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice4ActionPlacementAndReceiptReprintTests.cs",
+      "sha256": "5b946f53d1f541a381ec9cefbcbbe9b2b02fc071ecf0ab6687d7e72230e8573d"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice5PagingAndBatchActionsIntegrationTests.cs",
+      "sha256": "31c6ae098b4c0e0b3fa1bac5ec486affc232bf44fc59fdc322b18863825eb498"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice6UomDimensionsAndConversionsIntegrationTests.cs",
+      "sha256": "58cbc61b703bfd6b4ccd4502f16264e8e74550b61dd029fcd47f45995fd4ef39"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/Slice8PricingBatchAndRulesIntegrationTests.cs",
+      "sha256": "6e87af9ea823fa76d19f341549c40c0795ff6411e525cddd04ce0c88506e5052"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SliceIInventorySearchAndLocationIntegrationTests.cs",
+      "sha256": "bf585b9bb5ca6091384d7b7f0aba821e23dc0589f2b7131f8d4a3d6e0643eeaa"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SliceP0ANestedKitProposalIntegrationTests.cs",
+      "sha256": "86794e00211e6bf7068bd3d6b01de373296406c108614e7d09f3160fb3f996a8"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SliceP0BClassificationQueryDecouplingIntegrationTests.cs",
+      "sha256": "0e28bd16e6f19b5573330722936807c6cb90220f0a458fe87f30b85181515fc6"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SlicePPricingProposalLifecycleIntegrationTests.cs",
+      "sha256": "5055b8924c4eb697795826838b850d368ac7729c82b128938190333b18d00078"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SliceS4PermissionEditorUiTests.cs",
+      "sha256": "8b24b4c9aaab89b1fb6e2db2e2e1973b97fb5b9a74a8d3fd1bc260354fa1d21b"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SliceSPermissionOverridesIntegrationTests.cs",
+      "sha256": "aee32fdd9910fe380d8eb0ce608756290415667dd55c85c591247ad67eff9922"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SqliteBackupAndRestoreTests.cs",
+      "sha256": "2628f6091ad34b10fe6f9ab3a321551bd3e69b79a480bae4ba7528fe2c4caf0a"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SqliteDemoDataSeederIntegrationTests.cs",
+      "sha256": "46e8fccdf277d509c602cf82672159897824d39982ef5dbefcfb989b108a5dce"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/SystemInvariantCheckerTests.cs",
+      "sha256": "6d17317a596a0992cb05c973f41fd61c6318a37da821434bb6dbfc58a2191eeb"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TaxAndCurrencyPolicyTests.cs",
+      "sha256": "f1e0cb16563c7b0e16094a88d7011c8d5a1dfef011431e384e75b01f59f6ef3c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TeamsPermissionsAndContractsTests.cs",
+      "sha256": "9396f9d54c8e9c90c7d579551dda35af71d207808a7f0d2bf1b2e56f33e447bc"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TerminalTransferCrashRecoveryTest.cs",
+      "sha256": "b49e2a24cfa50addc07982690e537e169e4b9aca570dc00c614901ce8e3568a4"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TerminalTransferProcessCrashTest.cs",
+      "sha256": "28147eb7fce6cd7ad4560d73994324f4f560b25fce3a17b2dcd62b201a4786c0"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ThirdPartyAndPricingIntegrationTests.cs",
+      "sha256": "c65f3f8d0c2134bcd93b75e103b3ad9a0039a80aeaca3245f1011455f2f94cad"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs",
+      "sha256": "4f7ada0e3c93b2a1b3a309c1c7310a3d814ab8371c5a8e8ef083235be854f11c"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TouchAndShortcutIntegrationTests.cs",
+      "sha256": "4bda8079341746f990d14ec1bfe5cb26a6df2c5ba2c33c4dba21dab45220a403"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/TraceabilityCandidateReaderTests.cs",
+      "sha256": "09a08ab3e2dc10ebcd65ba26022e001fc7bec1cec8aae8463de1783713042bf8"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UiPreferenceTestScope.cs",
+      "sha256": "86a3801ee6dd6945cab0dadb971c1ba80dee23bba38570291846f91ea9b19da3"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UnifiedTeamCommandIntegrationTests.cs",
+      "sha256": "b892acd43db9aa58b85ae99f6a1765e69038376ca923d54945e2da3bb3edc52d"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UnifiedTeamLifecycleAndSecurityIntegrationTests.cs",
+      "sha256": "61838316f07f0a54ae01838c3a2e248012be002cd3532d569a79a233d2b8b783"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UnifiedTeamReaderIntegrationTests.cs",
+      "sha256": "b5355aedec565370b89c9c48941ebe7ce5a8993c7f65d6a542c0495e772b541f"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UnifiedTeamUiIntegrationTests.cs",
+      "sha256": "3e4724c4f0ba31699e5f055963507becf8adaf9b461d57461f1d5c5d1d71a3f6"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/UnifiedTeamWorkspaceIntegrationTests.cs",
+      "sha256": "36e1ca93dbcd63ff61fe399536179724b10977e5876b188a7a2efc75eb1efd71"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/WorkspacePopupPlacementTests.cs",
+      "sha256": "601e50072984eb686044a8db431d500ab6c77b729a0bc952aab9bb50cb1608ac"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/WorkspaceSearchBoxUiTests.cs",
+      "sha256": "f01c5c5a55be12c374dd4b2c380a72e930dff3e61b756878d545d64f57187e75"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/WorkspaceThemeConsistencyTests.cs",
+      "sha256": "42db2cb2b110a4a98fc7bec3e1679e855aa8ffe64770ff5d7a1767337e4eb7ac"
+    },
+    {
+      "path": "Software/tests/GetSeek.IntegrationTests/ZReportAndWasteExpenseIntegrationTests.cs",
+      "sha256": "e126c742243c268398f449893d12bd075f87fefbd777cbd7909a4d4ecebae6f5"
+    },
+    {
+      "path": "Software/tests/GetSeek.TestCrashHelper/Program.cs",
+      "sha256": "a0ddc097636ff48b294cdc3793c553b1059ff060c3b058f5f6bf5f743be02df9"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/AuditJournalEntryTests.cs",
+      "sha256": "c90a9cabc286e6e326d12034b745c5419109190f88ca989e1a6cf9d92e225407"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/CartCalculationServiceUnitTests.cs",
+      "sha256": "0794037b236c2fb7b333e623e33f0a7dea23c8b5adf233aaf976df16ebc39c9a"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/CashReceiptAndSettlementUnitTests.cs",
+      "sha256": "9d389e6e508aafc1027521d7ac6ea27411071d9c9d867707e84a903839b1ce8d"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/CustomerUnitTests.cs",
+      "sha256": "9967c52c5cbb92b73534175f373a11561bb92cf2f6951744fc3079a4415b65a3"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ErrorReportingUnitTests.cs",
+      "sha256": "e2e71d8815c731e342b6d935e3b293e30288eb79b12ab1a312c6850fb07cf63d"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/HardwareAndAllocationUnitTests.cs",
+      "sha256": "95a76bca979cf365251c83dce02995586e3415d775365f0ae9d9cbfbfcdd3c7f"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs",
+      "sha256": "a33efe360229d8f4621d62cee80f8b25e77b5774b167ae7d1c0a1cc691faada5"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/LocalizationAndVisibleErrorsUnitTests.cs",
+      "sha256": "bb78dddf9c85d63beaebc8f9d0e1e1e1e11d5a419e98fc616e39830134872f3d"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/LocalizationParityUnitTests.cs",
+      "sha256": "c0f0842c17767d51a36f211e60fa980aa0e86835f51ee47a9b04b9284c96fca3"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/MainViewModelTestCollection.cs",
+      "sha256": "e54e436fd60c314bd9c6394feda406453399cc062d962099ca8b364193092ef6"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/MainViewModelTests.cs",
+      "sha256": "7a990e6d165264ee25bb5bb8064c6ae1e504c6bde5be8504dd70885fa40e519d"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ManufacturingUnitTests.cs",
+      "sha256": "d82b0f387440f03f8715ae766b03d2d3e93c88bd18a3484c56e458ef40d7c08a"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/MoneyTests.cs",
+      "sha256": "c4f91670623b066dbf30a56ebdcab68212164ac8a8add583930a96ae53dac32d"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/PricingCalculationEngineTests.cs",
+      "sha256": "6cac0e5f6c970f96474b94b62c8fe57dd2bebdaa7bc0d127da4edb4c5f2f3186"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/PricingOffersAndMassRunUnitTests.cs",
+      "sha256": "e1900febdf15ea51cc68129a957cf3ad0bc6adf512f0ddbf4b5cc3b74b2d1556"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ProductionLotFormulaTests.cs",
+      "sha256": "fcd394b3aec3f90bcc5f8c96cdb036fcdc52fe20a756c360f7a8e0fc238b7505"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/QuantityTests.cs",
+      "sha256": "d256064d63226640ee3524f55d1434739e5eef5c35de0a61871a4ff101f04896"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/SalaryCalculationTests.cs",
+      "sha256": "758c50f268b1bba96a16e7f28bb0b2b38b93719e570abaad29bd78303863475b"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/SearchAndManufacturingContractsUnitTests.cs",
+      "sha256": "299b3800b4ef4c212b9e7ede0b5a4ded6ce6e03c21b7e67659ebbb3edc86c974"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/Slice0SharedBoundariesUnitTests.cs",
+      "sha256": "8432b9b392ad8e34a66a1986939f9fc051c8120145f0f32c1f2b214840f2a39e"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/Slice4UiAndSettingsDiagnosticsTests.cs",
+      "sha256": "410b931dd7525dcce9024a4d899bcd8374daa6251657ccb070ac46e21342bbe7"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ThemeAndLanguageUnitTests.cs",
+      "sha256": "85b1392d02ea8e015d3616f42429d1a0eaf331b7bb635f18290d6495ab03035f"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/TouchKeyboardLayoutUnitTests.cs",
+      "sha256": "23eaadd4e9498b10ed9b34371148791955dd36993a57ad090a340705e6db5c06"
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/UnicodeTextHelperUnitTests.cs",
+      "sha256": "ef3b13f30c1fea2e427a6088d768182a95a42dbe7469376b7cb1275af32cd03b"
+    }
+  ]
+}

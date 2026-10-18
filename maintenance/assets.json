@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "path": "assets/brand/premium-mark.svg",
+      "sha256": "7389258e982c1312ec924d2eaa9607ae80318d6a7e1d5dd180cf71cdf4741118",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Created for the Premium POS documentation project; no Restaurant asset files copied.",
+      "license": "Project-created documentation asset."
+    },
+    {
+      "path": "assets/fonts/NotoSansMyanmar-Bold.ttf",
+      "sha256": "0f20a5e23dfa2efd0fd98b384d8c1c6ab379810985b79e0ae4369936dec6897b",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Copied from application UI font assets; bundled files inspected under E-004/E-005.",
+      "license": "SIL Open Font License 1.1; included OFL.txt."
+    },
+    {
+      "path": "assets/fonts/NotoSansMyanmar-Regular.ttf",
+      "sha256": "9dd2bc76a822a974efce803a4b07302d14d01d5c1fa9e33a258d15a9cb513a7d",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Copied from application UI font assets; bundled files inspected under E-004/E-005.",
+      "license": "SIL Open Font License 1.1; included OFL.txt."
+    },
+    {
+      "path": "assets/fonts/NotoSansThai-Bold.ttf",
+      "sha256": "2b67cfb22337a868c6c85709e648ea30c79e0a7c530a5fc169a73d3f461d7c52",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Copied from application UI font assets; bundled files inspected under E-004/E-005.",
+      "license": "SIL Open Font License 1.1; included OFL.txt."
+    },
+    {
+      "path": "assets/fonts/NotoSansThai-Regular.ttf",
+      "sha256": "404ddfb5ed0aaa6b6ec8a85700d682978992062d67da93903967b56cbd9a4acc",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Copied from application UI font assets; bundled files inspected under E-004/E-005.",
+      "license": "SIL Open Font License 1.1; included OFL.txt."
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Copied from application UI font assets; bundled files inspected under E-004/E-005.",
+      "license": "SIL Open Font License 1.1; included OFL.txt."
+    },
+    {
+      "path": "assets/screenshots/legacy-demo-inventory.png",
+      "sha256": "03432b89d423651bc51c709ad90870944205a640e958d9c17d77bd7582fb7f9c",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Historical synthetic legacy Demo capture; visually inspected; sample profile/products matched E-011. Original capture date unknown. Caption must retain historical limitation.",
+      "license": "Existing project documentation screenshot; approved for this documentation context."
+    },
+    {
+      "path": "assets/screenshots/legacy-demo-pos.png",
+      "sha256": "e63c7e314c27a0eaf7b531ebf9c79836ba120b941306f85aa4b5369d659b6a6a",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Historical synthetic legacy Demo capture; visually inspected; sample profile/products matched E-011. Original capture date unknown. Caption must retain historical limitation.",
+      "license": "Existing project documentation screenshot; approved for this documentation context."
+    },
+    {
+      "path": "assets/stylesheets/premium.css",
+      "sha256": "f5c49c29c32926eff34d614c4aa3c5949748f00910b75b19c18ef57d1d12bb84",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Created for the Premium POS documentation project; no Restaurant asset files copied.",
+      "license": "Project-created documentation asset."
+    }
+  ]
+}

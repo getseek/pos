@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "features": [
+    {
+      "id": "PP-F001",
+      "title": "Install and launch",
+      "primary_role": "developer",
+      "source": [
+        {
+          "path": "Software/global.json",
+          "sha256": "20c93ca7812d0a9825eef71217156f95ab2f4fe5aadfeb22ebc1c24b630018d3"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-010"
+      ],
+      "target_page": "getting-started/index.md",
+      "document_status": "scaffolded",
+      "limitations": "Clean-machine installation remains unverified."
+    },
+    {
+      "id": "PP-F002",
+      "title": "Real Shop and persistent Demo",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+          "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-001",
+        "E-002"
+      ],
+      "target_page": "getting-started/workspaces.md",
+      "document_status": "scaffolded",
+      "limitations": "No reset or data-transfer journey executed."
+    },
+    {
+      "id": "PP-F003",
+      "title": "Sign in, permissions and session lock",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Security/UserCommandHandler.cs",
+          "sha256": "8adca55977efc077773864641fc14751fe11db9e145ebed6c4ffae57a8e6ce6e"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-009"
+      ],
+      "target_page": "administration/security.md",
+      "document_status": "planned",
+      "limitations": "Detailed authorization review and operator guide are D03/D04 work."
+    },
+    {
+      "id": "PP-F004",
+      "title": "Pay-now checkout and tender review",
+      "primary_role": "cashier",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
+          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/checkout.md",
+      "document_status": "planned",
+      "limitations": "External QR/bank confirmation and physical output require separate evidence."
+    },
+    {
+      "id": "PP-F005",
+      "title": "Invoices, pay later and settlements",
+      "primary_role": "cashier",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/InvoiceSettlementCommandHandler.cs",
+          "sha256": "4af241db791be01ac3151c94c4e1b431c38cc1b31a9be57ba30c6a00462f5341"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/invoices.md",
+      "document_status": "planned",
+      "limitations": "Payment/reversal behavior needs focused guide verification."
+    },
+    {
+      "id": "PP-F006",
+      "title": "Returns and refunds",
+      "primary_role": "cashier",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleReturnCommandHandler.cs",
+          "sha256": "400f01b01cefa5e6200deccd975f830e01c02196e2f8621b80ca2c2a383dc0ab"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/returns.md",
+      "document_status": "planned",
+      "limitations": "Traceable returns and quarantine promises require source review."
+    },
+    {
+      "id": "PP-F007",
+      "title": "Open/close shift and X/Z reports",
+      "primary_role": "manager",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Cash/ShiftCommandHandler.cs",
+          "sha256": "58a6ae713deb3b81fb89c28cf946c5925e2ebcf7eb9b70d93aabe66795e521b0"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/cash-and-reports.md",
+      "document_status": "planned",
+      "limitations": "Frozen report content and hardware output are not reverified."
+    },
+    {
+      "id": "PP-F008",
+      "title": "Catalog, categories and units",
+      "primary_role": "stock-controller",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
+          "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/catalog.md",
+      "document_status": "planned",
+      "limitations": "Detailed item-purpose/UOM guide pending."
+    },
+    {
+      "id": "PP-F009",
+      "title": "Receive and adjust stock",
+      "primary_role": "stock-controller",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
+          "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/inventory.md",
+      "document_status": "planned",
+      "limitations": "Lot/serial selection, reservations and stock-history claims need review."
+    },
+    {
+      "id": "PP-F010",
+      "title": "Waste and inventory loss",
+      "primary_role": "stock-controller",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
+          "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-008"
+      ],
+      "target_page": "operator/waste.md",
+      "document_status": "planned",
+      "limitations": "Waste-expense linkage and Z-report scope need behavior review."
+    },
+    {
+      "id": "PP-F011",
+      "title": "Price tiers and batch pricing",
+      "primary_role": "manager",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Pricing/SaveItemPricingCommandHandler.cs",
+          "sha256": "b4871163c0052ebf5f4af7104aa393b5eaaf90d814df3f48b38618419352827c"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/pricing.md",
+      "document_status": "planned",
+      "limitations": "Pricing waterfall and mass-valuation instructions pending."
+    },
+    {
+      "id": "PP-F012",
+      "title": "Kits, recipes and manufacturing",
+      "primary_role": "production",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Manufacturing/ManufacturingCommandHandler.cs",
+          "sha256": "fac2380fe32fea835ce4d709e9590deff87701ad97c8759f34d9fca719c87071"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/production.md",
+      "document_status": "planned",
+      "limitations": "Do not equate a displayed BOM with proven input/output posting."
+    },
+    {
+      "id": "PP-F013",
+      "title": "Customers, suppliers and imports",
+      "primary_role": "cashier",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyCommandHandler.cs",
+          "sha256": "57ee3d94fef8d3c291d472952432320962ef53edf936f820aa97c327d5d9c494"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/third-parties.md",
+      "document_status": "planned",
+      "limitations": "Protected Walk-in and duplicate-import workflows need verification."
+    },
+    {
+      "id": "PP-F014",
+      "title": "Products workbook imports",
+      "primary_role": "stock-controller",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
+          "sha256": "7005cf9814dceb88a9516c739ddd08856235a322b347355cb088f4da102a30f9"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/imports.md",
+      "document_status": "planned",
+      "limitations": "Row validation, duplicate handling and export parity pending."
+    },
+    {
+      "id": "PP-F015",
+      "title": "Teams, employment and access",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Teams/TeamCommandHandler.cs",
+          "sha256": "45693e05a5654830110faf71c68b1f4aee432fcfa47700f1e8c7722b673eb11f"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-008",
+        "E-013"
+      ],
+      "target_page": "administration/teams.md",
+      "document_status": "planned",
+      "limitations": "Historical suite is not a fresh whole-feature audit."
+    },
+    {
+      "id": "PP-F016",
+      "title": "Salary agreements, periods and payment",
+      "primary_role": "payroll",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Payroll/SalaryPeriodCommandHandler.cs",
+          "sha256": "165ee29f1148d4d1e1e6ecb6d82eda4c58f87d0b16df65c5d1c480c7d17c6b18"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-008",
+        "E-012",
+        "E-013"
+      ],
+      "target_page": "operator/salary.md",
+      "document_status": "planned",
+      "limitations": "Record-only/payable distinctions and finalized-period limits need guide review."
+    },
+    {
+      "id": "PP-F017",
+      "title": "Operating expenses and payment",
+      "primary_role": "manager",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommandHandler.cs",
+          "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-008",
+        "E-013"
+      ],
+      "target_page": "operator/expenses.md",
+      "document_status": "planned",
+      "limitations": "Optional payment, reversals and photo admission require detailed review."
+    },
+    {
+      "id": "PP-F018",
+      "title": "Settings, language and print layout",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+          "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-004",
+        "E-005"
+      ],
+      "target_page": "administration/settings.md",
+      "document_status": "planned",
+      "limitations": "Font packaging checked; rendering/hardware validation remains unverified."
+    },
+    {
+      "id": "PP-F019",
+      "title": "Receipt jobs and reprints",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Hardware/ReprintReceiptCommandHandler.cs",
+          "sha256": "386395f77100eb20cd8c527c266dbd0c87dec786591dd7a34a4e482251bdb0ba"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "administration/printing.md",
+      "document_status": "planned",
+      "limitations": "Queue acceptance does not prove physical print/drawer success."
+    },
+    {
+      "id": "PP-F020",
+      "title": "Restaurant orders and tables",
+      "primary_role": "cashier",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        }
+      ],
+      "source_review": "located",
+      "application_verification": "not-rerun",
+      "evidence_ids": [],
+      "target_page": "operator/orders.md",
+      "document_status": "planned",
+      "limitations": "Source exists; do not import Restaurant project architecture promises."
+    },
+    {
+      "id": "PP-F021",
+      "title": "DataService storage and recovery",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
+          "sha256": "6d54b232004d379aade3bc521d254c82eeccedb8197f3c9390d04c7700d30298"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-001",
+        "E-003"
+      ],
+      "target_page": "operations/application-deployment.md",
+      "document_status": "planned",
+      "limitations": "Desktop IPC cutover and service-owned migration remain unverified."
+    },
+    {
+      "id": "PP-F022",
+      "title": "Migration/schema contracts",
+      "primary_role": "developer",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
+          "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-006"
+      ],
+      "target_page": "development/schema.md",
+      "document_status": "planned",
+      "limitations": "83 scripts observed; no real database opened or migrated."
+    }
+  ]
+}

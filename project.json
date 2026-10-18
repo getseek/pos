@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "Premium POS Documentation",
+  "domain": "docpremiumpos.getseek.net",
+  "preview_address": "127.0.0.1:18181",
+  "ports": {
+    "origin": 18180,
+    "preview": 18181,
+    "admin": 18182,
+    "metrics": 18183
+  },
+  "publication_enabled": false,
+  "implementation_stage": "D02",
+  "zensical_version": "0.0.71"
+}

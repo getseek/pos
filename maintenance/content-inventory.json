@@ -1,0 +1,465 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "0a70e36352d8b2c9aa0d4ccf7754150a53df10737f9c42b2e308c7c20c02af8c",
+      "bytes": 2117,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "GETSEEK_POS_COMPLETE_DOCUMENTATION.md",
+      "sha256": "f332b5fd8c0c9c2a0243e140bd82787ee49dece90836c1c695ad73b28aa775c4",
+      "bytes": 1121752,
+      "archive_blocks": true,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/cash-receipt-test-and-repair-guide.md",
+      "sha256": "bb4e7dbf84f1a6fce5aef88acca7d658466db73eb19660beded19f9d0e4e5f56",
+      "bytes": 14601,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/cash-settings-and-receipt-design-handoff.md",
+      "sha256": "3f19ab7bf6306a325ec24519d162ee05f5abe7170addb975ebca9b0a20b71e9b",
+      "bytes": 6341,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/centralized-search-bom-implementation-audit-2026-10-13.md",
+      "sha256": "0d1ac5cafb22c5e3025a57d8516c8e30917e5b3dd5912b2e7a95938c2d6830ac",
+      "bytes": 16469,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/invoice-shipping-bank-cash-test-guide.md",
+      "sha256": "02609f06527ef7d0d7f1e74523d099960534fb47a606bdcac20eb32288adbe88",
+      "bytes": 5473,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/moving-to-a-new-windows-computer.md",
+      "sha256": "8a347cef931ff02f29a25967c850a4c90b3eedbc6350ae0946d74a778ed09fcc",
+      "bytes": 11499,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/salary-expenses-followup-execution-2026-10-14.md",
+      "sha256": "aa18bcff355389c869b90abab03a4b8ed6a4945683b4f813ebb9580d46db1260",
+      "bytes": 5226,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/salary-expenses-implementation-audit-2026-10-13.md",
+      "sha256": "52adc94b2b9358b490d0deabca9affb350190360bd7026e8c93cd62ad34d8c66",
+      "bytes": 18394,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/salary-expenses-repair-recheck-2026-10-14.md",
+      "sha256": "68b6b356ab6b9ca8607be9cba921becc5ab21128cafc1dc03020989c02d6f47f",
+      "bytes": 13994,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/step-demo-handoff.md",
+      "sha256": "dfcfe0994867ea4fd761e7d0502c1ab8cdf8254139dd159c379fadf30b8a4b90",
+      "bytes": 7190,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/unified-teams-completeness-audit-2026-10-15.md",
+      "sha256": "6bc14cd29337be471b703f715d087065c897ffd6c1df70549c8e7ab73f9af919",
+      "bytes": 12415,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "docs/unified-teams-payroll-categories-execution-2026-10-15.md",
+      "sha256": "ad59596807bb7417963fb95e8044b566ae3cbdaa9cc7b7bf4b428d548ae59636",
+      "bytes": 12741,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "Software/docs/FONT_LICENSES.md",
+      "sha256": "24eec3c643beb351b7d21bdb0b41c9589b0012695eb440a76caf1e6205df8b20",
+      "bytes": 1783,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/cash-receipt-review-and-completion-plan.md",
+      "sha256": "3583fb99661d779cbf42d2875769f00d52443157b7559a3c1f62708dbc2bcf32",
+      "bytes": 12859,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/centralized-modal-actions-implementation-plan.md",
+      "sha256": "8dd78757b16c1fdbc2fde5030f1c06b2af61ff29807fbf73fe6eea4e044998f8",
+      "bytes": 18635,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/centralized-numeric-search-and-bom-workspace-plan.md",
+      "sha256": "11440f7b9946a7fae0523b87d3b323075e1bb5f41409f6958759a92bbef3897a",
+      "bytes": 52148,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/centralized-search-bom-audit-repair-gemini-execution-plan.md",
+      "sha256": "96398d60279584b15830129f08260e005c0a756bc614cc05f746ee338cf83579",
+      "bytes": 37792,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/centralized-workspace-and-modal-ui-implementation-plan.md",
+      "sha256": "eebc812f9d3e6dda333b51a54a22261325416ff4f7d8fbf9b20457a677f8a0e8",
+      "bytes": 27854,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/current-execution-backlog-2026-10-04.md",
+      "sha256": "48495a833cb4803aa7a861ca7fdff6a56a90c24f45cde65aa8ad2d373b63d148",
+      "bytes": 26917,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/current-state-review-and-recommendations-2026-09-26.md",
+      "sha256": "a4c9108944756b0cf8c3a5470bc802cd137fdf2f72780e260d252fdeadf284e0",
+      "bytes": 11880,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/demo-default-dataset-and-diagnostics-plan.md",
+      "sha256": "7105307120a6fbbf6ed527450c6b94b53811f876a7f18b61f346e319aa84ce7d",
+      "bytes": 24083,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/dual-database-demo-and-selective-reset-implementation-plan.md",
+      "sha256": "685a999ae96fd7781723cd7939b78589f296a409912c4f788507ec0d86882851",
+      "bytes": 20234,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/future-build-safety-and-architecture-hardening-plan.md",
+      "sha256": "f48049be94341ca5ced289cfffa9b24a00bd18b837e853eee75caffadbc2f0d4",
+      "bytes": 5273,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/getseek-remaining-work-gpt-6-luna-execution-plan.md",
+      "sha256": "e65d3396c2c6f1626a9abf30c8780878a567d95e35386c5760a2efd396116969",
+      "bytes": 162057,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/inventory-and-third-party-import-completion-plan.md",
+      "sha256": "7d53a11a476e47fa86fba8e7304df6cf638f700c48c649eb639fa0e1ebed8a8d",
+      "bytes": 45057,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/inventory-lot-serial-editor-implementation-plan.md",
+      "sha256": "9ede42ba378ebafbc964ba2f8b6a8b2afb82cbab880d247259c005e84cc4cbae",
+      "bytes": 10565,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/inventory-product-master-pricing-implementation-plan.md",
+      "sha256": "88f71a1093a949c0b4312fd55845478204019f3b4ec712713cfef53ed92fb41a",
+      "bytes": 47065,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/inventory-shared-two-line-workspace-execution-plan.md",
+      "sha256": "a745aca5a234036c0e8aa43e6b6911a69692b45fe5d83c847bcc51d0defaef08",
+      "bytes": 15889,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/invoice-register-audit-and-remediation-plan.md",
+      "sha256": "d1280b664c3dc33166e025fa539485f0f63c5dc69d328e6660e984b7440680fb",
+      "bytes": 33174,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/invoice-shipping-bank-cash-execution-plan.md",
+      "sha256": "32306a3bccf651345ec9cd41de89d83eaeeb3002d38473bd400bcc1eda712a5d",
+      "bytes": 32445,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/invoices-pay-later-and-returns-implementation-plan.md",
+      "sha256": "8262691787173710fb6c510060e9d70ddb3bd1a32c4e7336261b975680203cfa",
+      "bytes": 46924,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/item-stock-history-implementation-plan.md",
+      "sha256": "4105d25cf0dbb3f67f0cc61205b793dbff0c8e5061a9774fe29f27d4247e0a4c",
+      "bytes": 30591,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/pos-workspaces-controls-and-pricing-execution-plan.md",
+      "sha256": "98f927bef8147e7c675d152f541572096355ca7450817f7200b964a772942c07",
+      "bytes": 49677,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/pos-workspaces-controls-and-pricing-implementation-plan.md",
+      "sha256": "4d5e50b523864de4f1e8b776aaeb01954deb585f510d41fadb1f141583ed4674",
+      "bytes": 40950,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/premium-pos-settings-product-pricing-masterdata-execution-plan.md",
+      "sha256": "76ae93e69250959913ddc1d47cc280582e8b9a4e4bca268f083014c6554c4147",
+      "bytes": 25574,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/salary-and-expenses-implementation-plan.md",
+      "sha256": "69713ab2dbdbd3e7af60cbdf766512f1d2b4c396f2818d1297098f6072607816",
+      "bytes": 93336,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/salary-expenses-audit-repair-gemini-execution-plan.md",
+      "sha256": "e70ef6441dce964758bc2f0f8838561302aaa1c22f85e4034372aed1a5d7cefe",
+      "bytes": 94188,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/security-inventory-pricing-remediation-implementation-plan.md",
+      "sha256": "f5b3e0740f19f3cac94f2b6e91f651e91e63ccfc1e2c201476075101271b5807",
+      "bytes": 23713,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/shared-data-table-architecture-implementation-plan.md",
+      "sha256": "623d8e66d03fac8036905381b0c2903f6ec5c53d88d3cdef2c7a77d84aae855d",
+      "bytes": 30184,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/shared-table-selection-and-lifecycle-status-implementation-plan.md",
+      "sha256": "d8d7986c9a4657447812102a46ffd060fd521a8f4ecb25319691f34d386b211c",
+      "bytes": 17091,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/storage-security-and-export-only-implementation-plan.md",
+      "sha256": "81b9fa05bb9be05a139103dfd9ad38e62e0585085c7f45331a54e03f14b88eaa",
+      "bytes": 58605,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/third-parties-default-customer-and-table-implementation-plan.md",
+      "sha256": "d4f0cc522cc2b475eb66dd73d80f711fc6885c43e0270a60dc5386a32ba05c6a",
+      "bytes": 27755,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/third-parties-inline-edit-and-shared-table-enhancement-plan.md",
+      "sha256": "256d0b86fff779adaffb0ef085a1a24b3a79ee741c30095b724557285c1ad803",
+      "bytes": 27091,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/unified-teams-payroll-month-and-expense-categories-gemini-plan.md",
+      "sha256": "9c81df1e7d6a4fdd9ffd9c05db1aaba1a567a3b6dd97f89affddd126c9f5c45f",
+      "bytes": 52037,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    },
+    {
+      "path": "plans/workspace-popup-placement-implementation-plan.md",
+      "sha256": "6bbaedfd687537a3343184af497ee5dd00bc845d15ebb3b86bfa914f8cd36c09",
+      "bytes": 23635,
+      "archive_blocks": false,
+      "disposition": "review-input; never publish wholesale"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/screenshots/activity_1024x768.png",
+      "sha256": "b7263fe1c1b20f1fd0e22198580b1a719ebede79de48cadddbe944b8a9955729",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/activity_1366x820.png",
+      "sha256": "411e6243ba09ff8fc7afe2bc2aaa0e66c354ce1f6e348aa7259cdcb1cd56d7e7",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/inventory_1024x768.png",
+      "sha256": "56904c4e2867b0dbdb2cae71afc43cc6af2b78254db5c6d42086c59d5b44f385",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/inventory_1366x820.png",
+      "sha256": "03432b89d423651bc51c709ad90870944205a640e958d9c17d77bd7582fb7f9c",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/lock_1024x768.png",
+      "sha256": "5b2cf9027fed4ea6b5519c92b7ad72a3f36bdf9561186c8c4bb4182fd5217a54",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/lock_1366x820.png",
+      "sha256": "5f003ac48e8266737346a0b16c9b9b7ae92e002e5f4fcc5d47ee30f552497b8f",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/manual_bank_1024x768.png",
+      "sha256": "2d87a286faf3444c4fc8d328a0c37827b8d61b08ff4830a97807c552d51405c2",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/manual_bank_1366x820.png",
+      "sha256": "3ec425323ba59216f8f9612d95613decb251533fb30be603cdd4ae0b0e181d05",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/manual_qr_1024x768.png",
+      "sha256": "a2c574f16f0553b8331330fa001918e1a37ff0b2edf166735f31059a1641d92b",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/manual_qr_1366x820.png",
+      "sha256": "d6395f9d0d2ce24a46912aaa7dce80690b9825ac0263bb592558c31d9461df28",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/pos_1024x768.png",
+      "sha256": "66d0824c6c3296a9ea41e1a9a6cbb2ce7945f44faee93d66794979bfe41276c4",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/pos_1366x820.png",
+      "sha256": "e63c7e314c27a0eaf7b531ebf9c79836ba120b941306f85aa4b5369d659b6a6a",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/report_1024x768.png",
+      "sha256": "e1741281894b447ebea6d5ba5c21d82abb854fdc8474f9b0b25925507275c60b",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/report_1366x820.png",
+      "sha256": "2cd32561ebec7bf4a883e33764cb81917f75d76d862e05880ec587f2cdc09a58",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230743.png",
+      "sha256": "fa0dc416eb0b1b91d7c4bc4751c6005adf415e0a7371d4b3010bfa12868e4701",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230749.png",
+      "sha256": "3bbb3d317bfd57c8647090b3611f4e6a2af93a32ee64228925c0cd68f8f42998",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230755.png",
+      "sha256": "824c6c07cb1e1f6f38859420f9f4b54e5819f8cf8a4be3b40967dafde8ed8ad8",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230803.png",
+      "sha256": "8a5c4197120d98b237f13a554f6829838445d6026a72d7b33a4fd616138082b9",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230808.png",
+      "sha256": "755e2b480eeb6336a0d6f5c7afafe7b4b257a0c99cbefed1adab5a5509da20aa",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230816.png",
+      "sha256": "ca3eeea2a73a503ccdcd60264f015e141abd4eb93b74f79fd03aa3854973b9c7",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/Screenshot 2026-09-17 230825.png",
+      "sha256": "20bdcb6bf45758be49dc366af95fd6f36cd400140b107c5112ba1241c0d4b725",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/settings_1024x768.png",
+      "sha256": "74bd5ca05302b4e2f6f036d8d0cc60f625ad13fd8766ff6f2bc857bc39533227",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/settings_1366x820.png",
+      "sha256": "b546ecd4cf63532224b21cf08f049ff6e87cdd03bfaad1b1d02289c110a97b9b",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/startup_error_1024x768.png",
+      "sha256": "7f8719f1e710040b4dc21fd4d153af2325147478e46aa142613fa1704b11ee1b",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/startup_error_1366x820.png",
+      "sha256": "d7fb16c6652f6cd97e75dfd3f558613774ad78d3982fc0fd7f8f830a8627e4c4",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/teams_1024x768.png",
+      "sha256": "7f8d088325e6f240d2a433bff4a121587d74ecd7b13367702314db97c260b300",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    },
+    {
+      "path": "docs/screenshots/teams_1366x820.png",
+      "sha256": "88eeda7de1c94a019fa4bbf7c12e57024f6ae81180d1d4c44e2e80d46847f743",
+      "disposition": "unreviewed; not publishable until approved in assets registry"
+    }
+  ]
+}

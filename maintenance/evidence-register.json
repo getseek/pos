@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "historical_test_total": 1228,
+  "application_tests_rerun": false,
+  "evidence": [
+    {
+      "id": "E-001",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+      "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159",
+      "reviewed_on": "2026-10-18",
+      "claim": "Separate LocalAppData Real and persistent Demo paths exist; this does not certify a migration or reset journey.",
+      "symbols": [
+        "GetDefaultDatabasePath",
+        "GetDefaultDemoDatabasePath",
+        "ValidateSeparateDemoDatabasePath"
+      ]
+    },
+    {
+      "id": "E-002",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+      "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e",
+      "reviewed_on": "2026-10-18",
+      "claim": "Explicit --real-workspace/--demo-workspace selection is distinct from the legacy --demo preview."
+    },
+    {
+      "id": "E-003",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
+      "sha256": "6d54b232004d379aade3bc521d254c82eeccedb8197f3c9390d04c7700d30298",
+      "reviewed_on": "2026-10-18",
+      "claim": "DataService uses separate ProgramData Private paths; installing it does not demonstrate desktop IPC cutover."
+    },
+    {
+      "id": "E-004",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.UI.Components/GetSeek.UI.Components.csproj",
+      "sha256": "89314e6bc79115c03dad5a53be65c3a4a2350823f120bf0675293077c56e0992",
+      "reviewed_on": "2026-10-18",
+      "claim": "TTF resources and font license are declared; OS rendering remains unverified."
+    },
+    {
+      "id": "E-005",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.Infrastructure/GetSeek.Infrastructure.csproj",
+      "sha256": "57685fed92ac836f8eb4036510839d5cb22f56df1d4c117056f67ce9f47e388e",
+      "reviewed_on": "2026-10-18",
+      "claim": "Print-font content has copy-to-output and copy-to-publish rules."
+    },
+    {
+      "id": "E-006",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
+      "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498",
+      "reviewed_on": "2026-10-18",
+      "claim": "Current migration registration can be inspected alongside SQL files; no live database was opened."
+    },
+    {
+      "id": "E-007",
+      "kind": "reported",
+      "path": "GETSEEK_POS_COMPLETE_DOCUMENTATION.md",
+      "sha256": "f332b5fd8c0c9c2a0243e140bd82787ee49dece90836c1c695ad73b28aa775c4",
+      "reviewed_on": "2026-10-18",
+      "claim": "Mixed current and historical claims; older open-audit/1,203-test wording conflicts with the repair audit."
+    },
+    {
+      "id": "E-008",
+      "kind": "reported",
+      "path": "docs/unified-teams-completeness-audit-2026-10-15.md",
+      "sha256": "6bc14cd29337be471b703f715d087065c897ffd6c1df70549c8e7ab73f9af919",
+      "reviewed_on": "2026-10-18",
+      "claim": "Repair report claims A01–A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
+    },
+    {
+      "id": "E-009",
+      "kind": "source-inspected",
+      "path": "Software/tests/GetSeek.IntegrationTests/GetSeek.IntegrationTests.csproj",
+      "sha256": "74984566219e3be0c0ffd842ff18a1dbf32b9c6c37b3d77131cd2955274eb202",
+      "reviewed_on": "2026-10-18",
+      "claim": "Three historical Compile Remove exclusions remain in the test project."
+    },
+    {
+      "id": "E-010",
+      "kind": "source-inspected",
+      "path": "Software/global.json",
+      "sha256": "20c93ca7812d0a9825eef71217156f95ab2f4fe5aadfeb22ebc1c24b630018d3",
+      "reviewed_on": "2026-10-18",
+      "claim": "SDK policy: 10.0.100 minimum feature selection, latestFeature roll-forward, no prerelease."
+    },
+    {
+      "id": "E-011",
+      "kind": "source-inspected",
+      "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+      "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625",
+      "reviewed_on": "2026-10-18",
+      "claim": "Historical screenshot sample names/products match source defaults and CreateDemo data; screenshots do not prove current behavior.",
+      "symbols": [
+        "CreateDemo",
+        "Jelly Grande",
+        "Beef Crowich"
+      ]
+    },
+    {
+      "id": "E-012",
+      "kind": "historical-automated",
+      "path": "Software/tests/GetSeek.UnitTests/TestResults/completeness-repaired-final_net10.0_20261015184430.trx",
+      "sha256": "19093e549495c0ddee4b6f36fa7d64038f2dbdec0e4c941c1bf6ccf926b357ec",
+      "reviewed_on": "2026-10-18",
+      "claim": "Persisted TRX parsed; not rerun during this documentation stage.",
+      "counters": {
+        "total": "251",
+        "executed": "251",
+        "passed": "251",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-15T18:44:28.5262686+07:00",
+        "queuing": "2026-10-15T18:44:28.5262688+07:00",
+        "start": "2026-10-15T18:44:28.0436185+07:00",
+        "finish": "2026-10-15T18:44:30.2780732+07:00"
+      },
+      "assembly": "GetSeek.UnitTests"
+    },
+    {
+      "id": "E-013",
+      "kind": "historical-automated",
+      "path": "Software/tests/GetSeek.IntegrationTests/TestResults/completeness-repaired-final_net10.0_20261015185038.trx",
+      "sha256": "d70a051b77ed3639d10eb50a0b2ad2d16b08abd0404e669cc259af60f6496ec3",
+      "reviewed_on": "2026-10-18",
+      "claim": "Persisted TRX parsed; not rerun during this documentation stage.",
+      "counters": {
+        "total": "976",
+        "executed": "976",
+        "passed": "976",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-15T18:44:32.5212784+07:00",
+        "queuing": "2026-10-15T18:44:32.5212788+07:00",
+        "start": "2026-10-15T18:44:30.7195723+07:00",
+        "finish": "2026-10-15T18:50:38.3162226+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-014",
+      "kind": "historical-automated",
+      "path": "Software/tests/GetSeek.AcceptanceTests/TestResults/completeness-repaired-final_net10.0_20261015185040.trx",
+      "sha256": "4a0b71f95dbbec5a82065ad2795e9f88b41d54ec0fd60a74392b713712ab004a",
+      "reviewed_on": "2026-10-18",
+      "claim": "Persisted TRX parsed; not rerun during this documentation stage.",
+      "counters": {
+        "total": "1",
+        "executed": "1",
+        "passed": "1",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-15T18:50:39.9980239+07:00",
+        "queuing": "2026-10-15T18:50:39.9980244+07:00",
+        "start": "2026-10-15T18:50:38.7005927+07:00",
+        "finish": "2026-10-15T18:50:40.0017446+07:00"
+      },
+      "assembly": "GetSeek.AcceptanceTests"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Project-only dependencies and generated state
+.venv/
+.build/
+.cache/
+.premium-*.toml
+__pycache__/
+*.pyc
+
+# Local credentials, configuration and unpublished material
+.env
+.env.*
+*.local.*
+*.pem
+*.key
+maintenance/private-review/
+maintenance/snapshots/
+
+# No operational data or logs in Git
+*.db
+*.db-wal
+*.db-shm
+*.sqlite*
+*.trx
+*.log
+*.log.err
+Thumbs.db
+desktop.ini

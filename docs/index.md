@@ -20,6 +20,10 @@ Understand the work behind the screen. Find your starting point for selling, man
 !!! info "Local documentation foundation"
     This edition establishes the documentation structure and checked source/evidence records. It includes orientation guides; the complete task manuals are the next implementation stage. Feature status distinguishes inspected source from tested behavior.
 
+## Review the code and connections
+
+The [code review atlas](review/index.md) maps 25 workflows, command permissions and handlers, table relationships, UI bindings and failure codes to source locations. Use [review findings and change choices](review/decisions.md) to compare proposals and export a step-by-step review draft. Source maps distinguish observed code from runtime and hardware acceptance.
+
 ## Choose your work
 
 <div class="grid cards" markdown>

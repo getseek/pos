@@ -12,3 +12,23 @@ Reviewed 2026-10-18. This is Premium's single active findings register; historic
 | PP-DOC-006 | Three historical test files are excluded from compilation. | Disclosed; historical all-pass total does not include these files. Do not imply all source tests executed. | E-009 |
 | PP-DOC-007 | No Git remote, public DNS or Premium runtime identity established. | Deferred to later phases; no remote, tunnel, task or public deployment is created in D02. | D00 snapshot; approved plan |
 | PP-DOC-008 | Historical screenshots differ from current UI and cannot prove a workflow. | Publish only inspected synthetic Demo captures, visibly dated/limited; inventory remains outside publication. | E-011; future assets registry |
+
+## Source review extension — 18 October 2026
+
+`review-decisions.json` is the canonical structured detail for the PP-REV entries below. The website decision page is generated from it; all items remain OPEN proposals. These entries extend this single register rather than superseding the PP-DOC findings. No application fix or fresh runtime test was performed.
+
+| ID | Finding | Classification / status |
+| --- | --- | --- |
+| PP-REV-001 | Contradictory workspace flags select Demo implicitly | source-observed behavior · OPEN · P2 |
+| PP-REV-002 | Pre-transaction pipeline failures use a different error path | source-observed contract gap · OPEN · P2 |
+| PP-REV-003 | Worker-level failures can repeat without a diagnostic | source-observed observability gap · OPEN · P2 |
+| PP-REV-004 | DataService contracts do not establish Desktop cutover | implementation boundary / incomplete endpoints · OPEN · P1 review gate |
+| PP-REV-005 | Physical output remains a separate acceptance gate | verification gap / operator decision · OPEN · P1 review gate |
+| PP-REV-006 | Historical passing tests omit excluded files | verification gap · OPEN · P2 |
+| PP-REV-007 | Recovery executable is a placeholder | source-observed incomplete implementation · OPEN · P1 review gate |
+
+Source evidence, options, implementation steps, acceptance checks and rollback considerations: `review-decisions.json`. The existing PP-DOC-003 and PP-DOC-006 are expanded by PP-REV-004 and PP-REV-006.
+
+| PP-REV-008 | Kitchen ticket producers have no bundled worker claim route. | Source-observed connection gap · OPEN · P1 review gate |
+
+Source-check correction: the initial atlas draft incorrectly described expense attachment storage as filesystem-based. The corrected pages document preparation/read services and transactional versioned SQLite BLOB storage, with exact source references in review-rules.json. Current Cafe counter checkout is separated from backend/legacy kitchen handlers.

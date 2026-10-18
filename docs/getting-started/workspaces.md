@@ -35,6 +35,8 @@ flowchart TD
 3. Verify the workspace shown by the application before entering transactions or changing settings.
 4. Use synthetic Demo data for documentation images and demonstrations.
 
+Supply one explicit workspace selector. If both `--real-workspace` and `--demo-workspace` are provided, the current App code selects persistent Demo; this ambiguity is tracked in [PP-REV-001](../review/decisions.md#pp-rev-001).
+
 Persistent Demo is intended to remain independent of Real Shop. The current bootstrap explicitly checks that its path does not resolve to the Real database. Source-level separation is not a newly performed reset/migration acceptance test.
 
 ## DataService has different paths

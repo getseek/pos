@@ -62,7 +62,7 @@ class PublicationValidationTests(unittest.TestCase):
 
     def test_source_registry_consistency(self):
         errors,counts=validate.validate_source()
-        self.assertEqual(errors,[]);self.assertEqual(counts['features'],22)
+        self.assertEqual(errors,[]);self.assertEqual(counts['features'],25)
 
     def _check_bad_output(self,relative,addition,expected):
         with tempfile.TemporaryDirectory(dir=ROOT/'.build') as directory:
@@ -85,12 +85,22 @@ class PublicationValidationTests(unittest.TestCase):
     def test_modified_reviewed_asset_rejected(self):
         self._check_bad_output('assets/brand/premium-mark.svg','<!-- unexpected change -->','asset not copied intact')
 
+    def test_mermaid_preloaded_before_theme(self):
+        page=validate.HTMLPage((ROOT/'.build/site/index.html').read_text(encoding='utf-8'))
+        scripts=[url for tag,key,url in page.refs if tag=='script' and key=='src']
+        vendor=next(i for i,url in enumerate(scripts) if 'mermaid-11.17.2' in url)
+        theme=next(i for i,url in enumerate(scripts) if 'bundle.' in url)
+        self.assertLess(vendor,theme)
+
+    def test_invalid_search_index_rejected(self):
+        self._check_bad_output('search.json','not-json','invalid search index')
+
     def test_candidate_failure_preserves_previous_local_artifact(self):
         # A fresh independent worktree fixture can build with this interpreter's
         # dependencies. It has no application inputs or shared preview process.
         with tempfile.TemporaryDirectory(dir=ROOT/'.build') as directory:
             fixture=Path(directory)
-            for name in ('docs','maintenance','scripts'):
+            for name in ('docs','maintenance','scripts','overrides'):
                 shutil.copytree(ROOT/name,fixture/name,ignore=shutil.ignore_patterns('snapshots','__pycache__','private-review'))
             for name in ('zensical.toml','project.json','requirements.lock'):
                 shutil.copyfile(ROOT/name,fixture/name)

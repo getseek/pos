@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "rules": [
+    {
+      "id": "PP-RULE-001",
+      "title": "Checkout payment options",
+      "statement": "The inspected PlaceOrderAsync handles cash and cashier-confirmed static QR/bank transfers. It explicitly rejects QRIS gateway checkout and unallocated Split Bill. A cashier-confirmed transfer is not provider confirmation.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 5485,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 5539,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-002",
+      "title": "Deferred invoice eligibility",
+      "statement": "The common IssueAsync path requires an active named customer for deferred settlement. It also validates tender amounts/currencies and rejects an empty cart; TakePaymentCommand delegates to that shared helper.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
+          "line": 211,
+          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
+          "line": 254,
+          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-003",
+      "title": "Current Cafe service style",
+      "statement": "SqliteStoreProfileReader normalizes saved Table Service to Counter Service; the view-model toggle states Counter Service is fixed. Current Cafe checkout must be distinguished from legacy/backend order and kitchen queue code.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
+          "line": 77,
+          "sha256": "e48defcf3d4450bff617f3771024da2dd903704d0d040c47b461c90faaf54a39"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 7997,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-004",
+      "title": "Expense photo preparation and storage",
+      "statement": "Photo preparation accepts JPEG/PNG signatures, limits input to 10 MiB and decoded size to 12 megapixels, resizes the longest side to at most 1600 px, and limits prepared output to 2 MiB. Prepared bytes are validated and stored in expense_attachments.image_data with attachment version/replacement metadata.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Attachments/SqliteExpenseAttachmentService.cs",
+          "line": 14,
+          "sha256": "e3594c7a2960763372c80fbb196c2a89b7b726f674d704915e4dd30c46bd9cff"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Attachments/SqliteExpenseAttachmentService.cs",
+          "line": 78,
+          "sha256": "e3594c7a2960763372c80fbb196c2a89b7b726f674d704915e4dd30c46bd9cff"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommandHandler.cs",
+          "line": 630,
+          "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommandHandler.cs",
+          "line": 743,
+          "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-005",
+      "title": "Non-cash waste expense payments",
+      "statement": "PayExpenseCommand validates revision/cancellation and explicitly rejects a non-cash expense with NON_CASH_EXPENSE_CANNOT_BE_PAID. Recording inventory waste does not imply a payable cash expense.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpensePaymentCommandHandler.cs",
+          "line": 94,
+          "sha256": "b94af6c76f600e549a8402837b32a63895ffdc1ed92a821373b0c0c2dc577a97"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-006",
+      "title": "Advance payment checks",
+      "statement": "PayAdvanceCommand requires person/account IDs, a positive amount and reason. It checks that the person exists, is enabled and matches ExpectedPersonRevision before continuing to account validation.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Payroll/SalaryPaymentCommandHandler.cs",
+          "line": 25,
+          "sha256": "8d8b14e58041325dae5fbe3a1cdc4cc49e502bd1bbf31c9100f517d542e3fd40"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-007",
+      "title": "Settings authority and monetary identity",
+      "statement": "ApplySettingsCommandHandler requires a live active Admin role. It blocks changing currency/monetary precision when the checked monetary records exist, and writes tax_mode=2 for the exclusive-tax policy. TaxMode in the command shape is not evidence of a freely selectable policy.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+          "line": 25,
+          "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+          "line": 42,
+          "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+          "line": 76,
+          "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-008",
+      "title": "Inventory loss delegates to adjustment",
+      "statement": "RecordInventoryLossCommand validates positive quantity, allowed reason and explanation, then calls InventoryCommandHandler with a negative AdjustStockCommand sharing the UnitOfWork. The loss result is read from inventory_loss_records for that movement.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
+          "line": 10,
+          "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-009",
+      "title": "Kitchen queue is not physical output",
+      "statement": "KitchenTicket and KitchenTicketCancel are produced by order handlers. The bundled worker claim SQL selects only receipt, drawer and shelf-label jobs. The missing consumer is PP-REV-008.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "line": 194,
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "line": 280,
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 223,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    }
+  ]
+}

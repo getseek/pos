@@ -13,6 +13,8 @@ features: ["PP-F004", "PP-F005", "PP-F006", "PP-F007", "PP-F008", "PP-F009", "PP
 
 Use the business task to choose a starting point. The source contains entry points for the areas below; the detailed step-by-step manuals and journey checks remain D03 work. Review the [feature evidence](../reference/feature-status.md) before treating a capability as accepted.
 
+The [complete source review atlas](../review/index.md) now expands these workflow groups with command routing, exact source locations, direct table effects, failure codes and proposed change choices. These review maps do not replace the still-pending operator task manuals.
+
 ## Cashier: sale to closing
 
 ```mermaid
@@ -30,7 +32,7 @@ flowchart LR
 | Invoice or pay later | PP-F005 | Issuing an invoice versus recording payment and remaining due. |
 | Return/refund | PP-F006 | Original sale linkage, eligibility, stock effect and money effect. |
 | Drawer/shift close | PP-F007 | Active shift, blind count, discrepancy authority and frozen Z-report. |
-| Orders and tables | PP-F020 | Actual Premium order implementation; unrelated Restaurant design plans are not evidence. |
+| Orders and tables | PP-F020 | Current Cafe is pay-now Counter Service; backend/legacy order handlers and unconsumed kitchen jobs are mapped separately. |
 
 Before retrying a payment or output action, inspect the recorded outcome and its identifiers. A timeout, queued job or displayed receipt does not establish an external bank transfer or physical print result.
 

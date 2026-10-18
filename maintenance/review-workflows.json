@@ -1,0 +1,901 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "workflows": [
+    {
+      "id": "PP-MAP-LAUNCH",
+      "slug": "launch",
+      "title": "Launch and startup",
+      "features": [
+        "PP-F001"
+      ],
+      "commands": [],
+      "steps": [
+        "Select workspace flags",
+        "Create initial window",
+        "Open selected database",
+        "Run pending migrations",
+        "Load store, readers and session",
+        "Show startup error or ready workspace"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+          "line": 1,
+          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+          "line": 1,
+          "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-WORKSPACES",
+      "slug": "workspaces",
+      "title": "Workspace isolation and reset",
+      "features": [
+        "PP-F002"
+      ],
+      "commands": [],
+      "steps": [
+        "Identify Real, persistent Demo or preview",
+        "Validate separate path and classification",
+        "Authenticate an authorized operator",
+        "Choose reset or Demo load explicitly",
+        "Perform dedicated reset transaction",
+        "Reopen and verify the selected workspace"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+          "line": 1,
+          "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Resetting/SqliteRealWorkspaceResetService.cs",
+          "line": 1,
+          "sha256": "4124e8ec1788677f1c9ad6cfbe58aa34cf1bca19cad78617578f7fb0270a7334"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-SECURITY",
+      "slug": "security",
+      "title": "Identity, access and first run",
+      "features": [
+        "PP-F003"
+      ],
+      "commands": [
+        "CreateUserCommand",
+        "CreateUserWithPersonCommand",
+        "ProvisionInitialAdminCommand",
+        "SetUserPermissionOverrideCommand",
+        "UpdateUserQuickPinCommand"
+      ],
+      "steps": [
+        "First run: provision the first administrator",
+        "Otherwise select operator and authenticate PIN",
+        "Apply lockout and session state",
+        "Resolve live permissions for an action",
+        "Run authorized command or deny",
+        "Lock or expire session"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Security/UserCommandHandler.cs",
+          "line": 1,
+          "sha256": "8adca55977efc077773864641fc14751fe11db9e145ebed6c4ffae57a8e6ce6e"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Security/SqliteSessionUnlockValidator.cs",
+          "line": 1,
+          "sha256": "6df07090aeb0efb42fadf8d34fe5d7904fe126deea48a3d826278ced6c281c13"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-CHECKOUT",
+      "slug": "checkout",
+      "title": "Cart and checkout",
+      "features": [
+        "PP-F004"
+      ],
+      "commands": [
+        "AcceptStaleCartPriceReviewCommand",
+        "AddSaleLineCommand",
+        "IssueDeferredInvoiceCommand",
+        "IssueOrderInvoiceCommand",
+        "PreviewOrderInvoiceCommand",
+        "RefundSaleCommand",
+        "ReviewStaleCartPricesCommand",
+        "SelectLotForCartLineCommand",
+        "SelectSerialForCartLineCommand",
+        "TakePaymentCommand",
+        "VoidSaleLineCommand"
+      ],
+      "steps": [
+        "Choose customer, item, quantity and unit",
+        "Resolve price, conversion and stock allocation",
+        "Review stale price or authorized override",
+        "Choose immediate payment, deferred invoice or order invoice",
+        "Validate and commit invoice, ledger and stock effects",
+        "Refresh read model and inspect queued output"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
+          "line": 1,
+          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-INVOICES",
+      "slug": "invoices",
+      "title": "Invoice collection and commercial lifecycle",
+      "features": [
+        "PP-F005"
+      ],
+      "commands": [
+        "CancelInvoiceRemainderCommand",
+        "CancelReturnShipmentRequestCommand",
+        "QueueCommercialDocumentCommand",
+        "ReceiveInvoicePaymentCommand",
+        "ReceiveReturnShipmentCommand",
+        "RequestReturnShipmentCommand",
+        "SavePurchaseDraftCommand"
+      ],
+      "steps": [
+        "Select the existing commercial document",
+        "Inspect remaining balance or draft state",
+        "Choose collection, cancellation or return-shipment action",
+        "Check permission, state and exact amount",
+        "Commit the command-specific records",
+        "Read the updated balance or lifecycle outcome"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/InvoiceSettlementCommandHandler.cs",
+          "line": 1,
+          "sha256": "4af241db791be01ac3151c94c4e1b431c38cc1b31a9be57ba30c6a00462f5341"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Sales/CommercialLifecycleCommands.cs",
+          "line": 1,
+          "sha256": "f39908b066705e8d4e12af0001403305fd30ea8d5342d664c0536df30afa5583"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-RETURNS",
+      "slug": "returns",
+      "title": "Customer returns and inspection",
+      "features": [
+        "PP-F006"
+      ],
+      "commands": [
+        "ProcessReturnCommand",
+        "ResolveInspectionCommand"
+      ],
+      "steps": [
+        "Locate original sale and eligible lines",
+        "Select quantity, reason and settlement choice",
+        "Check prior returns and original financial snapshots",
+        "Commit return and command-specific stock or refund effects",
+        "Resolve inspection where required",
+        "Read the return and remaining eligibility"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SaleReturnCommandHandler.cs",
+          "line": 1,
+          "sha256": "400f01b01cefa5e6200deccd975f830e01c02196e2f8621b80ca2c2a383dc0ab"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-CASH",
+      "slug": "cash",
+      "title": "Shifts, cash loss and reports",
+      "features": [
+        "PP-F007"
+      ],
+      "commands": [
+        "CloseShiftCommand",
+        "CorrectCashLossRecordCommand",
+        "OpenShiftCommand",
+        "RecordCashMovementCommand",
+        "RecordKnownCashLossCommand"
+      ],
+      "steps": [
+        "Open an authorized shift",
+        "Record cash movements and known losses",
+        "Review activity and X-report projection",
+        "Count and submit close command",
+        "Validate discrepancy authority",
+        "Freeze Z-report snapshot and inspect closing result"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Cash/ShiftCommandHandler.cs",
+          "line": 1,
+          "sha256": "58a6ae713deb3b81fb89c28cf946c5925e2ebcf7eb9b70d93aabe66795e521b0"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Cash/CashLossCommandHandler.cs",
+          "line": 1,
+          "sha256": "92cfe63f7cfb11b436e2414a56bcefa7dc628b10b156b2660808ba06341a2225"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-CATALOG",
+      "slug": "catalog",
+      "title": "Products, categories and units",
+      "features": [
+        "PP-F008"
+      ],
+      "commands": [
+        "CreateCategoryCommand",
+        "CreateProductCommand",
+        "CreateSupplierCommand",
+        "CreateUomCommand",
+        "DeactivateCategoryCommand",
+        "DeactivateProductCommand",
+        "DeactivateSupplierCommand",
+        "DeactivateUomCommand",
+        "DeleteCategoryCommand",
+        "DeleteUomCommand",
+        "ReactivateCategoryCommand",
+        "ReactivateUomCommand",
+        "SaveProductConfigurationCommand",
+        "SetProductStatusCommand",
+        "UpdateCategoryCommand",
+        "UpdateProductCommand",
+        "UpdateStoreUomPreferenceCommand",
+        "UpdateSupplierCommand",
+        "UpdateUomCommand"
+      ],
+      "steps": [
+        "Choose product, category, supplier or unit action",
+        "Validate identity, lifecycle and dimensional rules",
+        "Save a product configuration or registry command",
+        "Reject referenced or incompatible changes",
+        "Commit catalog records",
+        "Reload catalog projections and affected choices"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
+          "line": 1,
+          "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-INVENTORY",
+      "slug": "inventory",
+      "title": "Stock, locations, lots and serials",
+      "features": [
+        "PP-F009"
+      ],
+      "commands": [
+        "AdjustStockCommand",
+        "CreateFacilityCommand",
+        "CreateLocationBinCommand",
+        "DeactivateFacilityCommand",
+        "DeactivateLocationBinCommand",
+        "ReceiveStockCommand",
+        "RemoveInventorySerialsCommand",
+        "RemoveItemLocationEligibilityCommand",
+        "SetItemLocationEligibilityCommand",
+        "SetLotStockQuantityCommand",
+        "UpdateFacilityCommand",
+        "UpdateLocationBinCommand",
+        "UpdateLotExpiryCommand"
+      ],
+      "steps": [
+        "Select item and intake or adjustment action",
+        "Specify unit, location and tracking evidence",
+        "Validate conversion and lot or serial policy",
+        "Commit the command-specific movement or traceability change",
+        "Inspect quantity and allocation projections",
+        "Review exceptions before repeating"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
+          "line": 1,
+          "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryTraceabilityCommands.cs",
+          "line": 1,
+          "sha256": "77d337938bd2bd60b5aced45b211793f8b481a2569c9aad34f63130c2a3c503a"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-WASTE",
+      "slug": "waste",
+      "title": "Inventory loss and waste",
+      "features": [
+        "PP-F010"
+      ],
+      "commands": [
+        "RecordInventoryLossCommand"
+      ],
+      "steps": [
+        "Select lost stock, quantity and reason",
+        "Validate tracking and cost snapshot",
+        "Submit authorized loss command",
+        "Commit loss movement and configured financial effects",
+        "Read loss and stock registers",
+        "Review correction requirements without deleting history"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
+          "line": 1,
+          "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-PRICING",
+      "slug": "pricing",
+      "title": "Pricing, offers, labels and mass runs",
+      "features": [
+        "PP-F011"
+      ],
+      "commands": [
+        "ApplyBatchPricingCommand",
+        "CreatePricingMassRunCommand",
+        "DeactivateCategoryPricingRuleCommand",
+        "PreviewPricingMassRunCommand",
+        "ProcessPricingMassRunCycleCommand",
+        "QueueShelfLabelPrintCommand",
+        "ResolveKitPriceAlertCommand",
+        "ResolvePriceChangeProposalCommand",
+        "SaveCategoryPricingRuleCommand",
+        "SaveItemPricingCommand",
+        "SavePriceOfferCommand",
+        "SetPriceOfferStatusCommand",
+        "SetPricingMassRunControlCommand",
+        "SetShelfLabelStatusCommand"
+      ],
+      "steps": [
+        "Choose item, category, offer or durable pricing run",
+        "Preview target scope and pricing policy",
+        "Check versions, rounding and cost constraints",
+        "Apply authorized changes or control the run",
+        "Record history, proposals, alerts or pending labels",
+        "Review labels and shelf output separately"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Pricing/SaveItemPricingCommandHandler.cs",
+          "line": 1,
+          "sha256": "b4871163c0052ebf5f4af7104aa393b5eaaf90d814df3f48b38618419352827c"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Pricing/PricingMassRunCommandHandler.cs",
+          "line": 1,
+          "sha256": "2a4736600e04c98d00dd27881e08522fd2eef70d432adc38c306fa90438ea115"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-PRODUCTION",
+      "slug": "production",
+      "title": "Kits, BOM and production",
+      "features": [
+        "PP-F012"
+      ],
+      "commands": [
+        "CancelProductionRunCommand",
+        "CompleteProductionRunCommand",
+        "CreateBomCommand",
+        "CreateItemVariantCommand",
+        "CreateKitCommand",
+        "CreateProductionDraftCommand",
+        "DeactivateBomCommand",
+        "DeactivateKitCommand",
+        "ExecuteProductionRunCommand",
+        "RemoveItemVariantCommand",
+        "StageProductionRunCommand",
+        "UpdateBomCommand",
+        "UpdateKitCommand"
+      ],
+      "steps": [
+        "Choose virtual kit or physical manufacturing workflow",
+        "Create or update composition and units",
+        "Draft and stage a production run when applicable",
+        "Validate component allocation, lot and exact cost rules",
+        "Complete or cancel through its command",
+        "Review component consumption and finished output"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Manufacturing/ManufacturingCommandHandler.cs",
+          "line": 1,
+          "sha256": "fac2380fe32fea835ce4d709e9590deff87701ad97c8759f34d9fca719c87071"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-PARTIES",
+      "slug": "parties",
+      "title": "Customers, suppliers and third parties",
+      "features": [
+        "PP-F013"
+      ],
+      "commands": [
+        "CreateCustomerCommand",
+        "CreateThirdPartyCommand",
+        "DeactivateCustomerCommand",
+        "DeactivateThirdPartyCommand",
+        "ReactivateCustomerCommand",
+        "ReactivateThirdPartyCommand",
+        "SetThirdPartyPriceLevelCommand",
+        "UpdateCustomerCommand",
+        "UpdateThirdPartyCommand"
+      ],
+      "steps": [
+        "Choose party and role or lifecycle action",
+        "Validate identity and category",
+        "Apply permitted price-level or master-data change",
+        "Commit the party record",
+        "Reload list and selected party",
+        "Inspect dependent documents before deactivation"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyCommandHandler.cs",
+          "line": 1,
+          "sha256": "57ee3d94fef8d3c291d472952432320962ef53edf936f820aa97c327d5d9c494"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-IMPORTS",
+      "slug": "imports",
+      "title": "Product and third-party imports",
+      "features": [
+        "PP-F014"
+      ],
+      "commands": [
+        "ImportProductsCommand",
+        "ImportThirdPartiesCommand"
+      ],
+      "steps": [
+        "Select and parse the workbook",
+        "Map and preview rows outside the command",
+        "Resolve identity, unit and validation conflicts",
+        "Submit authorized import command",
+        "Commit accepted import result and history",
+        "Review rejected rows before another import"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
+          "line": 1,
+          "sha256": "7005cf9814dceb88a9516c739ddd08856235a322b347355cb088f4da102a30f9"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
+          "line": 1,
+          "sha256": "a02c2ce97ecef3318afc80634533e6ee40f25feba10f833a3d9888b530cdedb3"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-TEAMS",
+      "slug": "teams",
+      "title": "Team membership and login access",
+      "features": [
+        "PP-F015"
+      ],
+      "commands": [
+        "CreateTeamMemberCommand",
+        "UpdateTeamMemberCommand"
+      ],
+      "steps": [
+        "Choose person and team member",
+        "Choose whether login is enabled",
+        "Validate person, role and PIN rules",
+        "Submit create or update command",
+        "Commit related identity and membership records",
+        "Reload staff and inspect effective access"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Teams/TeamCommandHandler.cs",
+          "line": 1,
+          "sha256": "45693e05a5654830110faf71c68b1f4aee432fcfa47700f1e8c7722b673eb11f"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-SALARY",
+      "slug": "salary",
+      "title": "People, agreements and salary",
+      "features": [
+        "PP-F016"
+      ],
+      "commands": [
+        "CreatePersonCommand",
+        "FinalizeSalaryPeriodCommand",
+        "PayAdvanceCommand",
+        "PaySalaryCommand",
+        "RecordSalaryAdjustmentCommand",
+        "RecordSalaryCorrectionCommand",
+        "RecordSalaryOpeningBalanceCommand",
+        "RecordUnpaidDaysCommand",
+        "ReverseSalaryPaymentCommand",
+        "SaveSalaryAgreementCommand",
+        "UpdatePersonCommand",
+        "UpdatePersonWithAgreementCommand"
+      ],
+      "steps": [
+        "Maintain person and salary agreement",
+        "Record adjustment, absence or opening balance",
+        "Review and finalize a period",
+        "Choose advance, salary payment or reversal",
+        "Validate permission, balance and cash context",
+        "Read ledger, frozen statement and payment outcome"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Payroll/SalaryPeriodCommandHandler.cs",
+          "line": 1,
+          "sha256": "165ee29f1148d4d1e1e6ecb6d82eda4c58f87d0b16df65c5d1c480c7d17c6b18"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Payroll/SalaryPaymentCommandHandler.cs",
+          "line": 1,
+          "sha256": "8d8b14e58041325dae5fbe3a1cdc4cc49e502bd1bbf31c9100f517d542e3fd40"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-EXPENSES",
+      "slug": "expenses",
+      "title": "Expenses, payments and attachments",
+      "features": [
+        "PP-F017"
+      ],
+      "commands": [
+        "AttachExpensePhotoCommand",
+        "CancelExpenseRecordCommand",
+        "CreateExpenseCategoryCommand",
+        "CreateExpenseRecordCommand",
+        "PayExpenseCommand",
+        "RecordWasteExpenseCommand",
+        "ReplaceExpenseRecordCommand",
+        "ReverseExpensePaymentCommand",
+        "SaveAndPayExpenseCommand",
+        "UpdateExpenseCategoryCommand",
+        "UpdateExpenseRecordCommand"
+      ],
+      "steps": [
+        "Choose category and expense record",
+        "Validate source, amount and business date",
+        "Prepare and validate the image; attach its bytes through the transactional command",
+        "Choose pay, reverse, cancel or replace",
+        "Commit financial records through matching command",
+        "Read expense ledger and inspect attachment outcome"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpenseCommandHandler.cs",
+          "line": 1,
+          "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Expenses/ExpensePaymentCommandHandler.cs",
+          "line": 1,
+          "sha256": "b94af6c76f600e549a8402837b32a63895ffdc1ed92a821373b0c0c2dc577a97"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Attachments/SqliteExpenseAttachmentService.cs",
+          "line": 78,
+          "sha256": "e3594c7a2960763372c80fbb196c2a89b7b726f674d704915e4dd30c46bd9cff"
+        }
+      ],
+      "notes": "Expense photos are stored in expense_attachments.image_data as versioned SQLite BLOBs. SqliteExpenseAttachmentService prepares/re-encodes input and provides permission-checked reads; ExpenseCommandHandler validates and writes the prepared attachment in the command transaction."
+    },
+    {
+      "id": "PP-MAP-SETTINGS",
+      "slug": "settings",
+      "title": "Settings and output verification",
+      "features": [
+        "PP-F018"
+      ],
+      "commands": [
+        "ApplySettingsCommand",
+        "ConfirmThermalPhysicalOutputCommand",
+        "RecordThermalTestSpoolAcceptedCommand",
+        "SaveManualPaymentDisplayCommand",
+        "SaveReceiptDesignCommand",
+        "UpdateCashFinancialSettingsCommand",
+        "UpdateOutputDeviceSettingsCommand",
+        "UpdatePriceTierSettingsCommand"
+      ],
+      "steps": [
+        "Choose store, financial, price-tier or output setting",
+        "Validate permission and supported values",
+        "Commit the specific configuration command",
+        "Invalidate affected output capability when needed",
+        "Spool a test and physically inspect thermal output",
+        "Confirm physical output through the dedicated command"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Settings/ApplySettingsCommandHandler.cs",
+          "line": 1,
+          "sha256": "18a23c0c4e2ed073b2e9d9832739f3e5cc9f7c713c7f246ce0a1c0e2f2be588e"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Settings/OutputDeviceCommands.cs",
+          "line": 1,
+          "sha256": "38fafa8a9f93272112bf00e21940fb50e8739936d1f30baa1ba24529d6ac5568"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-OUTPUT",
+      "slug": "output",
+      "title": "Receipts and physical output",
+      "features": [
+        "PP-F019"
+      ],
+      "commands": [
+        "QueueReceiptReprintCommand"
+      ],
+      "steps": [
+        "Authorize a committed receipt reprint",
+        "Queue a durable output job",
+        "Worker recovers uncertain jobs then claims eligible work",
+        "Check saved snapshot and printer capability",
+        "Spool or mark failed, unknown or held",
+        "Inspect physical outcome before another output"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Hardware/ReprintReceiptCommandHandler.cs",
+          "line": 1,
+          "sha256": "386395f77100eb20cd8c527c266dbd0c87dec786591dd7a34a4e482251bdb0ba"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 1,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-ORDERS",
+      "slug": "orders",
+      "title": "Order backend and legacy kitchen boundary",
+      "features": [
+        "PP-F020"
+      ],
+      "commands": [
+        "CancelRestaurantOrderCommand",
+        "CreateRestaurantOrderCommand",
+        "SendOrderToKitchenCommand",
+        "SettleRestaurantOrderCommand",
+        "UpdateRestaurantOrderStatusCommand"
+      ],
+      "steps": [
+        "Confirm current Cafe checkout is Counter Service",
+        "Inspect legacy/backend restaurant order handlers separately",
+        "Trace KitchenTicket and KitchenTicketCancel production",
+        "Check the bundled worker claim filter and missing kitchen route",
+        "Review existing order state and authorized resolution",
+        "Require a verified consumer before claiming kitchen output"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "line": 1,
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
+          "line": 77,
+          "sha256": "e48defcf3d4450bff617f3771024da2dd903704d0d040c47b461c90faaf54a39"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 7997,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 223,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        }
+      ],
+      "notes": "Current Cafe checkout is pay-now counter service. These backend order command declarations do not establish current table-service or physical kitchen-output support. See PP-REV-008 and the source-checked rules."
+    },
+    {
+      "id": "PP-MAP-SERVICE",
+      "slug": "service",
+      "title": "Desktop and DataService boundaries",
+      "features": [
+        "PP-F021"
+      ],
+      "commands": [],
+      "steps": [
+        "Desktop currently composes local SQLite services",
+        "Separate Windows DataService owns ProgramData workspaces",
+        "Validate named-pipe contract and caller access",
+        "Authenticate service token bound to workspace",
+        "Route only implemented endpoints",
+        "Return SERVICE_ENDPOINT_NOT_READY for remaining contracts"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
+          "line": 1,
+          "sha256": "6d54b232004d379aade3bc521d254c82eeccedb8197f3c9390d04c7700d30298"
+        },
+        {
+          "path": "Software/src/GetSeek.DataService/DataServiceRequestRouter.cs",
+          "line": 1,
+          "sha256": "c8e425288562a1503d996cc59457afe1ea70a6f4c9b7f26266fd766e899018e8"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-MIGRATIONS",
+      "slug": "migrations",
+      "title": "Migration and persistence lifecycle",
+      "features": [
+        "PP-F022"
+      ],
+      "commands": [],
+      "steps": [
+        "Open a connection under SQLite policy",
+        "Read schema_version",
+        "Load the next declared SQL migration",
+        "Execute script and version row in a transaction",
+        "Commit or roll back and surface startup failure",
+        "Continue through version 83"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
+          "line": 1,
+          "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionPolicy.cs",
+          "line": 1,
+          "sha256": "76dc302ca3ce1fd36096b62179264f03cdb3c90205fdb256be735cdcdbbfa5c0"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-PROCUREMENT",
+      "slug": "procurement",
+      "title": "Purchases, supplier returns and money accounts",
+      "features": [
+        "PP-F023"
+      ],
+      "commands": [
+        "CancelSupplierInvoiceLinesCommand",
+        "CollectBankInvoiceCommand",
+        "ConfirmSupplierReturnDeliveryCommand",
+        "CreateMoneyAccountCommand",
+        "PaySupplierInvoiceCommand",
+        "ReceivePurchaseGoodsCommand",
+        "ReceiveSupplierRefundCommand",
+        "RecordAccountOpeningCommand",
+        "RecordSupplierInvoiceCommand",
+        "RefundCancelledInvoiceCommand",
+        "ReturnSupplierGoodsCommand",
+        "ReverseMoneyTransferCommand",
+        "TransferMoneyCommand"
+      ],
+      "steps": [
+        "Record supplier invoice and goods receipt separately",
+        "Choose supplier payment, return or refund action",
+        "Select money account and transfer where needed",
+        "Validate balance, prior state and command permission",
+        "Commit money and goods effects for that action",
+        "Read remaining obligations and account movement"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/PurchaseAndMoneyCommands.cs",
+          "line": 1,
+          "sha256": "9b5929036e27a42b7683fd095917de3aea3ea1a851edc04b5e4020cf6114ddbc"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Sales/SupplierReturnCommands.cs",
+          "line": 1,
+          "sha256": "b22552e1172fbae7971fbb00edb8870e12f02ad64d97076a38fc42d5da6d6c80"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-SHIPPING",
+      "slug": "shipping",
+      "title": "Order drafts, reservations and shipping",
+      "features": [
+        "PP-F024"
+      ],
+      "commands": [
+        "ConfirmShipmentDeliveryCommand",
+        "DispatchShipmentCommand",
+        "ReplaceInvoiceReservationCommand",
+        "SaveOrderDraftCommand",
+        "UpdateShipmentTrackingCommand"
+      ],
+      "steps": [
+        "Save an order draft or replace reservation",
+        "Validate available fulfillment and quantities",
+        "Dispatch shipment",
+        "Update tracking or confirm delivery",
+        "Commit command-specific reservation and shipment state",
+        "Read fulfillment history and outstanding quantity"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/ShippingCommands.cs",
+          "line": 1,
+          "sha256": "381096aeae46d7cc0cb308ee6785c4506cca37241e1dcb98459a977471f1077e"
+        }
+      ]
+    },
+    {
+      "id": "PP-MAP-BATCH",
+      "slug": "batch",
+      "title": "Batch previews and master-data changes",
+      "features": [
+        "PP-F025"
+      ],
+      "commands": [
+        "BatchAssignItemCategoryCommand",
+        "BatchAssignItemPurposeCommand",
+        "BatchAssignThirdPartyCategoryCommand",
+        "BatchAssignThirdPartyPriceLevelCommand",
+        "BatchCancelBomDraftsCommand",
+        "BatchDeleteCategoryDefinitionsCommand",
+        "BatchDeleteUnitDefinitionsCommand",
+        "BatchUpdateCategoryStatusCommand",
+        "BatchUpdateExpenseCategoryStatusCommand",
+        "BatchUpdateItemStatusCommand",
+        "BatchUpdateThirdPartyStatusCommand",
+        "BatchUpdateUnitStatusCommand",
+        "BatchUpdateUserStatusCommand",
+        "CreateBatchPreviewCommand"
+      ],
+      "steps": [
+        "Choose entity scope and requested change",
+        "Create a durable preview",
+        "Review selected entities and versions",
+        "Submit the matching authorized batch command",
+        "Validate preview and per-entity constraints",
+        "Read applied and rejected batch outcomes"
+      ],
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
+          "line": 1,
+          "sha256": "e8d5dcf16fc2e5c317fd4e968679777765ff8987f3910e9e767d9c3759dc361b"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Batch/BatchPreview.cs",
+          "line": 1,
+          "sha256": "1053ef4233777a81107c51558e6f239da26f88a22f43fcdc317adf2e59decbe7"
+        }
+      ]
+    }
+  ]
+}

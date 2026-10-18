@@ -24,9 +24,11 @@ Premium POS is an existing .NET application. Its architecture must be documented
 | `GetSeek.UI.Components` | Shared Avalonia controls and bundled font resources. |
 | `GetSeek.Desktop` | Application startup, workspace composition, view models and windows. |
 | `GetSeek.DataService` | Separate Windows service composition and service-owned workspace paths. |
-| `GetSeek.Recovery` | Separate recovery tooling; supported operator procedures require further review. |
+| `GetSeek.Recovery` | Template placeholder that prints Hello, World; no recovery workflow is implemented ([PP-REV-007](../review/decisions.md#pp-rev-007)). |
 
 The D01 inventory contains 431 application `.cs`, `.axaml` and `.sql` files, 144 test source files, and migration scripts 001–083. An inventory count is not a complete behavior audit.
+
+The [code review atlas](../review/index.md) now expands all eight projects into source-linked method and connection catalogues. [Source-checked rules](../review/source-check.md) correct or constrain current payment, Cafe, attachment and settings claims.
 
 ## Storage boundaries
 

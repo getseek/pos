@@ -19,7 +19,8 @@
       ],
       "target_page": "getting-started/index.md",
       "document_status": "scaffolded",
-      "limitations": "Clean-machine installation remains unverified."
+      "limitations": "Clean-machine installation remains unverified.",
+      "review_map": "review/launch.md"
     },
     {
       "id": "PP-F002",
@@ -39,7 +40,8 @@
       ],
       "target_page": "getting-started/workspaces.md",
       "document_status": "scaffolded",
-      "limitations": "No reset or data-transfer journey executed."
+      "limitations": "No reset or data-transfer journey executed.",
+      "review_map": "review/workspaces.md"
     },
     {
       "id": "PP-F003",
@@ -51,14 +53,15 @@
           "sha256": "8adca55977efc077773864641fc14751fe11db9e145ebed6c4ffae57a8e6ce6e"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-009"
       ],
       "target_page": "administration/security.md",
       "document_status": "planned",
-      "limitations": "Detailed authorization review and operator guide are D03/D04 work."
+      "limitations": "Detailed authorization review and operator guide are D03/D04 work.",
+      "review_map": "review/security.md"
     },
     {
       "id": "PP-F004",
@@ -70,12 +73,13 @@
           "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [],
       "target_page": "operator/checkout.md",
       "document_status": "planned",
-      "limitations": "External QR/bank confirmation and physical output require separate evidence."
+      "limitations": "External QR/bank confirmation and physical output require separate evidence.",
+      "review_map": "review/checkout.md"
     },
     {
       "id": "PP-F005",
@@ -92,7 +96,8 @@
       "evidence_ids": [],
       "target_page": "operator/invoices.md",
       "document_status": "planned",
-      "limitations": "Payment/reversal behavior needs focused guide verification."
+      "limitations": "Payment/reversal behavior needs focused guide verification.",
+      "review_map": "review/invoices.md"
     },
     {
       "id": "PP-F006",
@@ -109,7 +114,8 @@
       "evidence_ids": [],
       "target_page": "operator/returns.md",
       "document_status": "planned",
-      "limitations": "Traceable returns and quarantine promises require source review."
+      "limitations": "Traceable returns and quarantine promises require source review.",
+      "review_map": "review/returns.md"
     },
     {
       "id": "PP-F007",
@@ -121,12 +127,13 @@
           "sha256": "58a6ae713deb3b81fb89c28cf946c5925e2ebcf7eb9b70d93aabe66795e521b0"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [],
       "target_page": "operator/cash-and-reports.md",
       "document_status": "planned",
-      "limitations": "Frozen report content and hardware output are not reverified."
+      "limitations": "Frozen report content and hardware output are not reverified.",
+      "review_map": "review/cash.md"
     },
     {
       "id": "PP-F008",
@@ -143,7 +150,8 @@
       "evidence_ids": [],
       "target_page": "operator/catalog.md",
       "document_status": "planned",
-      "limitations": "Detailed item-purpose/UOM guide pending."
+      "limitations": "Detailed item-purpose/UOM guide pending.",
+      "review_map": "review/catalog.md"
     },
     {
       "id": "PP-F009",
@@ -160,7 +168,8 @@
       "evidence_ids": [],
       "target_page": "operator/inventory.md",
       "document_status": "planned",
-      "limitations": "Lot/serial selection, reservations and stock-history claims need review."
+      "limitations": "Lot/serial selection, reservations and stock-history claims need review.",
+      "review_map": "review/inventory.md"
     },
     {
       "id": "PP-F010",
@@ -172,14 +181,15 @@
           "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-008"
       ],
       "target_page": "operator/waste.md",
       "document_status": "planned",
-      "limitations": "Waste-expense linkage and Z-report scope need behavior review."
+      "limitations": "Waste-expense linkage and Z-report scope need behavior review.",
+      "review_map": "review/waste.md"
     },
     {
       "id": "PP-F011",
@@ -196,7 +206,8 @@
       "evidence_ids": [],
       "target_page": "operator/pricing.md",
       "document_status": "planned",
-      "limitations": "Pricing waterfall and mass-valuation instructions pending."
+      "limitations": "Pricing waterfall and mass-valuation instructions pending.",
+      "review_map": "review/pricing.md"
     },
     {
       "id": "PP-F012",
@@ -213,7 +224,8 @@
       "evidence_ids": [],
       "target_page": "operator/production.md",
       "document_status": "planned",
-      "limitations": "Do not equate a displayed BOM with proven input/output posting."
+      "limitations": "Do not equate a displayed BOM with proven input/output posting.",
+      "review_map": "review/production.md"
     },
     {
       "id": "PP-F013",
@@ -230,7 +242,8 @@
       "evidence_ids": [],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
-      "limitations": "Protected Walk-in and duplicate-import workflows need verification."
+      "limitations": "Protected Walk-in and duplicate-import workflows need verification.",
+      "review_map": "review/parties.md"
     },
     {
       "id": "PP-F014",
@@ -247,7 +260,8 @@
       "evidence_ids": [],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "Row validation, duplicate handling and export parity pending."
+      "limitations": "Row validation, duplicate handling and export parity pending.",
+      "review_map": "review/imports.md"
     },
     {
       "id": "PP-F015",
@@ -267,7 +281,8 @@
       ],
       "target_page": "administration/teams.md",
       "document_status": "planned",
-      "limitations": "Historical suite is not a fresh whole-feature audit."
+      "limitations": "Historical suite is not a fresh whole-feature audit.",
+      "review_map": "review/teams.md"
     },
     {
       "id": "PP-F016",
@@ -279,7 +294,7 @@
           "sha256": "165ee29f1148d4d1e1e6ecb6d82eda4c58f87d0b16df65c5d1c480c7d17c6b18"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-008",
@@ -288,7 +303,8 @@
       ],
       "target_page": "operator/salary.md",
       "document_status": "planned",
-      "limitations": "Record-only/payable distinctions and finalized-period limits need guide review."
+      "limitations": "Record-only/payable distinctions and finalized-period limits need guide review.",
+      "review_map": "review/salary.md"
     },
     {
       "id": "PP-F017",
@@ -300,7 +316,7 @@
           "sha256": "0556244b325abde2870564177fb212032dc0492ee01a4d0198f2b762a53cce6f"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-008",
@@ -308,7 +324,8 @@
       ],
       "target_page": "operator/expenses.md",
       "document_status": "planned",
-      "limitations": "Optional payment, reversals and photo admission require detailed review."
+      "limitations": "Optional payment, reversals and photo admission require detailed review.",
+      "review_map": "review/expenses.md"
     },
     {
       "id": "PP-F018",
@@ -328,7 +345,8 @@
       ],
       "target_page": "administration/settings.md",
       "document_status": "planned",
-      "limitations": "Font packaging checked; rendering/hardware validation remains unverified."
+      "limitations": "Font packaging checked; rendering/hardware validation remains unverified.",
+      "review_map": "review/settings.md"
     },
     {
       "id": "PP-F019",
@@ -340,16 +358,17 @@
           "sha256": "386395f77100eb20cd8c527c266dbd0c87dec786591dd7a34a4e482251bdb0ba"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [],
       "target_page": "administration/printing.md",
       "document_status": "planned",
-      "limitations": "Queue acceptance does not prove physical print/drawer success."
+      "limitations": "Queue acceptance does not prove physical print/drawer success.",
+      "review_map": "review/output.md"
     },
     {
       "id": "PP-F020",
-      "title": "Restaurant orders and tables",
+      "title": "Order backend and legacy resolution",
       "primary_role": "cashier",
       "source": [
         {
@@ -357,12 +376,13 @@
           "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
         }
       ],
-      "source_review": "located",
+      "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [],
       "target_page": "operator/orders.md",
       "document_status": "planned",
-      "limitations": "Source exists; do not import Restaurant project architecture promises."
+      "limitations": "Current Cafe uses pay-now Counter Service. Backend kitchen ticket producers exist, but the bundled worker does not claim their job types; no physical kitchen route is certified.",
+      "review_map": "review/orders.md"
     },
     {
       "id": "PP-F021",
@@ -382,7 +402,8 @@
       ],
       "target_page": "operations/application-deployment.md",
       "document_status": "planned",
-      "limitations": "Desktop IPC cutover and service-owned migration remain unverified."
+      "limitations": "Desktop IPC cutover and service-owned migration remain unverified.",
+      "review_map": "review/service.md"
     },
     {
       "id": "PP-F022",
@@ -401,7 +422,68 @@
       ],
       "target_page": "development/schema.md",
       "document_status": "planned",
-      "limitations": "83 scripts observed; no real database opened or migrated."
+      "limitations": "83 scripts observed; no real database opened or migrated.",
+      "review_map": "review/migrations.md"
+    },
+    {
+      "id": "PP-F023",
+      "title": "Procurement and money accounts",
+      "primary_role": "manager",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/PurchaseAndMoneyCommands.cs",
+          "sha256": "9b5929036e27a42b7683fd095917de3aea3ea1a851edc04b5e4020cf6114ddbc"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-015"
+      ],
+      "target_page": "review/procurement.md",
+      "document_status": "scaffolded",
+      "limitations": "Code routing and failure sites mapped; business journey and device acceptance not rerun.",
+      "review_map": "review/procurement.md"
+    },
+    {
+      "id": "PP-F024",
+      "title": "Fulfillment, reservations and shipping",
+      "primary_role": "operator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/ShippingCommands.cs",
+          "sha256": "381096aeae46d7cc0cb308ee6785c4506cca37241e1dcb98459a977471f1077e"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-015"
+      ],
+      "target_page": "review/shipping.md",
+      "document_status": "scaffolded",
+      "limitations": "Code routing and failure sites mapped; business journey and device acceptance not rerun.",
+      "review_map": "review/shipping.md"
+    },
+    {
+      "id": "PP-F025",
+      "title": "Batch previews and changes",
+      "primary_role": "administrator",
+      "source": [
+        {
+          "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
+          "sha256": "e8d5dcf16fc2e5c317fd4e968679777765ff8987f3910e9e767d9c3759dc361b"
+        }
+      ],
+      "source_review": "source-reviewed",
+      "application_verification": "not-rerun",
+      "evidence_ids": [
+        "E-015"
+      ],
+      "target_page": "review/batch.md",
+      "document_status": "scaffolded",
+      "limitations": "Code routing and failure sites mapped; business journey and device acceptance not rerun.",
+      "review_map": "review/batch.md"
     }
   ]
 }

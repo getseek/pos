@@ -71,7 +71,7 @@
       "path": "docs/unified-teams-completeness-audit-2026-10-15.md",
       "sha256": "6bc14cd29337be471b703f715d087065c897ffd6c1df70549c8e7ab73f9af919",
       "reviewed_on": "2026-10-18",
-      "claim": "Repair report claims A01–A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
+      "claim": "Repair report claims A01\u2013A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
     },
     {
       "id": "E-009",
@@ -200,6 +200,20 @@
         "finish": "2026-10-15T18:50:40.0017446+07:00"
       },
       "assembly": "GetSeek.AcceptanceTests"
+    },
+    {
+      "id": "E-015",
+      "kind": "source-inspected",
+      "path": "maintenance/code-review-index.json",
+      "sha256": "e84dee9ff2ac4a85e3fb2262ade40fefb63455f1186ee297145560e4e6dff4c8",
+      "reviewed_on": "2026-10-18",
+      "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
+      "symbols": [
+        "CommandPipeline.ExecuteAsync",
+        "OutputDeviceWorker.RunAsync",
+        "App.OnFrameworkInitializationCompleted",
+        "DataServiceRequestRouter.RouteAsync"
+      ]
     }
   ]
 }

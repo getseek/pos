@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block scripts %}
+  <script src="{{ 'assets/vendor/mermaid-11.17.2.min.js' | url }}"></script>
+  <script src="{{ 'assets/javascripts/diagram-config.js' | url }}"></script>
+  {{ super() }}
+{% endblock %}

@@ -16,10 +16,11 @@ def render():
     evidence=load('maintenance/evidence-register.json')
     docs=load('maintenance/document-register.json')['documents']
     status=header('PP-REF-001','Feature evidence')
-    status+='These are discovery records for the existing application. **Located** means an entry point was found. **Source-reviewed** means selected source was inspected. Neither establishes an end-to-end working journey. Detailed manuals remain D03/D04 work.\n\n'
+    status+='These are discovery records for the existing application. **Located** means an entry point was found. **Source-reviewed** means selected source was inspected. Neither establishes an end-to-end working journey. The source review atlas now expands these entry points; detailed operator manuals and runtime acceptance remain later work.\n\n'
     status+='| Feature ID | Business workflow | Primary role | Source review | Guide maturity | Verification limit |\n| --- | --- | --- | --- | --- | --- |\n'
     for f in features:
         status+=f"| {f['id']} | {f['title']} | {f['primary_role']} | {f['source_review']} | {f['document_status']} | {f['limitations']} |\n"
+    status+='\n## Source review maps\n\n'+''.join(f"- [{f['id']}: {f['title']}](../{f['review_map']})\n" for f in features)
     status+='\nThe [verification register](verification.md) explains evidence types and the historical test result. Planned guide paths are tracked internally, not presented as completed pages.\n'
     register=header('PP-REF-003','Document register')
     register+='Every public page has a stable ID, review date, maturity, and explicit navigation entry. **DRAFT** describes the document; it does not describe product acceptance or owner approval.\n\n'
@@ -28,7 +29,10 @@ def render():
         target='../'+d['path']
         register+=f"| {d['id']} | [{d['title']}]({target}) | {d['revision']} | {d['status']} |\n"
     register+='\nSee [authoring and validation](../contributing/index.md) for the update process.\n'
-    return {'docs/reference/feature-status.md':status,'docs/reference/document-register.md':register}
+    import render_review
+    views={'docs/reference/feature-status.md':status,'docs/reference/document-register.md':register}
+    views.update(render_review.render())
+    return views
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()

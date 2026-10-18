@@ -37,6 +37,10 @@ Evidence IDs: E-012–E-014. The integration project still excludes `DesktopProd
 
 The large master document retains older 1,203/open-audit wording, while the repair audit reports A01–A12 resolved. Parsing the final TRX resolves the historical count; it does not independently repeat every repair probe. No application build or test suite was rerun for D00–D02.
 
+## Current documentation review
+
+The [code review atlas](../review/index.md) includes a fresh syntax inventory, SQL-only in-memory schema reconstruction, source-linked workflows and corrected [business rules](../review/source-check.md). These checks are documentation/source analysis; the historical application test total above remains historical. Open [review findings](../review/decisions.md) distinguish implementation gaps, verification gates and proposed improvements.
+
 ## Current known limits
 
 - Physical printers/cutters/drawers, touch gestures and native display scaling were not checked in this stage.

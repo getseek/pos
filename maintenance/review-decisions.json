@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "state": "Proposals only; no application changes authorized by a browser selection.",
+  "findings": [
+    {
+      "id": "PP-REV-001",
+      "title": "Contradictory workspace flags select Demo implicitly",
+      "kind": "source-observed behavior",
+      "priority": "P2",
+      "runtime_status": "Not executed; deterministic flag expressions inspected.",
+      "observation": "When --real-workspace and --demo-workspace are both present, persistent Demo wins. There is no conflict rejection before the window and bootstrap selection. This creates ambiguity for launch scripts; no production data crossover was observed.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+          "line": 43,
+          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+          "line": 76,
+          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+        }
+      ],
+      "workflow": "workspaces",
+      "options": [
+        {
+          "id": "reject",
+          "title": "Reject contradictory workspace flags (recommended)",
+          "tradeoff": "Adds an explicit startup error for ambiguous scripts.",
+          "steps": [
+            "Add a single workspace argument parser before creating the window.",
+            "Reject conflicting explicit workspace selectors; preserve each valid selector.",
+            "Use the parsed workspace for title, logging, bootstrap and worker selection."
+          ],
+          "acceptance": [
+            "Table-driven tests for all flag combinations and GETSEEK_POS_DEMO precedence.",
+            "Verify invalid flags open no database and start no worker."
+          ]
+        },
+        {
+          "id": "precedence",
+          "title": "Keep and document Demo precedence",
+          "tradeoff": "Small change; conflicting launch scripts remain ambiguous.",
+          "steps": [
+            "Document the existing precedence in launcher configuration.",
+            "Add regression tests for the precedence and window identity."
+          ],
+          "acceptance": [
+            "Verify the chosen database, title and worker state for each combination."
+          ]
+        },
+        {
+          "id": "selector",
+          "title": "Replace flags with one workspace option",
+          "tradeoff": "Clear long-term interface; needs launcher compatibility work.",
+          "steps": [
+            "Introduce --workspace real|demo|preview.",
+            "Provide a deprecation path for existing flags.",
+            "Update launchers and documented examples together."
+          ],
+          "acceptance": [
+            "Compatibility tests and an explicit invalid-value error."
+          ]
+        }
+      ],
+      "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace."
+    },
+    {
+      "id": "PP-REV-002",
+      "title": "Pre-transaction pipeline failures use a different error path",
+      "kind": "source-observed contract gap",
+      "priority": "P2",
+      "runtime_status": "No injected failure. Selected UI callers have their own exception catch; this is not a demonstrated UI crash.",
+      "observation": "Live permission lookup, licensing/clock checks, early idempotency reads and BeginTransactionAsync execute before the inner exception-to-CommandResult catch. Their exceptions can escape ExecuteAsync rather than return SYSTEM_TRANSACTION_ERROR/OPERATION_CANCELLED. A caller may still log and display a safe error.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+          "line": 110,
+          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+          "line": 127,
+          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+          "line": 155,
+          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+          "line": 228,
+          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
+          "line": 240,
+          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 11087,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        }
+      ],
+      "workflow": "checkout",
+      "options": [
+        {
+          "id": "boundary",
+          "title": "Normalize failures at the pipeline boundary (recommended)",
+          "tradeoff": "Makes callers consistent; transaction state must remain precise.",
+          "steps": [
+            "Define an outer cancellation/exception boundary for all asynchronous preflight work.",
+            "Track whether a transaction began; roll back only an active transaction.",
+            "Keep one sanitized diagnostic ID and preserve finally-based gate release."
+          ],
+          "acceptance": [
+            "Inject resolver, license, clock, idempotency-read and transaction-start failures.",
+            "Assert no duplicate command execution, correct cancellation result, released gate and no leaked transaction."
+          ]
+        },
+        {
+          "id": "caller",
+          "title": "Keep exception ownership in every caller",
+          "tradeoff": "Avoids pipeline restructuring; every consumer must honor the same contract.",
+          "steps": [
+            "Document which failures may throw.",
+            "Audit each UI/service caller and centralize safe error reporting.",
+            "Add consumer contract tests."
+          ],
+          "acceptance": [
+            "Failure injection for each distinct consumer and user-visible safe message."
+          ]
+        },
+        {
+          "id": "typed",
+          "title": "Introduce typed preflight failures",
+          "tradeoff": "More explicit diagnostics; larger API change.",
+          "steps": [
+            "Define preflight failure categories and stable safe codes.",
+            "Adapt ports and pipeline to convert known operational failures.",
+            "Retain a final boundary for unexpected failures."
+          ],
+          "acceptance": [
+            "Cancellation, storage-busy, storage-unavailable and unexpected-exception cases."
+          ]
+        }
+      ],
+      "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics."
+    },
+    {
+      "id": "PP-REV-003",
+      "title": "Worker-level failures can repeat without a diagnostic",
+      "kind": "source-observed observability gap",
+      "priority": "P2",
+      "runtime_status": "No device or storage fault injected; no print failure claimed.",
+      "observation": "RunAsync catches Exception from ProcessOneAsync and silently waits for the next cycle. Opening the connection, scheduled-offer processing and reading settings happen before the job-specific try block, so those failures have no job-specific result and the loop catch records no diagnostic.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 37,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 48,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 60,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        }
+      ],
+      "workflow": "output",
+      "options": [
+        {
+          "id": "log",
+          "title": "Add bounded worker diagnostics (recommended)",
+          "tradeoff": "Preserves recovery; needs deduplication to avoid flooding.",
+          "steps": [
+            "Inject a sanitized worker diagnostic sink.",
+            "Report pre-claim failures with a stable context and deduplicate repeated errors.",
+            "Record recovery and expose worker health without automatically retrying drawer output."
+          ],
+          "acceptance": [
+            "Inject connection/settings/transition failures and assert a bounded diagnostic plus recovery.",
+            "Assert no extra claim, print or drawer pulse is caused by logging."
+          ]
+        },
+        {
+          "id": "health",
+          "title": "Add durable worker health and backoff",
+          "tradeoff": "Better operator visibility; adds persistence and lifecycle complexity.",
+          "steps": [
+            "Define healthy/degraded/recovering worker states.",
+            "Persist the last safe error reference and bounded retry timing.",
+            "Expose an operator view and recovery probe."
+          ],
+          "acceptance": [
+            "State-transition tests, restart recovery and no secret payloads in health records."
+          ]
+        },
+        {
+          "id": "supervise",
+          "title": "Stop the loop and let a supervisor restart it",
+          "tradeoff": "Central supervision; restart policy must respect uncertain physical outcomes.",
+          "steps": [
+            "Define fatal versus transient worker errors.",
+            "Report fatal errors to the owner process.",
+            "Use bounded restarts and preserve startup outcome-unknown recovery."
+          ],
+          "acceptance": [
+            "Restart loop limits and receipt/drawer uncertainty recovery tests."
+          ]
+        }
+      ],
+      "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling."
+    },
+    {
+      "id": "PP-REV-004",
+      "title": "DataService contracts do not establish Desktop cutover",
+      "kind": "implementation boundary / incomplete endpoints",
+      "priority": "P1 review gate",
+      "runtime_status": "Not installed, started or exercised during this review.",
+      "observation": "Desktop bootstrap composes direct LocalAppData SQLite access. DataService separately owns ProgramData workspaces. The router implements selected setup, authentication and read operations, while other typed contracts return SERVICE_ENDPOINT_NOT_READY. A full service-owned checkout/import/export path must not be presented as complete.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
+          "line": 140,
+          "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+        },
+        {
+          "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
+          "line": 74,
+          "sha256": "6d54b232004d379aade3bc521d254c82eeccedb8197f3c9390d04c7700d30298"
+        },
+        {
+          "path": "Software/src/GetSeek.DataService/DataServiceRequestRouter.cs",
+          "line": 166,
+          "sha256": "c8e425288562a1503d996cc59457afe1ea70a6f4c9b7f26266fd766e899018e8"
+        }
+      ],
+      "workflow": "service",
+      "options": [
+        {
+          "id": "boundary",
+          "title": "Keep the current boundary explicit (recommended now)",
+          "tradeoff": "Documentation correction only; service cutover remains future work.",
+          "steps": [
+            "Document Desktop and service stores as separate runtime profiles.",
+            "List implemented routes and unavailable contracts.",
+            "Require an ownership and migration decision before claiming a cutover."
+          ],
+          "acceptance": [
+            "Review launch/configuration evidence and a route capability matrix."
+          ]
+        },
+        {
+          "id": "migrate",
+          "title": "Plan an incremental service cutover",
+          "tradeoff": "Larger engineering program requiring isolated fixtures and migration controls.",
+          "steps": [
+            "Select one vertical workflow and define data ownership.",
+            "Implement live session/permission checks, transaction/audit/idempotency and projections.",
+            "Cut over only after migration, failure and rollback rehearsals."
+          ],
+          "acceptance": [
+            "End-to-end isolated fixture tests, stale token/permission revocation, disconnect/retry and migration rollback."
+          ]
+        },
+        {
+          "id": "defer",
+          "title": "Defer service distribution",
+          "tradeoff": "Simpler deployment surface; explicitly limits the service capability.",
+          "steps": [
+            "Mark unsupported contracts unavailable in all product-facing material.",
+            "Keep direct Desktop operations as the documented supported profile pending owner confirmation."
+          ],
+          "acceptance": [
+            "Packaging review ensures no promise of completed service-owned operations."
+          ]
+        }
+      ],
+      "rollback": "For a future cutover, restore the prior application profile only under an approved data migration/backup plan; documentation changes alone move no data."
+    },
+    {
+      "id": "PP-REV-005",
+      "title": "Physical output remains a separate acceptance gate",
+      "kind": "verification gap / operator decision",
+      "priority": "P1 review gate",
+      "runtime_status": "No printer, drawer, paper, DPI or multilingual hardware checks performed.",
+      "observation": "The worker records SpoolAccepted, OutcomeUnknown and NeedsOperatorReview. Spool acceptance does not prove a physical receipt or correct drawer action. The source has dedicated thermal confirmation commands; do not replace physical verification with a successful queue submission.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 16,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Settings/OutputDeviceCommands.cs",
+          "line": 1,
+          "sha256": "38fafa8a9f93272112bf00e21940fb50e8739936d1f30baa1ba24529d6ac5568"
+        }
+      ],
+      "workflow": "output",
+      "options": [
+        {
+          "id": "matrix",
+          "title": "Run an isolated physical acceptance matrix (recommended)",
+          "tradeoff": "Requires operator time and test hardware.",
+          "steps": [
+            "Prepare synthetic receipts and a test printer/drawer profile.",
+            "Test Thai/Myanmar glyphs, geometry, missing/offline device, cancellation and restart uncertainty.",
+            "Record model, driver, paper, DPI, observations and diagnostic references."
+          ],
+          "acceptance": [
+            "Physical samples and operator sign-off for each supported profile; no automatic uncertain drawer replay."
+          ]
+        },
+        {
+          "id": "limited",
+          "title": "Support only profiles with existing physical evidence",
+          "tradeoff": "Restricts advertised hardware until evidence exists.",
+          "steps": [
+            "Inventory actual approved hardware evidence.",
+            "Limit support claims to reviewed profiles.",
+            "Mark all other profiles unverified in configuration guidance."
+          ],
+          "acceptance": [
+            "Every claimed profile links to dated physical evidence."
+          ]
+        },
+        {
+          "id": "disabled",
+          "title": "Keep output disabled in evaluation environments",
+          "tradeoff": "Avoids unintended physical action; does not validate production printing.",
+          "steps": [
+            "Use a synthetic workspace and disabled output profile.",
+            "Review queued state changes without dispatching a device."
+          ],
+          "acceptance": [
+            "Confirm no worker physical output and retain the outstanding hardware gate."
+          ]
+        }
+      ],
+      "rollback": "Restore the previous reviewed output profile; retain job history and inspect uncertain output before reprinting."
+    },
+    {
+      "id": "PP-REV-006",
+      "title": "Historical passing tests omit excluded files",
+      "kind": "verification gap",
+      "priority": "P2",
+      "runtime_status": "Historical TRX only; no application build or test rerun.",
+      "observation": "The previous 1,228-pass total is historical evidence. Three integration test source files are excluded from compilation. Their presence in the source inventory does not mean they ran, and syntax parsing does not validate their assertions or current behavior.",
+      "sources": [
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/GetSeek.IntegrationTests.csproj",
+          "line": 1,
+          "sha256": "74984566219e3be0c0ffd842ff18a1dbf32b9c6c37b3d77131cd2955274eb202"
+        }
+      ],
+      "evidence_ids": [
+        "E-009",
+        "E-012",
+        "E-013",
+        "E-014"
+      ],
+      "workflow": "checkout",
+      "options": [
+        {
+          "id": "audit",
+          "title": "Review exclusions and design focused probes (recommended)",
+          "tradeoff": "Requires a later authorized application test workspace.",
+          "steps": [
+            "Read the exclusion reasons and map each omitted scenario to current behavior.",
+            "Choose focused replacement or repaired tests.",
+            "Run in a separate disposable test checkout with synthetic databases."
+          ],
+          "acceptance": [
+            "Report included/excluded tests separately and attach fresh test evidence."
+          ]
+        },
+        {
+          "id": "restore",
+          "title": "Repair and restore excluded tests",
+          "tradeoff": "Potentially stronger regression coverage; effort depends on obsolete fixtures.",
+          "steps": [
+            "Update obsolete setup and expected contracts.",
+            "Remove exclusions only after the scenarios are valid.",
+            "Run focused and appropriate broader checks in isolation."
+          ],
+          "acceptance": [
+            "Compilation includes the files and meaningful assertions pass."
+          ]
+        },
+        {
+          "id": "retain",
+          "title": "Retain exclusions with explicit coverage debt",
+          "tradeoff": "Lowest immediate effort; leaves known evidence gaps.",
+          "steps": [
+            "Record the owner, rationale and replacement verification for each excluded file.",
+            "Keep historical totals clearly dated."
+          ],
+          "acceptance": [
+            "No feature acceptance claim relies solely on the historical total."
+          ]
+        }
+      ],
+      "rollback": "Revert test-only changes in their future isolated checkout; leave production data untouched."
+    },
+    {
+      "id": "PP-REV-007",
+      "title": "Recovery executable is a placeholder",
+      "kind": "source-observed incomplete implementation",
+      "priority": "P1 review gate",
+      "runtime_status": "The entire two-line Program.cs was inspected; executable was not run.",
+      "observation": "GetSeek.Recovery/Program.cs contains only the template Hello, World output. The project does not implement a recovery workflow. Its presence must not be treated as backup, repair, restore or privileged service-recovery capability.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Recovery/Program.cs",
+          "line": 1,
+          "sha256": "9e33f889e8187d1b4c18d6ce2196d5e1cb05353d0991092381b066b16398dee9"
+        }
+      ],
+      "workflow": "service",
+      "options": [
+        {
+          "id": "exclude",
+          "title": "Exclude recovery capability from support claims (recommended now)",
+          "tradeoff": "Accurate present boundary; an operational recovery procedure still needs separate evidence.",
+          "steps": [
+            "Mark the executable as a placeholder in technical and packaging documentation.",
+            "Identify the actual supported backup/restore procedure and evidence, if one exists.",
+            "Exclude the placeholder from any promised recovery acceptance."
+          ],
+          "acceptance": [
+            "No release or support document presents the template as working recovery."
+          ]
+        },
+        {
+          "id": "design",
+          "title": "Design a separate recovery implementation",
+          "tradeoff": "Substantial engineering and operational validation.",
+          "steps": [
+            "Define data ownership, operator identity, offline/online restrictions and backup format.",
+            "Design dry-run, integrity checks, safe restoration and rollback.",
+            "Implement only in an isolated application checkout with synthetic recovery fixtures."
+          ],
+          "acceptance": [
+            "Interrupted restore, invalid backup, wrong workspace and permissions tests; documented recovery rehearsal."
+          ]
+        },
+        {
+          "id": "remove",
+          "title": "Plan removal from distributed packaging",
+          "tradeoff": "Simplifies the package; requires checking references and installer expectations.",
+          "steps": [
+            "Inventory installer and tool references.",
+            "Remove the placeholder from a future application distribution.",
+            "Update support instructions."
+          ],
+          "acceptance": [
+            "Packaging validation and no broken tool references."
+          ]
+        }
+      ],
+      "rollback": "Documentation-only classification moves no data. Future packaging or recovery changes require their own rollback and restore rehearsal."
+    },
+    {
+      "id": "PP-REV-008",
+      "title": "Kitchen ticket producers have no bundled worker claim route",
+      "kind": "source-observed connection gap",
+      "priority": "P1 review gate",
+      "runtime_status": "Producer and worker claim SQL inspected; no order, printer or external consumer exercised.",
+      "observation": "SendOrderToKitchenCommand records SentToKitchen and enqueues KitchenTicket. Cancellation can enqueue KitchenTicketCancel. OutputDeviceWorker.ClaimAsync selects only ReceiptPrint, DrawerKick and ShelfLabelPrint. The source search found no other kitchen-ticket consumer under Software/src. Queueing a kitchen ticket therefore does not establish a bundled kitchen-print route. The current Cafe UI uses pay-now Counter Service; backend/legacy order handlers must be documented separately.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "line": 194,
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Orders/RestaurantOrderCommandHandler.cs",
+          "line": 280,
+          "sha256": "a80c799c5f6a3ec759b8a53c6381d8951b5704b22a7ce2e734bbb9d768a52c74"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
+          "line": 223,
+          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "line": 7997,
+          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
+          "line": 77,
+          "sha256": "e48defcf3d4450bff617f3771024da2dd903704d0d040c47b461c90faaf54a39"
+        }
+      ],
+      "workflow": "orders",
+      "options": [
+        {
+          "id": "scope",
+          "title": "Document the queue-only/legacy boundary (recommended now)",
+          "tradeoff": "Documentation correction; does not implement kitchen output.",
+          "steps": [
+            "Describe current Cafe counter checkout separately from backend order handlers.",
+            "Label KitchenTicket and cancellation jobs as lacking a bundled consumer.",
+            "Verify any separately deployed consumer before making kitchen-output claims."
+          ],
+          "acceptance": [
+            "No guide equates SentToKitchen or queued jobs with a physical kitchen print."
+          ]
+        },
+        {
+          "id": "consumer",
+          "title": "Plan and implement a kitchen-output consumer",
+          "tradeoff": "Requires application engineering, device policy and physical acceptance.",
+          "steps": [
+            "Define ticket/cancellation payload versions and printer routing.",
+            "Implement durable claim, snapshot validation, diagnostics and uncertain-output recovery.",
+            "Test using synthetic orders and a dedicated test printer; connect UI only after acceptance."
+          ],
+          "acceptance": [
+            "Queue-to-spool and physical output, duplicate send, cancellation, offline device and restart tests."
+          ]
+        },
+        {
+          "id": "disable",
+          "title": "Disable unsupported kitchen actions in future packaging",
+          "tradeoff": "Reduces misleading UI/API surface; legacy unpaid orders still need a safe resolution path.",
+          "steps": [
+            "Inventory reachable kitchen actions and legacy order handling.",
+            "Design a capability gate with a clear unavailable message.",
+            "Preserve audited legacy-order resolution and data history."
+          ],
+          "acceptance": [
+            "No new unsupported kitchen action is offered; legacy data can still be inspected and resolved."
+          ]
+        }
+      ],
+      "rollback": "Documentation-only scope changes move no data. A future consumer rollback must preserve job history and treat interrupted output as uncertain."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # Premium POS documentation
 
-Standalone project: **F:\Premium_POS_docs**. Canonical target: **https://docpremiumpos.getseek.net/**. Current scope: **D00–D02, local only**.
+Standalone project: **F:\Premium_POS_docs**. Canonical target: **https://docpremiumpos.getseek.net/**. Current scope: **D00–D02 complete, plus the authorized source review atlas; local only**.
 
-Zensical + Markdown + Git form the authoring/build system. Dedicated Caddy and Cloudflare Tunnel infrastructure remain planned for later phases. No public DNS, tunnel, task, or Restaurant configuration is changed by the D02 scripts.
+Zensical + Markdown + Git form the authoring/build system. The user selected GitHub Pages at `getseek/pos` for hosting on 18 October 2026; this supersedes the planned Premium Caddy and Cloudflare Tunnel runtime. See `deployment/github-pages.md`. No public DNS, tunnel, task, or Restaurant configuration is changed by the D02 scripts.
 
 ## Start locally
 
@@ -41,6 +41,12 @@ Builds render reference views, validate source, run a strict staged Zensical bui
 
 For an explicit dependency update, review `requirements.in`, use a disposable project environment and run `scripts/lock_dependencies.py --update`; inspect the complete lock and repeat a fresh install, build and regression checks. Normal builds do not resolve new package versions.
 
+## Source review atlas
+
+Open [the local review atlas](http://127.0.0.1:18181/review/) for 25 workflow maps, runtime/command/access diagrams, all 172 handled command routes, 137 reconstructed tables, source catalogues, errors and browser-only change choices. This is source evidence with explicit analysis limits, not blanket application acceptance. The full source snapshot and review configuration live under `maintenance/`; ordinary builds read only this repository. The optional Roslyn helper requires .NET 10 only for an explicit read-only source refresh.
+
+See `docs/review/method.md` for reproduction and `maintenance/review-completion-report.md` for validations and remaining work. Application source, real databases, Restaurant infrastructure and public deployment remain outside this work.
+
 ## Implementation records
 
 - [Approved implementation plan](plans/documentation-site-zensical-caddy-cloudflare-plan-2026-10-18.md)
@@ -53,3 +59,5 @@ For an explicit dependency update, review `requirements.in`, use a disposable pr
 - [Current findings](maintenance/findings.md)
 
 Reserved Premium ports: **18180** origin, **18181** preview, **18182** admin, **18183** metrics. Existing Restaurant ports 8000/8001 and its tunnel remain separate. See the completion report for actual checks and remaining work.
+
+Latest scope instruction: finish local documentation first; GitHub deployment remains inactive. The prepared workflow is retained for later use and has not run remotely.

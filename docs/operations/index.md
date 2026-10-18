@@ -56,7 +56,7 @@ Build output lives in `.build/site`; preview output is separate in `.build/previ
 | Caddy admin | 18182 | Reserved; not started. |
 | Tunnel metrics | 18183 | Reserved; no new tunnel. |
 
-Public deployment is disabled. Caddy configuration, a dedicated named tunnel, DNS routing and startup persistence belong to D06–D08 after content and local validation gates. The existing Restaurant port/configuration/process state must not be reused or changed.
+Public deployment remains disabled. The user selected GitHub Pages at `getseek/pos` for a later deployment, superseding the planned Premium Caddy/Tunnel runtime, then instructed that local documentation be completed first. The GitHub workflow is prepared locally and inactive; no push, Pages setup or DNS change has occurred. The reserved ports above are retained as historical isolation settings. Existing Restaurant hosting remains separate.
 
 ## Troubleshooting this project
 
@@ -69,5 +69,7 @@ Public deployment is disabled. Caddy configuration, a dedicated named tunnel, DN
 | Missing link/anchor | Repair the referenced path or heading, then rebuild. |
 | Stale build | Rebuild after source/configuration/registry changes. |
 | Failed build | Read the error; the previous `.build/site` is retained. |
+
+All registered pages are checked for search-index coverage. Diagram rendering uses a locally vendored, integrity-checked Mermaid 11.17.2 asset and license. The [review methodology](../review/method.md) describes its independent source snapshot and diagram limits.
 
 Relevant upstream references: [Zensical build](https://zensical.org/docs/usage/build/), [navigation](https://zensical.org/docs/setup/navigation/), [Caddy static files](https://caddyserver.com/docs/quick-starts/static-files), and [Cloudflare Tunnel configuration](https://developers.cloudflare.com/tunnel/features/locally-managed-tunnels/configuration-file/).

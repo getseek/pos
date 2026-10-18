@@ -1,0 +1,11 @@
+.review-toolbar { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; margin:1rem 0 2rem; }
+.review-toolbar button { border:1px solid var(--md-default-fg-color--lighter); border-radius:.35rem; padding:.55rem .8rem; cursor:pointer; background:var(--md-code-bg-color); color:var(--md-default-fg-color); }
+.review-toolbar button:hover, .review-toolbar button:focus-visible { border-color:var(--md-accent-fg-color); }
+.review-choice { padding:1rem; background:var(--md-code-bg-color); border-radius:.4rem; margin:1rem 0; }
+.review-choice label { display:block; font-weight:600; margin-bottom:.5rem; }
+.review-choice select { display:block; width:100%; padding:.6rem; border:1px solid var(--md-default-fg-color--lighter); border-radius:.3rem; background:var(--md-default-bg-color); color:var(--md-default-fg-color); font:inherit; }
+.review-option { padding:.5rem 1rem; border-left:3px solid var(--md-default-fg-color--lightest); margin:1rem 0; }
+.review-option.is-selected { border-color:var(--md-accent-fg-color); background:var(--md-code-bg-color); }
+.review-option.is-selected h4::before { content:"Selected · "; color:var(--md-accent-fg-color); }
+.md-typeset .mermaid { overflow:auto; }
+.md-typeset .mermaid svg { min-width:34rem; }

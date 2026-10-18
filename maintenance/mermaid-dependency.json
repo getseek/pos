@@ -1,0 +1,9 @@
+{
+  "package": "mermaid",
+  "version": "11.17.2",
+  "registry_tarball": "https://registry.npmjs.org/mermaid/-/mermaid-11.17.2.tgz",
+  "integrity": "sha512-V6K3C8EBdEsPFZXSKMJe6ppQOENxuHARr9GvHX4hh47lAbhMRD9qf4oEK7LoaRQxULMa80/qt5gHO73aCleBBg==",
+  "license": "MIT",
+  "usage_reference": "https://mermaid.js.org/config/usage.html",
+  "update_policy": "Explicit reviewed update only; verify npm integrity, register asset digests, build and browser-check diagrams."
+}

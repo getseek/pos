@@ -72,6 +72,46 @@
       "reviewed_on": "2026-10-18",
       "provenance": "Created for the Premium POS documentation project; no Restaurant asset files copied.",
       "license": "Project-created documentation asset."
+    },
+    {
+      "path": "assets/javascripts/review-choices.js",
+      "sha256": "8b8e93618e150faf48554d890d895f2d1767ed75fb877a139572e4876f367c0c",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Created for this documentation review. Browser-only draft choices; no network or POS execution.",
+      "license": "Project-created documentation asset."
+    },
+    {
+      "path": "assets/stylesheets/review.css",
+      "sha256": "8ecc492b665fcbc0e20994f3c6c62073177a1ac4dd4fd692d6848c295b8c007a",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Created for this documentation review. Browser-only draft choices; no network or POS execution.",
+      "license": "Project-created documentation asset."
+    },
+    {
+      "path": "assets/vendor/mermaid-11.17.2.min.js",
+      "sha256": "581ed7d74bd9048d0e3a91363927d72ef22942d7722546b27f7cc29e35390eb8",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Mermaid npm package 11.17.2; official registry tarball verified against npm SHA-512 integrity.",
+      "license": "MIT; see mermaid-LICENSE.txt and notices embedded in the distribution."
+    },
+    {
+      "path": "assets/vendor/mermaid-LICENSE.txt",
+      "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Unmodified license from the integrity-checked Mermaid 11.17.2 npm package.",
+      "license": "MIT license text."
+    },
+    {
+      "path": "assets/javascripts/diagram-config.js",
+      "sha256": "66c7557a7f017bb056289c40d7e546beba276e31814b8e64447b017e95c14473",
+      "classification": "public",
+      "reviewed_on": "2026-10-18",
+      "provenance": "Project-created configuration preserving strict security and readable flowchart dimensions.",
+      "license": "Project-created documentation asset."
     }
   ]
 }

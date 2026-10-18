@@ -23,7 +23,7 @@ Organize guidance by responsibility. The labels below describe documentation aud
 
 ## Access and confidential records
 
-Effective permission checks must be documented from command/query boundaries, rather than inferred from a visible or hidden button. The detailed permission-key matrix will be reviewed in D04. Salary recipient details, PINs, real payment references and receipt photos should not be placed in documentation captures or support examples.
+Effective permission checks must be documented from command/query boundaries, rather than inferred from a visible or hidden button. The [access catalogue](../review/access.md) and workflow maps now show command-declared keys and source checks; a complete runtime role matrix remains unverified. Applying store settings requires a live active Admin role in the inspected handler ([source-checked rules](../review/source-check.md)). Salary recipient details, PINs, real payment references and receipt photos should not be placed in documentation captures or support examples.
 
 ## Settings and presentation
 

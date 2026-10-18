@@ -10,3 +10,14 @@
 *.lock text eol=lf
 *.png binary
 *.ttf binary
+*.js text eol=lf
+*.html text eol=lf
+*.yml text eol=lf
+*.cs text eol=lf
+*.csproj text eol=lf
+*.props text eol=lf
+*.Config text eol=lf
+
+.gitattributes text eol=lf
+# Preserve upstream vendored bundle bytes; its template strings contain intentional whitespace.
+docs/assets/vendor/*.js -whitespace

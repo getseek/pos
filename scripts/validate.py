@@ -78,9 +78,10 @@ def public_path_errors(relative: Path):
 def source_fingerprint():
     inputs=[ROOT/'zensical.toml',ROOT/'project.json',ROOT/'requirements.lock']
     inputs+=sorted((ROOT/'maintenance').glob('*.json'))
+    inputs+=sorted((ROOT/'.github/workflows').glob('*.yml'))
     inputs+=sorted(p for p in DOCS.rglob('*') if p.is_file())
-    for folder in ('scripts','tests'):
-        inputs+=sorted(p for p in (ROOT/folder).glob('*') if p.is_file() and p.suffix in {'.py','.ps1'})
+    for folder in ('scripts','tests','overrides'):
+        inputs+=sorted(p for p in (ROOT/folder).rglob('*') if p.is_file() and p.suffix in {'.py','.ps1','.cs','.csproj','.props','.Config','.html'})
     return {p.relative_to(ROOT).as_posix():digest(p) for p in inputs if p.is_file()}
 
 def validate_source():
@@ -94,7 +95,7 @@ def validate_source():
     if project['preview_address']!='127.0.0.1:18181' or project['ports']!={'origin':18180,'preview':18181,'admin':18182,'metrics':18183}:
         errors.append('approved isolation addresses/ports changed')
     if project.get('publication_enabled') is not False:
-        errors.append('publication must remain disabled at D02')
+        errors.append('publication must remain disabled during local review')
     if not (ROOT/'requirements.lock').is_file():
         errors.append('hashed requirements.lock missing')
     else:
@@ -170,10 +171,12 @@ def validate_source():
             errors.append(f"asset review incomplete: {asset['path']}")
         if p.is_file() and digest(p)!=asset['sha256']:
             errors.append(f"unreviewed asset change: {asset['path']}")
-        if p.suffix in {'.css','.svg','.txt'} and p.is_file():
+        if p.suffix in {'.css','.svg','.txt','.js'} and p.is_file():
             errors += [f"{asset['path']}: {e}" for e in secret_findings(p.read_text(encoding='utf-8'))]
         if p.suffix.lower() in {'.py','.ps1','.toml','.yaml','.yml','.json','.db','.pem','.key'} or any(part.startswith('.') for part in Path(asset['path']).parts):
             errors.append(f"nonpublic asset type/path: {asset['path']}")
+    import validate_review
+    errors += validate_review.validate()
     return errors,{'pages':len(actual),'navigation_entries':len(nav),'registered_assets':len(assets),'features':len(features),'evidence_records':len(evidence)}
 
 class HTMLPage(HTMLParser):
@@ -272,6 +275,20 @@ def validate_site(site:Path):
         except ET.ParseError: errors.append('invalid sitemap XML')
     search_files=[p for p in files if 'search' in p.as_posix().lower() and p.suffix in {'.json','.js','.wasm'}]
     if not search_files: errors.append('search runtime/index missing')
+    search_index=site/'search.json'
+    if not search_index.is_file(): errors.append('search index missing')
+    else:
+        try:
+            items=json.loads(search_index.read_text(encoding='utf-8'))['items']
+            indexed={item['location'].split('#')[0] for item in items}
+            expected_routes=set()
+            for doc in registry:
+                relative=Path(doc['path'])
+                route=relative.parent.as_posix() if relative.name=='index.md' else relative.with_suffix('').as_posix()
+                expected_routes.add('' if route=='.' else route+'/')
+            missing=expected_routes-indexed
+            if missing: errors.append('pages missing from search index: '+', '.join(sorted(missing)))
+        except (ValueError,KeyError,TypeError): errors.append('invalid search index structure')
     return errors,{'html_pages':len(parsed),'internal_references_checked':links,'output_files':len(files),'mermaid_blocks':sum(p.mermaid for p in parsed.values()),'search_files':len(search_files)}
 
 def main():

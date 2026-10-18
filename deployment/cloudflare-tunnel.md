@@ -51,5 +51,8 @@ validated static release     F:\Premium_POS_docs\.build\site
 - No Caddy installation, service, scheduled task or startup entry is created
   by this decision. Permanent startup automation remains a separate,
   explicitly approved future step.
-- `project.json` `publication_enabled` flips to `true` only after the owner
-  confirms DNS and the first successful public verification sweep.
+- `project.json` `publication_enabled` is governed by the repository's own
+  validator invariant (`publication must remain disabled during local
+  review`): it remains `false` until the owner advances the review stage or
+  explicitly amends that rule. Tunnel serving is independent of this flag —
+  the live site at `docpremiumpos.getseek.net` does not read it.

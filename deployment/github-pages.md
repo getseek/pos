@@ -1,5 +1,10 @@
 # GitHub Pages deployment — 18 October 2026
 
+> **SUPERSEDED 19 October 2026** — the owner selected the Cloudflare Tunnel
+> route for `docpremiumpos.getseek.net`; see `deployment/cloudflare-tunnel.md`.
+> This document is retained as dated history. The GitHub workflow files remain
+> inactive local preparation and are not part of the tunnel deployment.
+
 The user selected **GitHub Pages**, repository **https://github.com/getseek/pos**, after local setup and checks. The approved original plan remains historical. This choice supersedes the planned Premium Caddy origin and Cloudflare Tunnel runtime. Existing Restaurant hosting remains independent and untouched.
 
 The public repository was inspected through the GitHub API and Git refs: size 0, no refs, default branch main, Pages not enabled. No existing files need to be overwritten. No noninteractive GitHub credential was available on this machine during the access check. This document describes prepared deployment; it is not evidence of a successful GitHub run.

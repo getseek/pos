@@ -12,6 +12,6 @@
   "publication_enabled": false,
   "implementation_stage": "D02+source-review",
   "zensical_version": "0.0.71",
-  "deployment_target": "github-pages",
+  "deployment_target": "cloudflare-tunnel",
   "repository": "https://github.com/getseek/pos"
 }

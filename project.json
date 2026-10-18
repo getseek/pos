@@ -9,7 +9,7 @@
     "admin": 18182,
     "metrics": 18183
   },
-  "publication_enabled": true,
+  "publication_enabled": false,
   "implementation_stage": "D02+source-review",
   "zensical_version": "0.0.71",
   "deployment_target": "cloudflare-tunnel",

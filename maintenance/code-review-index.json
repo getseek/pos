@@ -40506,7 +40506,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-      "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be",
+      "sha256": "a21a8c9176e916f7ed7bde36439a87e18604a6fcc0423463d1d5b3e0dffabfaa",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -40522,7 +40522,7 @@
           "name": "CommandPipeline",
           "kind": "ClassDeclaration",
           "line": 15,
-          "end": 281,
+          "end": 296,
           "bases": [
             "IDisposable"
           ],
@@ -40565,7 +40565,7 @@
           "name": "ExecuteAsync",
           "owner": "CommandPipeline",
           "line": 27,
-          "end": 274,
+          "end": 289,
           "signature": "ExecuteAsync(TCommand,ICommandHandler<TCommand, TResult>,string?,string?,Guid?,CancellationToken)",
           "returns": "Task<CommandResult<TResult>>",
           "parameters": [
@@ -40618,109 +40618,109 @@
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 75,
+              "line": 78,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 77,
+              "line": 80,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 77,
+              "line": 80,
               "receiver": "idempotencyKey",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 77,
+              "line": 80,
               "receiver": "command.CommandKey",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 93,
+              "line": 96,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 93,
+              "line": 96,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "GetAllRequiredPermissions",
-              "line": 107,
+              "line": 110,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "HasPermissionAsync",
-              "line": 111,
+              "line": 114,
               "receiver": "permissionResolver",
               "generic_types": []
             },
             {
               "name": "HasPermission",
-              "line": 112,
+              "line": 115,
               "receiver": "sessionContext",
               "generic_types": []
             },
             {
               "name": "IsNullOrEmpty",
-              "line": 121,
+              "line": 124,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "IsModuleLicensed",
-              "line": 121,
+              "line": 124,
               "receiver": "licenseService",
               "generic_types": []
             },
             {
               "name": "CheckClockTamperAsync",
-              "line": 127,
+              "line": 130,
               "receiver": "licenseService",
               "generic_types": []
             },
             {
               "name": "Serialize",
-              "line": 134,
+              "line": 137,
               "receiver": "JsonSerializer",
               "generic_types": []
             },
             {
               "name": "ToHexStringLower",
-              "line": 135,
+              "line": 138,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "HashData",
-              "line": 135,
+              "line": 138,
               "receiver": "SHA256",
               "generic_types": []
             },
             {
               "name": "GetBytes",
-              "line": 135,
+              "line": 138,
               "receiver": "Encoding.UTF8",
               "generic_types": []
             },
             {
               "name": "CheckAsync",
-              "line": 138,
+              "line": 141,
               "receiver": "idempotencyStore",
               "generic_types": []
             },
             {
               "name": "Deserialize",
-              "line": 148,
+              "line": 151,
               "receiver": "JsonSerializer",
               "generic_types": [
                 "TResult"
@@ -40728,7 +40728,7 @@
             },
             {
               "name": "Success",
-              "line": 150,
+              "line": 153,
               "receiver": "CommandResult<TResult>",
               "generic_types": [
                 "TResult"
@@ -40736,61 +40736,67 @@
             },
             {
               "name": "BeginTransactionAsync",
-              "line": 155,
+              "line": 158,
               "receiver": "unitOfWork",
               "generic_types": []
             },
             {
               "name": "RollbackAsync",
-              "line": 163,
+              "line": 165,
               "receiver": "unitOfWork",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 197,
+              "line": 199,
               "receiver": "handler",
               "generic_types": []
             },
             {
               "name": "GetSanitizedAuditPayload",
-              "line": 206,
+              "line": 208,
               "receiver": "sanitized",
               "generic_types": []
             },
             {
               "name": "AppendAsync",
-              "line": 209,
+              "line": 211,
               "receiver": "auditJournal",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 210,
+              "line": 212,
               "receiver": "sessionContext.CurrentUserId",
               "generic_types": []
             },
             {
               "name": "SaveAsync",
-              "line": 221,
+              "line": 223,
               "receiver": "idempotencyStore",
               "generic_types": []
             },
             {
               "name": "CommitAsync",
-              "line": 224,
+              "line": 226,
               "receiver": "unitOfWork",
               "generic_types": []
             },
             {
               "name": "LogFailure",
-              "line": 245,
+              "line": 250,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
+              "name": "DisposeAsync",
+              "line": 281,
+              "receiver": "tx",
+              "generic_types": []
+            },
+            {
               "name": "Release",
-              "line": 272,
+              "line": 287,
               "receiver": "_executionLock",
               "generic_types": []
             }
@@ -40798,7 +40804,7 @@
           "creates": [
             {
               "type": "CommandEnvelope<TCommand>",
-              "line": 96
+              "line": 99
             }
           ],
           "errors": [
@@ -40815,55 +40821,55 @@
               "code": "OPERATION_CANCELLED"
             },
             {
-              "line": 63,
+              "line": 66,
               "code": "SESSION_LOCKED"
             },
             {
-              "line": 68,
+              "line": 71,
               "code": "AUTH_UNAUTHORIZED"
             },
             {
-              "line": 79,
+              "line": 82,
               "code": "IDEMPOTENCY_CONFLICT"
             },
             {
-              "line": 116,
+              "line": 119,
               "code": "AUTH_UNAUTHORIZED"
             },
             {
-              "line": 123,
+              "line": 126,
               "code": "LICENSE_EXPIRED"
             },
             {
-              "line": 130,
+              "line": 133,
               "code": "SECURITY_CLOCK_TAMPER"
             },
             {
-              "line": 143,
+              "line": 146,
               "code": "IDEMPOTENCY_CONFLICT"
             },
             {
-              "line": 165,
+              "line": 167,
               "code": "IDEMPOTENCY_CONFLICT"
             },
             {
-              "line": 168,
+              "line": 170,
               "code": "IDEMPOTENCY_RESULT_UNAVAILABLE"
             },
             {
-              "line": 180,
+              "line": 182,
               "code": "AUTH_UNAUTHORIZED"
             },
             {
-              "line": 191,
+              "line": 193,
               "code": "AUTH_UNAUTHORIZED"
             },
             {
-              "line": 238,
+              "line": 243,
               "code": "OPERATION_CANCELLED"
             },
             {
-              "line": 264,
+              "line": 272,
               "code": "SYSTEM_TRANSACTION_ERROR"
             }
           ],
@@ -40872,11 +40878,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-60583f6afd24",
+          "id": "M-175447f85e5d",
           "name": "Dispose",
           "owner": "CommandPipeline",
-          "line": 276,
-          "end": 280,
+          "line": 291,
+          "end": 295,
           "signature": "Dispose()",
           "returns": "void",
           "parameters": [],
@@ -40884,13 +40890,13 @@
           "calls": [
             {
               "name": "Dispose",
-              "line": 278,
+              "line": 293,
               "receiver": "_executionLock",
               "generic_types": []
             },
             {
               "name": "SuppressFinalize",
-              "line": 279,
+              "line": 294,
               "receiver": "GC",
               "generic_types": []
             }
@@ -40904,7 +40910,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 281
+      "lines": 296
     },
     {
       "path": "Software/src/GetSeek.Application/Pricing/ApplyBatchPricingCommandHandler.cs",
@@ -82400,7 +82406,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
-      "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e",
+      "sha256": "22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -82408,7 +82414,7 @@
           "name": "App",
           "kind": "ClassDeclaration",
           "line": 14,
-          "end": 101,
+          "end": 113,
           "bases": [
             "Avalonia.Application"
           ],
@@ -82490,83 +82496,103 @@
           "name": "OnFrameworkInitializationCompleted",
           "owner": "App",
           "line": 38,
-          "end": 70,
+          "end": 80,
           "signature": "OnFrameworkInitializationCompleted()",
           "returns": "void",
           "parameters": [],
           "attributes": [],
           "calls": [
             {
-              "name": "Empty",
+              "name": "Select",
               "line": 42,
-              "receiver": "Array",
-              "generic_types": [
-                "string"
-              ]
-            },
-            {
-              "name": "Contains",
-              "line": 43,
-              "receiver": "args",
-              "generic_types": []
-            },
-            {
-              "name": "Equals",
-              "line": 46,
-              "receiver": "string",
-              "generic_types": []
-            },
-            {
-              "name": "GetEnvironmentVariable",
-              "line": 46,
-              "receiver": "Environment",
-              "generic_types": []
-            },
-            {
-              "name": "CreateDemo",
-              "line": 52,
-              "receiver": "MainViewModel",
-              "generic_types": []
-            },
-            {
-              "name": "CreateInitializing",
-              "line": 52,
-              "receiver": "MainViewModel",
+              "receiver": "WorkspaceLaunchSelector",
               "generic_types": []
             },
             {
               "name": "Cancel",
-              "line": 57,
+              "line": 50,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Dispose",
-              "line": 58,
+              "line": 51,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
-              "name": "InitializeAppAsync",
-              "line": 66,
-              "receiver": "<implicit>",
+              "name": "ToUpperInvariant",
+              "line": 56,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "ToString",
+              "line": 56,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "NewGuid",
+              "line": 56,
+              "receiver": "Guid",
+              "generic_types": []
+            },
+            {
+              "name": "Report",
+              "line": 57,
+              "receiver": "_errorReporter",
+              "generic_types": []
+            },
+            {
+              "name": "Record",
+              "line": 62,
+              "receiver": "ErrorSink",
+              "generic_types": []
+            },
+            {
+              "name": "CreateStartupError",
+              "line": 64,
+              "receiver": "MainViewModel",
               "generic_types": []
             },
             {
               "name": "OnFrameworkInitializationCompleted",
-              "line": 69,
+              "line": 65,
               "receiver": "base",
+              "generic_types": []
+            },
+            {
+              "name": "CreateDemo",
+              "line": 71,
+              "receiver": "MainViewModel",
+              "generic_types": []
+            },
+            {
+              "name": "CreateInitializing",
+              "line": 71,
+              "receiver": "MainViewModel",
+              "generic_types": []
+            },
+            {
+              "name": "InitializeAppAsync",
+              "line": 76,
+              "receiver": "<implicit>",
               "generic_types": []
             }
           ],
           "creates": [
             {
               "type": "ErrorReporter",
-              "line": 47
+              "line": 43
             },
             {
               "type": "MainWindow",
-              "line": 51
+              "line": 45
+            },
+            {
+              "type": "InvalidOperationException",
+              "line": 61
             }
           ],
           "errors": [],
@@ -82575,11 +82601,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-5aca014abc71",
+          "id": "M-c227f29215ad",
           "name": "InitializeAppAsync",
           "owner": "App",
-          "line": 72,
-          "end": 100,
+          "line": 82,
+          "end": 112,
           "signature": "InitializeAppAsync(MainWindow,bool,bool)",
           "returns": "Task",
           "parameters": [
@@ -82600,77 +82626,77 @@
           "calls": [
             {
               "name": "BootstrapDemoWorkspaceAsync",
-              "line": 75,
+              "line": 85,
               "receiver": "PosBootstrapper",
               "generic_types": []
             },
             {
               "name": "BootstrapAsync",
-              "line": 76,
+              "line": 86,
               "receiver": "PosBootstrapper",
               "generic_types": []
             },
             {
               "name": "ReferenceEquals",
-              "line": 80,
+              "line": 90,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Dispose",
-              "line": 82,
+              "line": 92,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetDefaultDatabasePath",
-              "line": 91,
+              "line": 101,
               "receiver": "PosBootstrapper",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 92,
+              "line": 103,
               "receiver": "database",
               "generic_types": []
             },
             {
+              "name": "LogDiagnosticError",
+              "line": 104,
+              "receiver": "PosBootstrapper",
+              "generic_types": []
+            },
+            {
               "name": "Run",
-              "line": 93,
+              "line": 105,
               "receiver": "Task",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 95,
+              "line": 107,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "RunAsync",
-              "line": 95,
+              "line": 107,
               "receiver": "worker",
-              "generic_types": []
-            },
-            {
-              "name": "LogDiagnosticError",
-              "line": 97,
-              "receiver": "PosBootstrapper",
               "generic_types": []
             }
           ],
           "creates": [
             {
               "type": "CancellationTokenSource",
-              "line": 89
+              "line": 99
             },
             {
               "type": "SqliteConnectionStringBuilder",
-              "line": 91
+              "line": 101
             },
             {
               "type": "OutputDeviceWorker",
-              "line": 92
+              "line": 102
             }
           ],
           "errors": [],
@@ -82681,7 +82707,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 101
+      "lines": 113
     },
     {
       "path": "Software/src/GetSeek.Desktop/Behaviors/ScrollGestureBehavior.cs",
@@ -84063,6 +84089,117 @@
       "constants": [],
       "syntax_errors": [],
       "lines": 310
+    },
+    {
+      "path": "Software/src/GetSeek.Desktop/Bootstrap/WorkspaceLaunchSelector.cs",
+      "sha256": "786a3db324f060464603a476d775b235ccb6427d39fe51544818f0e83f2c6a64",
+      "project": "GetSeek.Desktop",
+      "test": false,
+      "types": [
+        {
+          "name": "WorkspaceLaunchMode",
+          "kind": "EnumDeclaration",
+          "line": 3,
+          "end": 9,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "WorkspaceLaunchSelection",
+          "kind": "RecordDeclaration",
+          "line": 11,
+          "end": 20,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "WorkspaceLaunchSelector",
+          "kind": "ClassDeclaration",
+          "line": 22,
+          "end": 79,
+          "bases": [],
+          "properties": []
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-f1cd6440bec3",
+          "name": "Select",
+          "owner": "WorkspaceLaunchSelector",
+          "line": 24,
+          "end": 78,
+          "signature": "Select(string[]?,string?)",
+          "returns": "WorkspaceLaunchSelection",
+          "parameters": [
+            {
+              "name": "args",
+              "type": "string[]?"
+            },
+            {
+              "name": "demoEnvVar",
+              "type": "string?"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "Empty",
+              "line": 26,
+              "receiver": "Array",
+              "generic_types": [
+                "string"
+              ]
+            },
+            {
+              "name": "Contains",
+              "line": 27,
+              "receiver": "normalizedArgs",
+              "generic_types": []
+            },
+            {
+              "name": "Equals",
+              "line": 59,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "GetEnvironmentVariable",
+              "line": 60,
+              "receiver": "Environment",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "WorkspaceLaunchSelection",
+              "line": 34
+            },
+            {
+              "type": "WorkspaceLaunchSelection",
+              "line": 43
+            },
+            {
+              "type": "WorkspaceLaunchSelection",
+              "line": 52
+            },
+            {
+              "type": "WorkspaceLaunchSelection",
+              "line": 66
+            },
+            {
+              "type": "WorkspaceLaunchSelection",
+              "line": 73
+            }
+          ],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 79
     },
     {
       "path": "Software/src/GetSeek.Desktop/Models/NotificationItem.cs",
@@ -142301,7 +142438,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-      "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c",
+      "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -142309,26 +142446,26 @@
           "name": "OutputDeviceWorker",
           "kind": "ClassDeclaration",
           "line": 11,
-          "end": 617,
+          "end": 649,
           "bases": [],
           "properties": []
         },
         {
           "name": "ClaimedJob",
           "kind": "RecordDeclaration",
-          "line": 15,
-          "end": 17,
+          "line": 20,
+          "end": 22,
           "bases": [],
           "properties": []
         }
       ],
       "methods": [
         {
-          "id": "M-21062d0dba51",
+          "id": "M-92be3a5e34c4",
           "name": "RunAsync",
           "owner": "OutputDeviceWorker",
-          "line": 19,
-          "end": 56,
+          "line": 24,
+          "end": 64,
           "signature": "RunAsync(CancellationToken)",
           "returns": "Task",
           "parameters": [
@@ -142341,44 +142478,44 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 21,
+              "line": 26,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateWriteConnectionAsync",
-              "line": 21,
+              "line": 26,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 23,
+              "line": 28,
               "receiver": "recovery",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 37,
+              "line": 42,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ProcessOneAsync",
-              "line": 44,
+              "line": 49,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "ReportCycleErrorIfDistinct",
+              "line": 60,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Delay",
-              "line": 54,
+              "line": 62,
               "receiver": "Task",
-              "generic_types": []
-            },
-            {
-              "name": "FromSeconds",
-              "line": 54,
-              "receiver": "TimeSpan",
               "generic_types": []
             }
           ],
@@ -142388,38 +142525,79 @@
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 24
+              "line": 29
             },
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 24
+              "line": 29
             },
             {
               "operation": "UPDATE",
               "table": "pending_shelf_labels",
-              "line": 24
+              "line": 29
             },
             {
               "operation": "FROM",
               "table": "hardware_jobs",
-              "line": 24
+              "line": 29
             },
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 24
+              "line": 29
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-43691df4dafc",
+          "id": "M-ebd9f037231a",
+          "name": "ReportCycleErrorIfDistinct",
+          "owner": "OutputDeviceWorker",
+          "line": 66,
+          "end": 88,
+          "signature": "ReportCycleErrorIfDistinct(Exception)",
+          "returns": "void",
+          "parameters": [
+            {
+              "name": "ex",
+              "type": "Exception"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "GetType",
+              "line": 73,
+              "receiver": "ex",
+              "generic_types": []
+            },
+            {
+              "name": "Equals",
+              "line": 74,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "cycleErrorLogger",
+              "line": 82,
+              "receiver": "<implicit>",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-377e45aa6813",
           "name": "ProcessOneAsync",
           "owner": "OutputDeviceWorker",
-          "line": 58,
-          "end": 221,
+          "line": 90,
+          "end": 253,
           "signature": "ProcessOneAsync(CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -142432,121 +142610,121 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 60,
+              "line": 92,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateWriteConnectionAsync",
-              "line": 60,
+              "line": 92,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "ProcessAsync",
-              "line": 63,
+              "line": 95,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 65,
+              "line": 97,
               "receiver": "OutputDeviceSettingsStore",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 68,
+              "line": 100,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 77,
+              "line": 109,
               "receiver": "stale.Parameters",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 77,
+              "line": 109,
               "receiver": "DateTime.UtcNow",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 78,
+              "line": 110,
               "receiver": "stale",
               "generic_types": []
             },
             {
               "name": "ClaimAsync",
-              "line": 81,
+              "line": 113,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 86,
+              "line": 118,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "SetResultAsync",
-              "line": 88,
+              "line": 120,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 97,
+              "line": 129,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "TryReadGeometry",
-              "line": 106,
+              "line": 138,
               "receiver": "WindowsPrinterQueueReader",
               "generic_types": []
             },
             {
               "name": "ComputeCapabilityFingerprint",
-              "line": 109,
+              "line": 141,
               "receiver": "WindowsPrinterQueueReader",
               "generic_types": []
             },
             {
               "name": "InvalidateThermalVerificationAsync",
-              "line": 115,
+              "line": 147,
               "receiver": "OutputDeviceSettingsStore",
               "generic_types": []
             },
             {
               "name": "ReadSnapshotValue",
-              "line": 126,
+              "line": 158,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "GetOrAdd",
-              "line": 132,
+              "line": 164,
               "receiver": "QueueGates",
               "generic_types": []
             },
             {
               "name": "WaitAsync",
-              "line": 133,
+              "line": 165,
               "receiver": "queueGate",
               "generic_types": []
             },
             {
               "name": "BuildPaperReceiptAsync",
-              "line": 138,
+              "line": 170,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Empty",
-              "line": 140,
+              "line": 172,
               "receiver": "Array",
               "generic_types": [
                 "byte"
@@ -142554,79 +142732,79 @@
             },
             {
               "name": "BuildThermalReceiptAsync",
-              "line": 144,
+              "line": 176,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Release",
-              "line": 149,
+              "line": 181,
               "receiver": "queueGate",
               "generic_types": []
             },
             {
               "name": "Render",
-              "line": 156,
+              "line": 188,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Build",
-              "line": 162,
+              "line": 194,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "KickDrawer",
-              "line": 162,
+              "line": 194,
               "receiver": "drawerPulse",
               "generic_types": []
             },
             {
               "name": "Run",
-              "line": 182,
+              "line": 214,
               "receiver": "Task",
               "generic_types": []
             },
             {
               "name": "Send",
-              "line": 182,
+              "line": 214,
               "receiver": "WindowsRawPrinter",
               "generic_types": []
             },
             {
               "name": "WhenAny",
-              "line": 183,
+              "line": 215,
               "receiver": "Task",
               "generic_types": []
             },
             {
               "name": "Delay",
-              "line": 183,
+              "line": 215,
               "receiver": "Task",
               "generic_types": []
             },
             {
               "name": "FromSeconds",
-              "line": 183,
+              "line": 215,
               "receiver": "TimeSpan",
               "generic_types": []
             },
             {
               "name": "ReleaseQueueGateWhenSendCompletesAsync",
-              "line": 194,
+              "line": 226,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 198,
+              "line": 230,
               "receiver": "sendTask",
               "generic_types": []
             },
             {
               "name": "GetType",
-              "line": 215,
+              "line": 247,
               "receiver": "ex",
               "generic_types": []
             }
@@ -142634,27 +142812,27 @@
           "creates": [
             {
               "type": "ScheduledOfferShelfLabelTransitionProcessor",
-              "line": 63
+              "line": 95
             },
             {
               "type": "SemaphoreSlim",
-              "line": 132
+              "line": 164
             },
             {
               "type": "SemaphoreSlim",
-              "line": 154
+              "line": 186
             },
             {
               "type": "ShelfLabelRenderer",
-              "line": 156
+              "line": 188
             },
             {
               "type": "EscPosReceiptBuilder",
-              "line": 161
+              "line": 193
             },
             {
               "type": "SemaphoreSlim",
-              "line": 176
+              "line": 208
             }
           ],
           "errors": [],
@@ -142662,23 +142840,23 @@
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 70
+              "line": 102
             },
             {
               "operation": "FROM",
               "table": "output_device_config",
-              "line": 70
+              "line": 102
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-f985a0d9df46",
+          "id": "M-4ed5a445de57",
           "name": "ClaimAsync",
           "owner": "OutputDeviceWorker",
-          "line": 223,
-          "end": 254,
+          "line": 255,
+          "end": 286,
           "signature": "ClaimAsync(SqliteConnection,bool,bool,CancellationToken)",
           "returns": "Task<ClaimedJob?>",
           "parameters": [
@@ -142703,55 +142881,55 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 225,
+              "line": 257,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 242,
+              "line": 274,
               "receiver": "command.Parameters",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 242,
+              "line": 274,
               "receiver": "DateTime.UtcNow",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 245,
+              "line": 277,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 245,
+              "line": 277,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 246,
+              "line": 278,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 247,
+              "line": 279,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 248,
+              "line": 280,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 252,
+              "line": 284,
               "receiver": "reader",
               "generic_types": []
             }
@@ -142759,7 +142937,7 @@
           "creates": [
             {
               "type": "ClaimedJob",
-              "line": 247
+              "line": 279
             }
           ],
           "errors": [],
@@ -142767,23 +142945,23 @@
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 226
+              "line": 258
             },
             {
               "operation": "FROM",
               "table": "hardware_jobs",
-              "line": 226
+              "line": 258
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-d47d7c8842bf",
+          "id": "M-3773e39d6c2b",
           "name": "ReleaseQueueGateWhenSendCompletesAsync",
           "owner": "OutputDeviceWorker",
-          "line": 256,
-          "end": 261,
+          "line": 288,
+          "end": 293,
           "signature": "ReleaseQueueGateWhenSendCompletesAsync(Task,SemaphoreSlim)",
           "returns": "Task",
           "parameters": [
@@ -142800,13 +142978,13 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 258,
+              "line": 290,
               "receiver": "sendTask",
               "generic_types": []
             },
             {
               "name": "Release",
-              "line": 260,
+              "line": 292,
               "receiver": "queueGate",
               "generic_types": []
             }
@@ -142818,11 +142996,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-4541868fc57c",
+          "id": "M-de351ffc808e",
           "name": "SetResultAsync",
           "owner": "OutputDeviceWorker",
-          "line": 263,
-          "end": 282,
+          "line": 295,
+          "end": 314,
           "signature": "SetResultAsync(SqliteConnection,string,string,string?,CancellationToken)",
           "returns": "Task",
           "parameters": [
@@ -142851,49 +143029,49 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 265,
+              "line": 297,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "BeginTransactionAsync",
-              "line": 265,
+              "line": 297,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 266,
+              "line": 298,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 269,
+              "line": 301,
               "receiver": "command.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 272,
+              "line": 304,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 278,
+              "line": 310,
               "receiver": "labels.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 279,
+              "line": 311,
               "receiver": "labels",
               "generic_types": []
             },
             {
               "name": "CommitAsync",
-              "line": 281,
+              "line": 313,
               "receiver": "transaction",
               "generic_types": []
             }
@@ -142904,23 +143082,23 @@
             {
               "operation": "UPDATE",
               "table": "hardware_jobs",
-              "line": 268
+              "line": 300
             },
             {
               "operation": "UPDATE",
               "table": "pending_shelf_labels",
-              "line": 277
+              "line": 309
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-0e72c560a21d",
+          "id": "M-847c6cc4fac8",
           "name": "BuildReceiptAsync",
           "owner": "OutputDeviceWorker",
-          "line": 284,
-          "end": 345,
+          "line": 316,
+          "end": 377,
           "signature": "BuildReceiptAsync(SqliteConnection,string,CancellationToken)",
           "returns": "Task<byte[]>",
           "parameters": [
@@ -142941,235 +143119,235 @@
           "calls": [
             {
               "name": "Parse",
-              "line": 286,
+              "line": 318,
               "receiver": "JsonDocument",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 287,
+              "line": 319,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetProperty",
-              "line": 287,
+              "line": 319,
               "receiver": "json.RootElement",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 288,
+              "line": 320,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 295,
+              "line": 327,
               "receiver": "command.Parameters",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 296,
+              "line": 328,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 296,
+              "line": 328,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 297,
+              "line": 329,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 299,
+              "line": 331,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 301,
+              "line": 333,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 307,
+              "line": 339,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "DisposeAsync",
-              "line": 309,
+              "line": 341,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 312,
+              "line": 344,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Replace",
-              "line": 313,
+              "line": 345,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Replace",
-              "line": 313,
+              "line": 345,
               "receiver": "value",
               "generic_types": []
             },
             {
               "name": "WriteDivider",
-              "line": 316,
+              "line": 348,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "SetAlignment",
-              "line": 316,
+              "line": 348,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "WriteLine",
-              "line": 316,
+              "line": 348,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "SetBold",
-              "line": 316,
+              "line": 348,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Initialize",
-              "line": 316,
+              "line": 348,
               "receiver": "receipt",
               "generic_types": []
             },
             {
               "name": "Safe",
-              "line": 316,
+              "line": 348,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 321,
+              "line": 353,
               "receiver": "lines.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 322,
+              "line": 354,
               "receiver": "lines",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 324,
+              "line": 356,
               "receiver": "lineReader",
               "generic_types": []
             },
             {
               "name": "WriteLine",
-              "line": 326,
+              "line": 358,
               "receiver": "receipt",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 326,
+              "line": 358,
               "receiver": "lineReader",
               "generic_types": []
             },
             {
               "name": "WriteKeyValue",
-              "line": 327,
+              "line": 359,
               "receiver": "receipt",
               "generic_types": []
             },
             {
               "name": "GetDouble",
-              "line": 327,
+              "line": 359,
               "receiver": "lineReader",
               "generic_types": []
             },
             {
               "name": "Amount",
-              "line": 327,
+              "line": 359,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 327,
+              "line": 359,
               "receiver": "lineReader",
               "generic_types": []
             },
             {
               "name": "WriteKeyValue",
-              "line": 330,
+              "line": 362,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "WriteDivider",
-              "line": 330,
+              "line": 362,
               "receiver": "receipt",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 335,
+              "line": 367,
               "receiver": "tenders.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 336,
+              "line": 368,
               "receiver": "tenders",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 338,
+              "line": 370,
               "receiver": "tenderReader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 340,
+              "line": 372,
               "receiver": "tenderReader",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 341,
+              "line": 373,
               "receiver": "tenderReader",
               "generic_types": []
             },
             {
               "name": "Build",
-              "line": 344,
+              "line": 376,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CutPaper",
-              "line": 344,
+              "line": 376,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -143177,19 +143355,19 @@
           "creates": [
             {
               "type": "InvalidDataException",
-              "line": 287
+              "line": 319
             },
             {
               "type": "InvalidDataException",
-              "line": 298
+              "line": 330
             },
             {
               "type": "InvalidDataException",
-              "line": 308
+              "line": 340
             },
             {
               "type": "EscPosReceiptBuilder",
-              "line": 315
+              "line": 347
             }
           ],
           "errors": [],
@@ -143197,42 +143375,42 @@
             {
               "operation": "FROM",
               "table": "sales_invoices",
-              "line": 289
+              "line": 321
             },
             {
               "operation": "JOIN",
               "table": "store_config",
-              "line": 289
+              "line": 321
             },
             {
               "operation": "FROM",
               "table": "sales_lines",
-              "line": 320
+              "line": 352
             },
             {
               "operation": "FROM",
               "table": "sales_tenders",
-              "line": 334
+              "line": 366
             }
           ],
           "throws": [
             {
-              "line": 298,
+              "line": 330,
               "type": "InvalidDataException"
             },
             {
-              "line": 308,
+              "line": 340,
               "type": "InvalidDataException"
             }
           ],
           "dynamic_sql": false
         },
         {
-          "id": "M-7fd1fad6250c",
+          "id": "M-8bd59cf30513",
           "name": "BuildThermalReceiptAsync",
           "owner": "OutputDeviceWorker",
-          "line": 347,
-          "end": 448,
+          "line": 379,
+          "end": 480,
           "signature": "BuildThermalReceiptAsync(SqliteConnection,string,OutputDeviceSettings,CancellationToken)",
           "returns": "Task<byte[]>",
           "parameters": [
@@ -143257,181 +143435,181 @@
           "calls": [
             {
               "name": "Parse",
-              "line": 349,
+              "line": 381,
               "receiver": "JsonDocument",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 350,
+              "line": 382,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetProperty",
-              "line": 350,
+              "line": 382,
               "receiver": "json.RootElement",
               "generic_types": []
             },
             {
               "name": "TryGetProperty",
-              "line": 351,
+              "line": 383,
               "receiver": "json.RootElement",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 352,
+              "line": 384,
               "receiver": "versionElement",
               "generic_types": []
             },
             {
               "name": "ReadReceiptSnapshotValues",
-              "line": 353,
+              "line": 385,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ContainsKey",
-              "line": 353,
+              "line": 385,
               "receiver": "snapshotValues",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 355,
+              "line": 387,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "BuildAsync",
-              "line": 355,
+              "line": 387,
               "receiver": "FinancialReceiptRenderer",
               "generic_types": []
             },
             {
               "name": "Thermal",
-              "line": 356,
+              "line": 388,
               "receiver": "FinancialReceiptRenderer",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 369,
+              "line": 401,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 378,
+              "line": 410,
               "receiver": "command.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 379,
+              "line": 411,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 380,
+              "line": 412,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 381,
+              "line": 413,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 381,
+              "line": 413,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 383,
+              "line": 415,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 385,
+              "line": 417,
               "receiver": "snapshotValues",
               "generic_types": []
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 385,
+              "line": 417,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ReadSnapshotInt",
-              "line": 386,
+              "line": 418,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "FormatReceiptMoney",
-              "line": 389,
+              "line": 421,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Snapshot",
-              "line": 392,
+              "line": 424,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Amount",
-              "line": 401,
+              "line": 433,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Min",
-              "line": 403,
+              "line": 435,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 403,
+              "line": 435,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "ReadSnapshotLong",
-              "line": 405,
+              "line": 437,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 415,
+              "line": 447,
               "receiver": "design.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 416,
+              "line": 448,
               "receiver": "design",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 417,
+              "line": 449,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Deserialize",
-              "line": 419,
+              "line": 451,
               "receiver": "JsonSerializer",
               "generic_types": [
                 "ReceiptDesignDocument"
@@ -143439,49 +143617,49 @@
             },
             {
               "name": "AddRange",
-              "line": 426,
+              "line": 458,
               "receiver": "lines",
               "generic_types": []
             },
             {
               "name": "Split",
-              "line": 426,
+              "line": 458,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Render",
-              "line": 426,
+              "line": 458,
               "receiver": "template",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 430,
+              "line": 462,
               "receiver": "linesCommand.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 431,
+              "line": 463,
               "receiver": "linesCommand",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 434,
+              "line": 466,
               "receiver": "lines",
               "generic_types": []
             },
             {
               "name": "GetDouble",
-              "line": 435,
+              "line": 467,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Render",
-              "line": 447,
+              "line": 479,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -143489,51 +143667,51 @@
           "creates": [
             {
               "type": "InvalidDataException",
-              "line": 350
+              "line": 382
             },
             {
               "type": "InvalidDataException",
-              "line": 380
-            },
-            {
-              "type": "InvalidDataException",
-              "line": 388
-            },
-            {
-              "type": "Dictionary<string, string?>",
-              "line": 390
-            },
-            {
-              "type": "InvalidDataException",
-              "line": 418
+              "line": 412
             },
             {
               "type": "InvalidDataException",
               "line": 420
             },
             {
+              "type": "Dictionary<string, string?>",
+              "line": 422
+            },
+            {
+              "type": "InvalidDataException",
+              "line": 450
+            },
+            {
+              "type": "InvalidDataException",
+              "line": 452
+            },
+            {
               "type": "ReceiptTemplateEngine",
-              "line": 424
+              "line": 456
             },
             {
               "type": "List<string>",
-              "line": 425
+              "line": 457
             },
             {
               "type": "ReceiptTemplateContext",
-              "line": 426
+              "line": 458
             },
             {
               "type": "ReceiptTemplateContext",
-              "line": 446
+              "line": 478
             },
             {
               "type": "ThermalReceiptRenderer",
-              "line": 447
+              "line": 479
             },
             {
               "type": "ThermalReceiptDocument",
-              "line": 447
+              "line": 479
             }
           ],
           "errors": [],
@@ -143541,50 +143719,50 @@
             {
               "operation": "FROM",
               "table": "sales_invoices",
-              "line": 371
+              "line": 403
             },
             {
               "operation": "JOIN",
               "table": "store_config",
-              "line": 371
+              "line": 403
             },
             {
               "operation": "FROM",
               "table": "receipt_design_versions",
-              "line": 414
+              "line": 446
             },
             {
               "operation": "FROM",
               "table": "sales_lines",
-              "line": 429
+              "line": 461
             }
           ],
           "throws": [
             {
-              "line": 380,
-              "type": "InvalidDataException"
-            },
-            {
-              "line": 388,
-              "type": "InvalidDataException"
-            },
-            {
-              "line": 418,
+              "line": 412,
               "type": "InvalidDataException"
             },
             {
               "line": 420,
+              "type": "InvalidDataException"
+            },
+            {
+              "line": 450,
+              "type": "InvalidDataException"
+            },
+            {
+              "line": 452,
               "type": "InvalidDataException"
             }
           ],
           "dynamic_sql": false
         },
         {
-          "id": "M-48f42daea3c2",
+          "id": "M-5696f8c0696b",
           "name": "BuildPaperReceiptAsync",
           "owner": "OutputDeviceWorker",
-          "line": 450,
-          "end": 553,
+          "line": 482,
+          "end": 585,
           "signature": "BuildPaperReceiptAsync(SqliteConnection,string,string,CancellationToken)",
           "returns": "Task<byte[]>",
           "parameters": [
@@ -143609,85 +143787,85 @@
           "calls": [
             {
               "name": "IsWindows",
-              "line": 452,
+              "line": 484,
               "receiver": "OperatingSystem",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 453,
+              "line": 485,
               "receiver": "JsonDocument",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 454,
+              "line": 486,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetProperty",
-              "line": 454,
+              "line": 486,
               "receiver": "json.RootElement",
               "generic_types": []
             },
             {
               "name": "TryGetProperty",
-              "line": 455,
+              "line": 487,
               "receiver": "json.RootElement",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 456,
+              "line": 488,
               "receiver": "versionElement",
               "generic_types": []
             },
             {
               "name": "ReadReceiptSnapshotValues",
-              "line": 457,
+              "line": 489,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ContainsKey",
-              "line": 457,
+              "line": 489,
               "receiver": "snapshotValues",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 459,
+              "line": 491,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "BuildAsync",
-              "line": 459,
+              "line": 491,
               "receiver": "FinancialReceiptRenderer",
               "generic_types": []
             },
             {
               "name": "TryReadGeometry",
-              "line": 460,
+              "line": 492,
               "receiver": "WindowsPrinterQueueReader",
               "generic_types": []
             },
             {
               "name": "PrintShipping",
-              "line": 460,
+              "line": 492,
               "receiver": "spooler",
               "generic_types": []
             },
             {
               "name": "Print",
-              "line": 460,
+              "line": 492,
               "receiver": "spooler",
               "generic_types": []
             },
             {
               "name": "Empty",
-              "line": 460,
+              "line": 492,
               "receiver": "Array",
               "generic_types": [
                 "byte"
@@ -143695,127 +143873,127 @@
             },
             {
               "name": "CreateCommand",
-              "line": 469,
+              "line": 501,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 472,
+              "line": 504,
               "receiver": "command.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 473,
+              "line": 505,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 474,
+              "line": 506,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 475,
+              "line": 507,
               "receiver": "header",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 475,
+              "line": 507,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 476,
+              "line": 508,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 476,
+              "line": 508,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 478,
+              "line": 510,
               "receiver": "snapshotValues",
               "generic_types": []
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 478,
+              "line": 510,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ReadSnapshotInt",
-              "line": 479,
+              "line": 511,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "FormatReceiptMoney",
-              "line": 481,
+              "line": 513,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Snapshot",
-              "line": 484,
+              "line": 516,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Amount",
-              "line": 493,
+              "line": 525,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Min",
-              "line": 495,
+              "line": 527,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 495,
+              "line": 527,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "ReadSnapshotLong",
-              "line": 497,
+              "line": 529,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "AddWithValue",
-              "line": 506,
+              "line": 538,
               "receiver": "design.Parameters",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 507,
+              "line": 539,
               "receiver": "design",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 508,
+              "line": 540,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Deserialize",
-              "line": 511,
+              "line": 543,
               "receiver": "JsonSerializer",
               "generic_types": [
                 "ReceiptDesignDocument"
@@ -143823,85 +144001,85 @@
             },
             {
               "name": "Clear",
-              "line": 514,
+              "line": 546,
               "receiver": "header",
-              "generic_types": []
-            },
-            {
-              "name": "AddRange",
-              "line": 515,
-              "receiver": "header",
-              "generic_types": []
-            },
-            {
-              "name": "Split",
-              "line": 515,
-              "receiver": "<expression>",
-              "generic_types": []
-            },
-            {
-              "name": "Render",
-              "line": 515,
-              "receiver": "template",
-              "generic_types": []
-            },
-            {
-              "name": "AddRange",
-              "line": 516,
-              "receiver": "settlement",
-              "generic_types": []
-            },
-            {
-              "name": "AddWithValue",
-              "line": 523,
-              "receiver": "lineCommand.Parameters",
-              "generic_types": []
-            },
-            {
-              "name": "ExecuteReaderAsync",
-              "line": 524,
-              "receiver": "lineCommand",
-              "generic_types": []
-            },
-            {
-              "name": "Add",
-              "line": 526,
-              "receiver": "rows",
-              "generic_types": []
-            },
-            {
-              "name": "GetDouble",
-              "line": 526,
-              "receiver": "reader",
-              "generic_types": []
-            },
-            {
-              "name": "Add",
-              "line": 529,
-              "receiver": "renderedSettlement",
-              "generic_types": []
-            },
-            {
-              "name": "AddWithValue",
-              "line": 536,
-              "receiver": "tenders.Parameters",
-              "generic_types": []
-            },
-            {
-              "name": "ExecuteReaderAsync",
-              "line": 537,
-              "receiver": "tenders",
               "generic_types": []
             },
             {
               "name": "AddRange",
               "line": 547,
+              "receiver": "header",
+              "generic_types": []
+            },
+            {
+              "name": "Split",
+              "line": 547,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "Render",
+              "line": 547,
+              "receiver": "template",
+              "generic_types": []
+            },
+            {
+              "name": "AddRange",
+              "line": 548,
+              "receiver": "settlement",
+              "generic_types": []
+            },
+            {
+              "name": "AddWithValue",
+              "line": 555,
+              "receiver": "lineCommand.Parameters",
+              "generic_types": []
+            },
+            {
+              "name": "ExecuteReaderAsync",
+              "line": 556,
+              "receiver": "lineCommand",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 558,
+              "receiver": "rows",
+              "generic_types": []
+            },
+            {
+              "name": "GetDouble",
+              "line": 558,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 561,
+              "receiver": "renderedSettlement",
+              "generic_types": []
+            },
+            {
+              "name": "AddWithValue",
+              "line": 568,
+              "receiver": "tenders.Parameters",
+              "generic_types": []
+            },
+            {
+              "name": "ExecuteReaderAsync",
+              "line": 569,
+              "receiver": "tenders",
+              "generic_types": []
+            },
+            {
+              "name": "AddRange",
+              "line": 579,
               "receiver": "renderedSettlement",
               "generic_types": []
             },
             {
               "name": "Empty",
-              "line": 550,
+              "line": 582,
               "receiver": "Array",
               "generic_types": [
                 "string"
@@ -143909,7 +144087,7 @@
             },
             {
               "name": "Print",
-              "line": 551,
+              "line": 583,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -143917,67 +144095,67 @@
           "creates": [
             {
               "type": "PlatformNotSupportedException",
-              "line": 452
+              "line": 484
             },
             {
               "type": "InvalidDataException",
-              "line": 454
+              "line": 486
             },
             {
               "type": "InvalidOperationException",
-              "line": 460
+              "line": 492
             },
             {
               "type": "PaperReceiptSpooler",
-              "line": 460
+              "line": 492
             },
             {
               "type": "InvalidOperationException",
-              "line": 462
+              "line": 494
             },
             {
               "type": "List<string>",
-              "line": 463
+              "line": 495
             },
             {
               "type": "List<string>",
-              "line": 464
+              "line": 496
             },
             {
               "type": "List<PaperReceiptRow>",
-              "line": 465
+              "line": 497
             },
             {
               "type": "InvalidDataException",
-              "line": 474
+              "line": 506
             },
             {
               "type": "Dictionary<string, string?>",
-              "line": 482
+              "line": 514
             },
             {
               "type": "ReceiptTemplateEngine",
-              "line": 501
+              "line": 533
             },
             {
               "type": "ReceiptTemplateContext",
-              "line": 515
+              "line": 547
             },
             {
               "type": "ReceiptTemplateContext",
-              "line": 516
+              "line": 548
             },
             {
               "type": "PaperReceiptRow",
-              "line": 526
+              "line": 558
             },
             {
               "type": "List<string>",
-              "line": 528
+              "line": 560
             },
             {
               "type": "PaperReceiptSpooler",
-              "line": 551
+              "line": 583
             }
           ],
           "errors": [],
@@ -143985,47 +144163,47 @@
             {
               "operation": "FROM",
               "table": "sales_invoices",
-              "line": 471
+              "line": 503
             },
             {
               "operation": "JOIN",
               "table": "store_config",
-              "line": 471
+              "line": 503
             },
             {
               "operation": "FROM",
               "table": "receipt_design_versions",
-              "line": 505
+              "line": 537
             },
             {
               "operation": "FROM",
               "table": "sales_lines",
-              "line": 522
+              "line": 554
             },
             {
               "operation": "FROM",
               "table": "sales_tenders",
-              "line": 535
+              "line": 567
             }
           ],
           "throws": [
             {
-              "line": 452,
+              "line": 484,
               "type": "PlatformNotSupportedException"
             },
             {
-              "line": 474,
+              "line": 506,
               "type": "InvalidDataException"
             }
           ],
           "dynamic_sql": false
         },
         {
-          "id": "M-31559401aef1",
+          "id": "M-526716c7c800",
           "name": "ReadSnapshotValue",
           "owner": "OutputDeviceWorker",
-          "line": 555,
-          "end": 566,
+          "line": 587,
+          "end": 598,
           "signature": "ReadSnapshotValue(string?,string)",
           "returns": "string?",
           "parameters": [
@@ -144042,25 +144220,25 @@
           "calls": [
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 557,
+              "line": 589,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 560,
+              "line": 592,
               "receiver": "JsonDocument",
               "generic_types": []
             },
             {
               "name": "TryGetProperty",
-              "line": 561,
+              "line": 593,
               "receiver": "document.RootElement",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 562,
+              "line": 594,
               "receiver": "value",
               "generic_types": []
             }
@@ -144072,11 +144250,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-e1d26279551e",
+          "id": "M-8d4b6dca47e0",
           "name": "ReadReceiptSnapshotValues",
           "owner": "OutputDeviceWorker",
-          "line": 568,
-          "end": 591,
+          "line": 600,
+          "end": 623,
           "signature": "ReadReceiptSnapshotValues(JsonElement)",
           "returns": "Dictionary<string, string?>",
           "parameters": [
@@ -144089,43 +144267,43 @@
           "calls": [
             {
               "name": "TryGetProperty",
-              "line": 571,
+              "line": 603,
               "receiver": "payload",
               "generic_types": []
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 572,
+              "line": 604,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 572,
+              "line": 604,
               "receiver": "element",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 575,
+              "line": 607,
               "receiver": "JsonDocument",
               "generic_types": []
             },
             {
               "name": "EnumerateObject",
-              "line": 576,
+              "line": 608,
               "receiver": "snapshot.RootElement",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 580,
+              "line": 612,
               "receiver": "property.Value",
               "generic_types": []
             },
             {
               "name": "GetRawText",
-              "line": 581,
+              "line": 613,
               "receiver": "property.Value",
               "generic_types": []
             }
@@ -144133,29 +144311,29 @@
           "creates": [
             {
               "type": "Dictionary<string, string?>",
-              "line": 570
+              "line": 602
             },
             {
               "type": "InvalidDataException",
-              "line": 589
+              "line": 621
             }
           ],
           "errors": [],
           "sql": [],
           "throws": [
             {
-              "line": 589,
+              "line": 621,
               "type": "InvalidDataException"
             }
           ],
           "dynamic_sql": false
         },
         {
-          "id": "M-db829c001c85",
+          "id": "M-92b28dc7292b",
           "name": "Snapshot",
           "owner": "OutputDeviceWorker",
-          "line": 593,
-          "end": 594,
+          "line": 625,
+          "end": 626,
           "signature": "Snapshot(Dictionary<string, string?>,string,string)",
           "returns": "string",
           "parameters": [
@@ -144176,7 +144354,7 @@
           "calls": [
             {
               "name": "TryGetValue",
-              "line": 594,
+              "line": 626,
               "receiver": "values",
               "generic_types": []
             }
@@ -144188,11 +144366,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-714a857bef82",
+          "id": "M-96607a0b6ae2",
           "name": "ReadSnapshotInt",
           "owner": "OutputDeviceWorker",
-          "line": 596,
-          "end": 598,
+          "line": 628,
+          "end": 630,
           "signature": "ReadSnapshotInt(Dictionary<string, string?>,string)",
           "returns": "int?",
           "parameters": [
@@ -144209,13 +144387,13 @@
           "calls": [
             {
               "name": "TryGetValue",
-              "line": 597,
+              "line": 629,
               "receiver": "values",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 597,
+              "line": 629,
               "receiver": "int",
               "generic_types": []
             }
@@ -144227,11 +144405,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-cd468da86b1a",
+          "id": "M-29e8d28b7ac0",
           "name": "ReadSnapshotLong",
           "owner": "OutputDeviceWorker",
-          "line": 600,
-          "end": 602,
+          "line": 632,
+          "end": 634,
           "signature": "ReadSnapshotLong(Dictionary<string, string?>,string)",
           "returns": "long?",
           "parameters": [
@@ -144248,13 +144426,13 @@
           "calls": [
             {
               "name": "TryGetValue",
-              "line": 601,
+              "line": 633,
               "receiver": "values",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 601,
+              "line": 633,
               "receiver": "long",
               "generic_types": []
             }
@@ -144266,11 +144444,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-32926bcc1fc7",
+          "id": "M-62ba85ca800d",
           "name": "FormatReceiptMoney",
           "owner": "OutputDeviceWorker",
-          "line": 604,
-          "end": 616,
+          "line": 636,
+          "end": 648,
           "signature": "FormatReceiptMoney(long,string,int,int,bool)",
           "returns": "string",
           "parameters": [
@@ -144299,13 +144477,13 @@
           "calls": [
             {
               "name": "ScalingFactor",
-              "line": 611,
+              "line": 643,
               "receiver": "MoneyPolicy",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 615,
+              "line": 647,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -144313,14 +144491,14 @@
           "creates": [
             {
               "type": "InvalidDataException",
-              "line": 607
+              "line": 639
             }
           ],
           "errors": [],
           "sql": [],
           "throws": [
             {
-              "line": 607,
+              "line": 639,
               "type": "InvalidDataException"
             }
           ],
@@ -144329,7 +144507,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 619
+      "lines": 651
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Hardware/PaperReceiptLayoutEngine.cs",
@@ -212878,6 +213056,177 @@
       "lines": 433
     },
     {
+      "path": "Software/tests/GetSeek.IntegrationTests/SingleRegisterProductionBootstrapperTests.cs",
+      "sha256": "2d0d9a09e485b8b508c3dea9971cc61eefd19fe91230c23d77c24834d6c00f37",
+      "project": "GetSeek.IntegrationTests",
+      "test": true,
+      "types": [
+        {
+          "name": "SingleRegisterProductionBootstrapperTests",
+          "kind": "ClassDeclaration",
+          "line": 10,
+          "end": 197,
+          "bases": [],
+          "properties": []
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-8da4fe6e4f34",
+          "name": "CreateCleanMigratedDatabaseAsync",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 12,
+          "end": 18,
+          "signature": "CreateCleanMigratedDatabaseAsync()",
+          "returns": "Task<SqliteConnection>",
+          "parameters": [],
+          "attributes": [],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-ee32009c018d",
+          "name": "SingleRegisterStartup_DoesNotRequireDeviceIdentityFile_AndSurvivesRestart",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 20,
+          "end": 44,
+          "signature": "SingleRegisterStartup_DoesNotRequireDeviceIdentityFile_AndSurvivesRestart()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-fd28374448bc",
+          "name": "ProductionStartup_WithEmptyCatalogAndNoShift_InitializesCleanStateWithoutDemoFixtures",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 46,
+          "end": 62,
+          "signature": "ProductionStartup_WithEmptyCatalogAndNoShift_InitializesCleanStateWithoutDemoFixtures()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-f71c7e1c2ced",
+          "name": "PersistedCatalogAndStoreConfig_LoadedWithConfiguredDecimals_AndSurviveRestart",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 64,
+          "end": 128,
+          "signature": "PersistedCatalogAndStoreConfig_LoadedWithConfiguredDecimals_AndSurviveRestart()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-ff9f7aefd68a",
+          "name": "StartupFailure_ProducesExplicitErrorState_AndNeverFallsBackToDemo",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 130,
+          "end": 143,
+          "signature": "StartupFailure_ProducesExplicitErrorState_AndNeverFallsBackToDemo()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-e6e524500cba",
+          "name": "CatalogCurrencyMismatch_CausesStartupError_WithSafeMaskedMessage",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 145,
+          "end": 165,
+          "signature": "CatalogCurrencyMismatch_CausesStartupError_WithSafeMaskedMessage()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-68111269cadc",
+          "name": "InvalidDecimalPlaces_CausesStartupError_WithSafeMaskedMessage",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 167,
+          "end": 182,
+          "signature": "InvalidDecimalPlaces_CausesStartupError_WithSafeMaskedMessage()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-c6d6bf183712",
+          "name": "SafeErrorMasking_NeverExposesInternalExceptionsOrFilePaths",
+          "owner": "SingleRegisterProductionBootstrapperTests",
+          "line": 184,
+          "end": 196,
+          "signature": "SafeErrorMasking_NeverExposesInternalExceptionsOrFilePaths()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 197
+    },
+    {
       "path": "Software/tests/GetSeek.IntegrationTests/SingleShopBootstrapperIntegrationTests.cs",
       "sha256": "411e9e086a861a2c9d0d09d07073fc665cde0ba542b10493e8f0273980958b84",
       "project": "GetSeek.IntegrationTests",
@@ -223543,6 +223892,144 @@
       "constants": [],
       "syntax_errors": [],
       "lines": 42
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
+      "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10",
+      "project": "GetSeek.UnitTests",
+      "test": true,
+      "types": [
+        {
+          "name": "ReviewDecisionsResolutionUnitTests",
+          "kind": "ClassDeclaration",
+          "line": 15,
+          "end": 246,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "SampleCommand",
+          "kind": "RecordDeclaration",
+          "line": 17,
+          "end": 22,
+          "bases": [
+            "ICommand<string>"
+          ],
+          "properties": [
+            {
+              "name": "CommandKey",
+              "line": 19,
+              "expression": "\"sample-cmd-1\""
+            },
+            {
+              "name": "RequiredPermission",
+              "line": 20,
+              "expression": "\"pos.sales.create\""
+            },
+            {
+              "name": "RequiredModule",
+              "line": 21,
+              "expression": "\"CORE\""
+            }
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-bfcbffa95ee3",
+          "name": "WorkspaceLaunchSelector_ResolvesExpectedMode_AndRejectsConflictingExplicitFlags",
+          "owner": "ReviewDecisionsResolutionUnitTests",
+          "line": 24,
+          "end": 55,
+          "signature": "WorkspaceLaunchSelector_ResolvesExpectedMode_AndRejectsConflictingExplicitFlags(string[],string?,WorkspaceLaunchMode,bool)",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Theory",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-e1f9315a359c",
+          "name": "CommandPipeline_PreflightExceptionsBeforeTransaction_AreNormalizedWithoutRollbackAndReleaseLock",
+          "owner": "ReviewDecisionsResolutionUnitTests",
+          "line": 57,
+          "end": 147,
+          "signature": "CommandPipeline_PreflightExceptionsBeforeTransaction_AreNormalizedWithoutRollbackAndReleaseLock(string)",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Theory",
+            "InlineData",
+            "InlineData",
+            "InlineData",
+            "InlineData"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-a4a9664b2c02",
+          "name": "CommandPipeline_PreflightCancellation_ReturnsOperationCancelledWithoutRollback",
+          "owner": "ReviewDecisionsResolutionUnitTests",
+          "line": 149,
+          "end": 188,
+          "signature": "CommandPipeline_PreflightCancellation_ReturnsOperationCancelledWithoutRollback()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-5cbaaecce8ba",
+          "name": "OutputDeviceWorker_DeduplicatesContiguousPreClaimCycleErrors_AndLogsAgainAfterRecovery",
+          "owner": "ReviewDecisionsResolutionUnitTests",
+          "line": 190,
+          "end": 245,
+          "signature": "OutputDeviceWorker_DeduplicatesContiguousPreClaimCycleErrors_AndLogsAgainAfterRecovery()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 246
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/SalaryCalculationTests.cs",

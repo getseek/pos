@@ -2,14 +2,14 @@
 id: PP-DEV-001
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
-evidence: ["E-001", "E-003", "E-004", "E-005", "E-006", "E-009", "E-010", "E-012", "E-013", "E-014"]
+reviewed_on: "2026-10-20"
+evidence: ["E-001", "E-003", "E-004", "E-005", "E-006", "E-009", "E-010", "E-012", "E-013", "E-014", "E-017", "E-018", "E-019", "E-020", "E-021"]
 features: ["PP-F001", "PP-F021", "PP-F022"]
 ---
 
 # Application architecture
 
-<div class="meta">DRAFT · source review 18 October 2026 · documentation foundation D02</div>
+<div class="meta">DRAFT · source review 20 October 2026 · documentation foundation D02</div>
 
 Premium POS is an existing .NET application. Its architecture must be documented from current source; the Restaurant project's proposed Rust modules are a design reference for documentation organization only.
 
@@ -26,9 +26,9 @@ Premium POS is an existing .NET application. Its architecture must be documented
 | `GetSeek.DataService` | Separate Windows service composition and service-owned workspace paths. |
 | `GetSeek.Recovery` | Template placeholder that prints Hello, World; no recovery workflow is implemented ([PP-REV-007](../review/decisions.md#pp-rev-007)). |
 
-The D01 inventory contains 431 application `.cs`, `.axaml` and `.sql` files, 144 test source files, and migration scripts 001–083. An inventory count is not a complete behavior audit.
+The current source inventory contains 432 application `.cs`, `.axaml` and `.sql` files (326 C# application files plus 106 XAML/SQL/project inputs), 146 test source files, and migration scripts 001–084 (`084_CashRoundingTieRule.sql`). An inventory count is not a complete behavior audit.
 
-The [code review atlas](../review/index.md) now expands all eight projects into source-linked method and connection catalogues. [Source-checked rules](../review/source-check.md) correct or constrain current payment, Cafe, attachment and settings claims.
+The [code review atlas](../review/index.md) now expands all eight projects into source-linked method and connection catalogues. [Source-checked rules](../review/source-check.md) correct or constrain current payment, Cafe, attachment, calculation/rounding and settings claims.
 
 ## Storage boundaries
 
@@ -38,6 +38,6 @@ Forward migrations, immutable historical financial records, idempotency and auth
 
 ## Verification discipline
 
-The [verification page](../reference/verification.md) separates source inspection, saved test evidence, new automated checks, manual journeys and physical devices. The three original final TRX files contain 1,228 passing results from October 15, with three existing compile exclusions. No application build/test was rerun in this documentation stage.
+The [verification page](../reference/verification.md) separates source inspection, saved test evidence, new automated checks, manual journeys and physical devices. The three original final TRX files contain 1,228 passing results from October 15 (`E-012`–`E-014`), and targeted fresh automated unit and integration suites (`E-016`–`E-021`) were executed on 20 October 2026 covering calculation/rounding/UOM updates, runtime-log guards, and `PP-REV-001`–`003`/`006` fixes.
 
 For this website's build and validation commands, see [documentation operations](../operations/index.md).

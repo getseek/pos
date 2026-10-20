@@ -22,7 +22,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
           "line": 1,
-          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+          "sha256": "22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
@@ -672,7 +672,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
           "line": 1,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         }
       ]
     },
@@ -717,7 +717,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
           "line": 223,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         }
       ],
       "notes": "Current Cafe checkout is pay-now counter service. These backend order command declarations do not establish current table-service or physical kitchen-output support. See PP-REV-008 and the source-checked rules."

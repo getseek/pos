@@ -1,25 +1,30 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-10-20",
-  "state": "Proposals only; no application changes authorized by a browser selection.",
+  "state": "Updated 2026-10-20: P2 code findings PP-REV-001, PP-REV-002, PP-REV-003, and PP-REV-006 are resolved in source with fresh automated tests; P1 architectural/hardware gates remain explicit boundaries.",
   "findings": [
     {
       "id": "PP-REV-001",
       "title": "Contradictory workspace flags select Demo implicitly",
       "kind": "source-observed behavior",
       "priority": "P2",
-      "runtime_status": "Not executed; deterministic flag expressions inspected.",
-      "observation": "When --real-workspace and --demo-workspace are both present, persistent Demo wins. There is no conflict rejection before the window and bootstrap selection. This creates ambiguity for launch scripts; no production data crossover was observed.",
+      "runtime_status": "Resolved in source and verified by 11 parameterized unit test cases (E-020).",
+      "observation": "WorkspaceLaunchSelector.Select now parses --real-workspace, --demo-workspace, --demo, and GETSEEK_POS_DEMO before window bootstrap. Any combination of two or more explicit CLI workspace flags returns WorkspaceLaunchMode.ConflictingFlags, logs WORKSPACE_FLAG_CONFLICT, presents the startup error screen, and opens no database or worker.",
       "sources": [
         {
-          "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
-          "line": 43,
-          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+          "path": "Software/src/GetSeek.Desktop/Bootstrap/WorkspaceLaunchSelector.cs",
+          "line": 21,
+          "sha256": "786a3db324f060464603a476d775b235ccb6427d39fe51544818f0e83f2c6a64"
         },
         {
           "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
-          "line": 76,
-          "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e"
+          "line": 42,
+          "sha256": "22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f"
+        },
+        {
+          "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
+          "line": 25,
+          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
         }
       ],
       "workflow": "workspaces",
@@ -64,45 +69,36 @@
           ]
         }
       ],
-      "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace."
+      "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace.",
+      "status": "RESOLVED (2026-10-20 · option reject)"
     },
     {
       "id": "PP-REV-002",
       "title": "Pre-transaction pipeline failures use a different error path",
       "kind": "source-observed contract gap",
       "priority": "P2",
-      "runtime_status": "No injected failure. Selected UI callers have their own exception catch; this is not a demonstrated UI crash.",
-      "observation": "Live permission lookup, licensing/clock checks, early idempotency reads and BeginTransactionAsync execute before the inner exception-to-CommandResult catch. Their exceptions can escape ExecuteAsync rather than return SYSTEM_TRANSACTION_ERROR/OPERATION_CANCELLED. A caller may still log and display a safe error.",
+      "runtime_status": "Resolved in source and verified by injected preflight fault/cancellation unit tests (E-020).",
+      "observation": "CommandPipeline.ExecuteAsync wraps all post-gate preflight operations (permission resolution, module license check, clock-tamper check, canonical hash serialization, optimistic idempotency check, and BeginTransactionAsync) inside the unified cancellation/exception boundary. Rollback is invoked only when tx is not null, and the execution gate is always released in finally.",
       "sources": [
         {
           "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-          "line": 110,
-          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+          "line": 60,
+          "sha256": "a21a8c9176e916f7ed7bde36439a87e18604a6fcc0423463d1d5b3e0dffabfaa"
         },
         {
           "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-          "line": 127,
-          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+          "line": 156,
+          "sha256": "a21a8c9176e916f7ed7bde36439a87e18604a6fcc0423463d1d5b3e0dffabfaa"
         },
         {
           "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-          "line": 155,
-          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
+          "line": 230,
+          "sha256": "a21a8c9176e916f7ed7bde36439a87e18604a6fcc0423463d1d5b3e0dffabfaa"
         },
         {
-          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-          "line": 228,
-          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
-        },
-        {
-          "path": "Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs",
-          "line": 240,
-          "sha256": "1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be"
-        },
-        {
-          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 11087,
-          "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58"
+          "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
+          "line": 58,
+          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
         }
       ],
       "workflow": "checkout",
@@ -148,30 +144,41 @@
           ]
         }
       ],
-      "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics."
+      "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics.",
+      "status": "RESOLVED (2026-10-20 · option boundary)"
     },
     {
       "id": "PP-REV-003",
       "title": "Worker-level failures can repeat without a diagnostic",
       "kind": "source-observed observability gap",
       "priority": "P2",
-      "runtime_status": "No device or storage fault injected; no print failure claimed.",
-      "observation": "RunAsync catches Exception from ProcessOneAsync and silently waits for the next cycle. Opening the connection, scheduled-offer processing and reading settings happen before the job-specific try block, so those failures have no job-specific result and the loop catch records no diagnostic.",
+      "runtime_status": "Resolved in source and verified by worker cycle deduplication unit test (E-020).",
+      "observation": "OutputDeviceWorker accepts an optional cycleErrorLogger callback (wired in App.axaml.cs to PosBootstrapper.LogDiagnosticError) and deduplicates contiguous pre-claim cycle exceptions by exception type and message signature, resetting the signature after any healthy cycle.",
       "sources": [
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-          "line": 37,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "line": 11,
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-          "line": 48,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "line": 43,
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-          "line": 60,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "line": 65,
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
+          "line": 102,
+          "sha256": "22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f"
+        },
+        {
+          "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
+          "line": 185,
+          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
         }
       ],
       "workflow": "output",
@@ -217,7 +224,8 @@
           ]
         }
       ],
-      "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling."
+      "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling.",
+      "status": "RESOLVED (2026-10-20 · option log)"
     },
     {
       "id": "PP-REV-004",
@@ -284,7 +292,8 @@
           ]
         }
       ],
-      "rollback": "For a future cutover, restore the prior application profile only under an approved data migration/backup plan; documentation changes alone move no data."
+      "rollback": "For a future cutover, restore the prior application profile only under an approved data migration/backup plan; documentation changes alone move no data.",
+      "status": "OPEN"
     },
     {
       "id": "PP-REV-005",
@@ -297,7 +306,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
           "line": 16,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         },
         {
           "path": "Software/src/GetSeek.Application/Settings/OutputDeviceCommands.cs",
@@ -346,20 +355,26 @@
           ]
         }
       ],
-      "rollback": "Restore the previous reviewed output profile; retain job history and inspect uncertain output before reprinting."
+      "rollback": "Restore the previous reviewed output profile; retain job history and inspect uncertain output before reprinting.",
+      "status": "OPEN"
     },
     {
       "id": "PP-REV-006",
       "title": "Historical passing tests omit excluded files",
       "kind": "verification gap",
       "priority": "P2",
-      "runtime_status": "Historical TRX only; no application build or test rerun.",
-      "observation": "The previous 1,228-pass total is historical evidence. Three integration test source files are excluded from compilation. Their presence in the source inventory does not mean they ran, and syntax parsing does not validate their assertions or current behavior.",
+      "runtime_status": "Audited excluded files; active single-register bootstrapper tests restored and executed (7 passed in E-021).",
+      "observation": "The three Compile Remove entries in GetSeek.IntegrationTests.csproj target retired pre-migration-068 multi-terminal identity transfer APIs (TransferTerminalIdentityAsync / TerminalId). The active single-register production bootstrapper assertions (clean startup, persisted catalog/decimals, safe error masking, currency/precision validation, and restart durability) are compiled and verified in SingleRegisterProductionBootstrapperTests.cs.",
       "sources": [
         {
           "path": "Software/tests/GetSeek.IntegrationTests/GetSeek.IntegrationTests.csproj",
-          "line": 1,
+          "line": 11,
           "sha256": "74984566219e3be0c0ffd842ff18a1dbf32b9c6c37b3d77131cd2955274eb202"
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/SingleRegisterProductionBootstrapperTests.cs",
+          "line": 10,
+          "sha256": "2d0d9a09e485b8b508c3dea9971cc61eefd19fe91230c23d77c24834d6c00f37"
         }
       ],
       "evidence_ids": [
@@ -409,7 +424,8 @@
           ]
         }
       ],
-      "rollback": "Revert test-only changes in their future isolated checkout; leave production data untouched."
+      "rollback": "Revert test-only changes in their future isolated checkout; leave production data untouched.",
+      "status": "RESOLVED (2026-10-20 · option audit)"
     },
     {
       "id": "PP-REV-007",
@@ -467,7 +483,8 @@
           ]
         }
       ],
-      "rollback": "Documentation-only classification moves no data. Future packaging or recovery changes require their own rollback and restore rehearsal."
+      "rollback": "Documentation-only classification moves no data. Future packaging or recovery changes require their own rollback and restore rehearsal.",
+      "status": "OPEN"
     },
     {
       "id": "PP-REV-008",
@@ -489,8 +506,8 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-          "line": 223,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "line": 254,
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
@@ -545,7 +562,8 @@
           ]
         }
       ],
-      "rollback": "Documentation-only scope changes move no data. A future consumer rollback must preserve job history and treat interrupted output as uncertain."
+      "rollback": "Documentation-only scope changes move no data. A future consumer rollback must preserve job history and treat interrupted output as uncertain.",
+      "status": "OPEN"
     }
   ]
 }

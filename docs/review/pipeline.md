@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
 
-This map follows the inspected `ExecuteAsync` control flow. The in-transaction block has cancellation/exception normalization. Preflight exceptions can reach the caller; see [PP-REV-002](decisions.md#pp-rev-002).
+This map follows the inspected `ExecuteAsync` control flow. Both the post-gate preflight block and the in-transaction block share a unified cancellation/exception normalization boundary (`PP-REV-002` option `boundary`), rolling back only when an active transaction was opened.
 
 ## Session and preflight
 
@@ -30,11 +30,11 @@ flowchart TD
     Permission -->|allowed| License["Required module licensed; clock check valid"]
     License -->|denied| Restricted["LICENSE_EXPIRED or SECURITY_CLOCK_TAMPER; release gate"]
     License -->|allowed| Next["Continue to durable idempotency map"]
-    Permission -.->|dependency throws| Caller["Exception reaches caller; finally releases gate"]
-    License -.->|dependency throws| Caller
+    Permission -.->|dependency throws| Boundary["Normalized to OPERATION_CANCELLED or SYSTEM_TRANSACTION_ERROR; finally releases gate"]
+    License -.->|dependency throws| Boundary
 ```
 
-Key generation, clock access, serialization and other preflight operations can also throw. Only cancellation while waiting for the gate is normalized in that wait block. See [PP-REV-002](decisions.md#pp-rev-002).
+Preflight permission resolution, licensing/clock checks, serialization, optimistic idempotency reads, and `BeginTransactionAsync` are wrapped inside the post-gate cancellation/exception boundary (`PP-REV-002`). If a preflight step fails before a transaction starts, no rollback is attempted and the gate is released in `finally`.
 
 ## Durable idempotency and transaction entry
 
@@ -43,8 +43,8 @@ flowchart TD
     Hash["Serialize/hash command; optimistic durable key lookup"] --> Exists{"Existing key?"}
     Exists -->|hash differs| Conflict["IDEMPOTENCY_CONFLICT"]
     Exists -->|same hash and usable result| Cached["CACHED_IDEMPOTENT_RESULT"]
-    Exists -->|new key or same hash without usable result| Begin["BeginTransactionAsync: outside inner catch"]
-    Begin -->|throws| Caller["Exception reaches caller; finally releases gate"]
+    Exists -->|new key or same hash without usable result| Begin["BeginTransactionAsync: inside outer boundary"]
+    Begin -->|throws| Boundary["Normalized to OPERATION_CANCELLED or SYSTEM_TRANSACTION_ERROR; no rollback; release gate"]
     Begin -->|started| Again["Recheck durable key inside transaction"]
     Again -->|already committed| RB["Roll back the new transaction"]
     RB -->|different hash| Conflict
@@ -53,10 +53,10 @@ flowchart TD
     Again -->|not committed| Live["Recheck every permission under transaction"]
     Live -->|denied| Deny["Rollback; AUTH_UNAUTHORIZED"]
     Live -->|allowed| Handler["Continue to handler and commit map"]
-    Hash -.->|throws| Caller
+    Hash -.->|throws| Boundary
 ```
 
-Existing-result deserialization and the under-transaction checks have the exception behavior of their enclosing block. An unusable optimistic cache entry is not permission to repeat a committed financial action; the durable check inside the writer transaction decides the outcome.
+Existing-result deserialization and the under-transaction checks share the outer boundary, with `RollbackAsync` gated on whether `tx is not null`. An unusable optimistic cache entry is not permission to repeat a committed financial action; the durable check inside the writer transaction decides the outcome.
 
 ## Handler, audit and commit
 
@@ -78,7 +78,7 @@ flowchart TD
     System --> Finally
 ```
 
-The inner catch covers the under-transaction recheck, permission checks, handler, audit, idempotency save and commit, including failures of explicit rollback attempts. Diagram exception arrows are representative entry points into that enclosing catch, not a separate catch for each node. Logging and rollback are best effort; a generated diagnostic ID does not prove that a log was written. A commit exception does not by itself prove that nothing was committed.
+The boundary covers preflight checks, transaction creation, under-transaction rechecks, permission checks, handler execution, audit, idempotency save and commit. Rollback is executed only when a transaction has begun (`tx is not null`). Logging and rollback are best effort; a generated diagnostic ID does not prove that a log was written. A commit exception does not by itself prove that nothing was committed.
 
 The gate is local to a pipeline instance. Durable idempotency and SQLite transaction checks add safeguards; no distributed exactly-once guarantee is made.
 
@@ -91,7 +91,7 @@ The gate is local to a pipeline instance. Durable idempotency and SQLite transac
 | Cached success | Display the recorded result; avoid a second physical output action. |
 | Handler failure | Transaction rollback is requested; inspect the stable code and its handler context. |
 | Unexpected transaction exception | Safe diagnostic reference, best-effort rollback; inspect the recorded outcome before retry. |
-| Preflight dependency exception | Caller may report a safe error; proposed standardization is under PP-REV-002. |
+| Preflight dependency exception | Normalized at the pipeline boundary (`SYSTEM_TRANSACTION_ERROR` or `OPERATION_CANCELLED`) without rolling back an unstarted transaction (`PP-REV-002`). |
 | Commit outcome uncertain to caller | Reconcile by durable key/result rather than assuming failure means no commit. |
 
 ## Source

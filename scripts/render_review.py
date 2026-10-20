@@ -115,7 +115,7 @@ Desktop and DataService are distinct source compositions. The diagram does not a
 ('Desktop storage/bootstrap','PosBootstrapper.cs','local composition inspected; no workspace opened'),('Separate service storage','DataServiceComposition.cs','fixed service paths inspected; no service started'),('Supported/blocked service routes','DataServiceRequestRouter.cs','router switch includes explicit not-ready fallback'),('Physical queue processing','OutputDeviceWorker.cs','spool acceptance is distinct from physical confirmation'),('Recovery executable','GetSeek.Recovery/Program.cs','template output only; no recovery workflow implemented')])
     runtime+='\nThe [workspace map](workspaces.md), [service map](service.md), [migration map](migrations.md) and [output map](output.md) expand these boundaries.\n'
     add('runtime','Runtime and integration map',runtime)
-    pipeline='''This map follows the inspected `ExecuteAsync` control flow. The in-transaction block has cancellation/exception normalization. Preflight exceptions can reach the caller; see [PP-REV-002](decisions.md#pp-rev-002).
+    pipeline='''This map follows the inspected `ExecuteAsync` control flow. Both the post-gate preflight block and the in-transaction block share a unified cancellation/exception normalization boundary (`PP-REV-002` option `boundary`), rolling back only when an active transaction was opened.
 
 ## Session and preflight
 
@@ -134,11 +134,11 @@ flowchart TD
     Permission -->|allowed| License["Required module licensed; clock check valid"]
     License -->|denied| Restricted["LICENSE_EXPIRED or SECURITY_CLOCK_TAMPER; release gate"]
     License -->|allowed| Next["Continue to durable idempotency map"]
-    Permission -.->|dependency throws| Caller["Exception reaches caller; finally releases gate"]
-    License -.->|dependency throws| Caller
+    Permission -.->|dependency throws| Boundary["Normalized to OPERATION_CANCELLED or SYSTEM_TRANSACTION_ERROR; finally releases gate"]
+    License -.->|dependency throws| Boundary
 ```
 
-Key generation, clock access, serialization and other preflight operations can also throw. Only cancellation while waiting for the gate is normalized in that wait block. See [PP-REV-002](decisions.md#pp-rev-002).
+Preflight permission resolution, licensing/clock checks, serialization, optimistic idempotency reads, and `BeginTransactionAsync` are wrapped inside the post-gate cancellation/exception boundary (`PP-REV-002`). If a preflight step fails before a transaction starts, no rollback is attempted and the gate is released in `finally`.
 
 ## Durable idempotency and transaction entry
 
@@ -147,8 +147,8 @@ flowchart TD
     Hash["Serialize/hash command; optimistic durable key lookup"] --> Exists{"Existing key?"}
     Exists -->|hash differs| Conflict["IDEMPOTENCY_CONFLICT"]
     Exists -->|same hash and usable result| Cached["CACHED_IDEMPOTENT_RESULT"]
-    Exists -->|new key or same hash without usable result| Begin["BeginTransactionAsync: outside inner catch"]
-    Begin -->|throws| Caller["Exception reaches caller; finally releases gate"]
+    Exists -->|new key or same hash without usable result| Begin["BeginTransactionAsync: inside outer boundary"]
+    Begin -->|throws| Boundary["Normalized to OPERATION_CANCELLED or SYSTEM_TRANSACTION_ERROR; no rollback; release gate"]
     Begin -->|started| Again["Recheck durable key inside transaction"]
     Again -->|already committed| RB["Roll back the new transaction"]
     RB -->|different hash| Conflict
@@ -157,10 +157,10 @@ flowchart TD
     Again -->|not committed| Live["Recheck every permission under transaction"]
     Live -->|denied| Deny["Rollback; AUTH_UNAUTHORIZED"]
     Live -->|allowed| Handler["Continue to handler and commit map"]
-    Hash -.->|throws| Caller
+    Hash -.->|throws| Boundary
 ```
 
-Existing-result deserialization and the under-transaction checks have the exception behavior of their enclosing block. An unusable optimistic cache entry is not permission to repeat a committed financial action; the durable check inside the writer transaction decides the outcome.
+Existing-result deserialization and the under-transaction checks share the outer boundary, with `RollbackAsync` gated on whether `tx is not null`. An unusable optimistic cache entry is not permission to repeat a committed financial action; the durable check inside the writer transaction decides the outcome.
 
 ## Handler, audit and commit
 
@@ -182,7 +182,7 @@ flowchart TD
     System --> Finally
 ```
 
-The inner catch covers the under-transaction recheck, permission checks, handler, audit, idempotency save and commit, including failures of explicit rollback attempts. Diagram exception arrows are representative entry points into that enclosing catch, not a separate catch for each node. Logging and rollback are best effort; a generated diagnostic ID does not prove that a log was written. A commit exception does not by itself prove that nothing was committed.
+The boundary covers preflight checks, transaction creation, under-transaction rechecks, permission checks, handler execution, audit, idempotency save and commit. Rollback is executed only when a transaction has begun (`tx is not null`). Logging and rollback are best effort; a generated diagnostic ID does not prove that a log was written. A commit exception does not by itself prove that nothing was committed.
 
 The gate is local to a pipeline instance. Durable idempotency and SQLite transaction checks add safeguards; no distributed exactly-once guarantee is made.
 
@@ -195,7 +195,7 @@ The gate is local to a pipeline instance. Durable idempotency and SQLite transac
 | Cached success | Display the recorded result; avoid a second physical output action. |
 | Handler failure | Transaction rollback is requested; inspect the stable code and its handler context. |
 | Unexpected transaction exception | Safe diagnostic reference, best-effort rollback; inspect the recorded outcome before retry. |
-| Preflight dependency exception | Caller may report a safe error; proposed standardization is under PP-REV-002. |
+| Preflight dependency exception | Normalized at the pipeline boundary (`SYSTEM_TRANSACTION_ERROR` or `OPERATION_CANCELLED`) without rolling back an unstarted transaction (`PP-REV-002`). |
 | Commit outcome uncertain to caller | Reconcile by durable key/result rather than assuming failure means no commit. |
 
 ## Source
@@ -315,13 +315,13 @@ The source catalogues expose all methods and literal table references so these p
     text=f'**{len(data["bindings"])} literal AXAML Command bindings** were located. This is a binding inventory, not a runtime binding-resolution pass. Compiled bindings, data templates, inherited data contexts, code-behind events and ReactiveCommand creation must be reviewed together.\n\n| Binding expression | View location |\n| --- | --- |\n'
     for b in data['bindings']:text+=f'| {code(b["binding"])} | {source(b["path"],b["line"])} |\n'
     add('bindings','UI command bindings',text)
-    text=f'The extractor parsed **{len(testfiles)} C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. No application test was rerun. The prior historical evidence remains [dated and limited](../reference/verification.md).\n\nThe integration project excludes three historical files; [PP-REV-006](decisions.md#pp-rev-006) gives review options.\n\n'
+    text=f'The extractor parsed **{len(testfiles)} C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.\n\nThe integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).\n\n'
     for f in testfiles+[f for f in data['other_files'] if f['project'] not in projects]:
         text+=f'## {Path(f["path"]).name} {{#{anchor(f["path"])}}}\n\n{code(f["path"])} · SHA-256 {code(f["sha256"])}.\n\n'
         tests=[m for m in f.get('methods',[]) if any(a.split('.')[-1] in {'Fact','Theory','Test','TestCase'} for a in m['attributes'])]
         if tests:text+='Located test declarations: '+', '.join(code(m['name'])+' @'+str(m['line']) for m in tests)+'.\n\n'
     add('tests','Test source and verification limits',text)
-    text='''These are open review proposals. **No Premium POS source has been changed.** P1 review gates prevent overclaiming deployment/hardware acceptance; they are not reproduced production incidents. P2 items are source-observed gaps or verification debt, with the stated limits.
+    text='''These review records track P1 architectural/hardware boundaries and P2 source-observed findings. On 20 October 2026, the four code-fixable P2 items (`PP-REV-001`, `PP-REV-002`, `PP-REV-003`, and `PP-REV-006`) were implemented and covered by fresh automated tests, while the four P1 boundaries (`PP-REV-004`, `PP-REV-005`, `PP-REV-007`, and `PP-REV-008`) remain explicit review gates.
 
 Choose one option per finding to assemble a step-by-step review draft. Choices stay in this browser's local storage and can be exported. They do not submit approval, edit application files, run commands or publish anything. All options and checks remain readable without JavaScript.
 
@@ -329,7 +329,8 @@ Choose one option per finding to assemble a step-by-step review draft. Choices s
 
 '''
     for f in findings:
-        text+=f'## {f["id"]} {{#{f["id"].lower()}}}\n\n### {f["title"]}\n\n**{f["priority"]} · {f["kind"]} · OPEN.** {f["runtime_status"]}\n\n{f["observation"]}\n\nEvidence: {refs(f["sources"])}. [Workflow map]({f["workflow"]}.md).\n\n'
+        status_label=f.get("status","OPEN")
+        text+=f'## {f["id"]} {{#{f["id"].lower()}}}\n\n### {f["title"]}\n\n**{f["priority"]} · {f["kind"]} · {status_label}.** {f["runtime_status"]}\n\n{f["observation"]}\n\nEvidence: {refs(f["sources"])}. [Workflow map]({f["workflow"]}.md).\n\n'
         text+=f'<section class="review-choice" data-review-id="{f["id"]}" data-review-title="{html.escape(f["title"],quote=True)}">\n<label for="choice-{f["id"]}">Review choice for {f["id"]}</label>\n<select id="choice-{f["id"]}" data-review-select><option value="">Choose an option…</option>'
         text+=''.join(f'<option value="{o["id"]}">{html.escape(o["title"])}</option>' for o in f['options'])+'</select>\n</section>\n\n'
         for o in f['options']:
@@ -341,7 +342,7 @@ Choose one option per finding to assemble a step-by-step review draft. Choices s
     table_page={t['name']:'schema-'+str(i//12+1).zfill(2)+'.md' for i,t in enumerate(tables)}
     schema_intro=f'''## Reconstruction evidence
 
-All **83 migration SQL files** were replayed sequentially into an ephemeral **SQLite {data['schema']['sqlite_version']} `:memory:`** connection. This produced **{len(tables)} tables**, **{sum(len(t['columns']) for t in tables)} columns** and **{sum(len(t['foreign_keys']) for t in tables)} foreign-key column mappings**. `PRAGMA foreign_key_check` returned no violations in this synthetic seeded reconstruction.
+All **{len(data['schema']['migrations'])} migration SQL files** were replayed sequentially into an ephemeral **SQLite {data['schema']['sqlite_version']} `:memory:`** connection. This produced **{len(tables)} tables**, **{sum(len(t['columns']) for t in tables)} columns** and **{sum(len(t['foreign_keys']) for t in tables)} foreign-key column mappings**. `PRAGMA foreign_key_check` returned no violations in this synthetic seeded reconstruction.
 
 This does not exercise the .NET migration runner, its transaction behavior, upgrades of shop data, runtime SQLite version or live database integrity. No real application database was opened. The `schema_version` table was created as the runner does, and synthetic version rows were added between scripts. See [migration lifecycle](migrations.md).
 

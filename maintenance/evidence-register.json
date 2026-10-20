@@ -21,7 +21,7 @@
       "id": "E-002",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Desktop/App.axaml.cs",
-      "sha256": "e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e",
+      "sha256": "22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f",
       "reviewed_on": "2026-10-18",
       "claim": "Explicit --real-workspace/--demo-workspace selection is distinct from the legacy --demo preview."
     },
@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "f03d6bcb76c1d539b2f5e45ac74975c05155dfc8a9126d3352ccbe2bb6e0d86b",
+      "sha256": "e7d2aa854e86d99fd77c483b3eeb0fe4e6f090512a0af52a163b8a8fc13ab837",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -344,6 +344,72 @@
         "queuing": "2026-10-20T17:52:04.6220895+07:00",
         "start": "2026-10-20T17:52:02.7398043+07:00",
         "finish": "2026-10-20T17:53:00.3888360+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-020",
+      "kind": "fresh-automated",
+      "path": "Software/TestResults/unit-tests-2026-10-20-rev-fixes.trx",
+      "sha256": "5aa40a5387e7db089c54de4a2519b93d25d4a3ec54a13398810dfbf92398de94",
+      "reviewed_on": "2026-10-20",
+      "claim": "Fresh automated unit test suite execution including PP-REV-001 WorkspaceLaunchSelector conflict rejection, PP-REV-002 CommandPipeline preflight boundary normalization, and PP-REV-003 OutputDeviceWorker cycle-error deduplication. 282 passed, 0 failed.",
+      "counters": {
+        "total": "282",
+        "executed": "282",
+        "passed": "282",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-20T18:12:59.4972892+07:00",
+        "queuing": "2026-10-20T18:12:59.4972895+07:00",
+        "start": "2026-10-20T18:12:58.9184476+07:00",
+        "finish": "2026-10-20T18:13:01.4845435+07:00"
+      },
+      "assembly": "GetSeek.UnitTests"
+    },
+    {
+      "id": "E-021",
+      "kind": "fresh-automated",
+      "path": "Software/TestResults/integration-tests-2026-10-20-rev-fixes.trx",
+      "sha256": "7ca2997aa66d52ebc7524afd5b2d7e284d285d31e27dd84d91007271ea527711",
+      "reviewed_on": "2026-10-20",
+      "claim": "Fresh automated integration test execution of SingleRegisterProductionBootstrapperTests (PP-REV-006 single-register startup, persisted catalog/decimals, and safe startup error masking). 7 passed, 0 failed.",
+      "counters": {
+        "total": "7",
+        "executed": "7",
+        "passed": "7",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-20T18:13:23.7421507+07:00",
+        "queuing": "2026-10-20T18:13:23.7421512+07:00",
+        "start": "2026-10-20T18:13:21.8318721+07:00",
+        "finish": "2026-10-20T18:13:24.9196877+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

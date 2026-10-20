@@ -17,9 +17,9 @@ Project: [GetSeek.Desktop.csproj:1](code-desktop.md#src-2f265207af15). Dependenc
 
 ## App.axaml.cs {#src-de5bb454765b}
 
-<code>Software/src/GetSeek.Desktop/App.axaml.cs</code> · 101 lines.
+<code>Software/src/GetSeek.Desktop/App.axaml.cs</code> · 113 lines.
 
-SHA-256: <code>e515a65d3b838d80917aa145595f7510be197d1ca9d3ad2b8d7c078f65d79d2e</code>.
+SHA-256: <code>22f2fa3069004b41b87a26662c9e666c2a08a95d773bd3570f11b8147e9ae83f</code>.
 
 Declarations: <code>App : Avalonia.Application</code> (line 14).
 
@@ -30,8 +30,8 @@ Declarations: <code>App : Avalonia.Application</code> (line 14).
 | --- | --- | --- |
 | <span id="m-17cc6a23f0c2"></span><code>App.Initialize()</code><br>19–23 | Load @21 | No extracted literal effects. |
 | <span id="m-4e55005e33b1"></span><code>App.OnUiUnhandledException(object?,DispatcherUnhandledExceptionEventArgs)</code><br>25–36 | Report @29; Post @35; Record @35 | No extracted literal effects. |
-| <span id="m-f7abd70f5f1c"></span><code>App.OnFrameworkInitializationCompleted()</code><br>38–70 | Empty(string) @42; Contains @43; Equals @46; GetEnvironmentVariable @46; CreateDemo @52; CreateInitializing @52; Cancel @57; Dispose @58; InitializeAppAsync @66; OnFrameworkInitializationCompleted @69 | No extracted literal effects. |
-| <span id="m-5aca014abc71"></span><code>App.InitializeAppAsync(MainWindow,bool,bool)</code><br>72–100 | BootstrapDemoWorkspaceAsync @75; BootstrapAsync @76; ReferenceEquals @80; Dispose @82; GetDefaultDatabasePath @91; ToString @92; Run @93; ConfigureAwait @95; RunAsync @95; LogDiagnosticError @97 | No extracted literal effects. |
+| <span id="m-f7abd70f5f1c"></span><code>App.OnFrameworkInitializationCompleted()</code><br>38–80 | Select @42; Cancel @50; Dispose @51; ToUpperInvariant @56; ToString @56; NewGuid @56; Report @57; Record @62; CreateStartupError @64; OnFrameworkInitializationCompleted @65; CreateDemo @71; CreateInitializing @71; InitializeAppAsync @76 | No extracted literal effects. |
+| <span id="m-c227f29215ad"></span><code>App.InitializeAppAsync(MainWindow,bool,bool)</code><br>82–112 | BootstrapDemoWorkspaceAsync @85; BootstrapAsync @86; ReferenceEquals @90; Dispose @92; GetDefaultDatabasePath @101; ToString @103; LogDiagnosticError @104; Run @105; ConfigureAwait @107; RunAsync @107 | No extracted literal effects. |
 
 </details>
 
@@ -86,6 +86,23 @@ Declarations: <code>PosBootstrapper</code> (line 19).
 | <span id="m-58efbdaa54ec"></span><code>PosBootstrapper.BootstrapWithConnectionAsync(DbConnection,string?,Func&lt;DbConnection&gt;?,CancellationToken)</code><br>133–138 | BootstrapWithConnectionAsyncCore @138 | No extracted literal effects. |
 | <span id="m-c46379c8160f"></span><code>PosBootstrapper.BootstrapWithConnectionAsyncCore(DbConnection,string?,Func&lt;DbConnection&gt;?,bool,CancellationToken)</code><br>140–282 | ToUpperInvariant @147; ToString @147; NewGuid @147; ConfigureAwait @155; InitializeDisposableDemoWorkspaceAsync @155; MigrateAsync @157; GetStoreProfileAsync @161; GetActiveItemsAsync @164; GetActiveShiftAsync @167; Initialize @170; Lock @171; connectionFactory @182; OpenAsync @200; ApplyWritePolicyAsync @202; CreateCommand @226; ExecuteScalarAsync @229; CreateProduction @232; ConfigureInvoiceReader @245; ConfigureSearchPorts @248; Contains @249; ConfigureSalaryPorts @250; ConfigureTeamsPorts @253; ConfigureExpensePorts @256; RestoreActiveCartAsync @267; LoadManualPaymentSettingsAsync @268; LoadActivityInvoicesAsync @269; LoadSuppliersAsync @270; LoadOutputDevicesAsync @271; AuditDocumentsFolder @272; UpdateDemoSeedingAvailabilityAsync @273; LogDiagnosticError @278; CreateStartupError @280 | FROM users @228 |
 | <span id="m-8c0c809dac65"></span><code>PosBootstrapper.AuditDocumentsFolder(string,string)</code><br>284–308 | GetDefaultDocumentsPath @288; Exists @289; GetFiles @291; ToLowerInvariant @294; GetExtension @294; GetFileName @295; Contains @296; Log @298 | No extracted literal effects. |
+
+</details>
+
+## WorkspaceLaunchSelector.cs {#src-7282538860ec}
+
+<code>Software/src/GetSeek.Desktop/Bootstrap/WorkspaceLaunchSelector.cs</code> · 79 lines.
+
+SHA-256: <code>786a3db324f060464603a476d775b235ccb6427d39fe51544818f0e83f2c6a64</code>.
+
+Declarations: <code>WorkspaceLaunchMode</code> (line 3), <code>WorkspaceLaunchSelection</code> (line 11), <code>WorkspaceLaunchSelector</code> (line 22).
+
+<details markdown>
+<summary>Methods, calls, table effects and failures (1)</summary>
+
+| Method and lines | Invocation syntax | Literal SQL / failures / throws |
+| --- | --- | --- |
+| <span id="m-f1cd6440bec3"></span><code>WorkspaceLaunchSelector.Select(string[]?,string?)</code><br>24–78 | Empty(string) @26; Contains @27; Equals @59; GetEnvironmentVariable @60 | No extracted literal effects. |
 
 </details>
 

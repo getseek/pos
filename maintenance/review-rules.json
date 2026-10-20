@@ -163,8 +163,31 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
-          "line": 223,
-          "sha256": "df50224b41c98c03a9f4e4053a5e916bd0515f0ef58386475f0451c204343d0c"
+          "line": 254,
+          "sha256": "09dbbf92536f697c1fff7b5f358b4034352a985794d3b8c5d31c213c3029a84c"
+        }
+      ],
+      "verification": "source-only; runtime not rerun"
+    },
+    {
+      "id": "PP-RULE-010",
+      "title": "Exclusive tax, cash rounding tie rule, and pricing floor presets",
+      "statement": "CartCalculationService and SaleCommandHandler enforce exclusive tax (TaxMode 2) for new carts, compute service-charge tax share on the discounted net line base, and apply configurable cash rounding tie rules (even vs up, persisted via migration 084_CashRoundingTieRule.sql). PricingCalculationEngine.RoundToIncrement uses floor-to-increment semantics with UI presets 1, 5, 10, 50, 100, 500, 1000, 5000, and 10000.",
+      "sources": [
+        {
+          "path": "Software/src/GetSeek.Application/Sales/CartCalculationService.cs",
+          "line": 142,
+          "sha256": "1f0bc17024c353be060e060b909ac1613fccb27ddd2d6426b3acb13a99d5f7be"
+        },
+        {
+          "path": "Software/src/GetSeek.Domain/Pricing/PricingCalculationEngine.cs",
+          "line": 85,
+          "sha256": "96442e99e5a8b7348bf4a3cf388640cf0e15d86993be6740a8190eb3ba5feea1"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/084_CashRoundingTieRule.sql",
+          "line": 1,
+          "sha256": "97f8481ec4a44207cf7f1f9dfb2ba25fd0f4e8b3cc3004a48086a8b330284ae3"
         }
       ],
       "verification": "source-only; runtime not rerun"

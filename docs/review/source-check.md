@@ -65,6 +65,12 @@ Evidence: [InventoryLossCommandHandler.cs:10](code-application.md#src-ad1ac7eca8
 
 KitchenTicket and KitchenTicketCancel are produced by order handlers. The bundled worker claim SQL selects only receipt, drawer and shelf-label jobs. The missing consumer is PP-REV-008.
 
-Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:223](code-infrastructure.md#src-64d2e3097e9f). Verification: **source-only; runtime not rerun**.
+Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:254](code-infrastructure.md#src-64d2e3097e9f). Verification: **source-only; runtime not rerun**.
+
+## PP-RULE-010: Exclusive tax, cash rounding tie rule, and pricing floor presets
+
+CartCalculationService and SaleCommandHandler enforce exclusive tax (TaxMode 2) for new carts, compute service-charge tax share on the discounted net line base, and apply configurable cash rounding tie rules (even vs up, persisted via migration 084_CashRoundingTieRule.sql). PricingCalculationEngine.RoundToIncrement uses floor-to-increment semantics with UI presets 1, 5, 10, 50, 100, 500, 1000, 5000, and 10000.
+
+Evidence: [CartCalculationService.cs:142](code-application.md#src-32a44e0155db), [PricingCalculationEngine.cs:85](code-domain.md#src-d7d3ebe3099f), [084_CashRoundingTieRule.sql:1](code-infrastructure.md#src-edd8b63847ba). Verification: **source-only; runtime not rerun**.
 
 The full [command pipeline](pipeline.md), [expense map](expenses.md), [legacy order boundary](orders.md) and [findings](decisions.md) show the related branches and proposed changes.

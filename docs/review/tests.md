@@ -11,9 +11,9 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
 
-The extractor parsed **144 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. No application test was rerun. The prior historical evidence remains [dated and limited](../reference/verification.md).
+The extractor parsed **146 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
-The integration project excludes three historical files; [PP-REV-006](decisions.md#pp-rev-006) gives review options.
+The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
 ## FullCheckoutWorkflowAcceptanceTests.cs {#src-4d212effbeff}
 
@@ -487,6 +487,12 @@ Located test declarations: <code>QueueShelfLabelsRequiresEnabledVerifiedProfileA
 
 Located test declarations: <code>CafeCashSale_PersistsInvoice_ZeroKitchenJobs_DeductsStock_AndRecordsActivity</code> @95, <code>CafeManualQrAndBankSale_CashierConfirmed_PersistsInvoice_ZeroKitchenJobs</code> @182, <code>Startup_WithSavedTableServiceInConfig_SafelyNormalizesToCounterService</code> @259, <code>UnpaidRestaurantOrders_BlockProfileSwitch_AndResolveViaAuthorizedCancel</code> @285, <code>CafeCheckout_DoubleTapAndRetry_ProducesExactlyOneInvoice</code> @386.
 
+## SingleRegisterProductionBootstrapperTests.cs {#src-89b12d125dc4}
+
+<code>Software/tests/GetSeek.IntegrationTests/SingleRegisterProductionBootstrapperTests.cs</code> · SHA-256 <code>2d0d9a09e485b8b508c3dea9971cc61eefd19fe91230c23d77c24834d6c00f37</code>.
+
+Located test declarations: <code>SingleRegisterStartup_DoesNotRequireDeviceIdentityFile_AndSurvivesRestart</code> @20, <code>ProductionStartup_WithEmptyCatalogAndNoShift_InitializesCleanStateWithoutDemoFixtures</code> @46, <code>PersistedCatalogAndStoreConfig_LoadedWithConfiguredDecimals_AndSurviveRestart</code> @64, <code>StartupFailure_ProducesExplicitErrorState_AndNeverFallsBackToDemo</code> @130, <code>CatalogCurrencyMismatch_CausesStartupError_WithSafeMaskedMessage</code> @145, <code>InvalidDecimalPlaces_CausesStartupError_WithSafeMaskedMessage</code> @167, <code>SafeErrorMasking_NeverExposesInternalExceptionsOrFilePaths</code> @184.
+
 ## SingleShopBootstrapperIntegrationTests.cs {#src-02e1d48ffcc1}
 
 <code>Software/tests/GetSeek.IntegrationTests/SingleShopBootstrapperIntegrationTests.cs</code> · SHA-256 <code>411e9e086a861a2c9d0d09d07073fc665cde0ba542b10493e8f0273980958b84</code>.
@@ -778,6 +784,12 @@ Located test declarations: <code>DateTokensAndPaddedRandomDigitsAreResolved</cod
 <code>Software/tests/GetSeek.UnitTests/QuantityTests.cs</code> · SHA-256 <code>d256064d63226640ee3524f55d1434739e5eef5c35de0a61871a4ff101f04896</code>.
 
 Located test declarations: <code>BaseAmount_ShouldCalculateAccurately</code> @9, <code>Addition_ShouldCalculateSum_WhenSameUnit</code> @20, <code>Addition_ShouldThrow_WhenIncompatibleUnits</code> @32.
+
+## ReviewDecisionsResolutionUnitTests.cs {#src-3c43bbc15abd}
+
+<code>Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs</code> · SHA-256 <code>0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10</code>.
+
+Located test declarations: <code>WorkspaceLaunchSelector_ResolvesExpectedMode_AndRejectsConflictingExplicitFlags</code> @24, <code>CommandPipeline_PreflightExceptionsBeforeTransaction_AreNormalizedWithoutRollbackAndReleaseLock</code> @57, <code>CommandPipeline_PreflightCancellation_ReturnsOperationCancelledWithoutRollback</code> @149, <code>OutputDeviceWorker_DeduplicatesContiguousPreClaimCycleErrors_AndLogsAgainAfterRecovery</code> @190.
 
 ## SalaryCalculationTests.cs {#src-2c8b502727e5}
 

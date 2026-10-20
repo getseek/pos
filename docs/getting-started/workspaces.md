@@ -2,8 +2,8 @@
 id: PP-START-002
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
-evidence: ["E-001", "E-002", "E-003", "E-011"]
+reviewed_on: "2026-10-20"
+evidence: ["E-001", "E-002", "E-003", "E-011", "E-020"]
 features: ["PP-F002", "PP-F021"]
 ---
 
@@ -35,7 +35,7 @@ flowchart TD
 3. Verify the workspace shown by the application before entering transactions or changing settings.
 4. Use synthetic Demo data for documentation images and demonstrations.
 
-Supply one explicit workspace selector. If both `--real-workspace` and `--demo-workspace` are provided, the current App code selects persistent Demo; this ambiguity is tracked in [PP-REV-001](../review/decisions.md#pp-rev-001).
+Supply one explicit workspace selector. `WorkspaceLaunchSelector.Select` rejects contradictory explicit CLI selectors (such as passing both `--real-workspace` and `--demo-workspace`, or combining either with `--demo`), logs `WORKSPACE_FLAG_CONFLICT`, displays the startup error screen, and opens no database or output worker; see [PP-REV-001](../review/decisions.md#pp-rev-001).
 
 Persistent Demo is intended to remain independent of Real Shop. The current bootstrap explicitly checks that its path does not resolve to the Real database. Source-level separation is not a newly performed reset/migration acceptance test.
 

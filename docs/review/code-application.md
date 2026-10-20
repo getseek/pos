@@ -1487,9 +1487,9 @@ Declarations: <code>RecordSalaryAdjustmentCommand : ICommand&lt;Guid&gt;, ISanit
 
 ## CommandPipeline.cs {#src-b29270acda74}
 
-<code>Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs</code> · 281 lines.
+<code>Software/src/GetSeek.Application/Pipeline/CommandPipeline.cs</code> · 296 lines.
 
-SHA-256: <code>1624f60af41d35f4d872ef6ee8113ff0b0c0f448dc6c4a47a98fcb351243a7be</code>.
+SHA-256: <code>a21a8c9176e916f7ed7bde36439a87e18604a6fcc0423463d1d5b3e0dffabfaa</code>.
 
 Declarations: <code>ICommandHandler</code> (line 10), <code>CommandPipeline : IDisposable</code> (line 15).
 
@@ -1499,8 +1499,8 @@ Declarations: <code>ICommandHandler</code> (line 10), <code>CommandPipeline : ID
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
 | <span id="m-5b79cf26590f"></span><code>ICommandHandler.HandleAsync(TCommand,CommandEnvelope&lt;TCommand&gt;,CancellationToken)</code><br>12–12 | — | No extracted literal effects. |
-| <span id="m-bc4a7c68e225"></span><code>CommandPipeline.ExecuteAsync(TCommand,ICommandHandler&lt;TCommand, TResult&gt;,string?,string?,Guid?,CancellationToken)</code><br>27–274 | Failure(TResult) @38; ConfigureAwait @51; WaitAsync @51; IsNullOrWhiteSpace @75; Equals @77; Trim @77; Trim @77; ToString @93; NewGuid @93; GetAllRequiredPermissions @107; HasPermissionAsync @111; HasPermission @112; IsNullOrEmpty @121; IsModuleLicensed @121; CheckClockTamperAsync @127; Serialize @134; ToHexStringLower @135; HashData @135; GetBytes @135; CheckAsync @138; Deserialize(TResult) @148; Success(TResult) @150; BeginTransactionAsync @155; RollbackAsync @163; HandleAsync @197; GetSanitizedAuditPayload @206; AppendAsync @209; ToString @210; SaveAsync @221; CommitAsync @224; LogFailure @245; Release @272 | SESSION_LOCKED @38; AUTH_UNAUTHORIZED @45; OPERATION_CANCELLED @55; SESSION_LOCKED @63; AUTH_UNAUTHORIZED @68; IDEMPOTENCY_CONFLICT @79; AUTH_UNAUTHORIZED @116; LICENSE_EXPIRED @123; SECURITY_CLOCK_TAMPER @130; IDEMPOTENCY_CONFLICT @143; IDEMPOTENCY_CONFLICT @165; IDEMPOTENCY_RESULT_UNAVAILABLE @168; AUTH_UNAUTHORIZED @180; AUTH_UNAUTHORIZED @191; OPERATION_CANCELLED @238; SYSTEM_TRANSACTION_ERROR @264 |
-| <span id="m-60583f6afd24"></span><code>CommandPipeline.Dispose()</code><br>276–280 | Dispose @278; SuppressFinalize @279 | No extracted literal effects. |
+| <span id="m-bc4a7c68e225"></span><code>CommandPipeline.ExecuteAsync(TCommand,ICommandHandler&lt;TCommand, TResult&gt;,string?,string?,Guid?,CancellationToken)</code><br>27–289 | Failure(TResult) @38; ConfigureAwait @51; WaitAsync @51; IsNullOrWhiteSpace @78; Equals @80; Trim @80; Trim @80; ToString @96; NewGuid @96; GetAllRequiredPermissions @110; HasPermissionAsync @114; HasPermission @115; IsNullOrEmpty @124; IsModuleLicensed @124; CheckClockTamperAsync @130; Serialize @137; ToHexStringLower @138; HashData @138; GetBytes @138; CheckAsync @141; Deserialize(TResult) @151; Success(TResult) @153; BeginTransactionAsync @158; RollbackAsync @165; HandleAsync @199; GetSanitizedAuditPayload @208; AppendAsync @211; ToString @212; SaveAsync @223; CommitAsync @226; LogFailure @250; DisposeAsync @281; Release @287 | SESSION_LOCKED @38; AUTH_UNAUTHORIZED @45; OPERATION_CANCELLED @55; SESSION_LOCKED @66; AUTH_UNAUTHORIZED @71; IDEMPOTENCY_CONFLICT @82; AUTH_UNAUTHORIZED @119; LICENSE_EXPIRED @126; SECURITY_CLOCK_TAMPER @133; IDEMPOTENCY_CONFLICT @146; IDEMPOTENCY_CONFLICT @167; IDEMPOTENCY_RESULT_UNAVAILABLE @170; AUTH_UNAUTHORIZED @182; AUTH_UNAUTHORIZED @193; OPERATION_CANCELLED @243; SYSTEM_TRANSACTION_ERROR @272 |
+| <span id="m-175447f85e5d"></span><code>CommandPipeline.Dispose()</code><br>291–295 | Dispose @293; SuppressFinalize @294 | No extracted literal effects. |
 
 </details>
 

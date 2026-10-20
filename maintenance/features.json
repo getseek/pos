@@ -15,12 +15,15 @@
       "source_review": "source-reviewed",
       "application_verification": "not-rerun",
       "evidence_ids": [
-        "E-010"
+        "E-010",
+        "E-020",
+        "E-021"
       ],
       "target_page": "getting-started/index.md",
       "document_status": "scaffolded",
       "limitations": "Clean-machine installation remains unverified.",
-      "review_map": "review/launch.md"
+      "review_map": "review/launch.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F002",
@@ -36,12 +39,15 @@
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-001",
-        "E-002"
+        "E-002",
+        "E-020",
+        "E-021"
       ],
       "target_page": "getting-started/workspaces.md",
       "document_status": "scaffolded",
       "limitations": "No reset or data-transfer journey executed.",
-      "review_map": "review/workspaces.md"
+      "review_map": "review/workspaces.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F003",
@@ -97,11 +103,15 @@
       ],
       "source_review": "located",
       "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "E-020",
+        "E-021"
+      ],
       "target_page": "operator/invoices.md",
       "document_status": "planned",
       "limitations": "Payment/reversal behavior needs focused guide verification.",
-      "review_map": "review/invoices.md"
+      "review_map": "review/invoices.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F006",
@@ -388,11 +398,15 @@
       ],
       "source_review": "source-reviewed",
       "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "E-020",
+        "E-021"
+      ],
       "target_page": "operator/orders.md",
       "document_status": "planned",
       "limitations": "Current Cafe uses pay-now Counter Service. Backend kitchen ticket producers exist, but the bundled worker does not claim their job types; no physical kitchen route is certified.",
-      "review_map": "review/orders.md"
+      "review_map": "review/orders.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F021",
@@ -408,12 +422,15 @@
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-001",
-        "E-003"
+        "E-003",
+        "E-020",
+        "E-021"
       ],
       "target_page": "operations/application-deployment.md",
       "document_status": "planned",
       "limitations": "Desktop IPC cutover and service-owned migration remain unverified.",
-      "review_map": "review/service.md"
+      "review_map": "review/service.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F022",
@@ -431,12 +448,15 @@
         "E-006",
         "E-017",
         "E-018",
-        "E-019"
+        "E-019",
+        "E-020",
+        "E-021"
       ],
       "target_page": "development/schema.md",
       "document_status": "planned",
       "limitations": "84 scripts observed; no real database opened or migrated.",
-      "review_map": "review/migrations.md"
+      "review_map": "review/migrations.md",
+      "reviewed_on": "2026-10-20"
     },
     {
       "id": "PP-F023",

@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
 
-These are open review proposals. **No Premium POS source has been changed.** P1 review gates prevent overclaiming deployment/hardware acceptance; they are not reproduced production incidents. P2 items are source-observed gaps or verification debt, with the stated limits.
+These review records track P1 architectural/hardware boundaries and P2 source-observed findings. On 20 October 2026, the four code-fixable P2 items (`PP-REV-001`, `PP-REV-002`, `PP-REV-003`, and `PP-REV-006`) were implemented and covered by fresh automated tests, while the four P1 boundaries (`PP-REV-004`, `PP-REV-005`, `PP-REV-007`, and `PP-REV-008`) remain explicit review gates.
 
 Choose one option per finding to assemble a step-by-step review draft. Choices stay in this browser's local storage and can be exported. They do not submit approval, edit application files, run commands or publish anything. All options and checks remain readable without JavaScript.
 
@@ -21,11 +21,11 @@ Choose one option per finding to assemble a step-by-step review draft. Choices s
 
 ### Contradictory workspace flags select Demo implicitly
 
-**P2 · source-observed behavior · OPEN.** Not executed; deterministic flag expressions inspected.
+**P2 · source-observed behavior · RESOLVED (2026-10-20 · option reject).** Resolved in source and verified by 11 parameterized unit test cases (E-020).
 
-When --real-workspace and --demo-workspace are both present, persistent Demo wins. There is no conflict rejection before the window and bootstrap selection. This creates ambiguity for launch scripts; no production data crossover was observed.
+WorkspaceLaunchSelector.Select now parses --real-workspace, --demo-workspace, --demo, and GETSEEK_POS_DEMO before window bootstrap. Any combination of two or more explicit CLI workspace flags returns WorkspaceLaunchMode.ConflictingFlags, logs WORKSPACE_FLAG_CONFLICT, presents the startup error screen, and opens no database or worker.
 
-Evidence: [App.axaml.cs:43](code-desktop.md#src-de5bb454765b), [App.axaml.cs:76](code-desktop.md#src-de5bb454765b). [Workflow map](workspaces.md).
+Evidence: [WorkspaceLaunchSelector.cs:21](code-desktop.md#src-7282538860ec), [App.axaml.cs:42](code-desktop.md#src-de5bb454765b), [ReviewDecisionsResolutionUnitTests.cs:25](tests.md#src-3c43bbc15abd). [Workflow map](workspaces.md).
 
 <section class="review-choice" data-review-id="PP-REV-001" data-review-title="Contradictory workspace flags select Demo implicitly">
 <label for="choice-PP-REV-001">Review choice for PP-REV-001</label>
@@ -86,11 +86,11 @@ Rollback consideration: Revert the parser/launcher changes together; do not migr
 
 ### Pre-transaction pipeline failures use a different error path
 
-**P2 · source-observed contract gap · OPEN.** No injected failure. Selected UI callers have their own exception catch; this is not a demonstrated UI crash.
+**P2 · source-observed contract gap · RESOLVED (2026-10-20 · option boundary).** Resolved in source and verified by injected preflight fault/cancellation unit tests (E-020).
 
-Live permission lookup, licensing/clock checks, early idempotency reads and BeginTransactionAsync execute before the inner exception-to-CommandResult catch. Their exceptions can escape ExecuteAsync rather than return SYSTEM_TRANSACTION_ERROR/OPERATION_CANCELLED. A caller may still log and display a safe error.
+CommandPipeline.ExecuteAsync wraps all post-gate preflight operations (permission resolution, module license check, clock-tamper check, canonical hash serialization, optimistic idempotency check, and BeginTransactionAsync) inside the unified cancellation/exception boundary. Rollback is invoked only when tx is not null, and the execution gate is always released in finally.
 
-Evidence: [CommandPipeline.cs:110](code-application.md#src-b29270acda74), [CommandPipeline.cs:127](code-application.md#src-b29270acda74), [CommandPipeline.cs:155](code-application.md#src-b29270acda74), [CommandPipeline.cs:228](code-application.md#src-b29270acda74), [CommandPipeline.cs:240](code-application.md#src-b29270acda74), [MainViewModel.cs:11087](code-desktop.md#src-16497b924a99). [Workflow map](checkout.md).
+Evidence: [CommandPipeline.cs:60](code-application.md#src-b29270acda74), [CommandPipeline.cs:156](code-application.md#src-b29270acda74), [CommandPipeline.cs:230](code-application.md#src-b29270acda74), [ReviewDecisionsResolutionUnitTests.cs:58](tests.md#src-3c43bbc15abd). [Workflow map](checkout.md).
 
 <section class="review-choice" data-review-id="PP-REV-002" data-review-title="Pre-transaction pipeline failures use a different error path">
 <label for="choice-PP-REV-002">Review choice for PP-REV-002</label>
@@ -152,11 +152,11 @@ Rollback consideration: Revert the error-boundary/API change; preserve existing 
 
 ### Worker-level failures can repeat without a diagnostic
 
-**P2 · source-observed observability gap · OPEN.** No device or storage fault injected; no print failure claimed.
+**P2 · source-observed observability gap · RESOLVED (2026-10-20 · option log).** Resolved in source and verified by worker cycle deduplication unit test (E-020).
 
-RunAsync catches Exception from ProcessOneAsync and silently waits for the next cycle. Opening the connection, scheduled-offer processing and reading settings happen before the job-specific try block, so those failures have no job-specific result and the loop catch records no diagnostic.
+OutputDeviceWorker accepts an optional cycleErrorLogger callback (wired in App.axaml.cs to PosBootstrapper.LogDiagnosticError) and deduplicates contiguous pre-claim cycle exceptions by exception type and message signature, resetting the signature after any healthy cycle.
 
-Evidence: [OutputDeviceWorker.cs:37](code-infrastructure.md#src-64d2e3097e9f), [OutputDeviceWorker.cs:48](code-infrastructure.md#src-64d2e3097e9f), [OutputDeviceWorker.cs:60](code-infrastructure.md#src-64d2e3097e9f). [Workflow map](output.md).
+Evidence: [OutputDeviceWorker.cs:11](code-infrastructure.md#src-64d2e3097e9f), [OutputDeviceWorker.cs:43](code-infrastructure.md#src-64d2e3097e9f), [OutputDeviceWorker.cs:65](code-infrastructure.md#src-64d2e3097e9f), [App.axaml.cs:102](code-desktop.md#src-de5bb454765b), [ReviewDecisionsResolutionUnitTests.cs:185](tests.md#src-3c43bbc15abd). [Workflow map](output.md).
 
 <section class="review-choice" data-review-id="PP-REV-003" data-review-title="Worker-level failures can repeat without a diagnostic">
 <label for="choice-PP-REV-003">Review choice for PP-REV-003</label>
@@ -346,11 +346,11 @@ Rollback consideration: Restore the previous reviewed output profile; retain job
 
 ### Historical passing tests omit excluded files
 
-**P2 · verification gap · OPEN.** Historical TRX only; no application build or test rerun.
+**P2 · verification gap · RESOLVED (2026-10-20 · option audit).** Audited excluded files; active single-register bootstrapper tests restored and executed (7 passed in E-021).
 
-The previous 1,228-pass total is historical evidence. Three integration test source files are excluded from compilation. Their presence in the source inventory does not mean they ran, and syntax parsing does not validate their assertions or current behavior.
+The three Compile Remove entries in GetSeek.IntegrationTests.csproj target retired pre-migration-068 multi-terminal identity transfer APIs (TransferTerminalIdentityAsync / TerminalId). The active single-register production bootstrapper assertions (clean startup, persisted catalog/decimals, safe error masking, currency/precision validation, and restart durability) are compiled and verified in SingleRegisterProductionBootstrapperTests.cs.
 
-Evidence: [GetSeek.IntegrationTests.csproj:1](tests.md#src-ae399739da40). [Workflow map](checkout.md).
+Evidence: [GetSeek.IntegrationTests.csproj:11](tests.md#src-ae399739da40), [SingleRegisterProductionBootstrapperTests.cs:10](tests.md#src-89b12d125dc4). [Workflow map](checkout.md).
 
 <section class="review-choice" data-review-id="PP-REV-006" data-review-title="Historical passing tests omit excluded files">
 <label for="choice-PP-REV-006">Review choice for PP-REV-006</label>
@@ -479,7 +479,7 @@ Rollback consideration: Documentation-only classification moves no data. Future 
 
 SendOrderToKitchenCommand records SentToKitchen and enqueues KitchenTicket. Cancellation can enqueue KitchenTicketCancel. OutputDeviceWorker.ClaimAsync selects only ReceiptPrint, DrawerKick and ShelfLabelPrint. The source search found no other kitchen-ticket consumer under Software/src. Queueing a kitchen ticket therefore does not establish a bundled kitchen-print route. The current Cafe UI uses pay-now Counter Service; backend/legacy order handlers must be documented separately.
 
-Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:223](code-infrastructure.md#src-64d2e3097e9f), [MainViewModel.cs:7997](code-desktop.md#src-16497b924a99), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4). [Workflow map](orders.md).
+Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:254](code-infrastructure.md#src-64d2e3097e9f), [MainViewModel.cs:7997](code-desktop.md#src-16497b924a99), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4). [Workflow map](orders.md).
 
 <section class="review-choice" data-review-id="PP-REV-008" data-review-title="Kitchen ticket producers have no bundled worker claim route">
 <label for="choice-PP-REV-008">Review choice for PP-REV-008</label>

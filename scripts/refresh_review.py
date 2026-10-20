@@ -95,7 +95,7 @@ def main():
     snapshot={'schema_version':1,'reviewed_on':DATE,'methodology':raw['extractor'],
         'scope':'Syntax inventory and selected manual control-flow review. No semantic binding, application build, test execution or device operation.',
         'files':files,'other_files':other_files,'projects':projects,'bindings':bindings,'commands':sorted(commands,key=lambda c:c['name']),
-        'schema':{'method':'83 SQL files replayed sequentially into Python SQLite :memory:; not the .NET migration runner or a live database.',
+        'schema':{'method':'84 SQL files replayed sequentially into Python SQLite :memory:; not the .NET migration runner or a live database.',
             'sqlite_version':sqlite3.sqlite_version,'migrations':migrations,'tables':tables,'foreign_key_check':fk_errors}}
     # Only reviewed metadata is retained. Raw syntax calls stay outside publication.
     for f in snapshot['files']:

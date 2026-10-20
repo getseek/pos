@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
 
-This catalogue contains **386 distinct uppercase literal codes** extracted from `Failure(...)` calls in application method bodies. It is an index of code sites, not a claim that every code is reachable or user-visible. Dynamic/propagated codes, exceptions, worker message prefixes and validation outside method bodies may require separate inspection.
+This catalogue contains **387 distinct uppercase literal codes** extracted from `Failure(...)` calls in application method bodies. It is an index of code sites, not a claim that every code is reachable or user-visible. Dynamic/propagated codes, exceptions, worker message prefixes and validation outside method bodies may require separate inspection.
 
 ## Triage route
 
@@ -53,7 +53,7 @@ This catalogue contains **386 distinct uppercase literal codes** extracted from 
 | <code>CART_TAX_STALE</code> | [SaleCommandHandler.IssueAsync:334](code-application.md#src-b90bee551ece) |
 | <code>CASHIER_INACTIVE</code> | [ShiftCommandHandler.HandleAsync:63](code-application.md#src-6edc723e3676) |
 | <code>CASHIER_NOT_FOUND</code> | [ShiftCommandHandler.HandleAsync:57](code-application.md#src-6edc723e3676) |
-| <code>CASH_DISPLAY_PRECISION_EXCEEDED</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:54](code-application.md#src-dc0f9914df25) |
+| <code>CASH_DISPLAY_PRECISION_EXCEEDED</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:57](code-application.md#src-dc0f9914df25) |
 | <code>CATEGORY_BUILTIN</code> | [BatchCommandHandler.HandleAsync:483](code-application.md#src-c097cf593496), [CatalogRegistryCommandHandler.HandleAsync:271](code-application.md#src-1b8d6c18449a) |
 | <code>CATEGORY_CODE_EXISTS</code> | [ExpenseCommandHandler.HandleAsync:68](code-application.md#src-c02b00854044), [ExpenseCommandHandler.HandleAsync:155](code-application.md#src-c02b00854044) |
 | <code>CATEGORY_CODE_REQUIRED</code> | [ExpenseCommandHandler.HandleAsync:109](code-application.md#src-c02b00854044) |
@@ -146,9 +146,10 @@ This catalogue contains **386 distinct uppercase literal codes** extracted from 
 | <code>INVALID_BASE_UOM</code> | [StoreUomPreferenceCommandHandler.HandleAsync:52](code-application.md#src-931326887202) |
 | <code>INVALID_BUYING_PRICE</code> | [CatalogCommandHandler.HandleAsync:49](code-application.md#src-c2d3294fc0a7), [CatalogCommandHandler.HandleAsync:280](code-application.md#src-c2d3294fc0a7) |
 | <code>INVALID_CASHIER_ROLE</code> | [ShiftCommandHandler.HandleAsync:67](code-application.md#src-6edc723e3676) |
-| <code>INVALID_CASH_DISPLAY_DECIMALS</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:30](code-application.md#src-dc0f9914df25) |
-| <code>INVALID_CASH_ROUNDING_INCREMENT</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:34](code-application.md#src-dc0f9914df25) |
-| <code>INVALID_CASH_ROUNDING_MODE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:32](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_CASH_DISPLAY_DECIMALS</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:31](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_CASH_ROUNDING_INCREMENT</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:37](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_CASH_ROUNDING_MODE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:33](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_CASH_ROUNDING_TIE_RULE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:35](code-application.md#src-dc0f9914df25) |
 | <code>INVALID_COMBINATION</code> | [TeamCommandHandler.HandleAsync:67](code-application.md#src-691edb662577) |
 | <code>INVALID_CORRECTION_TYPE</code> | [SalaryPeriodCommandHandler.HandleAsync:870](code-application.md#src-4b1c23ddb697) |
 | <code>INVALID_COST</code> | [CatalogCommandHandler.HandleAsync:45](code-application.md#src-c2d3294fc0a7), [CatalogCommandHandler.HandleAsync:276](code-application.md#src-c2d3294fc0a7), [ExpenseCommandHandler.HandleAsync:200](code-application.md#src-c02b00854044), [ExpenseCommandHandler.HandleAsync:346](code-application.md#src-c02b00854044), [ExpenseCommandHandler.HandleAsync:884](code-application.md#src-c02b00854044), [ExpensePaymentCommandHandler.HandleAsync:241](code-application.md#src-458534a2cf6c), [ExpensePaymentCommandHandler.HandleAsync:691](code-application.md#src-458534a2cf6c) |
@@ -196,10 +197,10 @@ This catalogue contains **386 distinct uppercase literal codes** extracted from 
 | <code>INVALID_SCRAP_FACTOR</code> | [ManufacturingCommandHandler.CreateOrUpdateBomInternalAsync:1530](code-application.md#src-e469f680f9bb) |
 | <code>INVALID_SERIAL_QUANTITY_FRACTIONAL</code> | [KitDecompositionEngine.DecomposeToLeavesAsync:215](code-application.md#src-9cbc6e2603e3), [CartAllocationCommandHandler.HandleAsync:66](code-application.md#src-46ba4855fda6) |
 | <code>INVALID_SERIAL_SELECTION</code> | [InventoryTraceabilityCommandHandler.HandleAsync:58](code-application.md#src-1e2a68301de6) |
-| <code>INVALID_SERVICE_CHARGE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:36](code-application.md#src-dc0f9914df25) |
-| <code>INVALID_SERVICE_CHARGE_BASIS</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:40](code-application.md#src-dc0f9914df25) |
-| <code>INVALID_SERVICE_CHARGE_SCOPE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:38](code-application.md#src-dc0f9914df25) |
-| <code>INVALID_SERVICE_CHARGE_TAX_MODE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:42](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_SERVICE_CHARGE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:39](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_SERVICE_CHARGE_BASIS</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:43](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_SERVICE_CHARGE_SCOPE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:41](code-application.md#src-dc0f9914df25) |
+| <code>INVALID_SERVICE_CHARGE_TAX_MODE</code> | [UpdateCashFinancialSettingsCommandHandler.HandleAsync:45](code-application.md#src-dc0f9914df25) |
 | <code>INVALID_STARTING_FLOAT</code> | [ShiftCommandHandler.HandleAsync:27](code-application.md#src-6edc723e3676) |
 | <code>INVALID_STATUS</code> | [RestaurantOrderCommandHandler.HandleAsync:157](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.HandleAsync:215](code-application.md#src-b930bdf2056c) |
 | <code>INVALID_STORE_NAME</code> | [ApplySettingsCommandHandler.HandleAsync:15](code-application.md#src-87133587a4b1) |
@@ -278,7 +279,7 @@ This catalogue contains **386 distinct uppercase literal codes** extracted from 
 | <code>OFFER_VERSION_STALE</code> | [PriceOfferCommandHandler.HandleAsync:111](code-application.md#src-96b68fcbfd04), [PriceOfferCommandHandler.HandleAsync:145](code-application.md#src-96b68fcbfd04), [PriceOfferCommandHandler.HandleAsync:160](code-application.md#src-96b68fcbfd04) |
 | <code>ON_SHIFT_CASHIER_PROTECTED</code> | [BatchCommandHandler.HandleAsync:269](code-application.md#src-c097cf593496), [TeamCommandHandler.HandleAsync:455](code-application.md#src-691edb662577) |
 | <code>OPENING_BALANCE_ALREADY_EXISTS</code> | [SalaryPeriodCommandHandler.HandleAsync:805](code-application.md#src-4b1c23ddb697) |
-| <code>OPEN_WORK_EXISTS</code> | [ApplySettingsCommandHandler.HandleAsync:140](code-application.md#src-87133587a4b1), [UpdateCashFinancialSettingsCommandHandler.HandleAsync:69](code-application.md#src-dc0f9914df25) |
+| <code>OPEN_WORK_EXISTS</code> | [ApplySettingsCommandHandler.HandleAsync:140](code-application.md#src-87133587a4b1), [UpdateCashFinancialSettingsCommandHandler.HandleAsync:72](code-application.md#src-dc0f9914df25) |
 | <code>OPERATION_CANCELLED</code> | [CommandPipeline.ExecuteAsync:55](code-application.md#src-b29270acda74), [CommandPipeline.ExecuteAsync:238](code-application.md#src-b29270acda74) |
 | <code>OPTION_REQUIRED</code> | [ManufacturingCommandHandler.HandleAsync:46](code-application.md#src-e469f680f9bb) |
 | <code>ORDER_ALREADY_SETTLED</code> | [RestaurantOrderCommandHandler.HandleAsync:251](code-application.md#src-b930bdf2056c) |
@@ -345,7 +346,7 @@ This catalogue contains **386 distinct uppercase literal codes** extracted from 
 | <code>SALARY_PREVIOUS_PERIOD_OPEN</code> | [SalaryPeriodCommandHandler.HandleAsync:382](code-application.md#src-4b1c23ddb697) |
 | <code>SECURITY_CLOCK_TAMPER</code> | [CommandPipeline.ExecuteAsync:130](code-application.md#src-b29270acda74) |
 | <code>SELF_ESCALATION_DENIED</code> | [SetUserPermissionOverrideCommandHandler.HandleAsync:65](code-application.md#src-c7905080003f) |
-| <code>SERIAL_ALREADY_COMMITTED</code> | [CartAllocationCommandHandler.HandleAsync:100](code-application.md#src-46ba4855fda6), [CartAllocationCommandHandler.HandleAsync:115](code-application.md#src-46ba4855fda6), [SaleCommandHandler.IssueAsync:478](code-application.md#src-b90bee551ece), [SaleCommandHandler.IssueAsync:978](code-application.md#src-b90bee551ece) |
+| <code>SERIAL_ALREADY_COMMITTED</code> | [CartAllocationCommandHandler.HandleAsync:100](code-application.md#src-46ba4855fda6), [CartAllocationCommandHandler.HandleAsync:115](code-application.md#src-46ba4855fda6), [SaleCommandHandler.IssueAsync:478](code-application.md#src-b90bee551ece), [SaleCommandHandler.IssueAsync:979](code-application.md#src-b90bee551ece) |
 | <code>SERIAL_ALREADY_EXISTS</code> | [InventoryCommandHandler.HandleAsync:321](code-application.md#src-43bee33cf642), [InventoryCommandHandler.HandleAsync:326](code-application.md#src-43bee33cf642) |
 | <code>SERIAL_COUNT_MISMATCH</code> | [InventoryCommandHandler.HandleAsync:261](code-application.md#src-43bee33cf642) |
 | <code>SERIAL_NOT_AVAILABLE</code> | [InventoryCommandHandler.HandleAsync:569](code-application.md#src-43bee33cf642), [InventoryTraceabilityCommandHandler.HandleAsync:63](code-application.md#src-1e2a68301de6), [CartAllocationCommandHandler.HandleAsync:92](code-application.md#src-46ba4855fda6) |

@@ -737,9 +737,9 @@ Declarations: <code>SqliteExpenseAttachmentService : IExpenseAttachmentService</
 
 ## DatabaseMigrator.cs {#src-03c231a85247}
 
-<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs</code> · 189 lines.
+<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs</code> · 190 lines.
 
-SHA-256: <code>d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498</code>.
+SHA-256: <code>5b8cad1ab5c881746ed3fc3897555a2ed8bfd4c3358e8db781a5dfd51acedf56</code>.
 
 Declarations: <code>DatabaseMigrator</code> (line 6).
 
@@ -748,9 +748,9 @@ Declarations: <code>DatabaseMigrator</code> (line 6).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-497c7c808764"></span><code>DatabaseMigrator.MigrateAsync(SqliteConnection,CancellationToken)</code><br>97–98 | MigrateToVersionAsync @98 | No extracted literal effects. |
-| <span id="m-b9e3e28db031"></span><code>DatabaseMigrator.MigrateToVersionAsync(SqliteConnection,int,CancellationToken)</code><br>101–170 | nameof @104; CreateCommand @106; ConfigureAwait @115; ExecuteNonQueryAsync @115; ExecuteScalarAsync @123; ToInt64 @126; LoadMigrationScriptAsync @136; BeginTransactionAsync @138; AddWithValue @155; ToString @156; CommitAsync @161; RollbackAsync @165 | CREATE TABLE IF NOT EXISTS  schema_version @108; FROM schema_version @122; INSERT INTO schema_version @151 · ArgumentOutOfRangeException @104; rethrow @166 |
-| <span id="m-5263e483661e"></span><code>DatabaseMigrator.LoadMigrationScriptAsync(string,CancellationToken)</code><br>172–188 | Combine @174; Exists @176; ConfigureAwait @178; ReadAllTextAsync @178; GetFullPath @181 | FileNotFoundException @187 |
+| <span id="m-c28e19d6dd66"></span><code>DatabaseMigrator.MigrateAsync(SqliteConnection,CancellationToken)</code><br>98–99 | MigrateToVersionAsync @99 | No extracted literal effects. |
+| <span id="m-ffc6c6e7bac2"></span><code>DatabaseMigrator.MigrateToVersionAsync(SqliteConnection,int,CancellationToken)</code><br>102–171 | nameof @105; CreateCommand @107; ConfigureAwait @116; ExecuteNonQueryAsync @116; ExecuteScalarAsync @124; ToInt64 @127; LoadMigrationScriptAsync @137; BeginTransactionAsync @139; AddWithValue @156; ToString @157; CommitAsync @162; RollbackAsync @166 | CREATE TABLE IF NOT EXISTS  schema_version @109; FROM schema_version @123; INSERT INTO schema_version @152 · ArgumentOutOfRangeException @105; rethrow @167 |
+| <span id="m-0c4778d0b240"></span><code>DatabaseMigrator.LoadMigrationScriptAsync(string,CancellationToken)</code><br>173–189 | Combine @175; Exists @177; ConfigureAwait @179; ReadAllTextAsync @179; GetFullPath @182 | FileNotFoundException @188 |
 
 </details>
 
@@ -1339,7 +1339,7 @@ Declarations: <code>SqliteSearchUsageStore : ISearchUsageWriter</code> (line 8).
 
 <code>Software/src/GetSeek.Infrastructure/Persistence/Resetting/SqliteRealWorkspaceResetService.cs</code> · 494 lines.
 
-SHA-256: <code>4124e8ec1788677f1c9ad6cfbe58aa34cf1bca19cad78617578f7fb0270a7334</code>.
+SHA-256: <code>bcf6fb283c931557e6d1c33ff52582fd915d418368e038f9b0c0de2bce8a9fef</code>.
 
 Declarations: <code>RealResetGroups</code> (line 12), <code>RealResetPreview</code> (line 27), <code>SqliteRealWorkspaceResetService</code> (line 37).
 
@@ -1954,3 +1954,7 @@ Declarations: <code>SqliteSessionUnlockValidator : ISessionUnlockValidator</code
 ### 083_ZReportSalaryExpensesAndWasteSettings.sql {#src-4282e327f848}
 
 <code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/083_ZReportSalaryExpensesAndWasteSettings.sql</code> · 20 lines · SHA-256 <code>ae99807f5c1865b115d692d802ebcb90ecd568d1c59eaaae2008f0ef358d96bf</code>.
+
+### 084_CashRoundingTieRule.sql {#src-edd8b63847ba}
+
+<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/084_CashRoundingTieRule.sql</code> · 4 lines · SHA-256 <code>97f8481ec4a44207cf7f1f9dfb2ba25fd0f4e8b3cc3004a48086a8b330284ae3</code>.

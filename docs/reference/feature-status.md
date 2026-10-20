@@ -36,7 +36,7 @@ These are discovery records for the existing application. **Located** means an e
 | PP-F019 | Receipt jobs and reprints | administrator | source-reviewed | planned | Queue acceptance does not prove physical print/drawer success. |
 | PP-F020 | Order backend and legacy resolution | cashier | source-reviewed | planned | Current Cafe uses pay-now Counter Service. Backend kitchen ticket producers exist, but the bundled worker does not claim their job types; no physical kitchen route is certified. |
 | PP-F021 | DataService storage and recovery | administrator | source-reviewed | planned | Desktop IPC cutover and service-owned migration remain unverified. |
-| PP-F022 | Migration/schema contracts | developer | source-reviewed | planned | 83 scripts observed; no real database opened or migrated. |
+| PP-F022 | Migration/schema contracts | developer | source-reviewed | planned | 84 scripts observed; no real database opened or migrated. |
 | PP-F023 | Procurement and money accounts | manager | source-reviewed | scaffolded | Code routing and failure sites mapped; business journey and device acceptance not rerun. |
 | PP-F024 | Fulfillment, reservations and shipping | operator | source-reviewed | scaffolded | Code routing and failure sites mapped; business journey and device acceptance not rerun. |
 | PP-F025 | Batch previews and changes | administrator | source-reviewed | scaffolded | Code routing and failure sites mapped; business journey and device acceptance not rerun. |

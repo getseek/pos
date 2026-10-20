@@ -401,7 +401,7 @@ Located test declarations: <code>AllBusinessData_Includes_People_SalaryHistory_A
 
 ## SalaryExpensesSchemaTests.cs {#src-ca9bf8db2b9f}
 
-<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>a409a6aa49211a5b2d651e515d646a5d0dd92f6dddbff836ec632f8058a89e24</code>.
+<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>3031075997737d8ba8a997d9b5f7b3000e53aa2c0db20f61fa5253d30d8dbbe0</code>.
 
 Located test declarations: <code>FreshDatabase_MigratesToVersion83Successfully</code> @26, <code>SchemaConstraints_Migration083_ZReportAndWasteSettings_Enforced</code> @39, <code>SchemaConstraints_Migration081_StatementColumnsAndUniqueness_Enforced</code> @86, <code>SchemaConstraints_PeopleAndAgreements_Enforced</code> @242, <code>SchemaConstraints_SalaryPeriodsAndLedger_Enforced</code> @345, <code>SchemaConstraints_ExpensesAndAttachments_Enforced</code> @421, <code>PermissionsAndRoles_SeededCorrectly_AndExplicitDenyWins</code> @461.
 
@@ -519,9 +519,9 @@ Located test declarations: <code>GetPagedActivityInvoices_PaginatesAndSortsWithS
 
 ## Slice6UomDimensionsAndConversionsIntegrationTests.cs {#src-b098b643c015}
 
-<code>Software/tests/GetSeek.IntegrationTests/Slice6UomDimensionsAndConversionsIntegrationTests.cs</code> · SHA-256 <code>58cbc61b703bfd6b4ccd4502f16264e8e74550b61dd029fcd47f45995fd4ef39</code>.
+<code>Software/tests/GetSeek.IntegrationTests/Slice6UomDimensionsAndConversionsIntegrationTests.cs</code> · SHA-256 <code>cdf5b5c6b86b8449ac5555235c41f5745d0c4101e2c2a194bde01088ee0af632</code>.
 
-Located test declarations: <code>Migration023_SeedsDimensionsPreferencesAndMeasurements</code> @61, <code>UomConversionEngine_AccurateRoundTrips</code> @111, <code>UomConversionEngine_ProhibitsCrossDimensionConversion</code> @132, <code>UomConversionEngine_ProhibitsFractionalDiscreteCount</code> @142, <code>UpdateStoreUomPreference_UpdatesPreference_LeavesExistingItemsAndLedgerIntact</code> @157.
+Located test declarations: <code>Migration023_SeedsDimensionsPreferencesAndMeasurements</code> @62, <code>DecimalQuantity_WithSeededUomRegistry_AccurateRoundTrips</code> @112, <code>SeededUomRegistry_ProhibitsCrossDimensionPreferenceAndDistinguishesDimensions</code> @149, <code>DecimalQuantity_ProhibitsFractionalDiscreteCount</code> @180, <code>UpdateStoreUomPreference_UpdatesPreference_LeavesExistingItemsAndLedgerIntact</code> @196.
 
 ## Slice8PricingBatchAndRulesIntegrationTests.cs {#src-e9a0da71bba7}
 
@@ -659,7 +659,7 @@ Located test declarations: <code>GetTeamMembersAsync_UnionOfPeopleAndUnlinkedUse
 
 ## WorkspacePopupPlacementTests.cs {#src-5af19db94557}
 
-<code>Software/tests/GetSeek.IntegrationTests/WorkspacePopupPlacementTests.cs</code> · SHA-256 <code>601e50072984eb686044a8db431d500ab6c77b729a0bc952aab9bb50cb1608ac</code>.
+<code>Software/tests/GetSeek.IntegrationTests/WorkspacePopupPlacementTests.cs</code> · SHA-256 <code>95f2af71b1b568e0273ec19637df83797a19fb1e7c4701358849d63cc8d9a8fd</code>.
 
 ## WorkspaceSearchBoxUiTests.cs {#src-d883f6c5025d}
 
@@ -687,15 +687,15 @@ Located test declarations: <code>ComputeHash_ShouldProduceConsistentSha256</code
 
 ## CartCalculationServiceUnitTests.cs {#src-c8139098eb21}
 
-<code>Software/tests/GetSeek.UnitTests/CartCalculationServiceUnitTests.cs</code> · SHA-256 <code>0794037b236c2fb7b333e623e33f0a7dea23c8b5adf233aaf976df16ebc39c9a</code>.
+<code>Software/tests/GetSeek.UnitTests/CartCalculationServiceUnitTests.cs</code> · SHA-256 <code>5d1b91be8082df66e928462fe8bfa7303c3024a8f87ec54768f517e4fca78f26</code>.
 
-Located test declarations: <code>Calculate_EmptyCart_RejectsPromotion</code> @8, <code>Calculate_InvalidPromoValues_ReturnsError</code> @22, <code>Calculate_FixedPromoExceedsEligibleTotal_ReturnsError</code> @50, <code>Calculate_RetiredIncludedTaxInput_UsesExclusivePolicy</code> @72, <code>Calculate_TaxAddedOnTop_MatchesPlanExample</code> @101, <code>Calculate_ProportionalDiscountRemainderAllocation_SumsExactly</code> @129, <code>Calculate_ZeroDecimalCurrency_OperatesAccurately</code> @170, <code>Calculate_CostFloorBreach_RejectedWithoutSupervisorElevation</code> @199.
+Located test declarations: <code>Calculate_EmptyCart_RejectsPromotion</code> @8, <code>Calculate_InvalidPromoValues_ReturnsError</code> @22, <code>Calculate_FixedPromoExceedsEligibleTotal_ReturnsError</code> @50, <code>Calculate_RetiredIncludedTaxInput_UsesExclusivePolicy</code> @72, <code>Calculate_TaxAddedOnTop_MatchesPlanExample</code> @101, <code>Calculate_ProportionalDiscountRemainderAllocation_SumsExactly</code> @129, <code>Calculate_ZeroDecimalCurrency_OperatesAccurately</code> @170, <code>Calculate_CostFloorBreach_RejectedWithoutSupervisorElevation</code> @199, <code>Calculate_ServiceChargeTax_UsesDiscountedTaxableShare_WhenTaxedLineIsDiscounted</code> @230.
 
 ## CashReceiptAndSettlementUnitTests.cs {#src-346e8096813a}
 
-<code>Software/tests/GetSeek.UnitTests/CashReceiptAndSettlementUnitTests.cs</code> · SHA-256 <code>9d389e6e508aafc1027521d7ac6ea27411071d9c9d867707e84a903839b1ce8d</code>.
+<code>Software/tests/GetSeek.UnitTests/CashReceiptAndSettlementUnitTests.cs</code> · SHA-256 <code>8a75670ad70b8ba1df7c621261a5ec50f1f5ce74f2ceb45223f2add69f249289</code>.
 
-Located test declarations: <code>CashRounding_RecordsSignedDiscountOrCharge</code> @10, <code>CashSettlement_IncludesServiceTaxAndThenRoundsCashDue</code> @27, <code>CashSettlement_NonCashTenderDoesNotApplyCashRounding</code> @42, <code>PaperPagination_KeepsNormalInvoiceRowsAndFinalSettlement</code> @54, <code>PaperPagination_AlwaysReturnsAHeaderAndSettlementPageForEmptyOrder</code> @67, <code>PaperPagination_DoesNotDropTheFinalNonemptyPage</code> @80, <code>PaperPagination_RejectsAnAtomicRowTallerThanPageBody</code> @98, <code>CashDisplayPrecision_DoesNotHideACommittedMinorUnitFraction</code> @108, <code>ReceiptTemplateSyntax_AcceptsOnlyBalancedAllowlistedPlainText</code> @115, <code>ThermalRasterRenderer_WrapsAndSplitsLongReceiptsIntoBoundedRasterBands</code> @127, <code>ReceiptFonts_AreBundled_AndMixedScriptsUseTheSameMeasuredRasterPath</code> @138, <code>ThermalPreviewPng_UsesTheRenderedReceiptRaster</code> @151, <code>PaperPreviewPng_RendersEveryPaginatedPage</code> @161.
+Located test declarations: <code>CashRounding_RecordsSignedDiscountOrCharge</code> @10, <code>CashSettlement_IncludesServiceTaxAndThenRoundsCashDue</code> @27, <code>CashSettlement_NonCashTenderDoesNotApplyCashRounding</code> @42, <code>CashRounding_NearestMidpoint_FollowsConfiguredTieRule</code> @54, <code>PaperPagination_KeepsNormalInvoiceRowsAndFinalSettlement</code> @79, <code>PaperPagination_AlwaysReturnsAHeaderAndSettlementPageForEmptyOrder</code> @92, <code>PaperPagination_DoesNotDropTheFinalNonemptyPage</code> @105, <code>PaperPagination_RejectsAnAtomicRowTallerThanPageBody</code> @123, <code>CashDisplayPrecision_DoesNotHideACommittedMinorUnitFraction</code> @133, <code>ReceiptTemplateSyntax_AcceptsOnlyBalancedAllowlistedPlainText</code> @140, <code>ThermalRasterRenderer_WrapsAndSplitsLongReceiptsIntoBoundedRasterBands</code> @152, <code>ReceiptFonts_AreBundled_AndMixedScriptsUseTheSameMeasuredRasterPath</code> @163, <code>ThermalPreviewPng_UsesTheRenderedReceiptRaster</code> @176, <code>PaperPreviewPng_RendersEveryPaginatedPage</code> @186.
 
 ## CustomerUnitTests.cs {#src-d1ebba3676f7}
 
@@ -717,9 +717,9 @@ Located test declarations: <code>BarcodeScannerWedge_ShouldParseWeighedFreshPlu<
 
 ## InventoryTierEditorTests.cs {#src-e592e8075206}
 
-<code>Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs</code> · SHA-256 <code>a33efe360229d8f4621d62cee80f8b25e77b5774b167ae7d1c0a1cc691faada5</code>.
+<code>Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs</code> · SHA-256 <code>fe246497df99fd3780a9d637dbe928fdd16c3c2ee43e92fa01110fce331eac16</code>.
 
-Located test declarations: <code>TierEditsSelectTheMatchingMode_AndConvertAtTheCommandBoundary</code> @8, <code>LoadingAndCloningValuesDoNotChangeTheSavedMode</code> @26.
+Located test declarations: <code>TierEditsSelectTheMatchingMode_AndConvertAtTheCommandBoundary</code> @8, <code>LoadingAndCloningValuesDoNotChangeTheSavedMode</code> @26, <code>RoundingIncrementPresets_AndFloorHintMicrocopy_MatchExpandedSpecification</code> @34.
 
 ## LocalizationAndVisibleErrorsUnitTests.cs {#src-399b0189d539}
 
@@ -757,9 +757,9 @@ Located test declarations: <code>FromDecimal_ShouldConvertMinorUnitsCorrectly</c
 
 ## PricingCalculationEngineTests.cs {#src-250de7b10546}
 
-<code>Software/tests/GetSeek.UnitTests/PricingCalculationEngineTests.cs</code> · SHA-256 <code>6cac0e5f6c970f96474b94b62c8fe57dd2bebdaa7bc0d127da4edb4c5f2f3186</code>.
+<code>Software/tests/GetSeek.UnitTests/PricingCalculationEngineTests.cs</code> · SHA-256 <code>be01c83d076afc8a565aa54b8af2336c74676b21a74e779b833e9e209e664127</code>.
 
-Located test declarations: <code>Manual_method_returns_the_entered_base_price</code> @19, <code>Markup_cost_applies_target_on_cost_basis</code> @28, <code>Margin_cost_divides_cost_by_one_minus_target</code> @37, <code>Cost_plus_amount_adds_fixed_amount_to_cost_basis</code> @46, <code>Unrounded_candidate_preview_uses_the_same_formula_and_rounding_as_saved_price</code> @55, <code>Margin_cost_with_target_greater_than_or_equal_to_one_throws_invalid_margin_ceiling</code> @77, <code>Rounding_rules_snap_the_base_price</code> @86, <code>Increment_rounding_uses_ceiling_or_floor_at_the_configured_currency_step</code> @99, <code>Increment_rounding_scales_with_zero_and_three_decimal_currencies</code> @115, <code>Display_rounding_increment_must_be_exactly_representable_at_store_precision</code> @132, <code>Increment_conversion_supports_one_and_four_decimal_currencies</code> @149, <code>Increment_rounding_handles_one_and_four_decimal_currencies</code> @161, <code>Ceiling_increment_overflow_is_reported_instead_of_wrapping_minor_units</code> @174, <code>Ending_rounding_compatibility_matches_currency_precision</code> @183, <code>Nearest_half_differs_from_round_to_50_for_upper_cent_amounts</code> @194, <code>System_default_weight_is_used_for_the_tier</code> @202, <code>Tier_weight_minus_one_is_free_but_lower_weights_are_rejected</code> @212, <code>Custom_weight_overrides_the_system_default</code> @225, <code>Fixed_override_wins_over_weights</code> @235, <code>Effective_tier_clamps_inactive_tiers_to_standard</code> @245, <code>Effective_tier_keeps_an_active_tier_within_the_configured_count</code> @252, <code>Effective_tier_falls_back_to_standard_for_unknown_values</code> @259, <code>Cost_floor_adds_the_minimum_margin</code> @266, <code>Cost_floor_is_zero_before_the_first_receipt</code> @273, <code>Below_cost_is_only_flagged_against_a_non_zero_floor</code> @280, <code>Pricing_method_parsing_is_case_insensitive</code> @288, <code>Rounding_rule_parsing_is_case_insensitive</code> @299.
+Located test declarations: <code>Manual_method_returns_the_entered_base_price</code> @19, <code>Markup_cost_applies_target_on_cost_basis</code> @28, <code>Margin_cost_divides_cost_by_one_minus_target</code> @37, <code>Cost_plus_amount_adds_fixed_amount_to_cost_basis</code> @46, <code>Unrounded_candidate_preview_uses_the_same_formula_and_rounding_as_saved_price</code> @55, <code>Margin_cost_with_target_greater_than_or_equal_to_one_throws_invalid_margin_ceiling</code> @77, <code>Rounding_rules_snap_the_base_price</code> @86, <code>Increment_rounding_uses_ceiling_or_floor_at_the_configured_currency_step</code> @99, <code>Increment_rounding_scales_with_zero_and_three_decimal_currencies</code> @115, <code>Display_rounding_increment_must_be_exactly_representable_at_store_precision</code> @132, <code>Increment_conversion_supports_one_and_four_decimal_currencies</code> @149, <code>Increment_rounding_handles_one_and_four_decimal_currencies</code> @161, <code>Ceiling_increment_overflow_is_reported_instead_of_wrapping_minor_units</code> @174, <code>Ending_rounding_compatibility_matches_currency_precision</code> @183, <code>Nearest_half_differs_from_round_to_50_for_upper_cent_amounts</code> @194, <code>System_default_weight_is_used_for_the_tier</code> @202, <code>Tier_weight_minus_one_is_free_but_lower_weights_are_rejected</code> @212, <code>Custom_weight_overrides_the_system_default</code> @225, <code>Fixed_override_wins_over_weights</code> @235, <code>Effective_tier_clamps_inactive_tiers_to_standard</code> @245, <code>Effective_tier_keeps_an_active_tier_within_the_configured_count</code> @252, <code>Effective_tier_falls_back_to_standard_for_unknown_values</code> @259, <code>Cost_floor_adds_the_minimum_margin</code> @266, <code>Cost_floor_is_zero_before_the_first_receipt</code> @273, <code>Below_cost_is_only_flagged_against_a_non_zero_floor</code> @280, <code>Pricing_method_parsing_is_case_insensitive</code> @288, <code>Rounding_rule_parsing_is_case_insensitive</code> @299, <code>ApplyRoundingRule_FloorToIncrement_RoundsDownToMultiplesOf5_50_500_1000_5000_10000</code> @311.
 
 ## PricingOffersAndMassRunUnitTests.cs {#src-5713952dda33}
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-18",
+  "reviewed_on": "2026-10-20",
   "workflows": [
     {
       "id": "PP-MAP-LAUNCH",
@@ -56,7 +56,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Resetting/SqliteRealWorkspaceResetService.cs",
           "line": 1,
-          "sha256": "4124e8ec1788677f1c9ad6cfbe58aa34cf1bca19cad78617578f7fb0270a7334"
+          "sha256": "bcf6fb283c931557e6d1c33ff52582fd915d418368e038f9b0c0de2bce8a9fef"
         }
       ]
     },
@@ -127,7 +127,7 @@
         {
           "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
           "line": 1,
-          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+          "sha256": "4f3041a16f706d0bd3f6bdad77381f259b1f450e0e655c48198f5ed904bb811f"
         }
       ]
     },
@@ -712,7 +712,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 7997,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
@@ -771,7 +771,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
           "line": 1,
-          "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498"
+          "sha256": "5b8cad1ab5c881746ed3fc3897555a2ed8bfd4c3358e8db781a5dfd51acedf56"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionPolicy.cs",

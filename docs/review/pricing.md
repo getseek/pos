@@ -81,7 +81,7 @@ Handler: [ApplyBatchPricingCommandHandler](code-application.md#src-b18b22aba44c)
 
 Declaration: [PricingCommands.cs:43](code-application.md#src-110703c52a80). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmBatchPricingAsync:2416](code-desktop.md#src-974d69a1850f)
+Construction sites: [ConfirmBatchPricingAsync:2423](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ApplyBatchPricingCommandHandler.HandleAsync(ApplyBatchPricingCommand,CommandEnvelope&lt;ApplyBatchPricingCommand&gt;,CancellationToken)](code-application.md#m-1993964377ca).
 
@@ -121,7 +121,7 @@ Handler: [CategoryPricingRuleCommandHandler](code-application.md#src-4883c67861e
 
 Declaration: [CategoryPricingRuleCommands.cs:19](code-application.md#src-2f398be5fc10). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [DeactivateCategoryPricingRuleAsync:2308](code-desktop.md#src-974d69a1850f)
+Construction sites: [DeactivateCategoryPricingRuleAsync:2315](code-desktop.md#src-974d69a1850f)
 
 Handler method: [CategoryPricingRuleCommandHandler.HandleAsync(DeactivateCategoryPricingRuleCommand,CommandEnvelope&lt;DeactivateCategoryPricingRuleCommand&gt;,CancellationToken)](code-application.md#m-a6e3a0a26ffa).
 
@@ -181,7 +181,7 @@ Handler: [QueueShelfLabelPrintCommandHandler](code-application.md#src-590c68d052
 
 Declaration: [ShelfLabelCommands.cs:12](code-application.md#src-590c68d05298). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [QueueSelectedShelfLabelsAsync:4251](code-desktop.md#src-974d69a1850f)
+Construction sites: [QueueSelectedShelfLabelsAsync:4266](code-desktop.md#src-974d69a1850f)
 
 Handler method: [QueueShelfLabelPrintCommandHandler.HandleAsync(QueueShelfLabelPrintCommand,CommandEnvelope&lt;QueueShelfLabelPrintCommand&gt;,CancellationToken)](code-application.md#m-cbc484ac38a3).
 
@@ -201,7 +201,7 @@ Handler: [ResolveKitPriceAlertCommandHandler](code-application.md#src-4faee8fa1e
 
 Declaration: [KitPriceAlertCommands.cs:7](code-application.md#src-4faee8fa1e75). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SetKitPriceAlertStatusAsync:4233](code-desktop.md#src-974d69a1850f)
+Construction sites: [SetKitPriceAlertStatusAsync:4248](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ResolveKitPriceAlertCommandHandler.HandleAsync(ResolveKitPriceAlertCommand,CommandEnvelope&lt;ResolveKitPriceAlertCommand&gt;,CancellationToken)](code-application.md#m-e7c7d8c5187a).
 
@@ -221,7 +221,7 @@ Handler: [ResolvePriceChangeProposalCommandHandler](code-application.md#src-16f1
 
 Declaration: [PriceChangeProposalCommands.cs:24](code-application.md#src-e9a59f73b4f4). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [ResolveProposalAsync:1773](code-desktop.md#src-974d69a1850f)
+Construction sites: [ResolveProposalAsync:1780](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ResolvePriceChangeProposalCommandHandler.HandleAsync(ResolvePriceChangeProposalCommand,CommandEnvelope&lt;ResolvePriceChangeProposalCommand&gt;,CancellationToken)](code-application.md#m-b35a2eef1f26).
 
@@ -241,7 +241,7 @@ Handler: [CategoryPricingRuleCommandHandler](code-application.md#src-4883c67861e
 
 Declaration: [CategoryPricingRuleCommands.cs:6](code-application.md#src-2f398be5fc10). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveCategoryPricingRuleAsync:2275](code-desktop.md#src-974d69a1850f)
+Construction sites: [SaveCategoryPricingRuleAsync:2282](code-desktop.md#src-974d69a1850f)
 
 Handler method: [CategoryPricingRuleCommandHandler.HandleAsync(SaveCategoryPricingRuleCommand,CommandEnvelope&lt;SaveCategoryPricingRuleCommand&gt;,CancellationToken)](code-application.md#m-3d5f70979b42).
 
@@ -281,7 +281,7 @@ Handler: [PriceOfferCommandHandler](code-application.md#src-96b68fcbfd04). Resul
 
 Declaration: [PriceOfferCommands.cs:9](code-application.md#src-96b68fcbfd04). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SavePriceOfferAsync:4082](code-desktop.md#src-974d69a1850f)
+Construction sites: [SavePriceOfferAsync:4097](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceOfferCommandHandler.HandleAsync(SavePriceOfferCommand,CommandEnvelope&lt;SavePriceOfferCommand&gt;,CancellationToken)](code-application.md#m-4ef83743558d).
 
@@ -301,7 +301,7 @@ Handler: [PriceOfferCommandHandler](code-application.md#src-96b68fcbfd04). Resul
 
 Declaration: [PriceOfferCommands.cs:30](code-application.md#src-96b68fcbfd04). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [TogglePriceOfferAsync:4101](code-desktop.md#src-974d69a1850f)
+Construction sites: [TogglePriceOfferAsync:4116](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceOfferCommandHandler.HandleAsync(SetPriceOfferStatusCommand,CommandEnvelope&lt;SetPriceOfferStatusCommand&gt;,CancellationToken)](code-application.md#m-71f01a823c9f).
 
@@ -341,7 +341,7 @@ Handler: [SetShelfLabelStatusCommandHandler](code-application.md#src-590c68d0529
 
 Declaration: [ShelfLabelCommands.cs:104](code-application.md#src-590c68d05298). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SetSelectedShelfLabelStatusAsync:4265](code-desktop.md#src-974d69a1850f)
+Construction sites: [SetSelectedShelfLabelStatusAsync:4280](code-desktop.md#src-974d69a1850f)
 
 Handler method: [SetShelfLabelStatusCommandHandler.HandleAsync(SetShelfLabelStatusCommand,CommandEnvelope&lt;SetShelfLabelStatusCommand&gt;,CancellationToken)](code-application.md#m-4a4c4f3271bc).
 

@@ -69,7 +69,7 @@ Handler: [ApplySettingsCommandHandler](code-application.md#src-87133587a4b1). Re
 
 Declaration: [ApplySettingsCommand.cs:5](code-application.md#src-a56b2ff06b35). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [ApplySettingsAsync:6999](code-desktop.md#src-16497b924a99)
+Construction sites: [ApplySettingsAsync:7014](code-desktop.md#src-16497b924a99)
 
 Handler method: [ApplySettingsCommandHandler.HandleAsync(ApplySettingsCommand,CommandEnvelope&lt;ApplySettingsCommand&gt;,CancellationToken)](code-application.md#m-0875a2f0acb6).
 
@@ -89,7 +89,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:27](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [ConfirmThermalPrinterPhysicalOutputAsync:6583](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmThermalPrinterPhysicalOutputAsync:6596](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(ConfirmThermalPhysicalOutputCommand,CommandEnvelope&lt;ConfirmThermalPhysicalOutputCommand&gt;,CancellationToken)](code-application.md#m-7dd40ed62d92).
 
@@ -109,7 +109,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:22](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [VerifyThermalPrinterAsync:6543](code-desktop.md#src-16497b924a99)
+Construction sites: [VerifyThermalPrinterAsync:6556](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(RecordThermalTestSpoolAcceptedCommand,CommandEnvelope&lt;RecordThermalTestSpoolAcceptedCommand&gt;,CancellationToken)](code-application.md#m-9c80dc7d5eaf).
 
@@ -129,7 +129,7 @@ Handler: [SaveManualPaymentDisplayHandler](code-infrastructure.md#src-9b4adc7a5d
 
 Declaration: [SaveManualPaymentDisplayCommand.cs:5](code-application.md#src-89b0251a9781). <code>RequiredPermission = &quot;pos.payments.configure&quot;</code>
 
-Construction sites: [ApplyManualPaymentSettingsAsync:5364](code-desktop.md#src-16497b924a99)
+Construction sites: [ApplyManualPaymentSettingsAsync:5377](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveManualPaymentDisplayHandler.HandleAsync(SaveManualPaymentDisplayCommand,CommandEnvelope&lt;SaveManualPaymentDisplayCommand&gt;,CancellationToken)](code-infrastructure.md#m-711bf042b1db).
 
@@ -149,7 +149,7 @@ Handler: [SaveReceiptDesignCommandHandler](code-application.md#src-c85e5e7f37c8)
 
 Declaration: [ReceiptDesignCommands.cs:20](code-application.md#src-c85e5e7f37c8). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveReceiptDesignAsync:6728](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveReceiptDesignAsync:6743](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveReceiptDesignCommandHandler.HandleAsync(SaveReceiptDesignCommand,CommandEnvelope&lt;SaveReceiptDesignCommand&gt;,CancellationToken)](code-application.md#m-9f50da09c2da).
 
@@ -169,17 +169,17 @@ Handler: [UpdateCashFinancialSettingsCommandHandler](code-application.md#src-dc0
 
 Declaration: [CashFinancialSettingsCommands.cs:8](code-application.md#src-dc0f9914df25). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveCashFinancialSettingsAsync:6647](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveCashFinancialSettingsAsync:6662](code-desktop.md#src-16497b924a99)
 
-Handler method: [UpdateCashFinancialSettingsCommandHandler.HandleAsync(UpdateCashFinancialSettingsCommand,CommandEnvelope&lt;UpdateCashFinancialSettingsCommand&gt;,CancellationToken)](code-application.md#m-584e2d2ad808).
+Handler method: [UpdateCashFinancialSettingsCommandHandler.HandleAsync(UpdateCashFinancialSettingsCommand,CommandEnvelope&lt;UpdateCashFinancialSettingsCommand&gt;,CancellationToken)](code-application.md#m-111036292e3c).
 
-Same-owner helper candidates: [UpdateCashFinancialSettingsCommandHandler.Add(System.Data.Common.DbCommand,string,object)](code-application.md#m-989a9acc633a). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [UpdateCashFinancialSettingsCommandHandler.Add(System.Data.Common.DbCommand,string,object)](code-application.md#m-faff6bce2618). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>draft_carts</code>, <code>restaurant_orders</code>, <code>store_config</code> |
 | Writes / DDL | <code>store_config</code> |
-| Literal failure codes | <code>CASH_DISPLAY_PRECISION_EXCEEDED</code>, <code>INVALID_CASH_DISPLAY_DECIMALS</code>, <code>INVALID_CASH_ROUNDING_INCREMENT</code>, <code>INVALID_CASH_ROUNDING_MODE</code>, <code>INVALID_SERVICE_CHARGE</code>, <code>INVALID_SERVICE_CHARGE_BASIS</code>, <code>INVALID_SERVICE_CHARGE_SCOPE</code>, <code>INVALID_SERVICE_CHARGE_TAX_MODE</code>, <code>OPEN_WORK_EXISTS</code> |
+| Literal failure codes | <code>CASH_DISPLAY_PRECISION_EXCEEDED</code>, <code>INVALID_CASH_DISPLAY_DECIMALS</code>, <code>INVALID_CASH_ROUNDING_INCREMENT</code>, <code>INVALID_CASH_ROUNDING_MODE</code>, <code>INVALID_CASH_ROUNDING_TIE_RULE</code>, <code>INVALID_SERVICE_CHARGE</code>, <code>INVALID_SERVICE_CHARGE_BASIS</code>, <code>INVALID_SERVICE_CHARGE_SCOPE</code>, <code>INVALID_SERVICE_CHARGE_TAX_MODE</code>, <code>OPEN_WORK_EXISTS</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -189,7 +189,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:7](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveOutputDevicesAsync:6468](code-desktop.md#src-16497b924a99), [VerifyThermalPrinterAsync:6530](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveOutputDevicesAsync:6481](code-desktop.md#src-16497b924a99), [VerifyThermalPrinterAsync:6543](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(UpdateOutputDeviceSettingsCommand,CommandEnvelope&lt;UpdateOutputDeviceSettingsCommand&gt;,CancellationToken)](code-application.md#m-a04cc1af2dfe).
 
@@ -209,7 +209,7 @@ Handler: [PriceTierSettingsCommandHandler](code-application.md#src-5251d2a718d0)
 
 Declaration: [PriceTierSettingsCommands.cs:24](code-application.md#src-96fee6b3d872). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SavePriceTierSettingsAsync:1746](code-desktop.md#src-974d69a1850f)
+Construction sites: [SavePriceTierSettingsAsync:1753](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceTierSettingsCommandHandler.HandleAsync(UpdatePriceTierSettingsCommand,CommandEnvelope&lt;UpdatePriceTierSettingsCommand&gt;,CancellationToken)](code-application.md#m-2bbca65b6079).
 

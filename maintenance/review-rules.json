@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-18",
+  "reviewed_on": "2026-10-20",
   "rules": [
     {
       "id": "PP-RULE-001",
@@ -10,12 +10,12 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 5485,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 5539,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         }
       ],
       "verification": "source-only; runtime not rerun"
@@ -28,12 +28,12 @@
         {
           "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
           "line": 211,
-          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+          "sha256": "4f3041a16f706d0bd3f6bdad77381f259b1f450e0e655c48198f5ed904bb811f"
         },
         {
           "path": "Software/src/GetSeek.Application/Sales/SaleCommandHandler.cs",
           "line": 254,
-          "sha256": "7a4b2676f474585d9e201dfc6b86e0b9dd80b5c943d3e0e5995dba668a61a835"
+          "sha256": "4f3041a16f706d0bd3f6bdad77381f259b1f450e0e655c48198f5ed904bb811f"
         }
       ],
       "verification": "source-only; runtime not rerun"
@@ -51,7 +51,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 7997,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         }
       ],
       "verification": "source-only; runtime not rerun"

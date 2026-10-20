@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-18",
+  "reviewed_on": "2026-10-20",
   "state": "Proposals only; no application changes authorized by a browser selection.",
   "findings": [
     {
@@ -102,7 +102,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 11087,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         }
       ],
       "workflow": "checkout",
@@ -495,7 +495,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 7997,
-          "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625"
+          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

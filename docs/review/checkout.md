@@ -57,7 +57,7 @@ Handler: [StaleCartPriceReviewCommandHandler](code-application.md#src-f9958eaccd
 
 Declaration: [StaleCartPriceReview.cs:26](code-application.md#src-f9958eaccdf4). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [AcceptStaleCartPriceReviewAsync:5647](code-desktop.md#src-16497b924a99)
+Construction sites: [AcceptStaleCartPriceReviewAsync:5660](code-desktop.md#src-16497b924a99)
 
 Handler method: [StaleCartPriceReviewCommandHandler.HandleAsync(AcceptStaleCartPriceReviewCommand,CommandEnvelope&lt;AcceptStaleCartPriceReviewCommand&gt;,CancellationToken)](code-application.md#m-4ee802676bed).
 
@@ -81,7 +81,7 @@ Construction sites: [HandleAsync:67](code-application.md#src-4772ecb3181e)
 
 Handler method: [SaleCommandHandler.HandleAsync(AddSaleLineCommand,CommandEnvelope&lt;AddSaleLineCommand&gt;,CancellationToken)](code-application.md#m-899ec17ecc86).
 
-Same-owner helper candidates: [SaleCommandHandler.AddParam(DbCommand,string,object?)](code-application.md#m-c1c52811ff9f), [SaleCommandHandler.LoadCartAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-79b7fada0f75). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [SaleCommandHandler.AddParam(DbCommand,string,object?)](code-application.md#m-394b13c56723), [SaleCommandHandler.LoadCartAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-93a9118a4f7b). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -159,7 +159,7 @@ Declaration: [SaleCommands.cs:50](code-application.md#src-5208d9e05ff3). <code>R
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [SaleCommandHandler.HandleAsync(RefundSaleCommand,CommandEnvelope&lt;RefundSaleCommand&gt;,CancellationToken)](code-application.md#m-0eed7b4eaad0).
+Handler method: [SaleCommandHandler.HandleAsync(RefundSaleCommand,CommandEnvelope&lt;RefundSaleCommand&gt;,CancellationToken)](code-application.md#m-93e1f02fb10a).
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -175,7 +175,7 @@ Handler: [StaleCartPriceReviewCommandHandler](code-application.md#src-f9958eaccd
 
 Declaration: [StaleCartPriceReview.cs:21](code-application.md#src-f9958eaccdf4). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [OpenStaleCartPriceReviewAsync:5609](code-desktop.md#src-16497b924a99)
+Construction sites: [OpenStaleCartPriceReviewAsync:5622](code-desktop.md#src-16497b924a99)
 
 Handler method: [StaleCartPriceReviewCommandHandler.HandleAsync(ReviewStaleCartPricesCommand,CommandEnvelope&lt;ReviewStaleCartPricesCommand&gt;,CancellationToken)](code-application.md#m-d9c53582c750).
 
@@ -195,7 +195,7 @@ Handler: [CartAllocationCommandHandler](code-application.md#src-46ba4855fda6). R
 
 Declaration: [SaleCommands.cs:63](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:80](code-application.md#src-4772ecb3181e), [HandleAsync:101](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:11721](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:80](code-application.md#src-4772ecb3181e), [HandleAsync:101](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:11738](code-desktop.md#src-16497b924a99)
 
 Handler method: [CartAllocationCommandHandler.HandleAsync(SelectLotForCartLineCommand,CommandEnvelope&lt;SelectLotForCartLineCommand&gt;,CancellationToken)](code-application.md#m-ee0fab044b83).
 
@@ -215,7 +215,7 @@ Handler: [CartAllocationCommandHandler](code-application.md#src-46ba4855fda6). R
 
 Declaration: [SaleCommands.cs:77](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:86](code-application.md#src-4772ecb3181e), [HandleAsync:108](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:11740](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:86](code-application.md#src-4772ecb3181e), [HandleAsync:108](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:11757](code-desktop.md#src-16497b924a99)
 
 Handler method: [CartAllocationCommandHandler.HandleAsync(SelectSerialForCartLineCommand,CommandEnvelope&lt;SelectSerialForCartLineCommand&gt;,CancellationToken)](code-application.md#m-a881109dcdae).
 
@@ -235,7 +235,7 @@ Handler: [SaleCommandHandler](code-application.md#src-b90bee551ece). Result type
 
 Declaration: [SaleCommands.cs:30](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:223](code-application.md#src-b90bee551ece), [HandleAsync:237](code-application.md#src-b90bee551ece), [HandleAsync:248](code-application.md#src-b90bee551ece), [PlaceOrderAsync:5541](code-desktop.md#src-16497b924a99), [SettleActiveOrderAsync:6273](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:223](code-application.md#src-b90bee551ece), [HandleAsync:237](code-application.md#src-b90bee551ece), [HandleAsync:248](code-application.md#src-b90bee551ece), [PlaceOrderAsync:5554](code-desktop.md#src-16497b924a99), [SettleActiveOrderAsync:6286](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaleCommandHandler.HandleAsync(TakePaymentCommand,CommandEnvelope&lt;TakePaymentCommand&gt;,CancellationToken)](code-application.md#m-bec1ebd1e944).
 
@@ -259,7 +259,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [SaleCommandHandler.HandleAsync(VoidSaleLineCommand,CommandEnvelope&lt;VoidSaleLineCommand&gt;,CancellationToken)](code-application.md#m-dbef8767a6fa).
 
-Same-owner helper candidates: [SaleCommandHandler.AddParam(DbCommand,string,object?)](code-application.md#m-c1c52811ff9f), [SaleCommandHandler.LoadCartAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-79b7fada0f75). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [SaleCommandHandler.AddParam(DbCommand,string,object?)](code-application.md#m-394b13c56723), [SaleCommandHandler.LoadCartAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-93a9118a4f7b). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |

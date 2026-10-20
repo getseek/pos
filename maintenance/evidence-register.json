@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-18",
+  "reviewed_on": "2026-10-20",
   "historical_test_total": 1228,
   "application_tests_rerun": false,
   "evidence": [
@@ -53,7 +53,7 @@
       "id": "E-006",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
-      "sha256": "d722b4a6290776b6b2aa55c0f8d2801c24dc7036c1ff8220d42396d3432cc498",
+      "sha256": "5b8cad1ab5c881746ed3fc3897555a2ed8bfd4c3358e8db781a5dfd51acedf56",
       "reviewed_on": "2026-10-18",
       "claim": "Current migration registration can be inspected alongside SQL files; no live database was opened."
     },
@@ -93,7 +93,7 @@
       "id": "E-011",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-      "sha256": "aa07125e84d7ad377e50d9ef5796e8e6c8b93ffe93b4b61142908213afa35625",
+      "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403",
       "reviewed_on": "2026-10-18",
       "claim": "Historical screenshot sample names/products match source defaults and CreateDemo data; screenshots do not prove current behavior.",
       "symbols": [
@@ -205,8 +205,8 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "25a3ce9100a6a19bbb99cc8ad28d4ea206b265701c0987d2a94c5e2127deb823",
-      "reviewed_on": "2026-10-18",
+      "sha256": "ca8da32de94007036df735379ab67df30b8e423d3adfde76e73fc600dcb9c8e1",
+      "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
         "CommandPipeline.ExecuteAsync",
@@ -245,6 +245,72 @@
         "queuing": "2026-10-20T13:38:28.7171034+07:00",
         "start": "2026-10-20T13:38:26.8723809+07:00",
         "finish": "2026-10-20T13:38:50.4647727+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-017",
+      "kind": "fresh-automated",
+      "path": "Software/tests/GetSeek.UnitTests/TestResults/unit-tests.trx",
+      "sha256": "91a53d643d64da278f5f7a9a5f5be37d884d73b81d2c83b2ceee4dcd118d349c",
+      "reviewed_on": "2026-10-20",
+      "claim": "Fresh automated unit test run covering exclusive tax policy, discounted service-charge tax share, cash rounding tie rules, floor-to-increment presets/microcopy, and localization parity. 265 passed, 0 failed.",
+      "counters": {
+        "total": "265",
+        "executed": "265",
+        "passed": "265",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-20T16:17:39.8838168+07:00",
+        "queuing": "2026-10-20T16:17:39.8838175+07:00",
+        "start": "2026-10-20T16:17:39.2575694+07:00",
+        "finish": "2026-10-20T16:17:42.0509277+07:00"
+      },
+      "assembly": "GetSeek.UnitTests"
+    },
+    {
+      "id": "E-018",
+      "kind": "fresh-automated",
+      "path": "Software/tests/GetSeek.IntegrationTests/TestResults/integration-subset.trx",
+      "sha256": "c248c03de5dfd83eacdf84be776ed234e2e3bd5c9387400151bf43fe694172e9",
+      "reviewed_on": "2026-10-20",
+      "claim": "Fresh automated integration test subset covering schema migration 084, UOM registry conversions with DecimalQuantity, pricing rules, tax/currency policy, invoice settlement, and Z-reports. 73 passed, 0 failed.",
+      "counters": {
+        "total": "73",
+        "executed": "73",
+        "passed": "73",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-20T16:19:16.8683057+07:00",
+        "queuing": "2026-10-20T16:19:16.8683062+07:00",
+        "start": "2026-10-20T16:19:15.0048256+07:00",
+        "finish": "2026-10-20T16:19:43.2774425+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

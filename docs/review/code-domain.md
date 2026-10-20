@@ -71,23 +71,6 @@ SHA-256: <code>6852994dc5a351c00be40878fdf17785591022556ed3ed0fb3bb4d5b32a78f21<
 
 Declarations: <code>UnitOfMeasure</code> (line 3).
 
-## UomConversionEngine.cs {#src-21ec0e311a8a}
-
-<code>Software/src/GetSeek.Domain/Catalog/UomConversionEngine.cs</code> · 107 lines.
-
-SHA-256: <code>1c4030b928a23638ba5370eb3bfb5e7e5963376953ebf77f6bcb058d5e5a6b1d</code>.
-
-Declarations: <code>UomUnitDefinition</code> (line 5), <code>UomConversionResult</code> (line 14), <code>UomConversionEngine</code> (line 23).
-
-<details markdown>
-<summary>Methods, calls, table effects and failures (1)</summary>
-
-| Method and lines | Invocation syntax | Literal SQL / failures / throws |
-| --- | --- | --- |
-| <span id="m-ced0d70c7c2b"></span><code>UomConversionEngine.Convert(decimal,UomUnitDefinition,UomUnitDefinition,int?)</code><br>68–106 | Equals @74; Round @87 | InvalidOperationException @76; ArgumentException @81; InvalidOperationException @94 |
-
-</details>
-
 ## Barcode.cs {#src-056d8df1aee3}
 
 <code>Software/src/GetSeek.Domain/Common/Barcode.cs</code> · 19 lines.

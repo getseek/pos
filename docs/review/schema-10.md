@@ -331,6 +331,7 @@ No outgoing foreign key declared in the reconstructed schema.
 | <code>financial_settings_version</code> | <code>INTEGER</code> | True | — |
 | <code>enable_item_locations</code> | <code>INTEGER</code> | True | — |
 | <code>auto_record_waste_as_expense</code> | <code>INTEGER</code> | True | — |
+| <code>cash_rounding_tie_rule</code> | <code>TEXT</code> | True | — |
 
 </details>
 

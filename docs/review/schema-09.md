@@ -257,6 +257,7 @@ flowchart TD
 | <code>original_invoice_id</code> | <code>TEXT</code> | False | — |
 | <code>settlement_revision</code> | <code>INTEGER</code> | True | — |
 | <code>currency_decimal_places_snapshot</code> | <code>INTEGER</code> | False | — |
+| <code>cash_rounding_tie_rule_snapshot</code> | <code>TEXT</code> | True | — |
 
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |

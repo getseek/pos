@@ -57,7 +57,7 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:42](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.AdjustStock</code>
 
-Construction sites: [HandleAsync:119](code-application.md#src-c24b9e05b3b2), [HandleAsync:16](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9057](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:119](code-application.md#src-c24b9e05b3b2), [HandleAsync:16](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9074](code-desktop.md#src-16497b924a99)
 
 Handler method: [InventoryCommandHandler.HandleAsync(AdjustStockCommand,CommandEnvelope&lt;AdjustStockCommand&gt;,CancellationToken)](code-application.md#m-7c8d5eebb581).
 
@@ -77,7 +77,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:14](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmSaveFacilityAsync:11264](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmSaveFacilityAsync:11281](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(CreateFacilityCommand,CommandEnvelope&lt;CreateFacilityCommand&gt;,CancellationToken)](code-application.md#m-df91c4003dce).
 
@@ -97,7 +97,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:52](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmSaveBinAsync:11394](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmSaveBinAsync:11411](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(CreateLocationBinCommand,CommandEnvelope&lt;CreateLocationBinCommand&gt;,CancellationToken)](code-application.md#m-d32cea7d7bd3).
 
@@ -117,7 +117,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:34](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [DeactivateFacilityAsync:11298](code-desktop.md#src-16497b924a99)
+Construction sites: [DeactivateFacilityAsync:11315](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(DeactivateFacilityCommand,CommandEnvelope&lt;DeactivateFacilityCommand&gt;,CancellationToken)](code-application.md#m-53c69375e9a6).
 
@@ -137,7 +137,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:78](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [DeactivateBinAsync:11435](code-desktop.md#src-16497b924a99)
+Construction sites: [DeactivateBinAsync:11452](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(DeactivateLocationBinCommand,CommandEnvelope&lt;DeactivateLocationBinCommand&gt;,CancellationToken)](code-application.md#m-dc8cae9c46fa).
 
@@ -157,7 +157,7 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:19](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.ReceiveStock</code>
 
-Construction sites: [HandleAsync:112](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:8733](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:112](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:8750](code-desktop.md#src-16497b924a99)
 
 Handler method: [InventoryCommandHandler.HandleAsync(ReceiveStockCommand,CommandEnvelope&lt;ReceiveStockCommand&gt;,CancellationToken)](code-application.md#m-88ca70a84a0a).
 
@@ -195,7 +195,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:109](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [RemoveItemLocationEligibilityAsync:11522](code-desktop.md#src-16497b924a99)
+Construction sites: [RemoveItemLocationEligibilityAsync:11539](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(RemoveItemLocationEligibilityCommand,CommandEnvelope&lt;RemoveItemLocationEligibilityCommand&gt;,CancellationToken)](code-application.md#m-6fd38c96bfec).
 
@@ -215,7 +215,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:97](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveItemLocationEligibilityAsync:11477](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveItemLocationEligibilityAsync:11494](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(SetItemLocationEligibilityCommand,CommandEnvelope&lt;SetItemLocationEligibilityCommand&gt;,CancellationToken)](code-application.md#m-9c7ea12506b5).
 
@@ -253,7 +253,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:23](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmSaveFacilityAsync:11249](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmSaveFacilityAsync:11266](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(UpdateFacilityCommand,CommandEnvelope&lt;UpdateFacilityCommand&gt;,CancellationToken)](code-application.md#m-38510a8f429d).
 
@@ -273,7 +273,7 @@ Handler: [LocationCommandHandler](code-application.md#src-a5752d2091f0). Result 
 
 Declaration: [LocationCommands.cs:64](code-application.md#src-7a24e4740ac8). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmSaveBinAsync:11370](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmSaveBinAsync:11387](code-desktop.md#src-16497b924a99)
 
 Handler method: [LocationCommandHandler.HandleAsync(UpdateLocationBinCommand,CommandEnvelope&lt;UpdateLocationBinCommand&gt;,CancellationToken)](code-application.md#m-99e9ab387b2d).
 

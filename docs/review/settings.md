@@ -209,7 +209,7 @@ Handler: [PriceTierSettingsCommandHandler](code-application.md#src-5251d2a718d0)
 
 Declaration: [PriceTierSettingsCommands.cs:24](code-application.md#src-96fee6b3d872). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SavePriceTierSettingsAsync:1753](code-desktop.md#src-974d69a1850f)
+Construction sites: [SavePriceTierSettingsAsync:1754](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceTierSettingsCommandHandler.HandleAsync(UpdatePriceTierSettingsCommand,CommandEnvelope&lt;UpdatePriceTierSettingsCommand&gt;,CancellationToken)](code-application.md#m-2bbca65b6079).
 

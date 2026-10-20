@@ -77,7 +77,8 @@
       "application_verification": "not-rerun",
       "evidence_ids": [
         "E-017",
-        "E-018"
+        "E-018",
+        "E-019"
       ],
       "target_page": "operator/checkout.md",
       "document_status": "planned",
@@ -349,7 +350,8 @@
         "E-004",
         "E-005",
         "E-017",
-        "E-018"
+        "E-018",
+        "E-019"
       ],
       "target_page": "administration/settings.md",
       "document_status": "planned",
@@ -428,7 +430,8 @@
       "evidence_ids": [
         "E-006",
         "E-017",
-        "E-018"
+        "E-018",
+        "E-019"
       ],
       "target_page": "development/schema.md",
       "document_status": "planned",

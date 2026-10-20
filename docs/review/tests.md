@@ -717,7 +717,7 @@ Located test declarations: <code>BarcodeScannerWedge_ShouldParseWeighedFreshPlu<
 
 ## InventoryTierEditorTests.cs {#src-e592e8075206}
 
-<code>Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs</code> · SHA-256 <code>fe246497df99fd3780a9d637dbe928fdd16c3c2ee43e92fa01110fce331eac16</code>.
+<code>Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs</code> · SHA-256 <code>269a033214fe3eaf940e822e4054ee5e97bbd78d1e5ad7410b1cbd1c9bfe3540</code>.
 
 Located test declarations: <code>TierEditsSelectTheMatchingMode_AndConvertAtTheCommandBoundary</code> @8, <code>LoadingAndCloningValuesDoNotChangeTheSavedMode</code> @26, <code>RoundingIncrementPresets_AndFloorHintMicrocopy_MatchExpandedSpecification</code> @34.
 

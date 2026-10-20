@@ -102,7 +102,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 11087,
-          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
+          "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58"
         }
       ],
       "workflow": "checkout",
@@ -495,7 +495,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 7997,
-          "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403"
+          "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

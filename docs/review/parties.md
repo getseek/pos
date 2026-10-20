@@ -153,7 +153,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:124](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ReactivateThirdPartyAsync:2387](code-desktop.md#src-974d69a1850f)
+Construction sites: [ReactivateThirdPartyAsync:2388](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(ReactivateThirdPartyCommand,CommandEnvelope&lt;ReactivateThirdPartyCommand&gt;,CancellationToken)](code-application.md#m-fec6a8dfa150).
 

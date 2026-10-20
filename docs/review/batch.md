@@ -313,7 +313,7 @@ Handler: [CreateBatchPreviewCommandHandler](code-application.md#src-6d6431af2d8b
 
 Declaration: [BatchPreview.cs:51](code-application.md#src-6d6431af2d8b). <code>RequiredPermission = Target switch     {         BatchPreviewTarget.ThirdParties =&gt; Permissions.ManageCustomers,         BatchPreviewTarget.Users =&gt; Permissions.ManageTeams,         BatchPreviewTarget.ExpenseCategories =&gt; Permissions.ExpensesManage,         _ =&gt; Permissions.ManageCatalog     }</code>
 
-Construction sites: [CreateSelectedBatchPreviewAsync:318](code-desktop.md#src-3f4385d56088), [CreateBatchPricingPreviewAsync:2011](code-desktop.md#src-974d69a1850f)
+Construction sites: [CreateSelectedBatchPreviewAsync:318](code-desktop.md#src-3f4385d56088), [CreateBatchPricingPreviewAsync:2012](code-desktop.md#src-974d69a1850f)
 
 Handler method: [CreateBatchPreviewCommandHandler.HandleAsync(CreateBatchPreviewCommand,CommandEnvelope&lt;CreateBatchPreviewCommand&gt;,CancellationToken)](code-application.md#m-4de338edaddb).
 

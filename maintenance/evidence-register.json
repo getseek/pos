@@ -93,7 +93,7 @@
       "id": "E-011",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-      "sha256": "86706870e08eb5924044a4e9920a1d54bb90a1165aebe540d51e896955c5c403",
+      "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58",
       "reviewed_on": "2026-10-18",
       "claim": "Historical screenshot sample names/products match source defaults and CreateDemo data; screenshots do not prove current behavior.",
       "symbols": [
@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "ca8da32de94007036df735379ab67df30b8e423d3adfde76e73fc600dcb9c8e1",
+      "sha256": "f03d6bcb76c1d539b2f5e45ac74975c05155dfc8a9126d3352ccbe2bb6e0d86b",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -252,7 +252,7 @@
       "id": "E-017",
       "kind": "fresh-automated",
       "path": "Software/tests/GetSeek.UnitTests/TestResults/unit-tests.trx",
-      "sha256": "91a53d643d64da278f5f7a9a5f5be37d884d73b81d2c83b2ceee4dcd118d349c",
+      "sha256": "b3edb66fae8c8f4f40e1b004e9e6ec7244d63111c3e3231502f10c9122e12d73",
       "reviewed_on": "2026-10-20",
       "claim": "Fresh automated unit test run covering exclusive tax policy, discounted service-charge tax share, cash rounding tie rules, floor-to-increment presets/microcopy, and localization parity. 265 passed, 0 failed.",
       "counters": {
@@ -274,10 +274,10 @@
         "pending": "0"
       },
       "times": {
-        "creation": "2026-10-20T16:17:39.8838168+07:00",
-        "queuing": "2026-10-20T16:17:39.8838175+07:00",
-        "start": "2026-10-20T16:17:39.2575694+07:00",
-        "finish": "2026-10-20T16:17:42.0509277+07:00"
+        "creation": "2026-10-20T17:54:00.8181208+07:00",
+        "queuing": "2026-10-20T17:54:00.8181215+07:00",
+        "start": "2026-10-20T17:54:00.1786881+07:00",
+        "finish": "2026-10-20T17:54:02.9536816+07:00"
       },
       "assembly": "GetSeek.UnitTests"
     },
@@ -311,6 +311,39 @@
         "queuing": "2026-10-20T16:19:16.8683062+07:00",
         "start": "2026-10-20T16:19:15.0048256+07:00",
         "finish": "2026-10-20T16:19:43.2774425+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-019",
+      "kind": "fresh-automated",
+      "path": "Software/tests/GetSeek.IntegrationTests/TestResults/integration-tests.trx",
+      "sha256": "7a4baedc48ed912b406d39759b5cb9cff1ab89729f61c7248890d136db869935",
+      "reviewed_on": "2026-10-20",
+      "claim": "Fresh automated integration test run covering commercial workspace, manufacturing tables, recipe choices, third-party loaders, and search usage guards with zero runtime-real.log errors. 90 passed, 0 failed.",
+      "counters": {
+        "total": "90",
+        "executed": "90",
+        "passed": "90",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-20T17:52:04.6220893+07:00",
+        "queuing": "2026-10-20T17:52:04.6220895+07:00",
+        "start": "2026-10-20T17:52:02.7398043+07:00",
+        "finish": "2026-10-20T17:53:00.3888360+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

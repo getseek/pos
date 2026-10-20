@@ -189,9 +189,9 @@ Located test declarations: <code>Inventory_PagingSortingAndLifecycleModes</code>
 
 ## InventoryImportIntegrationTests.cs {#src-53277371bffa}
 
-<code>Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs</code> · SHA-256 <code>6c8b6cbfcd391d349e1eeb40a1b1212dbfe31fd9b6b8ef4b654d6224b343c33d</code>.
+<code>Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs</code> · SHA-256 <code>6a4ee536b09f89298b835b23a1dc8a26b2a999cc47123a08d5b8a1dbb7819a9e</code>.
 
-Located test declarations: <code>MasterDataExportsPreserveIdentifiersAndPrices_AndRejectUnauthorizedUsers</code> @56, <code>BlankSkuCreatesAndLinksStock_CompletedWorkbookUpdatesWithoutRepeatingStock</code> @80, <code>CreatesBarcodeDefaultsUnitsAndNumericTier_WithRollbackOnlyPreview</code> @107, <code>BlankUpdatePreservesPricesBarcodeAndTax_ExplicitClearRemovesBarcode</code> @124, <code>MultiItemPricingUsesUniqueShelfKeys_StockCostPrecedesAutomaticPricing</code> @137, <code>MissingChildOrDuplicateBarcodeRollsBackAllRows</code> @151, <code>NewNestedKitsAreOrderedChildrenFirst_ParentIntakeIsRejected</code> @161, <code>PreviewRejectsChangedStateAndExplicitReceiveDenial</code> @176, <code>TemplateFriendlyModesAndFlexibleCaseAndBooleans_AreAcceptedAndApplied</code> @186.
+Located test declarations: <code>MasterDataExportsPreserveIdentifiersAndPrices_AndRejectUnauthorizedUsers</code> @56, <code>BlankSkuCreatesAndLinksStock_CompletedWorkbookUpdatesWithoutRepeatingStock</code> @80, <code>CreatesBarcodeDefaultsUnitsAndNumericTier_WithRollbackOnlyPreview</code> @107, <code>BlankUpdatePreservesPricesBarcodeAndTax_ExplicitClearRemovesBarcode</code> @124, <code>MultiItemPricingUsesUniqueShelfKeys_StockCostPrecedesAutomaticPricing</code> @137, <code>MissingChildOrDuplicateBarcodeRollsBackAllRows</code> @151, <code>NewNestedKitsAreOrderedChildrenFirst_ParentIntakeIsRejected</code> @161, <code>PreviewRejectsChangedStateAndExplicitReceiveDenial</code> @176, <code>TemplateFriendlyModesAndFlexibleCaseAndBooleans_AreAcceptedAndApplied</code> @186, <code>WhitespaceTiersAndSpacedPricingRules_AreAcceptedAndApplied</code> @239.
 
 ## InventoryIntegrationTests.cs {#src-afdc78fc3cca}
 
@@ -615,7 +615,7 @@ Located test declarations: <code>ThirdParty_CRUD_And_AutoCodeGeneration</code> @
 
 ## ThirdPartyImportIntegrationTests.cs {#src-5cba50a9bd3b}
 
-<code>Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs</code> · SHA-256 <code>63aa8fca4af18ad816f855e96552e89cd2c5162bed38c2b9927a3a4cb403c2b5</code>.
+<code>Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs</code> · SHA-256 <code>e600e036a89616f85cec710e0f7ae472165a31bf295a972edd2a60161f83f24c</code>.
 
 Located test declarations: <code>PossibleDuplicateWarnsWithoutRejecting_AndDoesNotWarnForOwnUpdate</code> @93, <code>ExportTemplate_ReturnsValidWorkbookWithExactHeadersAndExampleRow</code> @124, <code>OversizedFile_RejectedBeforeMutation</code> @145, <code>BlankIdentifier_GeneratesStableCodeAndCompletedWorkbook</code> @170, <code>UnicodeAndMyanmarData_RoundTripsThroughImportAndQuery</code> @210, <code>IdempotentDuplicateRetry_ReturnsPriorResultWithoutDuplicates</code> @271, <code>ExternalMappingMode_CreatesPartyThenUpdatesOnSecondImport</code> @348, <code>AtomicRollback_WhenRowFailsValidationInsideHandler</code> @445, <code>PermissionDenial_RequiresCustomerManagePermission</code> @483, <code>FlexibleBooleansAndTierFormattingAndBarcodeValidation_AreHandled</code> @520.
 

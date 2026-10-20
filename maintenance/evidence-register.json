@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "9e60f18c7ceb1f379bb3db46431ba145696be3b0c081ccc40b53467a9be5904a",
+      "sha256": "25a3ce9100a6a19bbb99cc8ad28d4ea206b265701c0987d2a94c5e2127deb823",
       "reviewed_on": "2026-10-18",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -219,13 +219,13 @@
       "id": "E-016",
       "kind": "fresh-automated",
       "path": "Software/tests/GetSeek.IntegrationTests/TestResults/import_tests.trx",
-      "sha256": "c900aaa5b13a8df77971ce8409ebb2b7fdf087f757002c58fc06e97e64935ae5",
+      "sha256": "e67d376d3d85f79a4240ea413aa5327b3dffabc16125d869406098a9430c6318",
       "reviewed_on": "2026-10-20",
-      "claim": "Fresh automated integration test execution for workbook import commands and readers (products, tier prices, booleans, duplicate barcodes, third parties). 23 passed, 0 failed.",
+      "claim": "Fresh automated integration test execution for workbook import commands and readers (products, tier prices, booleans, duplicate barcodes, third parties). 24 passed, 0 failed.",
       "counters": {
-        "total": "23",
-        "executed": "23",
-        "passed": "23",
+        "total": "24",
+        "executed": "24",
+        "passed": "24",
         "failed": "0",
         "error": "0",
         "timeout": "0",
@@ -241,10 +241,10 @@
         "pending": "0"
       },
       "times": {
-        "creation": "2026-10-20T12:28:13.7624252+07:00",
-        "queuing": "2026-10-20T12:28:13.7624256+07:00",
-        "start": "2026-10-20T12:28:10.3831595+07:00",
-        "finish": "2026-10-20T12:28:34.3968578+07:00"
+        "creation": "2026-10-20T13:38:28.7171032+07:00",
+        "queuing": "2026-10-20T13:38:28.7171034+07:00",
+        "start": "2026-10-20T13:38:26.8723809+07:00",
+        "finish": "2026-10-20T13:38:50.4647727+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

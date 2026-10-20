@@ -53,7 +53,7 @@ Handler: [ImportProductsCommandHandler](code-application.md#src-2c8d126a7c07). R
 
 Declaration: [ImportCommands.cs:53](code-application.md#src-60301a99263c). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmImportAsync:3655](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:33](code-infrastructure.md#src-9b8064464865)
+Construction sites: [ConfirmImportAsync:3655](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)](code-application.md#m-c862b652239a).
 
@@ -73,11 +73,11 @@ Handler: [ImportThirdPartiesCommandHandler](code-application.md#src-7bb9c4e66dce
 
 Declaration: [ImportThirdPartiesCommands.cs:61](code-application.md#src-26c060baba90). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ConfirmThirdPartyImportAsync:208](code-desktop.md#src-63148b75a5e2), [ValidateThirdPartiesAsync:57](code-infrastructure.md#src-9b8064464865)
+Construction sites: [ConfirmThirdPartyImportAsync:208](code-desktop.md#src-63148b75a5e2), [ValidateThirdPartiesAsync:113](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportThirdPartiesCommandHandler.HandleAsync(ImportThirdPartiesCommand,CommandEnvelope&lt;ImportThirdPartiesCommand&gt;,CancellationToken)](code-application.md#m-7085a9c8a444).
 
-Same-owner helper candidates: [ImportThirdPartiesCommandHandler.CheckPriorImportAsync(DbConnection,DbTransaction?,string,string,CancellationToken)](code-application.md#m-319831d04b37), [ImportThirdPartiesCommandHandler.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-e91a4de52d31), [ImportThirdPartiesCommandHandler.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-896ff2a33047), [ImportThirdPartiesCommandHandler.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-bf30be14abea), [ImportThirdPartiesCommandHandler.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-832fc930a055), [ImportThirdPartiesCommandHandler.IsSystemWalkInAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-ac49d3564161), [ImportThirdPartiesCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-fa99c437efe3), [ImportThirdPartiesCommandHandler.InsertExternalMappingAsync(DbConnection,DbTransaction?,string,string,string,string,CancellationToken)](code-application.md#m-49f6f747e388), [ImportThirdPartiesCommandHandler.GenerateNextCodeAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-ca82738920d5). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ImportThirdPartiesCommandHandler.CheckPriorImportAsync(DbConnection,DbTransaction?,string,string,CancellationToken)](code-application.md#m-131de9dfb2f4), [ImportThirdPartiesCommandHandler.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-0dc126592c6c), [ImportThirdPartiesCommandHandler.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-590000a1728f), [ImportThirdPartiesCommandHandler.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-59b051731bb1), [ImportThirdPartiesCommandHandler.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-cfc661d4aa69), [ImportThirdPartiesCommandHandler.IsSystemWalkInAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-71b31cd84032), [ImportThirdPartiesCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-560f5e970ab5), [ImportThirdPartiesCommandHandler.InsertExternalMappingAsync(DbConnection,DbTransaction?,string,string,string,string,CancellationToken)](code-application.md#m-994f0a107a4b), [ImportThirdPartiesCommandHandler.GenerateNextCodeAsync(DbConnection,DbTransaction?,CancellationToken)](code-application.md#m-49966866d1c7). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |

@@ -872,9 +872,9 @@ Declarations: <code>ImportPolicy</code> (line 8).
 
 ## ImportProductConfiguration.cs {#src-14918ebf4662}
 
-<code>Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs</code> · 139 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs</code> · 183 lines.
 
-SHA-256: <code>b3d7dc8bc5c067331fd42b70e114900fae922b6efa7de58593ba4b5377cda12d</code>.
+SHA-256: <code>42399a0dc5292ee436da216aba492b58b7f3adb75c0e1c271618da8632c2fede</code>.
 
 Declarations: <code>ImportProductConfiguration</code> (line 12).
 
@@ -884,7 +884,7 @@ Declarations: <code>ImportProductConfiguration</code> (line 12).
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
 | <span id="m-46f1bbc7024c"></span><code>ImportProductConfiguration.SaveAsync(ImportProductRow,IReadOnlyList&lt;ImportKitComponent&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,CancellationToken)</code><br>16–92 | ConfigureAwait @19; RecordAsync @19; Merge @20; GetValueOrDefault @20; Parse @21; TryParseBool @22; GetValueOrDefault @23; Money @24; D @24; Parse @24; ToString @24; Parse @25; Failure(CatalogItemDto) @27; ToString @29; B @30; Where @35; Equals @35; Add @39; IsNullOrWhiteSpace @39; CreateCommand @44; CreateParameter @46; Add @46; ExecuteReaderAsync @47; ReadAsync @48; GetString @48; IsDBNull @48; ToDecimal @48; GetValue @48; GetValueOrDefault @51; M @52; L @55; ToLowerInvariant @57; Trim @57; NormalizePurpose @63; ToString @68; ToString @68; ToString @69; GetValueOrDefault @78; HandleAsync @81; Success(CatalogItemDto) @89 | FROM barcodes @50; FROM item_kit_components @45; FROM item_kits @29; FROM items @19; FROM items @37; JOIN product_categories @19 · IMPORT_SKU_EXISTS @27; IMPORT_SKU_NOT_FOUND @28; IMPORT_CHILD_NOT_FOUND @38 |
-| <span id="m-7367d0a4cbf6"></span><code>ImportProductConfiguration.PriceAsync(Guid,string,ImportProductRow?,ImportPricingRule?,IReadOnlyList&lt;ImportTierPrice&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,bool,CancellationToken)</code><br>94–138 | ConfigureAwait @97; RecordAsync @97; ToString @97; Merge @99; GetValueOrDefault @99; Parse @100; TryParseBool @101; GetValueOrDefault @102; D @102; M @103; Failure(bool) @106; B @109; Money @112; Parse @112; ActiveTiersAsync @113; Where @115; Equals @115; Contains @117; Add @118; ToDisplayAmount @122; P @123; GetValueOrDefault @125; GetValueOrDefault @133; Parse @134; Parse @134; HandleAsync @137 | FROM item_pricing @97; FROM items @98; FROM product_category_pricing_rules @130; JOIN items @130 · IMPORT_PRICE_CONFLICT @106; IMPORT_CATEGORY_APPROVAL_REQUIRED @110; INVALID_PRICE_LEVEL @117; CATEGORY_PRICING_RULE_NOT_FOUND @131 |
+| <span id="m-7367d0a4cbf6"></span><code>ImportProductConfiguration.PriceAsync(Guid,string,ImportProductRow?,ImportPricingRule?,IReadOnlyList&lt;ImportTierPrice&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,bool,CancellationToken)</code><br>94–182 | ConfigureAwait @97; RecordAsync @97; ToString @97; Merge @99; GetValueOrDefault @99; Parse @100; TryParseBool @101; GetValueOrDefault @102; D @102; ToLowerInvariant @103; Trim @103; ToUpperInvariant @134; NormalizeMethod @147; M @147; Failure(bool) @150; B @153; Money @156; Parse @156; ActiveTiersAsync @157; Where @159; Equals @159; Contains @161; Add @162; NormalizeTierMode @162; ToDisplayAmount @166; P @167; NormalizeRoundingRule @167; GetValueOrDefault @169; NormalizeCostFloor @169; NormalizeCostBasis @170; GetValueOrDefault @177; Parse @178; Parse @178; HandleAsync @181 | FROM item_pricing @97; FROM items @98; FROM product_category_pricing_rules @174; JOIN items @174 · IMPORT_PRICE_CONFLICT @150; IMPORT_CATEGORY_APPROVAL_REQUIRED @154; INVALID_PRICE_LEVEL @161; CATEGORY_PRICING_RULE_NOT_FOUND @175 |
 
 </details>
 
@@ -2704,9 +2704,9 @@ Declarations: <code>TeamPrimitives</code> (line 10).
 
 ## ImportThirdPartiesCommandHandler.cs {#src-7bb9c4e66dce}
 
-<code>Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs</code> · 510 lines.
+<code>Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs</code> · 511 lines.
 
-SHA-256: <code>97f4da69a36c375497638aceea62a11beac34c62929281336825abd9aa6f69ea</code>.
+SHA-256: <code>3f1ad6606847eb116c39b2c35abbc434fb04d67af26a77b916a584e10cb6970c</code>.
 
 Declarations: <code>ImportThirdPartiesCommandHandler : ICommandHandler&lt;ImportThirdPartiesCommand, ImportThirdPartiesResult&gt;</code> (line 17).
 
@@ -2715,16 +2715,16 @@ Declarations: <code>ImportThirdPartiesCommandHandler : ICommandHandler&lt;Import
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-7085a9c8a444"></span><code>ImportThirdPartiesCommandHandler.HandleAsync(ImportThirdPartiesCommand,CommandEnvelope&lt;ImportThirdPartiesCommand&gt;,CancellationToken)</code><br>25–357 | Failure(ImportThirdPartiesResult) @32; ConfigureAwait @39; CheckPriorImportAsync @39; Success(ImportThirdPartiesResult) @42; FingerprintAsync @47; Select @47; TryGetValue @52; TryParseBool @53; Any @55; Contains @55; ResolveTier @58; ActiveTiersAsync @58; Add @60; MergeAsync @60; LoadCategoriesAsync @65; LoadActivePriceTiersAsync @66; LoadExistingPartyCodesAsync @67; LoadExistingExternalMappingsAsync @68; IsNullOrWhiteSpace @78; Contains @83; TryNormalizePhone @88; IsValidStateCode @96; ContainsKey @106; ToLowerInvariant @111; Trim @111; Contains @112; Trim @117; ToUpperInvariant @118; Trim @118; Trim @119; Trim @120; Add @121; Add @126; Add @131; TryGetValue @136; TryGetValue @137; Equals @138; IsSystemWalkInAsync @149; ToString @157; NormalizeDbValue @161; Trim @167; NormalizeStateCode @168; TryGetValue @169; RecordAsync @190; IsAvailableAsync @192; CreateCommand @195; AddParam @222; Trim @224; Trim @228; ExecuteNonQueryAsync @244; ContainsKey @249; InsertExternalMappingAsync @251; ToString @260; NewGuid @260; GenerateNextCodeAsync @261; ExecuteNonQueryAsync @306; ToString @341; ExecuteNonQueryAsync @344 | FROM third_parties @190; INSERT INTO third_parties @269; INSERT INTO third_party_imports @325; UPDATE third_parties @198 · IMPORT_EMPTY @32; IMPORT_TOO_LARGE @46; IMPORT_PREVIEW_STALE @48; INVALID_IS_ACTIVE @54; IMPORT_CLEAR_NOT_ALLOWED @56; INVALID_PRICE_LEVEL @59; NAME_REQUIRED @80; INVALID_KIND @85; PHONE_FORMAT_INVALID @93; STATE_REGION_INVALID @98; MISSING_IDENTIFIER @103; CATEGORY_NOT_FOUND @108; INVALID_PRICE_LEVEL @114; DUPLICATE_CODE_IN_FILE @123; DUPLICATE_EXTERNAL_KEY_IN_FILE @128; DUPLICATE_BARCODE_IN_FILE @133; IDENTIFIER_CONFLICT @140; IDENTIFIER_CONFLICT @145; SYSTEM_WALK_IN_PROTECTED @150; BARCODE_ALREADY_EXISTS @193; THIRD_PARTY_NOT_FOUND @245; BARCODE_ALREADY_EXISTS @265 |
-| <span id="m-319831d04b37"></span><code>ImportThirdPartiesCommandHandler.CheckPriorImportAsync(DbConnection,DbTransaction?,string,string,CancellationToken)</code><br>359–389 | CreateCommand @366; AddParam @374; ConfigureAwait @376; ExecuteReaderAsync @376; ReadAsync @377; GetString @380; GetInt32 @381 | FROM third_party_imports @368 |
-| <span id="m-49f6f747e388"></span><code>ImportThirdPartiesCommandHandler.InsertExternalMappingAsync(DbConnection,DbTransaction?,string,string,string,string,CancellationToken)</code><br>391–416 | CreateCommand @400; AddParam @411; ConfigureAwait @415; ExecuteNonQueryAsync @415 | INSERT INTO third_party_external_mappings @402 |
-| <span id="m-ca82738920d5"></span><code>ImportThirdPartiesCommandHandler.GenerateNextCodeAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>418–434 | CreateCommand @423; ConfigureAwait @430; ExecuteScalarAsync @430; ToInt64 @431 | FROM third_parties @425 |
-| <span id="m-e91a4de52d31"></span><code>ImportThirdPartiesCommandHandler.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>436–448 | CreateCommand @439; ConfigureAwait @442; ExecuteReaderAsync @442; ReadAsync @443; GetString @445 | FROM product_categories @441 |
-| <span id="m-896ff2a33047"></span><code>ImportThirdPartiesCommandHandler.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>450–462 | CreateCommand @453; ConfigureAwait @456; ExecuteReaderAsync @456; ReadAsync @457; Add @459; GetString @459 | FROM price_level_settings @455; FROM store_config @455 |
-| <span id="m-bf30be14abea"></span><code>ImportThirdPartiesCommandHandler.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>464–476 | CreateCommand @467; ConfigureAwait @470; ExecuteReaderAsync @470; ReadAsync @471; GetString @473 | FROM third_parties @469 |
-| <span id="m-832fc930a055"></span><code>ImportThirdPartiesCommandHandler.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>478–490 | CreateCommand @481; ConfigureAwait @484; ExecuteReaderAsync @484; ReadAsync @485; ToUpperInvariant @487; GetString @487 | FROM third_party_external_mappings @483 |
-| <span id="m-ac49d3564161"></span><code>ImportThirdPartiesCommandHandler.IsSystemWalkInAsync(DbConnection,DbTransaction?,string,CancellationToken)</code><br>492–501 | TryParse @494; CreateCommand @495; AddParam @498; ConfigureAwait @499; ExecuteScalarAsync @499; ToInt32 @500 | FROM third_parties @497 |
-| <span id="m-fa99c437efe3"></span><code>ImportThirdPartiesCommandHandler.AddParam(DbCommand,string,object)</code><br>503–509 | CreateParameter @505; Add @508 | No extracted literal effects. |
+| <span id="m-7085a9c8a444"></span><code>ImportThirdPartiesCommandHandler.HandleAsync(ImportThirdPartiesCommand,CommandEnvelope&lt;ImportThirdPartiesCommand&gt;,CancellationToken)</code><br>25–358 | Failure(ImportThirdPartiesResult) @32; ConfigureAwait @39; CheckPriorImportAsync @39; Success(ImportThirdPartiesResult) @42; FingerprintAsync @47; Select @47; TryGetValue @52; TryParseBool @53; Any @55; Contains @55; ResolveTier @58; ActiveTiersAsync @58; Add @60; MergeAsync @60; LoadCategoriesAsync @65; LoadActivePriceTiersAsync @66; LoadExistingPartyCodesAsync @67; LoadExistingExternalMappingsAsync @68; IsNullOrWhiteSpace @78; Contains @83; TryNormalizePhone @88; IsValidStateCode @96; ContainsKey @106; ToHashSet @111; Select @111; Parse @111; ToLowerInvariant @112; Trim @112; Contains @113; Trim @118; ToUpperInvariant @119; Trim @119; Trim @120; Trim @121; Add @122; Add @127; Add @132; TryGetValue @137; TryGetValue @138; Equals @139; IsSystemWalkInAsync @150; ToString @158; NormalizeDbValue @162; Trim @168; NormalizeStateCode @169; TryGetValue @170; RecordAsync @191; IsAvailableAsync @193; CreateCommand @196; AddParam @223; Trim @225; Trim @229; ExecuteNonQueryAsync @245; ContainsKey @250; InsertExternalMappingAsync @252; ToString @261; NewGuid @261; GenerateNextCodeAsync @262; ExecuteNonQueryAsync @307; ToString @342; ExecuteNonQueryAsync @345 | FROM third_parties @191; INSERT INTO third_parties @270; INSERT INTO third_party_imports @326; UPDATE third_parties @199 · IMPORT_EMPTY @32; IMPORT_TOO_LARGE @46; IMPORT_PREVIEW_STALE @48; INVALID_IS_ACTIVE @54; IMPORT_CLEAR_NOT_ALLOWED @56; INVALID_PRICE_LEVEL @59; NAME_REQUIRED @80; INVALID_KIND @85; PHONE_FORMAT_INVALID @93; STATE_REGION_INVALID @98; MISSING_IDENTIFIER @103; CATEGORY_NOT_FOUND @108; INVALID_PRICE_LEVEL @115; DUPLICATE_CODE_IN_FILE @124; DUPLICATE_EXTERNAL_KEY_IN_FILE @129; DUPLICATE_BARCODE_IN_FILE @134; IDENTIFIER_CONFLICT @141; IDENTIFIER_CONFLICT @146; SYSTEM_WALK_IN_PROTECTED @151; BARCODE_ALREADY_EXISTS @194; THIRD_PARTY_NOT_FOUND @246; BARCODE_ALREADY_EXISTS @266 |
+| <span id="m-131de9dfb2f4"></span><code>ImportThirdPartiesCommandHandler.CheckPriorImportAsync(DbConnection,DbTransaction?,string,string,CancellationToken)</code><br>360–390 | CreateCommand @367; AddParam @375; ConfigureAwait @377; ExecuteReaderAsync @377; ReadAsync @378; GetString @381; GetInt32 @382 | FROM third_party_imports @369 |
+| <span id="m-994f0a107a4b"></span><code>ImportThirdPartiesCommandHandler.InsertExternalMappingAsync(DbConnection,DbTransaction?,string,string,string,string,CancellationToken)</code><br>392–417 | CreateCommand @401; AddParam @412; ConfigureAwait @416; ExecuteNonQueryAsync @416 | INSERT INTO third_party_external_mappings @403 |
+| <span id="m-49966866d1c7"></span><code>ImportThirdPartiesCommandHandler.GenerateNextCodeAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>419–435 | CreateCommand @424; ConfigureAwait @431; ExecuteScalarAsync @431; ToInt64 @432 | FROM third_parties @426 |
+| <span id="m-0dc126592c6c"></span><code>ImportThirdPartiesCommandHandler.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>437–449 | CreateCommand @440; ConfigureAwait @443; ExecuteReaderAsync @443; ReadAsync @444; GetString @446 | FROM product_categories @442 |
+| <span id="m-590000a1728f"></span><code>ImportThirdPartiesCommandHandler.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>451–463 | CreateCommand @454; ConfigureAwait @457; ExecuteReaderAsync @457; ReadAsync @458; Add @460; GetString @460 | FROM price_level_settings @456; FROM store_config @456 |
+| <span id="m-59b051731bb1"></span><code>ImportThirdPartiesCommandHandler.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>465–477 | CreateCommand @468; ConfigureAwait @471; ExecuteReaderAsync @471; ReadAsync @472; GetString @474 | FROM third_parties @470 |
+| <span id="m-cfc661d4aa69"></span><code>ImportThirdPartiesCommandHandler.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>479–491 | CreateCommand @482; ConfigureAwait @485; ExecuteReaderAsync @485; ReadAsync @486; ToUpperInvariant @488; GetString @488 | FROM third_party_external_mappings @484 |
+| <span id="m-71b31cd84032"></span><code>ImportThirdPartiesCommandHandler.IsSystemWalkInAsync(DbConnection,DbTransaction?,string,CancellationToken)</code><br>493–502 | TryParse @495; CreateCommand @496; AddParam @499; ConfigureAwait @500; ExecuteScalarAsync @500; ToInt32 @501 | FROM third_parties @498 |
+| <span id="m-560f5e970ab5"></span><code>ImportThirdPartiesCommandHandler.AddParam(DbCommand,string,object)</code><br>504–510 | CreateParameter @506; Add @509 | No extracted literal effects. |
 
 </details>
 
@@ -2845,18 +2845,18 @@ Declarations: <code>ThirdPartyFilterSpecification</code> (line 8).
 
 ## ThirdPartyImportMerge.cs {#src-cff353afe1f2}
 
-<code>Software/src/GetSeek.Application/ThirdParties/ThirdPartyImportMerge.cs</code> · 30 lines.
+<code>Software/src/GetSeek.Application/ThirdParties/ThirdPartyImportMerge.cs</code> · 60 lines.
 
-SHA-256: <code>226a2fc4fed7222d3c8e85a2f75f9530068769860569f19a799714ef44f79d6a</code>.
+SHA-256: <code>8b77abb73878f328e91768ff152f756a689dc751311a515b1fac231f581ed87a</code>.
 
-Declarations: <code>ThirdPartyImportMerge</code> (line 6).
+Declarations: <code>ThirdPartyImportMerge</code> (line 11).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (1)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-8df6d49c76bf"></span><code>ThirdPartyImportMerge.MergeAsync(ImportThirdPartyRow,DbConnection,DbTransaction?,CancellationToken)</code><br>8–29 | IsNullOrWhiteSpace @10; ConfigureAwait @11; RecordAsync @11; ToUpperInvariant @12; Merge @14; GetValueOrDefault @14; M @15; TryParse @16; TryParse @27 | FROM third_parties @11; FROM third_parties @12; FROM third_party_external_mappings @12; JOIN product_categories @11; JOIN product_categories @12 |
+| <span id="m-f9092fb58b70"></span><code>ThirdPartyImportMerge.MergeAsync(ImportThirdPartyRow,DbConnection,DbTransaction?,CancellationToken)</code><br>15–57 | IsNullOrWhiteSpace @19; ConfigureAwait @21; RecordAsync @21; ToUpperInvariant @23; Merge @27; GetValueOrDefault @27; ResolveTier @29; M @29; TryParseBool @53 | FROM third_parties @21; FROM third_parties @23; FROM third_party_external_mappings @23; JOIN product_categories @21; JOIN product_categories @23 |
 
 </details>
 

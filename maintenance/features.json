@@ -263,7 +263,7 @@
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "Workbook import integration tests rerun (23 passed); desktop file-picker and physical large-file UI flow unverified.",
+      "limitations": "Workbook import integration tests rerun (24 passed); desktop file-picker and physical large-file UI flow unverified.",
       "review_map": "review/imports.md"
     },
     {

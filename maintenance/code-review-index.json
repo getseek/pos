@@ -21555,7 +21555,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs",
-      "sha256": "b3d7dc8bc5c067331fd42b70e114900fae922b6efa7de58593ba4b5377cda12d",
+      "sha256": "42399a0dc5292ee436da216aba492b58b7f3adb75c0e1c271618da8632c2fede",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -21563,7 +21563,7 @@
           "name": "ImportProductConfiguration",
           "kind": "ClassDeclaration",
           "line": 12,
-          "end": 139,
+          "end": 183,
           "bases": [],
           "properties": []
         }
@@ -21954,7 +21954,7 @@
           "name": "PriceAsync",
           "owner": "ImportProductConfiguration",
           "line": 94,
-          "end": 138,
+          "end": 182,
           "signature": "PriceAsync(Guid,string,ImportProductRow?,ImportPricingRule?,IReadOnlyList<ImportTierPrice>,CommandEnvelope<ImportProductsCommand>,ImportWorkbookContext,bool,CancellationToken)",
           "returns": "Task<CommandResult<bool>>",
           "parameters": [
@@ -22052,14 +22052,38 @@
               "generic_types": []
             },
             {
-              "name": "M",
+              "name": "ToLowerInvariant",
               "line": 103,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 103,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "ToUpperInvariant",
+              "line": 134,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "NormalizeMethod",
+              "line": 147,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "M",
+              "line": 147,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Failure",
-              "line": 106,
+              "line": 150,
               "receiver": "CommandResult<bool>",
               "generic_types": [
                 "bool"
@@ -22067,91 +22091,115 @@
             },
             {
               "name": "B",
-              "line": 109,
+              "line": 153,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Money",
-              "line": 112,
+              "line": 156,
               "receiver": "ImportWorkbookSchema",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 112,
+              "line": 156,
               "receiver": "long",
               "generic_types": []
             },
             {
               "name": "ActiveTiersAsync",
-              "line": 113,
+              "line": 157,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "Where",
-              "line": 115,
+              "line": 159,
               "receiver": "tiers",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 115,
+              "line": 159,
               "receiver": "t.Sku",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 117,
+              "line": 161,
               "receiver": "activeTiers",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 118,
+              "line": 162,
               "receiver": "overrides",
               "generic_types": []
             },
             {
+              "name": "NormalizeTierMode",
+              "line": 162,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
               "name": "ToDisplayAmount",
-              "line": 122,
+              "line": 166,
               "receiver": "MoneyPolicy",
               "generic_types": []
             },
             {
               "name": "P",
-              "line": 123,
+              "line": 167,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "NormalizeRoundingRule",
+              "line": 167,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 125,
+              "line": 169,
               "receiver": "item",
               "generic_types": []
             },
             {
+              "name": "NormalizeCostFloor",
+              "line": 169,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "NormalizeCostBasis",
+              "line": 170,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
               "name": "GetValueOrDefault",
-              "line": 133,
+              "line": 177,
               "receiver": "category",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 134,
+              "line": 178,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 134,
+              "line": 178,
               "receiver": "int",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 137,
+              "line": 181,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -22159,40 +22207,40 @@
           "creates": [
             {
               "type": "List<ItemTierPricingInput>",
-              "line": 114
+              "line": 158
             },
             {
               "type": "ItemTierPricingInput",
-              "line": 118
+              "line": 162
             },
             {
               "type": "SaveItemPricingCommand",
-              "line": 123
+              "line": 167
             },
             {
               "type": "CommandEnvelope<SaveItemPricingCommand>",
-              "line": 136
+              "line": 180
             },
             {
               "type": "SaveItemPricingCommandHandler",
-              "line": 137
+              "line": 181
             }
           ],
           "errors": [
             {
-              "line": 106,
+              "line": 150,
               "code": "IMPORT_PRICE_CONFLICT"
             },
             {
-              "line": 110,
+              "line": 154,
               "code": "IMPORT_CATEGORY_APPROVAL_REQUIRED"
             },
             {
-              "line": 117,
+              "line": 161,
               "code": "INVALID_PRICE_LEVEL"
             },
             {
-              "line": 131,
+              "line": 175,
               "code": "CATEGORY_PRICING_RULE_NOT_FOUND"
             }
           ],
@@ -22210,12 +22258,12 @@
             {
               "operation": "FROM",
               "table": "product_category_pricing_rules",
-              "line": 130
+              "line": 174
             },
             {
               "operation": "JOIN",
               "table": "items",
-              "line": 130
+              "line": 174
             }
           ],
           "throws": [],
@@ -22224,7 +22272,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 139
+      "lines": 183
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
@@ -75240,7 +75288,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
-      "sha256": "97f4da69a36c375497638aceea62a11beac34c62929281336825abd9aa6f69ea",
+      "sha256": "3f1ad6606847eb116c39b2c35abbc434fb04d67af26a77b916a584e10cb6970c",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -75248,7 +75296,7 @@
           "name": "ImportThirdPartiesCommandHandler",
           "kind": "ClassDeclaration",
           "line": 17,
-          "end": 510,
+          "end": 511,
           "bases": [
             "ICommandHandler<ImportThirdPartiesCommand, ImportThirdPartiesResult>"
           ],
@@ -75261,7 +75309,7 @@
           "name": "HandleAsync",
           "owner": "ImportThirdPartiesCommandHandler",
           "line": 25,
-          "end": 357,
+          "end": 358,
           "signature": "HandleAsync(ImportThirdPartiesCommand,CommandEnvelope<ImportThirdPartiesCommand>,CancellationToken)",
           "returns": "Task<CommandResult<ImportThirdPartiesResult>>",
           "parameters": [
@@ -75423,212 +75471,230 @@
               "generic_types": []
             },
             {
-              "name": "ToLowerInvariant",
+              "name": "ToHashSet",
               "line": 111,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
-              "name": "Trim",
+              "name": "Select",
               "line": 111,
+              "receiver": "activeTiers",
+              "generic_types": []
+            },
+            {
+              "name": "Parse",
+              "line": 111,
+              "receiver": "int",
+              "generic_types": []
+            },
+            {
+              "name": "ToLowerInvariant",
+              "line": 112,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 112,
               "receiver": "row.PriceLevel",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 112,
+              "line": 113,
               "receiver": "activeTiers",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 117,
+              "line": 118,
               "receiver": "row.Code",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 118,
+              "line": 119,
               "receiver": "<expression>",
-              "generic_types": []
-            },
-            {
-              "name": "Trim",
-              "line": 118,
-              "receiver": "row.SourceSystem",
               "generic_types": []
             },
             {
               "name": "Trim",
               "line": 119,
-              "receiver": "row.ExternalKey",
+              "receiver": "row.SourceSystem",
               "generic_types": []
             },
             {
               "name": "Trim",
               "line": 120,
+              "receiver": "row.ExternalKey",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 121,
               "receiver": "row.Barcode",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 121,
+              "line": 122,
               "receiver": "inputCodes",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 126,
+              "line": 127,
               "receiver": "inputExternalKeys",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 131,
+              "line": 132,
               "receiver": "inputBarcodes",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 136,
+              "line": 137,
               "receiver": "existingCodes",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 137,
+              "line": 138,
               "receiver": "existingExternal",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 138,
+              "line": 139,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "IsSystemWalkInAsync",
-              "line": 149,
+              "line": 150,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 157,
+              "line": 158,
               "receiver": "now",
               "generic_types": []
             },
             {
               "name": "NormalizeDbValue",
-              "line": 161,
+              "line": 162,
               "receiver": "ThirdPartyKindExtensions",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 167,
+              "line": 168,
               "receiver": "row.AliasName",
               "generic_types": []
             },
             {
               "name": "NormalizeStateCode",
-              "line": 168,
+              "line": 169,
               "receiver": "ThirdPartyFieldPolicy",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 169,
+              "line": 170,
               "receiver": "categoryMap",
               "generic_types": []
             },
             {
               "name": "RecordAsync",
-              "line": 190,
+              "line": 191,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "IsAvailableAsync",
-              "line": 192,
+              "line": 193,
               "receiver": "ThirdPartyBarcodePolicy",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 195,
+              "line": 196,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 222,
+              "line": 223,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 224,
+              "line": 225,
               "receiver": "row.Name",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 228,
+              "line": 229,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 244,
+              "line": 245,
               "receiver": "updateCmd",
               "generic_types": []
             },
             {
               "name": "ContainsKey",
-              "line": 249,
+              "line": 250,
               "receiver": "existingExternal",
               "generic_types": []
             },
             {
               "name": "InsertExternalMappingAsync",
-              "line": 251,
+              "line": 252,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 260,
+              "line": 261,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 260,
+              "line": 261,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "GenerateNextCodeAsync",
-              "line": 261,
+              "line": 262,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 306,
+              "line": 307,
               "receiver": "insertCmd",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 341,
+              "line": 342,
               "receiver": "envelope.InitiatorUserId",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 344,
+              "line": 345,
               "receiver": "histCmd",
               "generic_types": []
             }
@@ -75652,7 +75718,7 @@
             },
             {
               "type": "ImportThirdPartiesResult",
-              "line": 347
+              "line": 348
             }
           ],
           "errors": [
@@ -75705,43 +75771,43 @@
               "code": "CATEGORY_NOT_FOUND"
             },
             {
-              "line": 114,
+              "line": 115,
               "code": "INVALID_PRICE_LEVEL"
             },
             {
-              "line": 123,
+              "line": 124,
               "code": "DUPLICATE_CODE_IN_FILE"
             },
             {
-              "line": 128,
+              "line": 129,
               "code": "DUPLICATE_EXTERNAL_KEY_IN_FILE"
             },
             {
-              "line": 133,
+              "line": 134,
               "code": "DUPLICATE_BARCODE_IN_FILE"
             },
             {
-              "line": 140,
+              "line": 141,
               "code": "IDENTIFIER_CONFLICT"
             },
             {
-              "line": 145,
+              "line": 146,
               "code": "IDENTIFIER_CONFLICT"
             },
             {
-              "line": 150,
+              "line": 151,
               "code": "SYSTEM_WALK_IN_PROTECTED"
             },
             {
-              "line": 193,
+              "line": 194,
               "code": "BARCODE_ALREADY_EXISTS"
             },
             {
-              "line": 245,
+              "line": 246,
               "code": "THIRD_PARTY_NOT_FOUND"
             },
             {
-              "line": 265,
+              "line": 266,
               "code": "BARCODE_ALREADY_EXISTS"
             }
           ],
@@ -75749,33 +75815,33 @@
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 190
+              "line": 191
             },
             {
               "operation": "UPDATE",
               "table": "third_parties",
-              "line": 198
+              "line": 199
             },
             {
               "operation": "INSERT INTO",
               "table": "third_parties",
-              "line": 269
+              "line": 270
             },
             {
               "operation": "INSERT INTO",
               "table": "third_party_imports",
-              "line": 325
+              "line": 326
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-319831d04b37",
+          "id": "M-131de9dfb2f4",
           "name": "CheckPriorImportAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 359,
-          "end": 389,
+          "line": 360,
+          "end": 390,
           "signature": "CheckPriorImportAsync(DbConnection,DbTransaction?,string,string,CancellationToken)",
           "returns": "Task<ImportThirdPartiesResult?>",
           "parameters": [
@@ -75804,43 +75870,43 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 366,
+              "line": 367,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 374,
+              "line": 375,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 376,
+              "line": 377,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 376,
+              "line": 377,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 377,
+              "line": 378,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 380,
+              "line": 381,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 381,
+              "line": 382,
               "receiver": "reader",
               "generic_types": []
             }
@@ -75848,7 +75914,7 @@
           "creates": [
             {
               "type": "ImportThirdPartiesResult",
-              "line": 379
+              "line": 380
             }
           ],
           "errors": [],
@@ -75856,18 +75922,18 @@
             {
               "operation": "FROM",
               "table": "third_party_imports",
-              "line": 368
+              "line": 369
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-49f6f747e388",
+          "id": "M-994f0a107a4b",
           "name": "InsertExternalMappingAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 391,
-          "end": 416,
+          "line": 392,
+          "end": 417,
           "signature": "InsertExternalMappingAsync(DbConnection,DbTransaction?,string,string,string,string,CancellationToken)",
           "returns": "Task",
           "parameters": [
@@ -75904,25 +75970,25 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 400,
+              "line": 401,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 411,
+              "line": 412,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 415,
+              "line": 416,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 415,
+              "line": 416,
               "receiver": "cmd",
               "generic_types": []
             }
@@ -75933,18 +75999,18 @@
             {
               "operation": "INSERT INTO",
               "table": "third_party_external_mappings",
-              "line": 402
+              "line": 403
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-ca82738920d5",
+          "id": "M-49966866d1c7",
           "name": "GenerateNextCodeAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 418,
-          "end": 434,
+          "line": 419,
+          "end": 435,
           "signature": "GenerateNextCodeAsync(DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<string>",
           "parameters": [
@@ -75965,25 +76031,25 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 423,
+              "line": 424,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 430,
+              "line": 431,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 430,
+              "line": 431,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 431,
+              "line": 432,
               "receiver": "Convert",
               "generic_types": []
             }
@@ -75994,18 +76060,18 @@
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 425
+              "line": 426
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-e91a4de52d31",
+          "id": "M-0dc126592c6c",
           "name": "LoadCategoriesAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 436,
-          "end": 448,
+          "line": 437,
+          "end": 449,
           "signature": "LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<Dictionary<string, string>>",
           "parameters": [
@@ -76026,31 +76092,31 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 439,
+              "line": 440,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 442,
+              "line": 443,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 442,
+              "line": 443,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 443,
+              "line": 444,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 445,
+              "line": 446,
               "receiver": "reader",
               "generic_types": []
             }
@@ -76058,7 +76124,7 @@
           "creates": [
             {
               "type": "Dictionary<string, string>",
-              "line": 438
+              "line": 439
             }
           ],
           "errors": [],
@@ -76066,18 +76132,18 @@
             {
               "operation": "FROM",
               "table": "product_categories",
-              "line": 441
+              "line": 442
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-896ff2a33047",
+          "id": "M-590000a1728f",
           "name": "LoadActivePriceTiersAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 450,
-          "end": 462,
+          "line": 451,
+          "end": 463,
           "signature": "LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<HashSet<string>>",
           "parameters": [
@@ -76098,37 +76164,37 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 453,
+              "line": 454,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 456,
+              "line": 457,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 456,
+              "line": 457,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 457,
+              "line": 458,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 459,
+              "line": 460,
               "receiver": "set",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 459,
+              "line": 460,
               "receiver": "reader",
               "generic_types": []
             }
@@ -76136,7 +76202,7 @@
           "creates": [
             {
               "type": "HashSet<string>",
-              "line": 452
+              "line": 453
             }
           ],
           "errors": [],
@@ -76144,23 +76210,23 @@
             {
               "operation": "FROM",
               "table": "price_level_settings",
-              "line": 455
+              "line": 456
             },
             {
               "operation": "FROM",
               "table": "store_config",
-              "line": 455
+              "line": 456
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-bf30be14abea",
+          "id": "M-59b051731bb1",
           "name": "LoadExistingPartyCodesAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 464,
-          "end": 476,
+          "line": 465,
+          "end": 477,
           "signature": "LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<Dictionary<string, string>>",
           "parameters": [
@@ -76181,31 +76247,31 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 467,
+              "line": 468,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 470,
+              "line": 471,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 470,
+              "line": 471,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 471,
+              "line": 472,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 473,
+              "line": 474,
               "receiver": "reader",
               "generic_types": []
             }
@@ -76213,7 +76279,7 @@
           "creates": [
             {
               "type": "Dictionary<string, string>",
-              "line": 466
+              "line": 467
             }
           ],
           "errors": [],
@@ -76221,18 +76287,18 @@
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 469
+              "line": 470
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-832fc930a055",
+          "id": "M-cfc661d4aa69",
           "name": "LoadExistingExternalMappingsAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 478,
-          "end": 490,
+          "line": 479,
+          "end": 491,
           "signature": "LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<Dictionary<(string Source, string ExtKey), string>>",
           "parameters": [
@@ -76253,37 +76319,37 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 481,
+              "line": 482,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 484,
+              "line": 485,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 484,
+              "line": 485,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 485,
+              "line": 486,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 487,
+              "line": 488,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 487,
+              "line": 488,
               "receiver": "reader",
               "generic_types": []
             }
@@ -76291,7 +76357,7 @@
           "creates": [
             {
               "type": "Dictionary<(string, string), string>",
-              "line": 480
+              "line": 481
             }
           ],
           "errors": [],
@@ -76299,18 +76365,18 @@
             {
               "operation": "FROM",
               "table": "third_party_external_mappings",
-              "line": 483
+              "line": 484
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-ac49d3564161",
+          "id": "M-71b31cd84032",
           "name": "IsSystemWalkInAsync",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 492,
-          "end": 501,
+          "line": 493,
+          "end": 502,
           "signature": "IsSystemWalkInAsync(DbConnection,DbTransaction?,string,CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -76335,37 +76401,37 @@
           "calls": [
             {
               "name": "TryParse",
-              "line": 494,
+              "line": 495,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 495,
+              "line": 496,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 498,
+              "line": 499,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 499,
+              "line": 500,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 499,
+              "line": 500,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ToInt32",
-              "line": 500,
+              "line": 501,
               "receiver": "Convert",
               "generic_types": []
             }
@@ -76376,18 +76442,18 @@
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 497
+              "line": 498
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-fa99c437efe3",
+          "id": "M-560f5e970ab5",
           "name": "AddParam",
           "owner": "ImportThirdPartiesCommandHandler",
-          "line": 503,
-          "end": 509,
+          "line": 504,
+          "end": 510,
           "signature": "AddParam(DbCommand,string,object)",
           "returns": "void",
           "parameters": [
@@ -76408,13 +76474,13 @@
           "calls": [
             {
               "name": "CreateParameter",
-              "line": 505,
+              "line": 506,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 508,
+              "line": 509,
               "receiver": "cmd.Parameters",
               "generic_types": []
             }
@@ -76428,7 +76494,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 510
+      "lines": 511
     },
     {
       "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommands.cs",
@@ -78536,26 +78602,26 @@
     },
     {
       "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyImportMerge.cs",
-      "sha256": "226a2fc4fed7222d3c8e85a2f75f9530068769860569f19a799714ef44f79d6a",
+      "sha256": "8b77abb73878f328e91768ff152f756a689dc751311a515b1fac231f581ed87a",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
         {
           "name": "ThirdPartyImportMerge",
           "kind": "ClassDeclaration",
-          "line": 6,
-          "end": 30,
+          "line": 11,
+          "end": 59,
           "bases": [],
           "properties": []
         }
       ],
       "methods": [
         {
-          "id": "M-8df6d49c76bf",
+          "id": "M-f9092fb58b70",
           "name": "MergeAsync",
           "owner": "ThirdPartyImportMerge",
-          "line": 8,
-          "end": 29,
+          "line": 15,
+          "end": 57,
           "signature": "MergeAsync(ImportThirdPartyRow,DbConnection,DbTransaction?,CancellationToken)",
           "returns": "Task<ImportThirdPartyRow>",
           "parameters": [
@@ -78580,86 +78646,91 @@
           "calls": [
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 10,
+              "line": 19,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 11,
+              "line": 21,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "RecordAsync",
-              "line": 11,
+              "line": 21,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 12,
+              "line": 23,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Merge",
-              "line": 14,
+              "line": 27,
               "receiver": "ImportWorkbookSchema",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 14,
+              "line": 27,
               "receiver": "current",
               "generic_types": []
             },
             {
+              "name": "ResolveTier",
+              "line": 29,
+              "receiver": "ImportWorkbookSchema",
+              "generic_types": []
+            },
+            {
               "name": "M",
-              "line": 15,
+              "line": 29,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
-              "name": "TryParse",
-              "line": 16,
-              "receiver": "int",
-              "generic_types": []
-            },
-            {
-              "name": "TryParse",
-              "line": 27,
-              "receiver": "bool",
+              "name": "TryParseBool",
+              "line": 53,
+              "receiver": "ImportWorkbookSchema",
               "generic_types": []
             }
           ],
-          "creates": [],
+          "creates": [
+            {
+              "type": "HashSet<int>",
+              "line": 29
+            }
+          ],
           "errors": [],
           "sql": [
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 11
+              "line": 21
             },
             {
               "operation": "JOIN",
               "table": "product_categories",
-              "line": 11
+              "line": 21
             },
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 12
+              "line": 23
             },
             {
               "operation": "JOIN",
               "table": "product_categories",
-              "line": 12
+              "line": 23
             },
             {
               "operation": "FROM",
               "table": "third_party_external_mappings",
-              "line": 12
+              "line": 23
             }
           ],
           "throws": [],
@@ -78668,7 +78739,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 30
+      "lines": 60
     },
     {
       "path": "Software/src/GetSeek.Application/ThirdParties/WalkInCustomerIdentity.cs",
@@ -150264,26 +150335,26 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs",
-      "sha256": "d9d1457c04eff836097a4fae53f3184da3e08784c1db14c5c64b7e7788bdffc1",
+      "sha256": "1a49fec61223fe2986b5aca8f7fded963ee63cae842648fd57bb546df9214d5e",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
         {
           "name": "ImportPreviewService",
           "kind": "ClassDeclaration",
-          "line": 12,
-          "end": 118,
+          "line": 23,
+          "end": 251,
           "bases": [],
           "properties": []
         }
       ],
       "methods": [
         {
-          "id": "M-ab9df140f727",
+          "id": "M-52a08701a406",
           "name": "ValidateInventoryAsync",
           "owner": "ImportPreviewService",
-          "line": 14,
-          "end": 40,
+          "line": 27,
+          "end": 79,
           "signature": "ValidateInventoryAsync(ProductImportPreview,string,Guid,CancellationToken)",
           "returns": "Task<ProductImportPreview>",
           "parameters": [
@@ -150308,133 +150379,133 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 17,
+              "line": 33,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateWriteConnectionAsync",
-              "line": 17,
+              "line": 33,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "BeginTransactionAsync",
-              "line": 19,
+              "line": 37,
               "receiver": "unit",
               "generic_types": []
             },
             {
               "name": "Concat",
-              "line": 22,
+              "line": 43,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Select",
-              "line": 22,
+              "line": 43,
               "receiver": "preview.Products",
               "generic_types": []
             },
             {
               "name": "Select",
-              "line": 22,
+              "line": 43,
               "receiver": "preview.Stock",
               "generic_types": []
             },
             {
               "name": "SelectMany",
-              "line": 22,
+              "line": 43,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Select",
-              "line": 23,
+              "line": 45,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "FingerprintAsync",
-              "line": 24,
+              "line": 47,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "Any",
-              "line": 25,
+              "line": 49,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 25,
+              "line": 49,
               "receiver": "r.Fields",
               "generic_types": []
             },
             {
               "name": "Distinct",
-              "line": 26,
+              "line": 51,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "FirstOrDefault",
-              "line": 28,
+              "line": 55,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 28,
+              "line": 55,
               "receiver": "r.Sku",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 29,
+              "line": 57,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "RecordAsync",
-              "line": 30,
+              "line": 59,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 31,
+              "line": 61,
               "receiver": "current",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 34,
+              "line": 67,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 35,
+              "line": 69,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ToArray",
-              "line": 37,
+              "line": 73,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Append",
-              "line": 37,
+              "line": 73,
               "receiver": "preview.Issues",
               "generic_types": []
             },
             {
               "name": "RollbackAsync",
-              "line": 39,
+              "line": 77,
               "receiver": "unit",
               "generic_types": []
             }
@@ -150442,27 +150513,27 @@
           "creates": [
             {
               "type": "SqliteUnitOfWork",
-              "line": 18
+              "line": 35
             },
             {
               "type": "ImportProductsCommand",
-              "line": 33
+              "line": 65
             },
             {
               "type": "CommandEnvelope<ImportProductsCommand>",
-              "line": 34
+              "line": 67
             },
             {
               "type": "ImportProductsCommandHandler",
-              "line": 35
+              "line": 69
             },
             {
               "type": "SqlitePermissionResolver",
-              "line": 35
+              "line": 69
             },
             {
               "type": "ImportIssue",
-              "line": 37
+              "line": 73
             }
           ],
           "errors": [],
@@ -150470,23 +150541,23 @@
             {
               "operation": "FROM",
               "table": "item_pricing",
-              "line": 30
+              "line": 59
             },
             {
               "operation": "JOIN",
               "table": "items",
-              "line": 30
+              "line": 59
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-e690eaec99c5",
+          "id": "M-df143dd30442",
           "name": "ReadThirdPartiesAsync",
           "owner": "ImportPreviewService",
-          "line": 42,
-          "end": 47,
+          "line": 83,
+          "end": 93,
           "signature": "ReadThirdPartiesAsync(byte[],string,string,string,string,CancellationToken)",
           "returns": "Task<ThirdPartyImportPreview>",
           "parameters": [
@@ -150519,25 +150590,25 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 44,
+              "line": 87,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateReadConnectionAsync",
-              "line": 44,
+              "line": 87,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "BeginTransaction",
-              "line": 45,
+              "line": 89,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 46,
+              "line": 91,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -150545,7 +150616,7 @@
           "creates": [
             {
               "type": "XlsxThirdPartyImportReader",
-              "line": 46
+              "line": 91
             }
           ],
           "errors": [],
@@ -150554,11 +150625,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-f54a378be180",
+          "id": "M-0bd27fa31efc",
           "name": "ValidateThirdPartiesAsync",
           "owner": "ImportPreviewService",
-          "line": 49,
-          "end": 63,
+          "line": 97,
+          "end": 125,
           "signature": "ValidateThirdPartiesAsync(ThirdPartyImportPreview,string,Guid,CancellationToken)",
           "returns": "Task<ThirdPartyImportPreview>",
           "parameters": [
@@ -150583,49 +150654,49 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 52,
+              "line": 103,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateWriteConnectionAsync",
-              "line": 52,
+              "line": 103,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "BeginTransactionAsync",
-              "line": 54,
+              "line": 107,
               "receiver": "unit",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 58,
+              "line": 115,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 59,
+              "line": 117,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ToArray",
-              "line": 60,
+              "line": 119,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Append",
-              "line": 60,
+              "line": 119,
               "receiver": "preview.Issues",
               "generic_types": []
             },
             {
               "name": "RollbackAsync",
-              "line": 62,
+              "line": 123,
               "receiver": "unit",
               "generic_types": []
             }
@@ -150633,23 +150704,23 @@
           "creates": [
             {
               "type": "SqliteUnitOfWork",
-              "line": 53
+              "line": 105
             },
             {
               "type": "ImportThirdPartiesCommand",
-              "line": 57
+              "line": 113
             },
             {
               "type": "CommandEnvelope<ImportThirdPartiesCommand>",
-              "line": 58
+              "line": 115
             },
             {
               "type": "ImportThirdPartiesCommandHandler",
-              "line": 59
+              "line": 117
             },
             {
               "type": "ImportIssue",
-              "line": 60
+              "line": 119
             }
           ],
           "errors": [],
@@ -150658,11 +150729,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-fa82f3392e3c",
+          "id": "M-a77c9c317aee",
           "name": "TemplateContextAsync",
           "owner": "ImportPreviewService",
-          "line": 65,
-          "end": 69,
+          "line": 129,
+          "end": 137,
           "signature": "TemplateContextAsync(string,string,CancellationToken)",
           "returns": "Task<ImportWorkbookContext>",
           "parameters": [
@@ -150683,19 +150754,19 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 67,
+              "line": 133,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateReadConnectionAsync",
-              "line": 67,
+              "line": 133,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "TemplateContextAsync",
-              "line": 68,
+              "line": 135,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -150707,11 +150778,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-6b7921270d49",
+          "id": "M-afdac18e364a",
           "name": "TemplateContextAsync",
           "owner": "ImportPreviewService",
-          "line": 71,
-          "end": 117,
+          "line": 141,
+          "end": 249,
           "signature": "TemplateContextAsync(DbConnection,string,CancellationToken)",
           "returns": "Task<ImportWorkbookContext>",
           "parameters": [
@@ -150732,73 +150803,73 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 73,
+              "line": 145,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ContextAsync",
-              "line": 73,
+              "line": 145,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 77,
+              "line": 153,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 78,
+              "line": 155,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 79,
+              "line": 157,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 79,
+              "line": 157,
               "receiver": "choices",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 79,
+              "line": 157,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetValue",
-              "line": 79,
+              "line": 157,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 79,
+              "line": 157,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Load",
-              "line": 81,
+              "line": 161,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "AddRange",
-              "line": 87,
+              "line": 173,
               "receiver": "choices",
               "generic_types": []
             },
             {
               "name": "Select",
-              "line": 115,
+              "line": 243,
               "receiver": "ThirdPartyFieldPolicy.MyanmarRegions",
               "generic_types": []
             }
@@ -150806,115 +150877,127 @@
           "creates": [
             {
               "type": "List<ImportChoice>",
-              "line": 74
+              "line": 147
             },
             {
               "type": "ImportChoice",
-              "line": 79
+              "line": 157
             },
             {
               "type": "ImportChoice",
-              "line": 88
+              "line": 175
             },
             {
               "type": "ImportChoice",
-              "line": 89
+              "line": 177
             },
             {
               "type": "ImportChoice",
-              "line": 90
+              "line": 179
             },
             {
               "type": "ImportChoice",
-              "line": 91
+              "line": 181
             },
             {
               "type": "ImportChoice",
-              "line": 92
+              "line": 183
             },
             {
               "type": "ImportChoice",
-              "line": 93
+              "line": 185
             },
             {
               "type": "ImportChoice",
-              "line": 94
+              "line": 187
             },
             {
               "type": "ImportChoice",
-              "line": 95
+              "line": 189
             },
             {
               "type": "ImportChoice",
-              "line": 96
+              "line": 191
             },
             {
               "type": "ImportChoice",
-              "line": 97
+              "line": 193
             },
             {
               "type": "ImportChoice",
-              "line": 98
+              "line": 195
             },
             {
               "type": "ImportChoice",
-              "line": 99
+              "line": 197
             },
             {
               "type": "ImportChoice",
-              "line": 100
+              "line": 199
             },
             {
               "type": "ImportChoice",
-              "line": 101
+              "line": 201
             },
             {
               "type": "ImportChoice",
-              "line": 102
+              "line": 203
             },
             {
               "type": "ImportChoice",
-              "line": 103
+              "line": 205
             },
             {
               "type": "ImportChoice",
-              "line": 104
+              "line": 207
             },
             {
               "type": "ImportChoice",
-              "line": 105
+              "line": 209
             },
             {
               "type": "ImportChoice",
-              "line": 106
+              "line": 211
             },
             {
               "type": "ImportChoice",
-              "line": 107
+              "line": 213
             },
             {
               "type": "ImportChoice",
-              "line": 108
+              "line": 215
             },
             {
               "type": "ImportChoice",
-              "line": 109
+              "line": 217
             },
             {
               "type": "ImportChoice",
-              "line": 110
+              "line": 219
             },
             {
               "type": "ImportChoice",
-              "line": 111
+              "line": 221
             },
             {
               "type": "ImportChoice",
-              "line": 112
+              "line": 223
             },
             {
               "type": "ImportChoice",
-              "line": 115
+              "line": 235
+            },
+            {
+              "type": "ImportChoice",
+              "line": 237
+            },
+            {
+              "type": "ImportChoice",
+              "line": 239
+            },
+            {
+              "type": "ImportChoice",
+              "line": 243
             }
           ],
           "errors": [],
@@ -150922,32 +151005,32 @@
             {
               "operation": "FROM",
               "table": "price_level_settings",
-              "line": 81
+              "line": 161
             },
             {
               "operation": "FROM",
               "table": "store_config",
-              "line": 81
+              "line": 161
             },
             {
               "operation": "FROM",
               "table": "product_categories",
-              "line": 82
+              "line": 163
             },
             {
               "operation": "FROM",
               "table": "product_categories",
-              "line": 82
+              "line": 163
             },
             {
               "operation": "FROM",
               "table": "uoms",
-              "line": 85
+              "line": 169
             },
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 86
+              "line": 171
             }
           ],
           "throws": [],
@@ -150956,7 +151039,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 118
+      "lines": 252
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
@@ -152677,7 +152760,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs",
-      "sha256": "a859e8e805f6c048423f67e3020025951e5bf18d71efef18d849415d89e6ae91",
+      "sha256": "42f5fbfa6d8fdf26db831be770c4bf1797fe79567dd7249b3cda34dbb2151da7",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -152685,7 +152768,7 @@
           "name": "XlsxProductImportReader",
           "kind": "ClassDeclaration",
           "line": 6,
-          "end": 155,
+          "end": 158,
           "bases": [],
           "properties": []
         }
@@ -152725,7 +152808,7 @@
           "name": "Read",
           "owner": "XlsxProductImportReader",
           "line": 14,
-          "end": 154,
+          "end": 157,
           "signature": "Read(byte[],string,string,ImportWorkbookContext?)",
           "returns": "ProductImportPreview",
           "parameters": [
@@ -152893,104 +152976,110 @@
               "generic_types": []
             },
             {
+              "name": "StartsWith",
+              "line": 110,
+              "receiver": "rawTier",
+              "generic_types": []
+            },
+            {
               "name": "TryParse",
-              "line": 109,
+              "line": 112,
               "receiver": "int",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 124,
+              "line": 127,
               "receiver": "tiers",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 134,
+              "line": 137,
               "receiver": "DateTime",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 138,
+              "line": 141,
               "receiver": "stock",
               "generic_types": []
             },
             {
               "name": "Where",
-              "line": 142,
-              "receiver": "<expression>",
-              "generic_types": []
-            },
-            {
-              "name": "GroupBy",
-              "line": 142,
-              "receiver": "products",
-              "generic_types": []
-            },
-            {
-              "name": "Count",
-              "line": 142,
-              "receiver": "g",
-              "generic_types": []
-            },
-            {
-              "name": "Last",
-              "line": 142,
-              "receiver": "duplicate",
-              "generic_types": []
-            },
-            {
-              "name": "GroupBy",
-              "line": 143,
-              "receiver": "<expression>",
-              "generic_types": []
-            },
-            {
-              "name": "Where",
-              "line": 143,
-              "receiver": "products",
-              "generic_types": []
-            },
-            {
-              "name": "GetValueOrDefault",
-              "line": 143,
+              "line": 145,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GroupBy",
               "line": 145,
-              "receiver": "rules",
+              "receiver": "products",
+              "generic_types": []
+            },
+            {
+              "name": "Count",
+              "line": 145,
+              "receiver": "g",
+              "generic_types": []
+            },
+            {
+              "name": "Last",
+              "line": 145,
+              "receiver": "duplicate",
               "generic_types": []
             },
             {
               "name": "GroupBy",
               "line": 146,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "Where",
+              "line": 146,
+              "receiver": "products",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 146,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "GroupBy",
+              "line": 148,
+              "receiver": "rules",
+              "generic_types": []
+            },
+            {
+              "name": "GroupBy",
+              "line": 149,
               "receiver": "tiers",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 146,
+              "line": 149,
               "receiver": "p.Sku",
               "generic_types": []
             },
             {
               "name": "Where",
-              "line": 147,
+              "line": 150,
               "receiver": "stock",
               "generic_types": []
             },
             {
               "name": "StartsWith",
-              "line": 151,
+              "line": 154,
               "receiver": "ex.Message",
               "generic_types": []
             },
             {
               "name": "Split",
-              "line": 151,
+              "line": 154,
               "receiver": "ex.Message",
               "generic_types": []
             }
@@ -153098,43 +153187,35 @@
             },
             {
               "type": "ImportIssue",
-              "line": 119
+              "line": 122
             },
             {
               "type": "ImportIssue",
-              "line": 123
+              "line": 126
             },
             {
               "type": "ImportTierPrice",
-              "line": 124
+              "line": 127
             },
             {
               "type": "ImportRowPreview",
-              "line": 125
+              "line": 128
             },
             {
               "type": "ImportIssue",
-              "line": 135
-            },
-            {
-              "type": "ImportIssue",
-              "line": 137
-            },
-            {
-              "type": "ImportStockRow",
               "line": 138
             },
             {
-              "type": "ImportRowPreview",
+              "type": "ImportIssue",
               "line": 140
             },
             {
-              "type": "ImportIssue",
-              "line": 142
+              "type": "ImportStockRow",
+              "line": 141
             },
             {
-              "type": "ImportIssue",
-              "line": 144
+              "type": "ImportRowPreview",
+              "line": 143
             },
             {
               "type": "ImportIssue",
@@ -153142,19 +153223,27 @@
             },
             {
               "type": "ImportIssue",
-              "line": 146
-            },
-            {
-              "type": "ImportIssue",
               "line": 147
             },
             {
               "type": "ImportIssue",
-              "line": 151
+              "line": 148
+            },
+            {
+              "type": "ImportIssue",
+              "line": 149
+            },
+            {
+              "type": "ImportIssue",
+              "line": 150
+            },
+            {
+              "type": "ImportIssue",
+              "line": 154
             },
             {
               "type": "ProductImportPreview",
-              "line": 153
+              "line": 156
             }
           ],
           "errors": [],
@@ -153165,11 +153254,11 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 155
+      "lines": 158
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxThirdPartyImportReader.cs",
-      "sha256": "b9eb17bfd0bd9151679f47004c66f2022bc26fbf84f9b9d6a601edea608f92e1",
+      "sha256": "10858523fa60b3a6045c3ea61bec3cfe32de17d220585a46cf8723886d8557c2",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -153389,6 +153478,12 @@
               "name": "TryParseBool",
               "line": 99,
               "receiver": "ImportWorkbookSchema",
+              "generic_types": []
+            },
+            {
+              "name": "StartsWith",
+              "line": 108,
+              "receiver": "<expression>",
               "generic_types": []
             },
             {
@@ -199236,7 +199331,7 @@
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs",
-      "sha256": "6c8b6cbfcd391d349e1eeb40a1b1212dbfe31fd9b6b8ef4b654d6224b343c33d",
+      "sha256": "6a4ee536b09f89298b835b23a1dc8a26b2a999cc47123a08d5b8a1dbb7819a9e",
       "project": "GetSeek.IntegrationTests",
       "test": true,
       "types": [
@@ -199244,7 +199339,7 @@
           "name": "InventoryImportIntegrationTests",
           "kind": "ClassDeclaration",
           "line": 20,
-          "end": 243,
+          "end": 285,
           "bases": [
             "IDisposable"
           ],
@@ -199536,11 +199631,30 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-8359f5159e38",
+          "id": "M-bdb088126379",
+          "name": "WhitespaceTiersAndSpacedPricingRules_AreAcceptedAndApplied",
+          "owner": "InventoryImportIntegrationTests",
+          "line": 239,
+          "end": 278,
+          "signature": "WhitespaceTiersAndSpacedPricingRules_AreAcceptedAndApplied()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-d83521940d9c",
           "name": "Dispose",
           "owner": "InventoryImportIntegrationTests",
-          "line": 238,
-          "end": 242,
+          "line": 280,
+          "end": 284,
           "signature": "Dispose()",
           "returns": "void",
           "parameters": [],
@@ -199555,7 +199669,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 243
+      "lines": 285
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/InventoryIntegrationTests.cs",
@@ -216669,7 +216783,7 @@
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs",
-      "sha256": "63aa8fca4af18ad816f855e96552e89cd2c5162bed38c2b9927a3a4cb403c2b5",
+      "sha256": "e600e036a89616f85cec710e0f7ae472165a31bf295a972edd2a60161f83f24c",
       "project": "GetSeek.IntegrationTests",
       "test": true,
       "types": [
@@ -216677,7 +216791,7 @@
           "name": "ThirdPartyImportIntegrationTests",
           "kind": "ClassDeclaration",
           "line": 26,
-          "end": 603,
+          "end": 608,
           "bases": [],
           "properties": []
         },
@@ -217032,7 +217146,7 @@
           "name": "FlexibleBooleansAndTierFormattingAndBarcodeValidation_AreHandled",
           "owner": "ThirdPartyImportIntegrationTests",
           "line": 520,
-          "end": 602,
+          "end": 607,
           "signature": "FlexibleBooleansAndTierFormattingAndBarcodeValidation_AreHandled()",
           "returns": "Task",
           "parameters": [],
@@ -217049,7 +217163,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 603
+      "lines": 608
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/TouchAndShortcutIntegrationTests.cs",
@@ -228946,8 +229060,8 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs",
           "method": "ValidateInventoryAsync",
-          "line": 33,
-          "method_id": "M-ab9df140f727"
+          "line": 65,
+          "method_id": "M-52a08701a406"
         }
       ]
     },
@@ -228983,8 +229097,8 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs",
           "method": "ValidateThirdPartiesAsync",
-          "line": 57,
-          "method_id": "M-f54a378be180"
+          "line": 113,
+          "method_id": "M-0bd27fa31efc"
         }
       ]
     },
@@ -230532,7 +230646,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs",
           "method": "PriceAsync",
-          "line": 123,
+          "line": 167,
           "method_id": "M-7367d0a4cbf6"
         }
       ]

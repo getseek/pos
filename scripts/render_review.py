@@ -14,7 +14,7 @@ def cell(s):return html.escape(str(s)).replace('|','&#124;').replace('\n',' ')
 def code(s):return '<code>'+cell(s)+'</code>'
 def project_slug(name):return 'code-'+name.lower().replace('getseek.','')
 def head(name,title,features=None):
-    return f'---\nid: PP-REVIEW-{name.upper()}\nrevision: "1.0"\nstatus: DRAFT\nreviewed_on: "2026-10-18"\nevidence: ["E-015"]\nfeatures: {json.dumps(features or [])}\n---\n\n# {title}\n\n<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>\n\n'
+    return f'---\nid: PP-REVIEW-{name.upper()}\nrevision: "1.0"\nstatus: DRAFT\nreviewed_on: "2026-10-20"\nevidence: ["E-015"]\nfeatures: {json.dumps(features or [])}\n---\n\n# {title}\n\n<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>\n\n'
 def clean(s):return s.replace('"',"'").replace('<','(').replace('>',')').replace('&','and')
 def diagram(nodes,edges):
     result='```mermaid\nflowchart TD\n'

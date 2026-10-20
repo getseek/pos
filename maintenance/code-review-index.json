@@ -83107,7 +83107,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
-      "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159",
+      "sha256": "6958275f0438d90aae65c748a21f5248c8680f17d61b2d20388e2df694c62595",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -83115,7 +83115,7 @@
           "name": "PosBootstrapper",
           "kind": "ClassDeclaration",
           "line": 19,
-          "end": 309,
+          "end": 344,
           "bases": [],
           "properties": []
         }
@@ -83421,11 +83421,79 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-597075fcd734",
-          "name": "BootstrapAsync",
+          "id": "M-bd0f8ab44763",
+          "name": "ResolveDiagnosticsWorkspace",
           "owner": "PosBootstrapper",
           "line": 74,
-          "end": 78,
+          "end": 106,
+          "signature": "ResolveDiagnosticsWorkspace(string?,bool)",
+          "returns": "string",
+          "parameters": [
+            {
+              "name": "connectionString",
+              "type": "string?"
+            },
+            {
+              "name": "isPersistentDemoWorkspace",
+              "type": "bool"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 81,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "Contains",
+              "line": 90,
+              "receiver": "builder.DataSource",
+              "generic_types": []
+            },
+            {
+              "name": "Equals",
+              "line": 91,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "ToString",
+              "line": 91,
+              "receiver": "builder.Mode",
+              "generic_types": []
+            },
+            {
+              "name": "GetFullPath",
+              "line": 96,
+              "receiver": "Path",
+              "generic_types": []
+            },
+            {
+              "name": "GetDefaultDatabasePath",
+              "line": 97,
+              "receiver": "<implicit>",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "SqliteConnectionStringBuilder",
+              "line": 88
+            }
+          ],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-27d118a142ab",
+          "name": "BootstrapAsync",
+          "owner": "PosBootstrapper",
+          "line": 108,
+          "end": 112,
           "signature": "BootstrapAsync(string?,bool,CancellationToken)",
           "returns": "Task<MainViewModel>",
           "parameters": [
@@ -83446,7 +83514,7 @@
           "calls": [
             {
               "name": "BootstrapAsyncCore",
-              "line": 78,
+              "line": 112,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -83458,11 +83526,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-9819d2ee6a13",
+          "id": "M-d4b8bfc5ebb6",
           "name": "BootstrapDemoWorkspaceAsync",
           "owner": "PosBootstrapper",
-          "line": 80,
-          "end": 81,
+          "line": 114,
+          "end": 115,
           "signature": "BootstrapDemoWorkspaceAsync(CancellationToken)",
           "returns": "Task<MainViewModel>",
           "parameters": [
@@ -83475,7 +83543,7 @@
           "calls": [
             {
               "name": "BootstrapAsyncCore",
-              "line": 81,
+              "line": 115,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -83487,11 +83555,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-3dc17a44b22a",
+          "id": "M-80415cd29d28",
           "name": "BootstrapAsyncCore",
           "owner": "PosBootstrapper",
-          "line": 83,
-          "end": 131,
+          "line": 117,
+          "end": 165,
           "signature": "BootstrapAsyncCore(string?,bool,bool,CancellationToken)",
           "returns": "Task<MainViewModel>",
           "parameters": [
@@ -83516,97 +83584,103 @@
           "calls": [
             {
               "name": "CreateDemo",
-              "line": 91,
+              "line": 125,
               "receiver": "MainViewModel",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 94,
+              "line": 128,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 94,
+              "line": 128,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 94,
+              "line": 128,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 98,
+              "line": 132,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "GetDefaultDemoDatabasePath",
-              "line": 100,
+              "line": 134,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "GetDefaultDatabasePath",
-              "line": 100,
+              "line": 134,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ValidateSeparateDemoDatabasePath",
-              "line": 103,
+              "line": 137,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "GetDirectoryName",
-              "line": 105,
+              "line": 139,
               "receiver": "Path",
               "generic_types": []
             },
             {
               "name": "IsNullOrEmpty",
-              "line": 106,
+              "line": 140,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "CreateDirectory",
-              "line": 108,
+              "line": 142,
               "receiver": "Directory",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 115,
+              "line": 149,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ApplyWritePolicyAsync",
-              "line": 115,
+              "line": 149,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
               "name": "BootstrapWithConnectionAsyncCore",
-              "line": 117,
+              "line": 151,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "LogDiagnosticError",
-              "line": 127,
+              "line": 161,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "ResolveDiagnosticsWorkspace",
+              "line": 161,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "CreateStartupError",
-              "line": 129,
+              "line": 163,
               "receiver": "MainViewModel",
               "generic_types": []
             }
@@ -83614,11 +83688,11 @@
           "creates": [
             {
               "type": "SqliteConnection",
-              "line": 114
+              "line": 148
             },
             {
               "type": "SqliteConnection",
-              "line": 120
+              "line": 154
             }
           ],
           "errors": [],
@@ -83627,11 +83701,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-58efbdaa54ec",
+          "id": "M-454d11bc79c7",
           "name": "BootstrapWithConnectionAsync",
           "owner": "PosBootstrapper",
-          "line": 133,
-          "end": 138,
+          "line": 167,
+          "end": 172,
           "signature": "BootstrapWithConnectionAsync(DbConnection,string?,Func<DbConnection>?,CancellationToken)",
           "returns": "Task<MainViewModel>",
           "parameters": [
@@ -83656,7 +83730,7 @@
           "calls": [
             {
               "name": "BootstrapWithConnectionAsyncCore",
-              "line": 138,
+              "line": 172,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -83668,11 +83742,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-c46379c8160f",
+          "id": "M-0d19bb964a55",
           "name": "BootstrapWithConnectionAsyncCore",
           "owner": "PosBootstrapper",
-          "line": 140,
-          "end": 282,
+          "line": 174,
+          "end": 317,
           "signature": "BootstrapWithConnectionAsyncCore(DbConnection,string?,Func<DbConnection>?,bool,CancellationToken)",
           "returns": "Task<MainViewModel>",
           "parameters": [
@@ -83701,193 +83775,199 @@
           "calls": [
             {
               "name": "ToUpperInvariant",
-              "line": 147,
+              "line": 181,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 147,
+              "line": 181,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 147,
+              "line": 181,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 155,
+              "line": 189,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "InitializeDisposableDemoWorkspaceAsync",
-              "line": 155,
+              "line": 189,
               "receiver": "SqliteDemoDataSeeder",
               "generic_types": []
             },
             {
               "name": "MigrateAsync",
-              "line": 157,
+              "line": 191,
               "receiver": "DatabaseMigrator",
               "generic_types": []
             },
             {
               "name": "GetStoreProfileAsync",
-              "line": 161,
+              "line": 195,
               "receiver": "storeReader",
               "generic_types": []
             },
             {
               "name": "GetActiveItemsAsync",
-              "line": 164,
+              "line": 198,
               "receiver": "catalogReader",
               "generic_types": []
             },
             {
               "name": "GetActiveShiftAsync",
-              "line": 167,
+              "line": 201,
               "receiver": "shiftReader",
               "generic_types": []
             },
             {
               "name": "Initialize",
-              "line": 170,
+              "line": 204,
               "receiver": "sessionContext",
               "generic_types": []
             },
             {
               "name": "Lock",
-              "line": 171,
+              "line": 205,
               "receiver": "sessionContext",
               "generic_types": []
             },
             {
               "name": "connectionFactory",
-              "line": 182,
+              "line": 216,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "OpenAsync",
-              "line": 200,
+              "line": 234,
               "receiver": "opConn",
               "generic_types": []
             },
             {
               "name": "ApplyWritePolicyAsync",
-              "line": 202,
+              "line": 236,
               "receiver": "SqliteConnectionPolicy",
               "generic_types": []
             },
             {
+              "name": "ResolveDiagnosticsWorkspace",
+              "line": 246,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
               "name": "CreateCommand",
-              "line": 226,
+              "line": 261,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 229,
+              "line": 264,
               "receiver": "userCountCmd",
               "generic_types": []
             },
             {
               "name": "CreateProduction",
-              "line": 232,
+              "line": 267,
               "receiver": "MainViewModel",
               "generic_types": []
             },
             {
               "name": "ConfigureInvoiceReader",
-              "line": 245,
+              "line": 280,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "ConfigureSearchPorts",
-              "line": 248,
+              "line": 283,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 249,
+              "line": 284,
               "receiver": "opConn.ConnectionString",
               "generic_types": []
             },
             {
               "name": "ConfigureSalaryPorts",
-              "line": 250,
+              "line": 285,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "ConfigureTeamsPorts",
-              "line": 253,
+              "line": 288,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "ConfigureExpensePorts",
-              "line": 256,
+              "line": 291,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "RestoreActiveCartAsync",
-              "line": 267,
+              "line": 302,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "LoadManualPaymentSettingsAsync",
-              "line": 268,
+              "line": 303,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "LoadActivityInvoicesAsync",
-              "line": 269,
+              "line": 304,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "LoadSuppliersAsync",
-              "line": 270,
+              "line": 305,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "LoadOutputDevicesAsync",
-              "line": 271,
+              "line": 306,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "AuditDocumentsFolder",
-              "line": 272,
+              "line": 307,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "UpdateDemoSeedingAvailabilityAsync",
-              "line": 273,
+              "line": 308,
               "receiver": "vm",
               "generic_types": []
             },
             {
               "name": "LogDiagnosticError",
-              "line": 278,
+              "line": 313,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "CreateStartupError",
-              "line": 280,
+              "line": 315,
               "receiver": "MainViewModel",
               "generic_types": []
             }
@@ -83895,99 +83975,99 @@
           "creates": [
             {
               "type": "SqliteStoreProfileReader",
-              "line": 160
+              "line": 194
             },
             {
               "type": "SqliteCatalogReader",
-              "line": 163
+              "line": 197
             },
             {
               "type": "SqliteShiftReader",
-              "line": 166
+              "line": 200
             },
             {
               "type": "GetSeek.Infrastructure.Security.SecuritySessionContext",
-              "line": 169
+              "line": 203
             },
             {
               "type": "GetSeek.Infrastructure.Security.SqliteSessionUnlockValidator",
-              "line": 174
-            },
-            {
-              "type": "GetSeek.Infrastructure.Security.SqliteSessionUnlockValidator",
-              "line": 175
-            },
-            {
-              "type": "SqliteUnitOfWork",
-              "line": 204
-            },
-            {
-              "type": "SqliteIdempotencyStore",
-              "line": 205
-            },
-            {
-              "type": "SqliteAuditJournalRepository",
-              "line": 206
-            },
-            {
-              "type": "ProductionLicenseService",
-              "line": 207
-            },
-            {
-              "type": "SystemClock",
               "line": 208
             },
             {
+              "type": "GetSeek.Infrastructure.Security.SqliteSessionUnlockValidator",
+              "line": 209
+            },
+            {
+              "type": "SqliteUnitOfWork",
+              "line": 238
+            },
+            {
+              "type": "SqliteIdempotencyStore",
+              "line": 239
+            },
+            {
+              "type": "SqliteAuditJournalRepository",
+              "line": 240
+            },
+            {
+              "type": "ProductionLicenseService",
+              "line": 241
+            },
+            {
+              "type": "SystemClock",
+              "line": 242
+            },
+            {
               "type": "SqlitePermissionResolver",
-              "line": 210
+              "line": 244
             },
             {
               "type": "OperationalLogger",
-              "line": 212
-            },
-            {
-              "type": "CommandPipeline",
-              "line": 213
-            },
-            {
-              "type": "GetSeek.Infrastructure.Persistence.Readers.SqliteInvoiceAndRegisterReader",
-              "line": 245
-            },
-            {
-              "type": "SqliteSearchSuggestionReader",
-              "line": 246
-            },
-            {
-              "type": "SqliteSearchUsageStore",
               "line": 247
             },
             {
-              "type": "SqliteSalaryReader",
-              "line": 251
+              "type": "CommandPipeline",
+              "line": 248
+            },
+            {
+              "type": "GetSeek.Infrastructure.Persistence.Readers.SqliteInvoiceAndRegisterReader",
+              "line": 280
+            },
+            {
+              "type": "SqliteSearchSuggestionReader",
+              "line": 281
+            },
+            {
+              "type": "SqliteSearchUsageStore",
+              "line": 282
             },
             {
               "type": "SqliteSalaryReader",
-              "line": 252
+              "line": 286
+            },
+            {
+              "type": "SqliteSalaryReader",
+              "line": 287
             },
             {
               "type": "SqliteTeamsReader",
-              "line": 254
+              "line": 289
             },
             {
               "type": "SqliteTeamsReader",
-              "line": 255
+              "line": 290
             },
             {
               "type": "SqliteExpenseReader",
-              "line": 257
+              "line": 292
             },
             {
               "type": "SqliteExpenseReader",
-              "line": 257
+              "line": 292
             },
             {
               "type": "SqliteExpenseAttachmentService",
-              "line": 258
+              "line": 293
             }
           ],
           "errors": [],
@@ -83995,18 +84075,18 @@
             {
               "operation": "FROM",
               "table": "users",
-              "line": 228
+              "line": 263
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-8c0c809dac65",
+          "id": "M-13d20e2c95c4",
           "name": "AuditDocumentsFolder",
           "owner": "PosBootstrapper",
-          "line": 284,
-          "end": 308,
+          "line": 319,
+          "end": 343,
           "signature": "AuditDocumentsFolder(string,string)",
           "returns": "void",
           "parameters": [
@@ -84023,49 +84103,49 @@
           "calls": [
             {
               "name": "GetDefaultDocumentsPath",
-              "line": 288,
+              "line": 323,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Exists",
-              "line": 289,
+              "line": 324,
               "receiver": "Directory",
               "generic_types": []
             },
             {
               "name": "GetFiles",
-              "line": 291,
+              "line": 326,
               "receiver": "Directory",
               "generic_types": []
             },
             {
               "name": "ToLowerInvariant",
-              "line": 294,
+              "line": 329,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetExtension",
-              "line": 294,
+              "line": 329,
               "receiver": "Path",
               "generic_types": []
             },
             {
               "name": "GetFileName",
-              "line": 295,
+              "line": 330,
               "receiver": "Path",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 296,
+              "line": 331,
               "receiver": "name",
               "generic_types": []
             },
             {
               "name": "Log",
-              "line": 298,
+              "line": 333,
               "receiver": "<expression>",
               "generic_types": []
             }
@@ -84073,11 +84153,11 @@
           "creates": [
             {
               "type": "RuntimeErrorLogger",
-              "line": 298
+              "line": 333
             },
             {
               "type": "InvalidOperationException",
-              "line": 299
+              "line": 334
             }
           ],
           "errors": [],
@@ -84088,7 +84168,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 310
+      "lines": 345
     },
     {
       "path": "Software/src/GetSeek.Desktop/Bootstrap/WorkspaceLaunchSelector.cs",
@@ -111565,7 +111645,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-      "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58",
+      "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -113978,6 +114058,12 @@
               "name": "ConfigureDiagnosticsWorkspace",
               "line": 4414,
               "receiver": "vm",
+              "generic_types": []
+            },
+            {
+              "name": "ResolveDiagnosticsWorkspace",
+              "line": 4414,
+              "receiver": "PosBootstrapper",
               "generic_types": []
             },
             {

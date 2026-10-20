@@ -2,14 +2,14 @@
 id: PP-REVIEW-PIPELINE
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # Command and failure pipeline
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 This map follows the inspected `ExecuteAsync` control flow. Both the post-gate preflight block and the in-transaction block share a unified cancellation/exception normalization boundary (`PP-REV-002` option `boundary`), rolling back only when an active transaction was opened.
 

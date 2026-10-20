@@ -2,14 +2,14 @@
 id: PP-REVIEW-ERRORS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # Error code catalogue
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 This catalogue contains **387 distinct uppercase literal codes** extracted from `Failure(...)` calls in application method bodies. It is an index of code sites, not a claim that every code is reachable or user-visible. Dynamic/propagated codes, exceptions, worker message prefixes and validation outside method bodies may require separate inspection.
 

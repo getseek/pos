@@ -2,14 +2,14 @@
 id: PP-REVIEW-INVOICES
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F005"]
 ---
 
 # Invoice collection and commercial lifecycle
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F005. Source: [InvoiceSettlementCommandHandler.cs:1](code-application.md#src-616fa131d5cf), [CommercialLifecycleCommands.cs:1](code-application.md#src-ad6a9468d7c1).
 

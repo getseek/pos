@@ -8,7 +8,7 @@
       "id": "E-001",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
-      "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159",
+      "sha256": "6958275f0438d90aae65c748a21f5248c8680f17d61b2d20388e2df694c62595",
       "reviewed_on": "2026-10-18",
       "claim": "Separate LocalAppData Real and persistent Demo paths exist; this does not certify a migration or reset journey.",
       "symbols": [
@@ -93,7 +93,7 @@
       "id": "E-011",
       "kind": "source-inspected",
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-      "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58",
+      "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766",
       "reviewed_on": "2026-10-18",
       "claim": "Historical screenshot sample names/products match source defaults and CreateDemo data; screenshots do not prove current behavior.",
       "symbols": [
@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "e7d2aa854e86d99fd77c483b3eeb0fe4e6f090512a0af52a163b8a8fc13ab837",
+      "sha256": "50cef8590e795d2f0a9758c72b55e330b22f049eb727196af20e37992f485425",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -351,7 +351,7 @@
       "id": "E-020",
       "kind": "fresh-automated",
       "path": "Software/TestResults/unit-tests-2026-10-20-rev-fixes.trx",
-      "sha256": "5aa40a5387e7db089c54de4a2519b93d25d4a3ec54a13398810dfbf92398de94",
+      "sha256": "a4d18aa668989fdc584d3cb05ba3c1531e2a2d430c2e9a54d85687df5f38cf60",
       "reviewed_on": "2026-10-20",
       "claim": "Fresh automated unit test suite execution including PP-REV-001 WorkspaceLaunchSelector conflict rejection, PP-REV-002 CommandPipeline preflight boundary normalization, and PP-REV-003 OutputDeviceWorker cycle-error deduplication. 282 passed, 0 failed.",
       "counters": {
@@ -373,10 +373,10 @@
         "pending": "0"
       },
       "times": {
-        "creation": "2026-10-20T18:12:59.4972892+07:00",
-        "queuing": "2026-10-20T18:12:59.4972895+07:00",
-        "start": "2026-10-20T18:12:58.9184476+07:00",
-        "finish": "2026-10-20T18:13:01.4845435+07:00"
+        "creation": "2026-10-20T18:42:03.7799722+07:00",
+        "queuing": "2026-10-20T18:42:03.7799728+07:00",
+        "start": "2026-10-20T18:42:03.1521398+07:00",
+        "finish": "2026-10-20T18:42:06.0286891+07:00"
       },
       "assembly": "GetSeek.UnitTests"
     },
@@ -384,7 +384,7 @@
       "id": "E-021",
       "kind": "fresh-automated",
       "path": "Software/TestResults/integration-tests-2026-10-20-rev-fixes.trx",
-      "sha256": "7ca2997aa66d52ebc7524afd5b2d7e284d285d31e27dd84d91007271ea527711",
+      "sha256": "55db2cd69db6325fc4b4d12e9867c59cb572f98edf9b1518da098ee43e96ef92",
       "reviewed_on": "2026-10-20",
       "claim": "Fresh automated integration test execution of SingleRegisterProductionBootstrapperTests (PP-REV-006 single-register startup, persisted catalog/decimals, and safe startup error masking). 7 passed, 0 failed.",
       "counters": {
@@ -406,10 +406,10 @@
         "pending": "0"
       },
       "times": {
-        "creation": "2026-10-20T18:13:23.7421507+07:00",
-        "queuing": "2026-10-20T18:13:23.7421512+07:00",
-        "start": "2026-10-20T18:13:21.8318721+07:00",
-        "finish": "2026-10-20T18:13:24.9196877+07:00"
+        "creation": "2026-10-20T18:42:59.6726416+07:00",
+        "queuing": "2026-10-20T18:42:59.6726421+07:00",
+        "start": "2026-10-20T18:42:57.8179383+07:00",
+        "finish": "2026-10-20T18:43:00.6566695+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

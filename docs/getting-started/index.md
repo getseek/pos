@@ -2,14 +2,14 @@
 id: PP-START-001
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
-evidence: ["E-010", "E-001", "E-002"]
+reviewed_on: "2026-10-20"
+evidence: ["E-010", "E-001", "E-002", "E-020", "E-021"]
 features: ["PP-F001", "PP-F002"]
 ---
 
 # Requirements and launch
 
-<div class="meta">DRAFT · source review 18 October 2026 · documentation foundation D02</div>
+<div class="meta">DRAFT · source review 20 October 2026 · documentation foundation D02</div>
 
 The current application is a Windows desktop POS built with .NET 10, Avalonia 11 and SQLite. The source launcher is a development workflow, not a self-contained installer.
 
@@ -35,7 +35,7 @@ dotnet --list-sdks
 dotnet --version
 ```
 
-Use the application's `Start_GetSeek_POS.bat` entry point or an explicit workspace command only when you intend to start that application. Review [Real Shop and Demo](workspaces.md) first. No application build, database migration, reset, or real sale was executed while creating this documentation foundation.
+Use the application's `Start_GetSeek_POS.bat` entry point or an explicit workspace command only when you intend to start that application. Review [Real Shop and Demo](workspaces.md) first. No live shop database migration, reset, or real sale is executed by the documentation build scripts.
 
 ## If setup fails
 

@@ -2,14 +2,14 @@
 id: PP-REVIEW-CODE-RECOVERY
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # GetSeek.Recovery source catalogue
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Every application C# file in this project is listed below, with a frozen SHA-256 and one row per method declaration. **Calls are unique invocation syntax names with the first observed line, not resolved callee edges.** Overloads, extension methods, dependency injection, reflection and runtime branches require manual/semantic review. SQL line numbers identify string literal starts. Constructors, property bodies and AXAML events are not method declarations in this extractor.
 

@@ -2,14 +2,14 @@
 id: PP-REVIEW-INVENTORY
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F009"]
 ---
 
 # Stock, locations, lots and serials
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F009. Source: [InventoryCommandHandler.cs:1](code-application.md#src-43bee33cf642), [InventoryTraceabilityCommands.cs:1](code-application.md#src-1e2a68301de6).
 

@@ -2,14 +2,14 @@
 id: PP-REVIEW-CASH
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F007"]
 ---
 
 # Shifts, cash loss and reports
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F007. Source: [ShiftCommandHandler.cs:1](code-application.md#src-6edc723e3676), [CashLossCommandHandler.cs:1](code-application.md#src-77895c61e718).
 

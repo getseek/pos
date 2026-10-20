@@ -2,14 +2,14 @@
 id: PP-REVIEW-RETURNS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F006"]
 ---
 
 # Customer returns and inspection
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F006. Source: [SaleReturnCommandHandler.cs:1](code-application.md#src-47b58b729be1).
 

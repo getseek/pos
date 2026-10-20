@@ -2,14 +2,14 @@
 id: PP-REVIEW-SERVICE
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F021"]
 ---
 
 # Desktop and DataService boundaries
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F021. Source: [DataServiceComposition.cs:1](code-dataservice.md#src-a71687a05d71), [DataServiceRequestRouter.cs:1](code-dataservice.md#src-46b520696446).
 

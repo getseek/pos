@@ -2,14 +2,14 @@
 id: PP-HOME-001
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: []
 features: []
 ---
 
 # Premium POS documentation
 
-<div class="meta">DRAFT · source review 18 October 2026 · documentation foundation D02</div>
+<div class="meta">DRAFT · source review 20 October 2026 · documentation foundation D02</div>
 
 <div class="hero-label">GetSeek · Premium POS</div>
 

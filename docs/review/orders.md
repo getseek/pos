@@ -2,14 +2,14 @@
 id: PP-REVIEW-ORDERS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F020"]
 ---
 
 # Order backend and legacy kitchen boundary
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F020. Source: [RestaurantOrderCommandHandler.cs:1](code-application.md#src-b930bdf2056c), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4), [MainViewModel.cs:7997](code-desktop.md#src-16497b924a99), [OutputDeviceWorker.cs:223](code-infrastructure.md#src-64d2e3097e9f).
 

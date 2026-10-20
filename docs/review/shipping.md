@@ -2,14 +2,14 @@
 id: PP-REVIEW-SHIPPING
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F024"]
 ---
 
 # Order drafts, reservations and shipping
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F024. Source: [ShippingCommands.cs:1](code-application.md#src-4772ecb3181e).
 

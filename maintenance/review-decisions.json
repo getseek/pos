@@ -238,7 +238,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
           "line": 140,
-          "sha256": "d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159"
+          "sha256": "6958275f0438d90aae65c748a21f5248c8680f17d61b2d20388e2df694c62595"
         },
         {
           "path": "Software/src/GetSeek.DataService/DataServiceComposition.cs",
@@ -512,7 +512,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 7997,
-          "sha256": "039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58"
+          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

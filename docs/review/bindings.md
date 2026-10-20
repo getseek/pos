@@ -2,14 +2,14 @@
 id: PP-REVIEW-BINDINGS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # UI command bindings
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 **335 literal AXAML Command bindings** were located. This is a binding inventory, not a runtime binding-resolution pass. Compiled bindings, data templates, inherited data contexts, code-behind events and ReactiveCommand creation must be reviewed together.
 

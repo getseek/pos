@@ -2,14 +2,14 @@
 id: PP-REVIEW-WORKSPACES
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F002"]
 ---
 
 # Workspace isolation and reset
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F002. Source: [PosBootstrapper.cs:1](code-desktop.md#src-d26211d90637), [SqliteRealWorkspaceResetService.cs:1](code-infrastructure.md#src-fd68b42fd4fb).
 

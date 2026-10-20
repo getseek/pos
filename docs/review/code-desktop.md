@@ -2,14 +2,14 @@
 id: PP-REVIEW-CODE-DESKTOP
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # GetSeek.Desktop source catalogue
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Every application C# file in this project is listed below, with a frozen SHA-256 and one row per method declaration. **Calls are unique invocation syntax names with the first observed line, not resolved callee edges.** Overloads, extension methods, dependency injection, reflection and runtime branches require manual/semantic review. SQL line numbers identify string literal starts. Constructors, property bodies and AXAML events are not method declarations in this extractor.
 
@@ -62,14 +62,14 @@ Declarations: <code>ScrollGestureBehavior</code> (line 15), <code>PanState</code
 
 ## PosBootstrapper.cs {#src-d26211d90637}
 
-<code>Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs</code> · 310 lines.
+<code>Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs</code> · 345 lines.
 
-SHA-256: <code>d7f5535d3c1ae9ffda8fb551f7e670fe5d57ebe26683d872375030da64763159</code>.
+SHA-256: <code>6958275f0438d90aae65c748a21f5248c8680f17d61b2d20388e2df694c62595</code>.
 
 Declarations: <code>PosBootstrapper</code> (line 19).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (13)</summary>
+<summary>Methods, calls, table effects and failures (14)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
@@ -80,12 +80,13 @@ Declarations: <code>PosBootstrapper</code> (line 19).
 | <span id="m-cab7bff553e8"></span><code>PosBootstrapper.GetDefaultLogPath()</code><br>54–58 | GetFolderPath @56; Combine @57 | No extracted literal effects. |
 | <span id="m-ba1b92053190"></span><code>PosBootstrapper.GetDefaultDocumentsPath()</code><br>60–66 | GetFolderPath @62; Combine @63; CreateDirectory @64 | No extracted literal effects. |
 | <span id="m-a679348838c0"></span><code>PosBootstrapper.LogDiagnosticError(string,Exception,string)</code><br>68–72 | Log @71 | No extracted literal effects. |
-| <span id="m-597075fcd734"></span><code>PosBootstrapper.BootstrapAsync(string?,bool,CancellationToken)</code><br>74–78 | BootstrapAsyncCore @78 | No extracted literal effects. |
-| <span id="m-9819d2ee6a13"></span><code>PosBootstrapper.BootstrapDemoWorkspaceAsync(CancellationToken)</code><br>80–81 | BootstrapAsyncCore @81 | No extracted literal effects. |
-| <span id="m-3dc17a44b22a"></span><code>PosBootstrapper.BootstrapAsyncCore(string?,bool,bool,CancellationToken)</code><br>83–131 | CreateDemo @91; ToUpperInvariant @94; ToString @94; NewGuid @94; IsNullOrWhiteSpace @98; GetDefaultDemoDatabasePath @100; GetDefaultDatabasePath @100; ValidateSeparateDemoDatabasePath @103; GetDirectoryName @105; IsNullOrEmpty @106; CreateDirectory @108; ConfigureAwait @115; ApplyWritePolicyAsync @115; BootstrapWithConnectionAsyncCore @117; LogDiagnosticError @127; CreateStartupError @129 | No extracted literal effects. |
-| <span id="m-58efbdaa54ec"></span><code>PosBootstrapper.BootstrapWithConnectionAsync(DbConnection,string?,Func&lt;DbConnection&gt;?,CancellationToken)</code><br>133–138 | BootstrapWithConnectionAsyncCore @138 | No extracted literal effects. |
-| <span id="m-c46379c8160f"></span><code>PosBootstrapper.BootstrapWithConnectionAsyncCore(DbConnection,string?,Func&lt;DbConnection&gt;?,bool,CancellationToken)</code><br>140–282 | ToUpperInvariant @147; ToString @147; NewGuid @147; ConfigureAwait @155; InitializeDisposableDemoWorkspaceAsync @155; MigrateAsync @157; GetStoreProfileAsync @161; GetActiveItemsAsync @164; GetActiveShiftAsync @167; Initialize @170; Lock @171; connectionFactory @182; OpenAsync @200; ApplyWritePolicyAsync @202; CreateCommand @226; ExecuteScalarAsync @229; CreateProduction @232; ConfigureInvoiceReader @245; ConfigureSearchPorts @248; Contains @249; ConfigureSalaryPorts @250; ConfigureTeamsPorts @253; ConfigureExpensePorts @256; RestoreActiveCartAsync @267; LoadManualPaymentSettingsAsync @268; LoadActivityInvoicesAsync @269; LoadSuppliersAsync @270; LoadOutputDevicesAsync @271; AuditDocumentsFolder @272; UpdateDemoSeedingAvailabilityAsync @273; LogDiagnosticError @278; CreateStartupError @280 | FROM users @228 |
-| <span id="m-8c0c809dac65"></span><code>PosBootstrapper.AuditDocumentsFolder(string,string)</code><br>284–308 | GetDefaultDocumentsPath @288; Exists @289; GetFiles @291; ToLowerInvariant @294; GetExtension @294; GetFileName @295; Contains @296; Log @298 | No extracted literal effects. |
+| <span id="m-bd0f8ab44763"></span><code>PosBootstrapper.ResolveDiagnosticsWorkspace(string?,bool)</code><br>74–106 | IsNullOrWhiteSpace @81; Contains @90; Equals @91; ToString @91; GetFullPath @96; GetDefaultDatabasePath @97 | No extracted literal effects. |
+| <span id="m-27d118a142ab"></span><code>PosBootstrapper.BootstrapAsync(string?,bool,CancellationToken)</code><br>108–112 | BootstrapAsyncCore @112 | No extracted literal effects. |
+| <span id="m-d4b8bfc5ebb6"></span><code>PosBootstrapper.BootstrapDemoWorkspaceAsync(CancellationToken)</code><br>114–115 | BootstrapAsyncCore @115 | No extracted literal effects. |
+| <span id="m-80415cd29d28"></span><code>PosBootstrapper.BootstrapAsyncCore(string?,bool,bool,CancellationToken)</code><br>117–165 | CreateDemo @125; ToUpperInvariant @128; ToString @128; NewGuid @128; IsNullOrWhiteSpace @132; GetDefaultDemoDatabasePath @134; GetDefaultDatabasePath @134; ValidateSeparateDemoDatabasePath @137; GetDirectoryName @139; IsNullOrEmpty @140; CreateDirectory @142; ConfigureAwait @149; ApplyWritePolicyAsync @149; BootstrapWithConnectionAsyncCore @151; LogDiagnosticError @161; ResolveDiagnosticsWorkspace @161; CreateStartupError @163 | No extracted literal effects. |
+| <span id="m-454d11bc79c7"></span><code>PosBootstrapper.BootstrapWithConnectionAsync(DbConnection,string?,Func&lt;DbConnection&gt;?,CancellationToken)</code><br>167–172 | BootstrapWithConnectionAsyncCore @172 | No extracted literal effects. |
+| <span id="m-0d19bb964a55"></span><code>PosBootstrapper.BootstrapWithConnectionAsyncCore(DbConnection,string?,Func&lt;DbConnection&gt;?,bool,CancellationToken)</code><br>174–317 | ToUpperInvariant @181; ToString @181; NewGuid @181; ConfigureAwait @189; InitializeDisposableDemoWorkspaceAsync @189; MigrateAsync @191; GetStoreProfileAsync @195; GetActiveItemsAsync @198; GetActiveShiftAsync @201; Initialize @204; Lock @205; connectionFactory @216; OpenAsync @234; ApplyWritePolicyAsync @236; ResolveDiagnosticsWorkspace @246; CreateCommand @261; ExecuteScalarAsync @264; CreateProduction @267; ConfigureInvoiceReader @280; ConfigureSearchPorts @283; Contains @284; ConfigureSalaryPorts @285; ConfigureTeamsPorts @288; ConfigureExpensePorts @291; RestoreActiveCartAsync @302; LoadManualPaymentSettingsAsync @303; LoadActivityInvoicesAsync @304; LoadSuppliersAsync @305; LoadOutputDevicesAsync @306; AuditDocumentsFolder @307; UpdateDemoSeedingAvailabilityAsync @308; LogDiagnosticError @313; CreateStartupError @315 | FROM users @263 |
+| <span id="m-13d20e2c95c4"></span><code>PosBootstrapper.AuditDocumentsFolder(string,string)</code><br>319–343 | GetDefaultDocumentsPath @323; Exists @324; GetFiles @326; ToLowerInvariant @329; GetExtension @329; GetFileName @330; Contains @331; Log @333 | No extracted literal effects. |
 
 </details>
 
@@ -968,7 +969,7 @@ Declarations: <code>MainViewModel</code> (line 15).
 
 <code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs</code> · 12,754 lines.
 
-SHA-256: <code>039585d2f66c56f528eefc9f3c7b0331793a69cf48fe1dfc2f3047e75a3aac58</code>.
+SHA-256: <code>3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766</code>.
 
 Declarations: <code>MainViewModel : ReactiveObject, IDisposable</code> (line 63), <code>TestLicenseServiceForVm : ILicenseService</code> (line 8398).
 
@@ -1013,7 +1014,7 @@ Declarations: <code>MainViewModel : ReactiveObject, IDisposable</code> (line 63)
 | <span id="m-a9dbde566ccf"></span><code>MainViewModel.CreateDemo()</code><br>4369–4376 | SetActiveCashier @4372; Parse @4372; RefreshUnlockCandidates @4374 | No extracted literal effects. |
 | <span id="m-7b8ba32ffeff"></span><code>MainViewModel.CreateInitializing()</code><br>4378–4386 | — | No extracted literal effects. |
 | <span id="m-d882c56cd3c6"></span><code>MainViewModel.CreateStartupError(string,string)</code><br>4388–4398 | — | No extracted literal effects. |
-| <span id="m-756a20f9a4a5"></span><code>MainViewModel.CreateProduction(StoreProfileProjection,IReadOnlyList&lt;CatalogItemProjection&gt;,ActiveShiftProjection?,ISessionUnlockValidator?,ISessionContext?,CommandPipeline?,DbConnection?,IUnitOfWork?,IDisposable?,bool)</code><br>4400–4418 | ConfigureDiagnosticsWorkspace @4414; ApplyPersistedState @4415; RefreshUnlockCandidates @4416 | No extracted literal effects. |
+| <span id="m-756a20f9a4a5"></span><code>MainViewModel.CreateProduction(StoreProfileProjection,IReadOnlyList&lt;CatalogItemProjection&gt;,ActiveShiftProjection?,ISessionUnlockValidator?,ISessionContext?,CommandPipeline?,DbConnection?,IUnitOfWork?,IDisposable?,bool)</code><br>4400–4418 | ConfigureDiagnosticsWorkspace @4414; ResolveDiagnosticsWorkspace @4414; ApplyPersistedState @4415; RefreshUnlockCandidates @4416 | No extracted literal effects. |
 | <span id="m-0b55f0d33e2e"></span><code>MainViewModel.OpenDemoWorkspace()</code><br>4420–4448 | CheckSessionUnlocked @4422; HasPermission @4423; Equals @4434; GetFileNameWithoutExtension @4434; GetEntryAssembly @4436; Add @4438; Start @4441; ReportException @4446 | No extracted literal effects. |
 | <span id="m-0f89b2491284"></span><code>MainViewModel.OpenRealWorkspace()</code><br>4450–4473 | CheckSessionUnlocked @4452; HasPermission @4453; Equals @4463; GetFileNameWithoutExtension @4463; Add @4464; GetEntryAssembly @4464; Start @4466; ReportException @4471 | No extracted literal effects. |
 | <span id="m-b471422148f9"></span><code>MainViewModel.Dispose()</code><br>4475–4494 | Increment @4477; ResetFinancialWorkspace @4479; Dispose @4480; Stop @4481; CancelBatchPricingPreviewExpiry @4484; Dispose @4485; Dispose @4486; DisposeSearchStates @4492; SuppressFinalize @4493 | No extracted literal effects. |

@@ -2,14 +2,14 @@
 id: PP-REVIEW-SALARY
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F016"]
 ---
 
 # People, agreements and salary
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F016. Source: [SalaryPeriodCommandHandler.cs:1](code-application.md#src-4b1c23ddb697), [SalaryPaymentCommandHandler.cs:1](code-application.md#src-c26df3332168).
 

@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def load(path): return json.loads((ROOT/path).read_text(encoding='utf-8'))
 
 def header(identifier,title):
-    return f'---\nid: {identifier}\nrevision: "1.0"\nstatus: DRAFT\nreviewed_on: "2026-10-18"\nevidence: []\nfeatures: []\n---\n\n# {title}\n\n<div class="meta">DRAFT · source review 18 October 2026 · generated registry view</div>\n\n'
+    return f'---\nid: {identifier}\nrevision: "1.0"\nstatus: DRAFT\nreviewed_on: "2026-10-20"\nevidence: []\nfeatures: []\n---\n\n# {title}\n\n<div class="meta">DRAFT · source review 20 October 2026 · generated registry view</div>\n\n'
 
 def render():
     features=load('maintenance/features.json')['features']

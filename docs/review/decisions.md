@@ -2,14 +2,14 @@
 id: PP-REVIEW-DECISIONS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: []
 ---
 
 # Review findings and change choices
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 These review records track P1 architectural/hardware boundaries and P2 source-observed findings. On 20 October 2026, the four code-fixable P2 items (`PP-REV-001`, `PP-REV-002`, `PP-REV-003`, and `PP-REV-006`) were implemented and covered by fresh automated tests, while the four P1 boundaries (`PP-REV-004`, `PP-REV-005`, `PP-REV-007`, and `PP-REV-008`) remain explicit review gates.
 

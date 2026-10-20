@@ -2,14 +2,14 @@
 id: PP-REF-003
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: []
 features: []
 ---
 
 # Document register
 
-<div class="meta">DRAFT · source review 18 October 2026 · generated registry view</div>
+<div class="meta">DRAFT · source review 20 October 2026 · generated registry view</div>
 
 Every public page has a stable ID, review date, maturity, and explicit navigation entry. **DRAFT** describes the document; it does not describe product acceptance or owner approval.
 

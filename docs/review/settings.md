@@ -2,14 +2,14 @@
 id: PP-REVIEW-SETTINGS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F018"]
 ---
 
 # Settings and output verification
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F018. Source: [ApplySettingsCommandHandler.cs:1](code-application.md#src-87133587a4b1), [OutputDeviceCommands.cs:1](code-application.md#src-bbf9d29f8bdc).
 

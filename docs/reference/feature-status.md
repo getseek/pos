@@ -2,14 +2,14 @@
 id: PP-REF-001
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: []
 features: []
 ---
 
 # Feature evidence
 
-<div class="meta">DRAFT · source review 18 October 2026 · generated registry view</div>
+<div class="meta">DRAFT · source review 20 October 2026 · generated registry view</div>
 
 These are discovery records for the existing application. **Located** means an entry point was found. **Source-reviewed** means selected source was inspected. Neither establishes an end-to-end working journey. The source review atlas now expands these entry points; detailed operator manuals and runtime acceptance remain later work.
 

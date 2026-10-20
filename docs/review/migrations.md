@@ -2,14 +2,14 @@
 id: PP-REVIEW-MIGRATIONS
 revision: "1.0"
 status: DRAFT
-reviewed_on: "2026-10-18"
+reviewed_on: "2026-10-20"
 evidence: ["E-015"]
 features: ["PP-F022"]
 ---
 
 # Migration and persistence lifecycle
 
-<div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
+<div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 Feature coverage: PP-F022. Source: [DatabaseMigrator.cs:1](code-infrastructure.md#src-03c231a85247), [SqliteConnectionPolicy.cs:1](code-infrastructure.md#src-4b435878ecef).
 

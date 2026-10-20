@@ -252,15 +252,18 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-          "sha256": "7005cf9814dceb88a9516c739ddd08856235a322b347355cb088f4da102a30f9"
+          "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8"
         }
       ],
-      "source_review": "located",
-      "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "source_review": "source-reviewed",
+      "application_verification": "rerun",
+      "evidence_ids": [
+        "E-015",
+        "E-016"
+      ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "Row validation, duplicate handling and export parity pending.",
+      "limitations": "Workbook import integration tests rerun (23 passed); desktop file-picker and physical large-file UI flow unverified.",
       "review_map": "review/imports.md"
     },
     {

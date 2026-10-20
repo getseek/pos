@@ -49,7 +49,7 @@ Handler: [TeamCommandHandler](code-application.md#src-691edb662577). Result type
 
 Declaration: [TeamCommands.cs:7](code-application.md#src-c83e7d5dd8f2). <code>RequiredPermission = Permissions.ManageTeams; AdditionalPermissions = (Salary != null &amp;&amp; Salary.EnableSalary)             ? [Permissions.SalaryManage]             : []</code>
 
-Construction sites: [SaveTeamMemberAsync:1364](code-desktop.md#src-45e93424b80f)
+Construction sites: [SaveTeamMemberAsync:1794](code-desktop.md#src-45e93424b80f)
 
 Handler method: [TeamCommandHandler.HandleAsync(CreateTeamMemberCommand,CommandEnvelope&lt;CreateTeamMemberCommand&gt;,CancellationToken)](code-application.md#m-2401aa2dbe1e).
 
@@ -69,7 +69,7 @@ Handler: [TeamCommandHandler](code-application.md#src-691edb662577). Result type
 
 Declaration: [TeamCommands.cs:49](code-application.md#src-c83e7d5dd8f2). <code>RequiredPermission = (Person != null &#124;&#124; Login != null &#124;&#124; LinkExistingUserId.HasValue)             ? Permissions.ManageTeams             : Permissions.SalaryManage; AdditionalPermissions = ((Person != null &#124;&#124; Login != null &#124;&#124; LinkExistingUserId.HasValue) &amp;&amp; Salary != null)             ? [Permissions.SalaryManage]             : []</code>
 
-Construction sites: [SaveTeamMemberAsync:1385](code-desktop.md#src-45e93424b80f)
+Construction sites: [ToggleTeamMemberStatusAsync:984](code-desktop.md#src-45e93424b80f), [SaveTeamMemberAsync:1815](code-desktop.md#src-45e93424b80f)
 
 Handler method: [TeamCommandHandler.HandleAsync(UpdateTeamMemberCommand,CommandEnvelope&lt;UpdateTeamMemberCommand&gt;,CancellationToken)](code-application.md#m-397002ae99a5).
 

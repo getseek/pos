@@ -144,9 +144,9 @@ Declarations: <code>ModalActionBar : Panel</code> (line 12), <code>ActionRow</co
 
 ## ModalLayers.cs {#src-f9ded22b3dcb}
 
-<code>Software/src/GetSeek.UI.Components/Controls/ModalLayers.cs</code> · 75 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/ModalLayers.cs</code> · 76 lines.
 
-SHA-256: <code>53278979e63cb2334b8e0856e054d7111d3f33eeab33945c4bb21e55f7932c6d</code>.
+SHA-256: <code>9afee3536492e24813661038348f8e115a226e267112777cb7e278c3cdf51142</code>.
 
 Declarations: <code>ModalLayers</code> (line 4).
 
@@ -252,9 +252,9 @@ Declarations: <code>SearchOption</code> (line 7).
 
 ## SharedDataTable.axaml.cs {#src-122906318cb3}
 
-<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml.cs</code> · 635 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml.cs</code> · 643 lines.
 
-SHA-256: <code>336245b2542ff17bcf6d19aa73fe85978bc929d8d7fffd4d710e011ede725589</code>.
+SHA-256: <code>4a59a32d8e8346dfeb895f3a8c363781707f9c02c44a41ca6d0fe80a7e316ce5</code>.
 
 Declarations: <code>SharedDataTable : UserControl</code> (line 19).
 
@@ -271,25 +271,25 @@ Declarations: <code>SharedDataTable : UserControl</code> (line 19).
 | <span id="m-cb3e8ecbe847"></span><code>SharedDataTable.GetSelectablePageIds(DataTableDefinition)</code><br>248–254 | ToArray @249; Distinct @249; Where @249; Select @249; Where @249; Invoke @250; IsNullOrWhiteSpace @252 | No extracted literal effects. |
 | <span id="m-b6ffbf0aa033"></span><code>SharedDataTable.SortHeaderText(IDataTableState,DataTableColumnDescriptor)</code><br>256–261 | Equals @258; HeaderText @259 | No extracted literal effects. |
 | <span id="m-314984e0edef"></span><code>SharedDataTable.HeaderText(DataTableColumnDescriptor)</code><br>263–263 | Invoke @263 | No extracted literal effects. |
-| <span id="m-b98b61a3792f"></span><code>SharedDataTable.BuildRow(DataTableDefinition,object,int)</code><br>265–427 | GetTableColumnDefinitions @270; Invoke @278; RowIdSelector @279; IsRowSelected @283; SelectRow @288; SetColumn @289; Add @290; CreateHorizontalViewport @294; CreateDataGrid @295; ToArray @295; Where @295; Select @296; StyleClass @316; Add @327; SetTip @328; Count @331; Take @331; BeginRowActivation @333; TrackRowActivation @334; EndRowActivation @335; Add @340; Add @345; IsInteractiveSource @351; Post @354; Any(Control) @356; OfType(Control) @356; GetVisualDescendants @356; Remove @358; Add @372; CanExecute @377; Open @389; Add @390; Where(Control) @416 | No extracted literal effects. |
-| <span id="m-6b37a5680c68"></span><code>SharedDataTable.StyleClass(DataTableCellStyle)</code><br>429–439 | — | No extracted literal effects. |
-| <span id="m-50e81eeabaaf"></span><code>SharedDataTable.CreateDataGrid(IReadOnlyList&lt;DataTableColumnDescriptor&gt;)</code><br>441–452 | Add @446; Max @446 | No extracted literal effects. |
-| <span id="m-bdc721f19d6c"></span><code>SharedDataTable.CreateHorizontalViewport()</code><br>454–476 | SetDataGridWidth @465; BeginHorizontalPan @466; ContinueHorizontalPan @467; EndHorizontalPan @468; ClearHorizontalPan @472; Add @474 | No extracted literal effects. |
-| <span id="m-9fade926680b"></span><code>SharedDataTable.BeginHorizontalPan(ScrollViewer,PointerPressedEventArgs)</code><br>478–488 | GetCurrentPoint @481; IsInteractiveSource @482; GetPosition @486 | No extracted literal effects. |
-| <span id="m-517795afeeac"></span><code>SharedDataTable.ContinueHorizontalPan(ScrollViewer,PointerEventArgs)</code><br>490–515 | GetPosition @494; Abs @500; ClearHorizontalPan @502; Capture @508; Clamp @512; Max @512 | No extracted literal effects. |
-| <span id="m-48dbabb2b886"></span><code>SharedDataTable.EndHorizontalPan(ScrollViewer,PointerReleasedEventArgs)</code><br>517–525 | ClearHorizontalPan @522 | No extracted literal effects. |
-| <span id="m-2c34e4559761"></span><code>SharedDataTable.ClearHorizontalPan()</code><br>527–536 | Capture @535 | No extracted literal effects. |
-| <span id="m-ebdf0e138b08"></span><code>SharedDataTable.IsInteractiveSource(object?,ScrollViewer)</code><br>538–550 | GetVisualParent @541; Contains @544 | No extracted literal effects. |
-| <span id="m-0a1581dcd501"></span><code>SharedDataTable.SetDataGridWidth(ScrollViewer)</code><br>552–557 | Sum @555; Max @555 | No extracted literal effects. |
-| <span id="m-b68c12957dbc"></span><code>SharedDataTable.OnHorizontalScrollChanged(object?,ScrollChangedEventArgs)</code><br>559–572 | ReferenceEquals @567 | No extracted literal effects. |
-| <span id="m-7bb3fc6e90aa"></span><code>SharedDataTable.BeginRowActivation(object,ScrollViewer,PointerPressedEventArgs)</code><br>578–587 | IsInteractiveSource @581; Invoke @582; CanExecute @583; GetPosition @585 | No extracted literal effects. |
-| <span id="m-6b0e9c025bf8"></span><code>SharedDataTable.TrackRowActivation(PointerEventArgs)</code><br>589–597 | GetPosition @592 | No extracted literal effects. |
-| <span id="m-f2425bcbe8ee"></span><code>SharedDataTable.EndRowActivation(DataTableDefinition,object,PointerReleasedEventArgs)</code><br>599–607 | TrackRowActivation @602; Invoke @605; CanExecute @605; Execute @606 | No extracted literal effects. |
-| <span id="m-aed3baeb3a84"></span><code>SharedDataTable.OnPageSizeChanged(object?,SelectionChangedEventArgs)</code><br>609–613 | — | No extracted literal effects. |
-| <span id="m-9409cc6363cc"></span><code>SharedDataTable.OnStateChanged(object?,System.ComponentModel.PropertyChangedEventArgs)</code><br>615–615 | QueueRebuild @615 | No extracted literal effects. |
-| <span id="m-4bdd41b698e6"></span><code>SharedDataTable.OnRowsChanged(object?,NotifyCollectionChangedEventArgs)</code><br>616–616 | QueueRebuild @616 | No extracted literal effects. |
-| <span id="m-ee817554a5c0"></span><code>SharedDataTable.QueueRebuild()</code><br>618–627 | Post @622; Rebuild @625 | No extracted literal effects. |
-| <span id="m-27ee354410c0"></span><code>SharedDataTable.DetachDefinition(DataTableDefinition?)</code><br>629–634 | — | No extracted literal effects. |
+| <span id="m-b98b61a3792f"></span><code>SharedDataTable.BuildRow(DataTableDefinition,object,int)</code><br>265–435 | GetTableColumnDefinitions @270; Invoke @278; RowIdSelector @279; IsRowSelected @283; SelectRow @288; SetColumn @289; Add @290; CreateHorizontalViewport @294; CreateDataGrid @295; ToArray @295; Where @295; Select @296; StyleClass @316; Add @327; SetTip @328; Count @331; Take @331; BeginRowActivation @333; TrackRowActivation @334; EndRowActivation @335; Add @340; Add @345; IsInteractiveSource @359; Post @362; Any(Control) @364; OfType(Control) @364; GetVisualDescendants @364; Remove @366; Add @380; CanExecute @385; Open @397; Add @398; Where(Control) @424 | No extracted literal effects. |
+| <span id="m-472735eeacea"></span><code>SharedDataTable.StyleClass(DataTableCellStyle)</code><br>437–447 | — | No extracted literal effects. |
+| <span id="m-ba8e0c420355"></span><code>SharedDataTable.CreateDataGrid(IReadOnlyList&lt;DataTableColumnDescriptor&gt;)</code><br>449–460 | Add @454; Max @454 | No extracted literal effects. |
+| <span id="m-c21ff5be850e"></span><code>SharedDataTable.CreateHorizontalViewport()</code><br>462–484 | SetDataGridWidth @473; BeginHorizontalPan @474; ContinueHorizontalPan @475; EndHorizontalPan @476; ClearHorizontalPan @480; Add @482 | No extracted literal effects. |
+| <span id="m-d9569dde0709"></span><code>SharedDataTable.BeginHorizontalPan(ScrollViewer,PointerPressedEventArgs)</code><br>486–496 | GetCurrentPoint @489; IsInteractiveSource @490; GetPosition @494 | No extracted literal effects. |
+| <span id="m-4f614851a979"></span><code>SharedDataTable.ContinueHorizontalPan(ScrollViewer,PointerEventArgs)</code><br>498–523 | GetPosition @502; Abs @508; ClearHorizontalPan @510; Capture @516; Clamp @520; Max @520 | No extracted literal effects. |
+| <span id="m-3c0e058b50fd"></span><code>SharedDataTable.EndHorizontalPan(ScrollViewer,PointerReleasedEventArgs)</code><br>525–533 | ClearHorizontalPan @530 | No extracted literal effects. |
+| <span id="m-118aba6c6b32"></span><code>SharedDataTable.ClearHorizontalPan()</code><br>535–544 | Capture @543 | No extracted literal effects. |
+| <span id="m-e046b7286fc3"></span><code>SharedDataTable.IsInteractiveSource(object?,ScrollViewer)</code><br>546–558 | GetVisualParent @549; Contains @552 | No extracted literal effects. |
+| <span id="m-2aa86e6673df"></span><code>SharedDataTable.SetDataGridWidth(ScrollViewer)</code><br>560–565 | Sum @563; Max @563 | No extracted literal effects. |
+| <span id="m-8739eeca8dba"></span><code>SharedDataTable.OnHorizontalScrollChanged(object?,ScrollChangedEventArgs)</code><br>567–580 | ReferenceEquals @575 | No extracted literal effects. |
+| <span id="m-bbb4830d615c"></span><code>SharedDataTable.BeginRowActivation(object,ScrollViewer,PointerPressedEventArgs)</code><br>586–595 | IsInteractiveSource @589; Invoke @590; CanExecute @591; GetPosition @593 | No extracted literal effects. |
+| <span id="m-d837f3e5e125"></span><code>SharedDataTable.TrackRowActivation(PointerEventArgs)</code><br>597–605 | GetPosition @600 | No extracted literal effects. |
+| <span id="m-f81e53710441"></span><code>SharedDataTable.EndRowActivation(DataTableDefinition,object,PointerReleasedEventArgs)</code><br>607–615 | TrackRowActivation @610; Invoke @613; CanExecute @613; Execute @614 | No extracted literal effects. |
+| <span id="m-47e43ddd8426"></span><code>SharedDataTable.OnPageSizeChanged(object?,SelectionChangedEventArgs)</code><br>617–621 | — | No extracted literal effects. |
+| <span id="m-207fc55c8c55"></span><code>SharedDataTable.OnStateChanged(object?,System.ComponentModel.PropertyChangedEventArgs)</code><br>623–623 | QueueRebuild @623 | No extracted literal effects. |
+| <span id="m-551e305344e8"></span><code>SharedDataTable.OnRowsChanged(object?,NotifyCollectionChangedEventArgs)</code><br>624–624 | QueueRebuild @624 | No extracted literal effects. |
+| <span id="m-ba718a6a0101"></span><code>SharedDataTable.QueueRebuild()</code><br>626–635 | Post @630; Rebuild @633 | No extracted literal effects. |
+| <span id="m-1a5715a25395"></span><code>SharedDataTable.DetachDefinition(DataTableDefinition?)</code><br>637–642 | — | No extracted literal effects. |
 
 </details>
 
@@ -548,7 +548,7 @@ Declarations: <code>UnicodeTextHelper</code> (line 12).
 
 ### SharedDataTable.axaml {#src-ee1c40faec29}
 
-<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml</code> · 44 lines · SHA-256 <code>307f130642539c22ceac20569d7e44d9050b1c9f03a37bef2482b2834f85e2f5</code>.
+<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml</code> · 45 lines · SHA-256 <code>ef87f59b85e6ff1581aa0cf1e6f7cec7488d9e2c1bbb2037c8845855672b0741</code>.
 
 ### ShortcutBadge.axaml {#src-d10914aff0c1}
 

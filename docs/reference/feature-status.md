@@ -28,7 +28,7 @@ These are discovery records for the existing application. **Located** means an e
 | PP-F011 | Price tiers and batch pricing | manager | located | planned | Pricing waterfall and mass-valuation instructions pending. |
 | PP-F012 | Kits, recipes and manufacturing | production | located | planned | Do not equate a displayed BOM with proven input/output posting. |
 | PP-F013 | Customers, suppliers and imports | cashier | located | planned | Protected Walk-in and duplicate-import workflows need verification. |
-| PP-F014 | Products workbook imports | stock-controller | located | planned | Row validation, duplicate handling and export parity pending. |
+| PP-F014 | Products workbook imports | stock-controller | source-reviewed | planned | Workbook import integration tests rerun (23 passed); desktop file-picker and physical large-file UI flow unverified. |
 | PP-F015 | Teams, employment and access | administrator | located | planned | Historical suite is not a fresh whole-feature audit. |
 | PP-F016 | Salary agreements, periods and payment | payroll | source-reviewed | planned | Record-only/payable distinctions and finalized-period limits need guide review. |
 | PP-F017 | Operating expenses and payment | manager | source-reviewed | planned | Optional payment, reversals and photo admission require detailed review. |

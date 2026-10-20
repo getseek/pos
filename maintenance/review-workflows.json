@@ -482,12 +482,12 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "line": 1,
-          "sha256": "7005cf9814dceb88a9516c739ddd08856235a322b347355cb088f4da102a30f9"
+          "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8"
         },
         {
           "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
           "line": 1,
-          "sha256": "a02c2ce97ecef3318afc80634533e6ee40f25feba10f833a3d9888b530cdedb3"
+          "sha256": "97f4da69a36c375497638aceea62a11beac34c62929281336825abd9aa6f69ea"
         }
       ]
     },

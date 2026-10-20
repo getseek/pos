@@ -85,7 +85,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:33](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:68](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9768](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:74](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9768](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-28dedf4885c4).
 
@@ -305,7 +305,7 @@ Handler: [SaveProductConfigurationCommandHandler](code-application.md#src-c24b9e
 
 Declaration: [SaveProductConfigurationCommand.cs:12](code-application.md#src-5802398b5ad9). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:73](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9792](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:79](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9792](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveProductConfigurationCommandHandler.HandleAsync(SaveProductConfigurationCommand,CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,CancellationToken)](code-application.md#m-a9139d457f70).
 
@@ -325,7 +325,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:97](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:648](code-application.md#src-c2d3294fc0a7), [SaveAsync:78](code-application.md#src-14918ebf4662)
+Construction sites: [HandleAsync:648](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
 
 Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-efb1a462e4f0).
 
@@ -365,7 +365,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:59](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:70](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9739](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:76](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:9739](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-03898d6a1f08).
 

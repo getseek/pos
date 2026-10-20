@@ -261,7 +261,7 @@ Handler: [SaveItemPricingCommandHandler](code-application.md#src-eb108abd205b). 
 
 Declaration: [PricingCommands.cs:14](code-application.md#src-110703c52a80). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [PriceAsync:116](code-application.md#src-14918ebf4662)
+Construction sites: [PriceAsync:123](code-application.md#src-14918ebf4662)
 
 Handler method: [SaveItemPricingCommandHandler.HandleAsync(SaveItemPricingCommand,CommandEnvelope&lt;SaveItemPricingCommand&gt;,CancellationToken)](code-application.md#m-24d43c4f5793).
 

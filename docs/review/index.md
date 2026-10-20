@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 18 October 2026 · source review, not runtime acceptance</div>
 
-Use this atlas to inspect **326 application C# files, 2,132 method declarations, 172 handled command types, 137 reconstructed tables and 261 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
+Use this atlas to inspect **326 application C# files, 2,137 method declarations, 172 handled command types, 137 reconstructed tables and 261 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
 
 **Producer coverage:** 74 handled command types have no explicit construction site in this syntax snapshot. That is a connection-analysis gap, not proof of unreachable code; target-typed construction, factories and runtime dispatch need further analysis. 55 methods contain interpolated SQL requiring manual inspection.
 

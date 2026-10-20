@@ -566,9 +566,9 @@ Declarations: <code>WindowsRawPrinter</code> (line 7), <code>DocInfo</code> (lin
 
 ## ImportPreviewService.cs {#src-9b8064464865}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs</code> · 95 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs</code> · 118 lines.
 
-SHA-256: <code>0cd619a940e34266c18726834bd20dea6543eabb76fd781ba25aff1be4131950</code>.
+SHA-256: <code>d9d1457c04eff836097a4fae53f3184da3e08784c1db14c5c64b7e7788bdffc1</code>.
 
 Declarations: <code>ImportPreviewService</code> (line 12).
 
@@ -577,11 +577,11 @@ Declarations: <code>ImportPreviewService</code> (line 12).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-ab9df140f727"></span><code>ImportPreviewService.ValidateInventoryAsync(ProductImportPreview,string,Guid,CancellationToken)</code><br>14–41 | ConfigureAwait @18; OpenAsync @18; BeginTransactionAsync @20; Concat @23; Select @23; Select @23; SelectMany @23; Select @24; FingerprintAsync @25; Any @26; GetValueOrDefault @26; Distinct @27; FirstOrDefault @29; Equals @29; GetValueOrDefault @30; RecordAsync @31; GetValueOrDefault @32; NewGuid @35; HandleAsync @36; ToArray @38; Append @38; RollbackAsync @40 | FROM item_pricing @31; JOIN items @31 |
-| <span id="m-b1adacd633d1"></span><code>ImportPreviewService.ReadThirdPartiesAsync(byte[],string,string,string,string,CancellationToken)</code><br>43–49 | ConfigureAwait @46; OpenAsync @46; BeginTransaction @47; ReadAsync @48 | No extracted literal effects. |
-| <span id="m-e5a1247d1aee"></span><code>ImportPreviewService.ValidateThirdPartiesAsync(ThirdPartyImportPreview,string,Guid,CancellationToken)</code><br>51–66 | ConfigureAwait @55; OpenAsync @55; BeginTransactionAsync @57; NewGuid @61; HandleAsync @62; ToArray @63; Append @63; RollbackAsync @65 | No extracted literal effects. |
-| <span id="m-d784606e34de"></span><code>ImportPreviewService.TemplateContextAsync(string,string,CancellationToken)</code><br>68–73 | ConfigureAwait @71; OpenAsync @71; TemplateContextAsync @72 | No extracted literal effects. |
-| <span id="m-838e8cd81072"></span><code>ImportPreviewService.TemplateContextAsync(DbConnection,string,CancellationToken)</code><br>75–94 | ConfigureAwait @77; ContextAsync @77; CreateCommand @81; ExecuteReaderAsync @82; ReadAsync @83; Add @83; ToString @83; GetValue @83; GetString @83; Load @85; AddRange @92; Select @92 | FROM price_level_settings @85; FROM product_categories @86; FROM store_config @85; FROM third_parties @90; FROM uoms @89 |
+| <span id="m-ab9df140f727"></span><code>ImportPreviewService.ValidateInventoryAsync(ProductImportPreview,string,Guid,CancellationToken)</code><br>14–40 | ConfigureAwait @17; CreateWriteConnectionAsync @17; BeginTransactionAsync @19; Concat @22; Select @22; Select @22; SelectMany @22; Select @23; FingerprintAsync @24; Any @25; GetValueOrDefault @25; Distinct @26; FirstOrDefault @28; Equals @28; GetValueOrDefault @29; RecordAsync @30; GetValueOrDefault @31; NewGuid @34; HandleAsync @35; ToArray @37; Append @37; RollbackAsync @39 | FROM item_pricing @30; JOIN items @30 |
+| <span id="m-e690eaec99c5"></span><code>ImportPreviewService.ReadThirdPartiesAsync(byte[],string,string,string,string,CancellationToken)</code><br>42–47 | ConfigureAwait @44; CreateReadConnectionAsync @44; BeginTransaction @45; ReadAsync @46 | No extracted literal effects. |
+| <span id="m-f54a378be180"></span><code>ImportPreviewService.ValidateThirdPartiesAsync(ThirdPartyImportPreview,string,Guid,CancellationToken)</code><br>49–63 | ConfigureAwait @52; CreateWriteConnectionAsync @52; BeginTransactionAsync @54; NewGuid @58; HandleAsync @59; ToArray @60; Append @60; RollbackAsync @62 | No extracted literal effects. |
+| <span id="m-fa82f3392e3c"></span><code>ImportPreviewService.TemplateContextAsync(string,string,CancellationToken)</code><br>65–69 | ConfigureAwait @67; CreateReadConnectionAsync @67; TemplateContextAsync @68 | No extracted literal effects. |
+| <span id="m-6b7921270d49"></span><code>ImportPreviewService.TemplateContextAsync(DbConnection,string,CancellationToken)</code><br>71–117 | ConfigureAwait @73; ContextAsync @73; CreateCommand @77; ExecuteReaderAsync @78; ReadAsync @79; Add @79; ToString @79; GetValue @79; GetString @79; Load @81; AddRange @87; Select @115 | FROM price_level_settings @81; FROM product_categories @82; FROM store_config @81; FROM third_parties @86; FROM uoms @85 |
 
 </details>
 
@@ -627,9 +627,9 @@ Declarations: <code>XlsxMasterDataExportService</code> (line 10).
 
 ## XlsxProductImportReader.cs {#src-2b8eea2eb4f9}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs</code> · 126 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs</code> · 155 lines.
 
-SHA-256: <code>123acb72aef99420bafee5731c682236c92ecb1bba3d781da887c1d569cbcd8a</code>.
+SHA-256: <code>a859e8e805f6c048423f67e3020025951e5bf18d71efef18d849415d89e6ae91</code>.
 
 Declarations: <code>XlsxProductImportReader</code> (line 6).
 
@@ -639,33 +639,34 @@ Declarations: <code>XlsxProductImportReader</code> (line 6).
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
 | <span id="m-0ee4ad5fd8ae"></span><code>XlsxProductImportReader.ExportTemplate(ImportWorkbookContext)</code><br>12–12 | Write @12 | No extracted literal effects. |
-| <span id="m-49114112edf1"></span><code>XlsxProductImportReader.Read(byte[],string,string,ImportWorkbookContext?)</code><br>14–125 | IsNullOrWhiteSpace @26; TryParse @27; Add @28; Number @33; Money @35; TryParse @40; Load @46; AssignAutomaticIdentifiers @47; Rows @48; Cell @50; Fields @51; ToDictionary @51; C @51; ToLowerInvariant @52; Flag @57; Money @58; Optional @65; Add @66; Add @69; Add @76; Add @83; TryParse @89; Add @97; TryParse @107; Add @111; Where @115; GroupBy @115; Count @115; Last @115; GroupBy @116; GroupBy @117; ToUpperInvariant @117; GroupBy @118; Where @118; StartsWith @122; Split @122 | No extracted literal effects. |
+| <span id="m-49114112edf1"></span><code>XlsxProductImportReader.Read(byte[],string,string,ImportWorkbookContext?)</code><br>14–154 | IsNullOrWhiteSpace @26; TryParse @27; Add @28; Number @33; Money @35; TryParseBool @40; Load @46; AssignAutomaticIdentifiers @47; Rows @48; Cell @50; ToLowerInvariant @51; Trim @51; C @51; Flag @56; Money @57; ToLowerInvariant @59; ToLowerInvariant @68; ToDictionary @79; Fields @83; Optional @85; Add @86; Add @89; Add @96; Add @103; TryParse @109; Add @124; TryParse @134; Add @138; Where @142; GroupBy @142; Count @142; Last @142; GroupBy @143; Where @143; GetValueOrDefault @143; GroupBy @145; GroupBy @146; ToUpperInvariant @146; Where @147; StartsWith @151; Split @151 | No extracted literal effects. |
 
 </details>
 
 ## XlsxThirdPartyImportReader.cs {#src-d4334f0c2e06}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxThirdPartyImportReader.cs</code> · 437 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxThirdPartyImportReader.cs</code> · 465 lines.
 
-SHA-256: <code>fe777fef293c3857ebc1fa36542ebde3700ffc4bebfc1a6318b04f086f2a8eac</code>.
+SHA-256: <code>b9eb17bfd0bd9151679f47004c66f2022bc26fbf84f9b9d6a601edea608f92e1</code>.
 
 Declarations: <code>XlsxThirdPartyImportReader</code> (line 17).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (10)</summary>
+<summary>Methods, calls, table effects and failures (11)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-b57c34eddaa7"></span><code>XlsxThirdPartyImportReader.ReadAsync(byte[],string,string,string,DbConnection,DbTransaction?,CancellationToken)</code><br>28–325 | Add @43; Load @51; ConfigureAwait @51; ContextAsync @51; AssignAutomaticIdentifiers @52; HasSheet @53; StartsWith @57; Split @57; LoadCategoriesAsync @62; LoadActivePriceTiersAsync @63; LoadExistingPartyCodesAsync @64; LoadExistingExternalMappingsAsync @65; Rows @76; Fields @80; ToDictionary @80; Cell @80; MergeAsync @81; NullIfEmpty @82; Any @85; Contains @85; IsNullOrWhiteSpace @90; ResolveTier @90; ToHashSet @90; Select @90; Parse @90; Add @94; TryParse @97; ToString @110; ToUpperInvariant @123; ParseBool @155; TryNormalizePhone @167; IsValidStateCode @176; Contains @182; ContainsKey @194; Contains @200; Add @206; Add @212; TryGetValue @219; TryGetValue @220; Equals @221; NormalizeStateCode @281; FindPossibleDuplicatesAsync @287; Join @289; Add @303; FingerprintAsync @323; Select @323 | InvalidDataException @53 |
-| <span id="m-905c6af3135d"></span><code>XlsxThirdPartyImportReader.ExportTemplate(ImportWorkbookContext?)</code><br>327–328 | Write @328 | No extracted literal effects. |
-| <span id="m-ac8067e89696"></span><code>XlsxThirdPartyImportReader.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>330–344 | CreateCommand @333; ConfigureAwait @336; ExecuteReaderAsync @336; ReadAsync @337; GetString @339 | FROM product_categories @335 |
-| <span id="m-674f27b48b86"></span><code>XlsxThirdPartyImportReader.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>346–358 | CreateCommand @349; ConfigureAwait @352; ExecuteReaderAsync @352; ReadAsync @353; Add @355; GetString @355 | FROM price_level_settings @351; FROM store_config @351 |
-| <span id="m-afb871517b31"></span><code>XlsxThirdPartyImportReader.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>360–374 | CreateCommand @363; ConfigureAwait @366; ExecuteReaderAsync @366; ReadAsync @367; GetString @369 | FROM third_parties @365 |
-| <span id="m-9d652b9f7da9"></span><code>XlsxThirdPartyImportReader.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>376–391 | CreateCommand @379; ConfigureAwait @382; ExecuteReaderAsync @382; ReadAsync @383; ToUpperInvariant @385; GetString @385 | FROM third_party_external_mappings @381 |
-| <span id="m-04d1896d56fa"></span><code>XlsxThirdPartyImportReader.Cell(IDictionary&lt;string, object&gt;,string)</code><br>393–398 | TryGetValue @395; ToString @396; Trim @396 | No extracted literal effects. |
-| <span id="m-19bdb5477615"></span><code>XlsxThirdPartyImportReader.FindPossibleDuplicatesAsync(ImportThirdPartyRow,string?,DbConnection,DbTransaction?,CancellationToken)</code><br>400–422 | ToHashSet @403; Where @403; Select @403; SelectMany @403; Where @403; IsNullOrWhiteSpace @404; Split @404; ToArray @405; Where @405; Phones @407; CreateCommand @410; CreateParameter @413; Trim @413; Add @413; ConfigureAwait @414; ExecuteReaderAsync @414; ReadAsync @415; Equals @417; GetString @417; Range @418; IsDBNull @418; Overlaps @419; Add @419 | FROM third_parties @412 |
-| <span id="m-eae313ad55a4"></span><code>XlsxThirdPartyImportReader.NullIfEmpty(string)</code><br>424–425 | IsNullOrWhiteSpace @425; Trim @425 | No extracted literal effects. |
-| <span id="m-897701c1835a"></span><code>XlsxThirdPartyImportReader.ParseBool(string,bool)</code><br>427–435 | ToLowerInvariant @429; Trim @429 | No extracted literal effects. |
+| <span id="m-b57c34eddaa7"></span><code>XlsxThirdPartyImportReader.ReadAsync(byte[],string,string,string,DbConnection,DbTransaction?,CancellationToken)</code><br>28–345 | Add @43; Load @51; ConfigureAwait @51; ContextAsync @51; AssignAutomaticIdentifiers @52; HasSheet @53; StartsWith @57; Split @57; LoadCategoriesAsync @62; LoadActivePriceTiersAsync @63; LoadExistingPartyCodesAsync @64; LoadExistingExternalMappingsAsync @65; LoadExistingBarcodesAsync @66; Rows @78; Fields @82; ToDictionary @82; Cell @82; MergeAsync @83; NullIfEmpty @84; Any @87; Contains @87; IsNullOrWhiteSpace @92; ResolveTier @92; ToHashSet @92; Select @92; Parse @92; Add @96; TryParseBool @99; ToString @112; ToUpperInvariant @125; ParseBool @158; TryGetValue @165; TryGetValue @170; TryNormalizePhone @181; IsValidStateCode @190; Contains @196; ContainsKey @208; Contains @214; Add @220; Add @226; Add @232; TryGetValue @238; Equals @239; NormalizeStateCode @301; FindPossibleDuplicatesAsync @307; Join @309; Add @323; FingerprintAsync @343; Select @343 | InvalidDataException @53 |
+| <span id="m-80e12431ae7e"></span><code>XlsxThirdPartyImportReader.ExportTemplate(ImportWorkbookContext?)</code><br>347–348 | Write @348 | No extracted literal effects. |
+| <span id="m-944fd0bf08ef"></span><code>XlsxThirdPartyImportReader.LoadCategoriesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>350–364 | CreateCommand @353; ConfigureAwait @356; ExecuteReaderAsync @356; ReadAsync @357; GetString @359 | FROM product_categories @355 |
+| <span id="m-e258a0a87d6a"></span><code>XlsxThirdPartyImportReader.LoadActivePriceTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>366–378 | CreateCommand @369; ConfigureAwait @372; ExecuteReaderAsync @372; ReadAsync @373; Add @375; GetString @375 | FROM price_level_settings @371; FROM store_config @371 |
+| <span id="m-8bd162fc036b"></span><code>XlsxThirdPartyImportReader.LoadExistingPartyCodesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>380–394 | CreateCommand @383; ConfigureAwait @386; ExecuteReaderAsync @386; ReadAsync @387; GetString @389 | FROM third_parties @385 |
+| <span id="m-47d287ba0b24"></span><code>XlsxThirdPartyImportReader.LoadExistingExternalMappingsAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>396–411 | CreateCommand @399; ConfigureAwait @402; ExecuteReaderAsync @402; ReadAsync @403; ToUpperInvariant @405; GetString @405 | FROM third_party_external_mappings @401 |
+| <span id="m-0a31d63641ef"></span><code>XlsxThirdPartyImportReader.LoadExistingBarcodesAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>413–427 | CreateCommand @416; ConfigureAwait @419; ExecuteReaderAsync @419; ReadAsync @420; GetString @422 | FROM third_parties @418 |
+| <span id="m-aa0678d925e8"></span><code>XlsxThirdPartyImportReader.Cell(IDictionary&lt;string, object&gt;,string)</code><br>429–434 | TryGetValue @431; ToString @432; Trim @432 | No extracted literal effects. |
+| <span id="m-44c62813fb52"></span><code>XlsxThirdPartyImportReader.FindPossibleDuplicatesAsync(ImportThirdPartyRow,string?,DbConnection,DbTransaction?,CancellationToken)</code><br>436–458 | ToHashSet @439; Where @439; Select @439; SelectMany @439; Where @439; IsNullOrWhiteSpace @440; Split @440; ToArray @441; Where @441; Phones @443; CreateCommand @446; CreateParameter @449; Trim @449; Add @449; ConfigureAwait @450; ExecuteReaderAsync @450; ReadAsync @451; Equals @453; GetString @453; Range @454; IsDBNull @454; Overlaps @455; Add @455 | FROM third_parties @448 |
+| <span id="m-ba6a09e3e06d"></span><code>XlsxThirdPartyImportReader.NullIfEmpty(string)</code><br>460–461 | IsNullOrWhiteSpace @461; Trim @461 | No extracted literal effects. |
+| <span id="m-18e7b217de20"></span><code>XlsxThirdPartyImportReader.ParseBool(string,bool)</code><br>463–464 | TryParseBool @464 | No extracted literal effects. |
 
 </details>
 

@@ -189,9 +189,9 @@ Located test declarations: <code>Inventory_PagingSortingAndLifecycleModes</code>
 
 ## InventoryImportIntegrationTests.cs {#src-53277371bffa}
 
-<code>Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs</code> · SHA-256 <code>78215d26eb8bdef3dd85a58527d301dd4a26cdea52954190dbf0aa47bc9e21aa</code>.
+<code>Software/tests/GetSeek.IntegrationTests/InventoryImportIntegrationTests.cs</code> · SHA-256 <code>6c8b6cbfcd391d349e1eeb40a1b1212dbfe31fd9b6b8ef4b654d6224b343c33d</code>.
 
-Located test declarations: <code>MasterDataExportsPreserveIdentifiersAndPrices_AndRejectUnauthorizedUsers</code> @56, <code>BlankSkuCreatesAndLinksStock_CompletedWorkbookUpdatesWithoutRepeatingStock</code> @80, <code>CreatesBarcodeDefaultsUnitsAndNumericTier_WithRollbackOnlyPreview</code> @107, <code>BlankUpdatePreservesPricesBarcodeAndTax_ExplicitClearRemovesBarcode</code> @124, <code>MultiItemPricingUsesUniqueShelfKeys_StockCostPrecedesAutomaticPricing</code> @137, <code>MissingChildOrDuplicateBarcodeRollsBackAllRows</code> @151, <code>NewNestedKitsAreOrderedChildrenFirst_ParentIntakeIsRejected</code> @161, <code>PreviewRejectsChangedStateAndExplicitReceiveDenial</code> @176.
+Located test declarations: <code>MasterDataExportsPreserveIdentifiersAndPrices_AndRejectUnauthorizedUsers</code> @56, <code>BlankSkuCreatesAndLinksStock_CompletedWorkbookUpdatesWithoutRepeatingStock</code> @80, <code>CreatesBarcodeDefaultsUnitsAndNumericTier_WithRollbackOnlyPreview</code> @107, <code>BlankUpdatePreservesPricesBarcodeAndTax_ExplicitClearRemovesBarcode</code> @124, <code>MultiItemPricingUsesUniqueShelfKeys_StockCostPrecedesAutomaticPricing</code> @137, <code>MissingChildOrDuplicateBarcodeRollsBackAllRows</code> @151, <code>NewNestedKitsAreOrderedChildrenFirst_ParentIntakeIsRejected</code> @161, <code>PreviewRejectsChangedStateAndExplicitReceiveDenial</code> @176, <code>TemplateFriendlyModesAndFlexibleCaseAndBooleans_AreAcceptedAndApplied</code> @186.
 
 ## InventoryIntegrationTests.cs {#src-afdc78fc3cca}
 
@@ -615,9 +615,9 @@ Located test declarations: <code>ThirdParty_CRUD_And_AutoCodeGeneration</code> @
 
 ## ThirdPartyImportIntegrationTests.cs {#src-5cba50a9bd3b}
 
-<code>Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs</code> · SHA-256 <code>4f7ada0e3c93b2a1b3a309c1c7310a3d814ab8371c5a8e8ef083235be854f11c</code>.
+<code>Software/tests/GetSeek.IntegrationTests/ThirdPartyImportIntegrationTests.cs</code> · SHA-256 <code>63aa8fca4af18ad816f855e96552e89cd2c5162bed38c2b9927a3a4cb403c2b5</code>.
 
-Located test declarations: <code>PossibleDuplicateWarnsWithoutRejecting_AndDoesNotWarnForOwnUpdate</code> @93, <code>ExportTemplate_ReturnsValidWorkbookWithExactHeadersAndExampleRow</code> @124, <code>OversizedFile_RejectedBeforeMutation</code> @145, <code>BlankIdentifier_GeneratesStableCodeAndCompletedWorkbook</code> @170, <code>UnicodeAndMyanmarData_RoundTripsThroughImportAndQuery</code> @210, <code>IdempotentDuplicateRetry_ReturnsPriorResultWithoutDuplicates</code> @271, <code>ExternalMappingMode_CreatesPartyThenUpdatesOnSecondImport</code> @348, <code>AtomicRollback_WhenRowFailsValidationInsideHandler</code> @445, <code>PermissionDenial_RequiresCustomerManagePermission</code> @483.
+Located test declarations: <code>PossibleDuplicateWarnsWithoutRejecting_AndDoesNotWarnForOwnUpdate</code> @93, <code>ExportTemplate_ReturnsValidWorkbookWithExactHeadersAndExampleRow</code> @124, <code>OversizedFile_RejectedBeforeMutation</code> @145, <code>BlankIdentifier_GeneratesStableCodeAndCompletedWorkbook</code> @170, <code>UnicodeAndMyanmarData_RoundTripsThroughImportAndQuery</code> @210, <code>IdempotentDuplicateRetry_ReturnsPriorResultWithoutDuplicates</code> @271, <code>ExternalMappingMode_CreatesPartyThenUpdatesOnSecondImport</code> @348, <code>AtomicRollback_WhenRowFailsValidationInsideHandler</code> @445, <code>PermissionDenial_RequiresCustomerManagePermission</code> @483, <code>FlexibleBooleansAndTierFormattingAndBarcodeValidation_AreHandled</code> @520.
 
 ## TouchAndShortcutIntegrationTests.cs {#src-210552b24818}
 
@@ -655,7 +655,7 @@ Located test declarations: <code>GetTeamMembersAsync_UnionOfPeopleAndUnlinkedUse
 
 ## UnifiedTeamWorkspaceIntegrationTests.cs {#src-ad82916e7744}
 
-<code>Software/tests/GetSeek.IntegrationTests/UnifiedTeamWorkspaceIntegrationTests.cs</code> · SHA-256 <code>36e1ca93dbcd63ff61fe399536179724b10977e5876b188a7a2efc75eb1efd71</code>.
+<code>Software/tests/GetSeek.IntegrationTests/UnifiedTeamWorkspaceIntegrationTests.cs</code> · SHA-256 <code>7e80083c530d94429de9504aecb8cc60cbf050d0ebbaea1519854ca6fb54d7bd</code>.
 
 ## WorkspacePopupPlacementTests.cs {#src-5af19db94557}
 

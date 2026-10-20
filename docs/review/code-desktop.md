@@ -99,11 +99,11 @@ Declarations: <code>NotificationItem</code> (line 5).
 
 ## UiModels.cs {#src-89bb8d72822c}
 
-<code>Software/src/GetSeek.Desktop/Models/UiModels.cs</code> · 806 lines.
+<code>Software/src/GetSeek.Desktop/Models/UiModels.cs</code> · 819 lines.
 
-SHA-256: <code>466c4cedf456348e7d4652455b37eb6a7a8f736423418ab086ddcd68e60a4487</code>.
+SHA-256: <code>aa424c9f4a87af8711d4ab50075945fd57072a5fa113ff88e5e3221d225f1ed1</code>.
 
-Declarations: <code>CurrencyFormatter</code> (line 6), <code>CategoryItem : ReactiveObject</code> (line 20), <code>ProductCategoryOption</code> (line 47), <code>ExpenseCategoryOption</code> (line 64), <code>ProductPurposeOption</code> (line 79), <code>UomOption</code> (line 84), <code>StoreUomPreferenceItem : ReactiveObject</code> (line 138), <code>ProductItem : ReactiveObject</code> (line 160), <code>OrderItem : ReactiveObject</code> (line 186), <code>StaleCartPriceReviewUiRow</code> (line 262), <code>LotCandidateItem</code> (line 270), <code>SerialCandidateItem : ReactiveObject</code> (line 285), <code>OrderStatusChip : ReactiveObject</code> (line 309), <code>OrderLogItem : ReactiveObject</code> (line 349), <code>InventoryItem : ReactiveObject</code> (line 380), <code>KitComponentDraftItem : ReactiveObject</code> (line 497), <code>PayrollMonthOption : IEquatable&lt;PayrollMonthOption&gt;</code> (line 529), <code>StaffMember : ReactiveObject</code> (line 553), <code>UserPermissionOverrideItem : ReactiveObject</code> (line 611), <code>ReportTenderItem : ReactiveObject</code> (line 669), <code>ShiftReportSummary : ReactiveObject</code> (line 678), <code>FacilityItem : ReactiveObject</code> (line 718), <code>BinLocationItem : ReactiveObject</code> (line 728), <code>ItemLocationEligibilityItem : ReactiveObject</code> (line 742), <code>ReceiveTrackingKind</code> (line 757), <code>ReceiveLineItem : ReactiveObject</code> (line 769).
+Declarations: <code>CurrencyFormatter</code> (line 6), <code>CategoryItem : ReactiveObject</code> (line 20), <code>ProductCategoryOption</code> (line 47), <code>ExpenseCategoryOption</code> (line 64), <code>ProductPurposeOption</code> (line 79), <code>UomOption</code> (line 84), <code>StoreUomPreferenceItem : ReactiveObject</code> (line 138), <code>ProductItem : ReactiveObject</code> (line 160), <code>OrderItem : ReactiveObject</code> (line 186), <code>StaleCartPriceReviewUiRow</code> (line 262), <code>LotCandidateItem</code> (line 270), <code>SerialCandidateItem : ReactiveObject</code> (line 285), <code>OrderStatusChip : ReactiveObject</code> (line 309), <code>OrderLogItem : ReactiveObject</code> (line 349), <code>InventoryItem : ReactiveObject</code> (line 380), <code>KitComponentDraftItem : ReactiveObject</code> (line 497), <code>PayrollMonthOption : IEquatable&lt;PayrollMonthOption&gt;</code> (line 529), <code>StaffMember : ReactiveObject</code> (line 553), <code>TeamMemberShiftItem : ReactiveObject</code> (line 613), <code>UserPermissionOverrideItem : ReactiveObject</code> (line 624), <code>ReportTenderItem : ReactiveObject</code> (line 682), <code>ShiftReportSummary : ReactiveObject</code> (line 691), <code>FacilityItem : ReactiveObject</code> (line 731), <code>BinLocationItem : ReactiveObject</code> (line 741), <code>ItemLocationEligibilityItem : ReactiveObject</code> (line 755), <code>ReceiveTrackingKind</code> (line 770), <code>ReceiveLineItem : ReactiveObject</code> (line 782).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (11)</summary>
@@ -233,7 +233,7 @@ Declarations: <code>ModalCoordinator : IDisposable</code> (line 7), <code>Regist
 
 <code>Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs</code> · 4,787 lines.
 
-SHA-256: <code>e02a9beb3047099c809cc181c18cb0017baa8ab2342c1b091da00006e3b77e1a</code>.
+SHA-256: <code>fa1e461cf27fc1e34ecd5e6261377de189d988e21d675ed30ee5d712a10119b5</code>.
 
 Declarations: <code>UiPreferences</code> (line 12), <code>IUiPreferencesService</code> (line 20), <code>UiPreferencesService : IUiPreferencesService</code> (line 30), <code>ILocalizationService</code> (line 86), <code>LocalizationService : ILocalizationService</code> (line 96), <code>ThemeManager</code> (line 4678).
 
@@ -797,37 +797,40 @@ Declarations: <code>MainViewModel</code> (line 21).
 
 ## MainViewModel.Teams.cs {#src-45e93424b80f}
 
-<code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Teams.cs</code> · 1,474 lines.
+<code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Teams.cs</code> · 1,904 lines.
 
-SHA-256: <code>2165e0876b95527ee215d165c9ef018a57fa0ce332319ca3f0f724ce436877e0</code>.
+SHA-256: <code>57ea9efffd1c45429bb49f166ea5661c24a90919c17abb2f08dbce8b89d1541b</code>.
 
-Declarations: <code>MainViewModel</code> (line 20), <code>TeamMemberBaseline</code> (line 406).
+Declarations: <code>MainViewModel</code> (line 24), <code>TeamMemberBaseline</code> (line 540).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (20)</summary>
+<summary>Methods, calls, table effects and failures (23)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-db72914eb3a5"></span><code>MainViewModel.ConfigureTeamsPorts(ITeamsReader,IPinHasher?)</code><br>26–30 | — | No extracted literal effects. |
-| <span id="m-43976c34eb89"></span><code>MainViewModel.RaiseTeamsLabels()</code><br>325–348 | RaisePropertyChanged @327; nameof @327 | No extracted literal effects. |
-| <span id="m-fea66447dffd"></span><code>MainViewModel.OnTeamMemberFieldChanged()</code><br>439–442 | CheckTeamMemberIsDirty @441 | No extracted literal effects. |
-| <span id="m-c86df117372e"></span><code>MainViewModel.CaptureTeamMemberBaseline()</code><br>444–468 | ToList @446; Select @446 | No extracted literal effects. |
-| <span id="m-ed43fff1ec6d"></span><code>MainViewModel.CheckTeamMemberIsDirty()</code><br>470–495 | ToList @473; Select @473; All @475; Zip @475; Equals @477 | No extracted literal effects. |
-| <span id="m-6d33929675ee"></span><code>MainViewModel.CheckSalarySectionIsDirty()</code><br>497–507 | Equals @503 | No extracted literal effects. |
-| <span id="m-ab20e62338ed"></span><code>MainViewModel.GetRegisteredPermissionDefinitions()</code><br>512–541 | — | No extracted literal effects. |
-| <span id="m-5b5c35f7b076"></span><code>MainViewModel.LoadDefaultPermissionOverrides()</code><br>543–561 | Clear @545; GetRegisteredPermissionDefinitions @546; Add @550 | No extracted literal effects. |
-| <span id="m-c8ed8d8f5f19"></span><code>MainViewModel.InitializeTeamsCommands()</code><br>611–655 | Create @613; CreateFromTask @614; CreateFromTask(string) @619; CreateFromTask(object?) @621; IsNullOrWhiteSpace @623; ConfigureAwait @625; OpenEditTeamMemberModalAsync @625; Create(object?) @629; OpenChangePinModal @633; Execute @641; Execute @649; BindRefresh @653; ApplyTeamsTablePage @653; BuildTeamsTable @654 | No extracted literal effects. |
-| <span id="m-9b48ae66a434"></span><code>MainViewModel.BuildTeamsTable()</code><br>657–716 | CreateColumns @664; TextColumn @665; Localize @665; IsNullOrWhiteSpace @666; LocalizeTable @705; Max @713; Ceiling @713; RaisePropertyChanged @715; nameof @715 | No extracted literal effects. |
-| <span id="m-615346e55c05"></span><code>MainViewModel.ApplyTeamsTablePage(IEnumerable&lt;StaffMember&gt;?)</code><br>718–752 | IsNullOrWhiteSpace @722; Trim @724; Where @725; Contains @726; Contains @727; Contains @728; ThenBy @742; OrderByDescending @742; OrderBy @742; ApplyLocalPage @751 | No extracted literal effects. |
-| <span id="m-cc8100cbd028"></span><code>MainViewModel.LoadTeamsStaffAsync()</code><br>754–881 | ApplyTeamsTablePage @758; Clear @766; ApplyPagedResult @767; ConfigureAwait @788; GetTeamMembersAsync @788; DispatchToUi @790; IsNullOrEmpty @803; Contains @804; Pow @813; ToString @814; Add @860; Add @861; SafeError @879 | No extracted literal effects. |
-| <span id="m-9aee1304efdc"></span><code>MainViewModel.ResetTeamMemberFormState()</code><br>883–922 | Increment @885; Clear @921 | No extracted literal effects. |
-| <span id="m-86f46db58f73"></span><code>MainViewModel.OpenAddTeamMemberModal()</code><br>924–982 | GetResult @943; GetAwaiter @943; GetStoreTimeZoneAsync @943; GetStoreLocalMonth @951; ToDateTime @956; GetStoreLocalDate @956; Localize @972; IsNullOrWhiteSpace @973; LoadDefaultPermissionOverrides @978; CaptureTeamMemberBaseline @979 | No extracted literal effects. |
-| <span id="m-a424b10c9f53"></span><code>MainViewModel.OpenEditTeamMemberModalAsync(string)</code><br>984–1173 | Read @986; ConfigureAwait @998; GetTeamMemberDetailAsync @998; GetTeamMemberDetailAsync @1003; StartsWith @1020; TryParse @1023; AsSpan @1023; GetPersonAsync @1025; DispatchToUi @1032; ToDateTime @1048; ToDateTime @1049; Pow @1059; ToString @1064; ToString @1065; AddMonths @1065; Localize @1078; IsNullOrWhiteSpace @1079; LoadDefaultPermissionOverrides @1081; CaptureTeamMemberBaseline @1082; ToDateTime @1109; Clear @1146; GetRegisteredPermissionDefinitions @1147; ToDictionary @1148; TryGetValue @1153; Add @1158 | No extracted literal effects. |
-| <span id="m-07e28d68419b"></span><code>MainViewModel.SaveTeamMemberAsync()</code><br>1175–1437 | IsNullOrWhiteSpace @1184; Trim @1195; All @1205; IsNullOrEmpty @1215; IsMatch @1250; Trim @1250; Trim @1257; Pow @1264; Round @1265; ToList @1274; Select @1274; Where @1274; Trim @1283; ToLowerInvariant @1284; Trim @1284; FromDateTime @1285; Trim @1288; Trim @1300; Trim @1301; Trim @1309; CheckSalarySectionIsDirty @1322; Trim @1337; ToString @1351; ConfigureAwait(CreateTeamMemberCommand, CreateTeamMemberResult) @1371; ExecuteAsync(CreateTeamMemberCommand, CreateTeamMemberResult) @1371; DispatchToUi @1374; ConfigureAwait(UpdateTeamMemberCommand, UpdateTeamMemberResult) @1395; ExecuteAsync(UpdateTeamMemberCommand, UpdateTeamMemberResult) @1395; LoadTeamsStaffAsync @1420; LoadSalaryWorkspaceAsync @1421 | No extracted literal effects. |
-| <span id="m-1c116004f701"></span><code>MainViewModel.RequestCloseTeamMemberModal()</code><br>1439–1449 | CloseTeamMemberModal @1448 | No extracted literal effects. |
-| <span id="m-620098d282c1"></span><code>MainViewModel.CloseTeamMemberModal()</code><br>1451–1462 | — | No extracted literal effects. |
-| <span id="m-7e21a7f191da"></span><code>MainViewModel.ConfirmDiscardTeamMemberForm()</code><br>1464–1468 | CloseTeamMemberModal @1467 | No extracted literal effects. |
-| <span id="m-30f48a89f091"></span><code>MainViewModel.KeepEditingTeamMemberForm()</code><br>1470–1473 | — | No extracted literal effects. |
+| <span id="m-01e8fdfeb22f"></span><code>MainViewModel.ConfigureTeamsPorts(ITeamsReader,IPinHasher?)</code><br>30–34 | — | No extracted literal effects. |
+| <span id="m-631c93f0ef8d"></span><code>MainViewModel.RaiseTeamsLabels()</code><br>331–354 | RaisePropertyChanged @333; nameof @333 | No extracted literal effects. |
+| <span id="m-b2b9b819a6f2"></span><code>MainViewModel.OnTeamMemberFieldChanged()</code><br>573–576 | CheckTeamMemberIsDirty @575 | No extracted literal effects. |
+| <span id="m-48c5e63b17f1"></span><code>MainViewModel.CaptureTeamMemberBaseline()</code><br>578–602 | ToList @580; Select @580 | No extracted literal effects. |
+| <span id="m-57970e613d3b"></span><code>MainViewModel.CheckTeamMemberIsDirty()</code><br>604–629 | ToList @607; Select @607; All @609; Zip @609; Equals @611 | No extracted literal effects. |
+| <span id="m-e15dfc254834"></span><code>MainViewModel.CheckSalarySectionIsDirty()</code><br>631–641 | Equals @637 | No extracted literal effects. |
+| <span id="m-88afe1ac9666"></span><code>MainViewModel.GetRegisteredPermissionDefinitions()</code><br>646–675 | — | No extracted literal effects. |
+| <span id="m-61bb4b8cbb49"></span><code>MainViewModel.LoadDefaultPermissionOverrides()</code><br>677–695 | Clear @679; GetRegisteredPermissionDefinitions @680; Add @684 | No extracted literal effects. |
+| <span id="m-32b1f47a6683"></span><code>MainViewModel.InitializeTeamsCommands()</code><br>745–874 | Create @747; CreateFromTask @748; CreateFromTask(string) @753; CreateFromTask(object?) @755; IsNullOrWhiteSpace @757; ConfigureAwait @759; OpenEditTeamMemberModalAsync @759; Create(object?) @763; OpenChangePinModal @767; Execute @775; Execute @783; Create(string) @787; IsNullOrEmpty @797; OnTeamMemberFieldChanged @800; OpenShiftForStaffAsync @835; LoadTeamMemberShiftHistoryAsync @842; LoadTeamsStaffAsync @843; OpenCloseShiftModal @849; SaveTeamMemberAsync @869; BindRefresh @872; ApplyTeamsTablePage @872; BuildTeamsTable @873 | No extracted literal effects. |
+| <span id="m-976e3464bd76"></span><code>MainViewModel.BuildTeamsTable()</code><br>876–915 | CreateColumns @883; TextColumn @884; Localize @884; IsNullOrWhiteSpace @885; LocalizeTable @904; Max @912; Ceiling @912; RaisePropertyChanged @914; nameof @914 | No extracted literal effects. |
+| <span id="m-61c3315b7e1a"></span><code>MainViewModel.CreateTeamMemberStatusCell(object)</code><br>917–941 | SetTip @938; ConfigureAwait @939; ToggleTeamMemberStatusAsync @939 | No extracted literal effects. |
+| <span id="m-5b20bce73201"></span><code>MainViewModel.ToggleTeamMemberStatusAsync(StaffMember)</code><br>943–1019 | IsNullOrWhiteSpace @955; ToLowerInvariant @955; Trim @955; ConfigureAwait(UpdateTeamMemberCommand, UpdateTeamMemberResult) @994; ExecuteAsync(UpdateTeamMemberCommand, UpdateTeamMemberResult) @994; DispatchToUi @997; LoadTeamsStaffAsync @1009 | No extracted literal effects. |
+| <span id="m-bb33db91a4c7"></span><code>MainViewModel.LoadTeamMemberShiftHistoryAsync(Guid)</code><br>1021–1095 | CreateCommand @1027; CreateParameter @1035; ToString @1037; Add @1038; ConfigureAwait @1046; ExecuteReaderAsync @1046; ReadAsync @1047; GetString @1049; GetInt64 @1050; IsDBNull @1051; GetInt32 @1052; Add @1069; DispatchToUi @1081; Clear @1083; Add @1084 | FROM shifts @1029 |
+| <span id="m-8a0e646163b9"></span><code>MainViewModel.ApplyTeamsTablePage(IEnumerable&lt;StaffMember&gt;?)</code><br>1097–1131 | IsNullOrWhiteSpace @1101; Trim @1103; Where @1104; Contains @1105; Contains @1106; Contains @1107; ThenBy @1121; OrderByDescending @1121; OrderBy @1121; ApplyLocalPage @1130 | No extracted literal effects. |
+| <span id="m-949bef7567a3"></span><code>MainViewModel.LoadTeamsStaffAsync()</code><br>1133–1261 | ApplyTeamsTablePage @1137; Clear @1145; ApplyPagedResult @1146; ConfigureAwait @1167; GetTeamMembersAsync @1167; DispatchToUi @1169; IsNullOrEmpty @1182; Contains @1183; Pow @1192; ToString @1193; Add @1240; Add @1241; SafeError @1259 | No extracted literal effects. |
+| <span id="m-c29549ed8878"></span><code>MainViewModel.ResetTeamMemberFormState()</code><br>1263–1302 | Increment @1265; Clear @1301 | No extracted literal effects. |
+| <span id="m-312fe951aaa1"></span><code>MainViewModel.OpenAddTeamMemberModal()</code><br>1304–1373 | GetResult @1323; GetAwaiter @1323; GetStoreTimeZoneAsync @1323; GetStoreLocalMonth @1331; ToDateTime @1336; GetStoreLocalDate @1336; Localize @1352; IsNullOrWhiteSpace @1353; Clear @1366; LoadDefaultPermissionOverrides @1369; CaptureTeamMemberBaseline @1370 | No extracted literal effects. |
+| <span id="m-227def267d61"></span><code>MainViewModel.OpenEditTeamMemberModalAsync(string)</code><br>1375–1603 | Read @1377; ConfigureAwait @1389; GetTeamMemberDetailAsync @1389; GetTeamMemberDetailAsync @1394; StartsWith @1411; TryParse @1414; AsSpan @1414; GetPersonAsync @1416; DispatchToUi @1423; ToDateTime @1439; ToDateTime @1440; Pow @1450; ToString @1455; ToString @1456; AddMonths @1456; Localize @1469; IsNullOrWhiteSpace @1470; Clear @1477; LoadTeamMemberShiftHistoryAsync @1482; LoadDefaultPermissionOverrides @1492; CaptureTeamMemberBaseline @1493; ToDateTime @1520; Clear @1557; GetRegisteredPermissionDefinitions @1558; ToDictionary @1559; TryGetValue @1564; Add @1569 | No extracted literal effects. |
+| <span id="m-f24517e5571b"></span><code>MainViewModel.SaveTeamMemberAsync()</code><br>1605–1867 | IsNullOrWhiteSpace @1614; Trim @1625; All @1635; IsNullOrEmpty @1645; IsMatch @1680; Trim @1680; Trim @1687; Pow @1694; Round @1695; ToList @1704; Select @1704; Where @1704; Trim @1713; ToLowerInvariant @1714; Trim @1714; FromDateTime @1715; Trim @1718; Trim @1730; Trim @1731; Trim @1739; CheckSalarySectionIsDirty @1752; Trim @1767; ToString @1781; ConfigureAwait(CreateTeamMemberCommand, CreateTeamMemberResult) @1801; ExecuteAsync(CreateTeamMemberCommand, CreateTeamMemberResult) @1801; DispatchToUi @1804; ConfigureAwait(UpdateTeamMemberCommand, UpdateTeamMemberResult) @1825; ExecuteAsync(UpdateTeamMemberCommand, UpdateTeamMemberResult) @1825; LoadTeamsStaffAsync @1850; LoadSalaryWorkspaceAsync @1851 | No extracted literal effects. |
+| <span id="m-64ab6de7568d"></span><code>MainViewModel.RequestCloseTeamMemberModal()</code><br>1869–1879 | CloseTeamMemberModal @1878 | No extracted literal effects. |
+| <span id="m-8c8e5154edd1"></span><code>MainViewModel.CloseTeamMemberModal()</code><br>1881–1892 | — | No extracted literal effects. |
+| <span id="m-6cc30735de8f"></span><code>MainViewModel.ConfirmDiscardTeamMemberForm()</code><br>1894–1898 | CloseTeamMemberModal @1897 | No extracted literal effects. |
+| <span id="m-540c154845a9"></span><code>MainViewModel.KeepEditingTeamMemberForm()</code><br>1900–1903 | — | No extracted literal effects. |
 
 </details>
 
@@ -1338,4 +1341,4 @@ Declarations: <code>MainWindow : Window</code> (line 21).
 
 ### MainWindow.axaml {#src-67243af94cf2}
 
-<code>Software/src/GetSeek.Desktop/Views/MainWindow.axaml</code> · 5673 lines · SHA-256 <code>7fa4cd4aa1614ed740829cf02c452b50603dc9086330a9b413370dd911e16aac</code>.
+<code>Software/src/GetSeek.Desktop/Views/MainWindow.axaml</code> · 5897 lines · SHA-256 <code>f639c933a789b3e19934dcc361315b29fdd5cb8b4988dc7723a5d9b4ab8654fa</code>.

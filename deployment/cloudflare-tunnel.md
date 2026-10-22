@@ -81,8 +81,17 @@ rebuilt purely on the logon wrappers:
   before `</body>`); live bytes are otherwise byte-identical to `.build/site`.
   Disable per-hostname in the dashboard if byte-exactness or crawler-visible
   emails matter.
-- **cloudflared 2026.10.1** in use; the edge now recommends **2026.10.3** —
-  upgrade pending owner approval (system software).
+- **cloudflared upgraded to 2026.10.3** (owner-approved 2026-10-22, silent
+  winget MSI). Side effects handled same session:
+  1. The MSI terminated running cloudflared processes — including the
+     Restaurant tunnel (docrestaurant returned 530). Restored by relaunching
+     `cloudflared tunnel run getseek-docs` with the existing `config.yml`
+     **unmodified**; both hostnames verified 200 afterwards. Lesson: future
+     cloudflared upgrades must expect to restart BOTH tunnels.
+  2. The wrapper-origin python was found wedged (listening but not accepting)
+     after the same window — killed and relaunched via its wrapper; local and
+     public 200 restored. If the origin hangs again, check whether its console
+     window (`PremiumDocs-Origin`) was closed, then rerun the wrapper.
 - **GitHub Pages mirror**: prepared but inactive; pushes currently blocked by
-  an expired GitHub credential (owner re-auth required); last pushed state
-  `3d2c175`, local `main` ahead.
+  an expired GitHub credential (owner must complete the Git Credential Manager
+  sign-in); last pushed state `3d2c175`, local `main` ahead.

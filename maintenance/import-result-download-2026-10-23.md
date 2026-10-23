@@ -1,0 +1,11 @@
+# Import result reporting — Patch B, 23 October 2026
+
+Maturity: IN REVIEW. Owner acceptance pending.
+
+Implemented two remaining gaps: failed XLSX reporting and Download Result recovery after save cancellation/error. Imported records and existing successful output semantics remain. Import handlers, business readers, workbook schema/version, matching, generated-ID algorithm, stock/pricing rules, transactions and dependencies were not changed.
+
+The result builder safely reconstructs readable original cells as text with physical rows and all uncommitted Stock/create inputs intact, adding only an Import Results sheet. Unsafe/unreadable inputs produce diagnostic-only workbooks. Ambiguous command responses read their original durable key; unresolved outcomes never assert rollback or safe stock resubmission. Each terminal matching attempt closes and clears its preview while retaining a bounded result tied to operator/database. Download Result only emits the stored bytes. It is available on the Inventory/Third Parties header and is invalidated on lock/disposal/database changes. Save request/saved/cancelled/failed remain distinct from command outcome.
+
+Fresh application evidence: 53 targeted tests passed, zero failed. Baseline from the preceding source recheck: 30 passed. An initial new fixture used a non-schema price-column name and was corrected before the passing runs; raw failed and passing logs are retained. Tests cover workbook round trips, original identifiers/Stock/physical rows, correction/reimport, missing/corrupt inputs, stale work/operator changes, durable conflict, no command replay from Download Result, save-error/cancel statuses and headless 1024/1366 layouts. Native picker/save interactions and actual filesystem save cancellation were not executed. No full-suite, real shop, hardware or owner acceptance claim.
+
+Raw evidence, before-source copies and source patch: F:/Premium_POS/artifacts/import-result-download/20261023-124335. E-023 pins patch-b-verified.trx. Application root has no Git repository; saved source checkpoint/diff is not an application commit. Documentation sync is local only; unrelated existing overlay/UI test documentation edits remain pending separately.

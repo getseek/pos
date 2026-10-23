@@ -472,14 +472,13 @@
         "ImportThirdPartiesCommand"
       ],
       "steps": [
-        "Select and parse the workbook",
-        "Map and preview rows outside the command",
-        "Resolve identity, unit and validation conflicts",
-        "Submit authorized import command",
-        "Commit accepted import result and history",
-        "Review rejected rows before another import",
-        "After successful Desktop confirmation, capture completed workbook, close dialog and clear all preview backing/paged rows; keep imported records and completed download request",
-        "On command rejection, keep preview and errors for inspection; edit original workbook and choose the file again as needed"
+        "Choose a workbook and capture its bytes and operator/database/generation",
+        "Validate without committing; invalid preview produces one failure XLSX",
+        "Confirm valid preview through the existing authorized atomic command",
+        "Resolve an ambiguous response by reading the original durable idempotency key; never resubmit to obtain a report",
+        "Capture completed or failed result separately, close the matching dialog and clear its preview",
+        "Save the offered XLSX; Download Result on the Inventory or Third Parties toolbar saves the last result again without importing",
+        "For correctable failures edit the returned business sheets and choose the file again; unknown outcomes require administrator review"
       ],
       "sources": [
         {
@@ -494,26 +493,56 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b",
+          "sha256": "ca5b63e5ad55c91a9ec5fadab0d67cdbf54b3c81810c8658cf695f7d87f672ba",
           "line": 1
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b",
+          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67",
           "line": 1
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
-          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8",
+          "sha256": "36b3834cae4664089ae8d554018568e7bd3c871b43310cee711aed1806b2351e",
           "line": 1
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
-          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75",
+          "sha256": "288b9c26dae276e116671041ee26959170bc08b7addda9dd732301d7abd341d0",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportResults.cs",
+          "sha256": "6a4abb535229d4afe94f0ea89c0d81e3ff6c13f70d4bb0ed47d2ca664aa562fa",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
+          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
+          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
+          "sha256": "8624a420c9eb250a8b70ac04e4aebb62015ec414e0349ab562d1fd05c510cee1",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
+          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64",
+          "line": 1
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
+          "sha256": "d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd",
           "line": 1
         }
       ],
-      "notes": "23 October 2026 — Patch A, E-022: 30 targeted automated tests passed. Success resets selected file, pending preview, selection, paging, issues and confirmation state for inventory and third-party imports. Cancel/replacement also clears stale backing rows. Completed XLSX download requests and persisted records are covered; actual native save dialogs were not exercised. Failed-command preview/error retention is covered. Failure XLSX generation is a separate pending patch; no Retry Import button is introduced. This is targeted verification, not owner acceptance or a full application test run."
+      "notes": "23 October 2026 — Patch B, E-023: 53 targeted tests passed. Both import toolbars expose Download Result when a result exists for the current unlocked operator/database. Save cancellation/failure keeps that bounded in-memory artifact. There is no Retry Import action. Correctable failed XLSX retains original identifiers, physical rows, instruction rows, create/update choices and Stock; Import Results contains diagnostics and is not business data. Unsafe/corrupt/oversized files use a diagnostic-only XLSX and require correcting the original file or a fresh template. Ambiguous outcomes first read the original durable key; unresolved outcomes omit business input and warn against stock resubmission. Lock/disposal/database changes invalidate old artifacts and stale work. Success output behavior and import handlers/parsers/templates/schema/stock/pricing rules remain unchanged. Headless layout and event tests do not verify native OS dialogs or shop acceptance."
     },
     {
       "id": "PP-MAP-TEAMS",
@@ -735,8 +764,8 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 8273,
-          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
+          "line": 8283,
+          "sha256": "ca5b63e5ad55c91a9ec5fadab0d67cdbf54b3c81810c8658cf695f7d87f672ba"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",

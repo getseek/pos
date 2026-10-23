@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "ff9537742d97ee0b775d288dd52570f73742583ba84e1ceeeb9a1cb3f2a86607",
+      "sha256": "39499a670c730122666be5d3644f488a0cc7c478447598f27fad8691af6d9008",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -443,6 +443,39 @@
         "queuing": "2026-10-23T11:22:40.7561731+07:00",
         "start": "2026-10-23T11:22:38.9173015+07:00",
         "finish": "2026-10-23T11:22:58.6715103+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-023",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-result-download/20261023-124335/patch-b-verified.trx",
+      "sha256": "e2bf3988330940cbc5320fb69e83318f60d8dff2d388e955f454daaac7806e5f",
+      "reviewed_on": "2026-10-23",
+      "claim": "Patch B: 53 current-source targeted import integration/workbook/headless UI tests passed, zero failed. Covers editable failure results, physical rows/Stock/create/text IDs, correction and normal re-import, captured bytes after disk replacement, no duplicate commands on Download Result, save cancellation/error reporting, synchronous save-request exception preserving committed success, stale preview/operator suppression, conflicting durable outcome diagnostic and result buttons within 1024/1366 windows. Native OS dialogs/writes, actual save cancellation, real shop, full suite and physical devices were not exercised.",
+      "counters": {
+        "total": "53",
+        "executed": "53",
+        "passed": "53",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-23T15:22:32.1969042+07:00",
+        "queuing": "2026-10-23T15:22:32.1969044+07:00",
+        "start": "2026-10-23T15:22:30.3850446+07:00",
+        "finish": "2026-10-23T15:23:26.3987955+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

@@ -11,7 +11,7 @@ features: ["PP-F020"]
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Feature coverage: PP-F020. Source: [RestaurantOrderCommandHandler.cs:1](code-application.md#src-b930bdf2056c), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4), [MainViewModel.cs:8273](code-desktop.md#src-16497b924a99), [OutputDeviceWorker.cs:223](code-infrastructure.md#src-64d2e3097e9f).
+Feature coverage: PP-F020. Source: [RestaurantOrderCommandHandler.cs:1](code-application.md#src-b930bdf2056c), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4), [MainViewModel.cs:8283](code-desktop.md#src-16497b924a99), [OutputDeviceWorker.cs:223](code-infrastructure.md#src-64d2e3097e9f).
 
 Current Cafe checkout is pay-now counter service. These backend order command declarations do not establish current table-service or physical kitchen-output support. See PP-REV-008 and the source-checked rules.
 
@@ -51,7 +51,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:81](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [CancelActiveOrderAsync:6429](code-desktop.md#src-16497b924a99)
+Construction sites: [CancelActiveOrderAsync:6439](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(CancelRestaurantOrderCommand,CommandEnvelope&lt;CancelRestaurantOrderCommand&gt;,CancellationToken)](code-application.md#m-38d044c06b45).
 
@@ -111,7 +111,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:94](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [SettleActiveOrderAsync:6526](code-desktop.md#src-16497b924a99)
+Construction sites: [SettleActiveOrderAsync:6536](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(SettleRestaurantOrderCommand,CommandEnvelope&lt;SettleRestaurantOrderCommand&gt;,CancellationToken)](code-application.md#m-1ace6b54b045).
 
@@ -131,7 +131,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:67](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [MarkPreparingAsync:6326](code-desktop.md#src-16497b924a99), [MarkReadyAsync:6361](code-desktop.md#src-16497b924a99), [MarkServedAsync:6396](code-desktop.md#src-16497b924a99)
+Construction sites: [MarkPreparingAsync:6336](code-desktop.md#src-16497b924a99), [MarkReadyAsync:6371](code-desktop.md#src-16497b924a99), [MarkServedAsync:6406](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(UpdateRestaurantOrderStatusCommand,CommandEnvelope&lt;UpdateRestaurantOrderStatusCommand&gt;,CancellationToken)](code-application.md#m-cc0c2ea16a9e).
 

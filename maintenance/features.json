@@ -252,29 +252,54 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
+          "sha256": "ca5b63e5ad55c91a9ec5fadab0d67cdbf54b3c81810c8658cf695f7d87f672ba"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b"
+          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
-          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8"
+          "sha256": "36b3834cae4664089ae8d554018568e7bd3c871b43310cee711aed1806b2351e"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
-          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75"
+          "sha256": "288b9c26dae276e116671041ee26959170bc08b7addda9dd732301d7abd341d0"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportResults.cs",
+          "sha256": "6a4abb535229d4afe94f0ea89c0d81e3ff6c13f70d4bb0ed47d2ca664aa562fa"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
+          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
+          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
+          "sha256": "8624a420c9eb250a8b70ac04e4aebb62015ec414e0349ab562d1fd05c510cee1"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
+          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64"
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
+          "sha256": "d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd"
         }
       ],
       "source_review": "source-reviewed",
       "application_verification": "rerun",
       "evidence_ids": [
-        "E-022"
+        "E-022",
+        "E-023"
       ],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
-      "limitations": "Targeted import verification only: 24 existing tests passed before the change; 30 passed after it, including six Desktop preview lifecycle cases. Successful import clears preview while retaining imported records and requesting the completed XLSX download. Failed commands retain the preview/error. Failure XLSX reporting remains a separate pending patch. Native file dialogs, owner-run shop workflows and physical devices were not verified; operator guide remains planned.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned.",
       "review_map": "review/parties.md",
       "reviewed_on": "2026-10-23"
     },
@@ -289,19 +314,43 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
+          "sha256": "ca5b63e5ad55c91a9ec5fadab0d67cdbf54b3c81810c8658cf695f7d87f672ba"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b"
+          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
-          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8"
+          "sha256": "36b3834cae4664089ae8d554018568e7bd3c871b43310cee711aed1806b2351e"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
-          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75"
+          "sha256": "288b9c26dae276e116671041ee26959170bc08b7addda9dd732301d7abd341d0"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportResults.cs",
+          "sha256": "6a4abb535229d4afe94f0ea89c0d81e3ff6c13f70d4bb0ed47d2ca664aa562fa"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
+          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
+          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
+          "sha256": "8624a420c9eb250a8b70ac04e4aebb62015ec414e0349ab562d1fd05c510cee1"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
+          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64"
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
+          "sha256": "d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd"
         }
       ],
       "source_review": "source-reviewed",
@@ -309,11 +358,12 @@
       "evidence_ids": [
         "E-015",
         "E-016",
-        "E-022"
+        "E-022",
+        "E-023"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "Targeted import verification only: 24 existing tests passed before the change; 30 passed after it, including six Desktop preview lifecycle cases. Successful import clears preview while retaining imported records and requesting the completed XLSX download. Failed commands retain the preview/error. Failure XLSX reporting remains a separate pending patch. Native file dialogs, owner-run shop workflows and physical devices were not verified; operator guide remains planned.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned.",
       "review_map": "review/imports.md",
       "reviewed_on": "2026-10-23"
     },

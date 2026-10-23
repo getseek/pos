@@ -588,14 +588,14 @@ Declarations: <code>ImportPreviewService</code> (line 23).
 
 ## XlsxImportWorkbook.cs {#src-16a4d298fe01}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs</code> · 219 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs</code> · 265 lines.
 
-SHA-256: <code>daf77df9b29d98e2fa8d5089d6788be689826fa327c2b575e070709ad08ff798</code>.
+SHA-256: <code>6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8</code>.
 
 Declarations: <code>XlsxImportRow</code> (line 9), <code>XlsxImportWorkbook</code> (line 12).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (7)</summary>
+<summary>Methods, calls, table effects and failures (9)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
@@ -603,9 +603,11 @@ Declarations: <code>XlsxImportRow</code> (line 9), <code>XlsxImportWorkbook</cod
 | <span id="m-1916b1d1b560"></span><code>XlsxImportWorkbook.Load(byte[],string,ImportWorkbookContext?)</code><br>20–91 | Sum @25; GetEntry @28; Open @29; Create @30; Load @31; ToArray @33; Select @33; Descendants @33; ReadXml @33; Concat @34; Descendants @34; ToDictionary @35; Elements @35; Attribute @35; Attribute @39; StartsWith @41; TrimStart @41; Contains @42; Attribute @46; Elements @48; Attribute @50; TakeWhile @52; ToUpperInvariant @52; ToUpperInvariant @54; Descendants @55; Element @55; Parse @56; Any @57; Sheets @57; Equals @57; TryAdd @59; TryAdd @61; TryAdd @63; ContainsKey @65; Rows @66; Cell @66; GetValueOrDefault @67; ToString @70; HasSheet @75; ToHashSet @76; Select @76; TryGetValue @78; Any @79; Any @79; Equals @79; GetValueOrDefault @79; Any @83; Contains @83; Where @84; Contains @84; TryGetValue @85; IsNullOrEmpty @85; ToString @85; GetValueOrDefault @85; ToUpperInvariant @85 | InvalidDataException @22; InvalidDataException @25; InvalidDataException @42; InvalidDataException @58; InvalidDataException @59; InvalidDataException @61; InvalidDataException @63; InvalidDataException @65; InvalidDataException @69; InvalidDataException @71; InvalidDataException @80; InvalidDataException @83; InvalidDataException @86; InvalidDataException @87 |
 | <span id="m-3723384b16ab"></span><code>XlsxImportWorkbook.AssignAutomaticIdentifiers(string,string)</code><br>93–126 | ToHexString @95; HashData @95; GetBytes @95; TryGetValue @97; Single @98; Equals @98; Column @99; Where @101; Any @101; IsNullOrWhiteSpace @101; GetValueOrDefault @103; Equals @105; ToUpperInvariant @110; Where @114; Any @114; Sheets @114; ToArray @116; Select @116; Where @116; Where @117; Trim @120; StartsWith @121; TryGetValue @122 | InvalidDataException @122 |
 | <span id="m-8d60bbc269f0"></span><code>XlsxImportWorkbook.CompletedWorkbook(byte[],string,string,ImportWorkbookContext)</code><br>128–139 | Load @130; AssignAutomaticIdentifiers @131; ToDictionary @132; Sheets @132; ToArray @133; Select @133; Rows @133; Empty(IDictionary&lt;string, object&gt;, string, object) @137; Write @138 | No extracted literal effects. |
-| <span id="m-9a8084dfebce"></span><code>XlsxImportWorkbook.Rows(string,int)</code><br>141–154 | TryGetValue @143; TryGetValue @144; ToDictionary @145; Trim @145; Any @146; Count @146; Distinct @146; Where @148; All @150; Any @151; ContainsKey @151; IsNullOrWhiteSpace @151; ToDictionary @152; GetValueOrDefault @152 | InvalidDataException @144; InvalidDataException @147; InvalidDataException @151 |
-| <span id="m-49f873ebcd98"></span><code>XlsxImportWorkbook.Cell(IDictionary&lt;string, object&gt;,string)</code><br>156–157 | TryGetValue @156; ToString @157; Trim @157 | No extracted literal effects. |
-| <span id="m-5f7344798bcc"></span><code>XlsxImportWorkbook.Write(string,ImportWorkbookContext,IReadOnlyDictionary&lt;string, IReadOnlyList&lt;IDictionary&lt;string, object&gt;&gt;&gt;?)</code><br>159–217 | ToString @163; Sheets @164; ToList @166; Select @166; TryGetValue @167; AddRange @168; Select @168; Cell @168; AddRange @172; Select @172; Open @177; CreateEntry @177; Write @177; Add @179; Get @181; Add @185; Override @186; Add @191; Element @191; Add @192; Add @197; Add @205; ToString @208; ToString @214; ToString @214; ToString @214; ToArray @216 | No extracted literal effects. |
+| <span id="m-eacbc905a98c"></span><code>XlsxImportWorkbook.FailedWorkbook(byte[]?,string,IReadOnlyList&lt;ImportIssue&gt;,string)</code><br>143–180 | Load @150; ToHashSet @151; Append @151; Select @151; Sheets @151; ToDictionary @152; Where @152; Contains @152; Select @161; Add @162; Take @167; ToArray @170; Where @170; Any @170; Join @171; Select @171; TryGetValue @171; TryGetValue @171; Where @172; GetValueOrDefault @172; ToString @173; WriteSheets @176; FailedWorkbook @178 | InvalidDataException @149 |
+| <span id="m-38fbea4c3f3a"></span><code>XlsxImportWorkbook.Rows(string,int)</code><br>182–195 | TryGetValue @184; TryGetValue @185; ToDictionary @186; Trim @186; Any @187; Count @187; Distinct @187; Where @189; All @191; Any @192; ContainsKey @192; IsNullOrWhiteSpace @192; ToDictionary @193; GetValueOrDefault @193 | InvalidDataException @185; InvalidDataException @188; InvalidDataException @192 |
+| <span id="m-70c90a9aab1f"></span><code>XlsxImportWorkbook.Cell(IDictionary&lt;string, object&gt;,string)</code><br>197–198 | TryGetValue @197; ToString @198; Trim @198 | No extracted literal effects. |
+| <span id="m-1653613c233e"></span><code>XlsxImportWorkbook.Write(string,ImportWorkbookContext,IReadOnlyDictionary&lt;string, IReadOnlyList&lt;IDictionary&lt;string, object&gt;&gt;&gt;?)</code><br>200–216 | ToString @204; Sheets @205; ToList @207; Select @207; TryGetValue @208; AddRange @209; Select @209; Cell @209; AddRange @213; Select @213; WriteSheets @215; ToDictionary @215; ToDictionary @215; Select @215; Select @215 | No extracted literal effects. |
+| <span id="m-f91b4b784ee9"></span><code>XlsxImportWorkbook.WriteSheets(Dictionary&lt;string, SortedDictionary&lt;int, Dictionary&lt;int, string&gt;&gt;&gt;)</code><br>218–263 | Open @223; CreateEntry @223; Write @223; Add @225; Get @227; Add @231; Override @232; Add @237; Element @237; Add @238; Add @243; Add @251; ToString @254; ToString @260; ToString @260; ToString @260; ToArray @262 | No extracted literal effects. |
 
 </details>
 

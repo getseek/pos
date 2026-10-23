@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-This catalogue contains **387 distinct uppercase literal codes** extracted from `Failure(...)` calls in application method bodies. It is an index of code sites, not a claim that every code is reachable or user-visible. Dynamic/propagated codes, exceptions, worker message prefixes and validation outside method bodies may require separate inspection.
+This catalogue contains **388 distinct uppercase literal codes** extracted from `Failure(...)` calls in application method bodies. It is an index of code sites, not a claim that every code is reachable or user-visible. Dynamic/propagated codes, exceptions, worker message prefixes and validation outside method bodies may require separate inspection.
 
 ## Triage route
 
@@ -124,6 +124,7 @@ This catalogue contains **387 distinct uppercase literal codes** extracted from 
 | <code>IMPORT_EMPTY</code> | [ImportProductsCommandHandler.HandleAsync:28](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:32](code-application.md#src-7bb9c4e66dce) |
 | <code>IMPORT_KIT_STOCK</code> | [ImportProductsCommandHandler.HandleAsync:101](code-application.md#src-2c8d126a7c07) |
 | <code>IMPORT_ORPHAN_COMPONENT</code> | [ImportProductsCommandHandler.HandleAsync:84](code-application.md#src-2c8d126a7c07) |
+| <code>IMPORT_OUTCOME_UNKNOWN</code> | [MainViewModel.RecoverImportOutcomeAsync:104](code-desktop.md#src-969918d8254d), [MainViewModel.RecoverImportOutcomeAsync:109](code-desktop.md#src-969918d8254d), [MainViewModel.RecoverImportOutcomeAsync:112](code-desktop.md#src-969918d8254d) |
 | <code>IMPORT_PREVIEW_STALE</code> | [ImportProductsCommandHandler.HandleAsync:50](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:48](code-application.md#src-7bb9c4e66dce) |
 | <code>IMPORT_PRICE_CONFLICT</code> | [ImportProductConfiguration.PriceAsync:150](code-application.md#src-14918ebf4662) |
 | <code>IMPORT_SKU_EXISTS</code> | [ImportProductConfiguration.SaveAsync:27](code-application.md#src-14918ebf4662) |

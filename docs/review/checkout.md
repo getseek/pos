@@ -57,7 +57,7 @@ Handler: [StaleCartPriceReviewCommandHandler](code-application.md#src-f9958eaccd
 
 Declaration: [StaleCartPriceReview.cs:26](code-application.md#src-f9958eaccdf4). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [AcceptStaleCartPriceReviewAsync:5889](code-desktop.md#src-16497b924a99)
+Construction sites: [AcceptStaleCartPriceReviewAsync:5899](code-desktop.md#src-16497b924a99)
 
 Handler method: [StaleCartPriceReviewCommandHandler.HandleAsync(AcceptStaleCartPriceReviewCommand,CommandEnvelope&lt;AcceptStaleCartPriceReviewCommand&gt;,CancellationToken)](code-application.md#m-4ee802676bed).
 
@@ -175,7 +175,7 @@ Handler: [StaleCartPriceReviewCommandHandler](code-application.md#src-f9958eaccd
 
 Declaration: [StaleCartPriceReview.cs:21](code-application.md#src-f9958eaccdf4). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [OpenStaleCartPriceReviewAsync:5851](code-desktop.md#src-16497b924a99)
+Construction sites: [OpenStaleCartPriceReviewAsync:5861](code-desktop.md#src-16497b924a99)
 
 Handler method: [StaleCartPriceReviewCommandHandler.HandleAsync(ReviewStaleCartPricesCommand,CommandEnvelope&lt;ReviewStaleCartPricesCommand&gt;,CancellationToken)](code-application.md#m-d9c53582c750).
 
@@ -195,7 +195,7 @@ Handler: [CartAllocationCommandHandler](code-application.md#src-46ba4855fda6). R
 
 Declaration: [SaleCommands.cs:63](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:80](code-application.md#src-4772ecb3181e), [HandleAsync:101](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:12014](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:80](code-application.md#src-4772ecb3181e), [HandleAsync:101](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:12025](code-desktop.md#src-16497b924a99)
 
 Handler method: [CartAllocationCommandHandler.HandleAsync(SelectLotForCartLineCommand,CommandEnvelope&lt;SelectLotForCartLineCommand&gt;,CancellationToken)](code-application.md#m-ee0fab044b83).
 
@@ -215,7 +215,7 @@ Handler: [CartAllocationCommandHandler](code-application.md#src-46ba4855fda6). R
 
 Declaration: [SaleCommands.cs:77](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:86](code-application.md#src-4772ecb3181e), [HandleAsync:108](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:12033](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:86](code-application.md#src-4772ecb3181e), [HandleAsync:108](code-application.md#src-4772ecb3181e), [ConfirmLotSerialSelectionAsync:12044](code-desktop.md#src-16497b924a99)
 
 Handler method: [CartAllocationCommandHandler.HandleAsync(SelectSerialForCartLineCommand,CommandEnvelope&lt;SelectSerialForCartLineCommand&gt;,CancellationToken)](code-application.md#m-a881109dcdae).
 
@@ -235,7 +235,7 @@ Handler: [SaleCommandHandler](code-application.md#src-b90bee551ece). Result type
 
 Declaration: [SaleCommands.cs:30](code-application.md#src-5208d9e05ff3). <code>RequiredPermission = Permissions.CheckoutSale</code>
 
-Construction sites: [HandleAsync:223](code-application.md#src-b90bee551ece), [HandleAsync:237](code-application.md#src-b90bee551ece), [HandleAsync:248](code-application.md#src-b90bee551ece), [PlaceOrderInternalAsync:5782](code-desktop.md#src-16497b924a99), [SettleActiveOrderAsync:6515](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:223](code-application.md#src-b90bee551ece), [HandleAsync:237](code-application.md#src-b90bee551ece), [HandleAsync:248](code-application.md#src-b90bee551ece), [PlaceOrderInternalAsync:5792](code-desktop.md#src-16497b924a99), [SettleActiveOrderAsync:6525](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaleCommandHandler.HandleAsync(TakePaymentCommand,CommandEnvelope&lt;TakePaymentCommand&gt;,CancellationToken)](code-application.md#m-bec1ebd1e944).
 

@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **148 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **149 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -181,9 +181,15 @@ Located test declarations: <code>ReceiptSelector_UsesCommittedDatabaseInvoiceAnd
 
 <code>Software/tests/GetSeek.IntegrationTests/ImportDialogsUiIntegrationTests.cs</code> · SHA-256 <code>42bc57debe921ba784d023efa2a146aeb43a0ab48f59fa7be4c7f2617f4e9d15</code>.
 
+## ImportResultWorkbookTests.cs {#src-0492bf0b001b}
+
+<code>Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs</code> · SHA-256 <code>d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd</code>.
+
+Located test declarations: <code>FailedInventoryPreservesPhysicalRowsBlankIdentityStockAndCreateForCorrection</code> @13, <code>FailureKeepsLeadingZeroTextAndOriginalContext</code> @44, <code>FormulaAndCorruptInputProduceSafeDiagnosticWithoutBusinessInput</code> @60, <code>UnknownOutcomeOmitsStockAndNeverClaimsRollback</code> @80.
+
 ## ImportReviewLifecycleTests.cs {#src-320c3c9117d1}
 
-<code>Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs</code> · SHA-256 <code>296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75</code>.
+<code>Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs</code> · SHA-256 <code>288b9c26dae276e116671041ee26959170bc08b7addda9dd732301d7abd341d0</code>.
 
 ## InventoryAndThirdPartiesSearchIntegrationTests.cs {#src-d0fa582a0395}
 

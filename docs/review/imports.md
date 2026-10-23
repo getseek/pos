@@ -11,22 +11,21 @@ features: ["PP-F014", "PP-F013"]
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Feature coverage: PP-F014, PP-F013. Source: [ImportProductsCommandHandler.cs:1](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.cs:1](code-application.md#src-7bb9c4e66dce), [MainViewModel.cs:1](code-desktop.md#src-16497b924a99), [MainViewModel.ImportReview.cs:1](code-desktop.md#src-90113acc8bd5), [MainViewModel.ThirdPartyImport.cs:1](code-desktop.md#src-63148b75a5e2), [ImportReviewLifecycleTests.cs:1](tests.md#src-320c3c9117d1).
+Feature coverage: PP-F014, PP-F013. Source: [ImportProductsCommandHandler.cs:1](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.cs:1](code-application.md#src-7bb9c4e66dce), [MainViewModel.cs:1](code-desktop.md#src-16497b924a99), [MainViewModel.ImportReview.cs:1](code-desktop.md#src-90113acc8bd5), [MainViewModel.ThirdPartyImport.cs:1](code-desktop.md#src-63148b75a5e2), [ImportReviewLifecycleTests.cs:1](tests.md#src-320c3c9117d1), [MainViewModel.ImportResults.cs:1](code-desktop.md#src-969918d8254d), [XlsxImportWorkbook.cs:1](code-infrastructure.md#src-16a4d298fe01), [MainWindow.axaml:1](code-desktop.md#src-67243af94cf2), [MainWindow.axaml.cs:1](code-desktop.md#src-49e81864bc35), [UiPreferencesService.cs:1](code-desktop.md#src-3ede46aa073a), [ImportResultWorkbookTests.cs:1](tests.md#src-0492bf0b001b).
 
-23 October 2026 — Patch A, E-022: 30 targeted automated tests passed. Success resets selected file, pending preview, selection, paging, issues and confirmation state for inventory and third-party imports. Cancel/replacement also clears stale backing rows. Completed XLSX download requests and persisted records are covered; actual native save dialogs were not exercised. Failed-command preview/error retention is covered. Failure XLSX generation is a separate pending patch; no Retry Import button is introduced. This is targeted verification, not owner acceptance or a full application test run.
+23 October 2026 — Patch B, E-023: 53 targeted tests passed. Both import toolbars expose Download Result when a result exists for the current unlocked operator/database. Save cancellation/failure keeps that bounded in-memory artifact. There is no Retry Import action. Correctable failed XLSX retains original identifiers, physical rows, instruction rows, create/update choices and Stock; Import Results contains diagnostics and is not business data. Unsafe/corrupt/oversized files use a diagnostic-only XLSX and require correcting the original file or a fresh template. Ambiguous outcomes first read the original durable key; unresolved outcomes omit business input and warn against stock resubmission. Lock/disposal/database changes invalidate old artifacts and stale work. Success output behavior and import handlers/parsers/templates/schema/stock/pricing rules remain unchanged. Headless layout and event tests do not verify native OS dialogs or shop acceptance.
 
 ## Step-by-step review route
 
 The numbered route is a business review checklist. Branches are separate actions; it does not imply that all actions occur in one transaction.
 
-1. Select and parse the workbook.
-2. Map and preview rows outside the command.
-3. Resolve identity, unit and validation conflicts.
-4. Submit authorized import command.
-5. Commit accepted import result and history.
-6. Review rejected rows before another import.
-7. After successful Desktop confirmation, capture completed workbook, close dialog and clear all preview backing/paged rows; keep imported records and completed download request.
-8. On command rejection, keep preview and errors for inspection; edit original workbook and choose the file again as needed.
+1. Choose a workbook and capture its bytes and operator/database/generation.
+2. Validate without committing; invalid preview produces one failure XLSX.
+3. Confirm valid preview through the existing authorized atomic command.
+4. Resolve an ambiguous response by reading the original durable idempotency key; never resubmit to obtain a report.
+5. Capture completed or failed result separately, close the matching dialog and clear its preview.
+6. Save the offered XLSX; Download Result on the Inventory or Third Parties toolbar saves the last result again without importing.
+7. For correctable failures edit the returned business sheets and choose the file again; unknown outcomes require administrator review.
 
 ## Command routing map
 
@@ -57,7 +56,7 @@ Handler: [ImportProductsCommandHandler](code-application.md#src-2c8d126a7c07). R
 
 Declaration: [ImportCommands.cs:53](code-application.md#src-60301a99263c). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmImportAsync:3719](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
+Construction sites: [ConfirmImportAsync:3732](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)](code-application.md#m-c862b652239a).
 
@@ -77,7 +76,7 @@ Handler: [ImportThirdPartiesCommandHandler](code-application.md#src-7bb9c4e66dce
 
 Declaration: [ImportThirdPartiesCommands.cs:61](code-application.md#src-26c060baba90). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ConfirmThirdPartyImportAsync:208](code-desktop.md#src-63148b75a5e2), [ValidateThirdPartiesAsync:113](code-infrastructure.md#src-9b8064464865)
+Construction sites: [ConfirmThirdPartyImportAsync:219](code-desktop.md#src-63148b75a5e2), [ValidateThirdPartiesAsync:113](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportThirdPartiesCommandHandler.HandleAsync(ImportThirdPartiesCommand,CommandEnvelope&lt;ImportThirdPartiesCommand&gt;,CancellationToken)](code-application.md#m-7085a9c8a444).
 

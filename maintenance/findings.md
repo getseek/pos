@@ -35,3 +35,7 @@ Source-check updates (2026-10-20): `PP-RULE-010` documents exclusive tax (`TaxMo
 ## Import preview lifecycle — 23 October 2026
 
 PP-DOC-009: Successful Desktop inventory and third-party imports previously retained preview backing rows. Patch A clears preview state after success and on cancel/replacement, while preserving records and completed XLSX download requests. E-022 records 30 passing targeted tests; before the fix four new success/reset cases failed and two rejection cases passed. Failed commands retain their preview/error. Failure XLSX reporting remains pending separately. Native dialogs, actual saved downloads, real shop data and physical devices require owner checks. Pricing and import command handlers were not changed.
+
+## Import result reporting — Patch B, 23 October 2026
+
+PP-DOC-010: The missing failure XLSX and missing Download Result recovery identified after PP-DOC-009 are implemented. E-023 records 53 passing targeted current-source tests. Correctable failures retain uncommitted input, while unsafe/uncertain cases are diagnostic-only. Success/known failure clears the finished preview; saved/cancelled/save-error outcomes are distinct from import outcome. Result download never calls Confirm. Owner-run native dialogs, actual saved downloads, real shop and physical-device checks remain unverified. The earlier Patch A note about retaining failed previews describes historical behavior and is superseded by this result workflow.

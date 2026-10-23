@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "50cef8590e795d2f0a9758c72b55e330b22f049eb727196af20e37992f485425",
+      "sha256": "ff9537742d97ee0b775d288dd52570f73742583ba84e1ceeeb9a1cb3f2a86607",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -410,6 +410,39 @@
         "queuing": "2026-10-20T18:42:59.6726421+07:00",
         "start": "2026-10-20T18:42:57.8179383+07:00",
         "finish": "2026-10-20T18:43:00.6566695+07:00"
+      },
+      "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-022",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-preview-cleanup/20261023-111339/patch-a.trx",
+      "sha256": "0fe8bcaf78ea13ecc1fa7bbd1305436b4de01769b3bc5894e9df3a1de1d2a505",
+      "reviewed_on": "2026-10-23",
+      "claim": "Patch A: 30 targeted import integration/UI tests passed, 0 failed. Includes six new inventory/third-party preview lifecycle cases: success clears backing/paged preview while preserving records and completed workbook event; cancel/replacement clears stale rows; rejected commands preserve preview/error. Baseline 24 passed; pre-fix regression run 4 failed and 2 passed. No full-suite, native dialog, download-save, live-shop or physical-device acceptance claim.",
+      "counters": {
+        "total": "30",
+        "executed": "30",
+        "passed": "30",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "completed": "0",
+        "inProgress": "0",
+        "pending": "0"
+      },
+      "times": {
+        "creation": "2026-10-23T11:22:40.7561729+07:00",
+        "queuing": "2026-10-23T11:22:40.7561731+07:00",
+        "start": "2026-10-23T11:22:38.9173015+07:00",
+        "finish": "2026-10-23T11:22:58.6715103+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
     }

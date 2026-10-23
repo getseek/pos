@@ -73,7 +73,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:66](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ConfirmSaveThirdPartyAsync:1450](code-desktop.md#src-974d69a1850f)
+Construction sites: [ConfirmSaveThirdPartyAsync:1790](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(CreateThirdPartyCommand,CommandEnvelope&lt;CreateThirdPartyCommand&gt;,CancellationToken)](code-application.md#m-e3e4b695a83f).
 
@@ -93,7 +93,7 @@ Handler: [CustomerCommandHandler](code-application.md#src-21df28594271). Result 
 
 Declaration: [CustomerCommands.cs:48](code-application.md#src-e38bff3a5457). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [DeactivateCustomerAsync:11848](code-desktop.md#src-16497b924a99)
+Construction sites: [DeactivateCustomerAsync:12124](code-desktop.md#src-16497b924a99)
 
 Handler method: [CustomerCommandHandler.HandleAsync(DeactivateCustomerCommand,CommandEnvelope&lt;DeactivateCustomerCommand&gt;,CancellationToken)](code-application.md#m-590723502c08).
 
@@ -113,7 +113,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:116](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [DeactivateThirdPartyAsync:1495](code-desktop.md#src-974d69a1850f)
+Construction sites: [DeactivateThirdPartyAsync:1835](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(DeactivateThirdPartyCommand,CommandEnvelope&lt;DeactivateThirdPartyCommand&gt;,CancellationToken)](code-application.md#m-599566bc0d8c).
 
@@ -153,7 +153,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:124](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ReactivateThirdPartyAsync:2388](code-desktop.md#src-974d69a1850f)
+Construction sites: [ReactivateThirdPartyAsync:2797](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(ReactivateThirdPartyCommand,CommandEnvelope&lt;ReactivateThirdPartyCommand&gt;,CancellationToken)](code-application.md#m-fec6a8dfa150).
 
@@ -173,7 +173,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:130](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [SaveThirdPartyPriceLevelAsync:1278](code-desktop.md#src-974d69a1850f)
+Construction sites: [SaveThirdPartyPriceLevelAsync:1402](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(SetThirdPartyPriceLevelCommand,CommandEnvelope&lt;SetThirdPartyPriceLevelCommand&gt;,CancellationToken)](code-application.md#m-e177b1388efc).
 
@@ -213,7 +213,7 @@ Handler: [ThirdPartyCommandHandler](code-application.md#src-b2b033d6711b). Resul
 
 Declaration: [ThirdPartyCommands.cs:90](code-application.md#src-29524979389b). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [ConfirmSaveThirdPartyAsync:1429](code-desktop.md#src-974d69a1850f)
+Construction sites: [ConfirmSaveThirdPartyAsync:1769](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ThirdPartyCommandHandler.HandleAsync(UpdateThirdPartyCommand,CommandEnvelope&lt;UpdateThirdPartyCommand&gt;,CancellationToken)](code-application.md#m-da62f735756b).
 

@@ -63,9 +63,9 @@ Declarations: <code>CompactDateField : UserControl</code> (line 13), <code>Simpl
 
 ## DataTableContracts.cs {#src-61f9fc3ef974}
 
-<code>Software/src/GetSeek.UI.Components/Controls/DataTableContracts.cs</code> · 133 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/DataTableContracts.cs</code> · 135 lines.
 
-SHA-256: <code>ae22600bad719e26cfee924021d86d732cb0a16a305f640b3a3901b018149656</code>.
+SHA-256: <code>9103ac3afb3d24b4d5eba3567dc5503162eb24e056101055339c1f8bbb18ffab</code>.
 
 Declarations: <code>IDataTableState : INotifyPropertyChanged</code> (line 11), <code>DataTableCellStyle</code> (line 33), <code>DataTableColumnDescriptor</code> (line 46), <code>DataTableActionDescriptor</code> (line 69), <code>DataTableToolbarActionDescriptor</code> (line 78), <code>DataTableToolbarControlDescriptor</code> (line 91), <code>DataTableDefinition</code> (line 99).
 
@@ -144,9 +144,9 @@ Declarations: <code>ModalActionBar : Panel</code> (line 12), <code>ActionRow</co
 
 ## ModalLayers.cs {#src-f9ded22b3dcb}
 
-<code>Software/src/GetSeek.UI.Components/Controls/ModalLayers.cs</code> · 76 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/ModalLayers.cs</code> · 78 lines.
 
-SHA-256: <code>9afee3536492e24813661038348f8e115a226e267112777cb7e278c3cdf51142</code>.
+SHA-256: <code>23d5581ef1926c19b01c0f75942d71dfd2872a37c5dd039f89f9989b31bf54f2</code>.
 
 Declarations: <code>ModalLayers</code> (line 4).
 
@@ -252,9 +252,9 @@ Declarations: <code>SearchOption</code> (line 7).
 
 ## SharedDataTable.axaml.cs {#src-122906318cb3}
 
-<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml.cs</code> · 643 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/SharedDataTable.axaml.cs</code> · 644 lines.
 
-SHA-256: <code>4a59a32d8e8346dfeb895f3a8c363781707f9c02c44a41ca6d0fe80a7e316ce5</code>.
+SHA-256: <code>5ea1636b176fc05962a225156c426572d8553ec27fdcaf76d356b95c86d1d850</code>.
 
 Declarations: <code>SharedDataTable : UserControl</code> (line 19).
 
@@ -266,30 +266,30 @@ Declarations: <code>SharedDataTable : UserControl</code> (line 19).
 | <span id="m-f01cb2621b9d"></span><code>SharedDataTable.OnPropertyChanged(AvaloniaPropertyChangedEventArgs)</code><br>49–58 | OnPropertyChanged @51; DetachDefinition @54; GetNewValue(DataTableDefinition?) @55; Rebuild @56 | No extracted literal effects. |
 | <span id="m-c1ea919de656"></span><code>SharedDataTable.Rebuild()</code><br>60–119 | Clear @65; Clear @66; DetachDefinition @74; BuildHeader @81; Add @91; BuildRow @91; Invoke @112 | No extracted literal effects. |
 | <span id="m-dfda2ba5a342"></span><code>SharedDataTable.BuildHeader(DataTableDefinition)</code><br>121–225 | GetTableColumnDefinitions @126; GetSelectablePageIds @133; All @134; Any @135; SetTip @143; Invoke @143; SetPageSelection @144; SetColumn @145; Add @146; CreateHorizontalViewport @150; CreateDataGrid @152; ToArray @152; Where @152; Select @153; HeaderText @160; Max @162; HeaderAction @169; SortHeaderText @176; ToggleSort @184; Count @205; Take @205; Add @211; Add @224 | No extracted literal effects. |
-| <span id="m-c082c77c3bcb"></span><code>SharedDataTable.GetTableColumnDefinitions(DataTableDefinition)</code><br>227–239 | Where @236; ToString @237; Max @237 | No extracted literal effects. |
-| <span id="m-3335fa4cf083"></span><code>SharedDataTable.SelectionGlyph(bool?)</code><br>241–246 | — | No extracted literal effects. |
-| <span id="m-cb3e8ecbe847"></span><code>SharedDataTable.GetSelectablePageIds(DataTableDefinition)</code><br>248–254 | ToArray @249; Distinct @249; Where @249; Select @249; Where @249; Invoke @250; IsNullOrWhiteSpace @252 | No extracted literal effects. |
-| <span id="m-b6ffbf0aa033"></span><code>SharedDataTable.SortHeaderText(IDataTableState,DataTableColumnDescriptor)</code><br>256–261 | Equals @258; HeaderText @259 | No extracted literal effects. |
-| <span id="m-314984e0edef"></span><code>SharedDataTable.HeaderText(DataTableColumnDescriptor)</code><br>263–263 | Invoke @263 | No extracted literal effects. |
-| <span id="m-b98b61a3792f"></span><code>SharedDataTable.BuildRow(DataTableDefinition,object,int)</code><br>265–435 | GetTableColumnDefinitions @270; Invoke @278; RowIdSelector @279; IsRowSelected @283; SelectRow @288; SetColumn @289; Add @290; CreateHorizontalViewport @294; CreateDataGrid @295; ToArray @295; Where @295; Select @296; StyleClass @316; Add @327; SetTip @328; Count @331; Take @331; BeginRowActivation @333; TrackRowActivation @334; EndRowActivation @335; Add @340; Add @345; IsInteractiveSource @359; Post @362; Any(Control) @364; OfType(Control) @364; GetVisualDescendants @364; Remove @366; Add @380; CanExecute @385; Open @397; Add @398; Where(Control) @424 | No extracted literal effects. |
-| <span id="m-472735eeacea"></span><code>SharedDataTable.StyleClass(DataTableCellStyle)</code><br>437–447 | — | No extracted literal effects. |
-| <span id="m-ba8e0c420355"></span><code>SharedDataTable.CreateDataGrid(IReadOnlyList&lt;DataTableColumnDescriptor&gt;)</code><br>449–460 | Add @454; Max @454 | No extracted literal effects. |
-| <span id="m-c21ff5be850e"></span><code>SharedDataTable.CreateHorizontalViewport()</code><br>462–484 | SetDataGridWidth @473; BeginHorizontalPan @474; ContinueHorizontalPan @475; EndHorizontalPan @476; ClearHorizontalPan @480; Add @482 | No extracted literal effects. |
-| <span id="m-d9569dde0709"></span><code>SharedDataTable.BeginHorizontalPan(ScrollViewer,PointerPressedEventArgs)</code><br>486–496 | GetCurrentPoint @489; IsInteractiveSource @490; GetPosition @494 | No extracted literal effects. |
-| <span id="m-4f614851a979"></span><code>SharedDataTable.ContinueHorizontalPan(ScrollViewer,PointerEventArgs)</code><br>498–523 | GetPosition @502; Abs @508; ClearHorizontalPan @510; Capture @516; Clamp @520; Max @520 | No extracted literal effects. |
-| <span id="m-3c0e058b50fd"></span><code>SharedDataTable.EndHorizontalPan(ScrollViewer,PointerReleasedEventArgs)</code><br>525–533 | ClearHorizontalPan @530 | No extracted literal effects. |
-| <span id="m-118aba6c6b32"></span><code>SharedDataTable.ClearHorizontalPan()</code><br>535–544 | Capture @543 | No extracted literal effects. |
-| <span id="m-e046b7286fc3"></span><code>SharedDataTable.IsInteractiveSource(object?,ScrollViewer)</code><br>546–558 | GetVisualParent @549; Contains @552 | No extracted literal effects. |
-| <span id="m-2aa86e6673df"></span><code>SharedDataTable.SetDataGridWidth(ScrollViewer)</code><br>560–565 | Sum @563; Max @563 | No extracted literal effects. |
-| <span id="m-8739eeca8dba"></span><code>SharedDataTable.OnHorizontalScrollChanged(object?,ScrollChangedEventArgs)</code><br>567–580 | ReferenceEquals @575 | No extracted literal effects. |
-| <span id="m-bbb4830d615c"></span><code>SharedDataTable.BeginRowActivation(object,ScrollViewer,PointerPressedEventArgs)</code><br>586–595 | IsInteractiveSource @589; Invoke @590; CanExecute @591; GetPosition @593 | No extracted literal effects. |
-| <span id="m-d837f3e5e125"></span><code>SharedDataTable.TrackRowActivation(PointerEventArgs)</code><br>597–605 | GetPosition @600 | No extracted literal effects. |
-| <span id="m-f81e53710441"></span><code>SharedDataTable.EndRowActivation(DataTableDefinition,object,PointerReleasedEventArgs)</code><br>607–615 | TrackRowActivation @610; Invoke @613; CanExecute @613; Execute @614 | No extracted literal effects. |
-| <span id="m-47e43ddd8426"></span><code>SharedDataTable.OnPageSizeChanged(object?,SelectionChangedEventArgs)</code><br>617–621 | — | No extracted literal effects. |
-| <span id="m-207fc55c8c55"></span><code>SharedDataTable.OnStateChanged(object?,System.ComponentModel.PropertyChangedEventArgs)</code><br>623–623 | QueueRebuild @623 | No extracted literal effects. |
-| <span id="m-551e305344e8"></span><code>SharedDataTable.OnRowsChanged(object?,NotifyCollectionChangedEventArgs)</code><br>624–624 | QueueRebuild @624 | No extracted literal effects. |
-| <span id="m-ba718a6a0101"></span><code>SharedDataTable.QueueRebuild()</code><br>626–635 | Post @630; Rebuild @633 | No extracted literal effects. |
-| <span id="m-1a5715a25395"></span><code>SharedDataTable.DetachDefinition(DataTableDefinition?)</code><br>637–642 | — | No extracted literal effects. |
+| <span id="m-c082c77c3bcb"></span><code>SharedDataTable.GetTableColumnDefinitions(DataTableDefinition)</code><br>227–240 | Where @237; ToString @238; Max @238 | No extracted literal effects. |
+| <span id="m-cfe23370c612"></span><code>SharedDataTable.SelectionGlyph(bool?)</code><br>242–247 | — | No extracted literal effects. |
+| <span id="m-8ca19f220740"></span><code>SharedDataTable.GetSelectablePageIds(DataTableDefinition)</code><br>249–255 | ToArray @250; Distinct @250; Where @250; Select @250; Where @250; Invoke @251; IsNullOrWhiteSpace @253 | No extracted literal effects. |
+| <span id="m-3ca252d2d75a"></span><code>SharedDataTable.SortHeaderText(IDataTableState,DataTableColumnDescriptor)</code><br>257–262 | Equals @259; HeaderText @260 | No extracted literal effects. |
+| <span id="m-d00c83ff992a"></span><code>SharedDataTable.HeaderText(DataTableColumnDescriptor)</code><br>264–264 | Invoke @264 | No extracted literal effects. |
+| <span id="m-408eda0fc166"></span><code>SharedDataTable.BuildRow(DataTableDefinition,object,int)</code><br>266–436 | GetTableColumnDefinitions @271; Invoke @279; RowIdSelector @280; IsRowSelected @284; SelectRow @289; SetColumn @290; Add @291; CreateHorizontalViewport @295; CreateDataGrid @296; ToArray @296; Where @296; Select @297; StyleClass @317; Add @328; SetTip @329; Count @332; Take @332; BeginRowActivation @334; TrackRowActivation @335; EndRowActivation @336; Add @341; Add @346; IsInteractiveSource @360; Post @363; Any(Control) @365; OfType(Control) @365; GetVisualDescendants @365; Remove @367; Add @381; CanExecute @386; Open @398; Add @399; Where(Control) @425 | No extracted literal effects. |
+| <span id="m-df6e02cb452f"></span><code>SharedDataTable.StyleClass(DataTableCellStyle)</code><br>438–448 | — | No extracted literal effects. |
+| <span id="m-66c5bf598f87"></span><code>SharedDataTable.CreateDataGrid(IReadOnlyList&lt;DataTableColumnDescriptor&gt;)</code><br>450–461 | Add @455; Max @455 | No extracted literal effects. |
+| <span id="m-0940ca5fc14a"></span><code>SharedDataTable.CreateHorizontalViewport()</code><br>463–485 | SetDataGridWidth @474; BeginHorizontalPan @475; ContinueHorizontalPan @476; EndHorizontalPan @477; ClearHorizontalPan @481; Add @483 | No extracted literal effects. |
+| <span id="m-b276a21af736"></span><code>SharedDataTable.BeginHorizontalPan(ScrollViewer,PointerPressedEventArgs)</code><br>487–497 | GetCurrentPoint @490; IsInteractiveSource @491; GetPosition @495 | No extracted literal effects. |
+| <span id="m-9d8ff32ec0ab"></span><code>SharedDataTable.ContinueHorizontalPan(ScrollViewer,PointerEventArgs)</code><br>499–524 | GetPosition @503; Abs @509; ClearHorizontalPan @511; Capture @517; Clamp @521; Max @521 | No extracted literal effects. |
+| <span id="m-2e83e20779d6"></span><code>SharedDataTable.EndHorizontalPan(ScrollViewer,PointerReleasedEventArgs)</code><br>526–534 | ClearHorizontalPan @531 | No extracted literal effects. |
+| <span id="m-c98d1ed7f31d"></span><code>SharedDataTable.ClearHorizontalPan()</code><br>536–545 | Capture @544 | No extracted literal effects. |
+| <span id="m-a9ea6e9203e4"></span><code>SharedDataTable.IsInteractiveSource(object?,ScrollViewer)</code><br>547–559 | GetVisualParent @550; Contains @553 | No extracted literal effects. |
+| <span id="m-699d86ef37a3"></span><code>SharedDataTable.SetDataGridWidth(ScrollViewer)</code><br>561–566 | Sum @564; Max @564 | No extracted literal effects. |
+| <span id="m-5eef7f9e03b2"></span><code>SharedDataTable.OnHorizontalScrollChanged(object?,ScrollChangedEventArgs)</code><br>568–581 | ReferenceEquals @576 | No extracted literal effects. |
+| <span id="m-1d9e0f4bc9df"></span><code>SharedDataTable.BeginRowActivation(object,ScrollViewer,PointerPressedEventArgs)</code><br>587–596 | IsInteractiveSource @590; Invoke @591; CanExecute @592; GetPosition @594 | No extracted literal effects. |
+| <span id="m-55699f6aed22"></span><code>SharedDataTable.TrackRowActivation(PointerEventArgs)</code><br>598–606 | GetPosition @601 | No extracted literal effects. |
+| <span id="m-7153b1937345"></span><code>SharedDataTable.EndRowActivation(DataTableDefinition,object,PointerReleasedEventArgs)</code><br>608–616 | TrackRowActivation @611; Invoke @614; CanExecute @614; Execute @615 | No extracted literal effects. |
+| <span id="m-d7480520e731"></span><code>SharedDataTable.OnPageSizeChanged(object?,SelectionChangedEventArgs)</code><br>618–622 | — | No extracted literal effects. |
+| <span id="m-034b1f8bd57a"></span><code>SharedDataTable.OnStateChanged(object?,System.ComponentModel.PropertyChangedEventArgs)</code><br>624–624 | QueueRebuild @624 | No extracted literal effects. |
+| <span id="m-4e8bbf9982a1"></span><code>SharedDataTable.OnRowsChanged(object?,NotifyCollectionChangedEventArgs)</code><br>625–625 | QueueRebuild @625 | No extracted literal effects. |
+| <span id="m-d5c987b1e914"></span><code>SharedDataTable.QueueRebuild()</code><br>627–636 | Post @631; Rebuild @634 | No extracted literal effects. |
+| <span id="m-57b8c9801705"></span><code>SharedDataTable.DetachDefinition(DataTableDefinition?)</code><br>638–643 | — | No extracted literal effects. |
 
 </details>
 
@@ -338,24 +338,25 @@ Declarations: <code>StatusBadgePill : UserControl</code> (line 7).
 
 ## TouchKeyboardControl.axaml.cs {#src-005a919ff1b2}
 
-<code>Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml.cs</code> · 322 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml.cs</code> · 380 lines.
 
-SHA-256: <code>01d53c33967ec3c1403164cea91257ffb424a8c874acd20cfdd595ca36b2994c</code>.
+SHA-256: <code>91ffb185617930dbe7012b70209f8ab5814b174202eea4c3c96e34bfbfda98c2</code>.
 
-Declarations: <code>TouchKeyboardControl : UserControl</code> (line 10).
+Declarations: <code>TouchKeyboardControl : UserControl</code> (line 11).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (7)</summary>
+<summary>Methods, calls, table effects and failures (8)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-f5f4b33f0b79"></span><code>TouchKeyboardControl.WireHeaderEvents()</code><br>138–145 | FindControl(Button) @140; Invoke @141; CycleLayout @144 | No extracted literal effects. |
-| <span id="m-54921c23fbf7"></span><code>TouchKeyboardControl.CycleLayout()</code><br>147–152 | GetNextLayout @149; Invoke @151 | No extracted literal effects. |
-| <span id="m-a48053b9c390"></span><code>TouchKeyboardControl.SetLayout(string)</code><br>154–157 | — | No extracted literal effects. |
-| <span id="m-6e0092076936"></span><code>TouchKeyboardControl.RebuildKeyboard()</code><br>159–281 | Resolve @161; Clear @164; FindControl(StackPanel) @166; Clear @174; Clear @175; Clear @176; Clear @177; Add @184; CreateKeyButton @184; Parse @193; Invoke @195; Add @203; Add @212; Parse @234; ToggleShift @236; Add @237; UpdateKeyCaptions @280 | No extracted literal effects. |
-| <span id="m-6a9ed7743249"></span><code>TouchKeyboardControl.CreateKeyButton(TouchKeyDef)</code><br>283–301 | GetDisplayText @287; Parse @290; GetEmittedText @295; Invoke @296; Add @299 | No extracted literal effects. |
-| <span id="m-55fa90b8db3c"></span><code>TouchKeyboardControl.ToggleShift()</code><br>303–313 | Parse @309; UpdateKeyCaptions @312 | No extracted literal effects. |
-| <span id="m-1552ce56ec51"></span><code>TouchKeyboardControl.UpdateKeyCaptions()</code><br>315–321 | GetDisplayText @319 | No extracted literal effects. |
+| <span id="m-5b36bd4a9a74"></span><code>TouchKeyboardControl.UpdateHeaderClearText()</code><br>170–177 | FindControl(TextBlock) @172; IsNullOrWhiteSpace @175 | No extracted literal effects. |
+| <span id="m-56ee6ae699b9"></span><code>TouchKeyboardControl.WireHeaderAndNumpadEvents()</code><br>179–210 | FindControl(Button) @181; Invoke @182; CycleLayout @185; FindControl(Border) @196; AddHandler @199; Contains @201; Invoke @204 | No extracted literal effects. |
+| <span id="m-63f67a232c6f"></span><code>TouchKeyboardControl.CycleLayout()</code><br>212–217 | GetNextLayout @214; Invoke @216 | No extracted literal effects. |
+| <span id="m-73901a6fb24b"></span><code>TouchKeyboardControl.SetLayout(string)</code><br>219–222 | — | No extracted literal effects. |
+| <span id="m-a55970cb5e1e"></span><code>TouchKeyboardControl.RebuildKeyboard()</code><br>224–339 | Resolve @226; UpdateHeaderClearText @228; Clear @230; FindControl(StackPanel) @232; Clear @240; Clear @241; Clear @242; Clear @243; Add @250; CreateKeyButton @250; Parse @260; Invoke @262; Add @270; Parse @293; ToggleShift @295; Add @296; Add @311; UpdateKeyCaptions @338 | No extracted literal effects. |
+| <span id="m-5e4819b4e874"></span><code>TouchKeyboardControl.CreateKeyButton(TouchKeyDef)</code><br>341–359 | GetDisplayText @345; Parse @348; GetEmittedText @353; Invoke @354; Add @357 | No extracted literal effects. |
+| <span id="m-17fef45e0d2e"></span><code>TouchKeyboardControl.ToggleShift()</code><br>361–371 | Parse @367; UpdateKeyCaptions @370 | No extracted literal effects. |
+| <span id="m-0ee8511b7bfa"></span><code>TouchKeyboardControl.UpdateKeyCaptions()</code><br>373–379 | GetDisplayText @377 | No extracted literal effects. |
 
 </details>
 
@@ -564,11 +565,11 @@ Declarations: <code>UnicodeTextHelper</code> (line 12).
 
 ### TouchKeyboardControl.axaml {#src-a34470da23bf}
 
-<code>Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml</code> · 106 lines · SHA-256 <code>8bafcf84e644ae1953050d33cd3e76511738e651610fb63124c70d09c7f3b14a</code>.
+<code>Software/src/GetSeek.UI.Components/Controls/TouchKeyboardControl.axaml</code> · 172 lines · SHA-256 <code>0853093d22d4b893af573ce0724dca621e16d20e8c2d5281375d6b2099c974d5</code>.
 
 ### TouchNumpadControl.axaml {#src-e3b723f73928}
 
-<code>Software/src/GetSeek.UI.Components/Controls/TouchNumpadControl.axaml</code> · 117 lines · SHA-256 <code>c0881866e933ead04810b89bff3e2020f1ea9a848ebd40c9254bc6b2fa6b5cc3</code>.
+<code>Software/src/GetSeek.UI.Components/Controls/TouchNumpadControl.axaml</code> · 129 lines · SHA-256 <code>8929fdbe425444f686069cd8bfe952184037a0dfcdaa76e287cf4485b39b58a0</code>.
 
 ### WorkspaceFilterBar.axaml {#src-a4e0d8950520}
 

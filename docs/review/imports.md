@@ -4,14 +4,16 @@ revision: "1.0"
 status: DRAFT
 reviewed_on: "2026-10-20"
 evidence: ["E-015"]
-features: ["PP-F014"]
+features: ["PP-F014", "PP-F013"]
 ---
 
 # Product and third-party imports
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Feature coverage: PP-F014. Source: [ImportProductsCommandHandler.cs:1](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.cs:1](code-application.md#src-7bb9c4e66dce).
+Feature coverage: PP-F014, PP-F013. Source: [ImportProductsCommandHandler.cs:1](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.cs:1](code-application.md#src-7bb9c4e66dce), [MainViewModel.cs:1](code-desktop.md#src-16497b924a99), [MainViewModel.ImportReview.cs:1](code-desktop.md#src-90113acc8bd5), [MainViewModel.ThirdPartyImport.cs:1](code-desktop.md#src-63148b75a5e2), [ImportReviewLifecycleTests.cs:1](tests.md#src-320c3c9117d1).
+
+23 October 2026 — Patch A, E-022: 30 targeted automated tests passed. Success resets selected file, pending preview, selection, paging, issues and confirmation state for inventory and third-party imports. Cancel/replacement also clears stale backing rows. Completed XLSX download requests and persisted records are covered; actual native save dialogs were not exercised. Failed-command preview/error retention is covered. Failure XLSX generation is a separate pending patch; no Retry Import button is introduced. This is targeted verification, not owner acceptance or a full application test run.
 
 ## Step-by-step review route
 
@@ -23,6 +25,8 @@ The numbered route is a business review checklist. Branches are separate actions
 4. Submit authorized import command.
 5. Commit accepted import result and history.
 6. Review rejected rows before another import.
+7. After successful Desktop confirmation, capture completed workbook, close dialog and clear all preview backing/paged rows; keep imported records and completed download request.
+8. On command rejection, keep preview and errors for inspection; edit original workbook and choose the file again as needed.
 
 ## Command routing map
 
@@ -53,7 +57,7 @@ Handler: [ImportProductsCommandHandler](code-application.md#src-2c8d126a7c07). R
 
 Declaration: [ImportCommands.cs:53](code-application.md#src-60301a99263c). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ConfirmImportAsync:3668](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
+Construction sites: [ConfirmImportAsync:3719](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)](code-application.md#m-c862b652239a).
 

@@ -9,13 +9,13 @@
       "sources": [
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 5485,
-          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
+          "line": 5626,
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 5539,
-          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
+          "line": 5749,
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
         }
       ],
       "verification": "source-only; runtime not rerun"
@@ -50,8 +50,8 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 7997,
-          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
+          "line": 8273,
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
         }
       ],
       "verification": "source-only; runtime not rerun"

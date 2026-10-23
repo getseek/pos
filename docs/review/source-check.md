@@ -17,7 +17,7 @@ The following statements were checked against the cited code after the initial a
 
 The inspected PlaceOrderAsync handles cash and cashier-confirmed static QR/bank transfers. It explicitly rejects QRIS gateway checkout and unallocated Split Bill. A cashier-confirmed transfer is not provider confirmation.
 
-Evidence: [MainViewModel.cs:5485](code-desktop.md#src-16497b924a99), [MainViewModel.cs:5539](code-desktop.md#src-16497b924a99). Verification: **source-only; runtime not rerun**.
+Evidence: [MainViewModel.cs:5626](code-desktop.md#src-16497b924a99), [MainViewModel.cs:5749](code-desktop.md#src-16497b924a99). Verification: **source-only; runtime not rerun**.
 
 ## PP-RULE-002: Deferred invoice eligibility
 
@@ -29,7 +29,7 @@ Evidence: [SaleCommandHandler.cs:211](code-application.md#src-b90bee551ece), [Sa
 
 SqliteStoreProfileReader normalizes saved Table Service to Counter Service; the view-model toggle states Counter Service is fixed. Current Cafe checkout must be distinguished from legacy/backend order and kitchen queue code.
 
-Evidence: [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4), [MainViewModel.cs:7997](code-desktop.md#src-16497b924a99). Verification: **source-only; runtime not rerun**.
+Evidence: [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4), [MainViewModel.cs:8273](code-desktop.md#src-16497b924a99). Verification: **source-only; runtime not rerun**.
 
 ## PP-RULE-004: Expense photo preparation and storage
 

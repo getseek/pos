@@ -31,3 +31,7 @@ Reviewed 2026-10-20. This is Premium's single active findings register; historic
 Source evidence, options, implementation steps, acceptance checks and rollback considerations: `review-decisions.json`. The existing PP-DOC-003 and PP-DOC-006 are expanded by PP-REV-004 and PP-REV-006.
 
 Source-check updates (2026-10-20): `PP-RULE-010` documents exclusive tax (`TaxMode == 2`) for new carts, discounted service-charge tax share, configurable cash rounding tie rules (`even` vs `up`, migration `084_CashRoundingTieRule.sql`), removal of the unused legacy `UomConversionEngine`, and expanded floor-to-increment pricing presets (`1, 5, 10, 50, 100, 500, 1000, 5000, 10000`).
+
+## Import preview lifecycle — 23 October 2026
+
+PP-DOC-009: Successful Desktop inventory and third-party imports previously retained preview backing rows. Patch A clears preview state after success and on cancel/replacement, while preserving records and completed XLSX download requests. E-022 records 30 passing targeted tests; before the fix four new success/reset cases failed and two rejection cases passed. Failed commands retain their preview/error. Failure XLSX reporting remains pending separately. Native dialogs, actual saved downloads, real shop data and physical devices require owner checks. Pricing and import command handlers were not changed.

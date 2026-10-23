@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **146 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **148 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -181,6 +181,10 @@ Located test declarations: <code>ReceiptSelector_UsesCommittedDatabaseInvoiceAnd
 
 <code>Software/tests/GetSeek.IntegrationTests/ImportDialogsUiIntegrationTests.cs</code> · SHA-256 <code>42bc57debe921ba784d023efa2a146aeb43a0ab48f59fa7be4c7f2617f4e9d15</code>.
 
+## ImportReviewLifecycleTests.cs {#src-320c3c9117d1}
+
+<code>Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs</code> · SHA-256 <code>296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75</code>.
+
 ## InventoryAndThirdPartiesSearchIntegrationTests.cs {#src-d0fa582a0395}
 
 <code>Software/tests/GetSeek.IntegrationTests/InventoryAndThirdPartiesSearchIntegrationTests.cs</code> · SHA-256 <code>fd999a73ea1ad851f7eb1e5a730d3534fcc740dd6790ee2c7977150dc8b3c252</code>.
@@ -308,6 +312,10 @@ Located test declarations: <code>UnauthenticatedUser_EvenWithOpenShift_IsDeniedI
 ## PosChromeUiIntegrationTests.cs {#src-20e8711e527a}
 
 <code>Software/tests/GetSeek.IntegrationTests/PosChromeUiIntegrationTests.cs</code> · SHA-256 <code>ae3a65a6cc63e2ce347a737d00472e066fa3e750adc86a9c166f530738291561</code>.
+
+## PosNewLayoutSmokeTests.cs {#src-ddac716dda0e}
+
+<code>Software/tests/GetSeek.IntegrationTests/PosNewLayoutSmokeTests.cs</code> · SHA-256 <code>8bda2bc19131bc81435018a9052bd24ebfaaf19d85c21589228a72dfa169b217</code>.
 
 ## PriceOfferCommandsIntegrationTests.cs {#src-91e58da935f0}
 
@@ -627,7 +635,7 @@ Located test declarations: <code>PossibleDuplicateWarnsWithoutRejecting_AndDoesN
 
 ## TouchAndShortcutIntegrationTests.cs {#src-210552b24818}
 
-<code>Software/tests/GetSeek.IntegrationTests/TouchAndShortcutIntegrationTests.cs</code> · SHA-256 <code>4bda8079341746f990d14ec1bfe5cb26a6df2c5ba2c33c4dba21dab45220a403</code>.
+<code>Software/tests/GetSeek.IntegrationTests/TouchAndShortcutIntegrationTests.cs</code> · SHA-256 <code>97fe92043be9fe72f348f9d3c3adcca9b7848d969bafb8a90902db44a8f04483</code>.
 
 ## TraceabilityCandidateReaderTests.cs {#src-f2350f08a4d0}
 
@@ -665,7 +673,7 @@ Located test declarations: <code>GetTeamMembersAsync_UnionOfPeopleAndUnlinkedUse
 
 ## WorkspacePopupPlacementTests.cs {#src-5af19db94557}
 
-<code>Software/tests/GetSeek.IntegrationTests/WorkspacePopupPlacementTests.cs</code> · SHA-256 <code>95f2af71b1b568e0273ec19637df83797a19fb1e7c4701358849d63cc8d9a8fd</code>.
+<code>Software/tests/GetSeek.IntegrationTests/WorkspacePopupPlacementTests.cs</code> · SHA-256 <code>03a62281e9da03f3f2ad383416c90418fcded451e9f43ec7397eff85fd353807</code>.
 
 ## WorkspaceSearchBoxUiTests.cs {#src-d883f6c5025d}
 
@@ -787,7 +795,7 @@ Located test declarations: <code>BaseAmount_ShouldCalculateAccurately</code> @9,
 
 ## ReviewDecisionsResolutionUnitTests.cs {#src-3c43bbc15abd}
 
-<code>Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs</code> · SHA-256 <code>0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10</code>.
+<code>Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs</code> · SHA-256 <code>6b12b8b121b20e0142c0449a7d474940ea44a66ca136121086001fd1ca1153ab</code>.
 
 Located test declarations: <code>WorkspaceLaunchSelector_ResolvesExpectedMode_AndRejectsConflictingExplicitFlags</code> @24, <code>CommandPipeline_PreflightExceptionsBeforeTransaction_AreNormalizedWithoutRollbackAndReleaseLock</code> @57, <code>CommandPipeline_PreflightCancellation_ReturnsOperationCancelledWithoutRollback</code> @149, <code>OutputDeviceWorker_DeduplicatesContiguousPreClaimCycleErrors_AndLogsAgainAfterRecovery</code> @190.
 

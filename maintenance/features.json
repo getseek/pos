@@ -249,15 +249,34 @@
         {
           "path": "Software/src/GetSeek.Application/ThirdParties/ThirdPartyCommandHandler.cs",
           "sha256": "57ee3d94fef8d3c291d472952432320962ef53edf936f820aa97c327d5d9c494"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
+          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
+          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8"
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
+          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75"
         }
       ],
-      "source_review": "located",
-      "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "source_review": "source-reviewed",
+      "application_verification": "rerun",
+      "evidence_ids": [
+        "E-022"
+      ],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
-      "limitations": "Protected Walk-in and duplicate-import workflows need verification.",
-      "review_map": "review/parties.md"
+      "limitations": "Targeted import verification only: 24 existing tests passed before the change; 30 passed after it, including six Desktop preview lifecycle cases. Successful import clears preview while retaining imported records and requesting the completed XLSX download. Failed commands retain the preview/error. Failure XLSX reporting remains a separate pending patch. Native file dialogs, owner-run shop workflows and physical devices were not verified; operator guide remains planned.",
+      "review_map": "review/parties.md",
+      "reviewed_on": "2026-10-23"
     },
     {
       "id": "PP-F014",
@@ -267,18 +286,36 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
+          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
+          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8"
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
+          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75"
         }
       ],
       "source_review": "source-reviewed",
       "application_verification": "rerun",
       "evidence_ids": [
         "E-015",
-        "E-016"
+        "E-016",
+        "E-022"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "Workbook import integration tests rerun (24 passed); desktop file-picker and physical large-file UI flow unverified.",
-      "review_map": "review/imports.md"
+      "limitations": "Targeted import verification only: 24 existing tests passed before the change; 30 passed after it, including six Desktop preview lifecycle cases. Successful import clears preview while retaining imported records and requesting the completed XLSX download. Failed commands retain the preview/error. Failure XLSX reporting remains a separate pending patch. Native file dialogs, owner-run shop workflows and physical devices were not verified; operator guide remains planned.",
+      "review_map": "review/imports.md",
+      "reviewed_on": "2026-10-23"
     },
     {
       "id": "PP-F015",

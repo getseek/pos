@@ -464,7 +464,8 @@
       "slug": "imports",
       "title": "Product and third-party imports",
       "features": [
-        "PP-F014"
+        "PP-F014",
+        "PP-F013"
       ],
       "commands": [
         "ImportProductsCommand",
@@ -476,7 +477,9 @@
         "Resolve identity, unit and validation conflicts",
         "Submit authorized import command",
         "Commit accepted import result and history",
-        "Review rejected rows before another import"
+        "Review rejected rows before another import",
+        "After successful Desktop confirmation, capture completed workbook, close dialog and clear all preview backing/paged rows; keep imported records and completed download request",
+        "On command rejection, keep preview and errors for inspection; edit original workbook and choose the file again as needed"
       ],
       "sources": [
         {
@@ -488,8 +491,29 @@
           "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
           "line": 1,
           "sha256": "3f1ad6606847eb116c39b2c35abbc434fb04d67af26a77b916a584e10cb6970c"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
+          "sha256": "0092997d42e4f8dd19b2601011d2b9bbde7b67a5ae0b4abcff5d542dbf24d77b",
+          "line": 1
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
+          "sha256": "7c801d831c615ee4b5e5bf042c7fb7f0724afedee16f78978c398a3ae4cdbaf8",
+          "line": 1
+        },
+        {
+          "path": "Software/tests/GetSeek.IntegrationTests/ImportReviewLifecycleTests.cs",
+          "sha256": "296a48c86debb9862cd7513ea238ccbc3016343880958f43dae89fb6dfbfba75",
+          "line": 1
         }
-      ]
+      ],
+      "notes": "23 October 2026 — Patch A, E-022: 30 targeted automated tests passed. Success resets selected file, pending preview, selection, paging, issues and confirmation state for inventory and third-party imports. Cancel/replacement also clears stale backing rows. Completed XLSX download requests and persisted records are covered; actual native save dialogs were not exercised. Failed-command preview/error retention is covered. Failure XLSX generation is a separate pending patch; no Retry Import button is introduced. This is targeted verification, not owner acceptance or a full application test run."
     },
     {
       "id": "PP-MAP-TEAMS",
@@ -711,8 +735,8 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 7997,
-          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
+          "line": 8273,
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",

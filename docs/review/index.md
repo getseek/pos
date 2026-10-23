@@ -11,11 +11,11 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Use this atlas to inspect **326 application C# files, 2,141 method declarations, 172 handled command types, 137 reconstructed tables and 261 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
+Use this atlas to inspect **326 application C# files, 2,154 method declarations, 172 handled command types, 137 reconstructed tables and 261 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
 
 **Producer coverage:** 74 handled command types have no explicit construction site in this syntax snapshot. That is a connection-analysis gap, not proof of unreachable code; target-typed construction, factories and runtime dispatch need further analysis. 55 methods contain interpolated SQL requiring manual inspection.
 
-**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 472 files, including 146 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
+**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 474 files, including 148 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
 
 See [source-checked business rules](source-check.md) for corrected checkout, Cafe, attachment, expense, payroll and settings claims.
 
@@ -43,7 +43,7 @@ See [source-checked business rules](source-check.md) for corrected checkout, Caf
 | [Pricing, offers, labels and mass runs](pricing.md) | PP-F011 | 14 |
 | [Kits, BOM and production](production.md) | PP-F012 | 13 |
 | [Customers, suppliers and third parties](parties.md) | PP-F013 | 9 |
-| [Product and third-party imports](imports.md) | PP-F014 | 2 |
+| [Product and third-party imports](imports.md) | PP-F014, PP-F013 | 2 |
 | [Team membership and login access](teams.md) | PP-F015 | 2 |
 | [People, agreements and salary](salary.md) | PP-F016 | 12 |
 | [Expenses, payments and attachments](expenses.md) | PP-F017 | 11 |

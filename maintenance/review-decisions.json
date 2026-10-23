@@ -24,7 +24,7 @@
         {
           "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
           "line": 25,
-          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
+          "sha256": "6b12b8b121b20e0142c0449a7d474940ea44a66ca136121086001fd1ca1153ab"
         }
       ],
       "workflow": "workspaces",
@@ -70,7 +70,8 @@
         }
       ],
       "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace.",
-      "status": "RESOLVED (2026-10-20 · option reject)"
+      "status": "RESOLVED (2026-10-20 · option reject)",
+      "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
       "id": "PP-REV-002",
@@ -98,7 +99,7 @@
         {
           "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
           "line": 58,
-          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
+          "sha256": "6b12b8b121b20e0142c0449a7d474940ea44a66ca136121086001fd1ca1153ab"
         }
       ],
       "workflow": "checkout",
@@ -145,7 +146,8 @@
         }
       ],
       "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics.",
-      "status": "RESOLVED (2026-10-20 · option boundary)"
+      "status": "RESOLVED (2026-10-20 · option boundary)",
+      "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
       "id": "PP-REV-003",
@@ -178,7 +180,7 @@
         {
           "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
           "line": 185,
-          "sha256": "0ae93ee6aa6447e263538e70ecf8148a060f69ae946b6dfec201da63b5f96d10"
+          "sha256": "6b12b8b121b20e0142c0449a7d474940ea44a66ca136121086001fd1ca1153ab"
         }
       ],
       "workflow": "output",
@@ -225,7 +227,8 @@
         }
       ],
       "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling.",
-      "status": "RESOLVED (2026-10-20 · option log)"
+      "status": "RESOLVED (2026-10-20 · option log)",
+      "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
       "id": "PP-REV-004",
@@ -511,8 +514,8 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "line": 7997,
-          "sha256": "3427d304a1178284fe351966e1e4926483cf2ca6bf61d194cb5c0bc604a55766"
+          "line": 8273,
+          "sha256": "d89d72855cdd7ab59eff3ede2a8a70f2e9a1576597f5f227d68b9755f168a60b"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

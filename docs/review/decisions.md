@@ -479,7 +479,7 @@ Rollback consideration: Documentation-only classification moves no data. Future 
 
 SendOrderToKitchenCommand records SentToKitchen and enqueues KitchenTicket. Cancellation can enqueue KitchenTicketCancel. OutputDeviceWorker.ClaimAsync selects only ReceiptPrint, DrawerKick and ShelfLabelPrint. The source search found no other kitchen-ticket consumer under Software/src. Queueing a kitchen ticket therefore does not establish a bundled kitchen-print route. The current Cafe UI uses pay-now Counter Service; backend/legacy order handlers must be documented separately.
 
-Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:254](code-infrastructure.md#src-64d2e3097e9f), [MainViewModel.cs:7997](code-desktop.md#src-16497b924a99), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4). [Workflow map](orders.md).
+Evidence: [RestaurantOrderCommandHandler.cs:194](code-application.md#src-b930bdf2056c), [RestaurantOrderCommandHandler.cs:280](code-application.md#src-b930bdf2056c), [OutputDeviceWorker.cs:254](code-infrastructure.md#src-64d2e3097e9f), [MainViewModel.cs:8273](code-desktop.md#src-16497b924a99), [SqliteProductionReaders.cs:77](code-infrastructure.md#src-212da8ad4eb4). [Workflow map](orders.md).
 
 <section class="review-choice" data-review-id="PP-REV-008" data-review-title="Kitchen ticket producers have no bundled worker claim route">
 <label for="choice-PP-REV-008">Review choice for PP-REV-008</label>

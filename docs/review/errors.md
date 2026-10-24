@@ -120,15 +120,15 @@ This catalogue contains **388 distinct uppercase literal codes** extracted from 
 | <code>IMPORT_CHILD_NOT_FOUND</code> | [ImportProductConfiguration.SaveAsync:38](code-application.md#src-14918ebf4662) |
 | <code>IMPORT_CLEAR_NOT_ALLOWED</code> | [ImportProductsCommandHandler.HandleAsync:61](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.HandleAsync:66](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:56](code-application.md#src-7bb9c4e66dce) |
 | <code>IMPORT_CURRENCY_MISMATCH</code> | [ImportProductsCommandHandler.HandleAsync:46](code-application.md#src-2c8d126a7c07) |
-| <code>IMPORT_DUPLICATE_ROW</code> | [ImportProductsCommandHandler.HandleAsync:54](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.HandleAsync:57](code-application.md#src-2c8d126a7c07) |
+| <code>IMPORT_DUPLICATE_ROW</code> | [ImportProductsCommandHandler.HandleAsync:54](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.HandleAsync:57](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.BuildOrder:346](code-application.md#src-2c8d126a7c07) |
 | <code>IMPORT_EMPTY</code> | [ImportProductsCommandHandler.HandleAsync:28](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:32](code-application.md#src-7bb9c4e66dce) |
-| <code>IMPORT_KIT_STOCK</code> | [ImportProductsCommandHandler.HandleAsync:101](code-application.md#src-2c8d126a7c07) |
-| <code>IMPORT_ORPHAN_COMPONENT</code> | [ImportProductsCommandHandler.HandleAsync:84](code-application.md#src-2c8d126a7c07) |
+| <code>IMPORT_KIT_STOCK</code> | [ImportProductsCommandHandler.HandleAsync:188](code-application.md#src-2c8d126a7c07) |
+| <code>IMPORT_ORPHAN_COMPONENT</code> | [ImportProductsCommandHandler.HandleAsync:149](code-application.md#src-2c8d126a7c07) |
 | <code>IMPORT_OUTCOME_UNKNOWN</code> | [MainViewModel.RecoverImportOutcomeAsync:104](code-desktop.md#src-969918d8254d), [MainViewModel.RecoverImportOutcomeAsync:109](code-desktop.md#src-969918d8254d), [MainViewModel.RecoverImportOutcomeAsync:112](code-desktop.md#src-969918d8254d) |
 | <code>IMPORT_PREVIEW_STALE</code> | [ImportProductsCommandHandler.HandleAsync:50](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:48](code-application.md#src-7bb9c4e66dce) |
 | <code>IMPORT_PRICE_CONFLICT</code> | [ImportProductConfiguration.PriceAsync:150](code-application.md#src-14918ebf4662) |
 | <code>IMPORT_SKU_EXISTS</code> | [ImportProductConfiguration.SaveAsync:27](code-application.md#src-14918ebf4662) |
-| <code>IMPORT_SKU_NOT_FOUND</code> | [ImportProductConfiguration.SaveAsync:28](code-application.md#src-14918ebf4662), [ImportProductsCommandHandler.HandleAsync:94](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.HandleAsync:149](code-application.md#src-2c8d126a7c07) |
+| <code>IMPORT_SKU_NOT_FOUND</code> | [ImportProductConfiguration.SaveAsync:28](code-application.md#src-14918ebf4662), [ImportProductsCommandHandler.HandleAsync:167](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.HandleAsync:269](code-application.md#src-2c8d126a7c07) |
 | <code>IMPORT_TOO_LARGE</code> | [ImportProductsCommandHandler.HandleAsync:43](code-application.md#src-2c8d126a7c07), [ImportThirdPartiesCommandHandler.HandleAsync:46](code-application.md#src-7bb9c4e66dce) |
 | <code>IMPORT_UNKNOWN_COLUMN</code> | [ImportProductsCommandHandler.HandleAsync:63](code-application.md#src-2c8d126a7c07) |
 | <code>INELIGIBLE_MOVEMENT</code> | [ExpenseCommandHandler.HandleAsync:849](code-application.md#src-c02b00854044) |
@@ -232,7 +232,7 @@ This catalogue contains **388 distinct uppercase literal codes** extracted from 
 | <code>ITEM_NOT_TRACKED</code> | [InventoryCommandHandler.HandleAsync:197](code-application.md#src-43bee33cf642), [InventoryCommandHandler.HandleAsync:503](code-application.md#src-43bee33cf642) |
 | <code>KIT_ALERT_RESOLUTION_INVALID</code> | [ResolveKitPriceAlertCommandHandler.HandleAsync:20](code-application.md#src-4faee8fa1e75) |
 | <code>KIT_ALERT_STALE</code> | [ResolveKitPriceAlertCommandHandler.HandleAsync:32](code-application.md#src-4faee8fa1e75) |
-| <code>KIT_CYCLE_DETECTED</code> | [ImportProductsCommandHandler.HandleAsync:75](code-application.md#src-2c8d126a7c07) |
+| <code>KIT_CYCLE_DETECTED</code> | [ImportProductsCommandHandler.BuildOrder:369](code-application.md#src-2c8d126a7c07), [ImportProductsCommandHandler.BuildOrder:410](code-application.md#src-2c8d126a7c07) |
 | <code>KIT_ITEM_CANNOT_BE_TRACKED</code> | [CatalogCommandHandler.HandleAsync:399](code-application.md#src-c2d3294fc0a7) |
 | <code>KIT_NOT_FOUND</code> | [SaveProductConfigurationCommandHandler.HandleAsync:78](code-application.md#src-c24b9e05b3b2) |
 | <code>KIT_PARENT_MUST_BE_UNTRACKED</code> | [ManufacturingCommandHandler.CreateOrUpdateKitInternalAsync:1206](code-application.md#src-e469f680f9bb) |
@@ -377,7 +377,7 @@ This catalogue contains **388 distinct uppercase literal codes** extracted from 
 | <code>SUBSTITUTION_NOT_NEEDED</code> | [ShippingCommandHandler.HandleAsync:236](code-application.md#src-4772ecb3181e) |
 | <code>SUPERVISOR_ELEVATION_REQUIRED</code> | [ShiftCommandHandler.HandleAsync:387](code-application.md#src-6edc723e3676) |
 | <code>SUPPLIER_INACTIVE</code> | [InventoryCommandHandler.HandleAsync:59](code-application.md#src-43bee33cf642) |
-| <code>SUPPLIER_NOT_FOUND</code> | [SupplierCommandHandler.HandleAsync:125](code-application.md#src-2bdfe6e3c46f), [SupplierCommandHandler.HandleAsync:211](code-application.md#src-2bdfe6e3c46f), [ImportProductsCommandHandler.HandleAsync:106](code-application.md#src-2c8d126a7c07), [InventoryCommandHandler.HandleAsync:55](code-application.md#src-43bee33cf642) |
+| <code>SUPPLIER_NOT_FOUND</code> | [SupplierCommandHandler.HandleAsync:125](code-application.md#src-2bdfe6e3c46f), [SupplierCommandHandler.HandleAsync:211](code-application.md#src-2bdfe6e3c46f), [ImportProductsCommandHandler.HandleAsync:206](code-application.md#src-2c8d126a7c07), [InventoryCommandHandler.HandleAsync:55](code-application.md#src-43bee33cf642) |
 | <code>SYSTEM_TRANSACTION_ERROR</code> | [CommandPipeline.ExecuteAsync:272](code-application.md#src-b29270acda74) |
 | <code>SYSTEM_WALK_IN_PROTECTED</code> | [BatchCommandHandler.HandleAsync:140](code-application.md#src-c097cf593496), [BatchCommandHandler.HandleAsync:168](code-application.md#src-c097cf593496), [BatchCommandHandler.HandleAsync:195](code-application.md#src-c097cf593496), [CustomerCommandHandler.HandleAsync:142](code-application.md#src-21df28594271), [CustomerCommandHandler.HandleAsync:232](code-application.md#src-21df28594271), [CustomerCommandHandler.HandleAsync:274](code-application.md#src-21df28594271), [ImportThirdPartiesCommandHandler.HandleAsync:151](code-application.md#src-7bb9c4e66dce), [ThirdPartyCommandHandler.HandleAsync:179](code-application.md#src-b2b033d6711b), [ThirdPartyCommandHandler.HandleAsync:298](code-application.md#src-b2b033d6711b), [ThirdPartyCommandHandler.HandleAsync:369](code-application.md#src-b2b033d6711b) |
 | <code>TENDER_AMOUNT_MISMATCH</code> | [SaleCommandHandler.IssueAsync:506](code-application.md#src-b90bee551ece) |

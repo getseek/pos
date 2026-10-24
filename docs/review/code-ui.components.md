@@ -437,14 +437,14 @@ Declarations: <code>WorkspaceHeader : UserControl</code> (line 8).
 
 ## WorkspaceOverlayHost.cs {#src-c4be2419c9fd}
 
-<code>Software/src/GetSeek.UI.Components/Controls/WorkspaceOverlayHost.cs</code> · 262 lines.
+<code>Software/src/GetSeek.UI.Components/Controls/WorkspaceOverlayHost.cs</code> · 312 lines.
 
-SHA-256: <code>1dd81eb4b904a18d8aa071e1e4fecf40fd133156469e4c2c39efdf37c12343ea</code>.
+SHA-256: <code>9369b8ab1be828287326fbe56e38f25da3cda85b16aa4be40c9585091319bafc</code>.
 
-Declarations: <code>WorkspaceOverlayHost : Panel</code> (line 12), <code>PopupConstraintRegistration : IDisposable</code> (line 116), <code>Geometry</code> (line 261).
+Declarations: <code>WorkspaceOverlayHost : Panel</code> (line 12), <code>PopupConstraintRegistration : IDisposable</code> (line 116), <code>Geometry</code> (line 311).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (15)</summary>
+<summary>Methods, calls, table effects and failures (16)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
@@ -452,17 +452,18 @@ Declarations: <code>WorkspaceOverlayHost : Panel</code> (line 12), <code>PopupCo
 | <span id="m-4ca64f9e0c54"></span><code>WorkspaceOverlayHost.UpdateFocus()</code><br>61–85 | FirstOrDefault @64; OrderByDescending @64; Where @64; Reverse @64; GetIsDialogSurface @64; ReferenceEquals @66; Remove @69; Contains @71; GetVisualDescendants @71; Focus @73; Focus @79; FirstOrDefault(Control) @82; OfType(Control) @82; GetVisualDescendants @82; Focus @84 | No extracted literal effects. |
 | <span id="m-c2d4cd37c6b3"></span><code>WorkspaceOverlayHost.ConstrainPopup(Popup)</code><br>88–103 | ThrowIfNull @90; TryGetValue @94; Dispose @96 | No extracted literal effects. |
 | <span id="m-0ab65c863bb1"></span><code>WorkspaceOverlayHost.UnregisterConstraint(Popup,PopupConstraintRegistration)</code><br>105–114 | TryGetValue @109; ReferenceEquals @109; Remove @111 | No extracted literal effects. |
-| <span id="m-3c4812ac7682"></span><code>PopupConstraintRegistration.OnCustomPlacement(CustomPopupPlacement)</code><br>149–156 | CalculatePopupAnchor @152 | No extracted literal effects. |
-| <span id="m-632801f18974"></span><code>PopupConstraintRegistration.OnPopupOpened(object?,EventArgs)</code><br>158–162 | ClampChild @161 | No extracted literal effects. |
-| <span id="m-2662c3b39d60"></span><code>PopupConstraintRegistration.OnHostSizeChanged(object?,SizeChangedEventArgs)</code><br>164–174 | ClampChild @167 | No extracted literal effects. |
-| <span id="m-22f33ba1ff22"></span><code>PopupConstraintRegistration.ClampChild()</code><br>176–183 | Max @180 | No extracted literal effects. |
-| <span id="m-0ec886c15ace"></span><code>PopupConstraintRegistration.Dispose()</code><br>185–201 | Exchange @187; ReferenceEquals @193; UnregisterConstraint @199; SuppressFinalize @200 | No extracted literal effects. |
-| <span id="m-e2e64c38f733"></span><code>WorkspaceOverlayHost.CalculatePopupAnchor(Visual,Size)</code><br>204–212 | TranslatePoint @206; Clamp @207; Max @208 | No extracted literal effects. |
-| <span id="m-633bf9eaf3b8"></span><code>WorkspaceOverlayHost.GetIsDialogSurface(Control)</code><br>214–214 | GetValue @214 | No extracted literal effects. |
-| <span id="m-60dcb7163d58"></span><code>WorkspaceOverlayHost.SetIsDialogSurface(Control,bool)</code><br>215–215 | SetValue @215 | No extracted literal effects. |
-| <span id="m-a8250a0313a0"></span><code>WorkspaceOverlayHost.MeasureOverride(Size)</code><br>217–232 | Where @220; GetIsDialogSurface @220; ClampSurface @222; Measure @223; Max @224; Where(Control) @227; OfType(Control) @227; GetVisualDescendants @227; Contains @229; MeasureOverride @231 | No extracted literal effects. |
-| <span id="m-abebca086f19"></span><code>WorkspaceOverlayHost.ArrangeOverride(Size)</code><br>234–241 | ArrangeOverride @236; Where @238; GetIsDialogSurface @238; Arrange @239; Max @239 | No extracted literal effects. |
-| <span id="m-bb9e2d2b8319"></span><code>WorkspaceOverlayHost.ClampSurface(Control,Size)</code><br>243–259 | TryGetValue @245; Add @248; Max @250; SetCurrentValue @253; Min @254; IsNaN @255 | No extracted literal effects. |
+| <span id="m-3c4812ac7682"></span><code>PopupConstraintRegistration.OnCustomPlacement(CustomPopupPlacement)</code><br>149–167 | ClampChild @152; ResolveEffectivePopupSize @153; CalculatePopupAnchor @154; GetTopLevel @155; TranslatePoint @156 | No extracted literal effects. |
+| <span id="m-f4c61fba6865"></span><code>PopupConstraintRegistration.ResolveEffectivePopupSize(Size)</code><br>169–200 | IsNaN @182; Max @199 | No extracted literal effects. |
+| <span id="m-a8a194ff341a"></span><code>PopupConstraintRegistration.OnPopupOpened(object?,EventArgs)</code><br>202–206 | ClampChild @205 | No extracted literal effects. |
+| <span id="m-ec8682c40634"></span><code>PopupConstraintRegistration.OnHostSizeChanged(object?,SizeChangedEventArgs)</code><br>208–218 | ClampChild @211 | No extracted literal effects. |
+| <span id="m-be98392bc2ab"></span><code>PopupConstraintRegistration.ClampChild()</code><br>220–227 | Max @224 | No extracted literal effects. |
+| <span id="m-8cdfd9d1d442"></span><code>PopupConstraintRegistration.Dispose()</code><br>229–245 | Exchange @231; ReferenceEquals @237; UnregisterConstraint @243; SuppressFinalize @244 | No extracted literal effects. |
+| <span id="m-6b1069edfe16"></span><code>WorkspaceOverlayHost.CalculatePopupAnchor(Visual,Size)</code><br>248–262 | TranslatePoint @252; Clamp @257; Max @258 | No extracted literal effects. |
+| <span id="m-deb47801386f"></span><code>WorkspaceOverlayHost.GetIsDialogSurface(Control)</code><br>264–264 | GetValue @264 | No extracted literal effects. |
+| <span id="m-ba28cadb4edd"></span><code>WorkspaceOverlayHost.SetIsDialogSurface(Control,bool)</code><br>265–265 | SetValue @265 | No extracted literal effects. |
+| <span id="m-b2b6489e3fa1"></span><code>WorkspaceOverlayHost.MeasureOverride(Size)</code><br>267–282 | Where @270; GetIsDialogSurface @270; ClampSurface @272; Measure @273; Max @274; Where(Control) @277; OfType(Control) @277; GetVisualDescendants @277; Contains @279; MeasureOverride @281 | No extracted literal effects. |
+| <span id="m-766910970ba3"></span><code>WorkspaceOverlayHost.ArrangeOverride(Size)</code><br>284–291 | ArrangeOverride @286; Where @288; GetIsDialogSurface @288; Arrange @289; Max @289 | No extracted literal effects. |
+| <span id="m-43bbd1832b0e"></span><code>WorkspaceOverlayHost.ClampSurface(Control,Size)</code><br>293–309 | TryGetValue @295; Add @298; Max @300; SetCurrentValue @303; Min @304; IsNaN @305 | No extracted literal effects. |
 
 </details>
 

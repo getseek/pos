@@ -22276,7 +22276,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-      "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8",
+      "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -22284,7 +22284,7 @@
           "name": "ImportProductsCommandHandler",
           "kind": "ClassDeclaration",
           "line": 18,
-          "end": 193,
+          "end": 451,
           "bases": [
             "ICommandHandler<ImportProductsCommand, ImportProductsResult>"
           ],
@@ -22297,7 +22297,7 @@
           "name": "HandleAsync",
           "owner": "ImportProductsCommandHandler",
           "line": 21,
-          "end": 156,
+          "end": 293,
           "signature": "HandleAsync(ImportProductsCommand,CommandEnvelope<ImportProductsCommand>,CancellationToken)",
           "returns": "Task<CommandResult<ImportProductsResult>>",
           "parameters": [
@@ -22463,134 +22463,150 @@
               "generic_types": []
             },
             {
-              "name": "ToList",
-              "line": 71,
-              "receiver": "command.Products",
+              "name": "TryGetValue",
+              "line": 91,
+              "receiver": "tierPricesBySku",
               "generic_types": []
             },
             {
-              "name": "FirstOrDefault",
-              "line": 74,
-              "receiver": "pending",
-              "generic_types": []
-            },
-            {
-              "name": "Equals",
-              "line": 74,
-              "receiver": "c.ParentSku",
-              "generic_types": []
-            },
-            {
-              "name": "Any",
-              "line": 74,
-              "receiver": "pending",
-              "generic_types": []
-            },
-            {
-              "name": "Equals",
-              "line": 74,
-              "receiver": "other.Sku",
-              "generic_types": []
-            },
-            {
-              "name": "SaveAsync",
-              "line": 76,
-              "receiver": "configuration",
-              "generic_types": []
-            },
-            {
-              "name": "Remove",
-              "line": 80,
-              "receiver": "pending",
-              "generic_types": []
-            },
-            {
-              "name": "Any",
-              "line": 83,
-              "receiver": "command.Products",
-              "generic_types": []
-            },
-            {
-              "name": "Equals",
-              "line": 83,
-              "receiver": "p.Sku",
+              "name": "Add",
+              "line": 96,
+              "receiver": "list",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 89,
+              "line": 105,
+              "receiver": "kitComponentsByParent",
+              "generic_types": []
+            },
+            {
+              "name": "BuildOrderAsync",
+              "line": 119,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "Empty",
+              "line": 132,
+              "receiver": "Array",
+              "generic_types": [
+                "ImportKitComponent"
+              ]
+            },
+            {
+              "name": "SaveAsync",
+              "line": 133,
+              "receiver": "configuration",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 146,
+              "receiver": "productsBySku",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 162,
               "receiver": "skuToItemId",
               "generic_types": []
             },
             {
               "name": "ResolveItemIdAsync",
-              "line": 91,
+              "line": 164,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
+              "name": "TryGetValue",
+              "line": 174,
+              "receiver": "isKitByItemId",
+              "generic_types": []
+            },
+            {
               "name": "RecordAsync",
-              "line": 100,
+              "line": 176,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 100,
+              "line": 180,
               "receiver": "itemId",
               "generic_types": []
             },
             {
+              "name": "TryGetValue",
+              "line": 196,
+              "receiver": "supplierIdByCode",
+              "generic_types": []
+            },
+            {
               "name": "Parse",
-              "line": 107,
+              "line": 210,
               "receiver": "Guid",
               "generic_types": []
             },
             {
+              "name": "TryGetValue",
+              "line": 216,
+              "receiver": "itemUnitsByItemId",
+              "generic_types": []
+            },
+            {
               "name": "GetValueOrDefault",
-              "line": 110,
+              "line": 224,
               "receiver": "itemUnits",
               "generic_types": []
             },
             {
               "name": "BuildLines",
-              "line": 111,
+              "line": 229,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 132,
+              "line": 250,
               "receiver": "inventory",
               "generic_types": []
             },
             {
               "name": "Distinct",
-              "line": 144,
+              "line": 262,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
+              "name": "GetValueOrDefault",
+              "line": 273,
+              "receiver": "productsBySku",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 274,
+              "receiver": "pricingRulesBySku",
+              "generic_types": []
+            },
+            {
+              "name": "Empty",
+              "line": 277,
+              "receiver": "Array",
+              "generic_types": [
+                "ImportTierPrice"
+              ]
+            },
+            {
               "name": "PriceAsync",
-              "line": 150,
+              "line": 279,
               "receiver": "configuration",
               "generic_types": []
             },
             {
-              "name": "FirstOrDefault",
-              "line": 150,
-              "receiver": "command.Products",
-              "generic_types": []
-            },
-            {
-              "name": "FirstOrDefault",
-              "line": 151,
-              "receiver": "<expression>",
-              "generic_types": []
-            },
-            {
               "name": "Success",
-              "line": 155,
+              "line": 292,
               "receiver": "CommandResult<ImportProductsResult>",
               "generic_types": [
                 "ImportProductsResult"
@@ -22599,28 +22615,64 @@
           ],
           "creates": [
             {
+              "type": "Dictionary<string, ImportProductRow>",
+              "line": 69
+            },
+            {
+              "type": "Dictionary<string, ImportPricingRule>",
+              "line": 75
+            },
+            {
+              "type": "Dictionary<string, List<ImportTierPrice>>",
+              "line": 86
+            },
+            {
+              "type": "List<ImportTierPrice>",
+              "line": 93
+            },
+            {
+              "type": "Dictionary<string, List<ImportKitComponent>>",
+              "line": 100
+            },
+            {
+              "type": "List<ImportKitComponent>",
+              "line": 107
+            },
+            {
               "type": "ImportProductConfiguration",
-              "line": 67
+              "line": 114
             },
             {
               "type": "InventoryCommandHandler",
-              "line": 68
+              "line": 115
             },
             {
               "type": "Dictionary<string, Guid>",
-              "line": 70
+              "line": 117
+            },
+            {
+              "type": "Dictionary<Guid, bool>",
+              "line": 156
+            },
+            {
+              "type": "Dictionary<string, Guid>",
+              "line": 157
+            },
+            {
+              "type": "Dictionary<Guid, (string? DefaultPurchase, string? BaseUnit)>",
+              "line": 158
             },
             {
               "type": "ReceiveStockCommand",
-              "line": 112
+              "line": 230
             },
             {
               "type": "CommandEnvelope<ReceiveStockCommand>",
-              "line": 123
+              "line": 241
             },
             {
               "type": "ImportProductsResult",
-              "line": 155
+              "line": 292
             }
           ],
           "errors": [
@@ -22669,27 +22721,23 @@
               "code": "IMPORT_CLEAR_NOT_ALLOWED"
             },
             {
-              "line": 75,
-              "code": "KIT_CYCLE_DETECTED"
-            },
-            {
-              "line": 84,
+              "line": 149,
               "code": "IMPORT_ORPHAN_COMPONENT"
             },
             {
-              "line": 94,
+              "line": 167,
               "code": "IMPORT_SKU_NOT_FOUND"
             },
             {
-              "line": 101,
+              "line": 188,
               "code": "IMPORT_KIT_STOCK"
             },
             {
-              "line": 106,
+              "line": 206,
               "code": "SUPPLIER_NOT_FOUND"
             },
             {
-              "line": 149,
+              "line": 269,
               "code": "IMPORT_SKU_NOT_FOUND"
             }
           ],
@@ -22697,28 +22745,260 @@
             {
               "operation": "FROM",
               "table": "item_kits",
-              "line": 100
+              "line": 179
             },
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 105
+              "line": 201
             },
             {
               "operation": "FROM",
               "table": "items",
-              "line": 109
+              "line": 221
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-2bfe4424f744",
+          "id": "M-cfb69b731676",
+          "name": "BuildOrderAsync",
+          "owner": "ImportProductsCommandHandler",
+          "line": 295,
+          "end": 320,
+          "signature": "BuildOrderAsync(IReadOnlyList<ImportProductRow>,IReadOnlyList<ImportKitComponent>?)",
+          "returns": "Task<CommandResult<IReadOnlyList<ImportProductRow>>>",
+          "parameters": [
+            {
+              "name": "products",
+              "type": "IReadOnlyList<ImportProductRow>"
+            },
+            {
+              "name": "components",
+              "type": "IReadOnlyList<ImportKitComponent>?"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "TryGetValue",
+              "line": 310,
+              "receiver": "componentsByParent",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 315,
+              "receiver": "list",
+              "generic_types": []
+            },
+            {
+              "name": "BuildOrderAsync",
+              "line": 319,
+              "receiver": "<implicit>",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "Dictionary<string, ImportProductRow>",
+              "line": 299
+            },
+            {
+              "type": "Dictionary<string, List<ImportKitComponent>>",
+              "line": 305
+            },
+            {
+              "type": "List<ImportKitComponent>",
+              "line": 312
+            }
+          ],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-fe4c734f9d7b",
+          "name": "BuildOrderAsync",
+          "owner": "ImportProductsCommandHandler",
+          "line": 322,
+          "end": 328,
+          "signature": "BuildOrderAsync(IReadOnlyList<ImportProductRow>,IReadOnlyDictionary<string, List<ImportKitComponent>>,IReadOnlyDictionary<string, ImportProductRow>)",
+          "returns": "Task<CommandResult<IReadOnlyList<ImportProductRow>>>",
+          "parameters": [
+            {
+              "name": "products",
+              "type": "IReadOnlyList<ImportProductRow>"
+            },
+            {
+              "name": "componentsByParentSku",
+              "type": "IReadOnlyDictionary<string, List<ImportKitComponent>>"
+            },
+            {
+              "name": "productsBySku",
+              "type": "IReadOnlyDictionary<string, ImportProductRow>"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "FromResult",
+              "line": 327,
+              "receiver": "Task",
+              "generic_types": []
+            },
+            {
+              "name": "BuildOrder",
+              "line": 327,
+              "receiver": "<implicit>",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-5566bfd93eee",
+          "name": "BuildOrder",
+          "owner": "ImportProductsCommandHandler",
+          "line": 330,
+          "end": 414,
+          "signature": "BuildOrder(IReadOnlyList<ImportProductRow>,IReadOnlyDictionary<string, List<ImportKitComponent>>,IReadOnlyDictionary<string, ImportProductRow>)",
+          "returns": "CommandResult<IReadOnlyList<ImportProductRow>>",
+          "parameters": [
+            {
+              "name": "products",
+              "type": "IReadOnlyList<ImportProductRow>"
+            },
+            {
+              "name": "componentsByParentSku",
+              "type": "IReadOnlyDictionary<string, List<ImportKitComponent>>"
+            },
+            {
+              "name": "productsBySku",
+              "type": "IReadOnlyDictionary<string, ImportProductRow>"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "Success",
+              "line": 338,
+              "receiver": "CommandResult<IReadOnlyList<ImportProductRow>>",
+              "generic_types": [
+                "IReadOnlyList<ImportProductRow>",
+                "ImportProductRow"
+              ]
+            },
+            {
+              "name": "TryAdd",
+              "line": 344,
+              "receiver": "skuToIndex",
+              "generic_types": []
+            },
+            {
+              "name": "Failure",
+              "line": 346,
+              "receiver": "CommandResult<IReadOnlyList<ImportProductRow>>",
+              "generic_types": [
+                "IReadOnlyList<ImportProductRow>",
+                "ImportProductRow"
+              ]
+            },
+            {
+              "name": "TryGetValue",
+              "line": 360,
+              "receiver": "componentsByParentSku",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 365,
+              "receiver": "skuToIndex",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 371,
+              "receiver": "childIndices",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 378,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "Enqueue",
+              "line": 388,
+              "receiver": "readyQueue",
+              "generic_types": []
+            },
+            {
+              "name": "Dequeue",
+              "line": 395,
+              "receiver": "readyQueue",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 396,
+              "receiver": "ordered",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "Dictionary<string, int>",
+              "line": 341
+            },
+            {
+              "type": "List<int>",
+              "line": 354
+            },
+            {
+              "type": "HashSet<int>",
+              "line": 362
+            },
+            {
+              "type": "PriorityQueue<int, int>",
+              "line": 383
+            },
+            {
+              "type": "List<ImportProductRow>",
+              "line": 392
+            }
+          ],
+          "errors": [
+            {
+              "line": 346,
+              "code": "IMPORT_DUPLICATE_ROW"
+            },
+            {
+              "line": 369,
+              "code": "KIT_CYCLE_DETECTED"
+            },
+            {
+              "line": 410,
+              "code": "KIT_CYCLE_DETECTED"
+            }
+          ],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-fee30629d093",
           "name": "BuildLines",
           "owner": "ImportProductsCommandHandler",
-          "line": 158,
-          "end": 171,
+          "line": 416,
+          "end": 429,
           "signature": "BuildLines(ImportStockRow)",
           "returns": "IReadOnlyList<ReceiptLine>?",
           "parameters": [
@@ -22732,11 +23012,11 @@
           "creates": [
             {
               "type": "ReceiptLine",
-              "line": 162
+              "line": 420
             },
             {
               "type": "ReceiptLine",
-              "line": 167
+              "line": 425
             }
           ],
           "errors": [],
@@ -22745,11 +23025,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-846cbccac8f2",
+          "id": "M-3f969591b40d",
           "name": "ResolveItemIdAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 173,
-          "end": 187,
+          "line": 431,
+          "end": 445,
           "signature": "ResolveItemIdAsync(string,CancellationToken)",
           "returns": "Task<Guid>",
           "parameters": [
@@ -22766,43 +23046,43 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 175,
+              "line": 433,
               "receiver": "unitOfWork.Connection",
               "generic_types": []
             },
             {
               "name": "CreateParameter",
-              "line": 178,
+              "line": 436,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 181,
+              "line": 439,
               "receiver": "cmd.Parameters",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 183,
+              "line": 441,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 183,
+              "line": 441,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 184,
+              "line": 442,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 184,
+              "line": 442,
               "receiver": "value",
               "generic_types": []
             }
@@ -22813,18 +23093,18 @@
             {
               "operation": "FROM",
               "table": "items",
-              "line": 177
+              "line": 435
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-749e573d8f18",
+          "id": "M-774bea846c22",
           "name": "HasActivePermissionAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 189,
-          "end": 192,
+          "line": 447,
+          "end": 450,
           "signature": "HasActivePermissionAsync(Guid,string,CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -22845,7 +23125,7 @@
           "calls": [
             {
               "name": "HasPermissionAsync",
-              "line": 191,
+              "line": 449,
               "receiver": "permissionResolver",
               "generic_types": []
             }
@@ -22859,7 +23139,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 193
+      "lines": 451
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs",
@@ -193058,7 +193338,7 @@
     },
     {
       "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceOverlayHost.cs",
-      "sha256": "1dd81eb4b904a18d8aa071e1e4fecf40fd133156469e4c2c39efdf37c12343ea",
+      "sha256": "9369b8ab1be828287326fbe56e38f25da3cda85b16aa4be40c9585091319bafc",
       "project": "GetSeek.UI.Components",
       "test": false,
       "types": [
@@ -193066,7 +193346,7 @@
           "name": "WorkspaceOverlayHost",
           "kind": "ClassDeclaration",
           "line": 12,
-          "end": 262,
+          "end": 312,
           "bases": [
             "Panel"
           ],
@@ -193076,7 +193356,7 @@
           "name": "PopupConstraintRegistration",
           "kind": "ClassDeclaration",
           "line": 116,
-          "end": 202,
+          "end": 246,
           "bases": [
             "IDisposable"
           ],
@@ -193085,8 +193365,8 @@
         {
           "name": "Geometry",
           "kind": "RecordDeclaration",
-          "line": 261,
-          "end": 261,
+          "line": 311,
+          "end": 311,
           "bases": [],
           "properties": []
         }
@@ -193345,7 +193625,7 @@
           "name": "OnCustomPlacement",
           "owner": "PopupConstraintRegistration",
           "line": 149,
-          "end": 156,
+          "end": 167,
           "signature": "OnCustomPlacement(CustomPopupPlacement)",
           "returns": "void",
           "parameters": [
@@ -193357,24 +193637,93 @@
           "attributes": [],
           "calls": [
             {
-              "name": "CalculatePopupAnchor",
+              "name": "ClampChild",
               "line": 152,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "ResolveEffectivePopupSize",
+              "line": 153,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "CalculatePopupAnchor",
+              "line": 154,
               "receiver": "_host",
+              "generic_types": []
+            },
+            {
+              "name": "GetTopLevel",
+              "line": 155,
+              "receiver": "TopLevel",
+              "generic_types": []
+            },
+            {
+              "name": "TranslatePoint",
+              "line": 156,
+              "receiver": "placement.Target",
               "generic_types": []
             }
           ],
-          "creates": [],
+          "creates": [
+            {
+              "type": "Rect",
+              "line": 158
+            }
+          ],
           "errors": [],
           "sql": [],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-632801f18974",
+          "id": "M-f4c61fba6865",
+          "name": "ResolveEffectivePopupSize",
+          "owner": "PopupConstraintRegistration",
+          "line": 169,
+          "end": 200,
+          "signature": "ResolveEffectivePopupSize(Size)",
+          "returns": "Size",
+          "parameters": [
+            {
+              "name": "reportedSize",
+              "type": "Size"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "IsNaN",
+              "line": 182,
+              "receiver": "double",
+              "generic_types": []
+            },
+            {
+              "name": "Max",
+              "line": 199,
+              "receiver": "Math",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "Size",
+              "line": 199
+            }
+          ],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-a8a194ff341a",
           "name": "OnPopupOpened",
           "owner": "PopupConstraintRegistration",
-          "line": 158,
-          "end": 162,
+          "line": 202,
+          "end": 206,
           "signature": "OnPopupOpened(object?,EventArgs)",
           "returns": "void",
           "parameters": [
@@ -193391,7 +193740,7 @@
           "calls": [
             {
               "name": "ClampChild",
-              "line": 161,
+              "line": 205,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -193403,11 +193752,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-2662c3b39d60",
+          "id": "M-ec8682c40634",
           "name": "OnHostSizeChanged",
           "owner": "PopupConstraintRegistration",
-          "line": 164,
-          "end": 174,
+          "line": 208,
+          "end": 218,
           "signature": "OnHostSizeChanged(object?,SizeChangedEventArgs)",
           "returns": "void",
           "parameters": [
@@ -193424,7 +193773,7 @@
           "calls": [
             {
               "name": "ClampChild",
-              "line": 167,
+              "line": 211,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -193436,11 +193785,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-22f33ba1ff22",
+          "id": "M-be98392bc2ab",
           "name": "ClampChild",
           "owner": "PopupConstraintRegistration",
-          "line": 176,
-          "end": 183,
+          "line": 220,
+          "end": 227,
           "signature": "ClampChild()",
           "returns": "void",
           "parameters": [],
@@ -193448,7 +193797,7 @@
           "calls": [
             {
               "name": "Max",
-              "line": 180,
+              "line": 224,
               "receiver": "Math",
               "generic_types": []
             }
@@ -193460,11 +193809,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-0ec886c15ace",
+          "id": "M-8cdfd9d1d442",
           "name": "Dispose",
           "owner": "PopupConstraintRegistration",
-          "line": 185,
-          "end": 201,
+          "line": 229,
+          "end": 245,
           "signature": "Dispose()",
           "returns": "void",
           "parameters": [],
@@ -193472,25 +193821,25 @@
           "calls": [
             {
               "name": "Exchange",
-              "line": 187,
+              "line": 231,
               "receiver": "Interlocked",
               "generic_types": []
             },
             {
               "name": "ReferenceEquals",
-              "line": 193,
+              "line": 237,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "UnregisterConstraint",
-              "line": 199,
+              "line": 243,
               "receiver": "_host",
               "generic_types": []
             },
             {
               "name": "SuppressFinalize",
-              "line": 200,
+              "line": 244,
               "receiver": "GC",
               "generic_types": []
             }
@@ -193502,11 +193851,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-e2e64c38f733",
+          "id": "M-6b1069edfe16",
           "name": "CalculatePopupAnchor",
           "owner": "WorkspaceOverlayHost",
-          "line": 204,
-          "end": 212,
+          "line": 248,
+          "end": 262,
           "signature": "CalculatePopupAnchor(Visual,Size)",
           "returns": "Rect",
           "parameters": [
@@ -193523,19 +193872,19 @@
           "calls": [
             {
               "name": "TranslatePoint",
-              "line": 206,
+              "line": 252,
               "receiver": "this",
               "generic_types": []
             },
             {
               "name": "Clamp",
-              "line": 207,
+              "line": 257,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 208,
+              "line": 258,
               "receiver": "Math",
               "generic_types": []
             }
@@ -193543,7 +193892,11 @@
           "creates": [
             {
               "type": "Rect",
-              "line": 211
+              "line": 254
+            },
+            {
+              "type": "Rect",
+              "line": 261
             }
           ],
           "errors": [],
@@ -193552,11 +193905,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-633bf9eaf3b8",
+          "id": "M-deb47801386f",
           "name": "GetIsDialogSurface",
           "owner": "WorkspaceOverlayHost",
-          "line": 214,
-          "end": 214,
+          "line": 264,
+          "end": 264,
           "signature": "GetIsDialogSurface(Control)",
           "returns": "bool",
           "parameters": [
@@ -193569,7 +193922,7 @@
           "calls": [
             {
               "name": "GetValue",
-              "line": 214,
+              "line": 264,
               "receiver": "control",
               "generic_types": []
             }
@@ -193581,11 +193934,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-60dcb7163d58",
+          "id": "M-ba28cadb4edd",
           "name": "SetIsDialogSurface",
           "owner": "WorkspaceOverlayHost",
-          "line": 215,
-          "end": 215,
+          "line": 265,
+          "end": 265,
           "signature": "SetIsDialogSurface(Control,bool)",
           "returns": "void",
           "parameters": [
@@ -193602,7 +193955,7 @@
           "calls": [
             {
               "name": "SetValue",
-              "line": 215,
+              "line": 265,
               "receiver": "control",
               "generic_types": []
             }
@@ -193614,11 +193967,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-a8250a0313a0",
+          "id": "M-b2b6489e3fa1",
           "name": "MeasureOverride",
           "owner": "WorkspaceOverlayHost",
-          "line": 217,
-          "end": 232,
+          "line": 267,
+          "end": 282,
           "signature": "MeasureOverride(Size)",
           "returns": "Size",
           "parameters": [
@@ -193631,37 +193984,37 @@
           "calls": [
             {
               "name": "Where",
-              "line": 220,
+              "line": 270,
               "receiver": "Children",
               "generic_types": []
             },
             {
               "name": "GetIsDialogSurface",
-              "line": 220,
+              "line": 270,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ClampSurface",
-              "line": 222,
+              "line": 272,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Measure",
-              "line": 223,
+              "line": 273,
               "receiver": "input",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 224,
+              "line": 274,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "Where",
-              "line": 227,
+              "line": 277,
               "receiver": "<expression>",
               "generic_types": [
                 "Control"
@@ -193669,7 +194022,7 @@
             },
             {
               "name": "OfType",
-              "line": 227,
+              "line": 277,
               "receiver": "<expression>",
               "generic_types": [
                 "Control"
@@ -193677,19 +194030,19 @@
             },
             {
               "name": "GetVisualDescendants",
-              "line": 227,
+              "line": 277,
               "receiver": "this",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 229,
+              "line": 279,
               "receiver": "Children",
               "generic_types": []
             },
             {
               "name": "MeasureOverride",
-              "line": 231,
+              "line": 281,
               "receiver": "base",
               "generic_types": []
             }
@@ -193697,7 +194050,7 @@
           "creates": [
             {
               "type": "Size",
-              "line": 222
+              "line": 272
             }
           ],
           "errors": [],
@@ -193706,11 +194059,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-abebca086f19",
+          "id": "M-766910970ba3",
           "name": "ArrangeOverride",
           "owner": "WorkspaceOverlayHost",
-          "line": 234,
-          "end": 241,
+          "line": 284,
+          "end": 291,
           "signature": "ArrangeOverride(Size)",
           "returns": "Size",
           "parameters": [
@@ -193723,31 +194076,31 @@
           "calls": [
             {
               "name": "ArrangeOverride",
-              "line": 236,
+              "line": 286,
               "receiver": "base",
               "generic_types": []
             },
             {
               "name": "Where",
-              "line": 238,
+              "line": 288,
               "receiver": "Children",
               "generic_types": []
             },
             {
               "name": "GetIsDialogSurface",
-              "line": 238,
+              "line": 288,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Arrange",
-              "line": 239,
+              "line": 289,
               "receiver": "dialog",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 239,
+              "line": 289,
               "receiver": "Math",
               "generic_types": []
             }
@@ -193755,7 +194108,7 @@
           "creates": [
             {
               "type": "Rect",
-              "line": 239
+              "line": 289
             }
           ],
           "errors": [],
@@ -193764,11 +194117,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-bb9e2d2b8319",
+          "id": "M-43bbd1832b0e",
           "name": "ClampSurface",
           "owner": "WorkspaceOverlayHost",
-          "line": 243,
-          "end": 259,
+          "line": 293,
+          "end": 309,
           "signature": "ClampSurface(Control,Size)",
           "returns": "void",
           "parameters": [
@@ -193785,37 +194138,37 @@
           "calls": [
             {
               "name": "TryGetValue",
-              "line": 245,
+              "line": 295,
               "receiver": "_preferred",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 248,
+              "line": 298,
               "receiver": "_preferred",
               "generic_types": []
             },
             {
               "name": "Max",
-              "line": 250,
+              "line": 300,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "SetCurrentValue",
-              "line": 253,
+              "line": 303,
               "receiver": "surface",
               "generic_types": []
             },
             {
               "name": "Min",
-              "line": 254,
+              "line": 304,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "IsNaN",
-              "line": 255,
+              "line": 305,
               "receiver": "double",
               "generic_types": []
             }
@@ -193829,7 +194182,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 262
+      "lines": 312
     },
     {
       "path": "Software/src/GetSeek.UI.Components/Controls/WorkspaceSearchBox.axaml.cs",
@@ -207262,7 +207615,7 @@
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/PosChromeUiIntegrationTests.cs",
-      "sha256": "ae3a65a6cc63e2ce347a737d00472e066fa3e750adc86a9c166f530738291561",
+      "sha256": "3e546d532894b832a5eb88be90c62e0cd21367d7503cf4571331661715fe0230",
       "project": "GetSeek.IntegrationTests",
       "test": true,
       "types": [
@@ -207270,7 +207623,7 @@
           "name": "PosChromeUiIntegrationTests",
           "kind": "ClassDeclaration",
           "line": 17,
-          "end": 146,
+          "end": 164,
           "bases": [],
           "properties": []
         }
@@ -207281,7 +207634,7 @@
           "name": "MyanmarNavigation_SingleRowShopHeader_NotificationDropdown_AndEmptyCartClock_FollowUiState",
           "owner": "PosChromeUiIntegrationTests",
           "line": 19,
-          "end": 136,
+          "end": 154,
           "signature": "MyanmarNavigation_SingleRowShopHeader_NotificationDropdown_AndEmptyCartClock_FollowUiState()",
           "returns": "Task",
           "parameters": [],
@@ -207296,11 +207649,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-a09a9deed310",
+          "id": "M-77e8524fd4bb",
           "name": "AssertHeaderOneRow",
           "owner": "PosChromeUiIntegrationTests",
-          "line": 138,
-          "end": 145,
+          "line": 156,
+          "end": 163,
           "signature": "AssertHeaderOneRow(Window,TextBlock,Button)",
           "returns": "void",
           "parameters": [],
@@ -207315,7 +207668,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 146
+      "lines": 164
     },
     {
       "path": "Software/tests/GetSeek.IntegrationTests/PosNewLayoutSmokeTests.cs",
@@ -233253,7 +233606,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 112,
+          "line": 230,
           "method_id": "M-c862b652239a"
         },
         {

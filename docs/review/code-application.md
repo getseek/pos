@@ -890,21 +890,24 @@ Declarations: <code>ImportProductConfiguration</code> (line 12).
 
 ## ImportProductsCommandHandler.cs {#src-2c8d126a7c07}
 
-<code>Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs</code> · 193 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs</code> · 451 lines.
 
-SHA-256: <code>a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8</code>.
+SHA-256: <code>f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83</code>.
 
 Declarations: <code>ImportProductsCommandHandler : ICommandHandler&lt;ImportProductsCommand, ImportProductsResult&gt;</code> (line 18).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (4)</summary>
+<summary>Methods, calls, table effects and failures (7)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-c862b652239a"></span><code>ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)</code><br>21–156 | Failure(ImportProductsResult) @28; ConfigureAwait @31; HasActivePermissionAsync @31; ContextAsync @44; ToArray @47; Concat @47; Select @47; Select @47; SelectMany @47; Select @48; FingerprintAsync @49; Any @51; GroupBy @51; Count @51; GroupBy @52; ToUpperInvariant @53; Where @55; GetValueOrDefault @55; IsNullOrWhiteSpace @55; Trim @56; Contains @60; Any @62; Equals @62; Any @65; ToList @71; FirstOrDefault @74; Equals @74; Any @74; Equals @74; SaveAsync @76; Remove @80; Any @83; Equals @83; TryGetValue @89; ResolveItemIdAsync @91; RecordAsync @100; ToString @100; Parse @107; GetValueOrDefault @110; BuildLines @111; HandleAsync @132; Distinct @144; PriceAsync @150; FirstOrDefault @150; FirstOrDefault @151; Success(ImportProductsResult) @155 | FROM item_kits @100; FROM items @109; FROM third_parties @105 · IMPORT_EMPTY @28; AUTH_UNAUTHORIZED @33; AUTH_UNAUTHORIZED @39; IMPORT_TOO_LARGE @43; IMPORT_CURRENCY_MISMATCH @46; IMPORT_PREVIEW_STALE @50; IMPORT_DUPLICATE_ROW @54; IMPORT_DUPLICATE_ROW @57; IMPORT_CLEAR_NOT_ALLOWED @61; IMPORT_UNKNOWN_COLUMN @63; IMPORT_CLEAR_NOT_ALLOWED @66; KIT_CYCLE_DETECTED @75; IMPORT_ORPHAN_COMPONENT @84; IMPORT_SKU_NOT_FOUND @94; IMPORT_KIT_STOCK @101; SUPPLIER_NOT_FOUND @106; IMPORT_SKU_NOT_FOUND @149 |
-| <span id="m-2bfe4424f744"></span><code>ImportProductsCommandHandler.BuildLines(ImportStockRow)</code><br>158–171 | — | No extracted literal effects. |
-| <span id="m-846cbccac8f2"></span><code>ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)</code><br>173–187 | CreateCommand @175; CreateParameter @178; Add @181; ConfigureAwait @183; ExecuteScalarAsync @183; TryParse @184; ToString @184 | FROM items @177 |
-| <span id="m-749e573d8f18"></span><code>ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)</code><br>189–192 | HasPermissionAsync @191 | No extracted literal effects. |
+| <span id="m-c862b652239a"></span><code>ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)</code><br>21–293 | Failure(ImportProductsResult) @28; ConfigureAwait @31; HasActivePermissionAsync @31; ContextAsync @44; ToArray @47; Concat @47; Select @47; Select @47; SelectMany @47; Select @48; FingerprintAsync @49; Any @51; GroupBy @51; Count @51; GroupBy @52; ToUpperInvariant @53; Where @55; GetValueOrDefault @55; IsNullOrWhiteSpace @55; Trim @56; Contains @60; Any @62; Equals @62; Any @65; TryGetValue @91; Add @96; TryGetValue @105; BuildOrderAsync @119; Empty(ImportKitComponent) @132; SaveAsync @133; TryGetValue @146; TryGetValue @162; ResolveItemIdAsync @164; TryGetValue @174; RecordAsync @176; ToString @180; TryGetValue @196; Parse @210; TryGetValue @216; GetValueOrDefault @224; BuildLines @229; HandleAsync @250; Distinct @262; GetValueOrDefault @273; GetValueOrDefault @274; Empty(ImportTierPrice) @277; PriceAsync @279; Success(ImportProductsResult) @292 | FROM item_kits @179; FROM items @221; FROM third_parties @201 · IMPORT_EMPTY @28; AUTH_UNAUTHORIZED @33; AUTH_UNAUTHORIZED @39; IMPORT_TOO_LARGE @43; IMPORT_CURRENCY_MISMATCH @46; IMPORT_PREVIEW_STALE @50; IMPORT_DUPLICATE_ROW @54; IMPORT_DUPLICATE_ROW @57; IMPORT_CLEAR_NOT_ALLOWED @61; IMPORT_UNKNOWN_COLUMN @63; IMPORT_CLEAR_NOT_ALLOWED @66; IMPORT_ORPHAN_COMPONENT @149; IMPORT_SKU_NOT_FOUND @167; IMPORT_KIT_STOCK @188; SUPPLIER_NOT_FOUND @206; IMPORT_SKU_NOT_FOUND @269 |
+| <span id="m-cfb69b731676"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyList&lt;ImportKitComponent&gt;?)</code><br>295–320 | TryGetValue @310; Add @315; BuildOrderAsync @319 | No extracted literal effects. |
+| <span id="m-fe4c734f9d7b"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>322–328 | FromResult @327; BuildOrder @327 | No extracted literal effects. |
+| <span id="m-5566bfd93eee"></span><code>ImportProductsCommandHandler.BuildOrder(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>330–414 | Success(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @338; TryAdd @344; Failure(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @346; TryGetValue @360; TryGetValue @365; Add @371; Add @378; Enqueue @388; Dequeue @395; Add @396 | IMPORT_DUPLICATE_ROW @346; KIT_CYCLE_DETECTED @369; KIT_CYCLE_DETECTED @410 |
+| <span id="m-fee30629d093"></span><code>ImportProductsCommandHandler.BuildLines(ImportStockRow)</code><br>416–429 | — | No extracted literal effects. |
+| <span id="m-3f969591b40d"></span><code>ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)</code><br>431–445 | CreateCommand @433; CreateParameter @436; Add @439; ConfigureAwait @441; ExecuteScalarAsync @441; TryParse @442; ToString @442 | FROM items @435 |
+| <span id="m-774bea846c22"></span><code>ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)</code><br>447–450 | HasPermissionAsync @449 | No extracted literal effects. |
 
 </details>
 

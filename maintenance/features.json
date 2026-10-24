@@ -310,7 +310,7 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-          "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8"
+          "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
@@ -359,13 +359,15 @@
         "E-015",
         "E-016",
         "E-022",
-        "E-023"
+        "E-023",
+        "E-024",
+        "E-025"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned.",
       "review_map": "review/imports.md",
-      "reviewed_on": "2026-10-23"
+      "reviewed_on": "2026-10-24"
     },
     {
       "id": "PP-F015",

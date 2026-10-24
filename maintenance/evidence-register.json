@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "39499a670c730122666be5d3644f488a0cc7c478447598f27fad8691af6d9008",
+      "sha256": "07e45f040adef39d29820ad1a8b66b4a2632d399aa64e8c7b17d56596e16b55d",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -478,6 +478,75 @@
         "finish": "2026-10-23T15:23:26.3987955+07:00"
       },
       "assembly": "GetSeek.IntegrationTests"
+    },
+    {
+      "id": "E-024",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage2/20261024-1540/stage2-import-tests.txt",
+      "sha256": "627d333ffe00b2f640964dcf0f778c31c130084b950c8359d16732ce6be39a61",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 2 import-filtered run (post-change, worker-executed dotnet test console output, not TRX): 54/54 passed, 0 failed (GetSeek.UnitTests 1, GetSeek.IntegrationTests 53, 46 s integration). Command: dotnet test GetSeekPOS.sln -c Release --no-build --filter FullyQualifiedName~Import. Covers import lifecycle/rollback/replay/stale-preview paths after the ImportProductsCommandHandler dictionary+topological-order change. No TRX, native dialog, live shop or device claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "54",
+        "passed": "54",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "46 s (integration) + 5 ms (unit)",
+        "run_at_local": "2026-10-24 15:28 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-025",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage2/20261024-1540/stage2-full-tests.txt",
+      "sha256": "506e7ea209eaf220b1badd1feec0205a46a65f553abe0d8b7404d100994607aa",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 2 full solution suite (post-change, worker-executed dotnet test console output, not TRX): 1305/1305 passed, 0 failed (Acceptance 1, Unit 282, Integration 1022, 11 m 48 s integration). Command: dotnet test GetSeekPOS.sln -c Release --no-build. Validated the ImportProductsCommandHandler performance refactor against all existing suites. Native dialogs, live shop and physical devices were not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1305",
+        "passed": "1305",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "11 m 48 s (integration) + 1 s (unit) + 864 ms (acceptance)",
+        "run_at_local": "2026-10-24 15:40 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
     }
   ]
 }

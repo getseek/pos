@@ -484,7 +484,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "line": 1,
-          "sha256": "a6b117ff07e49c43f645a73c15068058333a2126dbbf41eb6662e60901958ed8"
+          "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83"
         },
         {
           "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",

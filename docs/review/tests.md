@@ -317,7 +317,7 @@ Located test declarations: <code>UnauthenticatedUser_EvenWithOpenShift_IsDeniedI
 
 ## PosChromeUiIntegrationTests.cs {#src-20e8711e527a}
 
-<code>Software/tests/GetSeek.IntegrationTests/PosChromeUiIntegrationTests.cs</code> · SHA-256 <code>ae3a65a6cc63e2ce347a737d00472e066fa3e750adc86a9c166f530738291561</code>.
+<code>Software/tests/GetSeek.IntegrationTests/PosChromeUiIntegrationTests.cs</code> · SHA-256 <code>3e546d532894b832a5eb88be90c62e0cd21367d7503cf4571331661715fe0230</code>.
 
 ## PosNewLayoutSmokeTests.cs {#src-ddac716dda0e}
 

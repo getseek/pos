@@ -128,7 +128,7 @@ flowchart TD
 
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
-| 0 / 0 | <code>uom_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 0 / 0 | <code>uom_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
 | 1 / 0 | <code>item_id</code> | [items](schema-04.md#items) / <code>id</code> | NO ACTION / CASCADE |
 
 </details>

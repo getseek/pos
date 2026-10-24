@@ -7,11 +7,47 @@ evidence: ["E-015"]
 features: ["PP-F022"]
 ---
 
-# Schema 11: supplier_invoice_lines to uoms
+# Schema 11: supplier_invoice_credits to uom_dimensions
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 [Complete table index and reconstruction limits](schema.md). Arrows below are declared foreign keys, not inferred cardinalities.
+
+## supplier_invoice_credits {#supplier-invoice-credits}
+
+<details markdown>
+<summary>Relationship diagram</summary>
+
+```mermaid
+flowchart TD
+    T["supplier_invoice_credits"]
+    P0["supplier_invoices"]
+    P1["users"]
+    T -->|"invoice_id → id"| P0
+    T -->|"actor_user_id → id"| P1
+```
+
+</details>
+
+<details markdown>
+<summary>Columns and foreign-key policies</summary>
+
+| Column | SQLite type | NOT NULL | Primary-key position |
+| --- | --- | --- | --- |
+| <code>id</code> | <code>TEXT</code> | False | 1 |
+| <code>invoice_id</code> | <code>TEXT</code> | True | — |
+| <code>credit_minor</code> | <code>INTEGER</code> | True | — |
+| <code>command_key</code> | <code>TEXT</code> | True | — |
+| <code>actor_user_id</code> | <code>TEXT</code> | True | — |
+| <code>reason</code> | <code>TEXT</code> | True | — |
+| <code>created_at_utc</code> | <code>TEXT</code> | True | — |
+
+| FK / sequence | Child column | Parent table / column | On update / delete |
+| --- | --- | --- | --- |
+| 0 / 0 | <code>actor_user_id</code> | [users](schema-12.md#users) / <code>id</code> | NO ACTION / NO ACTION |
+| 1 / 0 | <code>invoice_id</code> | [supplier_invoices](schema-11.md#supplier-invoices) / <code>id</code> | NO ACTION / NO ACTION |
+
+</details>
 
 ## supplier_invoice_lines {#supplier-invoice-lines}
 
@@ -425,30 +461,6 @@ flowchart TD
 
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
-| 0 / 0 | <code>canonical_unit_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
-
-</details>
-
-## uoms {#uoms}
-
-No outgoing foreign key declared in the reconstructed schema.
-
-<details markdown>
-<summary>Columns and foreign-key policies</summary>
-
-| Column | SQLite type | NOT NULL | Primary-key position |
-| --- | --- | --- | --- |
-| <code>code</code> | <code>TEXT</code> | False | 1 |
-| <code>name</code> | <code>TEXT</code> | True | — |
-| <code>conversion_factor</code> | <code>REAL</code> | True | — |
-| <code>is_base_unit</code> | <code>INTEGER</code> | True | — |
-| <code>dimension_code</code> | <code>TEXT</code> | False | — |
-| <code>unit_kind</code> | <code>TEXT</code> | False | — |
-| <code>display_group</code> | <code>TEXT</code> | False | — |
-| <code>canonical_factor_decimal</code> | <code>TEXT</code> | False | — |
-| <code>is_active</code> | <code>INTEGER</code> | True | — |
-| <code>is_builtin</code> | <code>INTEGER</code> | True | — |
-| <code>max_decimal_places</code> | <code>INTEGER</code> | True | — |
-| <code>definition_note</code> | <code>TEXT</code> | False | — |
+| 0 / 0 | <code>canonical_unit_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
 
 </details>

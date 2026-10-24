@@ -57,17 +57,17 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:42](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.AdjustStock</code>
 
-Construction sites: [HandleAsync:122](code-application.md#src-c24b9e05b3b2), [HandleAsync:16](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9361](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:171](code-application.md#src-c24b9e05b3b2), [HandleAsync:20](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9361](code-desktop.md#src-16497b924a99)
 
-Handler method: [InventoryCommandHandler.HandleAsync(AdjustStockCommand,CommandEnvelope&lt;AdjustStockCommand&gt;,CancellationToken)](code-application.md#m-02b6dcfa291a).
+Handler method: [InventoryCommandHandler.HandleAsync(AdjustStockCommand,CommandEnvelope&lt;AdjustStockCommand&gt;,CancellationToken)](code-application.md#m-66bd2a90feb2).
 
-Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-38ec972aa704), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-7456f0d60f5b). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-c697cfcf9357), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-793a9560917e). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>item_kits</code>, <code>items</code>, <code>stock_movements</code>, <code>store_config</code> |
 | Writes / DDL | <code>expense_records</code>, <code>serials</code>, <code>stock_movements</code> |
-| Literal failure codes | <code>CANNOT_ADJUST_KIT_STOCK</code>, <code>INSUFFICIENT_LOT_BALANCE</code>, <code>INSUFFICIENT_STOCK</code>, <code>INVALID_QUANTITY</code>, <code>INVALID_UOM_CONVERSION</code>, <code>ITEM_INACTIVE</code>, <code>ITEM_NOT_FOUND</code>, <code>ITEM_NOT_TRACKED</code>, <code>LOT_NOT_AVAILABLE</code>, <code>LOT_NOT_FOUND</code>, <code>LOT_REQUIRED</code>, <code>REASON_REQUIRED</code>, <code>SERIAL_NOT_AVAILABLE</code>, <code>SERIAL_NOT_FOUND</code>, <code>SERIAL_REQUIRED</code>, <code>SERIAL_RESERVED</code>, <code>UNEXPECTED_SERIAL</code>, <code>UNKNOWN_UOM_CONVERSION</code>, <code>USE_SERIAL_RECEIPT</code> |
+| Literal failure codes | <code>CANNOT_ADJUST_KIT_STOCK</code>, <code>INSUFFICIENT_LOT_BALANCE</code>, <code>INSUFFICIENT_STOCK</code>, <code>INVALID_QUANTITY</code>, <code>INVALID_UOM_CONVERSION</code>, <code>ITEM_INACTIVE</code>, <code>ITEM_NOT_FOUND</code>, <code>ITEM_NOT_TRACKED</code>, <code>LOT_NOT_AVAILABLE</code>, <code>LOT_NOT_FOUND</code>, <code>LOT_REQUIRED</code>, <code>REASON_REQUIRED</code>, <code>SERIAL_NOT_AVAILABLE</code>, <code>SERIAL_NOT_FOUND</code>, <code>SERIAL_REQUIRED</code>, <code>SERIAL_RESERVED</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code>, <code>UNEXPECTED_SERIAL</code>, <code>UNKNOWN_UOM_CONVERSION</code>, <code>USE_SERIAL_RECEIPT</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -161,13 +161,13 @@ Construction sites: [HandleAsync:224](code-application.md#src-2c8d126a7c07), [Ha
 
 Handler method: [InventoryCommandHandler.HandleAsync(ReceiveStockCommand,CommandEnvelope&lt;ReceiveStockCommand&gt;,CancellationToken)](code-application.md#m-88ca70a84a0a).
 
-Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-38ec972aa704), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-7456f0d60f5b), [InventoryCommandHandler.ResolveOrCreateLotAsync(DbConnection,DbTransaction?,Guid,string,DateTime?,DateTime,CancellationToken)](code-application.md#m-5bc4806d7539), [InventoryCommandHandler.SerialExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-19bb8a7b93ac). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-c697cfcf9357), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-793a9560917e), [InventoryCommandHandler.ResolveOrCreateLotAsync(DbConnection,DbTransaction?,Guid,string,DateTime?,DateTime,CancellationToken)](code-application.md#m-5b53dba16221), [InventoryCommandHandler.SerialExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-c5d5cc75528a). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>items</code>, <code>third_parties</code> |
 | Writes / DDL | <code>serials</code>, <code>stock_movements</code> |
-| Literal failure codes | <code>COMPONENT_TRACEABILITY_REQUIRED</code>, <code>INVALID_QUANTITY</code>, <code>INVALID_UNIT_COST</code>, <code>INVALID_UOM_CONVERSION</code>, <code>ITEM_CURRENCY_MISMATCH</code>, <code>ITEM_INACTIVE</code>, <code>ITEM_NOT_FOUND</code>, <code>ITEM_NOT_TRACKED</code>, <code>LOT_CREATE_FAILED</code>, <code>LOT_NOT_AVAILABLE</code>, <code>LOT_NOT_FOUND</code>, <code>LOT_NUMBER_REQUIRED</code>, <code>LOT_REQUIRED</code>, <code>REFERENCE_REQUIRED</code>, <code>SERIAL_ALREADY_EXISTS</code>, <code>SERIAL_COUNT_MISMATCH</code>, <code>SERIAL_REQUIRED</code>, <code>SUPPLIER_INACTIVE</code>, <code>SUPPLIER_NOT_FOUND</code>, <code>UNEXPECTED_SERIAL</code>, <code>UNKNOWN_UOM_CONVERSION</code> |
+| Literal failure codes | <code>COMPONENT_TRACEABILITY_REQUIRED</code>, <code>INVALID_QUANTITY</code>, <code>INVALID_UNIT_COST</code>, <code>INVALID_UOM_CONVERSION</code>, <code>ITEM_CURRENCY_MISMATCH</code>, <code>ITEM_INACTIVE</code>, <code>ITEM_NOT_FOUND</code>, <code>ITEM_NOT_TRACKED</code>, <code>LOT_CREATE_FAILED</code>, <code>LOT_NOT_AVAILABLE</code>, <code>LOT_NOT_FOUND</code>, <code>LOT_NUMBER_REQUIRED</code>, <code>LOT_REQUIRED</code>, <code>REFERENCE_REQUIRED</code>, <code>SERIAL_ALREADY_EXISTS</code>, <code>SERIAL_COUNT_MISMATCH</code>, <code>SERIAL_REQUIRED</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code>, <code>SUPPLIER_INACTIVE</code>, <code>SUPPLIER_NOT_FOUND</code>, <code>UNEXPECTED_SERIAL</code>, <code>UNKNOWN_UOM_CONVERSION</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 

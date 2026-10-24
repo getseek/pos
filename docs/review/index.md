@@ -11,11 +11,11 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Use this atlas to inspect **328 application C# files, 2,177 method declarations, 172 handled command types, 137 reconstructed tables and 261 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
+Use this atlas to inspect **328 application C# files, 2,179 method declarations, 174 handled command types, 138 reconstructed tables and 262 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
 
 **Producer coverage:** 74 handled command types have no explicit construction site in this syntax snapshot. That is a connection-analysis gap, not proof of unreachable code; target-typed construction, factories and runtime dispatch need further analysis. 55 methods contain interpolated SQL requiring manual inspection.
 
-**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 479 files, including 151 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
+**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 480 files, including 152 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
 
 See [source-checked business rules](source-check.md) for corrected checkout, Cafe, attachment, expense, payroll and settings claims.
 
@@ -37,7 +37,7 @@ See [source-checked business rules](source-check.md) for corrected checkout, Caf
 | [Invoice collection and commercial lifecycle](invoices.md) | PP-F005 | 7 |
 | [Customer returns and inspection](returns.md) | PP-F006 | 2 |
 | [Shifts, cash loss and reports](cash.md) | PP-F007 | 5 |
-| [Products, categories and units](catalog.md) | PP-F008 | 19 |
+| [Products, categories and units](catalog.md) | PP-F008 | 21 |
 | [Stock, locations, lots and serials](inventory.md) | PP-F009 | 13 |
 | [Inventory loss and waste](waste.md) | PP-F010 | 1 |
 | [Pricing, offers, labels and mass runs](pricing.md) | PP-F011 | 14 |

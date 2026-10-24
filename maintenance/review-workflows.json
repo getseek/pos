@@ -240,6 +240,7 @@
       "commands": [
         "CreateCategoryCommand",
         "CreateProductCommand",
+        "CreateServiceCommand",
         "CreateSupplierCommand",
         "CreateUomCommand",
         "DeactivateCategoryCommand",
@@ -254,6 +255,7 @@
         "SetProductStatusCommand",
         "UpdateCategoryCommand",
         "UpdateProductCommand",
+        "UpdateServiceCommand",
         "UpdateStoreUomPreferenceCommand",
         "UpdateSupplierCommand",
         "UpdateUomCommand"
@@ -270,7 +272,7 @@
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "line": 1,
-          "sha256": "e7ce3a816010aac26bb4fd9645c52abdb4f561ec78951653617f2f931d33d104"
+          "sha256": "0f7112b86c1fecef5b3836846e70eae630d3fe1b1178c49caaf5996c22cb6512"
         }
       ]
     },
@@ -308,7 +310,7 @@
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
           "line": 1,
-          "sha256": "a8fdaeae4839675c0277a4db9b2edce98d6eac2ee474ffe73a393d689b3a856e"
+          "sha256": "8265eed9be27a86658aa05bd3e7dcb3c76c4b6103d55e1e55fb14bfe00a7907d"
         },
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryTraceabilityCommands.cs",
@@ -339,7 +341,7 @@
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
           "line": 1,
-          "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+          "sha256": "9fa28390769c4a3aa19ac7d77d1721b5fcf92c133520f180afddfb47c6ef0651"
         }
       ]
     },
@@ -421,7 +423,7 @@
         {
           "path": "Software/src/GetSeek.Application/Manufacturing/ManufacturingCommandHandler.cs",
           "line": 1,
-          "sha256": "fac2380fe32fea835ce4d709e9590deff87701ad97c8759f34d9fca719c87071"
+          "sha256": "041160fae1957af9d2bfc38ecd85cf66cfab90c9bf952600c084220bba5faa7a"
         }
       ]
     },
@@ -829,7 +831,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
           "line": 1,
-          "sha256": "5b8cad1ab5c881746ed3fc3897555a2ed8bfd4c3358e8db781a5dfd51acedf56"
+          "sha256": "8fd8e901f985c97a5fd0d1d71312e22e6359b744e144cc4818f2e8e09882600e"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionPolicy.cs",

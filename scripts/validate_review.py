@@ -51,7 +51,7 @@ def validate_records(data,workflows,decisions,feature_ids,rules=()):
             if fk['from'] not in columns or fk['parent'] not in table_map:errors.append('review: invalid foreign-key endpoint '+t['name']);continue
             if fk['to'] and fk['to'] not in {c['name'] for c in table_map[fk['parent']]['columns']}:errors.append('review: unknown parent column '+t['name'])
     migrations=data['schema']['migrations']
-    if [m['version'] for m in migrations]!=list(range(1,85)):errors.append('review: migration sequence is not 1–84')
+    if [m['version'] for m in migrations]!=list(range(1,86)):errors.append('review: migration sequence is not 1–85')
     for m in migrations:reference(m)
     if data['schema']['foreign_key_check']:errors.append('review: reconstructed schema foreign-key violations')
     ids=set()

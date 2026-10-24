@@ -740,9 +740,9 @@ Declarations: <code>SqliteExpenseAttachmentService : IExpenseAttachmentService</
 
 ## DatabaseMigrator.cs {#src-03c231a85247}
 
-<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs</code> · 190 lines.
+<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs</code> · 191 lines.
 
-SHA-256: <code>5b8cad1ab5c881746ed3fc3897555a2ed8bfd4c3358e8db781a5dfd51acedf56</code>.
+SHA-256: <code>8fd8e901f985c97a5fd0d1d71312e22e6359b744e144cc4818f2e8e09882600e</code>.
 
 Declarations: <code>DatabaseMigrator</code> (line 6).
 
@@ -751,9 +751,9 @@ Declarations: <code>DatabaseMigrator</code> (line 6).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-c28e19d6dd66"></span><code>DatabaseMigrator.MigrateAsync(SqliteConnection,CancellationToken)</code><br>98–99 | MigrateToVersionAsync @99 | No extracted literal effects. |
-| <span id="m-ffc6c6e7bac2"></span><code>DatabaseMigrator.MigrateToVersionAsync(SqliteConnection,int,CancellationToken)</code><br>102–171 | nameof @105; CreateCommand @107; ConfigureAwait @116; ExecuteNonQueryAsync @116; ExecuteScalarAsync @124; ToInt64 @127; LoadMigrationScriptAsync @137; BeginTransactionAsync @139; AddWithValue @156; ToString @157; CommitAsync @162; RollbackAsync @166 | CREATE TABLE IF NOT EXISTS  schema_version @109; FROM schema_version @123; INSERT INTO schema_version @152 · ArgumentOutOfRangeException @105; rethrow @167 |
-| <span id="m-0c4778d0b240"></span><code>DatabaseMigrator.LoadMigrationScriptAsync(string,CancellationToken)</code><br>173–189 | Combine @175; Exists @177; ConfigureAwait @179; ReadAllTextAsync @179; GetFullPath @182 | FileNotFoundException @188 |
+| <span id="m-5e7d439b37d5"></span><code>DatabaseMigrator.MigrateAsync(SqliteConnection,CancellationToken)</code><br>99–100 | MigrateToVersionAsync @100 | No extracted literal effects. |
+| <span id="m-e9ed3dc69611"></span><code>DatabaseMigrator.MigrateToVersionAsync(SqliteConnection,int,CancellationToken)</code><br>103–172 | nameof @106; CreateCommand @108; ConfigureAwait @117; ExecuteNonQueryAsync @117; ExecuteScalarAsync @125; ToInt64 @128; LoadMigrationScriptAsync @138; BeginTransactionAsync @140; AddWithValue @157; ToString @158; CommitAsync @163; RollbackAsync @167 | CREATE TABLE IF NOT EXISTS  schema_version @110; FROM schema_version @124; INSERT INTO schema_version @153 · ArgumentOutOfRangeException @106; rethrow @168 |
+| <span id="m-b5d711cc1dbc"></span><code>DatabaseMigrator.LoadMigrationScriptAsync(string,CancellationToken)</code><br>174–190 | Combine @176; Exists @178; ConfigureAwait @180; ReadAllTextAsync @180; GetFullPath @183 | FileNotFoundException @189 |
 
 </details>
 
@@ -1961,3 +1961,7 @@ Declarations: <code>SqliteSessionUnlockValidator : ISessionUnlockValidator</code
 ### 084_CashRoundingTieRule.sql {#src-edd8b63847ba}
 
 <code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/084_CashRoundingTieRule.sql</code> · 4 lines · SHA-256 <code>97f8481ec4a44207cf7f1f9dfb2ba25fd0f4e8b3cc3004a48086a8b330284ae3</code>.
+
+### 085_ServiceItemsAndCatalogIdentity.sql {#src-f9df461b9d64}
+
+<code>Software/src/GetSeek.Infrastructure/Persistence/Migrations/085_ServiceItemsAndCatalogIdentity.sql</code> · 29 lines · SHA-256 <code>d298e0e122b856f5de63a64dd7ed7f7307c43603360a3770e780a970508a3454</code>.

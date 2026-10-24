@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **151 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **152 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -415,7 +415,7 @@ Located test declarations: <code>AllBusinessData_Includes_People_SalaryHistory_A
 
 ## SalaryExpensesSchemaTests.cs {#src-ca9bf8db2b9f}
 
-<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>3031075997737d8ba8a997d9b5f7b3000e53aa2c0db20f61fa5253d30d8dbbe0</code>.
+<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>7d8c27bff13a1cc9a6fc530b1886195df212f013f79ecbd45a997c0038f30798</code>.
 
 Located test declarations: <code>FreshDatabase_MigratesToVersion83Successfully</code> @26, <code>SchemaConstraints_Migration083_ZReportAndWasteSettings_Enforced</code> @39, <code>SchemaConstraints_Migration081_StatementColumnsAndUniqueness_Enforced</code> @86, <code>SchemaConstraints_PeopleAndAgreements_Enforced</code> @242, <code>SchemaConstraints_SalaryPeriodsAndLedger_Enforced</code> @345, <code>SchemaConstraints_ExpensesAndAttachments_Enforced</code> @421, <code>PermissionsAndRoles_SeededCorrectly_AndExplicitDenyWins</code> @461.
 
@@ -470,6 +470,12 @@ Located test declarations: <code>ExactPrefixSubstring_Precedence_OrdersSuggestio
 <code>Software/tests/GetSeek.IntegrationTests/SearchStateIntegrationTests.cs</code> · SHA-256 <code>e5998b74451e1df39fc248c336c37af5214ac1c9656065d0e7362d03010bce70</code>.
 
 Located test declarations: <code>StaleResultsIgnored_WhenNewerQueryIssued</code> @36, <code>StaleErrorsIgnored_WhenNewerQuerySucceeds</code> @81, <code>WorkspaceGuard_IgnoresResults_WhenWorkspaceSwitched</code> @123, <code>OperatorGuard_IgnoresResults_WhenSessionLocked</code> @157, <code>ExactKey_InvalidatedOnTyping</code> @190, <code>Clear_ResetsAllStateAndCancelsPendingRequest</code> @209, <code>Disposal_PreventsFurtherUpdates</code> @243.
+
+## ServiceItemStorageAndIdentityIntegrationTests.cs {#src-cfcce5eb35de}
+
+<code>Software/tests/GetSeek.IntegrationTests/ServiceItemStorageAndIdentityIntegrationTests.cs</code> · SHA-256 <code>0355e396446c5969230002b25362c02d9dc9d41269abc9b6aa32c94bdea19ffd</code>.
+
+Located test declarations: <code>Migration085_CleanDatabase_AppliesSuccessfully</code> @81, <code>Migration085_UpgradeFromV84_BackfillsProductAndPreservesAllColumns</code> @143, <code>DatabaseTrigger_trg_items_identity_immutable_PreventsSkuAndKindUpdate</code> @207, <code>DatabaseTrigger_trg_service_items_parent_kind_EnforcesParentInvariantAndCascade</code> @282, <code>IdentityImmutability_CommandLayer_ReturnsAuthoritativeErrors</code> @338, <code>RegistrationAtomicity_CreateService_CreatesBothTablesAndRejectsBypass</code> @409, <code>SV04_Matrix_ServiceRejection_AtEveryStockKitManufacturingEntry</code> @454, <code>ProductEquivalence_UntrackedAndTrackedProducts_RemainByteEquivalent</code> @570, <code>SaveProductConfigurationCommand_ServiceGuards_RejectsKitsAndStockAdjustments</code> @615, <code>RegistrationAtomicity_RollbackOnFailure_LeavesNoBareParentNorOrphan</code> @652.
 
 ## ServiceProtocolContractIntegrationTests.cs {#src-f138a07756da}
 

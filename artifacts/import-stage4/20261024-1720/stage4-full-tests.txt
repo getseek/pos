@@ -1,0 +1,25 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  GetSeek.Domain -> F:\Premium_POS\Software\src\GetSeek.Domain\bin\Release\net10.0\GetSeek.Domain.dll
+  GetSeek.Contracts -> F:\Premium_POS\Software\src\GetSeek.Contracts\bin\Release\net10.0\GetSeek.Contracts.dll
+  GetSeek.UI.Components -> F:\Premium_POS\Software\src\GetSeek.UI.Components\bin\Release\net10.0\GetSeek.UI.Components.dll
+  GetSeek.Application -> F:\Premium_POS\Software\src\GetSeek.Application\bin\Release\net10.0\GetSeek.Application.dll
+  GetSeek.Infrastructure -> F:\Premium_POS\Software\src\GetSeek.Infrastructure\bin\Release\net10.0\GetSeek.Infrastructure.dll
+  GetSeek.DataService -> F:\Premium_POS\Software\src\GetSeek.DataService\bin\Release\net10.0\GetSeek.DataService.dll
+  GetSeek.TestCrashHelper -> F:\Premium_POS\Software\tests\GetSeek.TestCrashHelper\bin\Release\net10.0\GetSeek.TestCrashHelper.dll
+  GetSeek.Desktop -> F:\Premium_POS\Software\src\GetSeek.Desktop\bin\Release\net10.0\GetSeek.Desktop.dll
+  GetSeek.AcceptanceTests -> F:\Premium_POS\Software\tests\GetSeek.AcceptanceTests\bin\Release\net10.0\GetSeek.AcceptanceTests.dll
+  GetSeek.UnitTests -> F:\Premium_POS\Software\tests\GetSeek.UnitTests\bin\Release\net10.0\GetSeek.UnitTests.dll
+  GetSeek.IntegrationTests -> F:\Premium_POS\Software\tests\GetSeek.IntegrationTests\bin\Release\net10.0\GetSeek.IntegrationTests.dll
+Test run for F:\Premium_POS\Software\tests\GetSeek.AcceptanceTests\bin\Release\net10.0\GetSeek.AcceptanceTests.dll (.NETCoreApp,Version=v10.0)
+Test run for F:\Premium_POS\Software\tests\GetSeek.UnitTests\bin\Release\net10.0\GetSeek.UnitTests.dll (.NETCoreApp,Version=v10.0)
+Test run for F:\Premium_POS\Software\tests\GetSeek.IntegrationTests\bin\Release\net10.0\GetSeek.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 950 ms - GetSeek.AcceptanceTests.dll (net10.0)
+
+Passed!  - Failed:     0, Passed:   294, Skipped:     0, Total:   294, Duration: 2 s - GetSeek.UnitTests.dll (net10.0)
+
+Passed!  - Failed:     0, Passed:  1022, Skipped:     0, Total:  1022, Duration: 11 m 53 s - GetSeek.IntegrationTests.dll (net10.0)

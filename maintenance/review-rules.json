@@ -141,7 +141,7 @@
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
           "line": 10,
-          "sha256": "ceb51d856449529101f01aeef751be73615dbfdb68dc742781c484d480f1c0db"
+          "sha256": "9fa28390769c4a3aa19ac7d77d1721b5fcf92c133520f180afddfb47c6ef0651"
         }
       ],
       "verification": "source-only; runtime not rerun"

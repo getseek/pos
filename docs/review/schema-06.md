@@ -65,7 +65,7 @@ flowchart TD
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
 | 0 / 0 | <code>target_price_level</code> | [price_level_settings](schema-05.md#price-level-settings) / <code>price_level</code> | NO ACTION / NO ACTION |
-| 1 / 0 | <code>min_quantity_unit_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 1 / 0 | <code>min_quantity_unit_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
 | 2 / 0 | <code>supersedes_offer_id</code> | [price_offers](schema-06.md#price-offers) / <code>id</code> | NO ACTION / NO ACTION |
 | 3 / 0 | <code>category_id</code> | [product_categories](schema-06.md#product-categories) / <code>id</code> | NO ACTION / CASCADE |
 | 4 / 0 | <code>item_id</code> | [items](schema-04.md#items) / <code>id</code> | NO ACTION / CASCADE |

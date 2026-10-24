@@ -345,11 +345,12 @@ flowchart TD
 | <code>loc_column</code> | <code>TEXT</code> | False | — |
 | <code>last_bought_unit_cost_minor_decimal</code> | <code>TEXT</code> | False | — |
 | <code>moving_average_unit_cost_minor_decimal</code> | <code>TEXT</code> | False | — |
+| <code>item_kind</code> | <code>TEXT</code> | True | — |
 
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
-| 0 / 0 | <code>weight_uom_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
-| 1 / 0 | <code>dimension_uom_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 0 / 0 | <code>weight_uom_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 1 / 0 | <code>dimension_uom_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
 | 2 / 0 | <code>category_id</code> | [product_categories](schema-06.md#product-categories) / <code>id</code> | NO ACTION / NO ACTION |
 
 </details>

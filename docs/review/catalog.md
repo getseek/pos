@@ -37,11 +37,11 @@ flowchart TD
     h2["SupplierCommandHandler"]
     h3["SaveProductConfigurationCommandHandler"]
     h4["StoreUomPreferenceCommandHandler"]
-    Entry -->|"19 command choices below"| Gate
+    Entry -->|"21 command choices below"| Gate
     Gate -->|"10 typed routes"| h0
     h0 -->|"success"| Good
     h0 -->|"failure"| Bad
-    Gate -->|"4 typed routes"| h1
+    Gate -->|"6 typed routes"| h1
     h1 -->|"success"| Good
     h1 -->|"failure"| Bad
     Gate -->|"3 typed routes"| h2
@@ -83,19 +83,39 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>CatalogItemDto</code>.
 
-Declaration: [CatalogCommands.cs:33](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogCommands.cs:34](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: [SaveAsync:74](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10072](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-28dedf4885c4).
+Handler method: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5).
 
-Same-owner helper candidates: [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-5fad92e9de43), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-b68d7b72fddb), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-e44a2ed4dba7), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-57d0dbcb5f2b), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-0531ea36799a), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-2527e2b42df3), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-62f46ad6ff6e), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-fde09fd7d72a). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-ffc80d767ec4), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-1ce10e9a79f4), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-4b7af22d8bfb), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>items</code> |
 | Writes / DDL | <code>item_pricing</code>, <code>items</code> |
-| Literal failure codes | <code>DUPLICATE_SKU</code>, <code>INVALID_BUYING_PRICE</code>, <code>INVALID_COST</code>, <code>INVALID_ITEM_LOCATION</code>, <code>INVALID_PRICE</code>, <code>INVALID_PRODUCT_PURPOSE</code>, <code>INVALID_THRESHOLD</code>, <code>INVALID_TRACKING_POLICY</code>, <code>NAME_REQUIRED</code>, <code>SKU_REQUIRED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
+| Literal failure codes | <code>DUPLICATE_SKU</code>, <code>INVALID_BUYING_PRICE</code>, <code>INVALID_COST</code>, <code>INVALID_ITEM_LOCATION</code>, <code>INVALID_PRICE</code>, <code>INVALID_PRODUCT_PURPOSE</code>, <code>INVALID_THRESHOLD</code>, <code>INVALID_TRACKING_POLICY</code>, <code>NAME_REQUIRED</code>, <code>SERVICE_REGISTRATION_REQUIRED</code>, <code>SKU_REQUIRED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
+
+Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
+
+### CreateServiceCommand
+
+Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>CatalogItemDto</code>.
+
+Declaration: [CatalogCommands.cs:106](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+
+Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
+
+Handler method: [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-ec56dbb87a53).
+
+Same-owner helper candidates: [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+
+| Direct method syntax | Extracted references |
+| --- | --- |
+| Reads | <code>items</code> |
+| Writes / DDL | <code>item_pricing</code>, <code>items</code>, <code>service_items</code> |
+| Literal failure codes | <code>DUPLICATE_SKU</code>, <code>INVALID_COST</code>, <code>INVALID_PRICE</code>, <code>NAME_REQUIRED</code>, <code>SKU_REQUIRED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -163,13 +183,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>bool</code>.
 
-Declaration: [CatalogCommands.cs:89](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogCommands.cs:92](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: [DeactivateProductAsync:10167](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogCommandHandler.HandleAsync(DeactivateProductCommand,CommandEnvelope&lt;DeactivateProductCommand&gt;,CancellationToken)](code-application.md#m-6f83dc634708).
+Handler method: [CatalogCommandHandler.HandleAsync(DeactivateProductCommand,CommandEnvelope&lt;DeactivateProductCommand&gt;,CancellationToken)](code-application.md#m-37816510b61b).
 
-Same-owner helper candidates: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-28dedf4885c4), [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-03898d6a1f08), [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-efb1a462e4f0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5), [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-83ad1eb9103b), [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-3a420f15c21e), [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-ec56dbb87a53), [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-ea4c9a18bbae). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -309,13 +329,13 @@ Construction sites: [SaveAsync:79](code-application.md#src-14918ebf4662), [SaveP
 
 Handler method: [SaveProductConfigurationCommandHandler.HandleAsync(SaveProductConfigurationCommand,CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,CancellationToken)](code-application.md#m-98f2baf362dd).
 
-Same-owner helper candidates: [SaveProductConfigurationCommandHandler.CreateChildEnvelope(CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,TChild)](code-application.md#m-5e5809c1e468), [SaveProductConfigurationCommandHandler.CopyFailure(CommandResult&lt;TIn&gt;)](code-application.md#m-bd3960362059), [SaveProductConfigurationCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-9a5be5999f57), [SaveProductConfigurationCommandHandler.ApplyActiveCategoryRuleAsync(CatalogItemDto,SaveItemPricingCommand,Guid?,int?,CancellationToken)](code-application.md#m-0a6a778277a0), [SaveProductConfigurationCommandHandler.SavePrimaryBarcodeAsync(Guid,string,string?,CancellationToken)](code-application.md#m-fbfa2605bdd7). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [SaveProductConfigurationCommandHandler.CreateChildEnvelope(CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,TChild)](code-application.md#m-b265a417a9b3), [SaveProductConfigurationCommandHandler.CopyFailure(CommandResult&lt;TIn&gt;)](code-application.md#m-b327a3a23017), [SaveProductConfigurationCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-fe15ef749c1c), [SaveProductConfigurationCommandHandler.ApplyActiveCategoryRuleAsync(CatalogItemDto,SaveItemPricingCommand,Guid?,int?,CancellationToken)](code-application.md#m-b560f7993ac1), [SaveProductConfigurationCommandHandler.SavePrimaryBarcodeAsync(Guid,string,string?,CancellationToken)](code-application.md#m-c3e2782a25a9). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
-| Reads | <code>item_kits</code> |
+| Reads | <code>item_kits</code>, <code>items</code> |
 | Writes / DDL | None extracted directly; inspect helpers and dynamic paths. |
-| Literal failure codes | <code>AUTH_UNAUTHORIZED</code>, <code>CANNOT_ADJUST_KIT_STOCK</code>, <code>CATEGORY_PRICING_RULE_NOT_FOUND</code>, <code>CATEGORY_PRICING_RULE_STALE</code>, <code>COMPONENTS_REQUIRED</code>, <code>KIT_NOT_FOUND</code>, <code>PRODUCT_PAYLOAD_INVALID</code>, <code>REASON_REQUIRED</code> |
+| Literal failure codes | <code>AUTH_UNAUTHORIZED</code>, <code>CANNOT_ADJUST_KIT_STOCK</code>, <code>CATEGORY_PRICING_RULE_NOT_FOUND</code>, <code>CATEGORY_PRICING_RULE_STALE</code>, <code>COMPONENTS_REQUIRED</code>, <code>ITEM_KIND_IMMUTABLE</code>, <code>KIT_NOT_FOUND</code>, <code>PRODUCT_PAYLOAD_INVALID</code>, <code>REASON_REQUIRED</code>, <code>SERVICE_KIT_NOT_ALLOWED</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code>, <code>SKU_IMMUTABLE</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -323,13 +343,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>bool</code>.
 
-Declaration: [CatalogCommands.cs:97](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogCommands.cs:100](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:648](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
+Construction sites: [HandleAsync:679](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
 
-Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-efb1a462e4f0).
+Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-3a420f15c21e).
 
-Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-62f46ad6ff6e), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-fde09fd7d72a). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -363,19 +383,39 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>CatalogItemDto</code>.
 
-Declaration: [CatalogCommands.cs:59](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogCommands.cs:61](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: [SaveAsync:76](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10043](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-03898d6a1f08).
+Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-83ad1eb9103b).
 
-Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-62f46ad6ff6e), [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-5fad92e9de43), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-b68d7b72fddb), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-e44a2ed4dba7), [CatalogCommandHandler.IsWeakerTrackingPolicy(string?,string)](code-application.md#m-5c803910eb9f), [CatalogCommandHandler.IsTrackingChangeBlockedAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-1afd85578a08), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-2527e2b42df3), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-57d0dbcb5f2b), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-0531ea36799a), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-fde09fd7d72a). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-ffc80d767ec4), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-1ce10e9a79f4), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-4b7af22d8bfb), [CatalogCommandHandler.IsWeakerTrackingPolicy(string?,string)](code-application.md#m-358646417251), [CatalogCommandHandler.IsTrackingChangeBlockedAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-33c95373caa4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>item_kits</code>, <code>item_pricing</code>, <code>items</code>, <code>sales_lines</code>, <code>stock_movements</code> |
 | Writes / DDL | <code>item_pricing</code>, <code>items</code> |
-| Literal failure codes | <code>BASE_UNIT_IMMUTABLE_WITH_MOVEMENTS</code>, <code>DUPLICATE_SKU</code>, <code>INVALID_BUYING_PRICE</code>, <code>INVALID_COST</code>, <code>INVALID_ITEM_LOCATION</code>, <code>INVALID_PRICE</code>, <code>INVALID_PRODUCT_PURPOSE</code>, <code>INVALID_THRESHOLD</code>, <code>INVALID_TRACKING_POLICY</code>, <code>ITEM_NOT_FOUND</code>, <code>KIT_ITEM_CANNOT_BE_TRACKED</code>, <code>NAME_REQUIRED</code>, <code>SKU_REQUIRED</code>, <code>TRACKING_CHANGE_BLOCKED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
+| Literal failure codes | <code>BASE_UNIT_IMMUTABLE_WITH_MOVEMENTS</code>, <code>DUPLICATE_SKU</code>, <code>INVALID_BUYING_PRICE</code>, <code>INVALID_COST</code>, <code>INVALID_ITEM_LOCATION</code>, <code>INVALID_PRICE</code>, <code>INVALID_PRODUCT_PURPOSE</code>, <code>INVALID_THRESHOLD</code>, <code>INVALID_TRACKING_POLICY</code>, <code>ITEM_KIND_IMMUTABLE</code>, <code>ITEM_NOT_FOUND</code>, <code>KIT_ITEM_CANNOT_BE_TRACKED</code>, <code>NAME_REQUIRED</code>, <code>SKU_IMMUTABLE</code>, <code>SKU_REQUIRED</code>, <code>TRACKING_CHANGE_BLOCKED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
+
+Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
+
+### UpdateServiceCommand
+
+Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result type: <code>CatalogItemDto</code>.
+
+Declaration: [CatalogCommands.cs:123](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
+
+Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
+
+Handler method: [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-ea4c9a18bbae).
+
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+
+| Direct method syntax | Extracted references |
+| --- | --- |
+| Reads | <code>items</code> |
+| Writes / DDL | <code>item_pricing</code>, <code>items</code> |
+| Literal failure codes | <code>DUPLICATE_SKU</code>, <code>INVALID_COST</code>, <code>INVALID_PRICE</code>, <code>ITEM_KIND_IMMUTABLE</code>, <code>ITEM_NOT_FOUND</code>, <code>NAME_REQUIRED</code>, <code>SKU_IMMUTABLE</code>, <code>SKU_REQUIRED</code>, <code>UOM_INACTIVE</code>, <code>UOM_NOT_FOUND</code>, <code>UOM_REQUIRED</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 

@@ -55,9 +55,9 @@ Handler method: [InventoryLossCommandHandler.HandleAsync(RecordInventoryLossComm
 
 | Direct method syntax | Extracted references |
 | --- | --- |
-| Reads | <code>inventory_loss_records</code> |
+| Reads | <code>inventory_loss_records</code>, <code>items</code> |
 | Writes / DDL | None extracted directly; inspect helpers and dynamic paths. |
-| Literal failure codes | <code>INVALID_LOSS</code> |
+| Literal failure codes | <code>INVALID_LOSS</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 

@@ -7,11 +7,39 @@ evidence: ["E-015"]
 features: ["PP-F022"]
 ---
 
-# Schema 10: shift_z_reports to supplier_invoice_credits
+# Schema 10: service_items to supplier_invoice_credit_lines
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 [Complete table index and reconstruction limits](schema.md). Arrows below are declared foreign keys, not inferred cardinalities.
+
+## service_items {#service-items}
+
+<details markdown>
+<summary>Relationship diagram</summary>
+
+```mermaid
+flowchart TD
+    T["service_items"]
+    P0["items"]
+    T -->|"item_id → id"| P0
+```
+
+</details>
+
+<details markdown>
+<summary>Columns and foreign-key policies</summary>
+
+| Column | SQLite type | NOT NULL | Primary-key position |
+| --- | --- | --- | --- |
+| <code>item_id</code> | <code>TEXT</code> | False | 1 |
+| <code>created_at_utc</code> | <code>TEXT</code> | True | — |
+
+| FK / sequence | Child column | Parent table / column | On update / delete |
+| --- | --- | --- | --- |
+| 0 / 0 | <code>item_id</code> | [items](schema-04.md#items) / <code>id</code> | NO ACTION / CASCADE |
+
+</details>
 
 ## shift_z_reports {#shift-z-reports}
 
@@ -400,8 +428,8 @@ flowchart TD
 
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
-| 0 / 0 | <code>suggested_base_uom_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
-| 1 / 0 | <code>default_entry_uom_code</code> | [uoms](schema-11.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 0 / 0 | <code>suggested_base_uom_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
+| 1 / 0 | <code>default_entry_uom_code</code> | [uoms](schema-12.md#uoms) / <code>code</code> | NO ACTION / NO ACTION |
 | 2 / 0 | <code>dimension_code</code> | [uom_dimensions](schema-11.md#uom-dimensions) / <code>code</code> | NO ACTION / NO ACTION |
 
 </details>
@@ -436,42 +464,6 @@ flowchart TD
 | FK / sequence | Child column | Parent table / column | On update / delete |
 | --- | --- | --- | --- |
 | 0 / 0 | <code>invoice_line_id</code> | [supplier_invoice_lines](schema-11.md#supplier-invoice-lines) / <code>id</code> | NO ACTION / NO ACTION |
-| 1 / 0 | <code>credit_id</code> | [supplier_invoice_credits](schema-10.md#supplier-invoice-credits) / <code>id</code> | NO ACTION / NO ACTION |
-
-</details>
-
-## supplier_invoice_credits {#supplier-invoice-credits}
-
-<details markdown>
-<summary>Relationship diagram</summary>
-
-```mermaid
-flowchart TD
-    T["supplier_invoice_credits"]
-    P0["supplier_invoices"]
-    P1["users"]
-    T -->|"invoice_id → id"| P0
-    T -->|"actor_user_id → id"| P1
-```
-
-</details>
-
-<details markdown>
-<summary>Columns and foreign-key policies</summary>
-
-| Column | SQLite type | NOT NULL | Primary-key position |
-| --- | --- | --- | --- |
-| <code>id</code> | <code>TEXT</code> | False | 1 |
-| <code>invoice_id</code> | <code>TEXT</code> | True | — |
-| <code>credit_minor</code> | <code>INTEGER</code> | True | — |
-| <code>command_key</code> | <code>TEXT</code> | True | — |
-| <code>actor_user_id</code> | <code>TEXT</code> | True | — |
-| <code>reason</code> | <code>TEXT</code> | True | — |
-| <code>created_at_utc</code> | <code>TEXT</code> | True | — |
-
-| FK / sequence | Child column | Parent table / column | On update / delete |
-| --- | --- | --- | --- |
-| 0 / 0 | <code>actor_user_id</code> | [users](schema-12.md#users) / <code>id</code> | NO ACTION / NO ACTION |
-| 1 / 0 | <code>invoice_id</code> | [supplier_invoices](schema-11.md#supplier-invoices) / <code>id</code> | NO ACTION / NO ACTION |
+| 1 / 0 | <code>credit_id</code> | [supplier_invoice_credits](schema-11.md#supplier-invoice-credits) / <code>id</code> | NO ACTION / NO ACTION |
 
 </details>

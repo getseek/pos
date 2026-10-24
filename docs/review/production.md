@@ -51,9 +51,9 @@ Declaration: [ManufacturingCommands.cs:321](code-application.md#src-98743155dc28
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [ManufacturingCommandHandler.HandleAsync(CancelProductionRunCommand,CommandEnvelope&lt;CancelProductionRunCommand&gt;,CancellationToken)](code-application.md#m-916f3010cfa0).
+Handler method: [ManufacturingCommandHandler.HandleAsync(CancelProductionRunCommand,CommandEnvelope&lt;CancelProductionRunCommand&gt;,CancellationToken)](code-application.md#m-4e8a2227ebb2).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -71,9 +71,9 @@ Declaration: [ManufacturingCommands.cs:307](code-application.md#src-98743155dc28
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [ManufacturingCommandHandler.HandleAsync(CompleteProductionRunCommand,CommandEnvelope&lt;CompleteProductionRunCommand&gt;,CancellationToken)](code-application.md#m-138ff74ced45).
+Handler method: [ManufacturingCommandHandler.HandleAsync(CompleteProductionRunCommand,CommandEnvelope&lt;CompleteProductionRunCommand&gt;,CancellationToken)](code-application.md#m-eada56fe976e).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.LoadProductionRunByIdAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-e0660719ed92), [ManufacturingCommandHandler.ExecuteProductionCoreAsync(ExecuteProductionRunCommand,CommandEnvelope&lt;ExecuteProductionRunCommand&gt;,CancellationToken,ProductionRunDto?,bool)](code-application.md#m-62cdd0de17ec). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.LoadProductionRunByIdAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-8114ff5ae044), [ManufacturingCommandHandler.ExecuteProductionCoreAsync(ExecuteProductionRunCommand,CommandEnvelope&lt;ExecuteProductionRunCommand&gt;,CancellationToken,ProductionRunDto?,bool)](code-application.md#m-62cdd0de17ec). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -93,7 +93,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(CreateBomCommand,CommandEnvelope&lt;CreateBomCommand&gt;,CancellationToken)](code-application.md#m-63049f36f6ae).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateBomInternalAsync(Guid,string,decimal,bool,IReadOnlyList&lt;BomItemInput&gt;,DateTime,string?,CancellationToken)](code-application.md#m-398530bb5b12). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateBomInternalAsync(Guid,string,decimal,bool,IReadOnlyList&lt;BomItemInput&gt;,DateTime,string?,CancellationToken)](code-application.md#m-89c8dd55e8cc). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -113,7 +113,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(CreateItemVariantCommand,CommandEnvelope&lt;CreateItemVariantCommand&gt;,CancellationToken)](code-application.md#m-5227a4c7e32f).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -133,7 +133,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(CreateKitCommand,CommandEnvelope&lt;CreateKitCommand&gt;,CancellationToken)](code-application.md#m-f6c0f76b3ec8).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateKitInternalAsync(Guid,string,bool,IReadOnlyList&lt;KitComponentInput&gt;,DateTime,CancellationToken)](code-application.md#m-2780604bb9d3). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateKitInternalAsync(Guid,string,bool,IReadOnlyList&lt;KitComponentInput&gt;,DateTime,CancellationToken)](code-application.md#m-8e59724fd864). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -151,15 +151,15 @@ Declaration: [ManufacturingCommands.cs:285](code-application.md#src-98743155dc28
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [ManufacturingCommandHandler.HandleAsync(CreateProductionDraftCommand,CommandEnvelope&lt;CreateProductionDraftCommand&gt;,CancellationToken)](code-application.md#m-0f69108612ea).
+Handler method: [ManufacturingCommandHandler.HandleAsync(CreateProductionDraftCommand,CommandEnvelope&lt;CreateProductionDraftCommand&gt;,CancellationToken)](code-application.md#m-f3945c1d6e7e).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>boms</code>, <code>items</code> |
 | Writes / DDL | <code>production_runs</code> |
-| Literal failure codes | <code>BOM_INACTIVE</code>, <code>BOM_NOT_FOUND</code>, <code>INVALID_LOT_FORMULA</code>, <code>INVALID_QUANTITY</code> |
+| Literal failure codes | <code>BOM_INACTIVE</code>, <code>BOM_NOT_FOUND</code>, <code>INVALID_LOT_FORMULA</code>, <code>INVALID_QUANTITY</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -173,7 +173,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(DeactivateBomCommand,CommandEnvelope&lt;DeactivateBomCommand&gt;,CancellationToken)](code-application.md#m-851734501c25).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -189,11 +189,11 @@ Handler: [ManufacturingCommandHandler](code-application.md#src-e469f680f9bb). Re
 
 Declaration: [ManufacturingCommands.cs:232](code-application.md#src-98743155dc28). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:61](code-application.md#src-c24b9e05b3b2), [HandleAsync:62](code-application.md#src-c24b9e05b3b2)
+Construction sites: [HandleAsync:110](code-application.md#src-c24b9e05b3b2), [HandleAsync:111](code-application.md#src-c24b9e05b3b2)
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(DeactivateKitCommand,CommandEnvelope&lt;DeactivateKitCommand&gt;,CancellationToken)](code-application.md#m-b8fa04917f75).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -209,7 +209,7 @@ Handler: [ManufacturingCommandHandler](code-application.md#src-e469f680f9bb). Re
 
 Declaration: [ManufacturingCommands.cs:269](code-application.md#src-98743155dc28). <code>RequiredPermission = &quot;pos.manufacturing.execute&quot;</code>
 
-Construction sites: [HandleAsync:995](code-application.md#src-e469f680f9bb), [HandleAsync:1030](code-application.md#src-e469f680f9bb), [ExecuteProductionRunFromUiAsync:12425](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:1011](code-application.md#src-e469f680f9bb), [HandleAsync:1046](code-application.md#src-e469f680f9bb), [ExecuteProductionRunFromUiAsync:12425](code-desktop.md#src-16497b924a99)
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(ExecuteProductionRunCommand,CommandEnvelope&lt;ExecuteProductionRunCommand&gt;,CancellationToken)](code-application.md#m-9c5de1eeeb47).
 
@@ -233,7 +233,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(RemoveItemVariantCommand,CommandEnvelope&lt;RemoveItemVariantCommand&gt;,CancellationToken)](code-application.md#m-004d2b130c9f).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-57ea5632a5ea). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-651f9bf2e671). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -251,9 +251,9 @@ Declaration: [ManufacturingCommands.cs:297](code-application.md#src-98743155dc28
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [ManufacturingCommandHandler.HandleAsync(StageProductionRunCommand,CommandEnvelope&lt;StageProductionRunCommand&gt;,CancellationToken)](code-application.md#m-fdfcd29fb217).
+Handler method: [ManufacturingCommandHandler.HandleAsync(StageProductionRunCommand,CommandEnvelope&lt;StageProductionRunCommand&gt;,CancellationToken)](code-application.md#m-d88e4ed45202).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.LoadProductionRunByIdAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-e0660719ed92), [ManufacturingCommandHandler.ExecuteProductionCoreAsync(ExecuteProductionRunCommand,CommandEnvelope&lt;ExecuteProductionRunCommand&gt;,CancellationToken,ProductionRunDto?,bool)](code-application.md#m-62cdd0de17ec). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.LoadProductionRunByIdAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-8114ff5ae044), [ManufacturingCommandHandler.ExecuteProductionCoreAsync(ExecuteProductionRunCommand,CommandEnvelope&lt;ExecuteProductionRunCommand&gt;,CancellationToken,ProductionRunDto?,bool)](code-application.md#m-62cdd0de17ec). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -273,7 +273,7 @@ Construction sites: **None found** among explicit `new Type(...)` expressions. T
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(UpdateBomCommand,CommandEnvelope&lt;UpdateBomCommand&gt;,CancellationToken)](code-application.md#m-9f106ee245b2).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateBomInternalAsync(Guid,string,decimal,bool,IReadOnlyList&lt;BomItemInput&gt;,DateTime,string?,CancellationToken)](code-application.md#m-398530bb5b12). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateBomInternalAsync(Guid,string,decimal,bool,IReadOnlyList&lt;BomItemInput&gt;,DateTime,string?,CancellationToken)](code-application.md#m-89c8dd55e8cc). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -289,11 +289,11 @@ Handler: [ManufacturingCommandHandler](code-application.md#src-e469f680f9bb). Re
 
 Declaration: [ManufacturingCommands.cs:222](code-application.md#src-98743155dc28). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:86](code-application.md#src-c24b9e05b3b2)
+Construction sites: [HandleAsync:135](code-application.md#src-c24b9e05b3b2)
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(UpdateKitCommand,CommandEnvelope&lt;UpdateKitCommand&gt;,CancellationToken)](code-application.md#m-de55ac15d61c).
 
-Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateKitInternalAsync(Guid,string,bool,IReadOnlyList&lt;KitComponentInput&gt;,DateTime,CancellationToken)](code-application.md#m-2780604bb9d3). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ManufacturingCommandHandler.CreateOrUpdateKitInternalAsync(Guid,string,bool,IReadOnlyList&lt;KitComponentInput&gt;,DateTime,CancellationToken)](code-application.md#m-8e59724fd864). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |

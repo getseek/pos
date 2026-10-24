@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "b2a62ba988b7a21243fba3aedb6788909cde68e426c972c4155dd09e0af590ed",
+      "sha256": "60c1f06d688016e5ac8f8d721b04b0900f961595007c16900394175edb9064d4",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -679,6 +679,75 @@
       "times": {
         "duration": "11 m 53 s (integration) + 2 s (unit) + 950 ms (acceptance)",
         "run_at_local": "2026-10-24 17:19 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-030",
+      "kind": "fresh-automated",
+      "path": "artifacts/service-s01/20261025-0610/w2-import-tests.txt",
+      "sha256": "9c3f53c536aeb54c29427b356587e9a5ee55b879d29bed8254b2ab9f9d520389",
+      "reviewed_on": "2026-10-25",
+      "claim": "W2/S01 import-filtered run (worker-executed dotnet test console output, not TRX): 60/60 passed, 0 failed (Unit 7, Integration 53). Covers import lifecycle against the S01 storage/guard changes. No TRX, device or live-shop claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "60",
+        "passed": "60",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "46 s (integration) + 622 ms (unit)",
+        "run_at_local": "2026-10-25 ~01:10 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-031",
+      "kind": "fresh-automated",
+      "path": "artifacts/service-s01/20261025-0610/w2-full-tests-orchestrator-rerun.txt",
+      "sha256": "ef3395636d300ff934343464c1c67be1d0dfcd89898a7adc9655e44c1ca0b65a",
+      "reviewed_on": "2026-10-25",
+      "claim": "W2/S01 full solution suite, INDEPENDENT ORCHESTRATOR RE-RUN after the worker's original full-suite log proved invalid (it recorded 143/1032 integration tests and was rejected as evidence): 1327/1327 passed, 0 failed (Acceptance 1, Unit 294, Integration 1032 = 1022 pre-existing + 10 new Service identity/SV-04 tests, integration 6 m 28 s). Console output, not TRX. Native dialogs, live shop and physical devices were not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1327",
+        "passed": "1327",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "6 m 28 s (integration) + 2 s (unit) + 997 ms (acceptance)",
+        "run_at_local": "2026-10-25 ~06:02 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

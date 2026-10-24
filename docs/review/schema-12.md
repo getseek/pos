@@ -7,11 +7,35 @@ evidence: ["E-015"]
 features: ["PP-F022"]
 ---
 
-# Schema 12: user_permission_overrides to workspace_classification
+# Schema 12: uoms to workspace_classification
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
 [Complete table index and reconstruction limits](schema.md). Arrows below are declared foreign keys, not inferred cardinalities.
+
+## uoms {#uoms}
+
+No outgoing foreign key declared in the reconstructed schema.
+
+<details markdown>
+<summary>Columns and foreign-key policies</summary>
+
+| Column | SQLite type | NOT NULL | Primary-key position |
+| --- | --- | --- | --- |
+| <code>code</code> | <code>TEXT</code> | False | 1 |
+| <code>name</code> | <code>TEXT</code> | True | — |
+| <code>conversion_factor</code> | <code>REAL</code> | True | — |
+| <code>is_base_unit</code> | <code>INTEGER</code> | True | — |
+| <code>dimension_code</code> | <code>TEXT</code> | False | — |
+| <code>unit_kind</code> | <code>TEXT</code> | False | — |
+| <code>display_group</code> | <code>TEXT</code> | False | — |
+| <code>canonical_factor_decimal</code> | <code>TEXT</code> | False | — |
+| <code>is_active</code> | <code>INTEGER</code> | True | — |
+| <code>is_builtin</code> | <code>INTEGER</code> | True | — |
+| <code>max_decimal_places</code> | <code>INTEGER</code> | True | — |
+| <code>definition_note</code> | <code>TEXT</code> | False | — |
+
+</details>
 
 ## user_permission_overrides {#user-permission-overrides}
 

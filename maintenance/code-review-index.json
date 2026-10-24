@@ -9919,7 +9919,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Catalog/CatalogCommandHandler.cs",
-      "sha256": "ba30548fd390ef43a5311fd9bf9b6392e672000db649371947ce4f9c348e483d",
+      "sha256": "d7fb4bafef4f8f8dc11b3867d112cc93691d2920dd5d1c0cf081f2770586d465",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -9927,7 +9927,7 @@
           "name": "CatalogCommandHandler",
           "kind": "ClassDeclaration",
           "line": 11,
-          "end": 985,
+          "end": 1004,
           "bases": [
             "ICommandHandler<CreateProductCommand, CatalogItemDto>",
             "ICommandHandler<UpdateProductCommand, CatalogItemDto>",
@@ -9945,18 +9945,10 @@
           "properties": []
         },
         {
-          "name": "UnitDefinition",
-          "kind": "RecordStructDeclaration",
-          "line": 710,
-          "end": 715,
-          "bases": [],
-          "properties": []
-        },
-        {
           "name": "DefaultUnitResolution",
           "kind": "RecordStructDeclaration",
-          "line": 717,
-          "end": 717,
+          "line": 710,
+          "end": 710,
           "bases": [],
           "properties": []
         }
@@ -10859,11 +10851,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-122e3c01f7d8",
+          "id": "M-0531ea36799a",
           "name": "ResolveDefaultUnitAsync",
           "owner": "CatalogCommandHandler",
-          "line": 719,
-          "end": 755,
+          "line": 712,
+          "end": 748,
           "signature": "ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)",
           "returns": "Task<DefaultUnitResolution>",
           "parameters": [
@@ -10896,37 +10888,37 @@
           "calls": [
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 727,
+              "line": 720,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 729,
+              "line": 722,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 729,
+              "line": 722,
               "receiver": "requestedCode",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 731,
+              "line": 724,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 736,
+              "line": 729,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ReadUnitDefinitionAsync",
-              "line": 736,
+              "line": 729,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -10934,11 +10926,15 @@
           "creates": [
             {
               "type": "DefaultUnitResolution",
-              "line": 733
+              "line": 726
             },
             {
               "type": "DefaultUnitResolution",
-              "line": 739
+              "line": 732
+            },
+            {
+              "type": "DefaultUnitResolution",
+              "line": 736
             },
             {
               "type": "DefaultUnitResolution",
@@ -10946,11 +10942,7 @@
             },
             {
               "type": "DefaultUnitResolution",
-              "line": 750
-            },
-            {
-              "type": "DefaultUnitResolution",
-              "line": 754
+              "line": 747
             }
           ],
           "errors": [],
@@ -10959,11 +10951,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-4014814ab7cc",
+          "id": "M-57d0dbcb5f2b",
           "name": "ReadUnitDefinitionAsync",
           "owner": "CatalogCommandHandler",
-          "line": 757,
-          "end": 776,
+          "line": 750,
+          "end": 774,
           "signature": "ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)",
           "returns": "Task<UnitDefinition?>",
           "parameters": [
@@ -10987,50 +10979,56 @@
           "attributes": [],
           "calls": [
             {
+              "name": "TryGetUom",
+              "line": 754,
+              "receiver": "snapshot",
+              "generic_types": []
+            },
+            {
               "name": "CreateCommand",
-              "line": 759,
+              "line": 757,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 762,
+              "line": 760,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 764,
+              "line": 762,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 764,
+              "line": 762,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 765,
+              "line": 763,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 771,
+              "line": 769,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 772,
+              "line": 770,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 775,
+              "line": 773,
               "receiver": "reader",
               "generic_types": []
             }
@@ -11038,7 +11036,7 @@
           "creates": [
             {
               "type": "UnitDefinition",
-              "line": 770
+              "line": 768
             }
           ],
           "errors": [],
@@ -11046,18 +11044,18 @@
             {
               "operation": "FROM",
               "table": "uoms",
-              "line": 761
+              "line": 759
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-ee0e1f6d5d9e",
+          "id": "M-e44a2ed4dba7",
           "name": "NormalizeTrackingPolicy",
           "owner": "CatalogCommandHandler",
-          "line": 782,
-          "end": 809,
+          "line": 780,
+          "end": 807,
           "signature": "NormalizeTrackingPolicy(bool,string?,string?)",
           "returns": "string",
           "parameters": [
@@ -11078,13 +11076,13 @@
           "calls": [
             {
               "name": "Trim",
-              "line": 791,
+              "line": 789,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 792,
+              "line": 790,
               "receiver": "normalized",
               "generic_types": []
             }
@@ -11096,11 +11094,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-840b597904ce",
+          "id": "M-5458a32f25ee",
           "name": "TrackingPolicyRank",
           "owner": "CatalogCommandHandler",
-          "line": 811,
-          "end": 824,
+          "line": 809,
+          "end": 822,
           "signature": "TrackingPolicyRank(string?)",
           "returns": "int",
           "parameters": [
@@ -11113,7 +11111,7 @@
           "calls": [
             {
               "name": "Equals",
-              "line": 813,
+              "line": 811,
               "receiver": "string",
               "generic_types": []
             }
@@ -11125,11 +11123,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-cc1501f670a9",
+          "id": "M-5c803910eb9f",
           "name": "IsWeakerTrackingPolicy",
           "owner": "CatalogCommandHandler",
-          "line": 826,
-          "end": 827,
+          "line": 824,
+          "end": 825,
           "signature": "IsWeakerTrackingPolicy(string?,string)",
           "returns": "bool",
           "parameters": [
@@ -11146,7 +11144,7 @@
           "calls": [
             {
               "name": "TrackingPolicyRank",
-              "line": 827,
+              "line": 825,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -11158,11 +11156,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-27ec75c9fc0a",
+          "id": "M-5fad92e9de43",
           "name": "NormalizeProductPurpose",
           "owner": "CatalogCommandHandler",
-          "line": 829,
-          "end": 835,
+          "line": 827,
+          "end": 833,
           "signature": "NormalizeProductPurpose(string?)",
           "returns": "string?",
           "parameters": [
@@ -11175,13 +11173,13 @@
           "calls": [
             {
               "name": "Trim",
-              "line": 831,
+              "line": 829,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 832,
+              "line": 830,
               "receiver": "normalized",
               "generic_types": []
             }
@@ -11193,11 +11191,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-3421bc337973",
+          "id": "M-b68d7b72fddb",
           "name": "TryNormalizeCoordinates",
           "owner": "CatalogCommandHandler",
-          "line": 837,
-          "end": 871,
+          "line": 835,
+          "end": 869,
           "signature": "TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)",
           "returns": "bool",
           "parameters": [
@@ -11230,31 +11228,31 @@
           "calls": [
             {
               "name": "Trim",
-              "line": 851,
+              "line": 849,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Any",
-              "line": 858,
+              "line": 856,
               "receiver": "trimmed",
               "generic_types": []
             },
             {
               "name": "IsAsciiLetterOrDigit",
-              "line": 858,
+              "line": 856,
               "receiver": "char",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 864,
+              "line": 862,
               "receiver": "trimmed",
               "generic_types": []
             },
             {
               "name": "IsValid",
-              "line": 868,
+              "line": 866,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -11266,11 +11264,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-818e6b4917f6",
+          "id": "M-fde09fd7d72a",
           "name": "AppendItemHistoryAsync",
           "owner": "CatalogCommandHandler",
-          "line": 873,
-          "end": 908,
+          "line": 871,
+          "end": 906,
           "signature": "AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope<TCommand>,CancellationToken)",
           "returns": "Task",
           "parameters": [
@@ -11319,67 +11317,67 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 886,
+              "line": 884,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 897,
+              "line": 895,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 897,
+              "line": 895,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 897,
+              "line": 895,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 898,
+              "line": 896,
               "receiver": "itemId",
               "generic_types": []
             },
             {
               "name": "Serialize",
-              "line": 903,
+              "line": 901,
               "receiver": "JsonSerializer",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 904,
+              "line": 902,
               "receiver": "envelope.InitiatorUserId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 905,
+              "line": 903,
               "receiver": "envelope.TimestampUtc",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 906,
+              "line": 904,
               "receiver": "envelope.CorrelationId",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 907,
+              "line": 905,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 907,
+              "line": 905,
               "receiver": "cmd",
               "generic_types": []
             }
@@ -11390,18 +11388,18 @@
             {
               "operation": "INSERT INTO",
               "table": "item_change_history",
-              "line": 888
+              "line": 886
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-0101e740e865",
+          "id": "M-1afd85578a08",
           "name": "IsTrackingChangeBlockedAsync",
           "owner": "CatalogCommandHandler",
-          "line": 910,
-          "end": 926,
+          "line": 908,
+          "end": 924,
           "signature": "IsTrackingChangeBlockedAsync(DbConnection,DbTransaction?,Guid,CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -11426,37 +11424,37 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 912,
+              "line": 910,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 923,
+              "line": 921,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 923,
+              "line": 921,
               "receiver": "itemId",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 924,
+              "line": 922,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 924,
+              "line": 922,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 924,
+              "line": 922,
               "receiver": "cmd",
               "generic_types": []
             }
@@ -11467,48 +11465,48 @@
             {
               "operation": "FROM",
               "table": "stock_movements",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "draft_cart_lines",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "draft_carts",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "item_kit_components",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "bom_items",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "lots",
-              "line": 914
+              "line": 912
             },
             {
               "operation": "FROM",
               "table": "serials",
-              "line": 914
+              "line": 912
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-17f9fd96ab2c",
+          "id": "M-2527e2b42df3",
           "name": "ResolveCategoryAsync",
           "owner": "CatalogCommandHandler",
-          "line": 932,
-          "end": 976,
+          "line": 930,
+          "end": 995,
           "signature": "ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)",
           "returns": "Task<CategoryResolution>",
           "parameters": [
@@ -11537,87 +11535,105 @@
           "calls": [
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 934,
+              "line": 932,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "FindCategory",
+              "line": 939,
+              "receiver": "snapshot",
+              "generic_types": []
+            },
+            {
+              "name": "Equals",
+              "line": 950,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 939,
+              "line": 958,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 944,
+              "line": 963,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 944,
+              "line": 963,
               "receiver": "categoryId.Value",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 949,
+              "line": 968,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 949,
+              "line": 968,
               "receiver": "categoryName!",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 952,
+              "line": 971,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 952,
+              "line": 971,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 953,
+              "line": 972,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 958,
+              "line": 977,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 958,
+              "line": 977,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 960,
+              "line": 979,
               "receiver": "reader",
-              "generic_types": []
-            },
-            {
-              "name": "Equals",
-              "line": 968,
-              "receiver": "string",
               "generic_types": []
             }
           ],
           "creates": [
             {
               "type": "CategoryResolution",
-              "line": 936
+              "line": 934
+            },
+            {
+              "type": "CategoryResolution",
+              "line": 942
+            },
+            {
+              "type": "CategoryResolution",
+              "line": 947
+            },
+            {
+              "type": "CategoryResolution",
+              "line": 952
             },
             {
               "type": "CategoryResolution",
@@ -11625,15 +11641,19 @@
             },
             {
               "type": "CategoryResolution",
-              "line": 965
+              "line": 974
             },
             {
               "type": "CategoryResolution",
-              "line": 970
+              "line": 984
             },
             {
               "type": "CategoryResolution",
-              "line": 975
+              "line": 989
+            },
+            {
+              "type": "CategoryResolution",
+              "line": 994
             }
           ],
           "errors": [],
@@ -11641,23 +11661,23 @@
             {
               "operation": "FROM",
               "table": "product_categories",
-              "line": 943
+              "line": 962
             },
             {
               "operation": "FROM",
               "table": "product_categories",
-              "line": 948
+              "line": 967
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-aaa148089e6d",
+          "id": "M-62f46ad6ff6e",
           "name": "AddParam",
           "owner": "CatalogCommandHandler",
-          "line": 978,
-          "end": 984,
+          "line": 997,
+          "end": 1003,
           "signature": "AddParam(DbCommand,string,object)",
           "returns": "void",
           "parameters": [
@@ -11678,13 +11698,13 @@
           "calls": [
             {
               "name": "CreateParameter",
-              "line": 980,
+              "line": 999,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 983,
+              "line": 1002,
               "receiver": "cmd.Parameters",
               "generic_types": []
             }
@@ -11698,7 +11718,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 986
+      "lines": 1005
     },
     {
       "path": "Software/src/GetSeek.Application/Catalog/CatalogCommands.cs",
@@ -14422,7 +14442,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
-      "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44",
+      "sha256": "e7ce3a816010aac26bb4fd9645c52abdb4f561ec78951653617f2f931d33d104",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -14430,7 +14450,7 @@
           "name": "SaveProductConfigurationCommandHandler",
           "kind": "ClassDeclaration",
           "line": 13,
-          "end": 228,
+          "end": 231,
           "bases": [
             "ICommandHandler<SaveProductConfigurationCommand, CatalogItemDto>"
           ],
@@ -14439,11 +14459,11 @@
       ],
       "methods": [
         {
-          "id": "M-a9139d457f70",
+          "id": "M-98f2baf362dd",
           "name": "HandleAsync",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 16,
-          "end": 126,
+          "line": 19,
+          "end": 129,
           "signature": "HandleAsync(SaveProductConfigurationCommand,CommandEnvelope<SaveProductConfigurationCommand>,CancellationToken)",
           "returns": "Task<CommandResult<CatalogItemDto>>",
           "parameters": [
@@ -14464,7 +14484,7 @@
           "calls": [
             {
               "name": "Failure",
-              "line": 22,
+              "line": 25,
               "receiver": "CommandResult<CatalogItemDto>",
               "generic_types": [
                 "CatalogItemDto"
@@ -14472,109 +14492,109 @@
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 28,
+              "line": 31,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 31,
+              "line": 34,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "HasPermissionAsync",
-              "line": 31,
+              "line": 34,
               "receiver": "permissionResolver",
               "generic_types": []
             },
             {
               "name": "CreateChildEnvelope",
-              "line": 43,
-              "receiver": "<implicit>",
-              "generic_types": []
-            },
-            {
-              "name": "HandleAsync",
-              "line": 44,
-              "receiver": "catalogHandler",
-              "generic_types": []
-            },
-            {
-              "name": "CopyFailure",
               "line": 46,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 57,
+              "line": 47,
+              "receiver": "catalogHandler",
+              "generic_types": []
+            },
+            {
+              "name": "CopyFailure",
+              "line": 49,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "HandleAsync",
+              "line": 60,
               "receiver": "manufacturingHandler",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 74,
+              "line": 77,
               "receiver": "unitOfWork.Connection",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 76,
+              "line": 79,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 76,
+              "line": 79,
               "receiver": "product.Id",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 77,
+              "line": 80,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 77,
+              "line": 80,
               "receiver": "check",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 84,
+              "line": 87,
               "receiver": "manufacturing",
               "generic_types": []
             },
             {
               "name": "ApplyActiveCategoryRuleAsync",
-              "line": 98,
+              "line": 101,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 105,
+              "line": 108,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "SavePrimaryBarcodeAsync",
-              "line": 112,
+              "line": 115,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 120,
+              "line": 123,
               "receiver": "command.StockAdjustmentReason!",
               "generic_types": []
             },
             {
               "name": "Success",
-              "line": 125,
+              "line": 128,
               "receiver": "CommandResult<CatalogItemDto>",
               "generic_types": [
                 "CatalogItemDto"
@@ -14584,76 +14604,76 @@
           "creates": [
             {
               "type": "CatalogCommandHandler",
-              "line": 39
+              "line": 42
             },
             {
               "type": "ManufacturingCommandHandler",
-              "line": 56
-            },
-            {
-              "type": "DeactivateKitCommand",
-              "line": 58
-            },
-            {
-              "type": "DeactivateKitCommand",
               "line": 59
             },
             {
-              "type": "ManufacturingCommandHandler",
-              "line": 80
+              "type": "DeactivateKitCommand",
+              "line": 61
             },
             {
-              "type": "UpdateKitCommand",
+              "type": "DeactivateKitCommand",
+              "line": 62
+            },
+            {
+              "type": "ManufacturingCommandHandler",
               "line": 83
             },
             {
+              "type": "UpdateKitCommand",
+              "line": 86
+            },
+            {
               "type": "SaveItemPricingCommandHandler",
-              "line": 105
+              "line": 108
             },
             {
               "type": "AdjustStockCommand",
-              "line": 119
+              "line": 122
             },
             {
               "type": "InventoryCommandHandler",
-              "line": 121
+              "line": 124
             }
           ],
           "errors": [
             {
-              "line": 22,
+              "line": 25,
               "code": "PRODUCT_PAYLOAD_INVALID"
             },
             {
-              "line": 27,
+              "line": 30,
               "code": "CANNOT_ADJUST_KIT_STOCK"
             },
             {
-              "line": 29,
+              "line": 32,
               "code": "REASON_REQUIRED"
             },
             {
-              "line": 33,
+              "line": 36,
               "code": "AUTH_UNAUTHORIZED"
             },
             {
-              "line": 37,
+              "line": 40,
               "code": "COMPONENTS_REQUIRED"
             },
             {
-              "line": 78,
+              "line": 81,
               "code": "KIT_NOT_FOUND"
             },
             {
-              "line": 90,
+              "line": 93,
               "code": "CATEGORY_PRICING_RULE_NOT_FOUND"
             },
             {
-              "line": 103,
+              "line": 106,
               "code": "CATEGORY_PRICING_RULE_STALE"
             },
             {
-              "line": 104,
+              "line": 107,
               "code": "CATEGORY_PRICING_RULE_NOT_FOUND"
             }
           ],
@@ -14661,18 +14681,18 @@
             {
               "operation": "FROM",
               "table": "item_kits",
-              "line": 75
+              "line": 78
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-a6462c27f0ea",
+          "id": "M-0a6a778277a0",
           "name": "ApplyActiveCategoryRuleAsync",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 128,
-          "end": 164,
+          "line": 131,
+          "end": 167,
           "signature": "ApplyActiveCategoryRuleAsync(CatalogItemDto,SaveItemPricingCommand,Guid?,int?,CancellationToken)",
           "returns": "Task<SaveItemPricingCommand?>",
           "parameters": [
@@ -14701,73 +14721,73 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 137,
+              "line": 140,
               "receiver": "unitOfWork.Connection",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 144,
+              "line": 147,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 144,
+              "line": 147,
               "receiver": "product.CategoryId.Value",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 145,
+              "line": 148,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 145,
+              "line": 148,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 146,
+              "line": 149,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 148,
+              "line": 151,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 148,
+              "line": 151,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 148,
+              "line": 151,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 155,
+              "line": 158,
               "receiver": "decimal",
               "generic_types": []
             },
             {
               "name": "GetInt64",
-              "line": 156,
+              "line": 159,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Parse",
-              "line": 161,
+              "line": 164,
               "receiver": "Guid",
               "generic_types": []
             }
@@ -14778,18 +14798,18 @@
             {
               "operation": "FROM",
               "table": "product_category_pricing_rules",
-              "line": 139
+              "line": 142
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-41926f4022d4",
+          "id": "M-fbfa2605bdd7",
           "name": "SavePrimaryBarcodeAsync",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 166,
-          "end": 204,
+          "line": 169,
+          "end": 207,
           "signature": "SavePrimaryBarcodeAsync(Guid,string,string?,CancellationToken)",
           "returns": "Task<CommandResult<bool>>",
           "parameters": [
@@ -14814,49 +14834,49 @@
           "calls": [
             {
               "name": "Trim",
-              "line": 172,
+              "line": 175,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 178,
+              "line": 181,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 181,
+              "line": 184,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 182,
+              "line": 185,
               "receiver": "itemId",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 183,
+              "line": 186,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 183,
+              "line": 186,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 183,
+              "line": 186,
               "receiver": "duplicateCheck",
               "generic_types": []
             },
             {
               "name": "Failure",
-              "line": 184,
+              "line": 187,
               "receiver": "CommandResult<bool>",
               "generic_types": [
                 "bool"
@@ -14864,13 +14884,13 @@
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 202,
+              "line": 205,
               "receiver": "save",
               "generic_types": []
             },
             {
               "name": "Success",
-              "line": 203,
+              "line": 206,
               "receiver": "CommandResult<bool>",
               "generic_types": [
                 "bool"
@@ -14880,7 +14900,7 @@
           "creates": [],
           "errors": [
             {
-              "line": 184,
+              "line": 187,
               "code": "DUPLICATE_BARCODE"
             }
           ],
@@ -14888,33 +14908,33 @@
             {
               "operation": "FROM",
               "table": "barcodes",
-              "line": 180
+              "line": 183
             },
             {
               "operation": "DELETE FROM",
               "table": "barcodes",
-              "line": 190
+              "line": 193
             },
             {
               "operation": "DELETE FROM",
               "table": "barcodes",
-              "line": 191
+              "line": 194
             },
             {
               "operation": "INSERT INTO",
               "table": "barcodes",
-              "line": 191
+              "line": 194
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-43074e99f7ef",
+          "id": "M-5e5809c1e468",
           "name": "CreateChildEnvelope",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 206,
-          "end": 216,
+          "line": 209,
+          "end": 219,
           "signature": "CreateChildEnvelope(CommandEnvelope<SaveProductConfigurationCommand>,TChild)",
           "returns": "CommandEnvelope<TChild>",
           "parameters": [
@@ -14936,11 +14956,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-2c3750e0c703",
+          "id": "M-bd3960362059",
           "name": "CopyFailure",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 218,
-          "end": 219,
+          "line": 221,
+          "end": 222,
           "signature": "CopyFailure(CommandResult<TIn>)",
           "returns": "CommandResult<CatalogItemDto>",
           "parameters": [
@@ -14953,7 +14973,7 @@
           "calls": [
             {
               "name": "Failure",
-              "line": 219,
+              "line": 222,
               "receiver": "CommandResult<CatalogItemDto>",
               "generic_types": [
                 "CatalogItemDto"
@@ -14967,11 +14987,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-ec6b1d6bda2c",
+          "id": "M-9a5be5999f57",
           "name": "AddParam",
           "owner": "SaveProductConfigurationCommandHandler",
-          "line": 221,
-          "end": 227,
+          "line": 224,
+          "end": 230,
           "signature": "AddParam(DbCommand,string,object)",
           "returns": "void",
           "parameters": [
@@ -14992,13 +15012,13 @@
           "calls": [
             {
               "name": "CreateParameter",
-              "line": 223,
+              "line": 226,
               "receiver": "command",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 226,
+              "line": 229,
               "receiver": "command.Parameters",
               "generic_types": []
             }
@@ -15012,7 +15032,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 228
+      "lines": 231
     },
     {
       "path": "Software/src/GetSeek.Application/Catalog/StoreUomPreferenceCommandHandler.cs",
@@ -21555,7 +21575,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs",
-      "sha256": "42399a0dc5292ee436da216aba492b58b7f3adb75c0e1c271618da8632c2fede",
+      "sha256": "945a984652a30083c5587eab960c954a74cbdfa6462f822ef5cb846b10fe16bd",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -22276,7 +22296,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-      "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83",
+      "sha256": "742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -22284,7 +22304,7 @@
           "name": "ImportProductsCommandHandler",
           "kind": "ClassDeclaration",
           "line": 18,
-          "end": 451,
+          "end": 445,
           "bases": [
             "ICommandHandler<ImportProductsCommand, ImportProductsResult>"
           ],
@@ -22297,7 +22317,7 @@
           "name": "HandleAsync",
           "owner": "ImportProductsCommandHandler",
           "line": 21,
-          "end": 293,
+          "end": 287,
           "signature": "HandleAsync(ImportProductsCommand,CommandEnvelope<ImportProductsCommand>,CancellationToken)",
           "returns": "Task<CommandResult<ImportProductsResult>>",
           "parameters": [
@@ -22481,14 +22501,20 @@
               "generic_types": []
             },
             {
+              "name": "LoadAsync",
+              "line": 114,
+              "receiver": "ReferenceSnapshot",
+              "generic_types": []
+            },
+            {
               "name": "BuildOrderAsync",
-              "line": 119,
+              "line": 120,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Empty",
-              "line": 132,
+              "line": 133,
               "receiver": "Array",
               "generic_types": [
                 "ImportKitComponent"
@@ -22496,103 +22522,103 @@
             },
             {
               "name": "SaveAsync",
-              "line": 133,
+              "line": 134,
               "receiver": "configuration",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 146,
+              "line": 147,
               "receiver": "productsBySku",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 162,
+              "line": 163,
               "receiver": "skuToItemId",
               "generic_types": []
             },
             {
               "name": "ResolveItemIdAsync",
-              "line": 164,
+              "line": 165,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 174,
+              "line": 175,
               "receiver": "isKitByItemId",
               "generic_types": []
             },
             {
               "name": "RecordAsync",
-              "line": 176,
+              "line": 177,
               "receiver": "ImportDatabaseState",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 180,
+              "line": 181,
               "receiver": "itemId",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 196,
+              "line": 197,
               "receiver": "supplierIdByCode",
               "generic_types": []
             },
             {
-              "name": "Parse",
-              "line": 210,
-              "receiver": "Guid",
+              "name": "TryGetSupplierId",
+              "line": 199,
+              "receiver": "snapshot",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 216,
+              "line": 210,
               "receiver": "itemUnitsByItemId",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 224,
+              "line": 218,
               "receiver": "itemUnits",
               "generic_types": []
             },
             {
               "name": "BuildLines",
-              "line": 229,
+              "line": 223,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "HandleAsync",
-              "line": 250,
+              "line": 244,
               "receiver": "inventory",
               "generic_types": []
             },
             {
               "name": "Distinct",
-              "line": 262,
+              "line": 256,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 273,
+              "line": 267,
               "receiver": "productsBySku",
               "generic_types": []
             },
             {
               "name": "GetValueOrDefault",
-              "line": 274,
+              "line": 268,
               "receiver": "pricingRulesBySku",
               "generic_types": []
             },
             {
               "name": "Empty",
-              "line": 277,
+              "line": 271,
               "receiver": "Array",
               "generic_types": [
                 "ImportTierPrice"
@@ -22600,13 +22626,13 @@
             },
             {
               "name": "PriceAsync",
-              "line": 279,
+              "line": 273,
               "receiver": "configuration",
               "generic_types": []
             },
             {
               "name": "Success",
-              "line": 292,
+              "line": 286,
               "receiver": "CommandResult<ImportProductsResult>",
               "generic_types": [
                 "ImportProductsResult"
@@ -22640,39 +22666,39 @@
             },
             {
               "type": "ImportProductConfiguration",
-              "line": 114
-            },
-            {
-              "type": "InventoryCommandHandler",
               "line": 115
             },
             {
+              "type": "InventoryCommandHandler",
+              "line": 116
+            },
+            {
               "type": "Dictionary<string, Guid>",
-              "line": 117
+              "line": 118
             },
             {
               "type": "Dictionary<Guid, bool>",
-              "line": 156
-            },
-            {
-              "type": "Dictionary<string, Guid>",
               "line": 157
             },
             {
-              "type": "Dictionary<Guid, (string? DefaultPurchase, string? BaseUnit)>",
+              "type": "Dictionary<string, Guid>",
               "line": 158
             },
             {
+              "type": "Dictionary<Guid, (string? DefaultPurchase, string? BaseUnit)>",
+              "line": 159
+            },
+            {
               "type": "ReceiveStockCommand",
-              "line": 230
+              "line": 224
             },
             {
               "type": "CommandEnvelope<ReceiveStockCommand>",
-              "line": 241
+              "line": 235
             },
             {
               "type": "ImportProductsResult",
-              "line": 292
+              "line": 286
             }
           ],
           "errors": [
@@ -22721,23 +22747,23 @@
               "code": "IMPORT_CLEAR_NOT_ALLOWED"
             },
             {
-              "line": 149,
+              "line": 150,
               "code": "IMPORT_ORPHAN_COMPONENT"
             },
             {
-              "line": 167,
+              "line": 168,
               "code": "IMPORT_SKU_NOT_FOUND"
             },
             {
-              "line": 188,
+              "line": 189,
               "code": "IMPORT_KIT_STOCK"
             },
             {
-              "line": 206,
+              "line": 201,
               "code": "SUPPLIER_NOT_FOUND"
             },
             {
-              "line": 269,
+              "line": 263,
               "code": "IMPORT_SKU_NOT_FOUND"
             }
           ],
@@ -22745,28 +22771,23 @@
             {
               "operation": "FROM",
               "table": "item_kits",
-              "line": 179
-            },
-            {
-              "operation": "FROM",
-              "table": "third_parties",
-              "line": 201
+              "line": 180
             },
             {
               "operation": "FROM",
               "table": "items",
-              "line": 221
+              "line": 215
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-cfb69b731676",
+          "id": "M-7ca1ff9bcf79",
           "name": "BuildOrderAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 295,
-          "end": 320,
+          "line": 289,
+          "end": 314,
           "signature": "BuildOrderAsync(IReadOnlyList<ImportProductRow>,IReadOnlyList<ImportKitComponent>?)",
           "returns": "Task<CommandResult<IReadOnlyList<ImportProductRow>>>",
           "parameters": [
@@ -22783,19 +22804,19 @@
           "calls": [
             {
               "name": "TryGetValue",
-              "line": 310,
+              "line": 304,
               "receiver": "componentsByParent",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 315,
+              "line": 309,
               "receiver": "list",
               "generic_types": []
             },
             {
               "name": "BuildOrderAsync",
-              "line": 319,
+              "line": 313,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -22803,15 +22824,15 @@
           "creates": [
             {
               "type": "Dictionary<string, ImportProductRow>",
-              "line": 299
+              "line": 293
             },
             {
               "type": "Dictionary<string, List<ImportKitComponent>>",
-              "line": 305
+              "line": 299
             },
             {
               "type": "List<ImportKitComponent>",
-              "line": 312
+              "line": 306
             }
           ],
           "errors": [],
@@ -22820,11 +22841,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-fe4c734f9d7b",
+          "id": "M-09e6f9be8a2e",
           "name": "BuildOrderAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 322,
-          "end": 328,
+          "line": 316,
+          "end": 322,
           "signature": "BuildOrderAsync(IReadOnlyList<ImportProductRow>,IReadOnlyDictionary<string, List<ImportKitComponent>>,IReadOnlyDictionary<string, ImportProductRow>)",
           "returns": "Task<CommandResult<IReadOnlyList<ImportProductRow>>>",
           "parameters": [
@@ -22845,13 +22866,13 @@
           "calls": [
             {
               "name": "FromResult",
-              "line": 327,
+              "line": 321,
               "receiver": "Task",
               "generic_types": []
             },
             {
               "name": "BuildOrder",
-              "line": 327,
+              "line": 321,
               "receiver": "<implicit>",
               "generic_types": []
             }
@@ -22863,11 +22884,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-5566bfd93eee",
+          "id": "M-7a9c2a4e77e5",
           "name": "BuildOrder",
           "owner": "ImportProductsCommandHandler",
-          "line": 330,
-          "end": 414,
+          "line": 324,
+          "end": 408,
           "signature": "BuildOrder(IReadOnlyList<ImportProductRow>,IReadOnlyDictionary<string, List<ImportKitComponent>>,IReadOnlyDictionary<string, ImportProductRow>)",
           "returns": "CommandResult<IReadOnlyList<ImportProductRow>>",
           "parameters": [
@@ -22888,7 +22909,7 @@
           "calls": [
             {
               "name": "Success",
-              "line": 338,
+              "line": 332,
               "receiver": "CommandResult<IReadOnlyList<ImportProductRow>>",
               "generic_types": [
                 "IReadOnlyList<ImportProductRow>",
@@ -22897,13 +22918,13 @@
             },
             {
               "name": "TryAdd",
-              "line": 344,
+              "line": 338,
               "receiver": "skuToIndex",
               "generic_types": []
             },
             {
               "name": "Failure",
-              "line": 346,
+              "line": 340,
               "receiver": "CommandResult<IReadOnlyList<ImportProductRow>>",
               "generic_types": [
                 "IReadOnlyList<ImportProductRow>",
@@ -22912,43 +22933,43 @@
             },
             {
               "name": "TryGetValue",
-              "line": 360,
+              "line": 354,
               "receiver": "componentsByParentSku",
               "generic_types": []
             },
             {
               "name": "TryGetValue",
-              "line": 365,
+              "line": 359,
               "receiver": "skuToIndex",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 371,
+              "line": 365,
               "receiver": "childIndices",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 378,
+              "line": 372,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Enqueue",
-              "line": 388,
+              "line": 382,
               "receiver": "readyQueue",
               "generic_types": []
             },
             {
               "name": "Dequeue",
-              "line": 395,
+              "line": 389,
               "receiver": "readyQueue",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 396,
+              "line": 390,
               "receiver": "ordered",
               "generic_types": []
             }
@@ -22956,36 +22977,36 @@
           "creates": [
             {
               "type": "Dictionary<string, int>",
-              "line": 341
+              "line": 335
             },
             {
               "type": "List<int>",
-              "line": 354
+              "line": 348
             },
             {
               "type": "HashSet<int>",
-              "line": 362
+              "line": 356
             },
             {
               "type": "PriorityQueue<int, int>",
-              "line": 383
+              "line": 377
             },
             {
               "type": "List<ImportProductRow>",
-              "line": 392
+              "line": 386
             }
           ],
           "errors": [
             {
-              "line": 346,
+              "line": 340,
               "code": "IMPORT_DUPLICATE_ROW"
             },
             {
-              "line": 369,
+              "line": 363,
               "code": "KIT_CYCLE_DETECTED"
             },
             {
-              "line": 410,
+              "line": 404,
               "code": "KIT_CYCLE_DETECTED"
             }
           ],
@@ -22994,11 +23015,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-fee30629d093",
+          "id": "M-2dc6aa184df1",
           "name": "BuildLines",
           "owner": "ImportProductsCommandHandler",
-          "line": 416,
-          "end": 429,
+          "line": 410,
+          "end": 423,
           "signature": "BuildLines(ImportStockRow)",
           "returns": "IReadOnlyList<ReceiptLine>?",
           "parameters": [
@@ -23012,11 +23033,11 @@
           "creates": [
             {
               "type": "ReceiptLine",
-              "line": 420
+              "line": 414
             },
             {
               "type": "ReceiptLine",
-              "line": 425
+              "line": 419
             }
           ],
           "errors": [],
@@ -23025,11 +23046,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-3f969591b40d",
+          "id": "M-be92b93116e9",
           "name": "ResolveItemIdAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 431,
-          "end": 445,
+          "line": 425,
+          "end": 439,
           "signature": "ResolveItemIdAsync(string,CancellationToken)",
           "returns": "Task<Guid>",
           "parameters": [
@@ -23046,43 +23067,43 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 433,
+              "line": 427,
               "receiver": "unitOfWork.Connection",
               "generic_types": []
             },
             {
               "name": "CreateParameter",
-              "line": 436,
+              "line": 430,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 439,
+              "line": 433,
               "receiver": "cmd.Parameters",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 441,
+              "line": 435,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 441,
+              "line": 435,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 442,
+              "line": 436,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 442,
+              "line": 436,
               "receiver": "value",
               "generic_types": []
             }
@@ -23093,18 +23114,18 @@
             {
               "operation": "FROM",
               "table": "items",
-              "line": 435
+              "line": 429
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-774bea846c22",
+          "id": "M-5f31b55f7530",
           "name": "HasActivePermissionAsync",
           "owner": "ImportProductsCommandHandler",
-          "line": 447,
-          "end": 450,
+          "line": 441,
+          "end": 444,
           "signature": "HasActivePermissionAsync(Guid,string,CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -23125,7 +23146,7 @@
           "calls": [
             {
               "name": "HasPermissionAsync",
-              "line": 449,
+              "line": 443,
               "receiver": "permissionResolver",
               "generic_types": []
             }
@@ -23139,7 +23160,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 451
+      "lines": 445
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs",
@@ -24014,7 +24035,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
-      "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2",
+      "sha256": "a8fdaeae4839675c0277a4db9b2edce98d6eac2ee474ffe73a393d689b3a856e",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -24022,7 +24043,7 @@
           "name": "InventoryCommandHandler",
           "kind": "ClassDeclaration",
           "line": 10,
-          "end": 841,
+          "end": 855,
           "bases": [
             "ICommandHandler<ReceiveStockCommand, StockMovement>",
             "ICommandHandler<AdjustStockCommand, StockMovement>"
@@ -24036,7 +24057,7 @@
           "name": "HandleAsync",
           "owner": "InventoryCommandHandler",
           "line": 14,
-          "end": 436,
+          "end": 450,
           "signature": "HandleAsync(ReceiveStockCommand,CommandEnvelope<ReceiveStockCommand>,CancellationToken)",
           "returns": "Task<CommandResult<StockMovement>>",
           "parameters": [
@@ -24070,152 +24091,158 @@
               "generic_types": []
             },
             {
+              "name": "TryGetSupplierById",
+              "line": 50,
+              "receiver": "snapshot",
+              "generic_types": []
+            },
+            {
               "name": "CreateCommand",
-              "line": 48,
+              "line": 61,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 51,
+              "line": 64,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 51,
+              "line": 64,
               "receiver": "command.SupplierId.Value",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 52,
+              "line": 65,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 52,
+              "line": 65,
               "receiver": "supCheckCmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 53,
+              "line": 66,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 57,
+              "line": 70,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 71,
+              "line": 85,
               "receiver": "command.ItemId",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 72,
+              "line": 86,
               "receiver": "itemCheckCmd",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 80,
+              "line": 94,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 80,
+              "line": 94,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 82,
+              "line": 96,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "GetActiveKitInfoAsync",
-              "line": 91,
+              "line": 105,
               "receiver": "KitDecompositionEngine",
               "generic_types": []
             },
             {
               "name": "DecomposeToLeavesAsync",
-              "line": 94,
+              "line": 108,
               "receiver": "KitDecompositionEngine",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 103,
+              "line": 117,
               "receiver": "nowUtc",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 114,
+              "line": 128,
               "receiver": "leaf.LeafItemId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 115,
+              "line": 129,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 115,
+              "line": 129,
               "receiver": "policy",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 120,
+              "line": 134,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 139,
+              "line": 153,
               "receiver": "movementId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 147,
+              "line": 161,
               "receiver": "envelope.InitiatorUserId",
               "generic_types": []
             },
             {
               "name": "Join",
-              "line": 148,
+              "line": 162,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "ToInvariant",
-              "line": 152,
+              "line": 166,
               "receiver": "DecimalQuantity",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 155,
+              "line": 169,
               "receiver": "smCmd",
               "generic_types": []
             },
             {
               "name": "Success",
-              "line": 176,
+              "line": 190,
               "receiver": "CommandResult<StockMovement>",
               "generic_types": [
                 "StockMovement"
@@ -24223,127 +24250,127 @@
             },
             {
               "name": "ToUpperInvariant",
-              "line": 202,
+              "line": 216,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 202,
+              "line": 216,
               "receiver": "command.UnitCode",
               "generic_types": []
             },
             {
               "name": "LoadStoredConversionFactorAsync",
-              "line": 207,
+              "line": 221,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 220,
+              "line": 234,
               "receiver": "trackingPolicy",
               "generic_types": []
             },
             {
               "name": "AddRange",
-              "line": 229,
+              "line": 243,
               "receiver": "requestedLines",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 233,
+              "line": 247,
               "receiver": "requestedLines",
               "generic_types": []
             },
             {
               "name": "Sum",
-              "line": 246,
+              "line": 260,
               "receiver": "requestedLines",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 281,
+              "line": 295,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ResolveOrCreateLotAsync",
-              "line": 290,
+              "line": 304,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ReadLotAsync",
-              "line": 299,
+              "line": 313,
               "receiver": "InventoryTraceabilityState",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 319,
+              "line": 333,
               "receiver": "seenSerials",
               "generic_types": []
             },
             {
               "name": "SerialExistsAsync",
-              "line": 324,
+              "line": 338,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "TryRoundBaseQuantity",
-              "line": 330,
+              "line": 344,
               "receiver": "DecimalQuantity",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 359,
+              "line": 373,
               "receiver": "moveId",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 366,
+              "line": 380,
               "receiver": "command.ReferenceId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 367,
+              "line": 381,
               "receiver": "lineLotId.Value",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 371,
+              "line": 385,
               "receiver": "now",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 375,
+              "line": 389,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 381,
+              "line": 395,
               "receiver": "insertCmd",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 396,
+              "line": 410,
               "receiver": "serialCmd",
               "generic_types": []
             },
             {
               "name": "ApplyAsync",
-              "line": 424,
+              "line": 438,
               "receiver": "IntakeCostProcessor",
               "generic_types": []
             }
@@ -24351,27 +24378,27 @@
           "creates": [
             {
               "type": "StockMovement",
-              "line": 157
+              "line": 171
             },
             {
               "type": "StockMovement",
-              "line": 176
+              "line": 190
             },
             {
               "type": "List<ReceiptLine>",
-              "line": 226
+              "line": 240
             },
             {
               "type": "ReceiptLine",
-              "line": 233
+              "line": 247
             },
             {
               "type": "HashSet<string>",
-              "line": 266
+              "line": 280
             },
             {
               "type": "StockMovement",
-              "line": 399
+              "line": 413
             }
           ],
           "errors": [
@@ -24392,95 +24419,103 @@
               "code": "REFERENCE_REQUIRED"
             },
             {
-              "line": 55,
+              "line": 52,
               "code": "SUPPLIER_NOT_FOUND"
             },
             {
-              "line": 59,
+              "line": 56,
               "code": "SUPPLIER_INACTIVE"
             },
             {
-              "line": 75,
+              "line": 68,
+              "code": "SUPPLIER_NOT_FOUND"
+            },
+            {
+              "line": 72,
+              "code": "SUPPLIER_INACTIVE"
+            },
+            {
+              "line": 89,
               "code": "ITEM_NOT_FOUND"
             },
             {
-              "line": 83,
+              "line": 97,
               "code": "ITEM_CURRENCY_MISMATCH"
             },
             {
-              "line": 87,
+              "line": 101,
               "code": "ITEM_INACTIVE"
             },
             {
-              "line": 117,
+              "line": 131,
               "code": "COMPONENT_TRACEABILITY_REQUIRED"
             },
             {
-              "line": 197,
+              "line": 211,
               "code": "ITEM_NOT_TRACKED"
             },
             {
-              "line": 216,
+              "line": 230,
               "code": "UNKNOWN_UOM_CONVERSION"
             },
             {
-              "line": 237,
+              "line": 251,
               "code": "LOT_REQUIRED"
             },
             {
-              "line": 242,
+              "line": 256,
               "code": "SERIAL_REQUIRED"
             },
             {
-              "line": 249,
+              "line": 263,
               "code": "INVALID_QUANTITY"
             },
             {
-              "line": 256,
+              "line": 270,
               "code": "INVALID_UOM_CONVERSION"
             },
             {
-              "line": 261,
+              "line": 275,
               "code": "SERIAL_COUNT_MISMATCH"
             },
             {
-              "line": 277,
+              "line": 291,
               "code": "INVALID_QUANTITY"
             },
             {
-              "line": 287,
+              "line": 301,
               "code": "LOT_NUMBER_REQUIRED"
             },
             {
-              "line": 293,
+              "line": 307,
               "code": "LOT_CREATE_FAILED"
             },
             {
-              "line": 300,
+              "line": 314,
               "code": "LOT_NOT_FOUND"
             },
             {
-              "line": 302,
+              "line": 316,
               "code": "LOT_NOT_AVAILABLE"
             },
             {
-              "line": 305,
+              "line": 319,
               "code": "UNEXPECTED_SERIAL"
             },
             {
-              "line": 311,
+              "line": 325,
               "code": "SERIAL_REQUIRED"
             },
             {
-              "line": 316,
+              "line": 330,
               "code": "INVALID_QUANTITY"
             },
             {
-              "line": 321,
+              "line": 335,
               "code": "SERIAL_ALREADY_EXISTS"
             },
             {
-              "line": 326,
+              "line": 340,
               "code": "SERIAL_ALREADY_EXISTS"
             }
           ],
@@ -24488,43 +24523,43 @@
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 50
+              "line": 63
             },
             {
               "operation": "FROM",
               "table": "items",
-              "line": 70
+              "line": 84
             },
             {
               "operation": "FROM",
               "table": "items",
-              "line": 113
+              "line": 127
             },
             {
               "operation": "INSERT INTO",
               "table": "stock_movements",
-              "line": 123
+              "line": 137
             },
             {
               "operation": "INSERT INTO",
               "table": "stock_movements",
-              "line": 343
+              "line": 357
             },
             {
               "operation": "INSERT INTO",
               "table": "serials",
-              "line": 389
+              "line": 403
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-7c8d5eebb581",
+          "id": "M-02b6dcfa291a",
           "name": "HandleAsync",
           "owner": "InventoryCommandHandler",
-          "line": 438,
-          "end": 764,
+          "line": 452,
+          "end": 778,
           "signature": "HandleAsync(AdjustStockCommand,CommandEnvelope<AdjustStockCommand>,CancellationToken)",
           "returns": "Task<CommandResult<StockMovement>>",
           "parameters": [
@@ -24545,7 +24580,7 @@
           "calls": [
             {
               "name": "Failure",
-              "line": 448,
+              "line": 462,
               "receiver": "CommandResult<StockMovement>",
               "generic_types": [
                 "StockMovement"
@@ -24553,235 +24588,235 @@
             },
             {
               "name": "IsNullOrWhiteSpace",
-              "line": 455,
+              "line": 469,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 459,
+              "line": 473,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 459,
+              "line": 473,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Split",
-              "line": 459,
+              "line": 473,
               "receiver": "command.Reason",
               "generic_types": []
             },
             {
               "name": "Contains",
-              "line": 460,
+              "line": 474,
               "receiver": "command.Reason",
               "generic_types": []
             },
             {
               "name": "IndexOf",
-              "line": 460,
+              "line": 474,
               "receiver": "command.Reason",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 467,
+              "line": 481,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 471,
+              "line": 485,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 471,
+              "line": 485,
               "receiver": "command.ItemId",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 472,
+              "line": 486,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 472,
+              "line": 486,
               "receiver": "itemCheckCmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 473,
+              "line": 487,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 478,
+              "line": 492,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 480,
+              "line": 494,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 480,
+              "line": 494,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 494,
+              "line": 508,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 494,
+              "line": 508,
               "receiver": "kitCheckCmd",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 508,
+              "line": 522,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 508,
+              "line": 522,
               "receiver": "command.UnitCode",
               "generic_types": []
             },
             {
               "name": "LoadStoredConversionFactorAsync",
-              "line": 513,
+              "line": 527,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "TryRoundBaseQuantity",
-              "line": 528,
+              "line": 542,
               "receiver": "DecimalQuantity",
               "generic_types": []
             },
             {
               "name": "Abs",
-              "line": 528,
+              "line": 542,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 537,
+              "line": 551,
               "receiver": "trackingPolicy",
               "generic_types": []
             },
             {
               "name": "ReadLotAsync",
-              "line": 547,
+              "line": 561,
               "receiver": "InventoryTraceabilityState",
               "generic_types": []
             },
             {
               "name": "ReadSerialAsync",
-              "line": 567,
+              "line": 581,
               "receiver": "InventoryTraceabilityState",
               "generic_types": []
             },
             {
               "name": "GetLocationBalanceAsync",
-              "line": 577,
+              "line": 591,
               "receiver": "StockAvailability",
               "generic_types": []
             },
             {
               "name": "GetLotLocationBalanceAsync",
-              "line": 588,
+              "line": 602,
               "receiver": "StockAvailability",
               "generic_types": []
             },
             {
               "name": "SerialIsHeldOrReservedAsync",
-              "line": 593,
+              "line": 607,
               "receiver": "StockAvailability",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 605,
+              "line": 619,
               "receiver": "command.SerialNumber",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 607,
+              "line": 621,
               "receiver": "serialCheckCmd",
               "generic_types": []
             },
             {
               "name": "NewGuid",
-              "line": 615,
+              "line": 629,
               "receiver": "Guid",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 653,
+              "line": 667,
               "receiver": "moveId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 660,
+              "line": 674,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 662,
+              "line": 676,
               "receiver": "envelope.InitiatorUserId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 664,
+              "line": 678,
               "receiver": "now",
               "generic_types": []
             },
             {
               "name": "ToInvariant",
-              "line": 668,
+              "line": 682,
               "receiver": "DecimalQuantity",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 672,
+              "line": 686,
               "receiver": "insertCmd",
               "generic_types": []
             },
             {
               "name": "CurrentCostAsync",
-              "line": 697,
+              "line": 711,
               "receiver": "InventoryLossWriter",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 698,
+              "line": 712,
               "receiver": "Enum",
               "generic_types": [
                 "InventoryLossReason"
@@ -24789,67 +24824,67 @@
             },
             {
               "name": "RecordAsync",
-              "line": 700,
+              "line": 714,
               "receiver": "InventoryLossWriter",
               "generic_types": []
             },
             {
               "name": "ExecuteAsync",
-              "line": 703,
+              "line": 717,
               "receiver": "GetSeek.Application.Sales.InvoiceLedger",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 710,
+              "line": 724,
               "receiver": "checkAutoCmd",
               "generic_types": []
             },
             {
               "name": "ToInt32",
-              "line": 711,
+              "line": 725,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 720,
+              "line": 734,
               "receiver": "cfgCmd",
               "generic_types": []
             },
             {
               "name": "Round",
-              "line": 727,
+              "line": 741,
               "receiver": "Math",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 731,
+              "line": 745,
               "receiver": "movement.Id",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 747,
+              "line": 761,
               "receiver": "expId",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 758,
+              "line": 772,
               "receiver": "lossResult.Id",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 759,
+              "line": 773,
               "receiver": "insertWasteExp",
               "generic_types": []
             },
             {
               "name": "Success",
-              "line": 763,
+              "line": 777,
               "receiver": "CommandResult<StockMovement>",
               "generic_types": [
                 "StockMovement"
@@ -24859,92 +24894,92 @@
           "creates": [
             {
               "type": "StockMovement",
-              "line": 675
+              "line": 689
             }
           ],
           "errors": [
             {
-              "line": 448,
+              "line": 462,
               "code": "INVALID_QUANTITY"
             },
             {
-              "line": 457,
-              "code": "REASON_REQUIRED"
-            },
-            {
-              "line": 461,
+              "line": 471,
               "code": "REASON_REQUIRED"
             },
             {
               "line": 475,
+              "code": "REASON_REQUIRED"
+            },
+            {
+              "line": 489,
               "code": "ITEM_NOT_FOUND"
             },
             {
-              "line": 485,
+              "line": 499,
               "code": "ITEM_INACTIVE"
             },
             {
-              "line": 497,
+              "line": 511,
               "code": "CANNOT_ADJUST_KIT_STOCK"
             },
             {
-              "line": 503,
+              "line": 517,
               "code": "ITEM_NOT_TRACKED"
             },
             {
-              "line": 522,
+              "line": 536,
               "code": "UNKNOWN_UOM_CONVERSION"
             },
             {
-              "line": 542,
+              "line": 556,
               "code": "LOT_REQUIRED"
             },
             {
-              "line": 548,
+              "line": 562,
               "code": "LOT_NOT_FOUND"
             },
             {
-              "line": 550,
+              "line": 564,
               "code": "LOT_NOT_AVAILABLE"
             },
             {
-              "line": 555,
+              "line": 569,
               "code": "INVALID_UOM_CONVERSION"
             },
             {
-              "line": 558,
+              "line": 572,
               "code": "SERIAL_REQUIRED"
             },
             {
-              "line": 563,
+              "line": 577,
               "code": "INVALID_QUANTITY"
             },
             {
-              "line": 566,
+              "line": 580,
               "code": "USE_SERIAL_RECEIPT"
             },
             {
-              "line": 569,
+              "line": 583,
               "code": "SERIAL_NOT_AVAILABLE"
             },
             {
-              "line": 572,
+              "line": 586,
               "code": "UNEXPECTED_SERIAL"
             },
             {
-              "line": 582,
+              "line": 596,
               "code": "INSUFFICIENT_STOCK"
             },
             {
-              "line": 589,
+              "line": 603,
               "code": "INSUFFICIENT_LOT_BALANCE"
             },
             {
-              "line": 594,
+              "line": 608,
               "code": "SERIAL_RESERVED"
             },
             {
-              "line": 610,
+              "line": 624,
               "code": "SERIAL_NOT_FOUND"
             }
           ],
@@ -24952,53 +24987,53 @@
             {
               "operation": "FROM",
               "table": "items",
-              "line": 470
+              "line": 484
             },
             {
               "operation": "FROM",
               "table": "item_kits",
-              "line": 492
+              "line": 506
             },
             {
               "operation": "FROM",
               "table": "stock_movements",
-              "line": 597
+              "line": 611
             },
             {
               "operation": "INSERT INTO",
               "table": "stock_movements",
-              "line": 637
+              "line": 651
             },
             {
               "operation": "UPDATE",
               "table": "serials",
-              "line": 704
+              "line": 718
             },
             {
               "operation": "FROM",
               "table": "store_config",
-              "line": 709
+              "line": 723
             },
             {
               "operation": "FROM",
               "table": "store_config",
-              "line": 719
+              "line": 733
             },
             {
               "operation": "INSERT OR IGNORE INTO",
               "table": "expense_records",
-              "line": 737
+              "line": 751
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-be1a6dd30772",
+          "id": "M-7456f0d60f5b",
           "name": "LoadStoredConversionFactorAsync",
           "owner": "InventoryCommandHandler",
-          "line": 771,
-          "end": 775,
+          "line": 785,
+          "end": 789,
           "signature": "LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)",
           "returns": "Task<(decimal Factor, string? ErrorCode)>",
           "parameters": [
@@ -25031,13 +25066,13 @@
           "calls": [
             {
               "name": "ConfigureAwait",
-              "line": 773,
+              "line": 787,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ResolveFactorAsync",
-              "line": 773,
+              "line": 787,
               "receiver": "PhysicalUnitResolver",
               "generic_types": []
             }
@@ -25049,11 +25084,11 @@
           "dynamic_sql": false
         },
         {
-          "id": "M-66335516a9e7",
+          "id": "M-5bc4806d7539",
           "name": "ResolveOrCreateLotAsync",
           "owner": "InventoryCommandHandler",
-          "line": 786,
-          "end": 821,
+          "line": 800,
+          "end": 835,
           "signature": "ResolveOrCreateLotAsync(DbConnection,DbTransaction?,Guid,string,DateTime?,DateTime,CancellationToken)",
           "returns": "Task<Guid?>",
           "parameters": [
@@ -25090,67 +25125,67 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 795,
+              "line": 809,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 799,
+              "line": 813,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 799,
+              "line": 813,
               "receiver": "itemId",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 801,
+              "line": 815,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 801,
+              "line": 815,
               "receiver": "findCmd",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 804,
+              "line": 818,
               "receiver": "Guid",
-              "generic_types": []
-            },
-            {
-              "name": "ToString",
-              "line": 804,
-              "receiver": "existing",
-              "generic_types": []
-            },
-            {
-              "name": "NewGuid",
-              "line": 808,
-              "receiver": "Guid",
-              "generic_types": []
-            },
-            {
-              "name": "ToString",
-              "line": 814,
-              "receiver": "lotId",
               "generic_types": []
             },
             {
               "name": "ToString",
               "line": 818,
+              "receiver": "existing",
+              "generic_types": []
+            },
+            {
+              "name": "NewGuid",
+              "line": 822,
+              "receiver": "Guid",
+              "generic_types": []
+            },
+            {
+              "name": "ToString",
+              "line": 828,
+              "receiver": "lotId",
+              "generic_types": []
+            },
+            {
+              "name": "ToString",
+              "line": 832,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteNonQueryAsync",
-              "line": 819,
+              "line": 833,
               "receiver": "insertCmd",
               "generic_types": []
             }
@@ -25161,23 +25196,23 @@
             {
               "operation": "FROM",
               "table": "lots",
-              "line": 798
+              "line": 812
             },
             {
               "operation": "INSERT INTO",
               "table": "lots",
-              "line": 811
+              "line": 825
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-11a52d6239b9",
+          "id": "M-19bb8a7b93ac",
           "name": "SerialExistsAsync",
           "owner": "InventoryCommandHandler",
-          "line": 824,
-          "end": 832,
+          "line": 838,
+          "end": 846,
           "signature": "SerialExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)",
           "returns": "Task<bool>",
           "parameters": [
@@ -25202,31 +25237,31 @@
           "calls": [
             {
               "name": "CreateCommand",
-              "line": 826,
+              "line": 840,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "AddParam",
-              "line": 829,
+              "line": 843,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
               "name": "ToInt64",
-              "line": 830,
+              "line": 844,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 830,
+              "line": 844,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteScalarAsync",
-              "line": 830,
+              "line": 844,
               "receiver": "cmd",
               "generic_types": []
             }
@@ -25237,18 +25272,18 @@
             {
               "operation": "FROM",
               "table": "serials",
-              "line": 828
+              "line": 842
             }
           ],
           "throws": [],
           "dynamic_sql": false
         },
         {
-          "id": "M-de4448b9b919",
+          "id": "M-38ec972aa704",
           "name": "AddParam",
           "owner": "InventoryCommandHandler",
-          "line": 834,
-          "end": 840,
+          "line": 848,
+          "end": 854,
           "signature": "AddParam(DbCommand,string,object)",
           "returns": "void",
           "parameters": [
@@ -25269,13 +25304,13 @@
           "calls": [
             {
               "name": "CreateParameter",
-              "line": 836,
+              "line": 850,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 839,
+              "line": 853,
               "receiver": "cmd.Parameters",
               "generic_types": []
             }
@@ -25289,7 +25324,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 842
+      "lines": 856
     },
     {
       "path": "Software/src/GetSeek.Application/Inventory/InventoryCommands.cs",
@@ -29017,7 +29052,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Inventory/PhysicalUnitResolver.cs",
-      "sha256": "d5c22feffb1e3bb30ae99de473d90a95d800ad6d78ebe623c7e770d50e94ad79",
+      "sha256": "2467643bc19c1777e36b2a9d08b29acb88148229613497fff1a6e96fdc0e0c39",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -29025,18 +29060,95 @@
           "name": "PhysicalUnitResolver",
           "kind": "ClassDeclaration",
           "line": 16,
-          "end": 124,
+          "end": 194,
           "bases": [],
           "properties": []
         }
       ],
       "methods": [
         {
-          "id": "M-d11237e22086",
-          "name": "ResolveFactorAsync",
+          "id": "M-5672ff32fb3e",
+          "name": "ResolveFactor",
           "owner": "PhysicalUnitResolver",
           "line": 18,
-          "end": 123,
+          "end": 71,
+          "signature": "ResolveFactor(ReferenceSnapshot,string,string,Guid?)",
+          "returns": "(decimal Factor, string? ErrorCode, string? ErrorMessage)",
+          "parameters": [
+            {
+              "name": "snapshot",
+              "type": "ReferenceSnapshot"
+            },
+            {
+              "name": "enteredUnitCode",
+              "type": "string"
+            },
+            {
+              "name": "baseUnitCode",
+              "type": "string"
+            },
+            {
+              "name": "itemId",
+              "type": "Guid?"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 24,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "Equals",
+              "line": 29,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 29,
+              "receiver": "enteredUnitCode",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 29,
+              "receiver": "baseUnitCode",
+              "generic_types": []
+            },
+            {
+              "name": "ToUpperInvariant",
+              "line": 34,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetUom",
+              "line": 37,
+              "receiver": "snapshot",
+              "generic_types": []
+            },
+            {
+              "name": "TryParse",
+              "line": 61,
+              "receiver": "decimal",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-5dfe32530006",
+          "name": "ResolveFactorAsync",
+          "owner": "PhysicalUnitResolver",
+          "line": 73,
+          "end": 80,
           "signature": "ResolveFactorAsync(DbConnection,DbTransaction?,string,string,Guid?,CancellationToken)",
           "returns": "Task<(decimal Factor, string? ErrorCode, string? ErrorMessage)>",
           "parameters": [
@@ -29068,92 +29180,151 @@
           "attributes": [],
           "calls": [
             {
+              "name": "ResolveFactorAsync",
+              "line": 80,
+              "receiver": "<implicit>",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-99db0db7a63a",
+          "name": "ResolveFactorAsync",
+          "owner": "PhysicalUnitResolver",
+          "line": 82,
+          "end": 193,
+          "signature": "ResolveFactorAsync(DbConnection,DbTransaction?,string,string,Guid?,ReferenceSnapshot?,CancellationToken)",
+          "returns": "Task<(decimal Factor, string? ErrorCode, string? ErrorMessage)>",
+          "parameters": [
+            {
+              "name": "conn",
+              "type": "DbConnection"
+            },
+            {
+              "name": "tx",
+              "type": "DbTransaction?"
+            },
+            {
+              "name": "enteredUnitCode",
+              "type": "string"
+            },
+            {
+              "name": "baseUnitCode",
+              "type": "string"
+            },
+            {
+              "name": "itemId",
+              "type": "Guid?"
+            },
+            {
+              "name": "snapshot",
+              "type": "ReferenceSnapshot?"
+            },
+            {
+              "name": "cancellationToken",
+              "type": "CancellationToken"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "ResolveFactor",
+              "line": 93,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
               "name": "IsNullOrWhiteSpace",
-              "line": 26,
+              "line": 96,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Equals",
-              "line": 31,
+              "line": 101,
               "receiver": "string",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 31,
+              "line": 101,
               "receiver": "enteredUnitCode",
               "generic_types": []
             },
             {
               "name": "Trim",
-              "line": 31,
+              "line": 101,
               "receiver": "baseUnitCode",
               "generic_types": []
             },
             {
               "name": "ToUpperInvariant",
-              "line": 36,
+              "line": 106,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 40,
+              "line": 110,
               "receiver": "conn",
               "generic_types": []
             },
             {
               "name": "CreateParameter",
-              "line": 48,
+              "line": 118,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 51,
+              "line": 121,
               "receiver": "cmd.Parameters",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 64,
+              "line": 134,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 64,
+              "line": 134,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 66,
+              "line": 136,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetString",
-              "line": 68,
+              "line": 138,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 69,
+              "line": 139,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "GetInt32",
-              "line": 72,
+              "line": 142,
               "receiver": "reader",
               "generic_types": []
             },
             {
               "name": "TryParse",
-              "line": 112,
+              "line": 182,
               "receiver": "decimal",
               "generic_types": []
             }
@@ -29164,7 +29335,7 @@
             {
               "operation": "FROM",
               "table": "uoms",
-              "line": 43
+              "line": 113
             }
           ],
           "throws": [],
@@ -29173,7 +29344,7 @@
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 124
+      "lines": 194
     },
     {
       "path": "Software/src/GetSeek.Application/Inventory/StockAvailability.cs",
@@ -51577,6 +51748,401 @@
       "constants": [],
       "syntax_errors": [],
       "lines": 273
+    },
+    {
+      "path": "Software/src/GetSeek.Application/ReferenceSnapshot.cs",
+      "sha256": "9bc779eabfaab44d19a35c047e7a32426d1241a5b60b6dc7a6fbbbd27e698717",
+      "project": "GetSeek.Application",
+      "test": false,
+      "types": [
+        {
+          "name": "UnitDefinition",
+          "kind": "RecordStructDeclaration",
+          "line": 9,
+          "end": 14,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "CategoryRecord",
+          "kind": "RecordStructDeclaration",
+          "line": 16,
+          "end": 21,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "SupplierRecord",
+          "kind": "RecordStructDeclaration",
+          "line": 23,
+          "end": 26,
+          "bases": [],
+          "properties": []
+        },
+        {
+          "name": "ReferenceSnapshot",
+          "kind": "ClassDeclaration",
+          "line": 32,
+          "end": 204,
+          "bases": [],
+          "properties": []
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-a5b951333974",
+          "name": "TryGetUom",
+          "owner": "ReferenceSnapshot",
+          "line": 59,
+          "end": 68,
+          "signature": "TryGetUom(string?,UnitDefinition)",
+          "returns": "bool",
+          "parameters": [
+            {
+              "name": "code",
+              "type": "string?"
+            },
+            {
+              "name": "uom",
+              "type": "UnitDefinition"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 61,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 67,
+              "receiver": "_uoms",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 67,
+              "receiver": "code",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-f6eb69fde29c",
+          "name": "FindCategory",
+          "owner": "ReferenceSnapshot",
+          "line": 70,
+          "end": 83,
+          "signature": "FindCategory(Guid?,string?)",
+          "returns": "CategoryRecord?",
+          "parameters": [
+            {
+              "name": "categoryId",
+              "type": "Guid?"
+            },
+            {
+              "name": "categoryName",
+              "type": "string?"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "TryGetValue",
+              "line": 74,
+              "receiver": "_categoriesById",
+              "generic_types": []
+            },
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 77,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 82,
+              "receiver": "_categoriesByCodeOrName",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 82,
+              "receiver": "categoryName",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-4aabbaff0c6f",
+          "name": "TryGetSupplierId",
+          "owner": "ReferenceSnapshot",
+          "line": 85,
+          "end": 100,
+          "signature": "TryGetSupplierId(string?,Guid)",
+          "returns": "bool",
+          "parameters": [
+            {
+              "name": "supplierCode",
+              "type": "string?"
+            },
+            {
+              "name": "supplierId",
+              "type": "Guid"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 88,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 93,
+              "receiver": "_suppliersByCode",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 93,
+              "receiver": "supplierCode",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-07140a5fa76f",
+          "name": "TryGetSupplierById",
+          "owner": "ReferenceSnapshot",
+          "line": 102,
+          "end": 105,
+          "signature": "TryGetSupplierById(Guid,SupplierRecord)",
+          "returns": "bool",
+          "parameters": [
+            {
+              "name": "supplierId",
+              "type": "Guid"
+            },
+            {
+              "name": "supplier",
+              "type": "SupplierRecord"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "TryGetValue",
+              "line": 104,
+              "receiver": "_suppliersById",
+              "generic_types": []
+            }
+          ],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-0f6e189fbf37",
+          "name": "LoadAsync",
+          "owner": "ReferenceSnapshot",
+          "line": 107,
+          "end": 203,
+          "signature": "LoadAsync(DbConnection,DbTransaction?,CancellationToken)",
+          "returns": "Task<ReferenceSnapshot>",
+          "parameters": [
+            {
+              "name": "connection",
+              "type": "DbConnection"
+            },
+            {
+              "name": "transaction",
+              "type": "DbTransaction?"
+            },
+            {
+              "name": "cancellationToken",
+              "type": "CancellationToken"
+            }
+          ],
+          "attributes": [],
+          "calls": [
+            {
+              "name": "CreateCommand",
+              "line": 114,
+              "receiver": "connection",
+              "generic_types": []
+            },
+            {
+              "name": "ConfigureAwait",
+              "line": 118,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
+              "name": "ExecuteReaderAsync",
+              "line": 118,
+              "receiver": "cmd",
+              "generic_types": []
+            },
+            {
+              "name": "ReadAsync",
+              "line": 119,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "GetString",
+              "line": 121,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "IsDBNull",
+              "line": 122,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "GetInt32",
+              "line": 125,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 140,
+              "receiver": "enabledTiers",
+              "generic_types": []
+            },
+            {
+              "name": "Parse",
+              "line": 154,
+              "receiver": "Guid",
+              "generic_types": []
+            },
+            {
+              "name": "IsNullOrWhiteSpace",
+              "line": 162,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
+              "name": "TryAdd",
+              "line": 164,
+              "receiver": "categoriesByCodeOrName",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 164,
+              "receiver": "code",
+              "generic_types": []
+            },
+            {
+              "name": "Trim",
+              "line": 168,
+              "receiver": "name",
+              "generic_types": []
+            }
+          ],
+          "creates": [
+            {
+              "type": "Dictionary<string, UnitDefinition>",
+              "line": 113
+            },
+            {
+              "type": "UnitDefinition",
+              "line": 127
+            },
+            {
+              "type": "HashSet<int>",
+              "line": 132
+            },
+            {
+              "type": "Dictionary<Guid, CategoryRecord>",
+              "line": 145
+            },
+            {
+              "type": "Dictionary<string, CategoryRecord>",
+              "line": 146
+            },
+            {
+              "type": "CategoryRecord",
+              "line": 160
+            },
+            {
+              "type": "Dictionary<string, SupplierRecord>",
+              "line": 174
+            },
+            {
+              "type": "Dictionary<Guid, SupplierRecord>",
+              "line": 175
+            },
+            {
+              "type": "SupplierRecord",
+              "line": 187
+            },
+            {
+              "type": "ReferenceSnapshot",
+              "line": 196
+            }
+          ],
+          "errors": [],
+          "sql": [
+            {
+              "operation": "FROM",
+              "table": "uoms",
+              "line": 117
+            },
+            {
+              "operation": "FROM",
+              "table": "price_level_settings",
+              "line": 136
+            },
+            {
+              "operation": "FROM",
+              "table": "store_config",
+              "line": 136
+            },
+            {
+              "operation": "FROM",
+              "table": "product_categories",
+              "line": 150
+            },
+            {
+              "operation": "FROM",
+              "table": "third_parties",
+              "line": 179
+            }
+          ],
+          "throws": [],
+          "dynamic_sql": false
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 204
     },
     {
       "path": "Software/src/GetSeek.Application/Reports/GetStockBalanceQuery.cs",
@@ -227051,6 +227617,141 @@
       "lines": 42
     },
     {
+      "path": "Software/tests/GetSeek.UnitTests/ReferenceSnapshotUnitTests.cs",
+      "sha256": "b7e495104a50d8fb219f58eae062e0f28db68601dc6a761f979b2784e41e54fe",
+      "project": "GetSeek.UnitTests",
+      "test": true,
+      "types": [
+        {
+          "name": "ReferenceSnapshotUnitTests",
+          "kind": "ClassDeclaration",
+          "line": 10,
+          "end": 187,
+          "bases": [],
+          "properties": []
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-2edfdd2c2b12",
+          "name": "TryGetUom_ResolvesCorrectly_WithCaseAndWhitespace",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 83,
+          "end": 96,
+          "signature": "TryGetUom_ResolvesCorrectly_WithCaseAndWhitespace()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-08ba1e1067e4",
+          "name": "PhysicalUnitResolver_ResolveFactor_ResolvesPhysicalRatios",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 98,
+          "end": 134,
+          "signature": "PhysicalUnitResolver_ResolveFactor_ResolvesPhysicalRatios()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-db611f717def",
+          "name": "FindCategory_ResolvesByGuidCodeOrName",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 136,
+          "end": 148,
+          "signature": "FindCategory_ResolvesByGuidCodeOrName()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-891ce7b5a607",
+          "name": "TryGetSupplierId_RespectsActiveStatusAndCase",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 150,
+          "end": 165,
+          "signature": "TryGetSupplierId_RespectsActiveStatusAndCase()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-5ec28df66ad2",
+          "name": "TryGetSupplierById_ReturnsRecordRegardlessOfActive",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 167,
+          "end": 177,
+          "signature": "TryGetSupplierById_ReturnsRecordRegardlessOfActive()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-a9d1f614f681",
+          "name": "EnabledPriceTiers_ReflectsLoadedSet",
+          "owner": "ReferenceSnapshotUnitTests",
+          "line": 179,
+          "end": 186,
+          "signature": "EnabledPriceTiers_ReflectsLoadedSet()",
+          "returns": "void",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 187
+    },
+    {
       "path": "Software/tests/GetSeek.UnitTests/ReviewDecisionsResolutionUnitTests.cs",
       "sha256": "6b12b8b121b20e0142c0449a7d474940ea44a66ca136121086001fd1ca1153ab",
       "project": "GetSeek.UnitTests",
@@ -230920,14 +231621,14 @@
         }
       ],
       "methods": [
-        "M-7c8d5eebb581"
+        "M-02b6dcfa291a"
       ],
       "producers": [
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 119,
-          "method_id": "M-a9139d457f70"
+          "line": 122,
+          "method_id": "M-98f2baf362dd"
         },
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryLossCommandHandler.cs",
@@ -232569,14 +233270,14 @@
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 58,
-          "method_id": "M-a9139d457f70"
+          "line": 61,
+          "method_id": "M-98f2baf362dd"
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 59,
-          "method_id": "M-a9139d457f70"
+          "line": 62,
+          "method_id": "M-98f2baf362dd"
         }
       ]
     },
@@ -233606,7 +234307,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 230,
+          "line": 224,
           "method_id": "M-c862b652239a"
         },
         {
@@ -234615,7 +235316,7 @@
         }
       ],
       "methods": [
-        "M-a9139d457f70"
+        "M-98f2baf362dd"
       ],
       "producers": [
         {
@@ -235441,8 +236142,8 @@
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "method": "HandleAsync",
-          "line": 83,
-          "method_id": "M-a9139d457f70"
+          "line": 86,
+          "method_id": "M-98f2baf362dd"
         }
       ]
     },

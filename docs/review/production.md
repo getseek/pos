@@ -189,7 +189,7 @@ Handler: [ManufacturingCommandHandler](code-application.md#src-e469f680f9bb). Re
 
 Declaration: [ManufacturingCommands.cs:232](code-application.md#src-98743155dc28). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:58](code-application.md#src-c24b9e05b3b2), [HandleAsync:59](code-application.md#src-c24b9e05b3b2)
+Construction sites: [HandleAsync:61](code-application.md#src-c24b9e05b3b2), [HandleAsync:62](code-application.md#src-c24b9e05b3b2)
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(DeactivateKitCommand,CommandEnvelope&lt;DeactivateKitCommand&gt;,CancellationToken)](code-application.md#m-b8fa04917f75).
 
@@ -289,7 +289,7 @@ Handler: [ManufacturingCommandHandler](code-application.md#src-e469f680f9bb). Re
 
 Declaration: [ManufacturingCommands.cs:222](code-application.md#src-98743155dc28). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:83](code-application.md#src-c24b9e05b3b2)
+Construction sites: [HandleAsync:86](code-application.md#src-c24b9e05b3b2)
 
 Handler method: [ManufacturingCommandHandler.HandleAsync(UpdateKitCommand,CommandEnvelope&lt;UpdateKitCommand&gt;,CancellationToken)](code-application.md#m-de55ac15d61c).
 

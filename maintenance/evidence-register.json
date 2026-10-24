@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "07e45f040adef39d29820ad1a8b66b4a2632d399aa64e8c7b17d56596e16b55d",
+      "sha256": "f5a09d11b14350115b53212229ae8e0fac56b653bdcd07d99e8789288679e2e2",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -541,6 +541,75 @@
       "times": {
         "duration": "11 m 48 s (integration) + 1 s (unit) + 864 ms (acceptance)",
         "run_at_local": "2026-10-24 15:40 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-026",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage3/20261024-1645/stage3-import-tests.txt",
+      "sha256": "4b1c142d6d62db7d00f542f6e6db9a94d8044cd1a96ce9e159d96097652e0187",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 3 import-filtered run (post-change, dotnet test console output, not TRX): 54/54 passed, 0 failed (Unit 1, Integration 53, integration 54 s). Verifies import lifecycle/rollback/replay/stale-preview after the ReferenceSnapshot reference-cache refactor. No TRX, native dialog, live shop or device claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "54",
+        "passed": "54",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "54 s (integration) + 5 ms (unit)",
+        "run_at_local": "2026-10-24 16:29 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-027",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage3/20261024-1645/stage3-full-tests-rerun.txt",
+      "sha256": "3a8002c50b54e9f38df194b3db1a38836bc9832c9dbf554c59d7a9a6b27d5f45",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 3 full solution suite, independent orchestrator re-run (post-change, console output, not TRX): 1311/1311 passed, 0 failed (Acceptance 1, Unit 288 incl. 6 new ReferenceSnapshot tests, Integration 1022, integration 7 m 58 s). The worker's own earlier full attempt was truncated by a transient screenshot PNG file lock (System.IO.IOException) unrelated to the change; this clean re-run is the evidence. Includes receive-stock (ReceiveStock_*) and catalog-save (ProductManagementIntegrationTests) classes. Native dialogs, live shop and physical devices were not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1311",
+        "passed": "1311",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "7 m 58 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-24 16:40 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

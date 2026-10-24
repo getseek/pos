@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **149 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **150 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -798,6 +798,12 @@ Located test declarations: <code>DateTokensAndPaddedRandomDigitsAreResolved</cod
 <code>Software/tests/GetSeek.UnitTests/QuantityTests.cs</code> · SHA-256 <code>d256064d63226640ee3524f55d1434739e5eef5c35de0a61871a4ff101f04896</code>.
 
 Located test declarations: <code>BaseAmount_ShouldCalculateAccurately</code> @9, <code>Addition_ShouldCalculateSum_WhenSameUnit</code> @20, <code>Addition_ShouldThrow_WhenIncompatibleUnits</code> @32.
+
+## ReferenceSnapshotUnitTests.cs {#src-56edcb61c7c1}
+
+<code>Software/tests/GetSeek.UnitTests/ReferenceSnapshotUnitTests.cs</code> · SHA-256 <code>b7e495104a50d8fb219f58eae062e0f28db68601dc6a761f979b2784e41e54fe</code>.
+
+Located test declarations: <code>TryGetUom_ResolvesCorrectly_WithCaseAndWhitespace</code> @83, <code>PhysicalUnitResolver_ResolveFactor_ResolvesPhysicalRatios</code> @98, <code>FindCategory_ResolvesByGuidCodeOrName</code> @136, <code>TryGetSupplierId_RespectsActiveStatusAndCase</code> @150, <code>TryGetSupplierById_ReturnsRecordRegardlessOfActive</code> @167, <code>EnabledPriceTiers_ReflectsLoadedSet</code> @179.
 
 ## ReviewDecisionsResolutionUnitTests.cs {#src-3c43bbc15abd}
 

@@ -57,11 +57,11 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:42](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.AdjustStock</code>
 
-Construction sites: [HandleAsync:119](code-application.md#src-c24b9e05b3b2), [HandleAsync:16](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9361](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:122](code-application.md#src-c24b9e05b3b2), [HandleAsync:16](code-application.md#src-ad1ac7eca868), [HandleAsync:31](code-application.md#src-1e2a68301de6), [HandleAsync:68](code-application.md#src-1e2a68301de6), [ApplyProductStockChangeAsync:68](code-desktop.md#src-97d7fd82738a), [ConfirmAdjustStockAsync:9361](code-desktop.md#src-16497b924a99)
 
-Handler method: [InventoryCommandHandler.HandleAsync(AdjustStockCommand,CommandEnvelope&lt;AdjustStockCommand&gt;,CancellationToken)](code-application.md#m-7c8d5eebb581).
+Handler method: [InventoryCommandHandler.HandleAsync(AdjustStockCommand,CommandEnvelope&lt;AdjustStockCommand&gt;,CancellationToken)](code-application.md#m-02b6dcfa291a).
 
-Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-de4448b9b919), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-be1a6dd30772). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-38ec972aa704), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-7456f0d60f5b). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -157,11 +157,11 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:19](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.ReceiveStock</code>
 
-Construction sites: [HandleAsync:230](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:9037](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:224](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:9037](code-desktop.md#src-16497b924a99)
 
 Handler method: [InventoryCommandHandler.HandleAsync(ReceiveStockCommand,CommandEnvelope&lt;ReceiveStockCommand&gt;,CancellationToken)](code-application.md#m-88ca70a84a0a).
 
-Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-de4448b9b919), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-be1a6dd30772), [InventoryCommandHandler.ResolveOrCreateLotAsync(DbConnection,DbTransaction?,Guid,string,DateTime?,DateTime,CancellationToken)](code-application.md#m-66335516a9e7), [InventoryCommandHandler.SerialExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-11a52d6239b9). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [InventoryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-38ec972aa704), [InventoryCommandHandler.LoadStoredConversionFactorAsync(DbConnection,DbTransaction?,Guid,string,string,CancellationToken)](code-application.md#m-7456f0d60f5b), [InventoryCommandHandler.ResolveOrCreateLotAsync(DbConnection,DbTransaction?,Guid,string,DateTime?,DateTime,CancellationToken)](code-application.md#m-5bc4806d7539), [InventoryCommandHandler.SerialExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-19bb8a7b93ac). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |

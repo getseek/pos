@@ -270,7 +270,7 @@
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
           "line": 1,
-          "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44"
+          "sha256": "e7ce3a816010aac26bb4fd9645c52abdb4f561ec78951653617f2f931d33d104"
         }
       ]
     },
@@ -308,7 +308,7 @@
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
           "line": 1,
-          "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2"
+          "sha256": "a8fdaeae4839675c0277a4db9b2edce98d6eac2ee474ffe73a393d689b3a856e"
         },
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryTraceabilityCommands.cs",
@@ -484,7 +484,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "line": 1,
-          "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83"
+          "sha256": "742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4"
         },
         {
           "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",

@@ -156,16 +156,20 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Catalog/SaveProductConfigurationCommandHandler.cs",
-          "sha256": "4f7f22c41960ac66dcb75e896e664ed74d9ee96f4008f67a852d0770d22c6c44"
+          "sha256": "e7ce3a816010aac26bb4fd9645c52abdb4f561ec78951653617f2f931d33d104"
         }
       ],
       "source_review": "located",
       "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "E-026",
+        "E-027"
+      ],
       "target_page": "operator/catalog.md",
       "document_status": "planned",
-      "limitations": "Detailed item-purpose/UOM guide pending.",
-      "review_map": "review/catalog.md"
+      "limitations": "Detailed item-purpose/UOM guide pending. Stage-3 reference-snapshot cache: SaveProductConfiguration/Catalog handlers consume a per-transaction ReferenceSnapshot (built in ImportProductsCommandHandler.HandleAsync); original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ProductManagementIntegrationTests.",
+      "review_map": "review/catalog.md",
+      "reviewed_on": "2026-10-24"
     },
     {
       "id": "PP-F009",
@@ -174,16 +178,20 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Inventory/InventoryCommandHandler.cs",
-          "sha256": "12f21e0d12c635a671cf5804c93c154db7810b3aa7f0fb1809f53483ad0f76f2"
+          "sha256": "a8fdaeae4839675c0277a4db9b2edce98d6eac2ee474ffe73a393d689b3a856e"
         }
       ],
       "source_review": "located",
       "application_verification": "not-rerun",
-      "evidence_ids": [],
+      "evidence_ids": [
+        "E-026",
+        "E-027"
+      ],
       "target_page": "operator/inventory.md",
       "document_status": "planned",
-      "limitations": "Lot/serial selection, reservations and stock-history claims need review.",
-      "review_map": "review/inventory.md"
+      "limitations": "Lot/serial selection, reservations and stock-history claims need review. Stage-3 reference-snapshot cache: InventoryCommandHandler consumes the per-transaction ReferenceSnapshot for supplier authority and unit conversion; original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ReceiveStock_* tests.",
+      "review_map": "review/inventory.md",
+      "reviewed_on": "2026-10-24"
     },
     {
       "id": "PP-F010",
@@ -310,7 +318,7 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-          "sha256": "f6efade8f17717c2571995f40bd4879d01173c6dffed878fdeeb555a02e82f83"
+          "sha256": "742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
@@ -361,11 +369,13 @@
         "E-022",
         "E-023",
         "E-024",
-        "E-025"
+        "E-025",
+        "E-026",
+        "E-027"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned. Stage-3 verified 2026-10-24: ReferenceSnapshot reference caches with per-transaction rebuild (preview and confirm each build their own); import 54/54 (E-026), full suite 1311/1311 (E-027). Benchmark-neutral on batch 03 (34.2 s / 143.1 s flows vs stage-2 34.3 s / 143.4 s) - the eliminated statements target small reference tables; fingerprint and items-scan costs remain (stages 4-5).",
       "review_map": "review/imports.md",
       "reviewed_on": "2026-10-24"
     },

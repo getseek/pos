@@ -25,3 +25,4 @@ maintenance/snapshots/
 *.log.err
 Thumbs.db
 desktop.ini
+/artifacts/

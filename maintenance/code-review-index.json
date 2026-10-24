@@ -21068,7 +21068,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs",
-      "sha256": "c6bd829d012536ab1321102cb66c7ebe41052a9576c20036af85fe4a277d2b84",
+      "sha256": "a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -21076,7 +21076,7 @@
           "name": "ImportDatabaseState",
           "kind": "ClassDeclaration",
           "line": 8,
-          "end": 69,
+          "end": 277,
           "bases": [],
           "properties": []
         }
@@ -21340,7 +21340,7 @@
           "name": "FingerprintAsync",
           "owner": "ImportDatabaseState",
           "line": 37,
-          "end": 68,
+          "end": 276,
           "signature": "FingerprintAsync(DbConnection,DbTransaction?,IEnumerable<string>?,IEnumerable<string>?,CancellationToken)",
           "returns": "Task<string>",
           "parameters": [
@@ -21369,189 +21369,488 @@
           "calls": [
             {
               "name": "CreateHash",
-              "line": 40,
+              "line": 47,
               "receiver": "IncrementalHash",
               "generic_types": []
             },
             {
               "name": "CreateCommand",
-              "line": 43,
+              "line": 51,
               "receiver": "connection",
               "generic_types": []
             },
             {
               "name": "CreateParameter",
-              "line": 44,
+              "line": 52,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "Add",
-              "line": 44,
+              "line": 52,
               "receiver": "cmd.Parameters",
               "generic_types": []
             },
             {
               "name": "AppendData",
-              "line": 45,
+              "line": 53,
               "receiver": "hash",
               "generic_types": []
             },
             {
               "name": "GetBytes",
-              "line": 45,
+              "line": 53,
               "receiver": "Encoding.UTF8",
               "generic_types": []
             },
             {
               "name": "ConfigureAwait",
-              "line": 46,
+              "line": 54,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "ExecuteReaderAsync",
-              "line": 46,
+              "line": 54,
               "receiver": "cmd",
               "generic_types": []
             },
             {
               "name": "ReadAsync",
-              "line": 47,
+              "line": 55,
               "receiver": "r",
               "generic_types": []
             },
             {
               "name": "IsDBNull",
-              "line": 50,
+              "line": 58,
               "receiver": "r",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 50,
+              "line": 58,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "GetValue",
-              "line": 50,
+              "line": 58,
               "receiver": "r",
               "generic_types": []
             },
             {
               "name": "ToString",
-              "line": 51,
+              "line": 59,
               "receiver": "v.Length",
               "generic_types": []
             },
             {
+              "name": "CreateCommand",
+              "line": 78,
+              "receiver": "conn",
+              "generic_types": []
+            },
+            {
+              "name": "ToString",
+              "line": 83,
+              "receiver": "i",
+              "generic_types": []
+            },
+            {
+              "name": "Join",
+              "line": 90,
+              "receiver": "string",
+              "generic_types": []
+            },
+            {
               "name": "Append",
-              "line": 54,
+              "line": 103,
               "receiver": "<implicit>",
               "generic_types": []
             },
             {
+              "name": "ToList",
+              "line": 106,
+              "receiver": "<expression>",
+              "generic_types": []
+            },
+            {
               "name": "Order",
-              "line": 55,
+              "line": 106,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
               "name": "Distinct",
-              "line": 55,
+              "line": 106,
               "receiver": "<expression>",
               "generic_types": []
             },
             {
+              "name": "Min",
+              "line": 123,
+              "receiver": "Math",
+              "generic_types": []
+            },
+            {
+              "name": "GetRange",
+              "line": 124,
+              "receiver": "distinctSkus",
+              "generic_types": []
+            },
+            {
+              "name": "CreateInCommand",
+              "line": 125,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "ReadAsync",
+              "line": 127,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "GetString",
+              "line": 129,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "ContainsKey",
+              "line": 131,
+              "receiver": "rootIdBySku",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 134,
+              "receiver": "resolvedRootIds",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 136,
+              "receiver": "itemRowsBySku",
+              "generic_types": []
+            },
+            {
+              "name": "IsDBNull",
+              "line": 144,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "GetValue",
+              "line": 144,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 146,
+              "receiver": "rows",
+              "generic_types": []
+            },
+            {
+              "name": "GetRange",
+              "line": 160,
+              "receiver": "resolvedRootIds",
+              "generic_types": []
+            },
+            {
+              "name": "GetOrdinal",
+              "line": 166,
+              "receiver": "reader",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 170,
+              "receiver": "barcodesByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "Add",
+              "line": 178,
+              "receiver": "list",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 190,
+              "receiver": "pricingByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 210,
+              "receiver": "priceLevelsByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "AppendRows",
+              "line": 227,
+              "receiver": "<implicit>",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 227,
+              "receiver": "itemRowsBySku",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 228,
+              "receiver": "rootIdBySku",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 229,
+              "receiver": "barcodesByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 230,
+              "receiver": "pricingByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 231,
+              "receiver": "priceLevelsByItemId",
+              "generic_types": []
+            },
+            {
+              "name": "GetRange",
+              "line": 247,
+              "receiver": "distinctPartyCodes",
+              "generic_types": []
+            },
+            {
+              "name": "TryGetValue",
+              "line": 254,
+              "receiver": "thirdPartiesByCode",
+              "generic_types": []
+            },
+            {
+              "name": "GetValueOrDefault",
+              "line": 269,
+              "receiver": "thirdPartiesByCode",
+              "generic_types": []
+            },
+            {
               "name": "ToHexString",
-              "line": 67,
+              "line": 275,
               "receiver": "Convert",
               "generic_types": []
             },
             {
               "name": "GetHashAndReset",
-              "line": 67,
+              "line": 275,
               "receiver": "hash",
               "generic_types": []
             }
           ],
-          "creates": [],
+          "creates": [
+            {
+              "type": "Dictionary<string, List<string[]>>",
+              "line": 107
+            },
+            {
+              "type": "Dictionary<string, string>",
+              "line": 108
+            },
+            {
+              "type": "List<string>",
+              "line": 109
+            },
+            {
+              "type": "List<string[]>",
+              "line": 138
+            },
+            {
+              "type": "Dictionary<string, List<string[]>>",
+              "line": 151
+            },
+            {
+              "type": "Dictionary<string, List<string[]>>",
+              "line": 152
+            },
+            {
+              "type": "Dictionary<string, List<string[]>>",
+              "line": 153
+            },
+            {
+              "type": "List<string[]>",
+              "line": 172
+            },
+            {
+              "type": "List<string[]>",
+              "line": 192
+            },
+            {
+              "type": "List<string[]>",
+              "line": 212
+            },
+            {
+              "type": "Dictionary<string, List<string[]>>",
+              "line": 240
+            },
+            {
+              "type": "List<string[]>",
+              "line": 256
+            }
+          ],
           "errors": [],
           "sql": [
             {
               "operation": "FROM",
-              "table": "store_config",
-              "line": 54
-            },
-            {
-              "operation": "FROM",
-              "table": "price_level_settings",
-              "line": 54
-            },
-            {
-              "operation": "FROM",
-              "table": "uoms",
-              "line": 54
-            },
-            {
-              "operation": "FROM",
-              "table": "product_categories",
-              "line": 54
-            },
-            {
-              "operation": "FROM",
-              "table": "product_category_pricing_rules",
-              "line": 54
-            },
-            {
-              "operation": "FROM",
               "table": "items",
-              "line": 57
+              "line": 41
             },
             {
               "operation": "JOIN",
               "table": "item_kits",
-              "line": 57
+              "line": 41
             },
             {
               "operation": "JOIN",
               "table": "item_kit_components",
-              "line": 57
+              "line": 41
             },
             {
               "operation": "FROM",
               "table": "items",
-              "line": 57
+              "line": 41
             },
             {
               "operation": "FROM",
-              "table": "item_kits",
-              "line": 62
+              "table": "barcodes",
+              "line": 42
             },
             {
               "operation": "FROM",
-              "table": "item_kit_components",
-              "line": 63
+              "table": "items",
+              "line": 42
+            },
+            {
+              "operation": "FROM",
+              "table": "item_pricing",
+              "line": 43
+            },
+            {
+              "operation": "FROM",
+              "table": "items",
+              "line": 43
+            },
+            {
+              "operation": "FROM",
+              "table": "item_price_levels",
+              "line": 44
+            },
+            {
+              "operation": "FROM",
+              "table": "items",
+              "line": 44
             },
             {
               "operation": "FROM",
               "table": "third_parties",
-              "line": 65
+              "line": 45
+            },
+            {
+              "operation": "FROM",
+              "table": "store_config",
+              "line": 96
+            },
+            {
+              "operation": "FROM",
+              "table": "price_level_settings",
+              "line": 97
+            },
+            {
+              "operation": "FROM",
+              "table": "uoms",
+              "line": 98
+            },
+            {
+              "operation": "FROM",
+              "table": "product_categories",
+              "line": 99
+            },
+            {
+              "operation": "FROM",
+              "table": "product_category_pricing_rules",
+              "line": 100
+            },
+            {
+              "operation": "FROM",
+              "table": "items",
+              "line": 114
+            },
+            {
+              "operation": "JOIN",
+              "table": "item_kits",
+              "line": 117
+            },
+            {
+              "operation": "JOIN",
+              "table": "item_kit_components",
+              "line": 118
+            },
+            {
+              "operation": "JOIN",
+              "table": "items",
+              "line": 119
+            },
+            {
+              "operation": "FROM",
+              "table": "barcodes",
+              "line": 164
+            },
+            {
+              "operation": "FROM",
+              "table": "item_pricing",
+              "line": 184
+            },
+            {
+              "operation": "FROM",
+              "table": "item_price_levels",
+              "line": 204
+            },
+            {
+              "operation": "FROM",
+              "table": "item_kits",
+              "line": 235
+            },
+            {
+              "operation": "FROM",
+              "table": "item_kit_components",
+              "line": 236
+            },
+            {
+              "operation": "FROM",
+              "table": "third_parties",
+              "line": 248
             },
             {
               "operation": "FROM",
               "table": "third_party_external_mappings",
-              "line": 66
+              "line": 273
             }
           ],
           "throws": [],
-          "dynamic_sql": true
+          "dynamic_sql": false
         }
       ],
       "constants": [],
       "syntax_errors": [],
-      "lines": 69
+      "lines": 277
     },
     {
       "path": "Software/src/GetSeek.Application/Imports/ImportPolicy.cs",
@@ -225490,6 +225789,192 @@
       "constants": [],
       "syntax_errors": [],
       "lines": 98
+    },
+    {
+      "path": "Software/tests/GetSeek.UnitTests/ImportFingerprintTests.cs",
+      "sha256": "74975b4a8ab1ff5578852dc68afd3aca5d0869c876ce36d5bc3de8c757307e55",
+      "project": "GetSeek.UnitTests",
+      "test": true,
+      "types": [
+        {
+          "name": "ImportFingerprintTests",
+          "kind": "ClassDeclaration",
+          "line": 12,
+          "end": 308,
+          "bases": [],
+          "properties": []
+        }
+      ],
+      "methods": [
+        {
+          "id": "M-d4297e1be8f8",
+          "name": "LegacyFingerprintAsync",
+          "owner": "ImportFingerprintTests",
+          "line": 14,
+          "end": 45,
+          "signature": "LegacyFingerprintAsync(DbConnection,DbTransaction?,IEnumerable<string>?,IEnumerable<string>?,CancellationToken)",
+          "returns": "Task<string>",
+          "parameters": [],
+          "attributes": [],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": true
+        },
+        {
+          "id": "M-7f4ac63c25c1",
+          "name": "BatchedFingerprintAsync",
+          "owner": "ImportFingerprintTests",
+          "line": 47,
+          "end": 49,
+          "signature": "BatchedFingerprintAsync(DbConnection,DbTransaction?,IEnumerable<string>?,IEnumerable<string>?,CancellationToken)",
+          "returns": "Task<string>",
+          "parameters": [],
+          "attributes": [],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-c9b01135fc9d",
+          "name": "CreateTestDatabaseAsync",
+          "owner": "ImportFingerprintTests",
+          "line": 51,
+          "end": 78,
+          "signature": "CreateTestDatabaseAsync()",
+          "returns": "Task<SqliteConnection>",
+          "parameters": [],
+          "attributes": [],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-29b9b36284bd",
+          "name": "Sqlite_CollateNoCaseIn_WorksAsExpected",
+          "owner": "ImportFingerprintTests",
+          "line": 80,
+          "end": 94,
+          "signature": "Sqlite_CollateNoCaseIn_WorksAsExpected()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-725689599aa4",
+          "name": "Sqlite_ValuesCte_WithRecursiveKit_WorksAsExpected",
+          "owner": "ImportFingerprintTests",
+          "line": 96,
+          "end": 148,
+          "signature": "Sqlite_ValuesCte_WithRecursiveKit_WorksAsExpected()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-cc8eccc39584",
+          "name": "BatchedFingerprint_MatchesLegacy_OnNullAndEmptyInputs",
+          "owner": "ImportFingerprintTests",
+          "line": 150,
+          "end": 166,
+          "signature": "BatchedFingerprint_MatchesLegacy_OnNullAndEmptyInputs()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-c775a5cf9365",
+          "name": "BatchedFingerprint_MatchesLegacy_OnCyclesAndDiamondKits",
+          "owner": "ImportFingerprintTests",
+          "line": 168,
+          "end": 200,
+          "signature": "BatchedFingerprint_MatchesLegacy_OnCyclesAndDiamondKits()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-051bb1d381b8",
+          "name": "BatchedFingerprint_MatchesLegacy_OnComplexDataWithKitsAndPricing",
+          "owner": "ImportFingerprintTests",
+          "line": 202,
+          "end": 253,
+          "signature": "BatchedFingerprint_MatchesLegacy_OnComplexDataWithKitsAndPricing()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": false
+        },
+        {
+          "id": "M-a9c143db15f3",
+          "name": "BatchedFingerprint_MatchesLegacy_OnLargeDataset_CrossingMultipleChunks",
+          "owner": "ImportFingerprintTests",
+          "line": 255,
+          "end": 307,
+          "signature": "BatchedFingerprint_MatchesLegacy_OnLargeDataset_CrossingMultipleChunks()",
+          "returns": "Task",
+          "parameters": [],
+          "attributes": [
+            "Fact"
+          ],
+          "calls": [],
+          "creates": [],
+          "errors": [],
+          "sql": [],
+          "throws": [],
+          "dynamic_sql": true
+        }
+      ],
+      "constants": [],
+      "syntax_errors": [],
+      "lines": 308
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/InventoryTierEditorTests.cs",

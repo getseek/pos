@@ -844,9 +844,9 @@ Declarations: <code>ImportProductRow</code> (line 6), <code>ImportStockRow</code
 
 ## ImportDatabaseState.cs {#src-cb21b9739067}
 
-<code>Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs</code> · 69 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs</code> · 277 lines.
 
-SHA-256: <code>c6bd829d012536ab1321102cb66c7ebe41052a9576c20036af85fe4a277d2b84</code>.
+SHA-256: <code>a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4</code>.
 
 Declarations: <code>ImportDatabaseState</code> (line 8).
 
@@ -858,7 +858,7 @@ Declarations: <code>ImportDatabaseState</code> (line 8).
 | <span id="m-dd1ff44747e4"></span><code>ImportDatabaseState.RecordAsync(DbConnection,DbTransaction?,string,string?,CancellationToken)</code><br>10–20 | CreateCommand @13; CreateParameter @14; Add @14; ConfigureAwait @15; ExecuteReaderAsync @15; ReadAsync @17; GetName @18; IsDBNull @18; ToString @18; GetValue @18 | No extracted literal effects. |
 | <span id="m-3613bb998b92"></span><code>ImportDatabaseState.ContextAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>22–26 | ConfigureAwait @24; RecordAsync @24; GetValueOrDefault @25; Parse @25 | FROM store_config @24 |
 | <span id="m-1bdcb4d70b3b"></span><code>ImportDatabaseState.ActiveTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>28–35 | CreateCommand @30; ConfigureAwait @32; ExecuteReaderAsync @32; ReadAsync @33; Add @33; GetInt32 @33 | FROM price_level_settings @31; FROM store_config @31 |
-| <span id="m-5f8aaaff8c19"></span><code>ImportDatabaseState.FingerprintAsync(DbConnection,DbTransaction?,IEnumerable&lt;string&gt;?,IEnumerable&lt;string&gt;?,CancellationToken)</code><br>37–68 | CreateHash @40; CreateCommand @43; CreateParameter @44; Add @44; AppendData @45; GetBytes @45; ConfigureAwait @46; ExecuteReaderAsync @46; ReadAsync @47; IsDBNull @50; ToString @50; GetValue @50; ToString @51; Append @54; Order @55; Distinct @55; ToHexString @67; GetHashAndReset @67 | FROM item_kit_components @63; FROM item_kits @62; FROM items @57; FROM price_level_settings @54; FROM product_categories @54; FROM product_category_pricing_rules @54; FROM store_config @54; FROM third_parties @65; FROM third_party_external_mappings @66; FROM uoms @54; JOIN item_kit_components @57; JOIN item_kits @57 · DYNAMIC SQL: inspect manually |
+| <span id="m-5f8aaaff8c19"></span><code>ImportDatabaseState.FingerprintAsync(DbConnection,DbTransaction?,IEnumerable&lt;string&gt;?,IEnumerable&lt;string&gt;?,CancellationToken)</code><br>37–276 | CreateHash @47; CreateCommand @51; CreateParameter @52; Add @52; AppendData @53; GetBytes @53; ConfigureAwait @54; ExecuteReaderAsync @54; ReadAsync @55; IsDBNull @58; ToString @58; GetValue @58; ToString @59; CreateCommand @78; ToString @83; Join @90; Append @103; ToList @106; Order @106; Distinct @106; Min @123; GetRange @124; CreateInCommand @125; ReadAsync @127; GetString @129; ContainsKey @131; Add @134; TryGetValue @136; IsDBNull @144; GetValue @144; Add @146; GetRange @160; GetOrdinal @166; TryGetValue @170; Add @178; TryGetValue @190; TryGetValue @210; AppendRows @227; GetValueOrDefault @227; GetValueOrDefault @228; GetValueOrDefault @229; GetValueOrDefault @230; GetValueOrDefault @231; GetRange @247; TryGetValue @254; GetValueOrDefault @269; ToHexString @275; GetHashAndReset @275 | FROM barcodes @164; FROM barcodes @42; FROM item_kit_components @236; FROM item_kits @235; FROM item_price_levels @204; FROM item_price_levels @44; FROM item_pricing @184; FROM item_pricing @43; FROM items @114; FROM items @41; FROM items @42; FROM items @43; FROM items @44; FROM price_level_settings @97; FROM product_categories @99; FROM product_category_pricing_rules @100; FROM store_config @96; FROM third_parties @248; FROM third_parties @45; FROM third_party_external_mappings @273; FROM uoms @98; JOIN item_kit_components @118; JOIN item_kit_components @41; JOIN item_kits @117; JOIN item_kits @41; JOIN items @119 |
 
 </details>
 

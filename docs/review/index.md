@@ -15,7 +15,7 @@ Use this atlas to inspect **328 application C# files, 2,177 method declarations,
 
 **Producer coverage:** 74 handled command types have no explicit construction site in this syntax snapshot. That is a connection-analysis gap, not proof of unreachable code; target-typed construction, factories and runtime dispatch need further analysis. 55 methods contain interpolated SQL requiring manual inspection.
 
-**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 478 files, including 150 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
+**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 479 files, including 151 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
 
 See [source-checked business rules](source-check.md) for corrected checkout, Cafe, attachment, expense, payroll and settings claims.
 

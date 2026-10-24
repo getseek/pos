@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "f5a09d11b14350115b53212229ae8e0fac56b653bdcd07d99e8789288679e2e2",
+      "sha256": "b2a62ba988b7a21243fba3aedb6788909cde68e426c972c4155dd09e0af590ed",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -610,6 +610,75 @@
       "times": {
         "duration": "7 m 58 s (integration) + 2 s (unit) + 1 s (acceptance)",
         "run_at_local": "2026-10-24 16:40 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-028",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage4/20261024-1720/stage4-import-tests.txt",
+      "sha256": "02e5c4d143ba4f1050a7cea60323b6bfed62144471822b1f8b01eae778fd0d10",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 4 import-filtered run after the batched-fingerprint rewrite (dotnet test console output, not TRX): 60/60 passed, 0 failed (Unit 7 incl. 6 new ImportFingerprintTests legacy-vs-batched byte-equality cases, Integration 53, 37 s). Covers preview/confirm stale-guard flows against the chunked FingerprintAsync. No TRX, device or live-shop claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "60",
+        "passed": "60",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "37 s (integration) + 593 ms (unit)",
+        "run_at_local": "2026-10-24 17:19 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-029",
+      "kind": "fresh-automated",
+      "path": "artifacts/import-stage4/20261024-1720/stage4-full-tests.txt",
+      "sha256": "c908ff0cb373f2780ea22cba921074a1abc681b5a5128a29fa5591b4b55ab129",
+      "reviewed_on": "2026-10-24",
+      "claim": "Stage 4 full solution suite (post-change, console output, not TRX): 1317/1317 passed, 0 failed (Acceptance 1, Unit 294, Integration 1022, integration 11 m 53 s). Native dialogs, live shop and physical devices were not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1317",
+        "passed": "1317",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "11 m 53 s (integration) + 2 s (unit) + 950 ms (acceptance)",
+        "run_at_local": "2026-10-24 17:19 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

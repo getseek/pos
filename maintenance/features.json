@@ -359,6 +359,10 @@
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
           "sha256": "d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs",
+          "sha256": "a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4"
         }
       ],
       "source_review": "source-reviewed",
@@ -371,11 +375,13 @@
         "E-024",
         "E-025",
         "E-026",
-        "E-027"
+        "E-027",
+        "E-028",
+        "E-029"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned. Stage-3 verified 2026-10-24: ReferenceSnapshot reference caches with per-transaction rebuild (preview and confirm each build their own); import 54/54 (E-026), full suite 1311/1311 (E-027). Benchmark-neutral on batch 03 (34.2 s / 143.1 s flows vs stage-2 34.3 s / 143.4 s) - the eliminated statements target small reference tables; fingerprint and items-scan costs remain (stages 4-5).",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned. Stage-3 verified 2026-10-24: ReferenceSnapshot reference caches with per-transaction rebuild (preview and confirm each build their own); import 54/54 (E-026), full suite 1311/1311 (E-027). Benchmark-neutral on batch 03 (34.2 s / 143.1 s flows vs stage-2 34.3 s / 143.4 s) - the eliminated statements target small reference tables; fingerprint and items-scan costs remain (stages 4-5). Stage-4 verified 2026-10-24: FingerprintAsync rewritten to 500-parameter chunked queries with byte-identical output (legacy-vs-batched hex equality tests, E-028); full suite 1317/1317 (E-029). Benchmark (disposable DB, batch 03): flow 21.0 s at 10k / 50.6 s at 30k catalog vs stage-3 34.2 s / 143.1 s; fingerprint probe 0.1 s regardless of catalog size. Benchmark observation, not an acceptance criterion. ImportDatabaseState.cs added to this feature's source list (previously unhashed).",
       "review_map": "review/imports.md",
       "reviewed_on": "2026-10-24"
     },

@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **150 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **151 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -734,6 +734,12 @@ Located test declarations: <code>Report_ReusesProvidedDiagnosticId_Verbatim</cod
 <code>Software/tests/GetSeek.UnitTests/HardwareAndAllocationUnitTests.cs</code> · SHA-256 <code>95a76bca979cf365251c83dce02995586e3415d775365f0ae9d9cbfbfcdd3c7f</code>.
 
 Located test declarations: <code>BarcodeScannerWedge_ShouldParseWeighedFreshPlu</code> @9, <code>BarcodeScannerWedge_ShouldParseGs1CompoundBarcode</code> @21, <code>BarcodeScannerWedge_ShouldAcceptBurst_AndRejectSlowTyping</code> @33, <code>EscPosReceiptBuilder_ShouldEmitExpectedProtocolBytes</code> @59, <code>SerialScaleDriver_ShouldParseStableWeightFrame</code> @84.
+
+## ImportFingerprintTests.cs {#src-f327271a65f7}
+
+<code>Software/tests/GetSeek.UnitTests/ImportFingerprintTests.cs</code> · SHA-256 <code>74975b4a8ab1ff5578852dc68afd3aca5d0869c876ce36d5bc3de8c757307e55</code>.
+
+Located test declarations: <code>Sqlite_CollateNoCaseIn_WorksAsExpected</code> @80, <code>Sqlite_ValuesCte_WithRecursiveKit_WorksAsExpected</code> @96, <code>BatchedFingerprint_MatchesLegacy_OnNullAndEmptyInputs</code> @150, <code>BatchedFingerprint_MatchesLegacy_OnCyclesAndDiamondKits</code> @168, <code>BatchedFingerprint_MatchesLegacy_OnComplexDataWithKitsAndPricing</code> @202, <code>BatchedFingerprint_MatchesLegacy_OnLargeDataset_CrossingMultipleChunks</code> @255.
 
 ## InventoryTierEditorTests.cs {#src-e592e8075206}
 

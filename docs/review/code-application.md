@@ -548,9 +548,9 @@ Declarations: <code>CatalogItemDto</code> (line 6), <code>CreateProductCommand :
 
 ## CatalogKindEligibilityPolicy.cs {#src-b8a4ee82a994}
 
-<code>Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs</code> · 205 lines.
+<code>Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs</code> · 211 lines.
 
-SHA-256: <code>36fceedbe4ec68ad4842811c135b6de7e69338d8ede14f8c4b805d1eddd9b9c8</code>.
+SHA-256: <code>92fddc7b3fdcb008773b1dae730bf5776e13b9eb6565b58a3cc2a0a913918a3b</code>.
 
 Declarations: <code>CatalogKindEligibilityPolicy</code> (line 11).
 
@@ -564,9 +564,9 @@ Declarations: <code>CatalogKindEligibilityPolicy</code> (line 11).
 | <span id="m-7313432f59e5"></span><code>CatalogKindEligibilityPolicy.IsCategoryTargetMatchingKind(string,string?)</code><br>51–62 | NormalizeItemKind @53; Trim @54; Equals @56 | No extracted literal effects. |
 | <span id="m-f7e31d825d43"></span><code>CatalogKindEligibilityPolicy.ValidateCategoryForKind(string,bool,bool,string?,string?)</code><br>64–93 | NormalizeItemKind @71; IsCategoryTargetMatchingKind @83; Equals @85 | No extracted literal effects. |
 | <span id="m-77bd4daeff16"></span><code>CatalogKindEligibilityPolicy.IsUnitEligibleForKind(string,string?,string?,string?,bool,string?)</code><br>95–105 | ValidateUnitEligibility @103 | No extracted literal effects. |
-| <span id="m-4bc856c0f5a6"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string?,string?,string?,bool,string?)</code><br>107–172 | NormalizeItemKind @115; ToUpperInvariant @116; Trim @116; IsNullOrWhiteSpace @120; Equals @125; Trim @159 | No extracted literal effects. |
-| <span id="m-31721d36e95a"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UnitDefinition,bool,string?)</code><br>174–188 | ValidateUnitEligibility @181 | No extracted literal effects. |
-| <span id="m-54b1ab5ce246"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UomDefinitionDto,bool,string?)</code><br>190–204 | ValidateUnitEligibility @197 | No extracted literal effects. |
+| <span id="m-4bc856c0f5a6"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string?,string?,string?,bool,string?)</code><br>107–178 | NormalizeItemKind @115; ToUpperInvariant @116; Trim @116; IsNullOrWhiteSpace @120; Equals @125; Trim @165 | No extracted literal effects. |
+| <span id="m-62b17d0b12f6"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UnitDefinition,bool,string?)</code><br>180–194 | ValidateUnitEligibility @187 | No extracted literal effects. |
+| <span id="m-1960d30cfe37"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UomDefinitionDto,bool,string?)</code><br>196–210 | ValidateUnitEligibility @203 | No extracted literal effects. |
 
 </details>
 
@@ -1864,11 +1864,11 @@ Declarations: <code>LifecycleStatusScope</code> (line 4).
 
 ## ReadProjections.cs {#src-f3a0ea7fd9d1}
 
-<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 279 lines.
+<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 280 lines.
 
-SHA-256: <code>29bd2c58a85aed8ae3322637df1a62bfb2aa94bc2f9da5b7ef25ae986643452e</code>.
+SHA-256: <code>6a41262f21392bfc491641a5ddad557c69225248cd1ba97f479233a2b381da7a</code>.
 
-Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 46), <code>ActivityOrderProjection</code> (line 56), <code>DraftCartLineProjection</code> (line 74), <code>DraftCartProjection</code> (line 92), <code>InventoryItemProjection</code> (line 106), <code>KitAvailabilityProjection</code> (line 134), <code>ItemLotBalanceProjection</code> (line 141), <code>ItemSerialStateCountProjection</code> (line 142), <code>ItemKitUsageProjection</code> (line 143), <code>ItemTraceabilitySummaryProjection</code> (line 144), <code>ItemStockHistoryRow</code> (line 152), <code>ItemStockHistoryPage</code> (line 177), <code>ItemPriceHistoryRow</code> (line 192), <code>LotCandidateProjection</code> (line 219), <code>SerialCandidateProjection</code> (line 234), <code>RestaurantOrderLineProjection</code> (line 246), <code>RestaurantOrderProjection</code> (line 258).
+Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 46), <code>ActivityOrderProjection</code> (line 56), <code>DraftCartLineProjection</code> (line 74), <code>DraftCartProjection</code> (line 92), <code>InventoryItemProjection</code> (line 106), <code>KitAvailabilityProjection</code> (line 135), <code>ItemLotBalanceProjection</code> (line 142), <code>ItemSerialStateCountProjection</code> (line 143), <code>ItemKitUsageProjection</code> (line 144), <code>ItemTraceabilitySummaryProjection</code> (line 145), <code>ItemStockHistoryRow</code> (line 153), <code>ItemStockHistoryPage</code> (line 178), <code>ItemPriceHistoryRow</code> (line 193), <code>LotCandidateProjection</code> (line 220), <code>SerialCandidateProjection</code> (line 235), <code>RestaurantOrderLineProjection</code> (line 247), <code>RestaurantOrderProjection</code> (line 259).
 
 ## ReferenceSnapshot.cs {#src-7a2c51dec98f}
 

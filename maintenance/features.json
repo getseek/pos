@@ -172,7 +172,7 @@
         },
         {
           "path": "Software/src/GetSeek.Application/ReadServices/ReadProjections.cs",
-          "sha256": "29bd2c58a85aed8ae3322637df1a62bfb2aa94bc2f9da5b7ef25ae986643452e"
+          "sha256": "6a41262f21392bfc491641a5ddad557c69225248cd1ba97f479233a2b381da7a"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
@@ -180,7 +180,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Models/UiModels.cs",
-          "sha256": "c545a2ab9b4f1fa4e4692903add31096f46ad207db8109d926951dedb768ceeb"
+          "sha256": "f90c09bf8b88327e87e932397054fe6784c7aa1650699335de224e181cc05d12"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/CatalogOrderPageHelper.cs",
@@ -192,7 +192,7 @@
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs",
-          "sha256": "36fceedbe4ec68ad4842811c135b6de7e69338d8ede14f8c4b805d1eddd9b9c8"
+          "sha256": "92fddc7b3fdcb008773b1dae730bf5776e13b9eb6565b58a3cc2a0a913918a3b"
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogRegistryCommandHandler.cs",
@@ -217,7 +217,8 @@
         "E-036",
         "E-037",
         "E-038",
-        "E-039"
+        "E-039",
+        "E-040"
       ],
       "target_page": "operator/catalog.md",
       "document_status": "planned",
@@ -331,11 +332,11 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08"
+          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67"
+          "sha256": "b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
@@ -355,7 +356,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa"
+          "sha256": "dd5e4b37b2437a1c357520f357099b818335b744771fb558987e91d8511c9934"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
@@ -363,7 +364,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64"
+          "sha256": "ccdb5222ae402837ed7a2c1a58f03a6fbb80b0dcf8d9f916326b030e11fc3fc5"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
@@ -382,7 +383,8 @@
         "E-036",
         "E-037",
         "E-038",
-        "E-039"
+        "E-039",
+        "E-040"
       ],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
@@ -401,11 +403,11 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08"
+          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67"
+          "sha256": "b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdPartyImport.cs",
@@ -425,7 +427,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa"
+          "sha256": "dd5e4b37b2437a1c357520f357099b818335b744771fb558987e91d8511c9934"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
@@ -433,7 +435,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64"
+          "sha256": "ccdb5222ae402837ed7a2c1a58f03a6fbb80b0dcf8d9f916326b030e11fc3fc5"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
@@ -465,7 +467,7 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs",
-          "sha256": "1473d66f4d1a74c292c4d4ce3da2dcf0f7db612af108d1a9f7560505a5cb41a9"
+          "sha256": "84220bacc23f0dc018e93d046f4020d7438c8548c547e60aaa5a42f1c2217e8c"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs",
@@ -492,7 +494,8 @@
         "E-036",
         "E-037",
         "E-038",
-        "E-039"
+        "E-039",
+        "E-040"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",

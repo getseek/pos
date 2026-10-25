@@ -70,7 +70,7 @@
         }
       ],
       "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace.",
-      "status": "RESOLVED (2026-10-20 · option reject)",
+      "status": "RESOLVED (2026-10-20 \u00b7 option reject)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -146,7 +146,7 @@
         }
       ],
       "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics.",
-      "status": "RESOLVED (2026-10-20 · option boundary)",
+      "status": "RESOLVED (2026-10-20 \u00b7 option boundary)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -227,7 +227,7 @@
         }
       ],
       "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling.",
-      "status": "RESOLVED (2026-10-20 · option log)",
+      "status": "RESOLVED (2026-10-20 \u00b7 option log)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -428,7 +428,7 @@
         }
       ],
       "rollback": "Revert test-only changes in their future isolated checkout; leave production data untouched.",
-      "status": "RESOLVED (2026-10-20 · option audit)"
+      "status": "RESOLVED (2026-10-20 \u00b7 option audit)"
     },
     {
       "id": "PP-REV-007",
@@ -515,7 +515,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08"
+          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

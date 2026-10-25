@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **156 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **157 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -711,7 +711,7 @@ Located test declarations: <code>GetTeamMembersAsync_UnionOfPeopleAndUnlinkedUse
 
 ## WorkspaceThemeConsistencyTests.cs {#src-b058c127f53c}
 
-<code>Software/tests/GetSeek.IntegrationTests/WorkspaceThemeConsistencyTests.cs</code> · SHA-256 <code>42db2cb2b110a4a98fc7bec3e1679e855aa8ffe64770ff5d7a1767337e4eb7ac</code>.
+<code>Software/tests/GetSeek.IntegrationTests/WorkspaceThemeConsistencyTests.cs</code> · SHA-256 <code>7eaeb2973ba9fc51e616e48a8ce859abe2c0b9c655ec0df6df30e88e711666f2</code>.
 
 ## ZReportAndWasteExpenseIntegrationTests.cs {#src-50981a21ab71}
 
@@ -858,6 +858,12 @@ Located test declarations: <code>RemainingBalance_UsesSignedBuckets</code> @10, 
 <code>Software/tests/GetSeek.UnitTests/SearchAndManufacturingContractsUnitTests.cs</code> · SHA-256 <code>299b3800b4ef4c212b9e7ede0b5a4ded6ce6e03c21b7e67659ebbb3edc86c974</code>.
 
 Located test declarations: <code>SearchRequest_ClampsLimitCorrectly</code> @9, <code>SearchEntityKey_GuidConversionsAndFormatting</code> @31, <code>SearchOption_ToStringFormatting</code> @48, <code>ManufacturingSortKeys_ValidateAllowedSortKeys</code> @61, <code>ProductionRunSortKeys_ValidateAllowedSortKeys</code> @101.
+
+## ServiceItemLifecycleAndWorkspaceUnitTests.cs {#src-6b9303debdb4}
+
+<code>Software/tests/GetSeek.UnitTests/ServiceItemLifecycleAndWorkspaceUnitTests.cs</code> · SHA-256 <code>b9f8d421df376f611eb42be66f3ac4e48e0d000304676de23f0fe396b208eb3e</code>.
+
+Located test declarations: <code>CatalogKindEligibilityPolicy_UnitEligibility_EnforcesDimensionAndKindRules</code> @35, <code>CatalogKindEligibilityPolicy_CategoryTarget_EnforcesKindMatching</code> @71, <code>CatalogKindEligibilityPolicy_Normalization_DefaultsCorrectly</code> @86, <code>MainViewModel_InventoryKindSwitching_UpdatesViewFlagsAndScopedLabels</code> @100, <code>MainViewModel_OpenAddService_InitializesServiceModalState</code> @122, <code>MainViewModel_OpenAddProduct_InitializesProductModalState</code> @138, <code>MainViewModel_OpenEditProduct_WithServiceItem_ConfiguresModalCorrectly</code> @152, <code>MainViewModel_OpenEditProduct_WithProductItem_ConfiguresModalCorrectly</code> @179, <code>MainViewModel_CategoryManager_OpenForCurrentKind_FixesTarget</code> @204, <code>InventoryTableDefinition_ServiceItem_DisplaysDashesAndDisablesStockActions</code> @222.
 
 ## Slice0SharedBoundariesUnitTests.cs {#src-968737e55900}
 

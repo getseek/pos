@@ -613,9 +613,9 @@ Declarations: <code>XlsxImportRow</code> (line 10), <code>XlsxImportWorkbook</co
 
 ## XlsxMasterDataExportService.cs {#src-d02afc67a786}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs</code> · 100 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs</code> · 116 lines.
 
-SHA-256: <code>1473d66f4d1a74c292c4d4ce3da2dcf0f7db612af108d1a9f7560505a5cb41a9</code>.
+SHA-256: <code>84220bacc23f0dc018e93d046f4020d7438c8548c547e60aaa5a42f1c2217e8c</code>.
 
 Declarations: <code>XlsxMasterDataExportService</code> (line 10).
 
@@ -624,7 +624,7 @@ Declarations: <code>XlsxMasterDataExportService</code> (line 10).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-4a1e2763d1e1"></span><code>XlsxMasterDataExportService.ExportAsync(string,string,Guid,CancellationToken)</code><br>12–99 | nameof @14; ConfigureAwait @16; OpenAsync @16; BeginTransaction @17; HasPermissionAsync @20; ContextAsync @22; CreateCommand @26; ExecuteReaderAsync @27; ReadAsync @29; GetName @32; IsDBNull @32; ToString @32; GetValue @32; Add @33; TryGetValue @39; TryParse @39; ToString @39; ToString @40; ToDisplayAmount @40; TryParse @44; Query @49; Money @74; Percent @74; CommitAsync @97; Write @98 | FROM item_kits @61; FROM item_price_levels @86; FROM item_pricing @76; FROM items @61; FROM third_parties @49; JOIN barcodes @61; JOIN item_pricing @61; JOIN items @76; JOIN items @86; JOIN product_categories @49; JOIN product_categories @61 · ArgumentException @14; UnauthorizedAccessException @21 |
+| <span id="m-70fc70ffcc9c"></span><code>XlsxMasterDataExportService.ExportAsync(string,string,Guid,string?,CancellationToken)</code><br>12–115 | nameof @14; ConfigureAwait @16; OpenAsync @16; BeginTransaction @17; HasPermissionAsync @20; ContextAsync @22; CreateCommand @26; IsNullOrWhiteSpace @27; CreateParameter @29; Add @32; ExecuteReaderAsync @34; ReadAsync @36; GetName @39; IsDBNull @39; ToString @39; GetValue @39; Add @40; TryGetValue @46; TryParse @46; ToString @46; ToString @47; ToDisplayAmount @47; TryParse @51; Query @56; Equals @68; Money @87; Percent @87; CommitAsync @113; Write @114 | FROM third_parties @56; JOIN product_categories @56 · ArgumentException @14; UnauthorizedAccessException @21 · DYNAMIC SQL: inspect manually |
 
 </details>
 
@@ -871,26 +871,26 @@ Declarations: <code>SqliteExpenseReader : IExpenseReader</code> (line 11).
 
 ## SqliteInventoryReader.cs {#src-a98e04a6dd02}
 
-<code>Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryReader.cs</code> · 681 lines.
+<code>Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryReader.cs</code> · 705 lines.
 
-SHA-256: <code>db5f8f8f63f12bb863705ec8d1a25700438c8d2bdd531d92ffb989428132d61a</code>.
+SHA-256: <code>88ca368765bfff7d6a338812abcd10ab21d7ca239de6c8c0f50193809d91ad7d</code>.
 
-Declarations: <code>SqliteInventoryReader</code> (line 11).
+Declarations: <code>SqliteInventoryReader</code> (line 12).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (9)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-fe3b6bc0d7ee"></span><code>SqliteInventoryReader.GetKitAvailabilityAsync(DbConnection,Guid?,IReadOnlyList&lt;KitComponentInput&gt;,ISessionContext,CancellationToken)</code><br>13–132 | ConfigureAwait @23; BeginTransactionAsync @23; DecomposeToLeavesAsync @29; CreateCommand @43; AddParameter @46; ToString @46; ExecuteReaderAsync @47; ReadAsync @48; GetString @50; GetInt32 @53; Equals @55; DisposeAsync @56; IsNullOrWhiteSpace @60; ResolveFactorAsync @61; GetActiveKitInfoAsync @67; AddDemand @76; ToArray @86; Select @86; GetLocationBalanceAsync @101; ToString @115; ToString @117; ToInt64 @118; ExecuteScalarAsync @118; Min @119; Max @122 | FROM items @45; FROM pending_allocations @107; FROM serials @107 · UnauthorizedAccessException @21 |
-| <span id="m-1e4d462c50ab"></span><code>SqliteInventoryReader.GetInventoryItemsAsync(DbConnection,string,int,ISessionContext,string?,bool,CancellationToken)</code><br>134–300 | IsNullOrWhiteSpace @149; Equals @150; CreateCommand @177; CreateParameter @212; Add @215; ConfigureAwait @217; ExecuteReaderAsync @217; ReadAsync @218; IsDBNull @220; GetString @220; TryParse @222; Add @227; Parse @228; GetInt64 @233; GetInt32 @236; ToDecimal @238; GetDouble @238; TryParse @244; GetLocationBalanceAsync @262; GetPhysicalOnHandAsync @265; Add @270 | FROM items @182; JOIN product_categories @182 · UnauthorizedAccessException @145 |
-| <span id="m-cd53d59a93b2"></span><code>SqliteInventoryReader.GetStockBalanceAsync(DbConnection,Guid,string,CancellationToken)</code><br>302–313 | ConfigureAwait @310; GetLocationBalanceAsync @310 | No extracted literal effects. |
-| <span id="m-aee040e64835"></span><code>SqliteInventoryReader.AddDemand(Dictionary&lt;Guid, (string Sku, string Name, decimal Quantity, string BaseUnit, bool Tracked, bool Serial)&gt;,Guid,string,string,decimal,string,bool,bool)</code><br>315–323 | TryGetValue @319 | No extracted literal effects. |
-| <span id="m-d791f80d410f"></span><code>SqliteInventoryReader.AddParameter(DbCommand,string,object)</code><br>325–331 | CreateParameter @327; Add @330 | No extracted literal effects. |
-| <span id="m-dec79a3b4b28"></span><code>SqliteInventoryReader.GetPagedInventoryItemsAsync(DbConnection,string,int,ISessionContext,PageRequest,string?,LifecycleStatusScope,bool,string?,string?,string?,Guid?,CancellationToken)</code><br>345–626 | ConfigureAwait @364; HasActiveCatalogAdminAsync @364; ResolveOrderBy @369; nameof @377; IsNullOrWhiteSpace @380; Equals @381; Equals @383; Add @390; Equals @408; Join @419; CreateParameter @423; Add @426; ToString @432; Trim @439; Trim @449; CreateCommand @463; AddFilterParameters @468; ToInt32 @469; ExecuteScalarAsync @469; ExecuteReaderAsync @542; ReadAsync @543; IsDBNull @545; GetString @545; TryParse @547; Add @552; Parse @553; GetInt64 @558; GetInt32 @561; ToDecimal @563; GetDouble @563; TryParse @569; GetLocationBalanceAsync @588; GetPhysicalOnHandAsync @591; Add @596 | FROM barcodes @404; FROM stock_movements @416 · UnauthorizedAccessException @362; UnauthorizedAccessException @366; ArgumentException @377 · DYNAMIC SQL: inspect manually |
-| <span id="m-4d93ab3bcbd2"></span><code>SqliteInventoryReader.CanReviewClassificationAsync(DbConnection,ISessionContext,CancellationToken)</code><br>628–638 | ConfigureAwait @637; HasActiveCatalogAdminAsync @637 | No extracted literal effects. |
-| <span id="m-5b988e985147"></span><code>SqliteInventoryReader.GetActiveUnclassifiedInventoryItemCountAsync(DbConnection,ISessionContext,CancellationToken)</code><br>640–658 | ConfigureAwait @649; HasActiveCatalogAdminAsync @649; CreateCommand @654; ToInt32 @657; ExecuteScalarAsync @657 | FROM items @655 · UnauthorizedAccessException @647; UnauthorizedAccessException @651 |
-| <span id="m-cca1e7a4e3b7"></span><code>SqliteInventoryReader.HasActiveCatalogAdminAsync(DbConnection,ISessionContext,CancellationToken)</code><br>660–680 | HasPermission @665; CreateCommand @670; CreateParameter @675; ToString @677; Add @678; ToInt64 @679; ConfigureAwait @679; ExecuteScalarAsync @679 | FROM users @671; JOIN roles @671; JOIN user_roles @671 |
+| <span id="m-7d859780fc71"></span><code>SqliteInventoryReader.GetKitAvailabilityAsync(DbConnection,Guid?,IReadOnlyList&lt;KitComponentInput&gt;,ISessionContext,CancellationToken)</code><br>14–133 | ConfigureAwait @24; BeginTransactionAsync @24; DecomposeToLeavesAsync @30; CreateCommand @44; AddParameter @47; ToString @47; ExecuteReaderAsync @48; ReadAsync @49; GetString @51; GetInt32 @54; Equals @56; DisposeAsync @57; IsNullOrWhiteSpace @61; ResolveFactorAsync @62; GetActiveKitInfoAsync @68; AddDemand @77; ToArray @87; Select @87; GetLocationBalanceAsync @102; ToString @116; ToString @118; ToInt64 @119; ExecuteScalarAsync @119; Min @120; Max @123 | FROM items @46; FROM pending_allocations @108; FROM serials @108 · UnauthorizedAccessException @22 |
+| <span id="m-f3f5c411d9dc"></span><code>SqliteInventoryReader.GetInventoryItemsAsync(DbConnection,string,int,ISessionContext,string?,bool,CancellationToken)</code><br>135–305 | IsNullOrWhiteSpace @150; Equals @151; CreateCommand @179; CreateParameter @215; Add @218; ConfigureAwait @220; ExecuteReaderAsync @220; ReadAsync @221; IsDBNull @223; GetString @223; TryParse @225; Add @230; Parse @231; GetInt64 @236; GetInt32 @239; ToDecimal @241; GetDouble @241; TryParse @247; GetLocationBalanceAsync @266; GetPhysicalOnHandAsync @269; Add @274 | FROM items @184; JOIN product_categories @184 · UnauthorizedAccessException @146 |
+| <span id="m-bb007ebe6ea6"></span><code>SqliteInventoryReader.GetStockBalanceAsync(DbConnection,Guid,string,CancellationToken)</code><br>307–318 | ConfigureAwait @315; GetLocationBalanceAsync @315 | No extracted literal effects. |
+| <span id="m-44b1811fdacf"></span><code>SqliteInventoryReader.AddDemand(Dictionary&lt;Guid, (string Sku, string Name, decimal Quantity, string BaseUnit, bool Tracked, bool Serial)&gt;,Guid,string,string,decimal,string,bool,bool)</code><br>320–328 | TryGetValue @324 | No extracted literal effects. |
+| <span id="m-8cc0c0dbc1dc"></span><code>SqliteInventoryReader.AddParameter(DbCommand,string,object)</code><br>330–336 | CreateParameter @332; Add @335 | No extracted literal effects. |
+| <span id="m-d1e9db79366e"></span><code>SqliteInventoryReader.GetPagedInventoryItemsAsync(DbConnection,string,int,ISessionContext,PageRequest,string?,LifecycleStatusScope,bool,string?,string?,string?,Guid?,string?,CancellationToken)</code><br>350–650 | ConfigureAwait @370; HasActiveCatalogAdminAsync @370; ResolveOrderBy @375; nameof @383; IsNullOrWhiteSpace @386; Equals @387; Equals @389; Add @396; Equals @414; Join @431; CreateParameter @435; Add @438; ToString @444; Trim @451; Trim @461; NormalizeItemKind @477; CreateCommand @483; AddFilterParameters @488; ToInt32 @489; ExecuteScalarAsync @489; ExecuteReaderAsync @564; ReadAsync @565; IsDBNull @567; GetString @567; TryParse @569; Add @574; Parse @575; GetInt64 @580; GetInt32 @583; ToDecimal @585; GetDouble @585; TryParse @591; GetLocationBalanceAsync @611; GetPhysicalOnHandAsync @614; Add @619 | FROM barcodes @410; FROM stock_movements @423 · UnauthorizedAccessException @368; UnauthorizedAccessException @372; ArgumentException @383 · DYNAMIC SQL: inspect manually |
+| <span id="m-47fcf56d353a"></span><code>SqliteInventoryReader.CanReviewClassificationAsync(DbConnection,ISessionContext,CancellationToken)</code><br>652–662 | ConfigureAwait @661; HasActiveCatalogAdminAsync @661 | No extracted literal effects. |
+| <span id="m-aebbd904df68"></span><code>SqliteInventoryReader.GetActiveUnclassifiedInventoryItemCountAsync(DbConnection,ISessionContext,CancellationToken)</code><br>664–682 | ConfigureAwait @673; HasActiveCatalogAdminAsync @673; CreateCommand @678; ToInt32 @681; ExecuteScalarAsync @681 | FROM items @679 · UnauthorizedAccessException @671; UnauthorizedAccessException @675 |
+| <span id="m-82733c3c9b9b"></span><code>SqliteInventoryReader.HasActiveCatalogAdminAsync(DbConnection,ISessionContext,CancellationToken)</code><br>684–704 | HasPermission @689; CreateCommand @694; CreateParameter @699; ToString @701; Add @702; ToInt64 @703; ConfigureAwait @703; ExecuteScalarAsync @703 | FROM users @695; JOIN roles @695; JOIN user_roles @695 |
 
 </details>
 

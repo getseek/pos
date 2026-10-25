@@ -495,12 +495,12 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08",
+          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82",
           "line": 1
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "5cd0260e9ee82a9258e342a02244879cfc5a95896e68b37a5800a09238a3ec67",
+          "sha256": "b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0",
           "line": 1
         },
         {
@@ -525,7 +525,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "d0811699fd5a980cd8d3d9bf56f1436d928183e238054dc1908ea712d8fe2baa",
+          "sha256": "dd5e4b37b2437a1c357520f357099b818335b744771fb558987e91d8511c9934",
           "line": 1
         },
         {
@@ -535,7 +535,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "e943969445a5b83eeade887648b74f65fb5232af7560eaa48e8400465ab24f64",
+          "sha256": "ccdb5222ae402837ed7a2c1a58f03a6fbb80b0dcf8d9f916326b030e11fc3fc5",
           "line": 1
         },
         {
@@ -549,7 +549,7 @@
           "sha256": "2efed1125b8ee2313b4eeb83f998503d2b1831edd824bb8b8d2f2c47c3579cc3"
         }
       ],
-      "notes": "23 October 2026 — Patch B, E-023: 53 targeted tests passed. Both import toolbars expose Download Result when a result exists for the current unlocked operator/database. Save cancellation/failure keeps that bounded in-memory artifact. There is no Retry Import action. Correctable failed XLSX retains original identifiers, physical rows, instruction rows, create/update choices and Stock; Import Results contains diagnostics and is not business data. Unsafe/corrupt/oversized files use a diagnostic-only XLSX and require correcting the original file or a fresh template. Ambiguous outcomes first read the original durable key; unresolved outcomes omit business input and warn against stock resubmission. Lock/disposal/database changes invalidate old artifacts and stale work. Success output behavior and import handlers/parsers/templates/schema/stock/pricing rules remain unchanged. Headless layout and event tests do not verify native OS dialogs or shop acceptance."
+      "notes": "23 October 2026 \u2014 Patch B, E-023: 53 targeted tests passed. Both import toolbars expose Download Result when a result exists for the current unlocked operator/database. Save cancellation/failure keeps that bounded in-memory artifact. There is no Retry Import action. Correctable failed XLSX retains original identifiers, physical rows, instruction rows, create/update choices and Stock; Import Results contains diagnostics and is not business data. Unsafe/corrupt/oversized files use a diagnostic-only XLSX and require correcting the original file or a fresh template. Ambiguous outcomes first read the original durable key; unresolved outcomes omit business input and warn against stock resubmission. Lock/disposal/database changes invalidate old artifacts and stale work. Success output behavior and import handlers/parsers/templates/schema/stock/pricing rules remain unchanged. Headless layout and event tests do not verify native OS dialogs or shop acceptance."
     },
     {
       "id": "PP-MAP-TEAMS",
@@ -772,7 +772,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08"
+          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",

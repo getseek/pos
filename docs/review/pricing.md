@@ -181,7 +181,7 @@ Handler: [QueueShelfLabelPrintCommandHandler](code-application.md#src-590c68d052
 
 Declaration: [ShelfLabelCommands.cs:12](code-application.md#src-590c68d05298). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [QueueSelectedShelfLabelsAsync:4676](code-desktop.md#src-974d69a1850f)
+Construction sites: [QueueSelectedShelfLabelsAsync:4694](code-desktop.md#src-974d69a1850f)
 
 Handler method: [QueueShelfLabelPrintCommandHandler.HandleAsync(QueueShelfLabelPrintCommand,CommandEnvelope&lt;QueueShelfLabelPrintCommand&gt;,CancellationToken)](code-application.md#m-cbc484ac38a3).
 
@@ -201,7 +201,7 @@ Handler: [ResolveKitPriceAlertCommandHandler](code-application.md#src-4faee8fa1e
 
 Declaration: [KitPriceAlertCommands.cs:7](code-application.md#src-4faee8fa1e75). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SetKitPriceAlertStatusAsync:4658](code-desktop.md#src-974d69a1850f)
+Construction sites: [SetKitPriceAlertStatusAsync:4676](code-desktop.md#src-974d69a1850f)
 
 Handler method: [ResolveKitPriceAlertCommandHandler.HandleAsync(ResolveKitPriceAlertCommand,CommandEnvelope&lt;ResolveKitPriceAlertCommand&gt;,CancellationToken)](code-application.md#m-e7c7d8c5187a).
 
@@ -281,7 +281,7 @@ Handler: [PriceOfferCommandHandler](code-application.md#src-96b68fcbfd04). Resul
 
 Declaration: [PriceOfferCommands.cs:9](code-application.md#src-96b68fcbfd04). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SavePriceOfferAsync:4507](code-desktop.md#src-974d69a1850f)
+Construction sites: [SavePriceOfferAsync:4525](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceOfferCommandHandler.HandleAsync(SavePriceOfferCommand,CommandEnvelope&lt;SavePriceOfferCommand&gt;,CancellationToken)](code-application.md#m-4ef83743558d).
 
@@ -301,7 +301,7 @@ Handler: [PriceOfferCommandHandler](code-application.md#src-96b68fcbfd04). Resul
 
 Declaration: [PriceOfferCommands.cs:30](code-application.md#src-96b68fcbfd04). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [TogglePriceOfferAsync:4526](code-desktop.md#src-974d69a1850f)
+Construction sites: [TogglePriceOfferAsync:4544](code-desktop.md#src-974d69a1850f)
 
 Handler method: [PriceOfferCommandHandler.HandleAsync(SetPriceOfferStatusCommand,CommandEnvelope&lt;SetPriceOfferStatusCommand&gt;,CancellationToken)](code-application.md#m-71f01a823c9f).
 
@@ -341,7 +341,7 @@ Handler: [SetShelfLabelStatusCommandHandler](code-application.md#src-590c68d0529
 
 Declaration: [ShelfLabelCommands.cs:104](code-application.md#src-590c68d05298). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SetSelectedShelfLabelStatusAsync:4690](code-desktop.md#src-974d69a1850f)
+Construction sites: [SetSelectedShelfLabelStatusAsync:4708](code-desktop.md#src-974d69a1850f)
 
 Handler method: [SetShelfLabelStatusCommandHandler.HandleAsync(SetShelfLabelStatusCommand,CommandEnvelope&lt;SetShelfLabelStatusCommand&gt;,CancellationToken)](code-application.md#m-4a4c4f3271bc).
 

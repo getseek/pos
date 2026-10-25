@@ -71,7 +71,7 @@
       "path": "docs/unified-teams-completeness-audit-2026-10-15.md",
       "sha256": "6bc14cd29337be471b703f715d087065c897ffd6c1df70549c8e7ab73f9af919",
       "reviewed_on": "2026-10-18",
-      "claim": "Repair report claims A01–A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
+      "claim": "Repair report claims A01\u2013A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
     },
     {
       "id": "E-009",
@@ -205,8 +205,8 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "52ea6bc5cddc8dea05a7d0ffc3f206b1a44d447f8243506e26f46a1536b82514",
-      "reviewed_on": "2026-10-20",
+      "sha256": "b38a97d9c4fcd078c60314075528b278f1a9208db34a34d10dd4885248b3f2b3",
+      "reviewed_on": "2026-10-25",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
         "CommandPipeline.ExecuteAsync",
@@ -1027,6 +1027,40 @@
       },
       "assembly": [
         "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-040",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s04/20261025-2200/w7-service-items-stdout.txt",
+      "sha256": "db3f84b07f3f92f505cf1350391951076e5b5489274becb0fc7df96dd55d09f1",
+      "reviewed_on": "2026-10-25",
+      "claim": "W7/S04 Service items UI and workspace integration suite (untouched stdout, TRX, exit 0): 333/333 passed, 0 failed (Unit 321 including 10 new ServiceItemLifecycleAndWorkspaceUnitTests, Integration 12 = 6 WorkspaceThemeConsistencyTests + 6 InventoryPricingNavigationTests). Covers two-state view switch (Product | Service), scoped category chips, Add Product + Add Service modal workflows, read-only SKU with type badge, em dashes for stock/reorder/valuation, and disabled row actions for Services. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "333",
+        "passed": "333",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "16 s",
+        "run_at_local": "2026-10-25 ~22:00 +07:00"
+      },
+      "assembly": [
         "GetSeek.UnitTests",
         "GetSeek.IntegrationTests"
       ]

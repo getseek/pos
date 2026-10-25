@@ -1838,11 +1838,11 @@ Declarations: <code>LifecycleStatusScope</code> (line 4).
 
 ## ReadProjections.cs {#src-f3a0ea7fd9d1}
 
-<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 278 lines.
+<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 279 lines.
 
-SHA-256: <code>7f58eb2dbc370fb1bd0f57e803544b31dbc4336f3bef8066b3e5782b5a5413b3</code>.
+SHA-256: <code>29bd2c58a85aed8ae3322637df1a62bfb2aa94bc2f9da5b7ef25ae986643452e</code>.
 
-Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 45), <code>ActivityOrderProjection</code> (line 55), <code>DraftCartLineProjection</code> (line 73), <code>DraftCartProjection</code> (line 91), <code>InventoryItemProjection</code> (line 105), <code>KitAvailabilityProjection</code> (line 133), <code>ItemLotBalanceProjection</code> (line 140), <code>ItemSerialStateCountProjection</code> (line 141), <code>ItemKitUsageProjection</code> (line 142), <code>ItemTraceabilitySummaryProjection</code> (line 143), <code>ItemStockHistoryRow</code> (line 151), <code>ItemStockHistoryPage</code> (line 176), <code>ItemPriceHistoryRow</code> (line 191), <code>LotCandidateProjection</code> (line 218), <code>SerialCandidateProjection</code> (line 233), <code>RestaurantOrderLineProjection</code> (line 245), <code>RestaurantOrderProjection</code> (line 257).
+Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 46), <code>ActivityOrderProjection</code> (line 56), <code>DraftCartLineProjection</code> (line 74), <code>DraftCartProjection</code> (line 92), <code>InventoryItemProjection</code> (line 106), <code>KitAvailabilityProjection</code> (line 134), <code>ItemLotBalanceProjection</code> (line 141), <code>ItemSerialStateCountProjection</code> (line 142), <code>ItemKitUsageProjection</code> (line 143), <code>ItemTraceabilitySummaryProjection</code> (line 144), <code>ItemStockHistoryRow</code> (line 152), <code>ItemStockHistoryPage</code> (line 177), <code>ItemPriceHistoryRow</code> (line 192), <code>LotCandidateProjection</code> (line 219), <code>SerialCandidateProjection</code> (line 234), <code>RestaurantOrderLineProjection</code> (line 246), <code>RestaurantOrderProjection</code> (line 258).
 
 ## ReferenceSnapshot.cs {#src-7a2c51dec98f}
 

@@ -53,7 +53,7 @@ Handler: [ShiftCommandHandler](code-application.md#src-6edc723e3676). Result typ
 
 Declaration: [ShiftCommands.cs:29](code-application.md#src-d988e0aef61e). <code>RequiredPermission = Permissions.CloseShift</code>
 
-Construction sites: [ConfirmCloseShiftAsync:12805](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmCloseShiftAsync:12814](code-desktop.md#src-16497b924a99)
 
 Handler method: [ShiftCommandHandler.HandleAsync(CloseShiftCommand,CommandEnvelope&lt;CloseShiftCommand&gt;,CancellationToken)](code-application.md#m-a6c6fe2dfdbe).
 
@@ -93,7 +93,7 @@ Handler: [ShiftCommandHandler](code-application.md#src-6edc723e3676). Result typ
 
 Declaration: [ShiftCommands.cs:8](code-application.md#src-d988e0aef61e). <code>RequiredPermission = Permissions.OpenShift</code>
 
-Construction sites: [OpenShiftForStaffAsync:8722](code-desktop.md#src-16497b924a99)
+Construction sites: [OpenShiftForStaffAsync:8731](code-desktop.md#src-16497b924a99)
 
 Handler method: [ShiftCommandHandler.HandleAsync(OpenShiftCommand,CommandEnvelope&lt;OpenShiftCommand&gt;,CancellationToken)](code-application.md#m-a12f36e419ba).
 

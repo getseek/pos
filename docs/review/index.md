@@ -11,11 +11,11 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-Use this atlas to inspect **328 application C# files, 2,182 method declarations, 174 handled command types, 138 reconstructed tables and 262 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
+Use this atlas to inspect **330 application C# files, 2,214 method declarations, 174 handled command types, 138 reconstructed tables and 262 foreign-key column mappings**. All 25 workflow groups have a map. The catalogues include the remaining helper, reader, domain and UI declarations.
 
 **Producer coverage:** 74 handled command types have no explicit construction site in this syntax snapshot. That is a connection-analysis gap, not proof of unreachable code; target-typed construction, factories and runtime dispatch need further analysis. 55 methods contain interpolated SQL requiring manual inspection.
 
-**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 481 files, including 153 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
+**Scope:** source connections and selected manual control-flow review. Syntax parsing found no C# syntax errors in 484 files, including 154 test files. This does not establish compilation, resolved calls, passing tests or a working business journey. [Read the extraction limits](method.md).
 
 See [source-checked business rules](source-check.md) for corrected checkout, Cafe, attachment, expense, payroll and settings claims.
 
@@ -61,7 +61,7 @@ See [source-checked business rules](source-check.md) for corrected checkout, Caf
 - [GetSeek.Application](code-application.md) — 153 C# files.
 - [GetSeek.Contracts](code-contracts.md) — 2 C# files.
 - [GetSeek.DataService](code-dataservice.md) — 8 C# files.
-- [GetSeek.Desktop](code-desktop.md) — 37 C# files.
+- [GetSeek.Desktop](code-desktop.md) — 39 C# files.
 - [GetSeek.Domain](code-domain.md) — 31 C# files.
 - [GetSeek.Infrastructure](code-infrastructure.md) — 72 C# files.
 - [GetSeek.Recovery](code-recovery.md) — 1 C# files.

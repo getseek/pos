@@ -49,7 +49,7 @@ Handler: [QueueReceiptReprintCommandHandler](code-application.md#src-f881cdbb15d
 
 Declaration: [ReprintReceiptCommandHandler.cs:10](code-application.md#src-f881cdbb15da). <code>RequiredPermission = Permissions.ViewAudit</code>
 
-Construction sites: [ReprintSelectedReceiptAsync:191](code-desktop.md#src-3872b07af065), [PrintAuditReceiptAsync:6670](code-desktop.md#src-16497b924a99)
+Construction sites: [ReprintSelectedReceiptAsync:191](code-desktop.md#src-3872b07af065), [PrintAuditReceiptAsync:6679](code-desktop.md#src-16497b924a99)
 
 Handler method: [QueueReceiptReprintCommandHandler.HandleAsync(QueueReceiptReprintCommand,CommandEnvelope&lt;QueueReceiptReprintCommand&gt;,CancellationToken)](code-application.md#m-49d7caffe325).
 

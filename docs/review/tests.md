@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **153 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **154 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -728,6 +728,12 @@ Located test declarations: <code>Calculate_EmptyCart_RejectsPromotion</code> @8,
 <code>Software/tests/GetSeek.UnitTests/CashReceiptAndSettlementUnitTests.cs</code> · SHA-256 <code>8a75670ad70b8ba1df7c621261a5ec50f1f5ce74f2ceb45223f2add69f249289</code>.
 
 Located test declarations: <code>CashRounding_RecordsSignedDiscountOrCharge</code> @10, <code>CashSettlement_IncludesServiceTaxAndThenRoundsCashDue</code> @27, <code>CashSettlement_NonCashTenderDoesNotApplyCashRounding</code> @42, <code>CashRounding_NearestMidpoint_FollowsConfiguredTieRule</code> @54, <code>PaperPagination_KeepsNormalInvoiceRowsAndFinalSettlement</code> @79, <code>PaperPagination_AlwaysReturnsAHeaderAndSettlementPageForEmptyOrder</code> @92, <code>PaperPagination_DoesNotDropTheFinalNonemptyPage</code> @105, <code>PaperPagination_RejectsAnAtomicRowTallerThanPageBody</code> @123, <code>CashDisplayPrecision_DoesNotHideACommittedMinorUnitFraction</code> @133, <code>ReceiptTemplateSyntax_AcceptsOnlyBalancedAllowlistedPlainText</code> @140, <code>ThermalRasterRenderer_WrapsAndSplitsLongReceiptsIntoBoundedRasterBands</code> @152, <code>ReceiptFonts_AreBundled_AndMixedScriptsUseTheSameMeasuredRasterPath</code> @163, <code>ThermalPreviewPng_UsesTheRenderedReceiptRaster</code> @176, <code>PaperPreviewPng_RendersEveryPaginatedPage</code> @186.
+
+## CatalogOrderingAndPagingUnitTests.cs {#src-f59a0cab1ab3}
+
+<code>Software/tests/GetSeek.UnitTests/CatalogOrderingAndPagingUnitTests.cs</code> · SHA-256 <code>9140e4fd8759536c6dbfde36acd69affe1edb6aa723a1745cf4924a8868a3f90</code>.
+
+Located test declarations: <code>CycleStateMachine_AllSevenTransitionsAndWraps_Correct</code> @27, <code>CycleStateMachine_FamilySwitch_RestoresLastSessionState</code> @75, <code>DeterministicTieBreakers_AtoZ_And_ZtoA_ReversesNameOnly</code> @105, <code>ZeroSalesVsSalesOrdering_DeterministicTieBreakers</code> @142, <code>BarcodeGroupMembership_AllItemAndNocode_RespectsContract</code> @166, <code>Search_ForcesFifty_And_RestoresPreviousSize_OnClear</code> @224, <code>Search_SuspendsCycle_AndClearingRestoresStagedCycle</code> @253, <code>AllFivePageSizes_SliceCorrectly</code> @274, <code>PageResetsOn_Kind_Category_Family_Cycle_Query_Size_Changes</code> @319, <code>EmptyResults_ZeroItems_PageOneOfOne_NavigationDisabled</code> @391, <code>CategoryToggle_ClearsSelection_AndRealCategoryNamedAllMenuDoesNotCollide</code> @407, <code>ThirtyThousandItemFixture_FilteredProductsNeverExceedsEffectivePageSize_PC11</code> @445, <code>SecondaryBarcode_MatchesSearchAndCard_AgreesWithSuggestionContract_PC10</code> @542, <code>SelectCatalogKind_ClearsSearchTextAndSearchSuggestionsState</code> @604, <code>SelectCatalogKind_CategoryValidation_KeepsValidCategoryForNewKind</code> @645, <code>SelectCatalogKind_CategoryValidation_ResetsInvalidCategoryToNull</code> @692.
 
 ## CustomerUnitTests.cs {#src-d1ebba3676f7}
 

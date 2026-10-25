@@ -1037,11 +1037,11 @@ Declarations: <code>PricingPreviewItem</code> (line 8), <code>SqlitePricingReade
 
 ## SqliteProductionReaders.cs {#src-212da8ad4eb4}
 
-<code>Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs</code> · 460 lines.
+<code>Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs</code> · 472 lines.
 
-SHA-256: <code>e1bbbe6aa0cb17a52e073330cfa198eb4852f288f9c67b07592a8be965547144</code>.
+SHA-256: <code>6ae8388e1a2114097991fa94748b5a7db18325a317da7d2fe78248c4e0a8b95e</code>.
 
-Declarations: <code>SqliteStoreProfileReader</code> (line 11), <code>SqliteCatalogReader</code> (line 104), <code>SqliteShiftReader</code> (line 410).
+Declarations: <code>SqliteStoreProfileReader</code> (line 11), <code>SqliteCatalogReader</code> (line 104), <code>SqliteShiftReader</code> (line 422).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (6)</summary>
@@ -1050,10 +1050,10 @@ Declarations: <code>SqliteStoreProfileReader</code> (line 11), <code>SqliteCatal
 | --- | --- | --- |
 | <span id="m-a38b54dd5796"></span><code>SqliteStoreProfileReader.GetStoreProfileAsync(DbConnection,CancellationToken)</code><br>13–101 | CreateCommand @32; ConfigureAwait @41; ExecuteReaderAsync @41; ReadAsync @42; GetString @44; GetInt32 @47; GetDecimal @48; IsDBNull @50; Equals @79 | FROM business_profile_config @61; FROM store_config @34 · InvalidOperationException @56 |
 | <span id="m-a91e3305763a"></span><code>SqliteCatalogReader.GetActiveItemsAsync(DbConnection,string,int,CancellationToken)</code><br>110–117 | GetActiveItemsAsync @116 | No extracted literal effects. |
-| <span id="m-f102c4464340"></span><code>SqliteCatalogReader.GetActiveItemsAsync(DbConnection,string,int,DateTime?,CancellationToken)</code><br>119–285 | Pow @153; CreateCommand @155; ConfigureAwait @172; ExecuteReaderAsync @172; ReadAsync @173; Parse @175; GetString @175; IsDBNull @178; GetInt64 @179; GetInt32 @182; TryParse @193; Equals @198; Add @207; ReadBarcodeFactsAsync @215; ReadGrossSoldQuantities30DaysAsync @224; TryGetValue @245; GetValueOrDefault @254; Add @257 | FROM items @157; JOIN product_categories @157 · InvalidOperationException @128; InvalidOperationException @200 |
-| <span id="m-5eaf29818176"></span><code>SqliteCatalogReader.ReadBarcodeFactsAsync(DbConnection,CancellationToken)</code><br>287–315 | CreateCommand @292; ConfigureAwait @302; ExecuteReaderAsync @302; ReadAsync @303; TryParse @305; GetString @305; IsDBNull @307 | FROM barcodes @293 |
-| <span id="m-c3f88470cea0"></span><code>SqliteCatalogReader.ReadGrossSoldQuantities30DaysAsync(DbConnection,DateTime,CancellationToken)</code><br>317–406 | AddDays @323; CreateCommand @325; CreateParameter @347; ToString @349; Add @350; ToString @354; ConfigureAwait @357; ExecuteReaderAsync @357; ReadAsync @358; TryParse @360; GetString @360; IsDBNull @366; TryParseInvariant @369; GetDouble @377; TryResolveQuantity @378; TryResolveFactor @385; TryRoundBaseQuantity @391; GetValueOrDefault @401 | FROM refund_lines @326; FROM sale_returns @326; FROM sales_lines @326; JOIN sales_invoices @326 · FormatException @371; FormatException @380; FormatException @387; InvalidOperationException @393 |
-| <span id="m-c7d764c1355d"></span><code>SqliteShiftReader.GetActiveShiftAsync(DbConnection,int,CancellationToken)</code><br>412–459 | Pow @419; CreateCommand @421; ConfigureAwait @433; ExecuteReaderAsync @433; ReadAsync @434; Parse @436; GetString @436; GetInt64 @439; Parse @441; GetInt32 @442 | FROM shifts @423; JOIN users @423 · InvalidOperationException @416 |
+| <span id="m-f102c4464340"></span><code>SqliteCatalogReader.GetActiveItemsAsync(DbConnection,string,int,DateTime?,CancellationToken)</code><br>119–288 | Pow @153; CreateCommand @155; ConfigureAwait @172; ExecuteReaderAsync @172; ReadAsync @173; Parse @175; GetString @175; IsDBNull @178; GetInt64 @179; GetInt32 @182; TryParse @193; Equals @198; Add @207; ReadBarcodeFactsAsync @215; ReadGrossSoldQuantities30DaysAsync @224; TryGetValue @246; GetValueOrDefault @256; Add @259 | FROM items @157; JOIN product_categories @157 · InvalidOperationException @128; InvalidOperationException @200 |
+| <span id="m-bb99bce66d4e"></span><code>SqliteCatalogReader.ReadBarcodeFactsAsync(DbConnection,CancellationToken)</code><br>290–327 | CreateCommand @295; ConfigureAwait @305; ExecuteReaderAsync @305; ReadAsync @306; TryParse @308; GetString @308; Trim @310; TryGetValue @311; Contains @318; Add @320 | FROM barcodes @296 |
+| <span id="m-dd5a508f8236"></span><code>SqliteCatalogReader.ReadGrossSoldQuantities30DaysAsync(DbConnection,DateTime,CancellationToken)</code><br>329–418 | AddDays @335; CreateCommand @337; CreateParameter @359; ToString @361; Add @362; ToString @366; ConfigureAwait @369; ExecuteReaderAsync @369; ReadAsync @370; TryParse @372; GetString @372; IsDBNull @378; TryParseInvariant @381; GetDouble @389; TryResolveQuantity @390; TryResolveFactor @397; TryRoundBaseQuantity @403; GetValueOrDefault @413 | FROM refund_lines @338; FROM sale_returns @338; FROM sales_lines @338; JOIN sales_invoices @338 · FormatException @383; FormatException @392; FormatException @399; InvalidOperationException @405 |
+| <span id="m-78b3f67eba3c"></span><code>SqliteShiftReader.GetActiveShiftAsync(DbConnection,int,CancellationToken)</code><br>424–471 | Pow @431; CreateCommand @433; ConfigureAwait @445; ExecuteReaderAsync @445; ReadAsync @446; Parse @448; GetString @448; GetInt64 @451; Parse @453; GetInt32 @454 | FROM shifts @435; JOIN users @435 · InvalidOperationException @428 |
 
 </details>
 

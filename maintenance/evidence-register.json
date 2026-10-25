@@ -71,7 +71,7 @@
       "path": "docs/unified-teams-completeness-audit-2026-10-15.md",
       "sha256": "6bc14cd29337be471b703f715d087065c897ffd6c1df70549c8e7ab73f9af919",
       "reviewed_on": "2026-10-18",
-      "claim": "Repair report claims A01\u2013A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
+      "claim": "Repair report claims A01–A12 closure and a 1,228-test acceptance run; verify independently before claiming fresh acceptance."
     },
     {
       "id": "E-009",
@@ -1061,6 +1061,75 @@
         "run_at_local": "2026-10-25 ~22:00 +07:00"
       },
       "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-041",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s04/20261025-2225/w7-hermes-import-stdout.txt",
+      "sha256": "ae65a5a496edda311413721b2a5ea8cc2e3a47829cca47406776845eaab32c47",
+      "reviewed_on": "2026-10-25",
+      "claim": "W7/S04 import-filtered run, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 72/72 passed, 0 failed (Unit 8, Integration 64), identical to the W6 baseline - the UI wave did not alter import behavior. Worker E-040 targeted run (333) also verified against its preserved artifact.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "72",
+        "passed": "72",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "43 s (integration) + 623 ms (unit)",
+        "run_at_local": "2026-10-25 ~22:25 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-042",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s04/20261025-2225/w7-hermes-full-stdout.txt",
+      "sha256": "7539ff39361808cb1a53e3c2a2dde3980b18ebfc5d9387b3284084aecde37dd0",
+      "reviewed_on": "2026-10-25",
+      "claim": "W7/S04 full solution suite, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1389/1389 passed, 0 failed (Acceptance 1, Unit 321 = +10 new ServiceItemLifecycleAndWorkspaceUnitTests, Integration 1067 unchanged - confirming NO tests were lost or skipped; the worker commit message count of 1065 integration was a miscount, this capture is authoritative). Covers owner item 1 (Import Products/Import Services label per view + prefill passthrough, same importer), two-state view with W4 cleanup reused, kind-scoped categories + fixed-target Add Service Category, Type column, Service dashes + Receive/Adjust/Waste/Kit suppression, read-only SKU/type edit identity, EN/TH/MY parity. Native dialogs and live shop not exercised (code-only gate). NOTE: worker committed app fd1cb92 + docs 66a98a6 against standing no-git/no-docs rules; docs re-verified and pushed by the orchestrator only after this capture.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1389",
+        "passed": "1389",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "9 m 16 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-25 ~22:25 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
         "GetSeek.UnitTests",
         "GetSeek.IntegrationTests"
       ]

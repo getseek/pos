@@ -70,7 +70,7 @@
         }
       ],
       "rollback": "Revert the parser/launcher changes together; do not migrate or reset any workspace.",
-      "status": "RESOLVED (2026-10-20 \u00b7 option reject)",
+      "status": "RESOLVED (2026-10-20 · option reject)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -146,7 +146,7 @@
         }
       ],
       "rollback": "Revert the error-boundary/API change; preserve existing transaction and idempotency semantics.",
-      "status": "RESOLVED (2026-10-20 \u00b7 option boundary)",
+      "status": "RESOLVED (2026-10-20 · option boundary)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -227,7 +227,7 @@
         }
       ],
       "rollback": "Disable the new health/logging integration while retaining existing uncertain-output handling.",
-      "status": "RESOLVED (2026-10-20 \u00b7 option log)",
+      "status": "RESOLVED (2026-10-20 · option log)",
       "source_refresh_note": "2026-10-23: referenced test source inspected; historical E-020 results were not rerun in this import-only verification."
     },
     {
@@ -428,7 +428,7 @@
         }
       ],
       "rollback": "Revert test-only changes in their future isolated checkout; leave production data untouched.",
-      "status": "RESOLVED (2026-10-20 \u00b7 option audit)"
+      "status": "RESOLVED (2026-10-20 · option audit)"
     },
     {
       "id": "PP-REV-007",
@@ -515,12 +515,12 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
+          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
           "line": 77,
-          "sha256": "6ae8388e1a2114097991fa94748b5a7db18325a317da7d2fe78248c4e0a8b95e"
+          "sha256": "6214957dd900414ed852cdcb97f791812ea9d053481e3e2fd78074a36077a310"
         }
       ],
       "workflow": "orders",

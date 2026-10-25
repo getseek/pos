@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "b38a97d9c4fcd078c60314075528b278f1a9208db34a34d10dd4885248b3f2b3",
+      "sha256": "804b64850af97b084d50c32ca4a36feb3c0db28ba47bee7c0b18959e2209d138",
       "reviewed_on": "2026-10-25",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -1127,6 +1127,76 @@
       "times": {
         "duration": "9 m 16 s (integration) + 2 s (unit) + 1 s (acceptance)",
         "run_at_local": "2026-10-25 ~22:25 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-043",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s08/20261026-0040/w8-hermes-full-stdout.txt",
+      "sha256": "079f1de085d0f92fcb962b43cf0b0ea82594276b82e1d6bea79dec319c2435d6",
+      "reviewed_on": "2026-10-26",
+      "claim": "W8 eligibility bundle, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1400/1400 passed, 0 failed (Acceptance 1, Unit 332 = +11 PosSellingScreenEligibilityUnitTests, Integration 1067); import filter 73/73 exit 0. SCOPE NOTE (owner-visible): executed from orchestrator payload reconstructing a review whose source file is not in-repo - accepted on suite evidence + per-finding tests ONLY, document lineage NOT claimed. Imports/ untouched (perf gate protected). Worker w8-* evidence identical. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1400",
+        "passed": "1400",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "6 m 45 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-26 ~00:20 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-044",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s08/20261026-0040/w8b-hermes-full-stdout.txt",
+      "sha256": "72140cd61da59c9d67fc88a7d3759c67f7289d32eb13e2fcd3ee290041487a09",
+      "reviewed_on": "2026-10-26",
+      "claim": "W8b Catalog P3 labels & layout, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1412/1412 passed, 0 failed (Acceptance 1, Unit 344 = +12 PosCatalogSellingScreenP3UnitTests, Integration 1067); import filter 73/73 exit 0. AUTHORITATIVE scope per plan S9.3: All Item/Nocode buttons [PC-03], category deselect + sentinel guard [PC-08], page controls [PC-09], two-state Product/Service selector [PC-01/02], PC-10 scope agreement with strengthened out-of-scope add-to-cart rejection, EN/TH/MY parity [PC-14 structural]; price-chip provenance inspected FIRST (legacy-build artifact, not invented). Owner-run UI checks remain PENDING (code-only rule). Worker w8b-* evidence identical. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1412",
+        "passed": "1412",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "6 m 35 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-26 ~00:35 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

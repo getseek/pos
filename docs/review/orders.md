@@ -51,7 +51,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:81](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [CancelActiveOrderAsync:6536](code-desktop.md#src-16497b924a99)
+Construction sites: [CancelActiveOrderAsync:6561](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(CancelRestaurantOrderCommand,CommandEnvelope&lt;CancelRestaurantOrderCommand&gt;,CancellationToken)](code-application.md#m-38d044c06b45).
 
@@ -111,7 +111,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:94](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [SettleActiveOrderAsync:6633](code-desktop.md#src-16497b924a99)
+Construction sites: [SettleActiveOrderAsync:6658](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(SettleRestaurantOrderCommand,CommandEnvelope&lt;SettleRestaurantOrderCommand&gt;,CancellationToken)](code-application.md#m-1ace6b54b045).
 
@@ -131,7 +131,7 @@ Handler: [RestaurantOrderCommandHandler](code-application.md#src-b930bdf2056c). 
 
 Declaration: [RestaurantOrderCommands.cs:67](code-application.md#src-6ec4352e1907). <code>RequiredPermission = &quot;pos.sale.checkout&quot;</code>
 
-Construction sites: [MarkPreparingAsync:6433](code-desktop.md#src-16497b924a99), [MarkReadyAsync:6468](code-desktop.md#src-16497b924a99), [MarkServedAsync:6503](code-desktop.md#src-16497b924a99)
+Construction sites: [MarkPreparingAsync:6458](code-desktop.md#src-16497b924a99), [MarkReadyAsync:6493](code-desktop.md#src-16497b924a99), [MarkServedAsync:6528](code-desktop.md#src-16497b924a99)
 
 Handler method: [RestaurantOrderCommandHandler.HandleAsync(UpdateRestaurantOrderStatusCommand,CommandEnvelope&lt;UpdateRestaurantOrderStatusCommand&gt;,CancellationToken)](code-application.md#m-cc0c2ea16a9e).
 

@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **157 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **159 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -810,6 +810,18 @@ Located test declarations: <code>CycleDetection_DirectSelfReference_ReturnsTrue<
 <code>Software/tests/GetSeek.UnitTests/MoneyTests.cs</code> · SHA-256 <code>c4f91670623b066dbf30a56ebdcab68212164ac8a8add583930a96ae53dac32d</code>.
 
 Located test declarations: <code>FromDecimal_ShouldConvertMinorUnitsCorrectly</code> @9, <code>Addition_ShouldCalculateSum_WhenSameCurrency</code> @18, <code>Addition_ShouldThrow_WhenCurrenciesMismatch</code> @30, <code>Subtraction_ShouldCalculateDifference</code> @42, <code>Multiplication_ShouldApplyBankersRounding</code> @53, <code>Comparison_ShouldOrderCorrectly</code> @62.
+
+## PosCatalogSellingScreenP3UnitTests.cs {#src-49efd4800bee}
+
+<code>Software/tests/GetSeek.UnitTests/PosCatalogSellingScreenP3UnitTests.cs</code> · SHA-256 <code>f7bdc2b06e48314526b22eee3e369e89ee8a7e19874a1e7fe754acb67cf2521c</code>.
+
+Located test declarations: <code>PC01_PC02_ProductServiceKindSelector_ExactlyTwoStates_CategoriesCountsStayWithinKind</code> @111, <code>PC03_AllItem_FourStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @159, <code>PC03_Nocode_ThreeStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @194, <code>PC03_FamilySwitching_RestoresSessionOrderingState</code> @225, <code>PC08_CategoryToggle_ClearsSelection_ResetsPage1</code> @255, <code>PC08_RealCategoryNamedAllMenu_DoesNotCollideWithSentinel</code> @281, <code>PC09_PageControls_FiveNonSearchSizes_PageClamping</code> @341, <code>PC09_SearchForces50_DisablesPageSizeControls_RestoresPriorSizeOnClear</code> @420, <code>PC10_ScopeAgreement_CardsMatchingCountAndSuggestionsAgree</code> @465, <code>PC10_LateResultRejection_CannotCrossKindOrCategory</code> @493, <code>PC10_ExactScanAndAddToCart_SafeguardsIntact</code> @533, <code>PC14_KeyboardTouchLayout_AndTranslationsAcrossLanguages</code> @569.
+
+## PosSellingScreenEligibilityUnitTests.cs {#src-455c95bf3481}
+
+<code>Software/tests/GetSeek.UnitTests/PosSellingScreenEligibilityUnitTests.cs</code> · SHA-256 <code>ebe3a266b3ea829e0949d8e35b850d3bf6f3822ee92309e14adf2e7cc589af34</code>.
+
+Located test declarations: <code>StaleProductFilterWindows</code> @31, <code>OrderCommit_DoesNotRollBack_ServiceAvailability_Finding1</code> @108, <code>ManualCashlessCard_CarriesHumanTasksCheckbox_Finding2</code> @145, <code>ParsedForCastingTest</code> @168, <code>UnsupportedSalesPrice_ExcludedFromUnitImportReconciliation_Finding5</code> @194, <code>CatalogLoader_AvailabilityPredicate_EnforcesServiceEligibility_Finding7</code> @222, <code>DisplayTier_RetainedTitleLine_InCsvAndDataDisplayTier_Finding8</code> @243, <code>ProductFeatureReset_ProductServiceGate_ExcludesServicesAndUpdatesCachedAvailability_Finding9</code> @269, <code>HistorySanitization_CompletedOrdersReturnNoServiceIdentifiers_PartialRetains_Finding10</code> @305, <code>SelectedService_EntersInReviewOrReserved_PreservesSelectionType_CancelSafe_Finding12</code> @326, <code>ProductItem_ServiceAvailable_FlagBehavior_P3Scope1</code> @367.
 
 ## PricingCalculationEngineTests.cs {#src-250de7b10546}
 

@@ -69,7 +69,7 @@ Handler: [ApplySettingsCommandHandler](code-application.md#src-87133587a4b1). Re
 
 Declaration: [ApplySettingsCommand.cs:5](code-application.md#src-a56b2ff06b35). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [ApplySettingsAsync:7496](code-desktop.md#src-16497b924a99)
+Construction sites: [ApplySettingsAsync:7521](code-desktop.md#src-16497b924a99)
 
 Handler method: [ApplySettingsCommandHandler.HandleAsync(ApplySettingsCommand,CommandEnvelope&lt;ApplySettingsCommand&gt;,CancellationToken)](code-application.md#m-0875a2f0acb6).
 
@@ -89,7 +89,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:27](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [ConfirmThermalPrinterPhysicalOutputAsync:6932](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmThermalPrinterPhysicalOutputAsync:6957](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(ConfirmThermalPhysicalOutputCommand,CommandEnvelope&lt;ConfirmThermalPhysicalOutputCommand&gt;,CancellationToken)](code-application.md#m-7dd40ed62d92).
 
@@ -109,7 +109,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:22](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [VerifyThermalPrinterAsync:6892](code-desktop.md#src-16497b924a99)
+Construction sites: [VerifyThermalPrinterAsync:6917](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(RecordThermalTestSpoolAcceptedCommand,CommandEnvelope&lt;RecordThermalTestSpoolAcceptedCommand&gt;,CancellationToken)](code-application.md#m-9c80dc7d5eaf).
 
@@ -129,7 +129,7 @@ Handler: [SaveManualPaymentDisplayHandler](code-infrastructure.md#src-9b4adc7a5d
 
 Declaration: [SaveManualPaymentDisplayCommand.cs:5](code-application.md#src-89b0251a9781). <code>RequiredPermission = &quot;pos.payments.configure&quot;</code>
 
-Construction sites: [ApplyManualPaymentSettingsAsync:5694](code-desktop.md#src-16497b924a99)
+Construction sites: [ApplyManualPaymentSettingsAsync:5704](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveManualPaymentDisplayHandler.HandleAsync(SaveManualPaymentDisplayCommand,CommandEnvelope&lt;SaveManualPaymentDisplayCommand&gt;,CancellationToken)](code-infrastructure.md#m-711bf042b1db).
 
@@ -149,7 +149,7 @@ Handler: [SaveReceiptDesignCommandHandler](code-application.md#src-c85e5e7f37c8)
 
 Declaration: [ReceiptDesignCommands.cs:20](code-application.md#src-c85e5e7f37c8). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveReceiptDesignAsync:7079](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveReceiptDesignAsync:7104](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveReceiptDesignCommandHandler.HandleAsync(SaveReceiptDesignCommand,CommandEnvelope&lt;SaveReceiptDesignCommand&gt;,CancellationToken)](code-application.md#m-9f50da09c2da).
 
@@ -169,7 +169,7 @@ Handler: [UpdateCashFinancialSettingsCommandHandler](code-application.md#src-dc0
 
 Declaration: [CashFinancialSettingsCommands.cs:8](code-application.md#src-dc0f9914df25). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveCashFinancialSettingsAsync:6998](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveCashFinancialSettingsAsync:7023](code-desktop.md#src-16497b924a99)
 
 Handler method: [UpdateCashFinancialSettingsCommandHandler.HandleAsync(UpdateCashFinancialSettingsCommand,CommandEnvelope&lt;UpdateCashFinancialSettingsCommand&gt;,CancellationToken)](code-application.md#m-111036292e3c).
 
@@ -189,7 +189,7 @@ Handler: [OutputDeviceCommandHandler](code-application.md#src-bbf9d29f8bdc). Res
 
 Declaration: [OutputDeviceCommands.cs:7](code-application.md#src-bbf9d29f8bdc). <code>RequiredPermission = &quot;pos.system.settings&quot;</code>
 
-Construction sites: [SaveOutputDevicesAsync:6817](code-desktop.md#src-16497b924a99), [VerifyThermalPrinterAsync:6879](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveOutputDevicesAsync:6842](code-desktop.md#src-16497b924a99), [VerifyThermalPrinterAsync:6904](code-desktop.md#src-16497b924a99)
 
 Handler method: [OutputDeviceCommandHandler.HandleAsync(UpdateOutputDeviceSettingsCommand,CommandEnvelope&lt;UpdateOutputDeviceSettingsCommand&gt;,CancellationToken)](code-application.md#m-a04cc1af2dfe).
 

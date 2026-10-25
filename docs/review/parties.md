@@ -93,7 +93,7 @@ Handler: [CustomerCommandHandler](code-application.md#src-21df28594271). Result 
 
 Declaration: [CustomerCommands.cs:48](code-application.md#src-e38bff3a5457). <code>RequiredPermission = Permissions.ManageCustomers</code>
 
-Construction sites: [DeactivateCustomerAsync:12673](code-desktop.md#src-16497b924a99)
+Construction sites: [DeactivateCustomerAsync:12699](code-desktop.md#src-16497b924a99)
 
 Handler method: [CustomerCommandHandler.HandleAsync(DeactivateCustomerCommand,CommandEnvelope&lt;DeactivateCustomerCommand&gt;,CancellationToken)](code-application.md#m-590723502c08).
 

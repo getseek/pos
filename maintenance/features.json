@@ -33,6 +33,14 @@
         {
           "path": "Software/src/GetSeek.Desktop/Bootstrap/PosBootstrapper.cs",
           "sha256": "6958275f0438d90aae65c748a21f5248c8680f17d61b2d20388e2df694c62595"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Tables.cs",
+          "sha256": "547c4af9c2602f62c3d79802c448791e466ac07154ca3f4eb0f797daa96c2250"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryReader.cs",
+          "sha256": "88ca368765bfff7d6a338812abcd10ab21d7ca239de6c8c0f50193809d91ad7d"
         }
       ],
       "source_review": "source-reviewed",
@@ -41,13 +49,15 @@
         "E-001",
         "E-002",
         "E-020",
-        "E-021"
+        "E-021",
+        "E-043",
+        "E-044"
       ],
       "target_page": "getting-started/workspaces.md",
       "document_status": "scaffolded",
-      "limitations": "No reset or data-transfer journey executed.",
+      "limitations": "No reset or data-transfer journey executed. W7/W8: inventory table Type column + Service row action suppression (Tables.cs) and kind-scoped inventory list reads. Verified E-042/E-044.",
       "review_map": "review/workspaces.md",
-      "reviewed_on": "2026-10-20"
+      "reviewed_on": "2026-10-26"
     },
     {
       "id": "PP-F003",
@@ -172,23 +182,23 @@
         },
         {
           "path": "Software/src/GetSeek.Application/ReadServices/ReadProjections.cs",
-          "sha256": "6a41262f21392bfc491641a5ddad557c69225248cd1ba97f479233a2b381da7a"
+          "sha256": "31942bcc1214cef17a1af8d5f7ef03d199ed96d5b410f58794d0d48cf730807c"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
-          "sha256": "6ae8388e1a2114097991fa94748b5a7db18325a317da7d2fe78248c4e0a8b95e"
+          "sha256": "6214957dd900414ed852cdcb97f791812ea9d053481e3e2fd78074a36077a310"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Models/UiModels.cs",
-          "sha256": "f90c09bf8b88327e87e932397054fe6784c7aa1650699335de224e181cc05d12"
+          "sha256": "587faa2c028fb4f30097cb8000a5f4c540a97271dbbe58a1bfc6ae4d29ca4fc9"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/CatalogOrderPageHelper.cs",
-          "sha256": "14185534066da6c31e4b8f52562d9ade7e3f78a412f9c2360e6184a27a5ac6de"
+          "sha256": "8827abfd7c476f7411fc4c00e71eab258782bbffe08d92e28f06bebe9fcbf5e2"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Catalog.cs",
-          "sha256": "f203b0ffc9e09f97af6b7b0512b85280f11f1424a16651a96eec684762b11892"
+          "sha256": "99699baa508acd0672d181e22b13210a279b228834446cf2e6329ef923750689"
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs",
@@ -201,6 +211,22 @@
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogRegistryCommands.cs",
           "sha256": "b1488a573ff070e8cdcb262ec4ca958768b40b27dcdd22ae595bc02fc67ffb58"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs",
+          "sha256": "a04b6f98db09b8fd8237e2489efdd273e352d75cbfaf637149820e7deac52edb"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/SearchState.cs",
+          "sha256": "bef8f88e99d06df6e21a705b38a6ee70324c9df1d149bddee000c311bf49ec28"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Search.cs",
+          "sha256": "3e331685ac63f8952bb6034a88195c70b197cad1f70c6791abbac4723930380f"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteSearchSuggestionReader.cs",
+          "sha256": "8f82a5b6921ae84f5afd9de39bee9943c288de1dedffa316b4e1e77c7d91b7bb"
         }
       ],
       "source_review": "located",
@@ -218,13 +244,15 @@
         "E-037",
         "E-038",
         "E-039",
-        "E-040"
+        "E-040",
+        "E-043",
+        "E-044"
       ],
       "target_page": "operator/catalog.md",
       "document_status": "planned",
-      "limitations": "Detailed item-purpose/UOM guide pending. Stage-3 reference-snapshot cache: SaveProductConfiguration/Catalog handlers consume a per-transaction ReferenceSnapshot (built in ImportProductsCommandHandler.HandleAsync); original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ProductManagementIntegrationTests. W2/S01 (2026-10-25): Service create/update command boundary, SKU/item_kind immutability and service registration added; verified by E-030/E-031 (1327/1327) + orchestrator migration probe. CatalogCommandHandler/Commands/SaveProductConfigurationCommand now pinned. W3/P1 (2026-10-25): catalogue read model gains HasBarcode (any nonblank barcode), GrossSoldQuantity30Days (30-day gross per plan contract: original invoices, status 1/3/4, credits/returns excluded, no return subtraction, decimal snapshots authoritative) and ItemKind - 3 bounded queries per refresh with single captured clock; ranking failures mark unavailable instead of fake zeros. Verified E-032/E-033 (1336/1336, dual-run). W4/P2 (2026-10-25): deterministic catalogue order/page helper (4 All-Item cycle states, 3 Nocode states, plan tie-breakers, search-forces-50 with staged restore, session page sizes 50-1000, FilteredProducts = current page) wired through a MainViewModel.Catalog partial; owner-review fixes: all-registered-barcode search agreement and kind-switch state cleanup. Verified E-034/E-035 (1352/1352 dual capture). W5/S02 (2026-10-25): central CatalogKindEligibilityPolicy (single source for kind-vs-category/kind-vs-unit), registry handlers gain Service target + Time dimension whitelist; snapshot delegates to policy. Verified E-036/E-037 (1367/1367). W6/S03: kind-eligibility policy consumed by import validation paths. Verified E-038/E-039.",
+      "limitations": "Detailed item-purpose/UOM guide pending. Stage-3 reference-snapshot cache: SaveProductConfiguration/Catalog handlers consume a per-transaction ReferenceSnapshot (built in ImportProductsCommandHandler.HandleAsync); original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ProductManagementIntegrationTests. W2/S01 (2026-10-25): Service create/update command boundary, SKU/item_kind immutability and service registration added; verified by E-030/E-031 (1327/1327) + orchestrator migration probe. CatalogCommandHandler/Commands/SaveProductConfigurationCommand now pinned. W3/P1 (2026-10-25): catalogue read model gains HasBarcode (any nonblank barcode), GrossSoldQuantity30Days (30-day gross per plan contract: original invoices, status 1/3/4, credits/returns excluded, no return subtraction, decimal snapshots authoritative) and ItemKind - 3 bounded queries per refresh with single captured clock; ranking failures mark unavailable instead of fake zeros. Verified E-032/E-033 (1336/1336, dual-run). W4/P2 (2026-10-25): deterministic catalogue order/page helper (4 All-Item cycle states, 3 Nocode states, plan tie-breakers, search-forces-50 with staged restore, session page sizes 50-1000, FilteredProducts = current page) wired through a MainViewModel.Catalog partial; owner-review fixes: all-registered-barcode search agreement and kind-switch state cleanup. Verified E-034/E-035 (1352/1352 dual capture). W5/S02 (2026-10-25): central CatalogKindEligibilityPolicy (single source for kind-vs-category/kind-vs-unit), registry handlers gain Service target + Time dimension whitelist; snapshot delegates to policy. Verified E-036/E-037 (1367/1367). W6/S03: kind-eligibility policy consumed by import validation paths. Verified E-038/E-039. W8/W8b (2026-10-26): POS catalog eligibility bundle (ServiceAvailable, in-memory availability predicate, product_service_gate cached exclusion - E-043) + authoritative P3 labels/layout: browse buttons, category deselect, page controls, two-state selector, PC-10 suggestion/scope agreement (search scope carries Kind/Category/OnlyNoBarcode; out-of-scope add-to-cart rejected) - E-044. Search scope files pinned here per PC-10.",
       "review_map": "review/catalog.md",
-      "reviewed_on": "2026-10-25"
+      "reviewed_on": "2026-10-26"
     },
     {
       "id": "PP-F009",
@@ -332,7 +360,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
+          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
@@ -356,7 +384,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "dd5e4b37b2437a1c357520f357099b818335b744771fb558987e91d8511c9934"
+          "sha256": "5910bd1ac8ca2eb028707dbc36ed9837910ccbdcdcb02a1f097f2a68a202dee0"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
@@ -364,11 +392,23 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "ccdb5222ae402837ed7a2c1a58f03a6fbb80b0dcf8d9f916326b030e11fc3fc5"
+          "sha256": "b34d8c1f462e0df79ed9e11ea9f7389555a71aef1705f1a2aca9aadbec9d5f5c"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",
           "sha256": "d4837e65cfce1bfdc0791aa2a3fd3c60c6f944b4a94c2bac194d3541650f65dd"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Abstractions/IExportService.cs",
+          "sha256": "40368602a8861b710b44592eca1533d158acc45d85c79746eac90b240b2354af"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Exporting/SqliteExportService.cs",
+          "sha256": "fbee6c8b15bf5e4af0283ec2d8acd3aa53b0c852e7f998b013653d62e8fde104"
+        },
+        {
+          "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ThirdParties.cs",
+          "sha256": "f066acb1ce160fd35bdf4028cf407f455760c660ea42eaf8528bfb1e09883edc"
         }
       ],
       "source_review": "source-reviewed",
@@ -384,13 +424,15 @@
         "E-037",
         "E-038",
         "E-039",
-        "E-040"
+        "E-040",
+        "E-043",
+        "E-044"
       ],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned. W3/P1: MainViewModel catalogue loaders populate the new metadata fields; behavior otherwise unchanged. Verified E-032/E-033. W4/P2: MainViewModel catalogue filter/page state rebuilt over the pure helper; suggestion/add-to-cart paths unchanged. Verified E-034/E-035. W5/S02: MainViewModel category paths kind-aware via policy. Verified E-036/E-037. W6/S03: XlsxImportWorkbook (2.1 schema) changed; Third Party 2.0 untouched. Verified E-038/E-039.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned. W3/P1: MainViewModel catalogue loaders populate the new metadata fields; behavior otherwise unchanged. Verified E-032/E-033. W4/P2: MainViewModel catalogue filter/page state rebuilt over the pure helper; suggestion/add-to-cart paths unchanged. Verified E-034/E-035. W5/S02: MainViewModel category paths kind-aware via policy. Verified E-036/E-037. W6/S03: XlsxImportWorkbook (2.1 schema) changed; Third Party 2.0 untouched. Verified E-038/E-039. W7/W8: export service scope + ThirdParties VM (inventory import label / stacked-card Human Tasks). Verified E-042/E-043.",
       "review_map": "review/parties.md",
-      "reviewed_on": "2026-10-25"
+      "reviewed_on": "2026-10-26"
     },
     {
       "id": "PP-F014",
@@ -403,7 +445,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "e9357edd6ec1d3acab1d01b263805ad1999a4f9d3eaa2932289fc77b94aeaa82"
+          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
@@ -427,7 +469,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "dd5e4b37b2437a1c357520f357099b818335b744771fb558987e91d8511c9934"
+          "sha256": "5910bd1ac8ca2eb028707dbc36ed9837910ccbdcdcb02a1f097f2a68a202dee0"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
@@ -435,7 +477,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "ccdb5222ae402837ed7a2c1a58f03a6fbb80b0dcf8d9f916326b030e11fc3fc5"
+          "sha256": "b34d8c1f462e0df79ed9e11ea9f7389555a71aef1705f1a2aca9aadbec9d5f5c"
         },
         {
           "path": "Software/tests/GetSeek.IntegrationTests/ImportResultWorkbookTests.cs",

@@ -160,18 +160,18 @@ Declarations: <code>ICommand</code> (line 3), <code>ICommand : ICommand</code> (
 
 ## IExportService.cs {#src-7209d0a91e9e}
 
-<code>Software/src/GetSeek.Application/Abstractions/IExportService.cs</code> · 73 lines.
+<code>Software/src/GetSeek.Application/Abstractions/IExportService.cs</code> · 74 lines.
 
-SHA-256: <code>31faff6b4027a806be66149621ccef756e2fa326af3bf3dd445b59271e500432</code>.
+SHA-256: <code>40368602a8861b710b44592eca1533d158acc45d85c79746eac90b240b2354af</code>.
 
-Declarations: <code>ExportDocumentType</code> (line 3), <code>ExportSelector</code> (line 12), <code>ReceiptExportSelector : ExportSelector</code> (line 17), <code>ShiftZReportExportSelector : ExportSelector</code> (line 19), <code>SalesReportExportSelector : ExportSelector</code> (line 21), <code>InventorySnapshotExportSelector : ExportSelector</code> (line 23), <code>ExportRequest</code> (line 25), <code>ExportPayload</code> (line 31), <code>ExportLine</code> (line 33), <code>ReceiptExportPayload : ExportPayload</code> (line 35), <code>ShiftReportExportPayload : ExportPayload</code> (line 50), <code>TabularExportPayload : ExportPayload</code> (line 58), <code>ExportTableRow</code> (line 62), <code>ExportResult</code> (line 64), <code>IExportService</code> (line 70).
+Declarations: <code>ExportDocumentType</code> (line 3), <code>ExportSelector</code> (line 12), <code>ReceiptExportSelector : ExportSelector</code> (line 17), <code>ShiftZReportExportSelector : ExportSelector</code> (line 19), <code>SalesReportExportSelector : ExportSelector</code> (line 21), <code>InventorySnapshotExportSelector : ExportSelector</code> (line 23), <code>ExportRequest</code> (line 25), <code>ExportPayload</code> (line 31), <code>ExportLine</code> (line 33), <code>ReceiptExportPayload : ExportPayload</code> (line 35), <code>ShiftReportExportPayload : ExportPayload</code> (line 50), <code>TabularExportPayload : ExportPayload</code> (line 58), <code>ExportTableRow</code> (line 63), <code>ExportResult</code> (line 65), <code>IExportService</code> (line 71).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (1)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-44605d58c8bb"></span><code>IExportService.ExportDocumentAsync(ExportRequest,CancellationToken)</code><br>72–72 | — | No extracted literal effects. |
+| <span id="m-18997c4633d2"></span><code>IExportService.ExportDocumentAsync(ExportRequest,CancellationToken)</code><br>73–73 | — | No extracted literal effects. |
 
 </details>
 
@@ -292,11 +292,11 @@ Declarations: <code>PersonSummaryRow</code> (line 5), <code>SalaryMonthRow</code
 
 ## SearchReadPorts.cs {#src-f5485780db31}
 
-<code>Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs</code> · 158 lines.
+<code>Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs</code> · 165 lines.
 
-SHA-256: <code>cd1f8b7437035e56b67640938d15d4f7f9153870934c3590d556d0a3202bc9f4</code>.
+SHA-256: <code>a04b6f98db09b8fd8237e2489efdd273e352d75cbfaf637149820e7deac52edb</code>.
 
-Declarations: <code>SearchContext</code> (line 3), <code>SearchEntityKey</code> (line 27), <code>SearchSuggestion</code> (line 38), <code>SearchRequest</code> (line 44), <code>SearchUseRequest</code> (line 74), <code>ISearchSuggestionReader</code> (line 80), <code>ISearchUsageWriter</code> (line 87), <code>ThirdPartySearchScope</code> (line 95), <code>InventoryItemSearchScope</code> (line 101), <code>RecipeSearchScope</code> (line 110), <code>ProductionRunSearchScope</code> (line 116), <code>CommercialInvoiceSearchScope</code> (line 122), <code>ShipmentSearchScope</code> (line 131), <code>MoneySearchScope</code> (line 136), <code>FinancialRegisterSearchScope</code> (line 144), <code>SalaryPeopleSearchScope</code> (line 150), <code>ExpensesSearchScope</code> (line 154).
+Declarations: <code>SearchContext</code> (line 3), <code>SearchEntityKey</code> (line 27), <code>SearchSuggestion</code> (line 38), <code>SearchRequest</code> (line 44), <code>SearchUseRequest</code> (line 74), <code>ISearchSuggestionReader</code> (line 80), <code>ISearchUsageWriter</code> (line 87), <code>ThirdPartySearchScope</code> (line 95), <code>PosItemSearchScope</code> (line 101), <code>InventoryItemSearchScope</code> (line 108), <code>RecipeSearchScope</code> (line 117), <code>ProductionRunSearchScope</code> (line 123), <code>CommercialInvoiceSearchScope</code> (line 129), <code>ShipmentSearchScope</code> (line 138), <code>MoneySearchScope</code> (line 143), <code>FinancialRegisterSearchScope</code> (line 151), <code>SalaryPeopleSearchScope</code> (line 157), <code>ExpensesSearchScope</code> (line 161).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (6)</summary>
@@ -1864,11 +1864,11 @@ Declarations: <code>LifecycleStatusScope</code> (line 4).
 
 ## ReadProjections.cs {#src-f3a0ea7fd9d1}
 
-<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 280 lines.
+<code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 281 lines.
 
-SHA-256: <code>6a41262f21392bfc491641a5ddad557c69225248cd1ba97f479233a2b381da7a</code>.
+SHA-256: <code>31942bcc1214cef17a1af8d5f7ef03d199ed96d5b410f58794d0d48cf730807c</code>.
 
-Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 46), <code>ActivityOrderProjection</code> (line 56), <code>DraftCartLineProjection</code> (line 74), <code>DraftCartProjection</code> (line 92), <code>InventoryItemProjection</code> (line 106), <code>KitAvailabilityProjection</code> (line 135), <code>ItemLotBalanceProjection</code> (line 142), <code>ItemSerialStateCountProjection</code> (line 143), <code>ItemKitUsageProjection</code> (line 144), <code>ItemTraceabilitySummaryProjection</code> (line 145), <code>ItemStockHistoryRow</code> (line 153), <code>ItemStockHistoryPage</code> (line 178), <code>ItemPriceHistoryRow</code> (line 193), <code>LotCandidateProjection</code> (line 220), <code>SerialCandidateProjection</code> (line 235), <code>RestaurantOrderLineProjection</code> (line 247), <code>RestaurantOrderProjection</code> (line 259).
+Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 47), <code>ActivityOrderProjection</code> (line 57), <code>DraftCartLineProjection</code> (line 75), <code>DraftCartProjection</code> (line 93), <code>InventoryItemProjection</code> (line 107), <code>KitAvailabilityProjection</code> (line 136), <code>ItemLotBalanceProjection</code> (line 143), <code>ItemSerialStateCountProjection</code> (line 144), <code>ItemKitUsageProjection</code> (line 145), <code>ItemTraceabilitySummaryProjection</code> (line 146), <code>ItemStockHistoryRow</code> (line 154), <code>ItemStockHistoryPage</code> (line 179), <code>ItemPriceHistoryRow</code> (line 194), <code>LotCandidateProjection</code> (line 221), <code>SerialCandidateProjection</code> (line 236), <code>RestaurantOrderLineProjection</code> (line 248), <code>RestaurantOrderProjection</code> (line 260).
 
 ## ReferenceSnapshot.cs {#src-7a2c51dec98f}
 

@@ -13,7 +13,7 @@ features: ["PP-F022"]
 
 ## Reconstruction evidence
 
-All **85 migration SQL files** were replayed sequentially into an ephemeral **SQLite 3.49.1 `:memory:`** connection. This produced **138 tables**, **1490 columns** and **262 foreign-key column mappings**. `PRAGMA foreign_key_check` returned no violations in this synthetic seeded reconstruction.
+All **86 migration SQL files** were replayed sequentially into an ephemeral **SQLite 3.49.1 `:memory:`** connection. This produced **138 tables**, **1490 columns** and **262 foreign-key column mappings**. `PRAGMA foreign_key_check` returned no violations in this synthetic seeded reconstruction.
 
 This does not exercise the .NET migration runner, its transaction behavior, upgrades of shop data, runtime SQLite version or live database integrity. No real application database was opened. The `schema_version` table was created as the runner does, and synthetic version rows were added between scripts. See [migration lifecycle](migrations.md).
 

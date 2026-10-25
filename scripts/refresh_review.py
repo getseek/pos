@@ -16,7 +16,12 @@ DATE='2026-10-18'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,value):
-    p.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+    # Normalize CR escapes: the Roslyn raw index carries lone \r from CRLF sources;
+    # files written with CR then compare stale forever because read_text() normalizes
+    # them on load (render --check could never pass once a multi-line snippet landed
+    # in a generated page). Canonical index content is LF-only.
+    text=json.dumps(value,ensure_ascii=False,indent=2).replace('\\r\\n','\\n').replace('\\r','\\n')
+    p.write_text(text+'\n',encoding='utf-8',newline='\n')
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

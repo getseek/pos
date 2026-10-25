@@ -57,13 +57,13 @@ Construction sites: [ConfirmSelectedBatchAsync:439](code-desktop.md#src-3f4385d5
 
 Handler method: [BatchCommandHandler.HandleAsync(BatchAssignItemCategoryCommand,CommandEnvelope&lt;BatchAssignItemCategoryCommand&gt;,CancellationToken)](code-application.md#m-1536789d0047).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>product_categories</code> |
 | Writes / DDL | None extracted directly; inspect helpers and dynamic paths. |
-| Literal failure codes | <code>CATEGORY_INACTIVE</code> |
+| Literal failure codes | <code>CATEGORY_INACTIVE</code>, <code>CATEGORY_KIND_MISMATCH</code>, <code>CATEGORY_TARGET_INVALID</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -75,9 +75,9 @@ Declaration: [BatchCommands.cs:24](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:450](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchAssignItemPurposeCommand,CommandEnvelope&lt;BatchAssignItemPurposeCommand&gt;,CancellationToken)](code-application.md#m-2a12d4cac844).
+Handler method: [BatchCommandHandler.HandleAsync(BatchAssignItemPurposeCommand,CommandEnvelope&lt;BatchAssignItemPurposeCommand&gt;,CancellationToken)](code-application.md#m-53e2928f31e8).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsActiveKitParentAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-7a934b57d0b6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsActiveKitParentAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-c9b0d6b07762), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -95,9 +95,9 @@ Declaration: [BatchCommands.cs:40](code-application.md#src-417825b8e887). <code>
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchAssignThirdPartyCategoryCommand,CommandEnvelope&lt;BatchAssignThirdPartyCategoryCommand&gt;,CancellationToken)](code-application.md#m-b9355154b74c).
+Handler method: [BatchCommandHandler.HandleAsync(BatchAssignThirdPartyCategoryCommand,CommandEnvelope&lt;BatchAssignThirdPartyCategoryCommand&gt;,CancellationToken)](code-application.md#m-49c6b53e4cff).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-691d131c742e), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-597ee976afa3), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -115,9 +115,9 @@ Declaration: [BatchCommands.cs:48](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:428](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchAssignThirdPartyPriceLevelCommand,CommandEnvelope&lt;BatchAssignThirdPartyPriceLevelCommand&gt;,CancellationToken)](code-application.md#m-e6ad5045d4b3).
+Handler method: [BatchCommandHandler.HandleAsync(BatchAssignThirdPartyPriceLevelCommand,CommandEnvelope&lt;BatchAssignThirdPartyPriceLevelCommand&gt;,CancellationToken)](code-application.md#m-958f20ecb1a1).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-691d131c742e), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-597ee976afa3), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -135,9 +135,9 @@ Declaration: [BatchCommands.cs:64](code-application.md#src-417825b8e887). <code>
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchCancelBomDraftsCommand,CommandEnvelope&lt;BatchCancelBomDraftsCommand&gt;,CancellationToken)](code-application.md#m-c13a520aab91).
+Handler method: [BatchCommandHandler.HandleAsync(BatchCancelBomDraftsCommand,CommandEnvelope&lt;BatchCancelBomDraftsCommand&gt;,CancellationToken)](code-application.md#m-4fdef3967363).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -155,9 +155,9 @@ Declaration: [BatchCommands.cs:92](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:373](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchDeleteCategoryDefinitionsCommand,CommandEnvelope&lt;BatchDeleteCategoryDefinitionsCommand&gt;,CancellationToken)](code-application.md#m-8296ae07e6a7).
+Handler method: [BatchCommandHandler.HandleAsync(BatchDeleteCategoryDefinitionsCommand,CommandEnvelope&lt;BatchDeleteCategoryDefinitionsCommand&gt;,CancellationToken)](code-application.md#m-a9ea41643046).
 
-Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-80112fe4c253), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-00513e11a2c6), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -175,9 +175,9 @@ Declaration: [BatchCommands.cs:87](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:362](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchDeleteUnitDefinitionsCommand,CommandEnvelope&lt;BatchDeleteUnitDefinitionsCommand&gt;,CancellationToken)](code-application.md#m-a552049bc2a9).
+Handler method: [BatchCommandHandler.HandleAsync(BatchDeleteUnitDefinitionsCommand,CommandEnvelope&lt;BatchDeleteUnitDefinitionsCommand&gt;,CancellationToken)](code-application.md#m-be449cd1afb7).
 
-Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-80112fe4c253), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-00513e11a2c6), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -195,9 +195,9 @@ Declaration: [BatchCommands.cs:79](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:395](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateCategoryStatusCommand,CommandEnvelope&lt;BatchUpdateCategoryStatusCommand&gt;,CancellationToken)](code-application.md#m-4fb69efebb75).
+Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateCategoryStatusCommand,CommandEnvelope&lt;BatchUpdateCategoryStatusCommand&gt;,CancellationToken)](code-application.md#m-8c306e37e8fd).
 
-Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-80112fe4c253), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-00513e11a2c6), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -215,9 +215,9 @@ Declaration: [BatchCommands.cs:97](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:406](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateExpenseCategoryStatusCommand,CommandEnvelope&lt;BatchUpdateExpenseCategoryStatusCommand&gt;,CancellationToken)](code-application.md#m-e793003a1056).
+Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateExpenseCategoryStatusCommand,CommandEnvelope&lt;BatchUpdateExpenseCategoryStatusCommand&gt;,CancellationToken)](code-application.md#m-f2bf448b8c9c).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -237,7 +237,7 @@ Construction sites: [ConfirmSelectedBatchAsync:461](code-desktop.md#src-3f4385d5
 
 Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateItemStatusCommand,CommandEnvelope&lt;BatchUpdateItemStatusCommand&gt;,CancellationToken)](code-application.md#m-bf46ade28a29).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -255,9 +255,9 @@ Declaration: [BatchCommands.cs:32](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:417](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateThirdPartyStatusCommand,CommandEnvelope&lt;BatchUpdateThirdPartyStatusCommand&gt;,CancellationToken)](code-application.md#m-43341c26fe29).
+Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateThirdPartyStatusCommand,CommandEnvelope&lt;BatchUpdateThirdPartyStatusCommand&gt;,CancellationToken)](code-application.md#m-688ef9e4b0d6).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-691d131c742e), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.ContainsSystemWalkInAsync(DbConnection,DbTransaction?,List&lt;string&gt;,CancellationToken)](code-application.md#m-597ee976afa3), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -275,9 +275,9 @@ Declaration: [BatchCommands.cs:71](code-application.md#src-417825b8e887). <code>
 
 Construction sites: [ConfirmSelectedBatchAsync:384](code-desktop.md#src-3f4385d56088)
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateUnitStatusCommand,CommandEnvelope&lt;BatchUpdateUnitStatusCommand&gt;,CancellationToken)](code-application.md#m-1553251d833e).
+Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateUnitStatusCommand,CommandEnvelope&lt;BatchUpdateUnitStatusCommand&gt;,CancellationToken)](code-application.md#m-1d9164843df9).
 
-Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-80112fe4c253), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-00513e11a2c6), [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -295,9 +295,9 @@ Declaration: [BatchCommands.cs:56](code-application.md#src-417825b8e887). <code>
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateUserStatusCommand,CommandEnvelope&lt;BatchUpdateUserStatusCommand&gt;,CancellationToken)](code-application.md#m-15aea3888154).
+Handler method: [BatchCommandHandler.HandleAsync(BatchUpdateUserStatusCommand,CommandEnvelope&lt;BatchUpdateUserStatusCommand&gt;,CancellationToken)](code-application.md#m-53e872cad6f7).
 
-Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-3d6d97138c8a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-3a89faf69339), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-3464348508fd), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [BatchCommandHandler.ValidatePreviewAsync(BatchSelectionScope,BatchPreviewTarget,string,bool?,string?,Guid,DateTime,CancellationToken,string?,string?)](code-application.md#m-0831dacd53c6), [BatchCommandHandler.BuildInClause(DbCommand,IEnumerable&lt;string&gt;,string)](code-application.md#m-1f5b313b3b3a), [BatchCommandHandler.Chunk(List&lt;T&gt;,int)](code-application.md#m-b560242224c8), [BatchCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-e27df70a2f8a), [BatchCommandHandler.ConsumePreviewAsync(Guid,string,DateTime,CancellationToken)](code-application.md#m-71d2543de647). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -321,7 +321,7 @@ Handler method: [CreateBatchPreviewCommandHandler.HandleAsync(CreateBatchPreview
 | --- | --- |
 | Reads | <code>price_level_settings</code>, <code>product_categories</code> |
 | Writes / DDL | <code>batch_previews</code> |
-| Literal failure codes | <code>BATCH_PREVIEW_REQUIRED</code>, <code>BATCH_SCOPE_MISMATCH</code>, <code>BATCH_SELECTION_STALE</code>, <code>CATEGORY_INACTIVE</code>, <code>CATEGORY_NOT_FOUND</code>, <code>INVALID_PRICE_LEVEL</code>, <code>INVALID_PRODUCT_PURPOSE</code> |
+| Literal failure codes | <code>BATCH_PREVIEW_REQUIRED</code>, <code>BATCH_SCOPE_MISMATCH</code>, <code>BATCH_SELECTION_STALE</code>, <code>CATEGORY_INACTIVE</code>, <code>CATEGORY_KIND_MISMATCH</code>, <code>CATEGORY_NOT_FOUND</code>, <code>CATEGORY_TARGET_INVALID</code>, <code>INVALID_PRICE_LEVEL</code>, <code>INVALID_PRODUCT_PURPOSE</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 

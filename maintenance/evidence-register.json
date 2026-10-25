@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "4d24e09ad2c597ed0822b3d1f3a4704f02e139bf0bf37128470984831d921a90",
+      "sha256": "c5460d4c2312eec978b083889b302c495a58e7389e4bcb2859467bd79e6a2606",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -886,6 +886,75 @@
       "times": {
         "duration": "8 m 43 s (integration) + 2 s (unit) + 1 s (acceptance)",
         "run_at_local": "2026-10-25 ~15:40 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-036",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s02/20261025-1735/w5-hermes-import-stdout.txt",
+      "sha256": "90b1367c4027eba46ad2dd7c610ed2d857b25b08b416824c523f229aef5763af",
+      "reviewed_on": "2026-10-25",
+      "claim": "W5/S02 import-filtered run, ORCHESTRATOR OWN capture (untouched stdout, TRX w5-hermes-import.trx, exit 0): 60/60 passed. Console output; no device claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "60",
+        "passed": "60",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "24 s (integration) + 508 ms (unit)",
+        "run_at_local": "2026-10-25 ~17:25 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-037",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s02/20261025-1735/w5-hermes-full-stdout.txt",
+      "sha256": "86ed5c6a9e165a752773834e862213e2f8388ea063f97a1a0ba57387ca9c2c59",
+      "reviewed_on": "2026-10-25",
+      "claim": "W5/S02 full solution suite, ORCHESTRATOR OWN capture (untouched stdout, TRX w5-hermes-full.trx, exit 0): 1367/1367 passed, 0 failed (Acceptance 1, Unit 310, Integration 1056 = 1041 + 15 new SV-07/SV-08 tests). The worker's own full run disclosed 1 Avalonia headless flake (TouchAndShortcut AltKey, PlatformNotSupported; isolated re-run 9/9; no-GUI boundary) which did NOT reproduce in this capture. Covers Service categories, Time-unit whitelist, central kind-eligibility policy and migration 086. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1367",
+        "passed": "1367",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "6 m 25 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-25 ~17:25 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

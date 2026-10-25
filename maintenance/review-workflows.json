@@ -56,7 +56,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Resetting/SqliteRealWorkspaceResetService.cs",
           "line": 1,
-          "sha256": "bcf6fb283c931557e6d1c33ff52582fd915d418368e038f9b0c0de2bce8a9fef"
+          "sha256": "1cceff6349b3ac21480149f5ebc0eae8efca896411cb2c84c680f1ac9869578f"
         }
       ]
     },
@@ -495,7 +495,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "80670cc084958304064ad3b066662645892187c4a9c87ab81d1cf66a823e2897",
+          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08",
           "line": 1
         },
         {
@@ -772,7 +772,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "80670cc084958304064ad3b066662645892187c4a9c87ab81d1cf66a823e2897"
+          "sha256": "0b29ddb3ebe9790ebf71e00ca4c9ea000c83728e94bac29fbdb5cb4f5e4b0f08"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
@@ -831,7 +831,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Migrations/DatabaseMigrator.cs",
           "line": 1,
-          "sha256": "8fd8e901f985c97a5fd0d1d71312e22e6359b744e144cc4818f2e8e09882600e"
+          "sha256": "ca1ba2990980667d5241b78295ee5da67a014b1a64406b1d7cb8c81f84104b39"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/SqliteConnectionPolicy.cs",
@@ -948,12 +948,12 @@
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
           "line": 1,
-          "sha256": "e8d5dcf16fc2e5c317fd4e968679777765ff8987f3910e9e767d9c3759dc361b"
+          "sha256": "36f305a600492eba2c96807674b0bef4fbc31a7105f847d3bc4ba65cad390734"
         },
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchPreview.cs",
           "line": 1,
-          "sha256": "1053ef4233777a81107c51558e6f239da26f88a22f43fcdc317adf2e59decbe7"
+          "sha256": "8c8ac4ff05797a0f8cab640c229160c6a6d4caf8ad6708191ea559ae56dd875e"
         }
       ]
     }

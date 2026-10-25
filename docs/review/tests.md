@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **154 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **155 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -421,7 +421,7 @@ Located test declarations: <code>AllBusinessData_Includes_People_SalaryHistory_A
 
 ## SalaryExpensesSchemaTests.cs {#src-ca9bf8db2b9f}
 
-<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>7d8c27bff13a1cc9a6fc530b1886195df212f013f79ecbd45a997c0038f30798</code>.
+<code>Software/tests/GetSeek.IntegrationTests/SalaryExpensesSchemaTests.cs</code> · SHA-256 <code>8d572397a2ff3deb73898249b66269a69b214ba3e2be4919003b6d262f897747</code>.
 
 Located test declarations: <code>FreshDatabase_MigratesToVersion83Successfully</code> @26, <code>SchemaConstraints_Migration083_ZReportAndWasteSettings_Enforced</code> @39, <code>SchemaConstraints_Migration081_StatementColumnsAndUniqueness_Enforced</code> @86, <code>SchemaConstraints_PeopleAndAgreements_Enforced</code> @242, <code>SchemaConstraints_SalaryPeriodsAndLedger_Enforced</code> @345, <code>SchemaConstraints_ExpensesAndAttachments_Enforced</code> @421, <code>PermissionsAndRoles_SeededCorrectly_AndExplicitDenyWins</code> @461.
 
@@ -476,6 +476,12 @@ Located test declarations: <code>ExactPrefixSubstring_Precedence_OrdersSuggestio
 <code>Software/tests/GetSeek.IntegrationTests/SearchStateIntegrationTests.cs</code> · SHA-256 <code>e5998b74451e1df39fc248c336c37af5214ac1c9656065d0e7362d03010bce70</code>.
 
 Located test declarations: <code>StaleResultsIgnored_WhenNewerQueryIssued</code> @36, <code>StaleErrorsIgnored_WhenNewerQuerySucceeds</code> @81, <code>WorkspaceGuard_IgnoresResults_WhenWorkspaceSwitched</code> @123, <code>OperatorGuard_IgnoresResults_WhenSessionLocked</code> @157, <code>ExactKey_InvalidatedOnTyping</code> @190, <code>Clear_ResetsAllStateAndCancelsPendingRequest</code> @209, <code>Disposal_PreventsFurtherUpdates</code> @243.
+
+## ServiceCategoriesAndUnitsIntegrationTests.cs {#src-26153f4b80e2}
+
+<code>Software/tests/GetSeek.IntegrationTests/ServiceCategoriesAndUnitsIntegrationTests.cs</code> · SHA-256 <code>ef8441f753bc622b590674cc1def15ef117ddbe8f984c0b5bb36c5bae70eb9ee</code>.
+
+Located test declarations: <code>Migration086_FreshDatabase_SeedsGeneralServicesCategory</code> @109, <code>Migration086_UpgradeFromV85_IdempotentAndPreservesExistingData</code> @135, <code>SV07_CreateServiceCategory_AdminAuthorization_Enforced</code> @171, <code>SV07_KindMismatch_RejectionOnCreate_ProductAndService</code> @189, <code>SV07_KindMismatch_RejectionOnUpdate_ProductAndService</code> @259, <code>SV07_KindMismatch_RejectionOnBatchReassignment</code> @328, <code>SV07_RetargetingValidation_CannotInvalidateAssignedItems</code> @405, <code>SV07_GeneralServices_CannotBeDeactivated</code> @469, <code>SV08_AdminTimeUomManagement_CreateAndEdit_Works</code> @485, <code>SV08_Pcs_EligibleForBothProductAndService</code> @509, <code>SV08_TimeUnits_ServiceEligible_ProductRejection</code> @545, <code>SV08_LegacyProductTime_Grandfathered</code> @642, <code>SV08_Conversions_HrMinWorks_CrossDimensionRejected</code> @714, <code>SV08_MassUnit_RejectedForService</code> @738, <code>SV08_ReferenceSnapshot_AuthorityExtensionPoints</code> @759.
 
 ## ServiceItemStorageAndIdentityIntegrationTests.cs {#src-cfcce5eb35de}
 

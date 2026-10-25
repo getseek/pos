@@ -63,13 +63,13 @@ This overview groups routes by handler to stay readable; each named command and 
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>ProductCategoryDto</code>.
 
-Declaration: [CatalogRegistryCommands.cs:45](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:48](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveManagedCategoryAsync:11068](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveManagedCategoryAsync:11075](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogRegistryCommandHandler.HandleAsync(CreateCategoryCommand,CommandEnvelope&lt;CreateCategoryCommand&gt;,CancellationToken)](code-application.md#m-d66f4c4edaeb).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.NormalizeProfileScope(string?)](code-application.md#m-eec94a9863fc), [CatalogRegistryCommandHandler.CategoryCodeExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-15dd37c6f6bd), [CatalogRegistryCommandHandler.CategoryNameExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-055c7a8a4cf4), [CatalogRegistryCommandHandler.NormalizeTargetType(string?)](code-application.md#m-c6e674426295), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.NormalizeProfileScope(string?)](code-application.md#m-bef0dc027383), [CatalogRegistryCommandHandler.CategoryCodeExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-f7b205f98ddf), [CatalogRegistryCommandHandler.CategoryNameExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-d9df5a0fcb63), [CatalogRegistryCommandHandler.NormalizeTargetType(string?)](code-application.md#m-2db79d1419fd), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -85,11 +85,11 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:34](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:74](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10103](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:74](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10104](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5).
 
-Same-owner helper candidates: [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-ffc80d767ec4), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-1ce10e9a79f4), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-4b7af22d8bfb), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-aa0506eb22cc), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-25545048feb0), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-6bc9c0cc42f9), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-0a9a531625df), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-08c7e23be75e), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,string,CancellationToken)](code-application.md#m-09e2914548db), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-48ee8e5f1f04), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-392482b79b56). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -107,9 +107,9 @@ Declaration: [CatalogCommands.cs:106](code-application.md#src-8482e00dd58a). <co
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-ec56dbb87a53).
+Handler method: [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-605aa4ef28c2).
 
-Same-owner helper candidates: [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-0a9a531625df), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-08c7e23be75e), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,string,CancellationToken)](code-application.md#m-09e2914548db), [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-48ee8e5f1f04), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-392482b79b56). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -143,13 +143,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>UomDefinitionDto</code>.
 
-Declaration: [CatalogRegistryCommands.cs:88](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:91](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveManagedUnitAsync:11410](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveManagedUnitAsync:11417](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(CreateUomCommand,CommandEnvelope&lt;CreateUomCommand&gt;,CancellationToken)](code-application.md#m-ae8d7a0b2824).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(CreateUomCommand,CommandEnvelope&lt;CreateUomCommand&gt;,CancellationToken)](code-application.md#m-a092ff27a933).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.NormalizeUnitKind(string?)](code-application.md#m-c8b399312411), [CatalogRegistryCommandHandler.NormalizeDimension(string?)](code-application.md#m-47f226c14f6a), [CatalogRegistryCommandHandler.UomCodeExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-50d7b2328d4e), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.NormalizeUnitKind(string?)](code-application.md#m-e6dd80724b5c), [CatalogRegistryCommandHandler.NormalizeDimension(string?)](code-application.md#m-92ee67f8a4e9), [CatalogRegistryCommandHandler.UomCodeExistsAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-1ffa09429318), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -163,13 +163,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:69](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:72](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ToggleManagedCategoryActiveAsync:11126](code-desktop.md#src-16497b924a99)
+Construction sites: [ToggleManagedCategoryActiveAsync:11133](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeactivateCategoryCommand,CommandEnvelope&lt;DeactivateCategoryCommand&gt;,CancellationToken)](code-application.md#m-a7fb74fc19e0).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeactivateCategoryCommand,CommandEnvelope&lt;DeactivateCategoryCommand&gt;,CancellationToken)](code-application.md#m-92dd9d186f50).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-fa45c96d6b54), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-c602eb8b8f0a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -185,11 +185,11 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:92](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [DeactivateProductAsync:10198](code-desktop.md#src-16497b924a99)
+Construction sites: [DeactivateProductAsync:10199](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogCommandHandler.HandleAsync(DeactivateProductCommand,CommandEnvelope&lt;DeactivateProductCommand&gt;,CancellationToken)](code-application.md#m-37816510b61b).
+Handler method: [CatalogCommandHandler.HandleAsync(DeactivateProductCommand,CommandEnvelope&lt;DeactivateProductCommand&gt;,CancellationToken)](code-application.md#m-d570e4bebed2).
 
-Same-owner helper candidates: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5), [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-83ad1eb9103b), [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-3a420f15c21e), [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-ec56dbb87a53), [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-ea4c9a18bbae). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5), [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-7e8cfcd3ca9f), [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-4e282dde3789), [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-605aa4ef28c2), [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-34e3f7f16be6). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -223,13 +223,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:114](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:117](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ToggleManagedUnitActiveAsync:11460](code-desktop.md#src-16497b924a99)
+Construction sites: [ToggleManagedUnitActiveAsync:11467](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeactivateUomCommand,CommandEnvelope&lt;DeactivateUomCommand&gt;,CancellationToken)](code-application.md#m-2c2bbbc7eefc).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeactivateUomCommand,CommandEnvelope&lt;DeactivateUomCommand&gt;,CancellationToken)](code-application.md#m-47bb4ec92194).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-541750121d7a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-103895a30c02), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -243,13 +243,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:79](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:82](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeleteCategoryCommand,CommandEnvelope&lt;DeleteCategoryCommand&gt;,CancellationToken)](code-application.md#m-296d2c281ff8).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeleteCategoryCommand,CommandEnvelope&lt;DeleteCategoryCommand&gt;,CancellationToken)](code-application.md#m-24f3cd7fb461).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-fa45c96d6b54), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-c602eb8b8f0a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -263,13 +263,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:124](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:127](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeleteUomCommand,CommandEnvelope&lt;DeleteUomCommand&gt;,CancellationToken)](code-application.md#m-5c4e71f7e297).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(DeleteUomCommand,CommandEnvelope&lt;DeleteUomCommand&gt;,CancellationToken)](code-application.md#m-6b57837db1d1).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-541750121d7a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-103895a30c02), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -283,13 +283,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:74](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:77](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ToggleManagedCategoryActiveAsync:11131](code-desktop.md#src-16497b924a99)
+Construction sites: [ToggleManagedCategoryActiveAsync:11138](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(ReactivateCategoryCommand,CommandEnvelope&lt;ReactivateCategoryCommand&gt;,CancellationToken)](code-application.md#m-e0dafe188016).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(ReactivateCategoryCommand,CommandEnvelope&lt;ReactivateCategoryCommand&gt;,CancellationToken)](code-application.md#m-71e62b8e673c).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-fa45c96d6b54), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-c602eb8b8f0a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -303,13 +303,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>bool</code>.
 
-Declaration: [CatalogRegistryCommands.cs:119](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:122](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [ToggleManagedUnitActiveAsync:11465](code-desktop.md#src-16497b924a99)
+Construction sites: [ToggleManagedUnitActiveAsync:11472](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(ReactivateUomCommand,CommandEnvelope&lt;ReactivateUomCommand&gt;,CancellationToken)](code-application.md#m-173e9cf4959c).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(ReactivateUomCommand,CommandEnvelope&lt;ReactivateUomCommand&gt;,CancellationToken)](code-application.md#m-a65f0d3dc632).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-541750121d7a), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-103895a30c02), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -325,7 +325,7 @@ Handler: [SaveProductConfigurationCommandHandler](code-application.md#src-c24b9e
 
 Declaration: [SaveProductConfigurationCommand.cs:12](code-application.md#src-5802398b5ad9). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:79](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10127](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:79](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10128](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveProductConfigurationCommandHandler.HandleAsync(SaveProductConfigurationCommand,CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,CancellationToken)](code-application.md#m-98f2baf362dd).
 
@@ -345,11 +345,11 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:100](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:679](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
+Construction sites: [HandleAsync:737](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
 
-Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-3a420f15c21e).
+Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-4e282dde3789).
 
-Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-48ee8e5f1f04), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-392482b79b56). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -363,19 +363,19 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>ProductCategoryDto</code>.
 
-Declaration: [CatalogRegistryCommands.cs:57](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:60](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveManagedCategoryAsync:11052](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveManagedCategoryAsync:11059](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogRegistryCommandHandler.HandleAsync(UpdateCategoryCommand,CommandEnvelope&lt;UpdateCategoryCommand&gt;,CancellationToken)](code-application.md#m-cb797c0581eb).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.NormalizeProfileScope(string?)](code-application.md#m-eec94a9863fc), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-fa45c96d6b54), [CatalogRegistryCommandHandler.CategoryNameExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-055c7a8a4cf4), [CatalogRegistryCommandHandler.NormalizeTargetType(string?)](code-application.md#m-c6e674426295), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.NormalizeProfileScope(string?)](code-application.md#m-bef0dc027383), [CatalogRegistryCommandHandler.ReadCategoryAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-c602eb8b8f0a), [CatalogRegistryCommandHandler.CategoryNameExistsAsync(DbConnection,DbTransaction?,string,Guid?,CancellationToken)](code-application.md#m-d9df5a0fcb63), [CatalogRegistryCommandHandler.NormalizeTargetType(string?)](code-application.md#m-2db79d1419fd), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
-| Reads | None extracted directly; inspect helpers and dynamic paths. |
+| Reads | <code>items</code>, <code>third_parties</code>, <code>users</code> |
 | Writes / DDL | <code>product_categories</code> |
-| Literal failure codes | <code>ADMIN_REQUIRED</code>, <code>CATEGORY_NOT_FOUND</code>, <code>CATEGORY_REQUIRED</code>, <code>DUPLICATE_CATEGORY</code> |
+| Literal failure codes | <code>ADMIN_REQUIRED</code>, <code>CATEGORY_IN_USE</code>, <code>CATEGORY_NOT_FOUND</code>, <code>CATEGORY_REQUIRED</code>, <code>DUPLICATE_CATEGORY</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 
@@ -385,11 +385,11 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:61](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:76](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10074](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:76](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10075](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-83ad1eb9103b).
+Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-7e8cfcd3ca9f).
 
-Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-ffc80d767ec4), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-1ce10e9a79f4), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-4b7af22d8bfb), [CatalogCommandHandler.IsWeakerTrackingPolicy(string?,string)](code-application.md#m-358646417251), [CatalogCommandHandler.IsTrackingChangeBlockedAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-33c95373caa4), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-48ee8e5f1f04), [CatalogCommandHandler.NormalizeProductPurpose(string?)](code-application.md#m-aa0506eb22cc), [CatalogCommandHandler.TryNormalizeCoordinates(string?,string?,string?,string?,string?,string?)](code-application.md#m-25545048feb0), [CatalogCommandHandler.NormalizeTrackingPolicy(bool,string?,string?)](code-application.md#m-6bc9c0cc42f9), [CatalogCommandHandler.IsWeakerTrackingPolicy(string?,string)](code-application.md#m-ce2b0fcca59d), [CatalogCommandHandler.IsTrackingChangeBlockedAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-131fc6989665), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,string,CancellationToken)](code-application.md#m-09e2914548db), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-0a9a531625df), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-08c7e23be75e), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-392482b79b56). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -407,9 +407,9 @@ Declaration: [CatalogCommands.cs:123](code-application.md#src-8482e00dd58a). <co
 
 Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
 
-Handler method: [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-ea4c9a18bbae).
+Handler method: [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-34e3f7f16be6).
 
-Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-13169f17df41), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,CancellationToken)](code-application.md#m-43d87b7002b1), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-d8b92ef052b7), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-660e7a28d7f4), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-5845db3c3228). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-48ee8e5f1f04), [CatalogCommandHandler.ResolveCategoryAsync(DbConnection,DbTransaction?,Guid?,string?,string,CancellationToken)](code-application.md#m-09e2914548db), [CatalogCommandHandler.ReadUnitDefinitionAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-0a9a531625df), [CatalogCommandHandler.ResolveDefaultUnitAsync(DbConnection,DbTransaction?,string?,string,UnitDefinition,CancellationToken)](code-application.md#m-08c7e23be75e), [CatalogCommandHandler.AppendItemHistoryAsync(DbConnection,DbTransaction?,Guid,string,string,string,string?,object,CommandEnvelope&lt;TCommand&gt;,CancellationToken)](code-application.md#m-392482b79b56). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
@@ -425,7 +425,7 @@ Handler: [StoreUomPreferenceCommandHandler](code-application.md#src-931326887202
 
 Declaration: [StoreUomPreferenceCommands.cs:6](code-application.md#src-df6632bf7490). <code>RequiredPermission = Permissions.ManageSettings</code>
 
-Construction sites: [SaveStoreUomPreferenceAsync:11347](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveStoreUomPreferenceAsync:11354](code-desktop.md#src-16497b924a99)
 
 Handler method: [StoreUomPreferenceCommandHandler.HandleAsync(UpdateStoreUomPreferenceCommand,CommandEnvelope&lt;UpdateStoreUomPreferenceCommand&gt;,CancellationToken)](code-application.md#m-43ba3062b01a).
 
@@ -463,13 +463,13 @@ Helper calls, table references in helpers, and throw sites are listed in the met
 
 Handler: [CatalogRegistryCommandHandler](code-application.md#src-1b8d6c18449a). Result type: <code>UomDefinitionDto</code>.
 
-Declaration: [CatalogRegistryCommands.cs:102](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [CatalogRegistryCommands.cs:105](code-application.md#src-e1ac9f19094b). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveManagedUnitAsync:11394](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveManagedUnitAsync:11401](code-desktop.md#src-16497b924a99)
 
-Handler method: [CatalogRegistryCommandHandler.HandleAsync(UpdateUomCommand,CommandEnvelope&lt;UpdateUomCommand&gt;,CancellationToken)](code-application.md#m-46f59572d6fa).
+Handler method: [CatalogRegistryCommandHandler.HandleAsync(UpdateUomCommand,CommandEnvelope&lt;UpdateUomCommand&gt;,CancellationToken)](code-application.md#m-1e03dcd53f1c).
 
-Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-a0a61a0f660e), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-541750121d7a), [CatalogRegistryCommandHandler.UomIsReferencedAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-ca1e2c9bf689), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-f3d25ec02ab0). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [CatalogRegistryCommandHandler.IsActiveAdminAsync(DbConnection,DbTransaction?,Guid,CancellationToken)](code-application.md#m-0914bdc622e8), [CatalogRegistryCommandHandler.ReadUomAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-103895a30c02), [CatalogRegistryCommandHandler.UomIsReferencedAsync(DbConnection,DbTransaction?,string,CancellationToken)](code-application.md#m-c5d429817b23), [CatalogRegistryCommandHandler.AddParam(DbCommand,string,object)](code-application.md#m-4cb217e3a858). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |

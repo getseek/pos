@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "c5460d4c2312eec978b083889b302c495a58e7389e4bcb2859467bd79e6a2606",
+      "sha256": "52ea6bc5cddc8dea05a7d0ffc3f206b1a44d447f8243506e26f46a1536b82514",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -955,6 +955,75 @@
       "times": {
         "duration": "6 m 25 s (integration) + 2 s (unit) + 1 s (acceptance)",
         "run_at_local": "2026-10-25 ~17:25 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-038",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s03/20261025-2115/w6-hermes-import-stdout.txt",
+      "sha256": "805b2c044f2fb12cec216791198022b98e14492f75af09d511b70ac493ebeca5",
+      "reviewed_on": "2026-10-25",
+      "claim": "W6/S03 import-filtered run, ORCHESTRATOR OWN capture (untouched stdout, TRX in test project TestResults, exit 0): 72/72 passed, 0 failed (Unit 8, Integration 64 = 53 + 11 new Service-bulk-import tests). Worker capture w6-import identical (exit 0).",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "72",
+        "passed": "72",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "30 s (integration) + 660 ms (unit)",
+        "run_at_local": "2026-10-25 ~21:05 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-039",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s03/20261025-2115/w6-hermes-full-stdout.txt",
+      "sha256": "09dd7e9be60709b45f44b140fe037f814ffa83544bf78885c096b8c0ce1a3aca",
+      "reviewed_on": "2026-10-25",
+      "claim": "W6/S03 full solution suite, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1379/1379 passed, 0 failed (Acceptance 1, Unit 311, Integration 1067); worker capture w6-full identical (exit 0). Import performance gate PASSED against the W1 recorded limits (same harness, batch03): flow 19.22s@10k <=20.46s, flow 54.95s@30k <=55.09s, fingerprint probe 0.07s <=1.0s; counts 2000/2000/2000 both runs. Watch item: 30k confirm phase grew 24.0->28.5s (service_items fingerprint family) using ~99.75% of the x1.10 budget - later waves must not add import-path cost; re-measure at W11. Covers template 2.1 + ItemKind, typed Service create/update via W2 boundary, dual-layer Service row rejections, snapshot/fingerprint extension with legacy-vs-batched equality extended. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1379",
+        "passed": "1379",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "9 m 37 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-25 ~21:05 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

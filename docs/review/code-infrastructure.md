@@ -567,9 +567,9 @@ Declarations: <code>WindowsRawPrinter</code> (line 7), <code>DocInfo</code> (lin
 
 ## ImportPreviewService.cs {#src-9b8064464865}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs</code> · 252 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs</code> · 254 lines.
 
-SHA-256: <code>1a49fec61223fe2986b5aca8f7fded963ee63cae842648fd57bb546df9214d5e</code>.
+SHA-256: <code>00a4daef371fcfaaf4a9411946f27729bc2fc29492bdb436cb5ab068fb42b1fe</code>.
 
 Declarations: <code>ImportPreviewService</code> (line 23).
 
@@ -582,32 +582,32 @@ Declarations: <code>ImportPreviewService</code> (line 23).
 | <span id="m-df143dd30442"></span><code>ImportPreviewService.ReadThirdPartiesAsync(byte[],string,string,string,string,CancellationToken)</code><br>83–93 | ConfigureAwait @87; CreateReadConnectionAsync @87; BeginTransaction @89; ReadAsync @91 | No extracted literal effects. |
 | <span id="m-0bd27fa31efc"></span><code>ImportPreviewService.ValidateThirdPartiesAsync(ThirdPartyImportPreview,string,Guid,CancellationToken)</code><br>97–125 | ConfigureAwait @103; CreateWriteConnectionAsync @103; BeginTransactionAsync @107; NewGuid @115; HandleAsync @117; ToArray @119; Append @119; RollbackAsync @123 | No extracted literal effects. |
 | <span id="m-a77c9c317aee"></span><code>ImportPreviewService.TemplateContextAsync(string,string,CancellationToken)</code><br>129–137 | ConfigureAwait @133; CreateReadConnectionAsync @133; TemplateContextAsync @135 | No extracted literal effects. |
-| <span id="m-afdac18e364a"></span><code>ImportPreviewService.TemplateContextAsync(DbConnection,string,CancellationToken)</code><br>141–249 | ConfigureAwait @145; ContextAsync @145; CreateCommand @153; ExecuteReaderAsync @155; ReadAsync @157; Add @157; ToString @157; GetValue @157; GetString @157; Load @161; AddRange @173; Select @243 | FROM price_level_settings @161; FROM product_categories @163; FROM store_config @161; FROM third_parties @171; FROM uoms @169 |
+| <span id="m-afdac18e364a"></span><code>ImportPreviewService.TemplateContextAsync(DbConnection,string,CancellationToken)</code><br>141–251 | ConfigureAwait @145; ContextAsync @145; CreateCommand @153; ExecuteReaderAsync @155; ReadAsync @157; Add @157; ToString @157; GetValue @157; GetString @157; Load @161; AddRange @173; Select @245 | FROM price_level_settings @161; FROM product_categories @163; FROM store_config @161; FROM third_parties @171; FROM uoms @169 |
 
 </details>
 
 ## XlsxImportWorkbook.cs {#src-16a4d298fe01}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs</code> · 265 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs</code> · 318 lines.
 
-SHA-256: <code>6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8</code>.
+SHA-256: <code>5a47a1d02dc59106e3cff167b69d5346f80127e661448b7a7fdfb9bf8f1a486c</code>.
 
-Declarations: <code>XlsxImportRow</code> (line 9), <code>XlsxImportWorkbook</code> (line 12).
+Declarations: <code>XlsxImportRow</code> (line 10), <code>XlsxImportWorkbook</code> (line 13).
 
 <details markdown>
 <summary>Methods, calls, table effects and failures (9)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-41b1672060cd"></span><code>XlsxImportWorkbook.HasSheet(string)</code><br>18–18 | ContainsKey @18 | No extracted literal effects. |
-| <span id="m-1916b1d1b560"></span><code>XlsxImportWorkbook.Load(byte[],string,ImportWorkbookContext?)</code><br>20–91 | Sum @25; GetEntry @28; Open @29; Create @30; Load @31; ToArray @33; Select @33; Descendants @33; ReadXml @33; Concat @34; Descendants @34; ToDictionary @35; Elements @35; Attribute @35; Attribute @39; StartsWith @41; TrimStart @41; Contains @42; Attribute @46; Elements @48; Attribute @50; TakeWhile @52; ToUpperInvariant @52; ToUpperInvariant @54; Descendants @55; Element @55; Parse @56; Any @57; Sheets @57; Equals @57; TryAdd @59; TryAdd @61; TryAdd @63; ContainsKey @65; Rows @66; Cell @66; GetValueOrDefault @67; ToString @70; HasSheet @75; ToHashSet @76; Select @76; TryGetValue @78; Any @79; Any @79; Equals @79; GetValueOrDefault @79; Any @83; Contains @83; Where @84; Contains @84; TryGetValue @85; IsNullOrEmpty @85; ToString @85; GetValueOrDefault @85; ToUpperInvariant @85 | InvalidDataException @22; InvalidDataException @25; InvalidDataException @42; InvalidDataException @58; InvalidDataException @59; InvalidDataException @61; InvalidDataException @63; InvalidDataException @65; InvalidDataException @69; InvalidDataException @71; InvalidDataException @80; InvalidDataException @83; InvalidDataException @86; InvalidDataException @87 |
-| <span id="m-3723384b16ab"></span><code>XlsxImportWorkbook.AssignAutomaticIdentifiers(string,string)</code><br>93–126 | ToHexString @95; HashData @95; GetBytes @95; TryGetValue @97; Single @98; Equals @98; Column @99; Where @101; Any @101; IsNullOrWhiteSpace @101; GetValueOrDefault @103; Equals @105; ToUpperInvariant @110; Where @114; Any @114; Sheets @114; ToArray @116; Select @116; Where @116; Where @117; Trim @120; StartsWith @121; TryGetValue @122 | InvalidDataException @122 |
-| <span id="m-8d60bbc269f0"></span><code>XlsxImportWorkbook.CompletedWorkbook(byte[],string,string,ImportWorkbookContext)</code><br>128–139 | Load @130; AssignAutomaticIdentifiers @131; ToDictionary @132; Sheets @132; ToArray @133; Select @133; Rows @133; Empty(IDictionary&lt;string, object&gt;, string, object) @137; Write @138 | No extracted literal effects. |
-| <span id="m-eacbc905a98c"></span><code>XlsxImportWorkbook.FailedWorkbook(byte[]?,string,IReadOnlyList&lt;ImportIssue&gt;,string)</code><br>143–180 | Load @150; ToHashSet @151; Append @151; Select @151; Sheets @151; ToDictionary @152; Where @152; Contains @152; Select @161; Add @162; Take @167; ToArray @170; Where @170; Any @170; Join @171; Select @171; TryGetValue @171; TryGetValue @171; Where @172; GetValueOrDefault @172; ToString @173; WriteSheets @176; FailedWorkbook @178 | InvalidDataException @149 |
-| <span id="m-38fbea4c3f3a"></span><code>XlsxImportWorkbook.Rows(string,int)</code><br>182–195 | TryGetValue @184; TryGetValue @185; ToDictionary @186; Trim @186; Any @187; Count @187; Distinct @187; Where @189; All @191; Any @192; ContainsKey @192; IsNullOrWhiteSpace @192; ToDictionary @193; GetValueOrDefault @193 | InvalidDataException @185; InvalidDataException @188; InvalidDataException @192 |
-| <span id="m-70c90a9aab1f"></span><code>XlsxImportWorkbook.Cell(IDictionary&lt;string, object&gt;,string)</code><br>197–198 | TryGetValue @197; ToString @198; Trim @198 | No extracted literal effects. |
-| <span id="m-1653613c233e"></span><code>XlsxImportWorkbook.Write(string,ImportWorkbookContext,IReadOnlyDictionary&lt;string, IReadOnlyList&lt;IDictionary&lt;string, object&gt;&gt;&gt;?)</code><br>200–216 | ToString @204; Sheets @205; ToList @207; Select @207; TryGetValue @208; AddRange @209; Select @209; Cell @209; AddRange @213; Select @213; WriteSheets @215; ToDictionary @215; ToDictionary @215; Select @215; Select @215 | No extracted literal effects. |
-| <span id="m-f91b4b784ee9"></span><code>XlsxImportWorkbook.WriteSheets(Dictionary&lt;string, SortedDictionary&lt;int, Dictionary&lt;int, string&gt;&gt;&gt;)</code><br>218–263 | Open @223; CreateEntry @223; Write @223; Add @225; Get @227; Add @231; Override @232; Add @237; Element @237; Add @238; Add @243; Add @251; ToString @254; ToString @260; ToString @260; ToString @260; ToArray @262 | No extracted literal effects. |
+| <span id="m-ce1b3405f990"></span><code>XlsxImportWorkbook.HasSheet(string)</code><br>23–23 | ContainsKey @23 | No extracted literal effects. |
+| <span id="m-36904decf408"></span><code>XlsxImportWorkbook.Load(byte[],string,ImportWorkbookContext?)</code><br>25–108 | Sum @30; GetEntry @33; Open @34; Create @35; Load @36; ToArray @38; Select @38; Descendants @38; ReadXml @38; Concat @39; Descendants @39; ToDictionary @40; Elements @40; Attribute @40; Attribute @44; StartsWith @46; TrimStart @46; Contains @47; Attribute @51; Elements @53; Attribute @55; TakeWhile @57; ToUpperInvariant @57; ToUpperInvariant @59; Descendants @60; Element @60; Parse @61; Any @62; Sheets @62; Equals @62; TryAdd @64; TryAdd @66; TryAdd @68; ContainsKey @70; Rows @71; Cell @71; GetValueOrDefault @72; SupportedVersions @74; Equals @75; Contains @76; ToString @87; HasSheet @92; ToHashSet @93; Select @93; TryGetValue @95; Any @96; Any @96; Equals @96; GetValueOrDefault @96; Any @100; Contains @100; Where @101; Contains @101; TryGetValue @102; IsNullOrEmpty @102; ToString @102; GetValueOrDefault @102; ToUpperInvariant @102 | InvalidDataException @27; InvalidDataException @30; InvalidDataException @47; InvalidDataException @63; InvalidDataException @64; InvalidDataException @66; InvalidDataException @68; InvalidDataException @70; InvalidDataException @81; InvalidDataException @88; InvalidDataException @97; InvalidDataException @100; InvalidDataException @103; InvalidDataException @104 |
+| <span id="m-55b552d09e6f"></span><code>XlsxImportWorkbook.AssignAutomaticIdentifiers(string,string)</code><br>110–143 | ToHexString @112; HashData @112; GetBytes @112; TryGetValue @114; Single @115; Equals @115; Column @116; Where @118; Any @118; IsNullOrWhiteSpace @118; GetValueOrDefault @120; Equals @122; ToUpperInvariant @127; Where @131; Any @131; Sheets @131; ToArray @133; Select @133; Where @133; Where @134; Trim @137; StartsWith @138; TryGetValue @139 | InvalidDataException @139 |
+| <span id="m-0aaa0c650e7a"></span><code>XlsxImportWorkbook.CompletedWorkbook(byte[],string,string,ImportWorkbookContext)</code><br>145–158 | Load @147; AssignAutomaticIdentifiers @148; ToDictionary @149; Sheets @149; ToArray @150; Select @150; Rows @150; Empty(IDictionary&lt;string, object&gt;, string, object) @155; Write @157 | No extracted literal effects. |
+| <span id="m-12db7151661a"></span><code>XlsxImportWorkbook.FailedWorkbook(byte[]?,string,IReadOnlyList&lt;ImportIssue&gt;,string)</code><br>162–199 | Load @169; ToHashSet @170; Append @170; Select @170; Sheets @170; ToDictionary @171; Where @171; Contains @171; Select @180; Add @181; Take @186; ToArray @189; Where @189; Any @189; Join @190; Select @190; TryGetValue @190; TryGetValue @190; Where @191; GetValueOrDefault @191; ToString @192; WriteSheets @195; FailedWorkbook @197 | InvalidDataException @168 |
+| <span id="m-581bd09c2302"></span><code>XlsxImportWorkbook.Rows(string,int)</code><br>201–214 | TryGetValue @203; TryGetValue @204; ToDictionary @205; Trim @205; Any @206; Count @206; Distinct @206; Where @208; All @210; Any @211; ContainsKey @211; IsNullOrWhiteSpace @211; ToDictionary @212; GetValueOrDefault @212 | InvalidDataException @204; InvalidDataException @207; InvalidDataException @211 |
+| <span id="m-7e50e258e08a"></span><code>XlsxImportWorkbook.Cell(IDictionary&lt;string, object&gt;,string)</code><br>216–217 | TryGetValue @216; ToString @217; Trim @217 | No extracted literal effects. |
+| <span id="m-5e22e4c389e9"></span><code>XlsxImportWorkbook.Write(string,ImportWorkbookContext,IReadOnlyDictionary&lt;string, IReadOnlyList&lt;IDictionary&lt;string, object&gt;&gt;&gt;?,string?,string?)</code><br>219–270 | GetDefaultVersion @226; ToString @237; NormalizeItemKind @241; Add @242; Sheets @259; ToList @261; Select @261; TryGetValue @262; AddRange @263; Select @263; Cell @263; AddRange @267; Select @267; WriteSheets @269; ToDictionary @269; ToDictionary @269; Select @269; Select @269 | No extracted literal effects. |
+| <span id="m-c1cade83addd"></span><code>XlsxImportWorkbook.WriteSheets(Dictionary&lt;string, SortedDictionary&lt;int, Dictionary&lt;int, string&gt;&gt;&gt;)</code><br>272–317 | Open @277; CreateEntry @277; Write @277; Add @279; Get @281; Add @285; Override @286; Add @291; Element @291; Add @292; Add @297; Add @305; ToString @308; ToString @314; ToString @314; ToString @314; ToArray @316 | No extracted literal effects. |
 
 </details>
 
@@ -615,7 +615,7 @@ Declarations: <code>XlsxImportRow</code> (line 9), <code>XlsxImportWorkbook</cod
 
 <code>Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs</code> · 100 lines.
 
-SHA-256: <code>086d3993a612b9c7caafbf23fa75a7c56eb733c6f10a35371eef0565fa508aff</code>.
+SHA-256: <code>1473d66f4d1a74c292c4d4ce3da2dcf0f7db612af108d1a9f7560505a5cb41a9</code>.
 
 Declarations: <code>XlsxMasterDataExportService</code> (line 10).
 
@@ -630,9 +630,9 @@ Declarations: <code>XlsxMasterDataExportService</code> (line 10).
 
 ## XlsxProductImportReader.cs {#src-2b8eea2eb4f9}
 
-<code>Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs</code> · 158 lines.
+<code>Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs</code> · 208 lines.
 
-SHA-256: <code>42f5fbfa6d8fdf26db831be770c4bf1797fe79567dd7249b3cda34dbb2151da7</code>.
+SHA-256: <code>b7eedca1e37f982e2f94fbfbe99364e573395d3fd3148dac8367df0bbd05b79c</code>.
 
 Declarations: <code>XlsxProductImportReader</code> (line 6).
 
@@ -641,8 +641,8 @@ Declarations: <code>XlsxProductImportReader</code> (line 6).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-0ee4ad5fd8ae"></span><code>XlsxProductImportReader.ExportTemplate(ImportWorkbookContext)</code><br>12–12 | Write @12 | No extracted literal effects. |
-| <span id="m-49114112edf1"></span><code>XlsxProductImportReader.Read(byte[],string,string,ImportWorkbookContext?)</code><br>14–157 | IsNullOrWhiteSpace @26; TryParse @27; Add @28; Number @33; Money @35; TryParseBool @40; Load @46; AssignAutomaticIdentifiers @47; Rows @48; Cell @50; ToLowerInvariant @51; Trim @51; C @51; Flag @56; Money @57; ToLowerInvariant @59; ToLowerInvariant @68; ToDictionary @79; Fields @83; Optional @85; Add @86; Add @89; Add @96; Add @103; StartsWith @110; TryParse @112; Add @127; TryParse @137; Add @141; Where @145; GroupBy @145; Count @145; Last @145; GroupBy @146; Where @146; GetValueOrDefault @146; GroupBy @148; GroupBy @149; ToUpperInvariant @149; Where @150; StartsWith @154; Split @154 | No extracted literal effects. |
+| <span id="m-b077cac550b3"></span><code>XlsxProductImportReader.ExportTemplate(ImportWorkbookContext,string?)</code><br>12–13 | Write @13 | No extracted literal effects. |
+| <span id="m-396966be2ee4"></span><code>XlsxProductImportReader.Read(byte[],string,string,ImportWorkbookContext?)</code><br>15–207 | IsNullOrWhiteSpace @27; TryParse @28; Add @29; Number @34; Money @36; TryParseBool @41; Load @47; AssignAutomaticIdentifiers @48; Rows @49; Cell @51; ToLowerInvariant @52; Trim @52; C @52; Flag @57; Money @58; ToLowerInvariant @60; ToLowerInvariant @69; Equals @84; TryGetValue @101; ToString @101; ToString @103; ToString @110; ToDictionary @125; Fields @129; Optional @131; Add @133; Add @136; Add @143; Add @150; StartsWith @157; TryParse @159; Add @174; TryParse @184; Add @188; Where @192; GroupBy @192; Count @192; Last @192; GroupBy @193; Where @193; GetValueOrDefault @193; GroupBy @195; GroupBy @196; ToUpperInvariant @196; Where @197; ToHashSet @198; Select @198; Contains @199; Where @200; StartsWith @204; Split @204 | No extracted literal effects. |
 
 </details>
 

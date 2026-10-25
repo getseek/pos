@@ -85,7 +85,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:34](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:74](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10104](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:141](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10104](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogCommandHandler.HandleAsync(CreateProductCommand,CommandEnvelope&lt;CreateProductCommand&gt;,CancellationToken)](code-application.md#m-502eda0717e5).
 
@@ -105,7 +105,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:106](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
+Construction sites: [SaveAsync:132](code-application.md#src-14918ebf4662)
 
 Handler method: [CatalogCommandHandler.HandleAsync(CreateServiceCommand,CommandEnvelope&lt;CreateServiceCommand&gt;,CancellationToken)](code-application.md#m-605aa4ef28c2).
 
@@ -325,7 +325,7 @@ Handler: [SaveProductConfigurationCommandHandler](code-application.md#src-c24b9e
 
 Declaration: [SaveProductConfigurationCommand.cs:12](code-application.md#src-5802398b5ad9). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:79](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10128](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:137](code-application.md#src-14918ebf4662), [SaveAsync:146](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10128](code-desktop.md#src-16497b924a99)
 
 Handler method: [SaveProductConfigurationCommandHandler.HandleAsync(SaveProductConfigurationCommand,CommandEnvelope&lt;SaveProductConfigurationCommand&gt;,CancellationToken)](code-application.md#m-98f2baf362dd).
 
@@ -345,7 +345,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:100](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [HandleAsync:737](code-application.md#src-c2d3294fc0a7), [SaveAsync:84](code-application.md#src-14918ebf4662)
+Construction sites: [HandleAsync:737](code-application.md#src-c2d3294fc0a7), [SaveAsync:153](code-application.md#src-14918ebf4662)
 
 Handler method: [CatalogCommandHandler.HandleAsync(SetProductStatusCommand,CommandEnvelope&lt;SetProductStatusCommand&gt;,CancellationToken)](code-application.md#m-4e282dde3789).
 
@@ -385,7 +385,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:61](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: [SaveAsync:76](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10075](code-desktop.md#src-16497b924a99)
+Construction sites: [SaveAsync:143](code-application.md#src-14918ebf4662), [SaveProductConfigurationAsync:10075](code-desktop.md#src-16497b924a99)
 
 Handler method: [CatalogCommandHandler.HandleAsync(UpdateProductCommand,CommandEnvelope&lt;UpdateProductCommand&gt;,CancellationToken)](code-application.md#m-7e8cfcd3ca9f).
 
@@ -405,7 +405,7 @@ Handler: [CatalogCommandHandler](code-application.md#src-c2d3294fc0a7). Result t
 
 Declaration: [CatalogCommands.cs:123](code-application.md#src-8482e00dd58a). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
-Construction sites: **None found** among explicit `new Type(...)` expressions. Target-typed construction, factories and runtime dispatch are not resolved.
+Construction sites: [SaveAsync:135](code-application.md#src-14918ebf4662)
 
 Handler method: [CatalogCommandHandler.HandleAsync(UpdateServiceCommand,CommandEnvelope&lt;UpdateServiceCommand&gt;,CancellationToken)](code-application.md#m-34e3f7f16be6).
 

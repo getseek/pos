@@ -548,24 +548,25 @@ Declarations: <code>CatalogItemDto</code> (line 6), <code>CreateProductCommand :
 
 ## CatalogKindEligibilityPolicy.cs {#src-b8a4ee82a994}
 
-<code>Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs</code> · 197 lines.
+<code>Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs</code> · 205 lines.
 
-SHA-256: <code>1f4be9744146a658842038a431576794a3cf60836a8472fae4d6ff35a346a7b9</code>.
+SHA-256: <code>36fceedbe4ec68ad4842811c135b6de7e69338d8ede14f8c4b805d1eddd9b9c8</code>.
 
 Declarations: <code>CatalogKindEligibilityPolicy</code> (line 11).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (7)</summary>
+<summary>Methods, calls, table effects and failures (8)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-370717999a50"></span><code>CatalogKindEligibilityPolicy.NormalizeItemKind(string?)</code><br>34–41 | IsNullOrWhiteSpace @36; Trim @37; Equals @38 | No extracted literal effects. |
-| <span id="m-b8838d354ebc"></span><code>CatalogKindEligibilityPolicy.IsCategoryTargetMatchingKind(string,string?)</code><br>43–54 | NormalizeItemKind @45; Trim @46; Equals @48 | No extracted literal effects. |
-| <span id="m-7fb92c6274af"></span><code>CatalogKindEligibilityPolicy.ValidateCategoryForKind(string,bool,bool,string?,string?)</code><br>56–85 | NormalizeItemKind @63; IsCategoryTargetMatchingKind @75; Equals @77 | No extracted literal effects. |
-| <span id="m-253023bd34bf"></span><code>CatalogKindEligibilityPolicy.IsUnitEligibleForKind(string,string?,string?,string?,bool,string?)</code><br>87–97 | ValidateUnitEligibility @95 | No extracted literal effects. |
-| <span id="m-2ef94af31e4a"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string?,string?,string?,bool,string?)</code><br>99–164 | NormalizeItemKind @107; ToUpperInvariant @108; Trim @108; IsNullOrWhiteSpace @112; Equals @117; Trim @151 | No extracted literal effects. |
-| <span id="m-e9cc06e55dfe"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UnitDefinition,bool,string?)</code><br>166–180 | ValidateUnitEligibility @173 | No extracted literal effects. |
-| <span id="m-45beca9a679e"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UomDefinitionDto,bool,string?)</code><br>182–196 | ValidateUnitEligibility @189 | No extracted literal effects. |
+| <span id="m-4241f6c1639c"></span><code>CatalogKindEligibilityPolicy.IsValidKind(string?)</code><br>34–40 | IsNullOrWhiteSpace @36; Trim @37; Equals @38 | No extracted literal effects. |
+| <span id="m-6950dd362d58"></span><code>CatalogKindEligibilityPolicy.NormalizeItemKind(string?)</code><br>42–49 | IsNullOrWhiteSpace @44; Trim @45; Equals @46 | No extracted literal effects. |
+| <span id="m-7313432f59e5"></span><code>CatalogKindEligibilityPolicy.IsCategoryTargetMatchingKind(string,string?)</code><br>51–62 | NormalizeItemKind @53; Trim @54; Equals @56 | No extracted literal effects. |
+| <span id="m-f7e31d825d43"></span><code>CatalogKindEligibilityPolicy.ValidateCategoryForKind(string,bool,bool,string?,string?)</code><br>64–93 | NormalizeItemKind @71; IsCategoryTargetMatchingKind @83; Equals @85 | No extracted literal effects. |
+| <span id="m-77bd4daeff16"></span><code>CatalogKindEligibilityPolicy.IsUnitEligibleForKind(string,string?,string?,string?,bool,string?)</code><br>95–105 | ValidateUnitEligibility @103 | No extracted literal effects. |
+| <span id="m-4bc856c0f5a6"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string?,string?,string?,bool,string?)</code><br>107–172 | NormalizeItemKind @115; ToUpperInvariant @116; Trim @116; IsNullOrWhiteSpace @120; Equals @125; Trim @159 | No extracted literal effects. |
+| <span id="m-31721d36e95a"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UnitDefinition,bool,string?)</code><br>174–188 | ValidateUnitEligibility @181 | No extracted literal effects. |
+| <span id="m-54b1ab5ce246"></span><code>CatalogKindEligibilityPolicy.ValidateUnitEligibility(string,string,UomDefinitionDto,bool,string?)</code><br>190–204 | ValidateUnitEligibility @197 | No extracted literal effects. |
 
 </details>
 
@@ -861,17 +862,17 @@ Declarations: <code>QueueReceiptReprintCommand : ICommand&lt;string&gt;</code> (
 
 ## ImportCommands.cs {#src-60301a99263c}
 
-<code>Software/src/GetSeek.Application/Imports/ImportCommands.cs</code> · 69 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportCommands.cs</code> · 70 lines.
 
-SHA-256: <code>ddadf347f0aa02681e099bdfc5f382101a1a549982b3d7245034230e2013599a</code>.
+SHA-256: <code>3179f1d25d562de980e5a7a4102f7cefaff3981751dff8e979256b923440cab4</code>.
 
-Declarations: <code>ImportProductRow</code> (line 6), <code>ImportStockRow</code> (line 22), <code>ImportIssue</code> (line 33), <code>ProductImportPreview</code> (line 36), <code>ImportProductsCommand : ICommand&lt;ImportProductsResult&gt;</code> (line 53), <code>ImportProductsResult</code> (line 69).
+Declarations: <code>ImportProductRow</code> (line 6), <code>ImportStockRow</code> (line 23), <code>ImportIssue</code> (line 34), <code>ProductImportPreview</code> (line 37), <code>ImportProductsCommand : ICommand&lt;ImportProductsResult&gt;</code> (line 54), <code>ImportProductsResult</code> (line 70).
 
 ## ImportDatabaseState.cs {#src-cb21b9739067}
 
-<code>Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs</code> · 277 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs</code> · 300 lines.
 
-SHA-256: <code>a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4</code>.
+SHA-256: <code>2efed1125b8ee2313b4eeb83f998503d2b1831edd824bb8b8d2f2c47c3579cc3</code>.
 
 Declarations: <code>ImportDatabaseState</code> (line 8).
 
@@ -883,7 +884,7 @@ Declarations: <code>ImportDatabaseState</code> (line 8).
 | <span id="m-dd1ff44747e4"></span><code>ImportDatabaseState.RecordAsync(DbConnection,DbTransaction?,string,string?,CancellationToken)</code><br>10–20 | CreateCommand @13; CreateParameter @14; Add @14; ConfigureAwait @15; ExecuteReaderAsync @15; ReadAsync @17; GetName @18; IsDBNull @18; ToString @18; GetValue @18 | No extracted literal effects. |
 | <span id="m-3613bb998b92"></span><code>ImportDatabaseState.ContextAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>22–26 | ConfigureAwait @24; RecordAsync @24; GetValueOrDefault @25; Parse @25 | FROM store_config @24 |
 | <span id="m-1bdcb4d70b3b"></span><code>ImportDatabaseState.ActiveTiersAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>28–35 | CreateCommand @30; ConfigureAwait @32; ExecuteReaderAsync @32; ReadAsync @33; Add @33; GetInt32 @33 | FROM price_level_settings @31; FROM store_config @31 |
-| <span id="m-5f8aaaff8c19"></span><code>ImportDatabaseState.FingerprintAsync(DbConnection,DbTransaction?,IEnumerable&lt;string&gt;?,IEnumerable&lt;string&gt;?,CancellationToken)</code><br>37–276 | CreateHash @47; CreateCommand @51; CreateParameter @52; Add @52; AppendData @53; GetBytes @53; ConfigureAwait @54; ExecuteReaderAsync @54; ReadAsync @55; IsDBNull @58; ToString @58; GetValue @58; ToString @59; CreateCommand @78; ToString @83; Join @90; Append @103; ToList @106; Order @106; Distinct @106; Min @123; GetRange @124; CreateInCommand @125; ReadAsync @127; GetString @129; ContainsKey @131; Add @134; TryGetValue @136; IsDBNull @144; GetValue @144; Add @146; GetRange @160; GetOrdinal @166; TryGetValue @170; Add @178; TryGetValue @190; TryGetValue @210; AppendRows @227; GetValueOrDefault @227; GetValueOrDefault @228; GetValueOrDefault @229; GetValueOrDefault @230; GetValueOrDefault @231; GetRange @247; TryGetValue @254; GetValueOrDefault @269; ToHexString @275; GetHashAndReset @275 | FROM barcodes @164; FROM barcodes @42; FROM item_kit_components @236; FROM item_kits @235; FROM item_price_levels @204; FROM item_price_levels @44; FROM item_pricing @184; FROM item_pricing @43; FROM items @114; FROM items @41; FROM items @42; FROM items @43; FROM items @44; FROM price_level_settings @97; FROM product_categories @99; FROM product_category_pricing_rules @100; FROM store_config @96; FROM third_parties @248; FROM third_parties @45; FROM third_party_external_mappings @273; FROM uoms @98; JOIN item_kit_components @118; JOIN item_kit_components @41; JOIN item_kits @117; JOIN item_kits @41; JOIN items @119 |
+| <span id="m-5f8aaaff8c19"></span><code>ImportDatabaseState.FingerprintAsync(DbConnection,DbTransaction?,IEnumerable&lt;string&gt;?,IEnumerable&lt;string&gt;?,CancellationToken)</code><br>37–299 | CreateHash @48; CreateCommand @52; CreateParameter @53; Add @53; AppendData @54; GetBytes @54; ConfigureAwait @55; ExecuteReaderAsync @55; ReadAsync @56; IsDBNull @59; ToString @59; GetValue @59; ToString @60; CreateCommand @79; ToString @84; Join @91; Append @104; ToList @107; Order @107; Distinct @107; Min @124; GetRange @125; CreateInCommand @126; ReadAsync @128; GetString @130; ContainsKey @132; Add @135; TryGetValue @137; IsDBNull @145; GetValue @145; Add @147; GetRange @162; GetOrdinal @168; TryGetValue @172; Add @180; TryGetValue @192; TryGetValue @212; TryGetValue @232; AppendRows @249; GetValueOrDefault @249; GetValueOrDefault @250; GetValueOrDefault @251; GetValueOrDefault @252; GetValueOrDefault @253; GetValueOrDefault @254; GetRange @270; TryGetValue @277; GetValueOrDefault @292; ToHexString @298; GetHashAndReset @298 | FROM barcodes @166; FROM barcodes @42; FROM item_kit_components @259; FROM item_kits @258; FROM item_price_levels @206; FROM item_price_levels @44; FROM item_pricing @186; FROM item_pricing @43; FROM items @115; FROM items @41; FROM items @42; FROM items @43; FROM items @44; FROM items @45; FROM price_level_settings @98; FROM product_categories @100; FROM product_category_pricing_rules @101; FROM service_items @226; FROM service_items @45; FROM store_config @97; FROM third_parties @271; FROM third_parties @46; FROM third_party_external_mappings @296; FROM uoms @99; JOIN item_kit_components @119; JOIN item_kit_components @41; JOIN item_kits @118; JOIN item_kits @41; JOIN items @120 |
 
 </details>
 
@@ -897,9 +898,9 @@ Declarations: <code>ImportPolicy</code> (line 8).
 
 ## ImportProductConfiguration.cs {#src-14918ebf4662}
 
-<code>Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs</code> · 183 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs</code> · 266 lines.
 
-SHA-256: <code>945a984652a30083c5587eab960c954a74cbdfa6462f822ef5cb846b10fe16bd</code>.
+SHA-256: <code>51baeefd8ba113f601d2eb1a769c56eefcb42015b83da84de9154aeb8c27e70e</code>.
 
 Declarations: <code>ImportProductConfiguration</code> (line 12).
 
@@ -908,16 +909,16 @@ Declarations: <code>ImportProductConfiguration</code> (line 12).
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-46f1bbc7024c"></span><code>ImportProductConfiguration.SaveAsync(ImportProductRow,IReadOnlyList&lt;ImportKitComponent&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,CancellationToken)</code><br>16–92 | ConfigureAwait @19; RecordAsync @19; Merge @20; GetValueOrDefault @20; Parse @21; TryParseBool @22; GetValueOrDefault @23; Money @24; D @24; Parse @24; ToString @24; Parse @25; Failure(CatalogItemDto) @27; ToString @29; B @30; Where @35; Equals @35; Add @39; IsNullOrWhiteSpace @39; CreateCommand @44; CreateParameter @46; Add @46; ExecuteReaderAsync @47; ReadAsync @48; GetString @48; IsDBNull @48; ToDecimal @48; GetValue @48; GetValueOrDefault @51; M @52; L @55; ToLowerInvariant @57; Trim @57; NormalizePurpose @63; ToString @68; ToString @68; ToString @69; GetValueOrDefault @78; HandleAsync @81; Success(CatalogItemDto) @89 | FROM barcodes @50; FROM item_kit_components @45; FROM item_kits @29; FROM items @19; FROM items @37; JOIN product_categories @19 · IMPORT_SKU_EXISTS @27; IMPORT_SKU_NOT_FOUND @28; IMPORT_CHILD_NOT_FOUND @38 |
-| <span id="m-7367d0a4cbf6"></span><code>ImportProductConfiguration.PriceAsync(Guid,string,ImportProductRow?,ImportPricingRule?,IReadOnlyList&lt;ImportTierPrice&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,bool,CancellationToken)</code><br>94–182 | ConfigureAwait @97; RecordAsync @97; ToString @97; Merge @99; GetValueOrDefault @99; Parse @100; TryParseBool @101; GetValueOrDefault @102; D @102; ToLowerInvariant @103; Trim @103; ToUpperInvariant @134; NormalizeMethod @147; M @147; Failure(bool) @150; B @153; Money @156; Parse @156; ActiveTiersAsync @157; Where @159; Equals @159; Contains @161; Add @162; NormalizeTierMode @162; ToDisplayAmount @166; P @167; NormalizeRoundingRule @167; GetValueOrDefault @169; NormalizeCostFloor @169; NormalizeCostBasis @170; GetValueOrDefault @177; Parse @178; Parse @178; HandleAsync @181 | FROM item_pricing @97; FROM items @98; FROM product_category_pricing_rules @174; JOIN items @174 · IMPORT_PRICE_CONFLICT @150; IMPORT_CATEGORY_APPROVAL_REQUIRED @154; INVALID_PRICE_LEVEL @161; CATEGORY_PRICING_RULE_NOT_FOUND @175 |
+| <span id="m-46f1bbc7024c"></span><code>ImportProductConfiguration.SaveAsync(ImportProductRow,IReadOnlyList&lt;ImportKitComponent&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,CancellationToken)</code><br>16–175 | ConfigureAwait @19; RecordAsync @19; Merge @20; GetValueOrDefault @20; Parse @21; TryParseBool @22; GetValueOrDefault @23; Money @24; D @24; Parse @24; ToString @24; Parse @25; Failure(CatalogItemDto) @27; IsNullOrWhiteSpace @32; NormalizeItemKind @32; IsValidKind @33; Equals @45; ToString @52; B @53; ToLowerInvariant @56; Trim @56; NormalizePurpose @62; M @62; TryGetValue @67; Equals @73; Where @82; Equals @82; Add @86; CreateCommand @91; CreateParameter @93; Add @93; ExecuteReaderAsync @94; ReadAsync @95; GetString @95; IsDBNull @95; ToDecimal @95; GetValue @95; GetValueOrDefault @98; L @115; ToString @121; ToString @121; ToString @122; GetValueOrDefault @127; HandleAsync @150; Success(CatalogItemDto) @158; RegisterItem @162 | FROM barcodes @97; FROM item_kit_components @92; FROM item_kits @52; FROM items @19; FROM items @84; JOIN product_categories @19 · IMPORT_SKU_EXISTS @27; IMPORT_SKU_NOT_FOUND @28; IMPORT_BAD_KIND @35; ITEM_KIND_IMMUTABLE @47; SERVICE_KIT_NOT_ALLOWED @68; SERVICE_KIT_NOT_ALLOWED @70; SERVICE_STOCK_NOT_ALLOWED @72; SERVICE_TRACKING_NOT_ALLOWED @74; SERVICE_RAW_MATERIAL_NOT_ALLOWED @76; IMPORT_CHILD_NOT_FOUND @85 |
+| <span id="m-a58ca0deedea"></span><code>ImportProductConfiguration.PriceAsync(Guid,string,ImportProductRow?,ImportPricingRule?,IReadOnlyList&lt;ImportTierPrice&gt;,CommandEnvelope&lt;ImportProductsCommand&gt;,ImportWorkbookContext,bool,CancellationToken)</code><br>177–265 | ConfigureAwait @180; RecordAsync @180; ToString @180; Merge @182; GetValueOrDefault @182; Parse @183; TryParseBool @184; GetValueOrDefault @185; D @185; ToLowerInvariant @186; Trim @186; ToUpperInvariant @217; NormalizeMethod @230; M @230; Failure(bool) @233; B @236; Money @239; Parse @239; ActiveTiersAsync @240; Where @242; Equals @242; Contains @244; Add @245; NormalizeTierMode @245; ToDisplayAmount @249; P @250; NormalizeRoundingRule @250; GetValueOrDefault @252; NormalizeCostFloor @252; NormalizeCostBasis @253; GetValueOrDefault @260; Parse @261; Parse @261; HandleAsync @264 | FROM item_pricing @180; FROM items @181; FROM product_category_pricing_rules @257; JOIN items @257 · IMPORT_PRICE_CONFLICT @233; IMPORT_CATEGORY_APPROVAL_REQUIRED @237; INVALID_PRICE_LEVEL @244; CATEGORY_PRICING_RULE_NOT_FOUND @258 |
 
 </details>
 
 ## ImportProductsCommandHandler.cs {#src-2c8d126a7c07}
 
-<code>Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs</code> · 445 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs</code> · 552 lines.
 
-SHA-256: <code>742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4</code>.
+SHA-256: <code>f9bb677278f87b2ff869ec526775ef3840fa8855885401ec8fa3a9230480610a</code>.
 
 Declarations: <code>ImportProductsCommandHandler : ICommandHandler&lt;ImportProductsCommand, ImportProductsResult&gt;</code> (line 18).
 
@@ -926,39 +927,41 @@ Declarations: <code>ImportProductsCommandHandler : ICommandHandler&lt;ImportProd
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-c862b652239a"></span><code>ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)</code><br>21–287 | Failure(ImportProductsResult) @28; ConfigureAwait @31; HasActivePermissionAsync @31; ContextAsync @44; ToArray @47; Concat @47; Select @47; Select @47; SelectMany @47; Select @48; FingerprintAsync @49; Any @51; GroupBy @51; Count @51; GroupBy @52; ToUpperInvariant @53; Where @55; GetValueOrDefault @55; IsNullOrWhiteSpace @55; Trim @56; Contains @60; Any @62; Equals @62; Any @65; TryGetValue @91; Add @96; TryGetValue @105; LoadAsync @114; BuildOrderAsync @120; Empty(ImportKitComponent) @133; SaveAsync @134; TryGetValue @147; TryGetValue @163; ResolveItemIdAsync @165; TryGetValue @175; RecordAsync @177; ToString @181; TryGetValue @197; TryGetSupplierId @199; TryGetValue @210; GetValueOrDefault @218; BuildLines @223; HandleAsync @244; Distinct @256; GetValueOrDefault @267; GetValueOrDefault @268; Empty(ImportTierPrice) @271; PriceAsync @273; Success(ImportProductsResult) @286 | FROM item_kits @180; FROM items @215 · IMPORT_EMPTY @28; AUTH_UNAUTHORIZED @33; AUTH_UNAUTHORIZED @39; IMPORT_TOO_LARGE @43; IMPORT_CURRENCY_MISMATCH @46; IMPORT_PREVIEW_STALE @50; IMPORT_DUPLICATE_ROW @54; IMPORT_DUPLICATE_ROW @57; IMPORT_CLEAR_NOT_ALLOWED @61; IMPORT_UNKNOWN_COLUMN @63; IMPORT_CLEAR_NOT_ALLOWED @66; IMPORT_ORPHAN_COMPONENT @150; IMPORT_SKU_NOT_FOUND @168; IMPORT_KIT_STOCK @189; SUPPLIER_NOT_FOUND @201; IMPORT_SKU_NOT_FOUND @263 |
-| <span id="m-7ca1ff9bcf79"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyList&lt;ImportKitComponent&gt;?)</code><br>289–314 | TryGetValue @304; Add @309; BuildOrderAsync @313 | No extracted literal effects. |
-| <span id="m-09e6f9be8a2e"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>316–322 | FromResult @321; BuildOrder @321 | No extracted literal effects. |
-| <span id="m-7a9c2a4e77e5"></span><code>ImportProductsCommandHandler.BuildOrder(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>324–408 | Success(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @332; TryAdd @338; Failure(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @340; TryGetValue @354; TryGetValue @359; Add @365; Add @372; Enqueue @382; Dequeue @389; Add @390 | IMPORT_DUPLICATE_ROW @340; KIT_CYCLE_DETECTED @363; KIT_CYCLE_DETECTED @404 |
-| <span id="m-2dc6aa184df1"></span><code>ImportProductsCommandHandler.BuildLines(ImportStockRow)</code><br>410–423 | — | No extracted literal effects. |
-| <span id="m-be92b93116e9"></span><code>ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)</code><br>425–439 | CreateCommand @427; CreateParameter @430; Add @433; ConfigureAwait @435; ExecuteScalarAsync @435; TryParse @436; ToString @436 | FROM items @429 |
-| <span id="m-5f31b55f7530"></span><code>ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)</code><br>441–444 | HasPermissionAsync @443 | No extracted literal effects. |
+| <span id="m-c862b652239a"></span><code>ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)</code><br>21–394 | Failure(ImportProductsResult) @28; ConfigureAwait @31; HasActivePermissionAsync @31; ContextAsync @44; ToArray @47; Concat @47; Select @47; Select @47; SelectMany @47; Select @48; FingerprintAsync @49; Any @51; GroupBy @51; Count @51; GroupBy @52; ToUpperInvariant @53; Where @55; GetValueOrDefault @55; IsNullOrWhiteSpace @55; Trim @56; Contains @60; Any @62; Equals @62; Any @65; TryGetValue @91; Add @96; TryGetValue @105; LoadAsync @114; TryGetValue @124; Equals @129; NormalizeItemKind @129; TryGetItem @132; TryGetValue @211; TryParseBool @212; BuildOrderAsync @220; Empty(ImportKitComponent) @233; SaveAsync @234; TryGetValue @263; ResolveItemIdAsync @265; IsServiceItem @275; TryGetItemById @275; TryGetValue @282; RecordAsync @284; ToString @288; TryGetValue @304; TryGetSupplierId @306; TryGetValue @317; GetValueOrDefault @325; BuildLines @330; HandleAsync @351; Distinct @363; GetValueOrDefault @374; GetValueOrDefault @375; Empty(ImportTierPrice) @378; PriceAsync @380; Success(ImportProductsResult) @393 | FROM item_kits @287; FROM items @322 · IMPORT_EMPTY @28; AUTH_UNAUTHORIZED @33; AUTH_UNAUTHORIZED @39; IMPORT_TOO_LARGE @43; IMPORT_CURRENCY_MISMATCH @46; IMPORT_PREVIEW_STALE @50; IMPORT_DUPLICATE_ROW @54; IMPORT_DUPLICATE_ROW @57; IMPORT_CLEAR_NOT_ALLOWED @61; IMPORT_UNKNOWN_COLUMN @63; IMPORT_CLEAR_NOT_ALLOWED @66; SERVICE_STOCK_NOT_ALLOWED @144; SERVICE_KIT_NOT_ALLOWED @174; SERVICE_KIT_NOT_ALLOWED @198; SERVICE_KIT_NOT_ALLOWED @215; IMPORT_ORPHAN_COMPONENT @250; IMPORT_SKU_NOT_FOUND @268; SERVICE_STOCK_NOT_ALLOWED @277; IMPORT_KIT_STOCK @296; SUPPLIER_NOT_FOUND @308; IMPORT_SKU_NOT_FOUND @370 |
+| <span id="m-00145b6eaa21"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyList&lt;ImportKitComponent&gt;?)</code><br>396–421 | TryGetValue @411; Add @416; BuildOrderAsync @420 | No extracted literal effects. |
+| <span id="m-6e6b998bce52"></span><code>ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>423–429 | FromResult @428; BuildOrder @428 | No extracted literal effects. |
+| <span id="m-4098c4acf2ca"></span><code>ImportProductsCommandHandler.BuildOrder(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)</code><br>431–515 | Success(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @439; TryAdd @445; Failure(IReadOnlyList&lt;ImportProductRow&gt;, ImportProductRow) @447; TryGetValue @461; TryGetValue @466; Add @472; Add @479; Enqueue @489; Dequeue @496; Add @497 | IMPORT_DUPLICATE_ROW @447; KIT_CYCLE_DETECTED @470; KIT_CYCLE_DETECTED @511 |
+| <span id="m-afad3de17331"></span><code>ImportProductsCommandHandler.BuildLines(ImportStockRow)</code><br>517–530 | — | No extracted literal effects. |
+| <span id="m-1019c290117f"></span><code>ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)</code><br>532–546 | CreateCommand @534; CreateParameter @537; Add @540; ConfigureAwait @542; ExecuteScalarAsync @542; TryParse @543; ToString @543 | FROM items @536 |
+| <span id="m-1f91797cf624"></span><code>ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)</code><br>548–551 | HasPermissionAsync @550 | No extracted literal effects. |
 
 </details>
 
 ## ImportWorkbookSchema.cs {#src-65d435d492aa}
 
-<code>Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs</code> · 140 lines.
+<code>Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs</code> · 191 lines.
 
-SHA-256: <code>8ffd7c992c7d1c531bd3cce19f209ae8e0eb6afe62a77e3d0eeceb97c590efba</code>.
+SHA-256: <code>cd64a8178515b513d683ae8d5622480b90bb24648409228b0b5ac067266a6b00</code>.
 
 Declarations: <code>ImportFieldAction</code> (line 6), <code>ImportField</code> (line 8), <code>ImportWorkbookContext</code> (line 15), <code>ImportChoice</code> (line 17), <code>ImportColumn</code> (line 18), <code>ImportSheet</code> (line 19), <code>ImportRowPreview</code> (line 20), <code>ImportKitComponent</code> (line 21), <code>ImportPricingRule</code> (line 22), <code>ImportTierPrice</code> (line 23), <code>ImportWorkbookSchema</code> (line 26).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (10)</summary>
+<summary>Methods, calls, table effects and failures (12)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
 | <span id="m-e495d4f70c48"></span><code>ImportField.Keep()</code><br>10–10 | — | No extracted literal effects. |
 | <span id="m-33178e89f4c6"></span><code>ImportField.Clear()</code><br>11–11 | — | No extracted literal effects. |
 | <span id="m-e4072967fdb5"></span><code>ImportField.Set(T)</code><br>12–12 | — | No extracted literal effects. |
-| <span id="m-72becb82eabc"></span><code>ImportWorkbookSchema.C(string,string)</code><br>30–30 | — | No extracted literal effects. |
-| <span id="m-c54f5abcc139"></span><code>ImportWorkbookSchema.Sheets(string)</code><br>99–100 | — | No extracted literal effects. |
-| <span id="m-a76ed3b7508e"></span><code>ImportWorkbookSchema.Fields(IReadOnlyDictionary&lt;string, string&gt;)</code><br>102–104 | ToDictionary @103; IsNullOrWhiteSpace @103; Keep(string) @103; Trim @104; Clear(string) @104; Set(string) @104 | No extracted literal effects. |
-| <span id="m-9f6f54100b3e"></span><code>ImportWorkbookSchema.Merge(IReadOnlyDictionary&lt;string, ImportField&lt;string&gt;&gt;?,string,string?)</code><br>106–108 | TryGetValue @107 | No extracted literal effects. |
-| <span id="m-f3a5b0aea9de"></span><code>ImportWorkbookSchema.ResolveTier(string?,IReadOnlySet&lt;int&gt;)</code><br>110–120 | IsNullOrWhiteSpace @112; Trim @113; StartsWith @114; Trim @115; TryParse @118; Contains @118 | No extracted literal effects. |
-| <span id="m-2144d375a623"></span><code>ImportWorkbookSchema.TryParseBool(string?,bool)</code><br>122–137 | IsNullOrWhiteSpace @124; ToLowerInvariant @125; Trim @125 | No extracted literal effects. |
-| <span id="m-bd8a5b478d35"></span><code>ImportWorkbookSchema.Money(decimal,ImportWorkbookContext)</code><br>139–139 | ToMinorUnits @139 | No extracted literal effects. |
+| <span id="m-83f26d320ccb"></span><code>ImportWorkbookSchema.C(string,string)</code><br>33–33 | — | No extracted literal effects. |
+| <span id="m-7cb8c85e3d02"></span><code>ImportWorkbookSchema.SupportedVersions(string)</code><br>128–131 | Equals @129 | No extracted literal effects. |
+| <span id="m-3658f8deca6b"></span><code>ImportWorkbookSchema.GetDefaultVersion(string)</code><br>133–136 | Equals @134 | No extracted literal effects. |
+| <span id="m-bb67dca56f08"></span><code>ImportWorkbookSchema.Sheets(string,string)</code><br>138–151 | Equals @140 | No extracted literal effects. |
+| <span id="m-ca1a1df5a4ed"></span><code>ImportWorkbookSchema.Fields(IReadOnlyDictionary&lt;string, string&gt;)</code><br>153–155 | ToDictionary @154; IsNullOrWhiteSpace @154; Keep(string) @154; Trim @155; Clear(string) @155; Set(string) @155 | No extracted literal effects. |
+| <span id="m-e1c8f9200b16"></span><code>ImportWorkbookSchema.Merge(IReadOnlyDictionary&lt;string, ImportField&lt;string&gt;&gt;?,string,string?)</code><br>157–159 | TryGetValue @158 | No extracted literal effects. |
+| <span id="m-8d6fc645d69b"></span><code>ImportWorkbookSchema.ResolveTier(string?,IReadOnlySet&lt;int&gt;)</code><br>161–171 | IsNullOrWhiteSpace @163; Trim @164; StartsWith @165; Trim @166; TryParse @169; Contains @169 | No extracted literal effects. |
+| <span id="m-443db8eb5f6c"></span><code>ImportWorkbookSchema.TryParseBool(string?,bool)</code><br>173–188 | IsNullOrWhiteSpace @175; ToLowerInvariant @176; Trim @176 | No extracted literal effects. |
+| <span id="m-f950452c1bdd"></span><code>ImportWorkbookSchema.Money(decimal,ImportWorkbookContext)</code><br>190–190 | ToMinorUnits @190 | No extracted literal effects. |
 
 </details>
 
@@ -1869,28 +1872,33 @@ Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemPro
 
 ## ReferenceSnapshot.cs {#src-7a2c51dec98f}
 
-<code>Software/src/GetSeek.Application/ReferenceSnapshot.cs</code> · 327 lines.
+<code>Software/src/GetSeek.Application/ReferenceSnapshot.cs</code> · 474 lines.
 
-SHA-256: <code>dfdeefc5c559edf9971ff1b53a708554bbbceb9e7611443a9570e5e128efde18</code>.
+SHA-256: <code>65a198b13ce4b4d16845e199762a870d4559e3ed43b5cc220d512f69bf703f42</code>.
 
-Declarations: <code>UnitDefinition</code> (line 10), <code>CategoryRecord</code> (line 17), <code>SupplierRecord</code> (line 24), <code>ReferenceSnapshot</code> (line 33).
+Declarations: <code>UnitDefinition</code> (line 11), <code>CategoryRecord</code> (line 18), <code>SupplierRecord</code> (line 25), <code>ItemAuthorityRecord</code> (line 30), <code>ReferenceSnapshot</code> (line 46).
 
 <details markdown>
-<summary>Methods, calls, table effects and failures (11)</summary>
+<summary>Methods, calls, table effects and failures (16)</summary>
 
 | Method and lines | Invocation syntax | Literal SQL / failures / throws |
 | --- | --- | --- |
-| <span id="m-fec7af40b501"></span><code>ReferenceSnapshot.TryGetUom(string?,UnitDefinition)</code><br>60–69 | IsNullOrWhiteSpace @62; TryGetValue @68; Trim @68 | No extracted literal effects. |
-| <span id="m-64ce21dacf7e"></span><code>ReferenceSnapshot.FindCategory(Guid?,string?)</code><br>71–84 | TryGetValue @75; IsNullOrWhiteSpace @78; TryGetValue @83; Trim @83 | No extracted literal effects. |
-| <span id="m-0b8b861438d3"></span><code>ReferenceSnapshot.FindCategory(Guid?,string?,string?)</code><br>86–96 | FindCategory @88; IsNullOrWhiteSpace @90; IsCategoryTargetMatchingKind @91 | No extracted literal effects. |
-| <span id="m-3a41fb748502"></span><code>ReferenceSnapshot.ResolveCategoryForKind(string,Guid?,string?)</code><br>98–129 | IsNullOrWhiteSpace @103; Equals @105; FindCategory @110; IsCategoryTargetMatchingKind @121 | No extracted literal effects. |
-| <span id="m-fab38d2bf34a"></span><code>ReferenceSnapshot.ValidateUnitForKind(string,string?,bool,string?)</code><br>131–160 | IsNullOrWhiteSpace @137; TryGetUom @142; ValidateUnitEligibility @152 | No extracted literal effects. |
-| <span id="m-cb79c1f72107"></span><code>ReferenceSnapshot.IsUnitEligibleForKind(string,string?,bool,string?)</code><br>162–180 | IsNullOrWhiteSpace @168; TryGetUom @168; IsUnitEligibleForKind @173 | No extracted literal effects. |
-| <span id="m-f30ef58d4212"></span><code>ReferenceSnapshot.GetEligibleUnitsForKind(string)</code><br>182–193 | IsUnitEligibleForKind @187; Add @189 | No extracted literal effects. |
-| <span id="m-bc73f92fa6c6"></span><code>ReferenceSnapshot.GetEligibleCategoriesForKind(string)</code><br>195–206 | IsCategoryTargetMatchingKind @200; Add @202 | No extracted literal effects. |
-| <span id="m-d3ed19f517dd"></span><code>ReferenceSnapshot.TryGetSupplierId(string?,Guid)</code><br>208–223 | IsNullOrWhiteSpace @211; TryGetValue @216; Trim @216 | No extracted literal effects. |
-| <span id="m-b41a9e1b3cb6"></span><code>ReferenceSnapshot.TryGetSupplierById(Guid,SupplierRecord)</code><br>225–228 | TryGetValue @227 | No extracted literal effects. |
-| <span id="m-73d5439495ea"></span><code>ReferenceSnapshot.LoadAsync(DbConnection,DbTransaction?,CancellationToken)</code><br>230–326 | CreateCommand @237; ConfigureAwait @241; ExecuteReaderAsync @241; ReadAsync @242; GetString @244; IsDBNull @245; GetInt32 @248; Add @263; Parse @277; IsNullOrWhiteSpace @285; TryAdd @287; Trim @287; Trim @291 | FROM price_level_settings @259; FROM product_categories @273; FROM store_config @259; FROM third_parties @302; FROM uoms @240 |
+| <span id="m-ad6f9af4032b"></span><code>ReferenceSnapshot.TryGetUom(string?,UnitDefinition)</code><br>83–92 | IsNullOrWhiteSpace @85; TryGetValue @91; Trim @91 | No extracted literal effects. |
+| <span id="m-c323c3fa04d8"></span><code>ReferenceSnapshot.FindCategory(Guid?,string?)</code><br>94–107 | TryGetValue @98; IsNullOrWhiteSpace @101; TryGetValue @106; Trim @106 | No extracted literal effects. |
+| <span id="m-25abbad2cfba"></span><code>ReferenceSnapshot.FindCategory(Guid?,string?,string?)</code><br>109–119 | FindCategory @111; IsNullOrWhiteSpace @113; IsCategoryTargetMatchingKind @114 | No extracted literal effects. |
+| <span id="m-68dcdfe3c6fc"></span><code>ReferenceSnapshot.ResolveCategoryForKind(string,Guid?,string?)</code><br>121–152 | IsNullOrWhiteSpace @126; Equals @128; FindCategory @133; IsCategoryTargetMatchingKind @144 | No extracted literal effects. |
+| <span id="m-1f7a952e7173"></span><code>ReferenceSnapshot.ValidateUnitForKind(string,string?,bool,string?)</code><br>154–183 | IsNullOrWhiteSpace @160; TryGetUom @165; ValidateUnitEligibility @175 | No extracted literal effects. |
+| <span id="m-9ac9612cb8c5"></span><code>ReferenceSnapshot.IsUnitEligibleForKind(string,string?,bool,string?)</code><br>185–203 | IsNullOrWhiteSpace @191; TryGetUom @191; IsUnitEligibleForKind @196 | No extracted literal effects. |
+| <span id="m-85746532b664"></span><code>ReferenceSnapshot.GetEligibleUnitsForKind(string)</code><br>205–216 | IsUnitEligibleForKind @210; Add @212 | No extracted literal effects. |
+| <span id="m-618ed63ad934"></span><code>ReferenceSnapshot.GetEligibleCategoriesForKind(string)</code><br>218–229 | IsCategoryTargetMatchingKind @223; Add @225 | No extracted literal effects. |
+| <span id="m-6852083df2b3"></span><code>ReferenceSnapshot.TryGetSupplierId(string?,Guid)</code><br>231–246 | IsNullOrWhiteSpace @234; TryGetValue @239; Trim @239 | No extracted literal effects. |
+| <span id="m-c18e173a18c5"></span><code>ReferenceSnapshot.TryGetSupplierById(Guid,SupplierRecord)</code><br>248–251 | TryGetValue @250 | No extracted literal effects. |
+| <span id="m-21bdb272de71"></span><code>ReferenceSnapshot.TryGetItem(string?,ItemAuthorityRecord)</code><br>253–261 | IsNullOrWhiteSpace @255; TryGetValue @260; Trim @260 | No extracted literal effects. |
+| <span id="m-b8bdf710f0a2"></span><code>ReferenceSnapshot.TryGetItemById(Guid,ItemAuthorityRecord)</code><br>263–266 | TryGetValue @265 | No extracted literal effects. |
+| <span id="m-5fea1c79a1c5"></span><code>ReferenceSnapshot.ResolveItemKind(string?)</code><br>268–271 | TryGetItem @270 | No extracted literal effects. |
+| <span id="m-e36503da822e"></span><code>ReferenceSnapshot.IsServiceItem(string?)</code><br>273–277 | TryGetItem @275; Equals @276 | No extracted literal effects. |
+| <span id="m-0a5268676f83"></span><code>ReferenceSnapshot.RegisterItem(ItemAuthorityRecord)</code><br>279–283 | — | No extracted literal effects. |
+| <span id="m-407aa28d30c0"></span><code>ReferenceSnapshot.LoadAsync(DbConnection,DbTransaction?,IEnumerable&lt;string&gt;?,CancellationToken)</code><br>285–473 | CreateCommand @293; ConfigureAwait @297; ExecuteReaderAsync @297; ReadAsync @298; GetString @300; IsDBNull @301; GetInt32 @304; Add @319; Parse @333; IsNullOrWhiteSpace @341; TryAdd @343; Trim @343; Trim @347; ToList @381; Distinct @381; Where @381; Min @389; GetRange @390; CreateParameter @398; Add @401; Join @410 | FROM items @436; FROM price_level_settings @315; FROM product_categories @329; FROM store_config @315; FROM third_parties @358; FROM uoms @296; JOIN service_items @436 · DYNAMIC SQL: inspect manually |
 
 </details>
 

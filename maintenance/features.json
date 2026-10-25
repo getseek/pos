@@ -192,7 +192,7 @@
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs",
-          "sha256": "1f4be9744146a658842038a431576794a3cf60836a8472fae4d6ff35a346a7b9"
+          "sha256": "36fceedbe4ec68ad4842811c135b6de7e69338d8ede14f8c4b805d1eddd9b9c8"
         },
         {
           "path": "Software/src/GetSeek.Application/Catalog/CatalogRegistryCommandHandler.cs",
@@ -215,11 +215,13 @@
         "E-034",
         "E-035",
         "E-036",
-        "E-037"
+        "E-037",
+        "E-038",
+        "E-039"
       ],
       "target_page": "operator/catalog.md",
       "document_status": "planned",
-      "limitations": "Detailed item-purpose/UOM guide pending. Stage-3 reference-snapshot cache: SaveProductConfiguration/Catalog handlers consume a per-transaction ReferenceSnapshot (built in ImportProductsCommandHandler.HandleAsync); original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ProductManagementIntegrationTests. W2/S01 (2026-10-25): Service create/update command boundary, SKU/item_kind immutability and service registration added; verified by E-030/E-031 (1327/1327) + orchestrator migration probe. CatalogCommandHandler/Commands/SaveProductConfigurationCommand now pinned. W3/P1 (2026-10-25): catalogue read model gains HasBarcode (any nonblank barcode), GrossSoldQuantity30Days (30-day gross per plan contract: original invoices, status 1/3/4, credits/returns excluded, no return subtraction, decimal snapshots authoritative) and ItemKind - 3 bounded queries per refresh with single captured clock; ranking failures mark unavailable instead of fake zeros. Verified E-032/E-033 (1336/1336, dual-run). W4/P2 (2026-10-25): deterministic catalogue order/page helper (4 All-Item cycle states, 3 Nocode states, plan tie-breakers, search-forces-50 with staged restore, session page sizes 50-1000, FilteredProducts = current page) wired through a MainViewModel.Catalog partial; owner-review fixes: all-registered-barcode search agreement and kind-switch state cleanup. Verified E-034/E-035 (1352/1352 dual capture). W5/S02 (2026-10-25): central CatalogKindEligibilityPolicy (single source for kind-vs-category/kind-vs-unit), registry handlers gain Service target + Time dimension whitelist; snapshot delegates to policy. Verified E-036/E-037 (1367/1367).",
+      "limitations": "Detailed item-purpose/UOM guide pending. Stage-3 reference-snapshot cache: SaveProductConfiguration/Catalog handlers consume a per-transaction ReferenceSnapshot (built in ImportProductsCommandHandler.HandleAsync); original SQL retained as fallback for non-injected callers. Verified 2026-10-24 by import 54/54 (E-026) and full suite 1311/1311 (E-027) incl. ProductManagementIntegrationTests. W2/S01 (2026-10-25): Service create/update command boundary, SKU/item_kind immutability and service registration added; verified by E-030/E-031 (1327/1327) + orchestrator migration probe. CatalogCommandHandler/Commands/SaveProductConfigurationCommand now pinned. W3/P1 (2026-10-25): catalogue read model gains HasBarcode (any nonblank barcode), GrossSoldQuantity30Days (30-day gross per plan contract: original invoices, status 1/3/4, credits/returns excluded, no return subtraction, decimal snapshots authoritative) and ItemKind - 3 bounded queries per refresh with single captured clock; ranking failures mark unavailable instead of fake zeros. Verified E-032/E-033 (1336/1336, dual-run). W4/P2 (2026-10-25): deterministic catalogue order/page helper (4 All-Item cycle states, 3 Nocode states, plan tie-breakers, search-forces-50 with staged restore, session page sizes 50-1000, FilteredProducts = current page) wired through a MainViewModel.Catalog partial; owner-review fixes: all-registered-barcode search agreement and kind-switch state cleanup. Verified E-034/E-035 (1352/1352 dual capture). W5/S02 (2026-10-25): central CatalogKindEligibilityPolicy (single source for kind-vs-category/kind-vs-unit), registry handlers gain Service target + Time dimension whitelist; snapshot delegates to policy. Verified E-036/E-037 (1367/1367). W6/S03: kind-eligibility policy consumed by import validation paths. Verified E-038/E-039.",
       "review_map": "review/catalog.md",
       "reviewed_on": "2026-10-25"
     },
@@ -349,7 +351,7 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
-          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8"
+          "sha256": "5a47a1d02dc59106e3cff167b69d5346f80127e661448b7a7fdfb9bf8f1a486c"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
@@ -378,11 +380,13 @@
         "E-034",
         "E-035",
         "E-036",
-        "E-037"
+        "E-037",
+        "E-038",
+        "E-039"
       ],
       "target_page": "operator/third-parties.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned. W3/P1: MainViewModel catalogue loaders populate the new metadata fields; behavior otherwise unchanged. Verified E-032/E-033. W4/P2: MainViewModel catalogue filter/page state rebuilt over the pure helper; suggestion/add-to-cart paths unchanged. Verified E-034/E-035. W5/S02: MainViewModel category paths kind-aware via policy. Verified E-036/E-037.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023). Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Native picker/save actions, live shop, physical devices and full-suite acceptance were not verified. Operator manual remains planned. W3/P1: MainViewModel catalogue loaders populate the new metadata fields; behavior otherwise unchanged. Verified E-032/E-033. W4/P2: MainViewModel catalogue filter/page state rebuilt over the pure helper; suggestion/add-to-cart paths unchanged. Verified E-034/E-035. W5/S02: MainViewModel category paths kind-aware via policy. Verified E-036/E-037. W6/S03: XlsxImportWorkbook (2.1 schema) changed; Third Party 2.0 untouched. Verified E-038/E-039.",
       "review_map": "review/parties.md",
       "reviewed_on": "2026-10-25"
     },
@@ -393,7 +397,7 @@
       "source": [
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
-          "sha256": "742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4"
+          "sha256": "f9bb677278f87b2ff869ec526775ef3840fa8855885401ec8fa3a9230480610a"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
@@ -417,7 +421,7 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
-          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8"
+          "sha256": "5a47a1d02dc59106e3cff167b69d5346f80127e661448b7a7fdfb9bf8f1a486c"
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
@@ -437,11 +441,35 @@
         },
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs",
-          "sha256": "a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4"
+          "sha256": "2efed1125b8ee2313b4eeb83f998503d2b1831edd824bb8b8d2f2c47c3579cc3"
         },
         {
           "path": "Software/src/GetSeek.Application/ReferenceSnapshot.cs",
-          "sha256": "dfdeefc5c559edf9971ff1b53a708554bbbceb9e7611443a9570e5e128efde18"
+          "sha256": "65a198b13ce4b4d16845e199762a870d4559e3ed43b5cc220d512f69bf703f42"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportCommands.cs",
+          "sha256": "3179f1d25d562de980e5a7a4102f7cefaff3981751dff8e979256b923440cab4"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportProductConfiguration.cs",
+          "sha256": "51baeefd8ba113f601d2eb1a769c56eefcb42015b83da84de9154aeb8c27e70e"
+        },
+        {
+          "path": "Software/src/GetSeek.Application/Imports/ImportWorkbookSchema.cs",
+          "sha256": "cd64a8178515b513d683ae8d5622480b90bb24648409228b0b5ac067266a6b00"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/ImportPreviewService.cs",
+          "sha256": "00a4daef371fcfaaf4a9411946f27729bc2fc29492bdb436cb5ab068fb42b1fe"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs",
+          "sha256": "1473d66f4d1a74c292c4d4ce3da2dcf0f7db612af108d1a9f7560505a5cb41a9"
+        },
+        {
+          "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxProductImportReader.cs",
+          "sha256": "b7eedca1e37f982e2f94fbfbe99364e573395d3fd3148dac8367df0bbd05b79c"
         }
       ],
       "source_review": "source-reviewed",
@@ -462,11 +490,13 @@
         "E-034",
         "E-035",
         "E-036",
-        "E-037"
+        "E-037",
+        "E-038",
+        "E-039"
       ],
       "target_page": "operator/imports.md",
       "document_status": "planned",
-      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned. Stage-3 verified 2026-10-24: ReferenceSnapshot reference caches with per-transaction rebuild (preview and confirm each build their own); import 54/54 (E-026), full suite 1311/1311 (E-027). Benchmark-neutral on batch 03 (34.2 s / 143.1 s flows vs stage-2 34.3 s / 143.4 s) - the eliminated statements target small reference tables; fingerprint and items-scan costs remain (stages 4-5). Stage-4 verified 2026-10-24: FingerprintAsync rewritten to 500-parameter chunked queries with byte-identical output (legacy-vs-batched hex equality tests, E-028); full suite 1317/1317 (E-029). Benchmark (disposable DB, batch 03): flow 21.0 s at 10k / 50.6 s at 30k catalog vs stage-3 34.2 s / 143.1 s; fingerprint probe 0.1 s regardless of catalog size. Benchmark observation, not an acceptance criterion. ImportDatabaseState.cs added to this feature's source list (previously unhashed). W3/P1: MainViewModel loaders populate HasBarcode/GrossSold30/ItemKind; import paths untouched. Verified E-032/E-033. W4/P2: MainViewModel changes are catalogue-side only; import paths unchanged. Verified E-034/E-035. W5/S02: ReferenceSnapshot (import reference authority) now pins here; delegates category/unit eligibility to the central policy; per-transaction rebuild unchanged. Verified E-036/E-037.",
+      "limitations": "53 fresh targeted import/workbook/headless UI tests passed (E-023); stage-2 performance refactor of ImportProductsCommandHandler verified by import-filtered 54/54 (E-024) and full solution suite 1305/1305 (E-025) console logs on 2026-10-24. Success and known rejection clear previews and request an XLSX; correctable failures preserve uncommitted Stock/create input. Download Result saves the separate last result without importing. Unsafe inputs and uncertain outcomes use diagnostic-only reports; uncertain outcomes do not assert rollback or safe resubmission. Console logs, not TRX. Native picker/save actions, live shop and physical devices were not verified; the stage-2 timing claim (~19.5% flow reduction, batch 03, disposable DBs) is a benchmark observation, not a product acceptance criterion. Operator manual remains planned. Stage-3 verified 2026-10-24: ReferenceSnapshot reference caches with per-transaction rebuild (preview and confirm each build their own); import 54/54 (E-026), full suite 1311/1311 (E-027). Benchmark-neutral on batch 03 (34.2 s / 143.1 s flows vs stage-2 34.3 s / 143.4 s) - the eliminated statements target small reference tables; fingerprint and items-scan costs remain (stages 4-5). Stage-4 verified 2026-10-24: FingerprintAsync rewritten to 500-parameter chunked queries with byte-identical output (legacy-vs-batched hex equality tests, E-028); full suite 1317/1317 (E-029). Benchmark (disposable DB, batch 03): flow 21.0 s at 10k / 50.6 s at 30k catalog vs stage-3 34.2 s / 143.1 s; fingerprint probe 0.1 s regardless of catalog size. Benchmark observation, not an acceptance criterion. ImportDatabaseState.cs added to this feature's source list (previously unhashed). W3/P1: MainViewModel loaders populate HasBarcode/GrossSold30/ItemKind; import paths untouched. Verified E-032/E-033. W4/P2: MainViewModel changes are catalogue-side only; import paths unchanged. Verified E-034/E-035. W5/S02: ReferenceSnapshot (import reference authority) now pins here; delegates category/unit eligibility to the central policy; per-transaction rebuild unchanged. Verified E-036/E-037. W6/S03 (2026-10-25): Inventory template 2.1 with ItemKind column (Products sheet name kept; prefill value stored in hidden Template sheet for view wiring - button itself is W7), typed Service create/update through the W2 registration boundary, dual-layer Service row rejections, Service-in-Stock/KitComponents atomic rejection, ReferenceSnapshot + fingerprint extended with chunked service_items (legacy-vs-batched equality extended). Verified E-038/E-039 (1379/1379 dual capture) + performance gate passed vs W1 limits. Six previously-unhashed core import files pinned.",
       "review_map": "review/imports.md",
       "reviewed_on": "2026-10-25"
     },

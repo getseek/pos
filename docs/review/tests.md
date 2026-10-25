@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **155 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **156 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -477,6 +477,12 @@ Located test declarations: <code>ExactPrefixSubstring_Precedence_OrdersSuggestio
 
 Located test declarations: <code>StaleResultsIgnored_WhenNewerQueryIssued</code> @36, <code>StaleErrorsIgnored_WhenNewerQuerySucceeds</code> @81, <code>WorkspaceGuard_IgnoresResults_WhenWorkspaceSwitched</code> @123, <code>OperatorGuard_IgnoresResults_WhenSessionLocked</code> @157, <code>ExactKey_InvalidatedOnTyping</code> @190, <code>Clear_ResetsAllStateAndCancelsPendingRequest</code> @209, <code>Disposal_PreventsFurtherUpdates</code> @243.
 
+## ServiceBulkImportIntegrationTests.cs {#src-dbd3e113f131}
+
+<code>Software/tests/GetSeek.IntegrationTests/ServiceBulkImportIntegrationTests.cs</code> · SHA-256 <code>475169c1c9dc25f893e10e92b5b2d901edd069b51d59474dc25adc66394448c1</code>.
+
+Located test declarations: <code>LegacyInventory20_ExactCompatibility_CreatesProductWithoutItemKindColumn</code> @87, <code>Inventory21_ServiceCreation_CreatesServiceWithAtomicRegistrationAndDefaultCategory</code> @109, <code>Inventory21_MixedWorkbook_CreatesBothProductAndServiceAtomically</code> @145, <code>ServiceInStock_RejectsInPreviewAndCommit_BothPresentAndAbsentFromProducts</code> @169, <code>ServiceInKitComponents_RejectsInPreviewAndCommit_AsParentAndChild</code> @208, <code>ServiceContradictions_RejectWithExplicitCodes</code> @243, <code>UpdateKindPreservation_AndImmutableTypeMismatch</code> @277, <code>TemplateGenerator_ItemKindPrefill_SupportsProductAndServiceViews</code> @322, <code>ResultWorkbook_CompletedWorkbook_PreservesKindAndDoesNotOverwriteOmittedKindWithProduct</code> @346, <code>ResultWorkbook_FailedWorkbook_PreservesOriginalVersionAndSheetsWithDiagnostics</code> @380, <code>StalePreview_DetectsServiceRegistrationChange</code> @401.
+
 ## ServiceCategoriesAndUnitsIntegrationTests.cs {#src-26153f4b80e2}
 
 <code>Software/tests/GetSeek.IntegrationTests/ServiceCategoriesAndUnitsIntegrationTests.cs</code> · SHA-256 <code>ef8441f753bc622b590674cc1def15ef117ddbe8f984c0b5bb36c5bae70eb9ee</code>.
@@ -761,9 +767,9 @@ Located test declarations: <code>BarcodeScannerWedge_ShouldParseWeighedFreshPlu<
 
 ## ImportFingerprintTests.cs {#src-f327271a65f7}
 
-<code>Software/tests/GetSeek.UnitTests/ImportFingerprintTests.cs</code> · SHA-256 <code>74975b4a8ab1ff5578852dc68afd3aca5d0869c876ce36d5bc3de8c757307e55</code>.
+<code>Software/tests/GetSeek.UnitTests/ImportFingerprintTests.cs</code> · SHA-256 <code>de5151b5efcd518d3a0b711664cfd10298c4f6f9074945be75366733cfa7e3b9</code>.
 
-Located test declarations: <code>Sqlite_CollateNoCaseIn_WorksAsExpected</code> @80, <code>Sqlite_ValuesCte_WithRecursiveKit_WorksAsExpected</code> @96, <code>BatchedFingerprint_MatchesLegacy_OnNullAndEmptyInputs</code> @150, <code>BatchedFingerprint_MatchesLegacy_OnCyclesAndDiamondKits</code> @168, <code>BatchedFingerprint_MatchesLegacy_OnComplexDataWithKitsAndPricing</code> @202, <code>BatchedFingerprint_MatchesLegacy_OnLargeDataset_CrossingMultipleChunks</code> @255.
+Located test declarations: <code>Sqlite_CollateNoCaseIn_WorksAsExpected</code> @81, <code>Sqlite_ValuesCte_WithRecursiveKit_WorksAsExpected</code> @97, <code>BatchedFingerprint_MatchesLegacy_OnNullAndEmptyInputs</code> @151, <code>BatchedFingerprint_MatchesLegacy_OnCyclesAndDiamondKits</code> @169, <code>BatchedFingerprint_MatchesLegacy_OnComplexDataWithKitsAndPricing</code> @203, <code>BatchedFingerprint_MatchesLegacy_OnLargeDataset_CrossingMultipleChunks</code> @256, <code>BatchedFingerprint_MatchesLegacy_OnServiceRegistration</code> @310.
 
 ## InventoryTierEditorTests.cs {#src-e592e8075206}
 

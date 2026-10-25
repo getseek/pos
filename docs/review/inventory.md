@@ -157,7 +157,7 @@ Handler: [InventoryCommandHandler](code-application.md#src-43bee33cf642). Result
 
 Declaration: [InventoryCommands.cs:19](code-application.md#src-85c6e1df3363). <code>RequiredPermission = Permissions.ReceiveStock</code>
 
-Construction sites: [HandleAsync:224](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:9069](code-desktop.md#src-16497b924a99)
+Construction sites: [HandleAsync:331](code-application.md#src-2c8d126a7c07), [HandleAsync:108](code-application.md#src-b2413dd4b01c), [ConfirmTraceabilityAsync:226](code-desktop.md#src-f3c9eb6aacd1), [ConfirmReceiveStockAsync:9069](code-desktop.md#src-16497b924a99)
 
 Handler method: [InventoryCommandHandler.HandleAsync(ReceiveStockCommand,CommandEnvelope&lt;ReceiveStockCommand&gt;,CancellationToken)](code-application.md#m-88ca70a84a0a).
 

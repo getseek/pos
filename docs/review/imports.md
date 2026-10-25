@@ -54,19 +54,19 @@ This overview groups routes by handler to stay readable; each named command and 
 
 Handler: [ImportProductsCommandHandler](code-application.md#src-2c8d126a7c07). Result type: <code>ImportProductsResult</code>.
 
-Declaration: [ImportCommands.cs:53](code-application.md#src-60301a99263c). <code>RequiredPermission = Permissions.ManageCatalog</code>
+Declaration: [ImportCommands.cs:54](code-application.md#src-60301a99263c). <code>RequiredPermission = Permissions.ManageCatalog</code>
 
 Construction sites: [ConfirmImportAsync:3741](code-desktop.md#src-16497b924a99), [ValidateInventoryAsync:65](code-infrastructure.md#src-9b8064464865)
 
 Handler method: [ImportProductsCommandHandler.HandleAsync(ImportProductsCommand,CommandEnvelope&lt;ImportProductsCommand&gt;,CancellationToken)](code-application.md#m-c862b652239a).
 
-Same-owner helper candidates: [ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)](code-application.md#m-5f31b55f7530), [ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyList&lt;ImportKitComponent&gt;?)](code-application.md#m-7ca1ff9bcf79), [ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)](code-application.md#m-09e6f9be8a2e), [ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)](code-application.md#m-be92b93116e9), [ImportProductsCommandHandler.BuildLines(ImportStockRow)](code-application.md#m-2dc6aa184df1). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
+Same-owner helper candidates: [ImportProductsCommandHandler.HasActivePermissionAsync(Guid,string,CancellationToken)](code-application.md#m-1f91797cf624), [ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyList&lt;ImportKitComponent&gt;?)](code-application.md#m-00145b6eaa21), [ImportProductsCommandHandler.BuildOrderAsync(IReadOnlyList&lt;ImportProductRow&gt;,IReadOnlyDictionary&lt;string, List&lt;ImportKitComponent&gt;&gt;,IReadOnlyDictionary&lt;string, ImportProductRow&gt;)](code-application.md#m-6e6b998bce52), [ImportProductsCommandHandler.ResolveItemIdAsync(string,CancellationToken)](code-application.md#m-1019c290117f), [ImportProductsCommandHandler.BuildLines(ImportStockRow)](code-application.md#m-afad3de17331). These are unqualified/this-call name matches, including possible overloads; semantic binding was not performed.
 
 | Direct method syntax | Extracted references |
 | --- | --- |
 | Reads | <code>item_kits</code>, <code>items</code> |
 | Writes / DDL | None extracted directly; inspect helpers and dynamic paths. |
-| Literal failure codes | <code>AUTH_UNAUTHORIZED</code>, <code>IMPORT_CLEAR_NOT_ALLOWED</code>, <code>IMPORT_CURRENCY_MISMATCH</code>, <code>IMPORT_DUPLICATE_ROW</code>, <code>IMPORT_EMPTY</code>, <code>IMPORT_KIT_STOCK</code>, <code>IMPORT_ORPHAN_COMPONENT</code>, <code>IMPORT_PREVIEW_STALE</code>, <code>IMPORT_SKU_NOT_FOUND</code>, <code>IMPORT_TOO_LARGE</code>, <code>IMPORT_UNKNOWN_COLUMN</code>, <code>SUPPLIER_NOT_FOUND</code> |
+| Literal failure codes | <code>AUTH_UNAUTHORIZED</code>, <code>IMPORT_CLEAR_NOT_ALLOWED</code>, <code>IMPORT_CURRENCY_MISMATCH</code>, <code>IMPORT_DUPLICATE_ROW</code>, <code>IMPORT_EMPTY</code>, <code>IMPORT_KIT_STOCK</code>, <code>IMPORT_ORPHAN_COMPONENT</code>, <code>IMPORT_PREVIEW_STALE</code>, <code>IMPORT_SKU_NOT_FOUND</code>, <code>IMPORT_TOO_LARGE</code>, <code>IMPORT_UNKNOWN_COLUMN</code>, <code>SERVICE_KIT_NOT_ALLOWED</code>, <code>SERVICE_STOCK_NOT_ALLOWED</code>, <code>SUPPLIER_NOT_FOUND</code> |
 
 Helper calls, table references in helpers, and throw sites are listed in the method catalogue. This table is not a transitive effect analysis.
 

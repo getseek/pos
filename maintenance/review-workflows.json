@@ -486,7 +486,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportProductsCommandHandler.cs",
           "line": 1,
-          "sha256": "742684104bee7336eb467a3473cc0370c0af377059ca1a75c203ae99d4fa6be4"
+          "sha256": "f9bb677278f87b2ff869ec526775ef3840fa8855885401ec8fa3a9230480610a"
         },
         {
           "path": "Software/src/GetSeek.Application/ThirdParties/ImportThirdPartiesCommandHandler.cs",
@@ -520,7 +520,7 @@
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxImportWorkbook.cs",
-          "sha256": "6427c9b69bb7fc4443905e262d16f766d91100f6a1b6b47c4aa7c45d1a11c3c8",
+          "sha256": "5a47a1d02dc59106e3cff167b69d5346f80127e661448b7a7fdfb9bf8f1a486c",
           "line": 1
         },
         {
@@ -546,7 +546,7 @@
         {
           "path": "Software/src/GetSeek.Application/Imports/ImportDatabaseState.cs",
           "line": 1,
-          "sha256": "a178bc2241933382249dfcca05bad7604a4ac2fc24751379bd75be9891cb5af4"
+          "sha256": "2efed1125b8ee2313b4eeb83f998503d2b1831edd824bb8b8d2f2c47c3579cc3"
         }
       ],
       "notes": "23 October 2026 — Patch B, E-023: 53 targeted tests passed. Both import toolbars expose Download Result when a result exists for the current unlocked operator/database. Save cancellation/failure keeps that bounded in-memory artifact. There is no Retry Import action. Correctable failed XLSX retains original identifiers, physical rows, instruction rows, create/update choices and Stock; Import Results contains diagnostics and is not business data. Unsafe/corrupt/oversized files use a diagnostic-only XLSX and require correcting the original file or a fresh template. Ambiguous outcomes first read the original durable key; unresolved outcomes omit business input and warn against stock resubmission. Lock/disposal/database changes invalidate old artifacts and stale work. Success output behavior and import handlers/parsers/templates/schema/stock/pricing rules remain unchanged. Headless layout and event tests do not verify native OS dialogs or shop acceptance."

@@ -93,7 +93,7 @@ Handler: [UserCommandHandler](code-application.md#src-12dc7e3f2868). Result type
 
 Declaration: [UserCommands.cs:7](code-application.md#src-2442f8313db3). <code>RequiredPermission = string.Empty</code>
 
-Construction sites: [RouteAsync:45](code-dataservice.md#src-46b520696446), [ProvisionInitialAdminAsync:8347](code-desktop.md#src-16497b924a99)
+Construction sites: [RouteAsync:45](code-dataservice.md#src-46b520696446), [ProvisionInitialAdminAsync:8369](code-desktop.md#src-16497b924a99)
 
 Handler method: [UserCommandHandler.HandleAsync(ProvisionInitialAdminCommand,CommandEnvelope&lt;ProvisionInitialAdminCommand&gt;,CancellationToken)](code-application.md#m-2ea4de08df45).
 
@@ -113,7 +113,7 @@ Handler: [SetUserPermissionOverrideCommandHandler](code-application.md#src-c7905
 
 Declaration: [SetUserPermissionOverrideCommands.cs:9](code-application.md#src-c7905080003f). <code>RequiredPermission = Permissions.ManagePermissions; RequiredModule = null</code>
 
-Construction sites: [SetOverrideModeAsync:8621](code-desktop.md#src-16497b924a99)
+Construction sites: [SetOverrideModeAsync:8643](code-desktop.md#src-16497b924a99)
 
 Handler method: [SetUserPermissionOverrideCommandHandler.HandleAsync(SetUserPermissionOverrideCommand,CommandEnvelope&lt;SetUserPermissionOverrideCommand&gt;,CancellationToken)](code-application.md#m-9a1f02732077).
 
@@ -133,7 +133,7 @@ Handler: [UserCommandHandler](code-application.md#src-12dc7e3f2868). Result type
 
 Declaration: [UserCommands.cs:51](code-application.md#src-2442f8313db3). <code>RequiredPermission = Permissions.ManageTeams</code>
 
-Construction sites: [ConfirmChangePinAsync:8500](code-desktop.md#src-16497b924a99)
+Construction sites: [ConfirmChangePinAsync:8522](code-desktop.md#src-16497b924a99)
 
 Handler method: [UserCommandHandler.HandleAsync(UpdateUserQuickPinCommand,CommandEnvelope&lt;UpdateUserQuickPinCommand&gt;,CancellationToken)](code-application.md#m-e4f8dbb4adb2).
 

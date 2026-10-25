@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **152 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **153 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -62,6 +62,12 @@ Located test declarations: <code>SerialAllocation_WhenAlreadyHeldByAnotherCart_I
 <code>Software/tests/GetSeek.IntegrationTests/CashReceiptCompletionIntegrationTests.cs</code> · SHA-256 <code>9e859bcf736993cd3891cc20cfc9d5db31d7f8f55b9680b0c88dcb5472e06b88</code>.
 
 Located test declarations: <code>ThermalCapability_RequiresAdminPhysicalConfirmation_AndInvalidatesOnQueueChange</code> @23, <code>ThermalCapabilityMutation_IsDeniedToCashier</code> @89.
+
+## CatalogMetadataReadIntegrationTests.cs {#src-82c49ee60fec}
+
+<code>Software/tests/GetSeek.IntegrationTests/CatalogMetadataReadIntegrationTests.cs</code> · SHA-256 <code>180f06bc55637c7106d7863f54f07a203bbe8010730e399231ed7c44cdb7ef0e</code>.
+
+Located test declarations: <code>HasBarcode_AnyRegisteredBarcode_DistinguishesPrimaryAndSecondary</code> @53, <code>GrossSoldQuantity30Days_ExactWindowBoundaries_InclusiveLower_ExclusiveUpper</code> @124, <code>GrossSoldQuantity30Days_InvoiceStatusAndExclusions_PC05</code> @183, <code>GrossSoldQuantity30Days_FractionalQuantities_And_LegacyFallback_PC06</code> @276, <code>GrossSoldQuantity30Days_KitSalesCountedOnceAtParent_PC07</code> @344, <code>MalformedDecimalSnapshot_SurfacesError_AndMarksRankingUnavailable_PC13</code> @402, <code>ItemKind_MappedThroughProjectionAndProductItem_Completeness</code> @445, <code>MultipleBarcodes_CannotMultiplySalesFacts_PC04</code> @499, <code>ScaleBenchmark_SyntheticScale_QueryPlanAndTiming</code> @544.
 
 ## CheckoutAndActivityIntegrationTests.cs {#src-60ffc7d1291c}
 

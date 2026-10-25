@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "60c1f06d688016e5ac8f8d721b04b0900f961595007c16900394175edb9064d4",
+      "sha256": "f6c065456073290573b7daf3731d0eb49dbe7243507e89bce21bd940c4d6a804",
       "reviewed_on": "2026-10-20",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -748,6 +748,75 @@
       "times": {
         "duration": "6 m 28 s (integration) + 2 s (unit) + 997 ms (acceptance)",
         "run_at_local": "2026-10-25 ~06:02 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-032",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-p1/20261025-0820/w3-import-tests.txt",
+      "sha256": "d945fa6cbd75538f70105ae48f8f54183d44c500ff109854251c79a3e1019bc9",
+      "reviewed_on": "2026-10-25",
+      "claim": "W3/P1 import-filtered run (console output, not TRX): 60/60 passed, 0 failed (Unit 7, Integration 53). No device or live-shop claim.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "60",
+        "passed": "60",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "50 s (integration) + 510 ms (unit)",
+        "run_at_local": "2026-10-25 ~00:11 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-033",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-p1/20261025-0820/w3-full-tests.txt",
+      "sha256": "5d86f5d9fe201d69ca76b7eef8801ed131a0c1f3708fcbddf8e3b0c621e7716b",
+      "reviewed_on": "2026-10-25",
+      "claim": "W3/P1 full solution suite (console output, not TRX): 1336/1336 passed, 0 failed (Acceptance 1, Unit 294, Integration 1041 = 1032 + 9 new catalogue-metadata tests, 12 m 53 s). Orchestrator independent re-run produced identical counts (w3-full-tests-hermes-rerun.txt in same artifact dir). Companion w3-scale-evidence.txt records the 3-bounded-query design, EXPLAIN plans, before/after query counts, and the scoped index PROPOSAL for refund/return subqueries (NOT applied - migrations are separately reviewed). Native dialogs, live shop and devices not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1336",
+        "passed": "1336",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "12 m 53 s (integration) + 1 s (unit) + 798 ms (acceptance)",
+        "run_at_local": "2026-10-25 ~00:11 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

@@ -515,12 +515,12 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "ca5b63e5ad55c91a9ec5fadab0d67cdbf54b3c81810c8658cf695f7d87f672ba"
+          "sha256": "7b0aa35adaf840d92e9b261eddd71dde40827cdc86a39d076d5852aa7435e90d"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
           "line": 77,
-          "sha256": "e48defcf3d4450bff617f3771024da2dd903704d0d040c47b461c90faaf54a39"
+          "sha256": "e1bbbe6aa0cb17a52e073330cfa198eb4852f288f9c67b07592a8be965547144"
         }
       ],
       "workflow": "orders",

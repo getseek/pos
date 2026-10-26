@@ -495,7 +495,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628",
+          "sha256": "99493ef73fd665659edf895b8a8af6dd5f93456224b5979fcc6787113be48acf",
           "line": 1
         },
         {
@@ -525,7 +525,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "5910bd1ac8ca2eb028707dbc36ed9837910ccbdcdcb02a1f097f2a68a202dee0",
+          "sha256": "69216c2ac08cd2ed0216b5b144ee5c1561e20e9d7d4c8137d11b8ea47be92fa5",
           "line": 1
         },
         {
@@ -535,7 +535,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "b34d8c1f462e0df79ed9e11ea9f7389555a71aef1705f1a2aca9aadbec9d5f5c",
+          "sha256": "8f1a8e2a59ca965e503f2b59e144e8681e3a8415217fc8200ce80de3fc2887f4",
           "line": 1
         },
         {
@@ -772,7 +772,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628"
+          "sha256": "99493ef73fd665659edf895b8a8af6dd5f93456224b5979fcc6787113be48acf"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",
@@ -874,7 +874,7 @@
         {
           "path": "Software/src/GetSeek.Application/Sales/PurchaseAndMoneyCommands.cs",
           "line": 1,
-          "sha256": "9b5929036e27a42b7683fd095917de3aea3ea1a851edc04b5e4020cf6114ddbc"
+          "sha256": "fdc6da1eb2aa88616e576cc7554b2f2eae74017c9b7a9036deaca6e607973a55"
         },
         {
           "path": "Software/src/GetSeek.Application/Sales/SupplierReturnCommands.cs",
@@ -948,12 +948,12 @@
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
           "line": 1,
-          "sha256": "36f305a600492eba2c96807674b0bef4fbc31a7105f847d3bc4ba65cad390734"
+          "sha256": "4e622e1875a74c262efbbef48312cb9515c99cdd6e4be7655b10ccd5dba12980"
         },
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchPreview.cs",
           "line": 1,
-          "sha256": "8c8ac4ff05797a0f8cab640c229160c6a6d4caf8ad6708191ea559ae56dd875e"
+          "sha256": "bf7712a3b2104c9dffb58f6e9f56ff949a9dd00c833f1424b749aa90e6c443be"
         }
       ]
     }

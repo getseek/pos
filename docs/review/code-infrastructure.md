@@ -796,7 +796,7 @@ Declarations: <code>SqliteActivityReader</code> (line 8).
 
 <code>Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteCommercialReader.cs</code> · 255 lines.
 
-SHA-256: <code>7950bc9639f959e57ff876ecb65b075d8e1c64202837c3be486b76f8ad9a2ba6</code>.
+SHA-256: <code>8a14447706788aa940958e709a4288d925c70b01c939c125e05e42c9538ebd1f</code>.
 
 Declarations: <code>SqliteCommercialReader : ICommercialReader</code> (line 13).
 

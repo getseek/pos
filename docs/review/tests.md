@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **159 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **161 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -489,6 +489,12 @@ Located test declarations: <code>LegacyInventory20_ExactCompatibility_CreatesPro
 
 Located test declarations: <code>Migration086_FreshDatabase_SeedsGeneralServicesCategory</code> @109, <code>Migration086_UpgradeFromV85_IdempotentAndPreservesExistingData</code> @135, <code>SV07_CreateServiceCategory_AdminAuthorization_Enforced</code> @171, <code>SV07_KindMismatch_RejectionOnCreate_ProductAndService</code> @189, <code>SV07_KindMismatch_RejectionOnUpdate_ProductAndService</code> @259, <code>SV07_KindMismatch_RejectionOnBatchReassignment</code> @328, <code>SV07_RetargetingValidation_CannotInvalidateAssignedItems</code> @405, <code>SV07_GeneralServices_CannotBeDeactivated</code> @469, <code>SV08_AdminTimeUomManagement_CreateAndEdit_Works</code> @485, <code>SV08_Pcs_EligibleForBothProductAndService</code> @509, <code>SV08_TimeUnits_ServiceEligible_ProductRejection</code> @545, <code>SV08_LegacyProductTime_Grandfathered</code> @642, <code>SV08_Conversions_HrMinWorks_CrossDimensionRejected</code> @714, <code>SV08_MassUnit_RejectedForService</code> @738, <code>SV08_ReferenceSnapshot_AuthorityExtensionPoints</code> @759.
 
+## ServiceConnectedWorkflowsIntegrationTests.cs {#src-818556f42ed1}
+
+<code>Software/tests/GetSeek.IntegrationTests/ServiceConnectedWorkflowsIntegrationTests.cs</code> · SHA-256 <code>f0d1e16ab216a25734cdf893d490eaab98ffaa9f971aa0b65f7358c1e0e59957</code>.
+
+Located test declarations: <code>SV04_Recheck_StockMovements_DirectReceiveAndAdjust_Rejected</code> @149, <code>SV04_Recheck_InventoryLossAndWaste_Rejected</code> @174, <code>SV04_Recheck_KitsAndRecipes_OutputAndComponents_Rejected</code> @213, <code>SV04_Recheck_PurchasingReceiveAndSupplierReturn_Rejected</code> @275, <code>SV04_Recheck_ReturnsAndPhysicalRestock_Rejected</code> @333, <code>SV04_Recheck_OrderDraftAndReservations_Rejected</code> @381, <code>SV04_Recheck_ProductConfiguration_KitsAndStockAdjustments_Rejected</code> @412, <code>SV04_Recheck_BypassSweep_BatchEndpoints</code> @456, <code>SV04_Recheck_BypassSweep_ImportRejections</code> @494, <code>SV04_Recheck_BypassSweep_UiActionAvailability</code> @532, <code>SV13_ServiceSale_SupportsQuantitiesTiersTaxDiscountsRefunds_WithoutStockEffects</code> @574, <code>SV13_MixedInvoice_AffectsOnlyProductStock</code> @654, <code>SV13_ServiceOnlyFulfillment_RequiresNoShipment</code> @727, <code>SV14_FinancialTotals_RetainServiceSalesRefundsAndTaxes</code> @785, <code>SV14_PhysicalReports_ExcludeServices_AndNoInventedCosts</code> @854, <code>ProductEquivalence_TrackedAndUntrackedProduct_BehaviorsUnchanged</code> @932.
+
 ## ServiceItemStorageAndIdentityIntegrationTests.cs {#src-cfcce5eb35de}
 
 <code>Software/tests/GetSeek.IntegrationTests/ServiceItemStorageAndIdentityIntegrationTests.cs</code> · SHA-256 <code>0355e396446c5969230002b25362c02d9dc9d41269abc9b6aa32c94bdea19ffd</code>.
@@ -817,6 +823,12 @@ Located test declarations: <code>FromDecimal_ShouldConvertMinorUnitsCorrectly</c
 
 Located test declarations: <code>PC01_PC02_ProductServiceKindSelector_ExactlyTwoStates_CategoriesCountsStayWithinKind</code> @111, <code>PC03_AllItem_FourStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @159, <code>PC03_Nocode_ThreeStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @194, <code>PC03_FamilySwitching_RestoresSessionOrderingState</code> @225, <code>PC08_CategoryToggle_ClearsSelection_ResetsPage1</code> @255, <code>PC08_RealCategoryNamedAllMenu_DoesNotCollideWithSentinel</code> @281, <code>PC09_PageControls_FiveNonSearchSizes_PageClamping</code> @341, <code>PC09_SearchForces50_DisablesPageSizeControls_RestoresPriorSizeOnClear</code> @420, <code>PC10_ScopeAgreement_CardsMatchingCountAndSuggestionsAgree</code> @465, <code>PC10_LateResultRejection_CannotCrossKindOrCategory</code> @493, <code>PC10_ExactScanAndAddToCart_SafeguardsIntact</code> @533, <code>PC14_KeyboardTouchLayout_AndTranslationsAcrossLanguages</code> @569.
 
+## PosCatalogSettingsP4UnitTests.cs {#src-2936b85862cb}
+
+<code>Software/tests/GetSeek.UnitTests/PosCatalogSettingsP4UnitTests.cs</code> · SHA-256 <code>a71adc76d852c34144ad23857600605173959f1141764bd1ae7d7b74bdfbe97b</code>.
+
+Located test declarations: <code>MissingFile_FallsBackToDefault_NonBarcodeFirst_PC12</code> @47, <code>CorruptJson_FallsBackToDefault_NeverCrashes_PC12</code> @62, <code>OldSchemaV2_WithoutDefaultCatalogue_FallsBackToNonBarcodeFirst_PC12</code> @77, <code>UnknownOrInvalidCatalogueMode_FallsBackToNonBarcodeFirst_PC12</code> @99, <code>ValidCatalogueModes_NormalizeToCanonicalPascalCase_PC12</code> @123, <code>Save_WritesSchemaVersion3_AndPersistsValues_PC12</code> @138, <code>BestEffortWriteFailure_SwallowsExceptionAndNeverCrashes_PC12</code> @163, <code>ChangingTheme_PreservesCatalogueDefault_PC12</code> @179, <code>ChangingLanguage_PreservesCatalogueDefault_PC12</code> @202, <code>ChangingKeyboard_PreservesCatalogueDefault_PC12</code> @225, <code>SessionCycling_DoesNotPersistCatalogueDefault_PC12</code> @252, <code>Startup_UsesSavedDefault_VersusSessionCycling_PC12</code> @290, <code>SettingsDropdown_ExplicitChange_PersistsAndUpdatesCatalogue_PC12</code> @316, <code>DefaultItemCatalogueOptions_ContainsAllFourAllItemModes_PC12</code> @342, <code>TranslationsSweep_W7_InventoryAndServiceKeys_ParityAndValues_SV06</code> @362, <code>TranslationsSweep_W8b_CatalogKeys_ParityAndValues_SV06</code> @400, <code>TranslationsSweep_W10_SettingsKeys_ParityAndValues_SV06</code> @445, <code>LiveLanguageSwitching_UpdatesAllCatalogAndInventoryBindings_SV06</code> @473.
+
 ## PosSellingScreenEligibilityUnitTests.cs {#src-455c95bf3481}
 
 <code>Software/tests/GetSeek.UnitTests/PosSellingScreenEligibilityUnitTests.cs</code> · SHA-256 <code>ebe3a266b3ea829e0949d8e35b850d3bf6f3822ee92309e14adf2e7cc589af34</code>.
@@ -891,9 +903,9 @@ Located test declarations: <code>SelectMenu_SupportsAll11CanonicalDrawerItems</c
 
 ## ThemeAndLanguageUnitTests.cs {#src-581f60c8a214}
 
-<code>Software/tests/GetSeek.UnitTests/ThemeAndLanguageUnitTests.cs</code> · SHA-256 <code>85b1392d02ea8e015d3616f42429d1a0eaf331b7bb635f18290d6495ab03035f</code>.
+<code>Software/tests/GetSeek.UnitTests/ThemeAndLanguageUnitTests.cs</code> · SHA-256 <code>67508a8420196567265886931fa386426f6e7c2f56924f625cd58cf63d7ebaae</code>.
 
-Located test declarations: <code>Resolve_UnknownOrEmptyTheme_FallsBackToDefault</code> @26, <code>NextTheme_CyclesAndWraps</code> @35, <code>UiPreferences_RoundTripsThemeAndLanguage</code> @45, <code>ThemeDictionaries_DeclareEveryCanonicalKey</code> @65.
+Located test declarations: <code>Resolve_UnknownOrEmptyTheme_FallsBackToDefault</code> @26, <code>NextTheme_CyclesAndWraps</code> @35, <code>UiPreferences_RoundTripsThemeAndLanguage</code> @45, <code>ThemeDictionaries_DeclareEveryCanonicalKey</code> @67.
 
 ## TouchKeyboardLayoutUnitTests.cs {#src-510730dbe541}
 

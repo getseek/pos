@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "804b64850af97b084d50c32ca4a36feb3c0db28ba47bee7c0b18959e2209d138",
+      "sha256": "98038d8ce68c51b2d65ae11397e68455e3bb0042abb0714c32bc8511431aa6be",
       "reviewed_on": "2026-10-25",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -1197,6 +1197,76 @@
       "times": {
         "duration": "6 m 35 s (integration) + 2 s (unit) + 1 s (acceptance)",
         "run_at_local": "2026-10-26 ~00:35 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-045",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s09-10/20261026-1300/w9-hermes-full-stdout.txt",
+      "sha256": "81c844eb986f20ff6e3767fa47a889227c1e593b58f3a5279b63e7014ab3abf1",
+      "reviewed_on": "2026-10-26",
+      "claim": "W9/S05 integration recheck, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1428/1428 passed, 0 failed (Acceptance 1, Unit 344, Integration 1083 = +16 recheck tests); import filter 74/74 exit 0. SV-04 matrix re-verified end-to-end (every row: named E2E test + DB invariants 0 stock/BOM/reservation); recheck FOUND and CLOSED 4 real bypasses: purchasing item lookup Service exclusion (@buying gate, POS path untouched), RecordSupplierInvoice PURCHASE_ITEM_INVALID, batch RawMaterial handler + preview SERVICE_RAW_MATERIAL_NOT_ALLOWED. SV-13/SV-14 tests present. Worker w9-* identical. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1428",
+        "passed": "1428",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "12 m 54 s (integration) + 3 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-26 ~09:45 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-046",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s09-10/20261026-1300/w10-hermes-full-stdout.txt",
+      "sha256": "35bac63ba6c618b62993d9ef39c2e2b2a2ebbc2b62f03844daa7f5d1e787589a",
+      "reviewed_on": "2026-10-26",
+      "claim": "W10/Catalog P4 settings + translations, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 1457/1457 passed, 0 failed (Acceptance 1, Unit 373 = +29 PosCatalogSettingsP4 tests, Integration 1083); import filter 74/74 exit 0. UiPreferences SchemaVersion=3 + DefaultItemCatalogue with tolerant normalize (missing/corrupt/unknown -> NonBarcodeFirst); PC-12 semantics: session cycling in-memory only, theme/language saves preserve configured default; settings dropdown; EN/TH/MY parity sweep [PC-12/SV-06 gates]. Owner-run UI checks remain PENDING (code-only rule). Worker w10-* identical. Native dialogs and live shop not exercised.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1457",
+        "passed": "1457",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "7 m 34 s (integration) + 3 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-26 ~12:30 +07:00"
       },
       "assembly": [
         "GetSeek.AcceptanceTests",

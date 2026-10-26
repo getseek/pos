@@ -515,7 +515,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "55ce18f6f90d7d62619d0a809487e8bf4e062cced5df83ba355a481d2550d628"
+          "sha256": "99493ef73fd665659edf895b8a8af6dd5f93456224b5979fcc6787113be48acf"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",

@@ -162,7 +162,7 @@ Declarations: <code>ICommand</code> (line 3), <code>ICommand : ICommand</code> (
 
 <code>Software/src/GetSeek.Application/Abstractions/IExportService.cs</code> · 74 lines.
 
-SHA-256: <code>40368602a8861b710b44592eca1533d158acc45d85c79746eac90b240b2354af</code>.
+SHA-256: <code>95bd4c9ed7d8f40b8d7dacb36667082af1dfb043da4db105403ba6809a6367eb</code>.
 
 Declarations: <code>ExportDocumentType</code> (line 3), <code>ExportSelector</code> (line 12), <code>ReceiptExportSelector : ExportSelector</code> (line 17), <code>ShiftZReportExportSelector : ExportSelector</code> (line 19), <code>SalesReportExportSelector : ExportSelector</code> (line 21), <code>InventorySnapshotExportSelector : ExportSelector</code> (line 23), <code>ExportRequest</code> (line 25), <code>ExportPayload</code> (line 31), <code>ExportLine</code> (line 33), <code>ReceiptExportPayload : ExportPayload</code> (line 35), <code>ShiftReportExportPayload : ExportPayload</code> (line 50), <code>TabularExportPayload : ExportPayload</code> (line 58), <code>ExportTableRow</code> (line 63), <code>ExportResult</code> (line 65), <code>IExportService</code> (line 71).
 
@@ -294,7 +294,7 @@ Declarations: <code>PersonSummaryRow</code> (line 5), <code>SalaryMonthRow</code
 
 <code>Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs</code> · 165 lines.
 
-SHA-256: <code>a04b6f98db09b8fd8237e2489efdd273e352d75cbfaf637149820e7deac52edb</code>.
+SHA-256: <code>a06dbeca5d926160a49d4fb853e8675c5e27a336777a030631a0252a9f329e6d</code>.
 
 Declarations: <code>SearchContext</code> (line 3), <code>SearchEntityKey</code> (line 27), <code>SearchSuggestion</code> (line 38), <code>SearchRequest</code> (line 44), <code>SearchUseRequest</code> (line 74), <code>ISearchSuggestionReader</code> (line 80), <code>ISearchUsageWriter</code> (line 87), <code>ThirdPartySearchScope</code> (line 95), <code>PosItemSearchScope</code> (line 101), <code>InventoryItemSearchScope</code> (line 108), <code>RecipeSearchScope</code> (line 117), <code>ProductionRunSearchScope</code> (line 123), <code>CommercialInvoiceSearchScope</code> (line 129), <code>ShipmentSearchScope</code> (line 138), <code>MoneySearchScope</code> (line 143), <code>FinancialRegisterSearchScope</code> (line 151), <code>SalaryPeopleSearchScope</code> (line 157), <code>ExpensesSearchScope</code> (line 161).
 
@@ -357,7 +357,7 @@ Declarations: <code>TeamMemberRow</code> (line 5), <code>UserPermissionOverrideI
 
 <code>Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs</code> · 615 lines.
 
-SHA-256: <code>4e622e1875a74c262efbbef48312cb9515c99cdd6e4be7655b10ccd5dba12980</code>.
+SHA-256: <code>35ccbebf6dd4286a2017aa9541f4d4325e9f45b040b84ab2f743cd8ec76e5b5c</code>.
 
 Declarations: <code>BatchCommandHandler : ICommandHandler&lt;BatchUpdateItemStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchAssignItemCategoryCommand, BatchResult&gt;, ICommandHandler&lt;BatchAssignItemPurposeCommand, BatchResult&gt;, ICommandHandler&lt;BatchUpdateThirdPartyStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchAssignThirdPartyCategoryCommand, BatchResult&gt;, ICommandHandler&lt;BatchAssignThirdPartyPriceLevelCommand, BatchResult&gt;, ICommandHandler&lt;BatchUpdateUserStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchCancelBomDraftsCommand, BatchResult&gt;, ICommandHandler&lt;BatchUpdateUnitStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchUpdateCategoryStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchUpdateExpenseCategoryStatusCommand, BatchResult&gt;, ICommandHandler&lt;BatchDeleteUnitDefinitionsCommand, BatchResult&gt;, ICommandHandler&lt;BatchDeleteCategoryDefinitionsCommand, BatchResult&gt;</code> (line 10).
 
@@ -552,7 +552,7 @@ Declarations: <code>CatalogItemDto</code> (line 6), <code>CreateProductCommand :
 
 <code>Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs</code> · 211 lines.
 
-SHA-256: <code>92fddc7b3fdcb008773b1dae730bf5776e13b9eb6565b58a3cc2a0a913918a3b</code>.
+SHA-256: <code>a7c0ac789c418c36a495885beaae1b5c4d6dad2076a05b84f60fe052dfcc75cc</code>.
 
 Declarations: <code>CatalogKindEligibilityPolicy</code> (line 11).
 
@@ -1868,7 +1868,7 @@ Declarations: <code>LifecycleStatusScope</code> (line 4).
 
 <code>Software/src/GetSeek.Application/ReadServices/ReadProjections.cs</code> · 281 lines.
 
-SHA-256: <code>31942bcc1214cef17a1af8d5f7ef03d199ed96d5b410f58794d0d48cf730807c</code>.
+SHA-256: <code>3ba213758ece0ec64cf58197dc6c924e21c1c5985947da766d02fac3d74eaed4</code>.
 
 Declarations: <code>StoreProfileProjection</code> (line 3), <code>CatalogItemProjection</code> (line 19), <code>ActiveShiftProjection</code> (line 47), <code>ActivityOrderProjection</code> (line 57), <code>DraftCartLineProjection</code> (line 75), <code>DraftCartProjection</code> (line 93), <code>InventoryItemProjection</code> (line 107), <code>KitAvailabilityProjection</code> (line 136), <code>ItemLotBalanceProjection</code> (line 143), <code>ItemSerialStateCountProjection</code> (line 144), <code>ItemKitUsageProjection</code> (line 145), <code>ItemTraceabilitySummaryProjection</code> (line 146), <code>ItemStockHistoryRow</code> (line 154), <code>ItemStockHistoryPage</code> (line 179), <code>ItemPriceHistoryRow</code> (line 194), <code>LotCandidateProjection</code> (line 221), <code>SerialCandidateProjection</code> (line 236), <code>RestaurantOrderLineProjection</code> (line 248), <code>RestaurantOrderProjection</code> (line 260).
 

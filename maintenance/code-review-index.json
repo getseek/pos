@@ -1516,7 +1516,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Abstractions/IExportService.cs",
-      "sha256": "40368602a8861b710b44592eca1533d158acc45d85c79746eac90b240b2354af",
+      "sha256": "95bd4c9ed7d8f40b8d7dacb36667082af1dfb043da4db105403ba6809a6367eb",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -3054,7 +3054,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Abstractions/SearchReadPorts.cs",
-      "sha256": "a04b6f98db09b8fd8237e2489efdd273e352d75cbfaf637149820e7deac52edb",
+      "sha256": "a06dbeca5d926160a49d4fb853e8675c5e27a336777a030631a0252a9f329e6d",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -3836,7 +3836,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
-      "sha256": "4e622e1875a74c262efbbef48312cb9515c99cdd6e4be7655b10ccd5dba12980",
+      "sha256": "35ccbebf6dd4286a2017aa9541f4d4325e9f45b040b84ab2f743cd8ec76e5b5c",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -12731,7 +12731,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/Catalog/CatalogKindEligibilityPolicy.cs",
-      "sha256": "92fddc7b3fdcb008773b1dae730bf5776e13b9eb6565b58a3cc2a0a913918a3b",
+      "sha256": "a7c0ac789c418c36a495885beaae1b5c4d6dad2076a05b84f60fe052dfcc75cc",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -53791,7 +53791,7 @@
     },
     {
       "path": "Software/src/GetSeek.Application/ReadServices/ReadProjections.cs",
-      "sha256": "31942bcc1214cef17a1af8d5f7ef03d199ed96d5b410f58794d0d48cf730807c",
+      "sha256": "3ba213758ece0ec64cf58197dc6c924e21c1c5985947da766d02fac3d74eaed4",
       "project": "GetSeek.Application",
       "test": false,
       "types": [
@@ -87893,7 +87893,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/Models/UiModels.cs",
-      "sha256": "587faa2c028fb4f30097cb8000a5f4c540a97271dbbe58a1bfc6ae4d29ca4fc9",
+      "sha256": "94796e1bb6b4ef910b68c628447480bf1e4f77aa458704753bc7317e9b4486f0",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -89530,7 +89530,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-      "sha256": "8f1a8e2a59ca965e503f2b59e144e8681e3a8415217fc8200ce80de3fc2887f4",
+      "sha256": "4a767e6186915687d433b7514d7217c8aea99f16a706f6a0629a0755c3f0be23",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -90127,7 +90127,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/CatalogOrderPageHelper.cs",
-      "sha256": "10c6c51e30533ce06613623ba9c3d921ddb0fd68f4789f73b2cc63edf8a31062",
+      "sha256": "46345de9d72c3f2093a1865bc03d5b6ee393740c11e62ee7cfef875ec34bfd04",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -91420,7 +91420,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Catalog.cs",
-      "sha256": "99699baa508acd0672d181e22b13210a279b228834446cf2e6329ef923750689",
+      "sha256": "967ecf04eb88e77a1cdaf66f42853c5cdceb68dd78cceb82f00ca9c34cefc4e5",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -97865,7 +97865,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-      "sha256": "b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0",
+      "sha256": "11bedebbd6bb5ed46152c8a73a7c60fc67928411a99893a10d58b8057d4f6dde",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -107540,7 +107540,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Search.cs",
-      "sha256": "3e331685ac63f8952bb6034a88195c70b197cad1f70c6791abbac4723930380f",
+      "sha256": "123ac02f9618a296c04f3f85391fc11d551b8a68e95166cc005656bff45a5c91",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -107983,7 +107983,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Tables.cs",
-      "sha256": "547c4af9c2602f62c3d79802c448791e466ac07154ca3f4eb0f797daa96c2250",
+      "sha256": "278683cb8a18dec18394861ee7ecf00c3e338287da5abc60fc1693d4455f755e",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -138666,7 +138666,7 @@
     },
     {
       "path": "Software/src/GetSeek.Desktop/ViewModels/SearchState.cs",
-      "sha256": "bef8f88e99d06df6e21a705b38a6ee70324c9df1d149bddee000c311bf49ec28",
+      "sha256": "5dc068baa2f1d81bd9cdb8a893dbdde8dc5bb183d4b314566c9321b76b1f5d6c",
       "project": "GetSeek.Desktop",
       "test": false,
       "types": [
@@ -146286,7 +146286,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Exporting/SqliteExportService.cs",
-      "sha256": "fbee6c8b15bf5e4af0283ec2d8acd3aa53b0c852e7f998b013653d62e8fde104",
+      "sha256": "29c79332d7dc704ee469b4deffca70146eeddfc121bd9eaf866511206ed22820",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -161289,7 +161289,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Imports/XlsxMasterDataExportService.cs",
-      "sha256": "84220bacc23f0dc018e93d046f4020d7438c8548c547e60aaa5a42f1c2217e8c",
+      "sha256": "019dbfe999f267ce521442df09a86006c402e2b00a6343992f731f4a12ba57ae",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -168982,7 +168982,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteInventoryReader.cs",
-      "sha256": "88ca368765bfff7d6a338812abcd10ab21d7ca239de6c8c0f50193809d91ad7d",
+      "sha256": "39d4ea4cb506df01962cfc0ab0273414721fc8589361459b08114dc89833035c",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -175544,7 +175544,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
-      "sha256": "6214957dd900414ed852cdcb97f791812ea9d053481e3e2fd78074a36077a310",
+      "sha256": "5f4cf16ea3d6c5ec226d23cc8b5417d0e24e4c46592169b3988484354e5a6da7",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -180127,7 +180127,7 @@
     },
     {
       "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteSearchSuggestionReader.cs",
-      "sha256": "8f82a5b6921ae84f5afd9de39bee9943c288de1dedffa316b4e1e77c7d91b7bb",
+      "sha256": "93fac3a19bf06d49ac044195c40a56279c03afa9a1d9590b91468adb08b8364c",
       "project": "GetSeek.Infrastructure",
       "test": false,
       "types": [
@@ -235077,7 +235077,7 @@
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/PosCatalogSellingScreenP3UnitTests.cs",
-      "sha256": "f7bdc2b06e48314526b22eee3e369e89ee8a7e19874a1e7fe754acb67cf2521c",
+      "sha256": "930e75f6ba1d3735f9d16d86f472c2a44a8bd487e9ab06b01711a9a5f19e89be",
       "project": "GetSeek.UnitTests",
       "test": true,
       "types": [
@@ -235343,7 +235343,7 @@
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/PosCatalogSettingsP4UnitTests.cs",
-      "sha256": "a71adc76d852c34144ad23857600605173959f1141764bd1ae7d7b74bdfbe97b",
+      "sha256": "69831e37a0a21ab53c0af13a30380af06a570b175a61206cf293a7e6cfcfaf1a",
       "project": "GetSeek.UnitTests",
       "test": true,
       "types": [
@@ -235738,7 +235738,7 @@
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/PosSellingScreenEligibilityUnitTests.cs",
-      "sha256": "ebe3a266b3ea829e0949d8e35b850d3bf6f3822ee92309e14adf2e7cc589af34",
+      "sha256": "7ce682a55422969c727001573d24024f48d7b701223dca82810f9de4187a215d",
       "project": "GetSeek.UnitTests",
       "test": true,
       "types": [
@@ -237503,7 +237503,7 @@
     },
     {
       "path": "Software/tests/GetSeek.UnitTests/ServiceItemLifecycleAndWorkspaceUnitTests.cs",
-      "sha256": "b9f8d421df376f611eb42be66f3ac4e48e0d000304676de23f0fe396b208eb3e",
+      "sha256": "9f42039b0eee1d8585bad54090ccdc1d0d5df442ebd7dc2e1912c9a536293653",
       "project": "GetSeek.UnitTests",
       "test": true,
       "types": [

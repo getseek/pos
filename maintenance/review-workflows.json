@@ -500,7 +500,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs",
-          "sha256": "b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0",
+          "sha256": "11bedebbd6bb5ed46152c8a73a7c60fc67928411a99893a10d58b8057d4f6dde",
           "line": 1
         },
         {
@@ -535,7 +535,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs",
-          "sha256": "8f1a8e2a59ca965e503f2b59e144e8681e3a8415217fc8200ce80de3fc2887f4",
+          "sha256": "4a767e6186915687d433b7514d7217c8aea99f16a706f6a0629a0755c3f0be23",
           "line": 1
         },
         {
@@ -767,7 +767,7 @@
         {
           "path": "Software/src/GetSeek.Infrastructure/Persistence/Readers/SqliteProductionReaders.cs",
           "line": 77,
-          "sha256": "6214957dd900414ed852cdcb97f791812ea9d053481e3e2fd78074a36077a310"
+          "sha256": "5f4cf16ea3d6c5ec226d23cc8b5417d0e24e4c46592169b3988484354e5a6da7"
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
@@ -948,7 +948,7 @@
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchCommandHandler.cs",
           "line": 1,
-          "sha256": "4e622e1875a74c262efbbef48312cb9515c99cdd6e4be7655b10ccd5dba12980"
+          "sha256": "35ccbebf6dd4286a2017aa9541f4d4325e9f45b040b84ab2f743cd8ec76e5b5c"
         },
         {
           "path": "Software/src/GetSeek.Application/Batch/BatchPreview.cs",

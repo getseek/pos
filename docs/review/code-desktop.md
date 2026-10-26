@@ -119,7 +119,7 @@ Declarations: <code>NotificationItem</code> (line 5).
 
 <code>Software/src/GetSeek.Desktop/Models/UiModels.cs</code> · 919 lines.
 
-SHA-256: <code>587faa2c028fb4f30097cb8000a5f4c540a97271dbbe58a1bfc6ae4d29ca4fc9</code>.
+SHA-256: <code>94796e1bb6b4ef910b68c628447480bf1e4f77aa458704753bc7317e9b4486f0</code>.
 
 Declarations: <code>CurrencyFormatter</code> (line 6), <code>CategoryItem : ReactiveObject</code> (line 20), <code>ProductCategoryOption</code> (line 48), <code>ExpenseCategoryOption</code> (line 65), <code>ProductPurposeOption</code> (line 80), <code>UomOption</code> (line 85), <code>StoreUomPreferenceItem : ReactiveObject</code> (line 139), <code>ProductItem : ReactiveObject</code> (line 161), <code>OrderItem : ReactiveObject</code> (line 200), <code>ParkedCart</code> (line 311), <code>StaleCartPriceReviewUiRow</code> (line 325), <code>LotCandidateItem</code> (line 333), <code>SerialCandidateItem : ReactiveObject</code> (line 348), <code>OrderStatusChip : ReactiveObject</code> (line 372), <code>OrderLogItem : ReactiveObject</code> (line 412), <code>InventoryItem : ReactiveObject</code> (line 443), <code>KitComponentDraftItem : ReactiveObject</code> (line 597), <code>PayrollMonthOption : IEquatable&lt;PayrollMonthOption&gt;</code> (line 629), <code>StaffMember : ReactiveObject</code> (line 653), <code>TeamMemberShiftItem : ReactiveObject</code> (line 713), <code>UserPermissionOverrideItem : ReactiveObject</code> (line 724), <code>ReportTenderItem : ReactiveObject</code> (line 782), <code>ShiftReportSummary : ReactiveObject</code> (line 791), <code>FacilityItem : ReactiveObject</code> (line 831), <code>BinLocationItem : ReactiveObject</code> (line 841), <code>ItemLocationEligibilityItem : ReactiveObject</code> (line 855), <code>ReceiveTrackingKind</code> (line 870), <code>ReceiveLineItem : ReactiveObject</code> (line 882).
 
@@ -251,7 +251,7 @@ Declarations: <code>ModalCoordinator : IDisposable</code> (line 7), <code>Regist
 
 <code>Software/src/GetSeek.Desktop/Services/UiPreferencesService.cs</code> · 4,945 lines.
 
-SHA-256: <code>8f1a8e2a59ca965e503f2b59e144e8681e3a8415217fc8200ce80de3fc2887f4</code>.
+SHA-256: <code>4a767e6186915687d433b7514d7217c8aea99f16a706f6a0629a0755c3f0be23</code>.
 
 Declarations: <code>UiPreferences</code> (line 12), <code>IUiPreferencesService</code> (line 48), <code>UiPreferencesService : IUiPreferencesService</code> (line 58), <code>ILocalizationService</code> (line 118), <code>LocalizationService : ILocalizationService</code> (line 128), <code>ThemeManager</code> (line 4836).
 
@@ -280,7 +280,7 @@ Declarations: <code>UiPreferences</code> (line 12), <code>IUiPreferencesService<
 
 <code>Software/src/GetSeek.Desktop/ViewModels/CatalogOrderPageHelper.cs</code> · 490 lines.
 
-SHA-256: <code>10c6c51e30533ce06613623ba9c3d921ddb0fd68f4789f73b2cc63edf8a31062</code>.
+SHA-256: <code>46345de9d72c3f2093a1865bc03d5b6ee393740c11e62ee7cfef875ec34bfd04</code>.
 
 Declarations: <code>CatalogFamily</code> (line 9), <code>AllItemCycleState</code> (line 15), <code>NocodeCycleState</code> (line 23), <code>CatalogModeOption</code> (line 30), <code>CatalogCycleStateMachine</code> (line 44), <code>CatalogFilterRequest</code> (line 203), <code>CatalogFilterResult</code> (line 217), <code>CatalogOrderPageHelper</code> (line 225).
 
@@ -344,7 +344,7 @@ Declarations: <code>ProductPricePreviewRow</code> (line 10), <code>ItemPricingEd
 
 <code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Catalog.cs</code> · 462 lines.
 
-SHA-256: <code>99699baa508acd0672d181e22b13210a279b228834446cf2e6329ef923750689</code>.
+SHA-256: <code>967ecf04eb88e77a1cdaf66f42853c5cdceb68dd78cceb82f00ca9c34cefc4e5</code>.
 
 Declarations: <code>MainViewModel</code> (line 10).
 
@@ -514,7 +514,7 @@ Declarations: <code>MainViewModel</code> (line 13), <code>ImportAttempt</code> (
 
 <code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.ImportReview.cs</code> · 139 lines.
 
-SHA-256: <code>b03d4db44b6a6bff0b75b7d69b2e30d78963238f60511345e24d5684490481f0</code>.
+SHA-256: <code>11bedebbd6bb5ed46152c8a73a7c60fc67928411a99893a10d58b8057d4f6dde</code>.
 
 Declarations: <code>MainViewModel</code> (line 11).
 
@@ -841,7 +841,7 @@ Declarations: <code>MainViewModel</code> (line 19).
 
 <code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Search.cs</code> · 886 lines.
 
-SHA-256: <code>3e331685ac63f8952bb6034a88195c70b197cad1f70c6791abbac4723930380f</code>.
+SHA-256: <code>123ac02f9618a296c04f3f85391fc11d551b8a68e95166cc005656bff45a5c91</code>.
 
 Declarations: <code>MainViewModel</code> (line 15), <code>DelegatingSearchSuggestionReader : ISearchSuggestionReader</code> (line 861), <code>DelegatingSearchUsageWriter : ISearchUsageWriter</code> (line 874).
 
@@ -866,7 +866,7 @@ Declarations: <code>MainViewModel</code> (line 15), <code>DelegatingSearchSugges
 
 <code>Software/src/GetSeek.Desktop/ViewModels/MainViewModel.Tables.cs</code> · 1,340 lines.
 
-SHA-256: <code>547c4af9c2602f62c3d79802c448791e466ac07154ca3f4eb0f797daa96c2250</code>.
+SHA-256: <code>278683cb8a18dec18394861ee7ecf00c3e338287da5abc60fc1693d4455f755e</code>.
 
 Declarations: <code>MainViewModel</code> (line 21).
 
@@ -1391,7 +1391,7 @@ Declarations: <code>PagedTableState : ReactiveObject, IDataTableState</code> (li
 
 <code>Software/src/GetSeek.Desktop/ViewModels/SearchState.cs</code> · 514 lines.
 
-SHA-256: <code>bef8f88e99d06df6e21a705b38a6ee70324c9df1d149bddee000c311bf49ec28</code>.
+SHA-256: <code>5dc068baa2f1d81bd9cdb8a893dbdde8dc5bb183d4b314566c9321b76b1f5d6c</code>.
 
 Declarations: <code>SearchSelectionStatus</code> (line 12), <code>SearchSelectionResult</code> (line 20), <code>SearchState : ReactiveObject, IDisposable</code> (line 41), <code>SearchRequestSnapshot</code> (line 54).
 

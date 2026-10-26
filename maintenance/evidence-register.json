@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "98038d8ce68c51b2d65ae11397e68455e3bb0042abb0714c32bc8511431aa6be",
+      "sha256": "3e6c2d28a1e6d093003b0204624e69e34add015bfe512665a217e820bebadf2b",
       "reviewed_on": "2026-10-25",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -1272,6 +1272,108 @@
         "GetSeek.AcceptanceTests",
         "GetSeek.UnitTests",
         "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-047",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s11/20261026-1430/w11-hermes-full-stdout-2.txt",
+      "sha256": "ec9555557c6053b6438bfe1987b71685f7ac581765ffb5588f914c38ec0ac767",
+      "reviewed_on": "2026-10-26",
+      "claim": "W11/S06 final full suite, ORCHESTRATOR OWN confirming capture (untouched stdout, TRX, exit 0): 1457/1457 passed, 0 failed (1 Acceptance, 373 Unit, 1083 Integration). FULL DISCLOSURE: the FIRST orchestrator full run (artifacts/gpos-s11/20261026-1430/w11-hermes-full-stdout.txt, exit 1) failed exactly 1 test - TouchAndShortcutIntegrationTests.AltKey_PressAndRelease... with PlatformNotSupportedException (Dispatcher.PushFrame) - the known Avalonia headless flake first disclosed at W5; isolated re-run of the class 5x = 45/45 green; both runs and both exit-code files preserved. Worker w11-* run identical (1457/1457). W11 changed NO production code; sweep report (31/31 IDs dispositioned, OWNER-PENDING items listed, nothing APPROVED) at artifacts/gpos-s11/20261026-1430/w11-sweep-report.md.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1457",
+        "passed": "1457",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "13 m 46 s (integration) + 3 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-26 ~14:10 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-048",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s11/20261026-1430/w11-hermes-import-stdout.txt",
+      "sha256": "e88210ed70cf8a2e60abca342371b373d0eb6418cf6aab454d599a0482ee18ed",
+      "reviewed_on": "2026-10-26",
+      "claim": "W11 final import-filtered run, ORCHESTRATOR OWN capture (untouched stdout, TRX, exit 0): 74/74 passed, 0 failed (9 Unit, 65 Integration) - import surface unchanged since W6 gate.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "74",
+        "passed": "74",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "1 m 3 s (integration) + 624 ms (unit)",
+        "run_at_local": "2026-10-26 ~14:10 +07:00"
+      },
+      "assembly": [
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
+      ]
+    },
+    {
+      "id": "E-049",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-s11/20261026-1430/w11-benchmark-record.txt",
+      "sha256": "1e60582bfc9d9a506ca9710c09785a7131fadf0775a21b6e5d5e24769fa686ec",
+      "reviewed_on": "2026-10-26",
+      "claim": "FINAL import benchmark on the finished tree: flow10k=37.92s, flow30k=103.52s, fingerprint=0.11s (re-run 38.57/102.12). Absolute limits (20.46/55.09) NOT met under current machine load. DECISIVE CONTROL: the W6-era tree 24a35f3 measured 38.22/102.06 on the SAME machine in the SAME session - identical performance => NO code regression from W7..W11; environmental slowdown corroborated by unchanged seeding code doubling (4.68s -> 7-9s) and 450 resident processes. Fingerprint probe PASS (<=1.0s), counts correct. Action for owner: re-run gate at idle state before release sign-off.",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "3",
+        "passed": "3",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "3 benchmark runs x 2 sizes (2 current-tree + 1 control)",
+        "run_at_local": "2026-10-26 ~13:55 +07:00"
+      },
+      "assembly": [
+        "ImportBench (harness)"
       ]
     }
   ]

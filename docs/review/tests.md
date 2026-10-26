@@ -819,19 +819,19 @@ Located test declarations: <code>FromDecimal_ShouldConvertMinorUnitsCorrectly</c
 
 ## PosCatalogSellingScreenP3UnitTests.cs {#src-49efd4800bee}
 
-<code>Software/tests/GetSeek.UnitTests/PosCatalogSellingScreenP3UnitTests.cs</code> · SHA-256 <code>f7bdc2b06e48314526b22eee3e369e89ee8a7e19874a1e7fe754acb67cf2521c</code>.
+<code>Software/tests/GetSeek.UnitTests/PosCatalogSellingScreenP3UnitTests.cs</code> · SHA-256 <code>930e75f6ba1d3735f9d16d86f472c2a44a8bd487e9ab06b01711a9a5f19e89be</code>.
 
 Located test declarations: <code>PC01_PC02_ProductServiceKindSelector_ExactlyTwoStates_CategoriesCountsStayWithinKind</code> @111, <code>PC03_AllItem_FourStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @159, <code>PC03_Nocode_ThreeStates_CyclesAndWraps_CaptionsIdentifyActiveOrdering</code> @194, <code>PC03_FamilySwitching_RestoresSessionOrderingState</code> @225, <code>PC08_CategoryToggle_ClearsSelection_ResetsPage1</code> @255, <code>PC08_RealCategoryNamedAllMenu_DoesNotCollideWithSentinel</code> @281, <code>PC09_PageControls_FiveNonSearchSizes_PageClamping</code> @341, <code>PC09_SearchForces50_DisablesPageSizeControls_RestoresPriorSizeOnClear</code> @420, <code>PC10_ScopeAgreement_CardsMatchingCountAndSuggestionsAgree</code> @465, <code>PC10_LateResultRejection_CannotCrossKindOrCategory</code> @493, <code>PC10_ExactScanAndAddToCart_SafeguardsIntact</code> @533, <code>PC14_KeyboardTouchLayout_AndTranslationsAcrossLanguages</code> @569.
 
 ## PosCatalogSettingsP4UnitTests.cs {#src-2936b85862cb}
 
-<code>Software/tests/GetSeek.UnitTests/PosCatalogSettingsP4UnitTests.cs</code> · SHA-256 <code>a71adc76d852c34144ad23857600605173959f1141764bd1ae7d7b74bdfbe97b</code>.
+<code>Software/tests/GetSeek.UnitTests/PosCatalogSettingsP4UnitTests.cs</code> · SHA-256 <code>69831e37a0a21ab53c0af13a30380af06a570b175a61206cf293a7e6cfcfaf1a</code>.
 
 Located test declarations: <code>MissingFile_FallsBackToDefault_NonBarcodeFirst_PC12</code> @47, <code>CorruptJson_FallsBackToDefault_NeverCrashes_PC12</code> @62, <code>OldSchemaV2_WithoutDefaultCatalogue_FallsBackToNonBarcodeFirst_PC12</code> @77, <code>UnknownOrInvalidCatalogueMode_FallsBackToNonBarcodeFirst_PC12</code> @99, <code>ValidCatalogueModes_NormalizeToCanonicalPascalCase_PC12</code> @123, <code>Save_WritesSchemaVersion3_AndPersistsValues_PC12</code> @138, <code>BestEffortWriteFailure_SwallowsExceptionAndNeverCrashes_PC12</code> @163, <code>ChangingTheme_PreservesCatalogueDefault_PC12</code> @179, <code>ChangingLanguage_PreservesCatalogueDefault_PC12</code> @202, <code>ChangingKeyboard_PreservesCatalogueDefault_PC12</code> @225, <code>SessionCycling_DoesNotPersistCatalogueDefault_PC12</code> @252, <code>Startup_UsesSavedDefault_VersusSessionCycling_PC12</code> @290, <code>SettingsDropdown_ExplicitChange_PersistsAndUpdatesCatalogue_PC12</code> @316, <code>DefaultItemCatalogueOptions_ContainsAllFourAllItemModes_PC12</code> @342, <code>TranslationsSweep_W7_InventoryAndServiceKeys_ParityAndValues_SV06</code> @362, <code>TranslationsSweep_W8b_CatalogKeys_ParityAndValues_SV06</code> @400, <code>TranslationsSweep_W10_SettingsKeys_ParityAndValues_SV06</code> @445, <code>LiveLanguageSwitching_UpdatesAllCatalogAndInventoryBindings_SV06</code> @473.
 
 ## PosSellingScreenEligibilityUnitTests.cs {#src-455c95bf3481}
 
-<code>Software/tests/GetSeek.UnitTests/PosSellingScreenEligibilityUnitTests.cs</code> · SHA-256 <code>ebe3a266b3ea829e0949d8e35b850d3bf6f3822ee92309e14adf2e7cc589af34</code>.
+<code>Software/tests/GetSeek.UnitTests/PosSellingScreenEligibilityUnitTests.cs</code> · SHA-256 <code>7ce682a55422969c727001573d24024f48d7b701223dca82810f9de4187a215d</code>.
 
 Located test declarations: <code>StaleProductFilterWindows</code> @31, <code>OrderCommit_DoesNotRollBack_ServiceAvailability_Finding1</code> @108, <code>ManualCashlessCard_CarriesHumanTasksCheckbox_Finding2</code> @145, <code>ParsedForCastingTest</code> @168, <code>UnsupportedSalesPrice_ExcludedFromUnitImportReconciliation_Finding5</code> @194, <code>CatalogLoader_AvailabilityPredicate_EnforcesServiceEligibility_Finding7</code> @222, <code>DisplayTier_RetainedTitleLine_InCsvAndDataDisplayTier_Finding8</code> @243, <code>ProductFeatureReset_ProductServiceGate_ExcludesServicesAndUpdatesCachedAvailability_Finding9</code> @269, <code>HistorySanitization_CompletedOrdersReturnNoServiceIdentifiers_PartialRetains_Finding10</code> @305, <code>SelectedService_EntersInReviewOrReserved_PreservesSelectionType_CancelSafe_Finding12</code> @326, <code>ProductItem_ServiceAvailable_FlagBehavior_P3Scope1</code> @367.
 
@@ -885,7 +885,7 @@ Located test declarations: <code>SearchRequest_ClampsLimitCorrectly</code> @9, <
 
 ## ServiceItemLifecycleAndWorkspaceUnitTests.cs {#src-6b9303debdb4}
 
-<code>Software/tests/GetSeek.UnitTests/ServiceItemLifecycleAndWorkspaceUnitTests.cs</code> · SHA-256 <code>b9f8d421df376f611eb42be66f3ac4e48e0d000304676de23f0fe396b208eb3e</code>.
+<code>Software/tests/GetSeek.UnitTests/ServiceItemLifecycleAndWorkspaceUnitTests.cs</code> · SHA-256 <code>9f42039b0eee1d8585bad54090ccdc1d0d5df442ebd7dc2e1912c9a536293653</code>.
 
 Located test declarations: <code>CatalogKindEligibilityPolicy_UnitEligibility_EnforcesDimensionAndKindRules</code> @35, <code>CatalogKindEligibilityPolicy_CategoryTarget_EnforcesKindMatching</code> @71, <code>CatalogKindEligibilityPolicy_Normalization_DefaultsCorrectly</code> @86, <code>MainViewModel_InventoryKindSwitching_UpdatesViewFlagsAndScopedLabels</code> @100, <code>MainViewModel_OpenAddService_InitializesServiceModalState</code> @122, <code>MainViewModel_OpenAddProduct_InitializesProductModalState</code> @138, <code>MainViewModel_OpenEditProduct_WithServiceItem_ConfiguresModalCorrectly</code> @152, <code>MainViewModel_OpenEditProduct_WithProductItem_ConfiguresModalCorrectly</code> @179, <code>MainViewModel_CategoryManager_OpenForCurrentKind_FixesTarget</code> @204, <code>InventoryTableDefinition_ServiceItem_DisplaysDashesAndDisablesStockActions</code> @222.
 

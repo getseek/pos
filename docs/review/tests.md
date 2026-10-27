@@ -11,7 +11,7 @@ features: []
 
 <div class="meta">DRAFT · code snapshot 20 October 2026 · source review and targeted automated checks</div>
 
-The extractor parsed **161 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
+The extractor parsed **163 C# test source files**. Attribute counts below are syntax counts, not executed test totals. Parameterized cases, exclusions and compilation determine actual execution. See [verification and limits](../reference/verification.md) for both the 15 October 2026 historical baseline and the 20 October 2026 targeted automated test runs.
 
 The integration project excludes three retired multi-terminal transfer files while compiling `SingleRegisterProductionBootstrapperTests.cs` for single-register startup; see [PP-REV-006](decisions.md#pp-rev-006).
 
@@ -183,6 +183,14 @@ Located test declarations: <code>CreateExpenseCategory_ValidInput_CreatesCategor
 
 Located test declarations: <code>ReceiptSelector_UsesCommittedDatabaseInvoiceAndWritesOpaquePdfCopy</code> @76, <code>SalesReportSelector_UsesBoundedDatabaseRowsAndOmitsPrivateIdentifiers</code> @96, <code>InventorySnapshotSelector_UsesDecimalLedgerAndAllowlistedColumns</code> @115, <code>ShiftZReportSelector_UsesCommittedSnapshot</code> @134, <code>ExportPermission_IsRecheckedFromDatabaseAndCallerClaimCannotGrantIt</code> @150, <code>ExportPermission_ExplicitDenyOverridesRoleGrant</code> @167, <code>ExportSelectors_RejectUnboundedDatesAndOversizedLimits</code> @194, <code>EscapeCsvContent_PreservesQuotedCommaQuotesAndMultilineCellsAndNeutralizesFormulas</code> @212.
 
+## GposCartWidthAndCatalogFitTests.cs {#src-5f3934b80fa5}
+
+<code>Software/tests/GetSeek.IntegrationTests/GposCartWidthAndCatalogFitTests.cs</code> · SHA-256 <code>605fc3efddbe2b3c693d68ecd80009ab29a05b5e8b5d8b9b8d5832b59c88cafe</code>.
+
+## GposCartWidthClickProbeTests.cs {#src-1d683b6b2794}
+
+<code>Software/tests/GetSeek.IntegrationTests/GposCartWidthClickProbeTests.cs</code> · SHA-256 <code>fe944b7a332f10acc904f780552d71d65b1308cfba4087ddf44acffdd2458561</code>.
+
 ## ImportDialogsUiIntegrationTests.cs {#src-d0defb48c3d9}
 
 <code>Software/tests/GetSeek.IntegrationTests/ImportDialogsUiIntegrationTests.cs</code> · SHA-256 <code>42bc57debe921ba784d023efa2a146aeb43a0ab48f59fa7be4c7f2617f4e9d15</code>.
@@ -327,7 +335,7 @@ Located test declarations: <code>UnauthenticatedUser_EvenWithOpenShift_IsDeniedI
 
 ## PosNewLayoutSmokeTests.cs {#src-ddac716dda0e}
 
-<code>Software/tests/GetSeek.IntegrationTests/PosNewLayoutSmokeTests.cs</code> · SHA-256 <code>8bda2bc19131bc81435018a9052bd24ebfaaf19d85c21589228a72dfa169b217</code>.
+<code>Software/tests/GetSeek.IntegrationTests/PosNewLayoutSmokeTests.cs</code> · SHA-256 <code>5951e05b2916dc787996d180f40a51de17103dfafc339756d2cb3ff72efb1d13</code>.
 
 ## PriceOfferCommandsIntegrationTests.cs {#src-91e58da935f0}
 

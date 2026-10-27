@@ -495,7 +495,7 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
-          "sha256": "99493ef73fd665659edf895b8a8af6dd5f93456224b5979fcc6787113be48acf",
+          "sha256": "0133a2118a05d5e0203675aad2f1345356d59baa51ecc70f7a6ba1b8d28b0d95",
           "line": 1
         },
         {
@@ -525,12 +525,12 @@
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml",
-          "sha256": "69216c2ac08cd2ed0216b5b144ee5c1561e20e9d7d4c8137d11b8ea47be92fa5",
+          "sha256": "1873f199cf07573f9f53ca59d01f8f921ca6a8bc55496c304173067b9bf01b7f",
           "line": 1
         },
         {
           "path": "Software/src/GetSeek.Desktop/Views/MainWindow.axaml.cs",
-          "sha256": "8624a420c9eb250a8b70ac04e4aebb62015ec414e0349ab562d1fd05c510cee1",
+          "sha256": "1f1b2959fedd7dc43cd26592336b152154ea4e1621f96812d27abb7b9d51488e",
           "line": 1
         },
         {
@@ -772,7 +772,7 @@
         {
           "path": "Software/src/GetSeek.Desktop/ViewModels/MainViewModel.cs",
           "line": 8283,
-          "sha256": "99493ef73fd665659edf895b8a8af6dd5f93456224b5979fcc6787113be48acf"
+          "sha256": "0133a2118a05d5e0203675aad2f1345356d59baa51ecc70f7a6ba1b8d28b0d95"
         },
         {
           "path": "Software/src/GetSeek.Infrastructure/Hardware/OutputDeviceWorker.cs",

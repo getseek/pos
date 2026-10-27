@@ -95,7 +95,7 @@ Handler: [ExpenseCommandHandler](code-application.md#src-c02b00854044). Result t
 
 Declaration: [ExpenseCommands.cs:7](code-application.md#src-5b8093d7b8c4). <code>RequiredPermission = Permissions.ExpensesManage</code>
 
-Construction sites: [CreateCategoryAsync:1167](code-desktop.md#src-849697ea5909), [SaveManagedCategoryAsync:11637](code-desktop.md#src-16497b924a99)
+Construction sites: [CreateCategoryAsync:1167](code-desktop.md#src-849697ea5909), [SaveManagedCategoryAsync:11662](code-desktop.md#src-16497b924a99)
 
 Handler method: [ExpenseCommandHandler.HandleAsync(CreateExpenseCategoryCommand,CommandEnvelope&lt;CreateExpenseCategoryCommand&gt;,CancellationToken)](code-application.md#m-96f0d231de4e).
 
@@ -235,7 +235,7 @@ Handler: [ExpenseCommandHandler](code-application.md#src-c02b00854044). Result t
 
 Declaration: [ExpenseCommands.cs:23](code-application.md#src-5b8093d7b8c4). <code>RequiredPermission = Permissions.ExpensesManage</code>
 
-Construction sites: [ToggleCategoryActiveAsync:1201](code-desktop.md#src-849697ea5909), [SaveManagedCategoryAsync:11622](code-desktop.md#src-16497b924a99), [ToggleManagedExpenseCategoryActiveAsync:11793](code-desktop.md#src-16497b924a99)
+Construction sites: [ToggleCategoryActiveAsync:1201](code-desktop.md#src-849697ea5909), [SaveManagedCategoryAsync:11647](code-desktop.md#src-16497b924a99), [ToggleManagedExpenseCategoryActiveAsync:11818](code-desktop.md#src-16497b924a99)
 
 Handler method: [ExpenseCommandHandler.HandleAsync(UpdateExpenseCategoryCommand,CommandEnvelope&lt;UpdateExpenseCategoryCommand&gt;,CancellationToken)](code-application.md#m-8c7802f61231).
 

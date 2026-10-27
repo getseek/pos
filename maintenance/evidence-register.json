@@ -205,7 +205,7 @@
       "id": "E-015",
       "kind": "source-inspected",
       "path": "maintenance/code-review-index.json",
-      "sha256": "3e6c2d28a1e6d093003b0204624e69e34add015bfe512665a217e820bebadf2b",
+      "sha256": "3665c4503a1a6de4d4d1c936dd3cf31038f5705bf8c6e9e27b1a4bef8b301187",
       "reviewed_on": "2026-10-25",
       "claim": "Roslyn syntax extraction across application/test C#; selected control-flow review; SQL-only in-memory schema reconstruction. No semantic binding, application execution or device verification.",
       "symbols": [
@@ -1374,6 +1374,41 @@
       },
       "assembly": [
         "ImportBench (harness)"
+      ]
+    },
+    {
+      "id": "E-050",
+      "kind": "fresh-automated",
+      "path": "artifacts/gpos-uifix/20261027-1500/uifix-full-stdout-2.txt",
+      "sha256": "0d718c161efbc01e0e4ba4ae14d13e47c3bc6a9c4a558d47c156fcbb0c60e463",
+      "reviewed_on": "2026-10-27",
+      "claim": "GPOS cart-width + catalogue-fill fix (app 7c80c3b), ORCHESTRATOR OWN confirming run (untouched stdout, TRX, exit 0): 1464/1464 passed, 0 failed (1 Acceptance, 373 Unit, 1090 Integration = +7 new GposCartWidth tests). FIRST run (same artifacts dir, uifix-full-stdout.txt, exit 1) failed exactly one legacy assertion (PosNewLayoutSmokeTests expected fixed 340px; contract changed by this fix) - that run is preserved and the assertion was updated to live-percentage form before the confirming run. Import filter 74/74 exit 0. Defects: (1) 30/45/60% cart tiers were fixed 340/500/680px (owner screenshot: 341px cart at \"30%\" on a 2278px window) - now true percentages of live content width, real-mouse click cycle verified; (2) catalogue cards fixed 136px in WrapPanel left a dead right margin - now adaptive UniformGrid columns=floor((viewport+10)/146) with stretched cards. Build 0 errors/0 warnings. Native rendering is code-only verified (owner visual check pending).",
+      "counters": {
+        "executed": "0",
+        "failed": "0",
+        "error": "0",
+        "timeout": "0",
+        "aborted": "0",
+        "inconclusive": "0",
+        "passedButRunAborted": "0",
+        "notRunnable": "0",
+        "notExecuted": "0",
+        "disconnected": "0",
+        "warning": "0",
+        "inProgress": "0",
+        "pending": "0",
+        "total": "1464",
+        "passed": "1464",
+        "completed": "true"
+      },
+      "times": {
+        "duration": "24 m 25 s (integration) + 2 s (unit) + 1 s (acceptance)",
+        "run_at_local": "2026-10-27 ~15:35 +07:00"
+      },
+      "assembly": [
+        "GetSeek.AcceptanceTests",
+        "GetSeek.UnitTests",
+        "GetSeek.IntegrationTests"
       ]
     }
   ]
